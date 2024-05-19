@@ -260,7 +260,7 @@
   ],
   "userscompanys": [
     {
-      "id": "f456e23c-b12f-4e42-8c7b-a1987f7e4c9f",
+      "id": "f456e23c-b12f-4e42-8c7b-a1987f7e4c9a",
       "header": {
         "userId": "user-123",
         "latestStep": 2,
@@ -268,7 +268,6 @@
         "status": "pending"
       },
       "stepOne": {
-        "title": "Company data",
         "addressData": {
           "companyName": "Amazing Inc.",
           "companyFormId": "cf-123",
@@ -282,6 +281,9 @@
           "phone": "+15551234567",
           "mobile": "+15557654321",
           "fax": "+15559876543",
+          "phoneCountryCallingCodeId": "49",
+          "mobileCountryCallingCodeId": "49",
+          "faxCountryCallingCodeId": "49",
           "webUrl": "https://amazinginc.com",
           "email": "info@amazinginc.com"
         },
@@ -294,21 +296,19 @@
         }
       },
       "stepTwo": {
-        "title": "Administrator",
-        "Administrator": {
-          "isDiffer": false,
+        "administrator": {
           "salutationId": "MR",
           "titleId": "CEO",
           "firstName": "John",
           "lastName": "Doe",
           "position": "CEO",
           "mobile": "1234567890",
+          "mobileCountryCallingCodeId": "49",
           "email": "john.doe@example.com",
           "username": "johndoe"
         }
       },
       "stepThree": {
-        "title": "Industry",
         "industry": {
           "industryName": "Software Development",
           "description": "We develop innovative software solutions.",
@@ -316,13 +316,11 @@
         }
       },
       "stepfour": {
-        "title": "Business Model",
         "businessModel": {
           "businessModelId": "BM001"
         }
       },
       "stepFive": {
-        "title": "Payment",
         "billingAddress": {
           "isDiffer": false,
           "salutationId": "MR",
@@ -357,21 +355,258 @@
           "checked": true
         }
       }
+    },
+    {
+      "id": "f456e23c-b12f-4e42-8c7b-a1987f7e4c9b",
+      "header": {
+        "userId": "user-124",
+        "latestStep": 2,
+        "date": "2024-05-06",
+        "status": "pending"
+      },
+      "stepOne": {
+        "addressData": {
+          "companyName": "Amazing Inc.",
+          "companyFormId": "cf-123",
+          "street": "Main Street",
+          "number": "10",
+          "addressSupplement": "Unit A",
+          "zip": "12345",
+          "city": "Anytown",
+          "countryId": "DE",
+          "phone": "",
+          "mobile": "+15557654321",
+          "fax": "+15559876543",
+          "phoneCountryCallingCodeId": "49",
+          "mobileCountryCallingCodeId": "49",
+          "faxCountryCallingCodeId": "49",
+          "webUrl": "https://amazinginc.com",
+          "email": "info@amazinginc.com"
+        },
+        "legalPerson": {
+          "salutationId": "MR",
+          "titleId": "CEO",
+          "firstName": "John",
+          "lastName": "Doe",
+          "position": "CEO"
+        }
+      },
+      "stepTwo": {
+        "Administrator": {
+          "salutationId": "MR",
+          "titleId": "CEO",
+          "firstName": "John",
+          "lastName": "Doe",
+          "position": "CEO",
+          "mobile": "1234567890",
+          "mobileCountryCallingCodeId": "49",
+          "email": "john.doe@example.com",
+          "username": "johndoe"
+        }
+      },
+      "stepThree": {
+        "industry": {
+          "industryName": "Software Development",
+          "description": "We develop innovative software solutions.",
+          "industryId": "TECH"
+        }
+      },
+      "stepfour": {
+        "businessModel": {
+          "businessModelId": "BM001"
+        }
+      },
+      "stepFive": {
+        "billingAddress": {
+          "isDiffer": false,
+          "salutationId": "MR",
+          "titleId": "CEO",
+          "firstName": "John",
+          "lastName": "Doe",
+          "street": "Main Street",
+          "number": "123",
+          "addressSupplement": "Apt. 4",
+          "zip": "12345",
+          "city": "Anytown",
+          "federalStateId": "TX-TX",
+          "countryId": "DE"
+        },
+        "proof": {
+          "businessLicenseUrl": "https://example.com/business-license.jpg",
+          "businessLicenseId": "BL12345",
+          "idCardUrl": "https://example.com/id-card.jpg",
+          "idCardId": "ID12345"
+        },
+        "tax": {
+          "identificationNumber": "1234567890",
+          "vatNumber": "0123456789"
+        },
+        "paymentInformation": {
+          "paymentMethodId": "BANK",
+          "accountOwner": "John Doe",
+          "IBAN": "DE12345678901234567890",
+          "BIC": "DEUTDEUT"
+        },
+        "agree": {
+          "checked": true
+        }
+      }
+    },
+    {
+      "id": "f456e23c-b12f-4e42-8c7b-a1987f7e4c9c",
+      "herader": {
+        "date": "2024-05-16T01:05:58.775Z",
+        "latestStep": 1,
+        "status": "pending",
+        "userId": "22222"
+      },
+      "stepOne": {
+        "addressData": {
+          "companyName": "Amazing Inc.",
+          "companyFormId": "LLC-001",
+          "street": "Main Street",
+          "number": "19999",
+          "addressSupplement": "Unit A",
+          "zip": "12345",
+          "city": "Anytown",
+          "federalStateId": "NY-NY",
+          "countryId": "UK",
+          "phone": "+15551234567",
+          "mobile": "+15557654321",
+          "fax": "+15559876543",
+          "phoneCountryCallingCodeId": "49",
+          "mobileCountryCallingCodeId": "49",
+          "faxCountryCallingCodeId": "49",
+          "webUrl": "https://amazinginc.com",
+          "email": "c4net.7@gmail.com"
+        },
+        "legalPerson": {
+          "firstName": "Doe",
+          "lastName": "Doe",
+          "position": "CEO",
+          "salutationId": "MS",
+          "titleId": "CTO"
+        }
+      },
+      "header": {
+        "date": "2024-05-18T22:31:24.456Z",
+        "latestStep": 2,
+        "status": "pending",
+        "userId": "22222"
+      },
+      "stepTwo": {
+        "administrator": {
+          "email": "hgj@fsdf.com",
+          "firstName": "Doe",
+          "lastName": "DoeXXXXXXXX",
+          "mobile": "7777777777",
+          "mobileCountryCallingCodeId": "49",
+          "position": "CEO",
+          "salutationId": "MS",
+          "titleId": "CTO",
+          "username": "rrrrrrrrrrrrr"
+        }
+      }
     }
   ],
   "countries": [
-    { "countryId": "US", "label": "United States" },
-    { "countryId": "CA", "label": "Canada" },
-    { "countryId": "UK", "label": "United Kingdom" },
-    { "countryId": "DE", "label": "Germany" },
-    { "countryId": "FR", "label": "France" }
+    {
+      "countryId": "US",
+      "label": "United States"
+    },
+    {
+      "countryId": "CA",
+      "label": "Canada"
+    },
+    {
+      "countryId": "UK",
+      "label": "United Kingdom"
+    },
+    {
+      "countryId": "DE",
+      "label": "Germany"
+    },
+    {
+      "countryId": "FR",
+      "label": "France"
+    }
+  ],
+  "industriesSuggestion": [
+    {
+      "date": "2024-05-19T02:25:23.828Z",
+      "id": "123",
+      "label": "Techno",
+      "userId": "660c7e9c5eebdc6b0674e13a",
+      "keywords": [
+        "a",
+        "b",
+        "c"
+      ]
+    },
+    {
+      "date": "2024-05-19T02:27:44.376Z",
+      "userId": "660c7e9c5eebdc6b0674e13a",
+      "keywords": [
+        "q",
+        "w",
+        "e",
+        "xxxxx"
+      ],
+      "label": "eeee",
+      "id": "sqLT7_b"
+    },
+    {
+      "date": "2024-05-19T02:29:19.583Z",
+      "userId": "660c7e9c5eebdc6b0674e13a",
+      "keywords": [
+        "q",
+        "w",
+        "e",
+        "xxxxx"
+      ],
+      "label": "eeee",
+      "id": "AXalG-X"
+    },
+    {
+      "date": "2024-05-19T02:30:55.577Z",
+      "userId": "660c7e9c5eebdc6b0674e13a",
+      "keywords": [
+        "wwwwwwwwwwwwww"
+      ],
+      "label": "eeee",
+      "id": "yJPaStu"
+    },
+    {
+      "date": "2024-05-19T02:31:13.745Z",
+      "userId": "660c7e9c5eebdc6b0674e13a",
+      "keywords": [
+        "111111111111"
+      ],
+      "label": "fffffffff",
+      "id": "aGd-rdF"
+    }
   ],
   "industries": [
-    { "industryId": "TECH", "label": "Technology" },
-    { "industryId": "FINANCE", "label": "Finance" },
-    { "industryId": "RETAIL", "label": "Retail" },
-    { "industryId": "HEALTHCARE", "label": "Healthcare" },
-    { "industryId": "MANUFACTURING", "label": "Manufacturing" }
+    {
+      "industryId": "TECH",
+      "label": "Technology"
+    },
+    {
+      "industryId": "FINANCE",
+      "label": "Finance"
+    },
+    {
+      "industryId": "RETAIL",
+      "label": "Retail"
+    },
+    {
+      "industryId": "HEALTHCARE",
+      "label": "Healthcare"
+    },
+    {
+      "industryId": "MANUFACTURING",
+      "label": "Manufacturing"
+    }
   ],
   "businessModels": [
     {
@@ -394,26 +629,80 @@
     }
   ],
   "paymentMethods": [
-    { "paymentMethodId": "CARD", "label": "Credit Card" },
-    { "paymentMethodId": "BANK", "label": "Bank Transfer" },
-    { "paymentMethodId": "WALLET", "label": "Digital Wallet" }
+    {
+      "paymentMethodId": "CARD",
+      "label": "Credit Card"
+    },
+    {
+      "paymentMethodId": "BANK",
+      "label": "Bank Transfer"
+    },
+    {
+      "paymentMethodId": "WALLET",
+      "label": "Digital Wallet"
+    }
   ],
   "federalStates": [
-    { "federalStateId": "CA-CA", "label": "California" },
-    { "federalStateId": "NY-NY", "label": "New York" },
-    { "federalStateId": "TX-TX", "label": "Texas" }
+    {
+      "federalStateId": "CA-CA",
+      "label": "California"
+    },
+    {
+      "federalStateId": "NY-NY",
+      "label": "New York"
+    },
+    {
+      "federalStateId": "TX-TX",
+      "label": "Texas"
+    }
+  ],
+  "countryCallingCodes": [
+    {
+      "countryCallingCodesId": "49",
+      "icon": "images/countryCallingCodeFlag/de_icon.webp",
+      "label": "+49"
+    },
+    {
+      "countryCallingCodesId": "44",
+      "icon": "images/countryCallingCodeFlag/en_icon.webp",
+      "label": "+44"
+    }
   ],
   "salutations": [
-    { "salutationId": "MR", "label": "Mr." },
-    { "salutationId": "MRS", "label": "Mrs." },
-    { "salutationId": "MS", "label": "Ms." },
-    { "salutationId": "DR", "label": "Dr." }
+    {
+      "salutationId": "MR",
+      "label": "Mr."
+    },
+    {
+      "salutationId": "MRS",
+      "label": "Mrs."
+    },
+    {
+      "salutationId": "MS",
+      "label": "Ms."
+    },
+    {
+      "salutationId": "DR",
+      "label": "Dr."
+    }
   ],
   "titles": [
-    { "titleId": "CEO", "label": "Chief Executive Officer" },
-    { "titleId": "CTO", "label": "Chief Technology Officer" },
-    { "titleId": "CFO", "label": "Chief Financial Officer" },
-    { "titleId": "CMO", "label": "Chief Marketing Officer" }
+    {
+      "titleId": "CEO",
+      "label": "Chief Executive Officer"
+    },
+    {
+      "titleId": "CTO",
+      "label": "Chief Technology Officer"
+    },
+    {
+      "titleId": "CFO",
+      "label": "Chief Financial Officer"
+    },
+    {
+      "titleId": "CMO",
+      "label": "Chief Marketing Officer"
+    }
   ],
   "companyForms": [
     {
