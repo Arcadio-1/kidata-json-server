@@ -454,9 +454,9 @@
     },
     {
       "id": "f456e23c-b12f-4e42-8c7b-a1987f7e4c9c",
-      "herader": {
-        "date": "2024-05-16T01:05:58.775Z",
-        "latestStep": 1,
+      "header": {
+        "date": "2024-05-19T16:11:53.936Z",
+        "latestStep": 3,
         "status": "pending",
         "userId": "22222"
       },
@@ -488,23 +488,24 @@
           "titleId": "CTO"
         }
       },
-      "header": {
-        "date": "2024-05-18T22:31:24.456Z",
-        "latestStep": 2,
-        "status": "pending",
-        "userId": "22222"
-      },
       "stepTwo": {
         "administrator": {
-          "email": "hgj@fsdf.com",
+          "email": "skndri-hosyn@outlook.com",
           "firstName": "Doe",
-          "lastName": "DoeXXXXXXXX",
-          "mobile": "7777777777",
+          "lastName": "Doe",
+          "mobile": "3333333333",
           "mobileCountryCallingCodeId": "49",
           "position": "CEO",
           "salutationId": "MS",
           "titleId": "CTO",
-          "username": "rrrrrrrrrrrrr"
+          "username": "333333"
+        }
+      },
+      "stepThree": {
+        "industry": {
+          "description": "ddddddd",
+          "industryId": "TECH",
+          "industryName": "wwwwwwwww"
         }
       }
     }
@@ -535,55 +536,16 @@
     {
       "date": "2024-05-19T02:25:23.828Z",
       "id": "123",
-      "label": "Techno",
+      "industryName": "Techno",
       "userId": "660c7e9c5eebdc6b0674e13a",
-      "keywords": [
-        "a",
-        "b",
-        "c"
-      ]
+      "keywords": ["a", "b", "c"]
     },
     {
-      "date": "2024-05-19T02:27:44.376Z",
+      "date": "2024-05-19T16:05:13.184Z",
       "userId": "660c7e9c5eebdc6b0674e13a",
-      "keywords": [
-        "q",
-        "w",
-        "e",
-        "xxxxx"
-      ],
-      "label": "eeee",
-      "id": "sqLT7_b"
-    },
-    {
-      "date": "2024-05-19T02:29:19.583Z",
-      "userId": "660c7e9c5eebdc6b0674e13a",
-      "keywords": [
-        "q",
-        "w",
-        "e",
-        "xxxxx"
-      ],
-      "label": "eeee",
-      "id": "AXalG-X"
-    },
-    {
-      "date": "2024-05-19T02:30:55.577Z",
-      "userId": "660c7e9c5eebdc6b0674e13a",
-      "keywords": [
-        "wwwwwwwwwwwwww"
-      ],
-      "label": "eeee",
-      "id": "yJPaStu"
-    },
-    {
-      "date": "2024-05-19T02:31:13.745Z",
-      "userId": "660c7e9c5eebdc6b0674e13a",
-      "keywords": [
-        "111111111111"
-      ],
-      "label": "fffffffff",
-      "id": "aGd-rdF"
+      "keywords": ["gggggggg"],
+      "label": "ggggg",
+      "id": "neBtRZ2"
     }
   ],
   "industries": [
@@ -610,22 +572,64 @@
   ],
   "businessModels": [
     {
-      "businessId": "BM001",
-      "title": "Subscription Model",
-      "subtitle": "Recurring revenue through subscriptions",
-      "description": "Customers pay a recurring fee for access to products or services."
-    },
-    {
       "businessId": "BM002",
-      "title": "Freemium Model",
-      "subtitle": "Basic features free, premium features paid",
-      "description": "Offer a basic level of service for free and charge for premium features."
+      "title": "Interactive Kiosk",
+      "subtitle": "Engage customers with interactive product information and promotions.  Great for retail stores, museums, and trade shows.",
+      "description": "This solution provides a touch-screen kiosk that allows customers to browse product information, watch videos, and even complete purchases. Kiosks can be customized with your branding and content."
     },
     {
       "businessId": "BM003",
-      "title": "Pay-Per-Use Model",
-      "subtitle": "Customers pay for what they use",
-      "description": "Customers are charged based on their usage of the product or service."
+      "title": "Digital Signage Network",
+      "subtitle": "Capture attention and deliver targeted messages across multiple locations. Ideal for restaurants, corporate offices, and transportation hubs.",
+      "description": "Manage and display content on a network of digital signs from a central location. Update menus, promotions, and wayfinding information in real-time. Integrate with data sources for dynamic content."
+    },
+    {
+      "businessId": "BM004",
+      "title": "Wayfinding & Navigation",
+      "subtitle": "Guide visitors effortlessly throughout your space. Perfect for hospitals, airports, and large campuses.",
+      "description": "Create interactive maps and floor plans that help visitors find their way. Integrate with real-time location services for dynamic guidance. Offer turn-by-turn navigation and accessibility features."
+    },
+    {
+      "businessId": "BM005",
+      "title": "Self-Service Ordering & Kiosks",
+      "subtitle": "Empower customers to order and pay for products on their own. Well-suited for quick-service restaurants, cafes, and convenience stores.",
+      "description": "Reduce wait times and improve customer experience with self-service kiosks. Allow customers to browse menus, customize orders, and pay with various methods. Integrate with loyalty programs for a seamless experience."
+    },
+    {
+      "businessId": "BM006",
+      "title": "Menu Boards & Digital Signage",
+      "subtitle": "Showcase your menu items with vibrant visuals and clear information. Perfect for restaurants, cafes, and food courts.",
+      "description": "Replace static menu boards with dynamic digital displays. Display high-resolution images, descriptions, and pricing information. Update menus easily and remotely. Promote special offers and combos effectively."
+    },
+    {
+      "businessId": "BM007",
+      "title": "Video Wall Displays",
+      "subtitle": "Create immersive experiences and captivating presentations. Ideal for retail stores, event spaces, and control rooms.",
+      "description": "Combine multiple displays to create a seamless video wall. Showcase high-resolution content, live feeds, and interactive elements. Capture attention and make a lasting impression."
+    },
+    {
+      "businessId": "BM008",
+      "title": "Room Booking & Scheduling",
+      "subtitle": "Manage meeting spaces and resources efficiently. Ideal for offices, co-working spaces, and event venues.",
+      "description": "Enable users to book meeting rooms, conference spaces, and other resources online or through interactive kiosks. Integrate with calendars and directories for real-time availability. Streamline scheduling and reduce conflicts."
+    },
+    {
+      "businessId": "BM009",
+      "title": "Digital Queue Management",
+      "subtitle": "Reduce wait times and improve customer experience. Works well for banks, hospitals, and government agencies.",
+      "description": "Implement a virtual queueing system that allows customers to join a queue remotely and receive updates on their wait time. Improve customer satisfaction and reduce perceived wait times."
+    },
+    {
+      "businessId": "BM010",
+      "title": "Customer Feedback & Surveys",
+      "subtitle": "Gather valuable insights from your customers. Applicable to businesses of all types.",
+      "description": "Collect customer feedback through interactive surveys and digital signage displays.  Gain insights into customer satisfaction, preferences, and areas for improvement. Make data-driven decisions to enhance customer experience."
+    },
+    {
+      "businessId": "BM011",
+      "title": "Employee Training & Onboarding",
+      "subtitle": "Deliver engaging and consistent training content to your workforce. Ideal for businesses of all sizes.",
+      "description": "Create and manage a centralized library of training materials including videos, presentations, and quizzes.  Facilitate employee onboarding, skill development, and compliance training."
     }
   ],
   "paymentMethods": [
