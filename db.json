@@ -267,7 +267,7 @@
         "date": "2024-05-06",
         "status": "pending"
       },
-      "stepOne": {
+      "stepZero": {
         "addressData": {
           "companyName": "Amazing Inc.",
           "companyFormId": "cf-123",
@@ -295,7 +295,7 @@
           "position": "CEO"
         }
       },
-      "stepTwo": {
+      "stepOne": {
         "administrator": {
           "salutationId": "MR",
           "titleId": "CEO",
@@ -308,19 +308,19 @@
           "username": "johndoe"
         }
       },
-      "stepThree": {
+      "stepTwo": {
         "industry": {
           "industryName": "Software Development",
           "description": "We develop innovative software solutions.",
           "industryId": "TECH"
         }
       },
-      "stepfour": {
+      "stepThree": {
         "businessModel": {
           "businessModelId": "BM001"
         }
       },
-      "stepFive": {
+      "stepFour": {
         "billingAddress": {
           "isDiffer": false,
           "salutationId": "MR",
@@ -364,7 +364,7 @@
         "date": "2024-05-06",
         "status": "pending"
       },
-      "stepOne": {
+      "stepZero": {
         "addressData": {
           "companyName": "Amazing Inc.",
           "companyFormId": "cf-123",
@@ -391,7 +391,7 @@
           "position": "CEO"
         }
       },
-      "stepTwo": {
+      "stepOne": {
         "Administrator": {
           "salutationId": "MR",
           "titleId": "CEO",
@@ -404,19 +404,19 @@
           "username": "johndoe"
         }
       },
-      "stepThree": {
+      "stepTwo": {
         "industry": {
           "industryName": "Software Development",
           "description": "We develop innovative software solutions.",
           "industryId": "TECH"
         }
       },
-      "stepfour": {
+      "stepThree": {
         "businessModel": {
           "businessModelId": "BM001"
         }
       },
-      "stepFive": {
+      "stepFour": {
         "billingAddress": {
           "isDiffer": false,
           "salutationId": "MR",
@@ -455,12 +455,12 @@
     {
       "id": "f456e23c-b12f-4e42-8c7b-a1987f7e4c9c",
       "header": {
-        "date": "2024-05-19T16:11:53.936Z",
-        "latestStep": 3,
+        "date": "2024-05-25T14:30:28.471Z",
+        "latestStep": 4,
         "status": "pending",
         "userId": "22222"
       },
-      "stepOne": {
+      "stepZero": {
         "addressData": {
           "companyName": "Amazing Inc.",
           "companyFormId": "LLC-001",
@@ -483,33 +483,39 @@
         "legalPerson": {
           "firstName": "Doe",
           "lastName": "Doe",
-          "position": "CEO",
-          "salutationId": "MS",
-          "titleId": "CTO"
+          "position": "CEO00000000000000000",
+          "salutationId": "DR",
+          "titleId": "CEO"
         }
       },
-      "stepTwo": {
+      "stepOne": {
         "administrator": {
           "email": "skndri-hosyn@outlook.com",
-          "firstName": "Doe",
-          "lastName": "Doe",
+          "firstName": "DoewwAAAAA",
+          "lastName": "DoeBBBBBBBB",
           "mobile": "3333333333",
           "mobileCountryCallingCodeId": "49",
-          "position": "CEO",
-          "salutationId": "MS",
-          "titleId": "CTO",
+          "position": "CEO00000000000000000",
+          "salutationId": "DR",
+          "titleId": "CEO",
           "username": "333333"
         }
       },
-      "stepThree": {
+      "stepTwo": {
         "industry": {
           "description": "ddddddd",
           "industryId": "TECH",
           "industryName": "wwwwwwwww"
         }
+      },
+      "stepThree": {
+        "businessModel": {
+          "businessModelId": "BM011"
+        }
       }
     }
   ],
+  "usersCompanyProf": [],
   "countries": [
     {
       "countryId": "US",
@@ -534,18 +540,9 @@
   ],
   "industriesSuggestion": [
     {
-      "date": "2024-05-19T02:25:23.828Z",
-      "id": "123",
-      "industryName": "Techno",
-      "userId": "660c7e9c5eebdc6b0674e13a",
-      "keywords": ["a", "b", "c"]
-    },
-    {
-      "date": "2024-05-19T16:05:13.184Z",
-      "userId": "660c7e9c5eebdc6b0674e13a",
       "keywords": ["gggggggg"],
       "label": "ggggg",
-      "id": "neBtRZ2"
+      "id": 1
     }
   ],
   "industries": [
@@ -720,6 +717,181 @@
     {
       "companyFormLabel": "Corporation",
       "companyFormId": "CORP-001"
+    }
+  ],
+  "displays": [
+    {
+      "date": "2024-06-05T15:04:15.362Z",
+      "latestStep": 0,
+      "status": "pending",
+      "userId": "660c7e9c5eebdc6b0674e13a",
+      "id": 1
+    },
+    {
+      "date": "2024-06-05T15:09:56.397Z",
+      "latestStep": 0,
+      "status": "pending",
+      "userId": "660c7e9c5eebdc6b0674e13a",
+      "id": 2
+    },
+    {
+      "date": "2024-06-05T23:09:24.409Z",
+      "latestStep": 0,
+      "status": "pending",
+      "userId": "660c7e9c5eebdc6b0674e13a",
+      "id": 3
+    },
+    {
+      "date": "2024-06-06T14:07:03.892Z",
+      "latestStep": 0,
+      "status": "pending",
+      "userId": "660c7e9c5eebdc6b0674e13a",
+      "id": 4
+    },
+    {
+      "date": "2024-06-06T22:52:49.208Z",
+      "latestStep": 0,
+      "status": "pending",
+      "userId": "660c7e9c5eebdc6b0674e13a",
+      "id": 5
+    },
+    {
+      "date": "2024-06-07T12:41:40.509Z",
+      "latestStep": 0,
+      "status": "pending",
+      "userId": "660c7e9c5eebdc6b0674e13a",
+      "id": 6,
+      "header": {
+        "date": "2024-06-09T01:12:28.629Z",
+        "latestStep": 1,
+        "status": "pending",
+        "userId": "22222"
+      },
+      "stepZero": {
+        "digitalSignageInformation": {
+          "description": "ffffffffff",
+          "keywords": "fffffffffffff",
+          "title": "ffffffffffff"
+        },
+        "displaySignageCategoryId": "Category3",
+        "accessibilityInformation": {
+          "accessibility": "public",
+          "location": "internal"
+        },
+        "sharingDisplay": {
+          "shearOptions": "share"
+        },
+        "industryFilter": {
+          "industriesId": ["FINANCE", "RETAIL"]
+        },
+        "predefinedFilters": {
+          "filtersId": ["Tobacco", "Alcohol", "Pharma"]
+        }
+      }
+    },
+    {
+      "date": "2024-06-07T15:11:48.104Z",
+      "latestStep": 0,
+      "status": "pending",
+      "userId": "660c7e9c5eebdc6b0674e13a",
+      "id": 7
+    },
+    {
+      "date": "2024-06-08T14:05:10.104Z",
+      "latestStep": 0,
+      "status": "pending",
+      "userId": "660c7e9c5eebdc6b0674e13a",
+      "id": 8
+    },
+    {
+      "date": "2024-06-08T20:20:17.067Z",
+      "latestStep": 0,
+      "status": "pending",
+      "userId": "660c7e9c5eebdc6b0674e13a",
+      "id": 9
+    },
+    {
+      "date": "2024-06-08T23:29:03.106Z",
+      "latestStep": 0,
+      "status": "pending",
+      "userId": "660c7e9c5eebdc6b0674e13a",
+      "id": 10
+    }
+  ],
+  "categories": [
+    {
+      "id": "Category1",
+      "title": "Electronic Devices",
+      "description": "This category includes all electronic devices such as laptops, smartphones, and tablets.",
+      "color": "rgba(64, 224, 208, 1)",
+      "keywords": "electronics,laptops,smartphones,tablets"
+    },
+    {
+      "id": "Category2",
+      "title": "Home Appliance",
+      "description": "This category includes appliances used in the home, such as refrigerators, washing machines, and ovens.",
+      "color": "rgba(0, 255, 127, 1)",
+      "keywords": "electronics,laptops,smartphones,tablets"
+    },
+    {
+      "id": "Category3",
+      "title": "Clothing",
+      "description": "This category includes all types of clothing for men, women, and children.",
+      "color": "rgba(255, 165, 0, 1)",
+      "keywords": "electronics,laptops,smartphones,tablets"
+    },
+    {
+      "title": "xxx",
+      "description": "xxx",
+      "color": "rgba(192, 192, 192, 1)",
+      "keywords": "xxx",
+      "id": "4NqwzTU"
+    },
+    {
+      "title": "xxx",
+      "description": "xxxxxxxxxxxxx",
+      "color": "rgba(0, 0, 128, 1)",
+      "keywords": "xxxxxxxxxxxx",
+      "id": "F63mVyZ"
+    },
+    {
+      "title": "gggg",
+      "description": "gggggggggggggggggggggggg",
+      "color": "rgba(20, 200, 14, 1)",
+      "keywords": "gggggggggggggggggggg",
+      "id": "SWKlYb2"
+    }
+  ],
+  "predefinedFilters": [
+    {
+      "predefinedFilterid": 1,
+      "label": "Protection of minors",
+      "value": "ProtectionOfMinors"
+    },
+    {
+      "predefinedFilterid": 2,
+      "label": "Alcohol",
+      "value": "Alcohol"
+    },
+    {
+      "predefinedFilterid": 3,
+      "label": "Tobacco",
+      "value": "Tobacco"
+    },
+    {
+      "predefinedFilterid": 4,
+      "label": "Violence",
+      "value": "Violence"
+    },
+    {
+      "predefinedFilterid": 5,
+      "label": "Eroticism",
+      "value": "Eroticism"
+    },
+    {
+      "predefinedFilterid": 6,
+      "label": "Pharma",
+      "value": "Pharma"
     }
   ]
 }
