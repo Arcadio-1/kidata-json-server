@@ -540,7 +540,9 @@
   ],
   "industriesSuggestion": [
     {
-      "keywords": ["gggggggg"],
+      "keywords": [
+        "gggggggg"
+      ],
       "label": "ggggg",
       "id": 1
     }
@@ -721,49 +723,10 @@
   ],
   "displays": [
     {
-      "date": "2024-06-05T15:04:15.362Z",
-      "latestStep": 0,
-      "status": "pending",
-      "userId": "660c7e9c5eebdc6b0674e13a",
-      "id": 1
-    },
-    {
-      "date": "2024-06-05T15:09:56.397Z",
-      "latestStep": 0,
-      "status": "pending",
-      "userId": "660c7e9c5eebdc6b0674e13a",
-      "id": 2
-    },
-    {
-      "date": "2024-06-05T23:09:24.409Z",
-      "latestStep": 0,
-      "status": "pending",
-      "userId": "660c7e9c5eebdc6b0674e13a",
-      "id": 3
-    },
-    {
-      "date": "2024-06-06T14:07:03.892Z",
-      "latestStep": 0,
-      "status": "pending",
-      "userId": "660c7e9c5eebdc6b0674e13a",
-      "id": 4
-    },
-    {
-      "date": "2024-06-06T22:52:49.208Z",
-      "latestStep": 0,
-      "status": "pending",
-      "userId": "660c7e9c5eebdc6b0674e13a",
-      "id": 5
-    },
-    {
-      "date": "2024-06-07T12:41:40.509Z",
-      "latestStep": 0,
-      "status": "pending",
-      "userId": "660c7e9c5eebdc6b0674e13a",
-      "id": 6,
+      "id": 1,
       "header": {
-        "date": "2024-06-09T01:12:28.629Z",
-        "latestStep": 1,
+        "date": "2024-06-14T03:07:15.865Z",
+        "latestStep": 2,
         "status": "pending",
         "userId": "22222"
       },
@@ -776,46 +739,522 @@
         "displaySignageCategoryId": "Category3",
         "accessibilityInformation": {
           "accessibility": "public",
-          "location": "internal"
+          "location": "external"
+        },
+        "sharingDisplay": {
+          "shearOptions": "restrictionsShare"
+        },
+        "industryFilter": {
+          "industriesId": [
+            "FINANCE",
+            "RETAIL"
+          ]
+        },
+        "predefinedFilters": {
+          "filtersId": [
+            "Tobacco",
+            "Alcohol",
+            "Pharma"
+          ]
+        }
+      },
+      "stepOne": {
+        "technicalSpecifications": {
+          "brandId": "4",
+          "model": "hhhhhhhhhh",
+          "serialNumber": "55555",
+          "sound": true
+        },
+        "operatingSystem": {
+          "operatingSystem": "googleAndroid"
+        },
+        "display": {
+          "alignment": "horizontal",
+          "displaySizeTypeA": 61.7,
+          "displayTypeId": "floorStandScreen",
+          "numberOfScreens": "one",
+          "resolutionTypeA": "QHD"
+        },
+        "availability": [
+          {
+            "hour": 49,
+            "peakTimesRate": 0
+          },
+          {
+            "hour": 50,
+            "peakTimesRate": 0
+          },
+          {
+            "hour": 51,
+            "peakTimesRate": 0
+          },
+          {
+            "hour": 52,
+            "peakTimesRate": 0
+          },
+          {
+            "hour": 53,
+            "peakTimesRate": 0
+          },
+          {
+            "hour": 54,
+            "peakTimesRate": 0
+          },
+          {
+            "hour": 55,
+            "peakTimesRate": 0
+          },
+          {
+            "hour": 56,
+            "peakTimesRate": 0
+          },
+          {
+            "hour": 57,
+            "peakTimesRate": 0
+          },
+          {
+            "hour": 58,
+            "peakTimesRate": 0
+          },
+          {
+            "hour": 59,
+            "peakTimesRate": 0
+          },
+          {
+            "hour": 61,
+            "peakTimesRate": 0
+          },
+          {
+            "hour": 62,
+            "peakTimesRate": 0
+          },
+          {
+            "hour": 63,
+            "peakTimesRate": 0
+          },
+          {
+            "hour": 64,
+            "peakTimesRate": 0
+          },
+          {
+            "hour": 65,
+            "peakTimesRate": 0
+          },
+          {
+            "hour": 66,
+            "peakTimesRate": 0
+          },
+          {
+            "hour": 67,
+            "peakTimesRate": 0
+          },
+          {
+            "hour": 68,
+            "peakTimesRate": 0
+          },
+          {
+            "hour": 69,
+            "peakTimesRate": 0
+          },
+          {
+            "hour": 70,
+            "peakTimesRate": 0
+          },
+          {
+            "hour": 71,
+            "peakTimesRate": 0
+          },
+          {
+            "hour": 72,
+            "peakTimesRate": 0
+          },
+          {
+            "hour": 97,
+            "peakTimesRate": 0
+          },
+          {
+            "hour": 98,
+            "peakTimesRate": 0
+          },
+          {
+            "hour": 99,
+            "peakTimesRate": 0
+          },
+          {
+            "hour": 100,
+            "peakTimesRate": 0
+          },
+          {
+            "hour": 101,
+            "peakTimesRate": 0
+          },
+          {
+            "hour": 102,
+            "peakTimesRate": 0
+          },
+          {
+            "hour": 103,
+            "peakTimesRate": 0
+          },
+          {
+            "hour": 104,
+            "peakTimesRate": 0
+          },
+          {
+            "hour": 105,
+            "peakTimesRate": 0
+          },
+          {
+            "hour": 106,
+            "peakTimesRate": 0
+          },
+          {
+            "hour": 107,
+            "peakTimesRate": 0
+          },
+          {
+            "hour": 109,
+            "peakTimesRate": 0
+          },
+          {
+            "hour": 110,
+            "peakTimesRate": 0
+          },
+          {
+            "hour": 111,
+            "peakTimesRate": 0
+          },
+          {
+            "hour": 112,
+            "peakTimesRate": 0
+          },
+          {
+            "hour": 113,
+            "peakTimesRate": 0
+          },
+          {
+            "hour": 114,
+            "peakTimesRate": 0
+          },
+          {
+            "hour": 115,
+            "peakTimesRate": 0
+          },
+          {
+            "hour": 116,
+            "peakTimesRate": 0
+          },
+          {
+            "hour": 117,
+            "peakTimesRate": 0
+          },
+          {
+            "hour": 118,
+            "peakTimesRate": 0
+          },
+          {
+            "hour": 119,
+            "peakTimesRate": 0
+          },
+          {
+            "hour": 120,
+            "peakTimesRate": 0
+          },
+          {
+            "hour": 12,
+            "peakTimesRate": 0
+          },
+          {
+            "hour": 36,
+            "peakTimesRate": 0
+          },
+          {
+            "hour": 60,
+            "peakTimesRate": 0
+          },
+          {
+            "hour": 84,
+            "peakTimesRate": 0
+          },
+          {
+            "hour": 108,
+            "peakTimesRate": 0
+          },
+          {
+            "hour": 132,
+            "peakTimesRate": 0
+          },
+          {
+            "hour": 156,
+            "peakTimesRate": 0
+          }
+        ]
+      }
+    },
+    {
+      "header": {
+        "date": "2024-06-14T03:29:07.463Z",
+        "latestStep": 2,
+        "status": "pending",
+        "userId": "22222"
+      },
+      "id": 2,
+      "stepZero": {
+        "digitalSignageInformation": {
+          "description": "11111111111111",
+          "keywords": "11111111111111111111",
+          "title": "111111111"
+        },
+        "displaySignageCategoryId": "4NqwzTU",
+        "accessibilityInformation": {
+          "accessibility": "public",
+          "location": "external"
         },
         "sharingDisplay": {
           "shearOptions": "share"
         },
         "industryFilter": {
-          "industriesId": ["FINANCE", "RETAIL"]
+          "industriesId": [
+            "RETAIL"
+          ]
         },
         "predefinedFilters": {
-          "filtersId": ["Tobacco", "Alcohol", "Pharma"]
+          "filtersId": [
+            "Alcohol",
+            "Violence"
+          ]
         }
+      },
+      "stepOne": {
+        "technicalSpecifications": {
+          "brandId": "4",
+          "model": "hhhhhhhhhh",
+          "serialNumber": "aaaaaa",
+          "sound": true
+        },
+        "operatingSystem": {
+          "operatingSystem": "linux"
+        },
+        "display": {
+          "alignment": "vertical",
+          "displaySizeTypeA": 57.3,
+          "displayTypeId": "floorStandScreen",
+          "numberOfScreens": "one",
+          "resolutionTypeA": "QHD"
+        },
+        "availability": [
+          {
+            "hour": 49,
+            "peakTimesRate": 0
+          },
+          {
+            "hour": 50,
+            "peakTimesRate": 0
+          },
+          {
+            "hour": 51,
+            "peakTimesRate": 0
+          },
+          {
+            "hour": 52,
+            "peakTimesRate": 0
+          },
+          {
+            "hour": 53,
+            "peakTimesRate": 0
+          },
+          {
+            "hour": 54,
+            "peakTimesRate": 0
+          },
+          {
+            "hour": 55,
+            "peakTimesRate": 0
+          },
+          {
+            "hour": 56,
+            "peakTimesRate": 0
+          },
+          {
+            "hour": 57,
+            "peakTimesRate": 0
+          },
+          {
+            "hour": 58,
+            "peakTimesRate": 0
+          },
+          {
+            "hour": 59,
+            "peakTimesRate": 0
+          },
+          {
+            "hour": 60,
+            "peakTimesRate": 0
+          },
+          {
+            "hour": 61,
+            "peakTimesRate": 0
+          },
+          {
+            "hour": 62,
+            "peakTimesRate": 0
+          },
+          {
+            "hour": 63,
+            "peakTimesRate": 0
+          },
+          {
+            "hour": 64,
+            "peakTimesRate": 0
+          },
+          {
+            "hour": 65,
+            "peakTimesRate": 0
+          },
+          {
+            "hour": 66,
+            "peakTimesRate": 0
+          },
+          {
+            "hour": 67,
+            "peakTimesRate": 0
+          },
+          {
+            "hour": 68,
+            "peakTimesRate": 0
+          },
+          {
+            "hour": 69,
+            "peakTimesRate": 0
+          },
+          {
+            "hour": 70,
+            "peakTimesRate": 0
+          },
+          {
+            "hour": 71,
+            "peakTimesRate": 0
+          },
+          {
+            "hour": 72,
+            "peakTimesRate": 0
+          },
+          {
+            "hour": 145,
+            "peakTimesRate": 0
+          },
+          {
+            "hour": 146,
+            "peakTimesRate": 0
+          },
+          {
+            "hour": 147,
+            "peakTimesRate": 0
+          },
+          {
+            "hour": 148,
+            "peakTimesRate": 0
+          },
+          {
+            "hour": 149,
+            "peakTimesRate": 0
+          },
+          {
+            "hour": 150,
+            "peakTimesRate": 0
+          },
+          {
+            "hour": 151,
+            "peakTimesRate": 0
+          },
+          {
+            "hour": 152,
+            "peakTimesRate": 0
+          },
+          {
+            "hour": 153,
+            "peakTimesRate": 0
+          },
+          {
+            "hour": 154,
+            "peakTimesRate": 0
+          },
+          {
+            "hour": 155,
+            "peakTimesRate": 0
+          },
+          {
+            "hour": 156,
+            "peakTimesRate": 0
+          },
+          {
+            "hour": 157,
+            "peakTimesRate": 0
+          },
+          {
+            "hour": 158,
+            "peakTimesRate": 0
+          },
+          {
+            "hour": 159,
+            "peakTimesRate": 0
+          },
+          {
+            "hour": 160,
+            "peakTimesRate": 0
+          },
+          {
+            "hour": 161,
+            "peakTimesRate": 0
+          },
+          {
+            "hour": 162,
+            "peakTimesRate": 0
+          },
+          {
+            "hour": 163,
+            "peakTimesRate": 0
+          },
+          {
+            "hour": 164,
+            "peakTimesRate": 0
+          },
+          {
+            "hour": 165,
+            "peakTimesRate": 0
+          },
+          {
+            "hour": 166,
+            "peakTimesRate": 0
+          },
+          {
+            "hour": 167,
+            "peakTimesRate": 0
+          },
+          {
+            "hour": 168,
+            "peakTimesRate": 0
+          }
+        ]
       }
     },
     {
-      "date": "2024-06-07T15:11:48.104Z",
-      "latestStep": 0,
-      "status": "pending",
-      "userId": "660c7e9c5eebdc6b0674e13a",
-      "id": 7
+      "header": {
+        "date": "2024-06-14T03:25:05.320Z",
+        "latestStep": 0,
+        "status": "pending",
+        "userId": "660c7e9c5eebdc6b0674e13a"
+      },
+      "id": 3
     },
     {
-      "date": "2024-06-08T14:05:10.104Z",
-      "latestStep": 0,
-      "status": "pending",
-      "userId": "660c7e9c5eebdc6b0674e13a",
-      "id": 8
-    },
-    {
-      "date": "2024-06-08T20:20:17.067Z",
-      "latestStep": 0,
-      "status": "pending",
-      "userId": "660c7e9c5eebdc6b0674e13a",
-      "id": 9
-    },
-    {
-      "date": "2024-06-08T23:29:03.106Z",
-      "latestStep": 0,
-      "status": "pending",
-      "userId": "660c7e9c5eebdc6b0674e13a",
-      "id": 10
+      "header": {
+        "date": "2024-06-14T03:26:55.837Z",
+        "latestStep": 0,
+        "status": "pending",
+        "userId": "660c7e9c5eebdc6b0674e13a"
+      },
+      "id": 4
     }
   ],
   "categories": [
@@ -837,7 +1276,7 @@
       "id": "Category3",
       "title": "Clothing",
       "description": "This category includes all types of clothing for men, women, and children.",
-      "color": "rgba(255, 165, 0, 1)",
+      "color": "rgba(7,7,235,1)",
       "keywords": "electronics,laptops,smartphones,tablets"
     },
     {
@@ -892,6 +1331,73 @@
       "predefinedFilterid": 6,
       "label": "Pharma",
       "value": "Pharma"
+    }
+  ],
+  "displayBrands": [
+    {
+      "displayBrandId": "1",
+      "label": "Samsung",
+      "value": "samsung"
+    },
+    {
+      "displayBrandId": "2",
+      "label": "LG",
+      "value": "lg"
+    },
+    {
+      "displayBrandId": "3",
+      "label": "Sony",
+      "value": "sony"
+    },
+    {
+      "displayBrandId": "4",
+      "label": "TCL",
+      "value": "tcl"
+    },
+    {
+      "displayBrandId": "5",
+      "label": "Hisense",
+      "value": "hisense"
+    },
+    {
+      "displayBrandId": "6",
+      "label": "Philips",
+      "value": "philips"
+    },
+    {
+      "displayBrandId": "7",
+      "label": "Acer",
+      "value": "acer"
+    },
+    {
+      "displayBrandId": "8",
+      "label": "Asus",
+      "value": "asus"
+    },
+    {
+      "displayBrandId": "9",
+      "label": "MSI",
+      "value": "msi"
+    },
+    {
+      "displayBrandId": "10",
+      "label": "ViewSonic",
+      "value": "viewsonic"
+    },
+    {
+      "displayBrandId": "11",
+      "label": "BenQ",
+      "value": "benq"
+    },
+    {
+      "displayBrandId": "12",
+      "label": "AOC",
+      "value": "aoc"
+    },
+    {
+      "displayBrandId": "13",
+      "label": "Sceptre",
+      "value": "sceptre"
     }
   ]
 }
