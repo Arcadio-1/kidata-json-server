@@ -545,6 +545,13 @@
       ],
       "label": "ggggg",
       "id": 1
+    },
+    {
+      "keywords": [
+        "ssssssssss"
+      ],
+      "label": "ggggg",
+      "id": 2
     }
   ],
   "industries": [
@@ -723,289 +730,20 @@
   ],
   "displays": [
     {
+      "header": {
+        "date": "2024-06-22T14:26:22.837Z",
+        "latestStep": 4,
+        "status": "pending",
+        "userId": "22222"
+      },
       "id": 1,
-      "header": {
-        "date": "2024-06-14T03:07:15.865Z",
-        "latestStep": 2,
-        "status": "pending",
-        "userId": "22222"
-      },
       "stepZero": {
         "digitalSignageInformation": {
-          "description": "ffffffffff",
-          "keywords": "fffffffffffff",
-          "title": "ffffffffffff"
+          "description": "ssssssssssss",
+          "keywords": "ssssssss",
+          "title": "sssssssssss"
         },
-        "displaySignageCategoryId": "Category3",
-        "accessibilityInformation": {
-          "accessibility": "public",
-          "location": "external"
-        },
-        "sharingDisplay": {
-          "shearOptions": "restrictionsShare"
-        },
-        "industryFilter": {
-          "industriesId": [
-            "FINANCE",
-            "RETAIL"
-          ]
-        },
-        "predefinedFilters": {
-          "filtersId": [
-            "Tobacco",
-            "Alcohol",
-            "Pharma"
-          ]
-        }
-      },
-      "stepOne": {
-        "technicalSpecifications": {
-          "brandId": "4",
-          "model": "hhhhhhhhhh",
-          "serialNumber": "55555",
-          "sound": true
-        },
-        "operatingSystem": {
-          "operatingSystem": "googleAndroid"
-        },
-        "display": {
-          "alignment": "horizontal",
-          "displaySizeTypeA": 61.7,
-          "displayTypeId": "floorStandScreen",
-          "numberOfScreens": "one",
-          "resolutionTypeA": "QHD"
-        },
-        "availability": [
-          {
-            "hour": 49,
-            "peakTimesRate": 0
-          },
-          {
-            "hour": 50,
-            "peakTimesRate": 0
-          },
-          {
-            "hour": 51,
-            "peakTimesRate": 0
-          },
-          {
-            "hour": 52,
-            "peakTimesRate": 0
-          },
-          {
-            "hour": 53,
-            "peakTimesRate": 0
-          },
-          {
-            "hour": 54,
-            "peakTimesRate": 0
-          },
-          {
-            "hour": 55,
-            "peakTimesRate": 0
-          },
-          {
-            "hour": 56,
-            "peakTimesRate": 0
-          },
-          {
-            "hour": 57,
-            "peakTimesRate": 0
-          },
-          {
-            "hour": 58,
-            "peakTimesRate": 0
-          },
-          {
-            "hour": 59,
-            "peakTimesRate": 0
-          },
-          {
-            "hour": 61,
-            "peakTimesRate": 0
-          },
-          {
-            "hour": 62,
-            "peakTimesRate": 0
-          },
-          {
-            "hour": 63,
-            "peakTimesRate": 0
-          },
-          {
-            "hour": 64,
-            "peakTimesRate": 0
-          },
-          {
-            "hour": 65,
-            "peakTimesRate": 0
-          },
-          {
-            "hour": 66,
-            "peakTimesRate": 0
-          },
-          {
-            "hour": 67,
-            "peakTimesRate": 0
-          },
-          {
-            "hour": 68,
-            "peakTimesRate": 0
-          },
-          {
-            "hour": 69,
-            "peakTimesRate": 0
-          },
-          {
-            "hour": 70,
-            "peakTimesRate": 0
-          },
-          {
-            "hour": 71,
-            "peakTimesRate": 0
-          },
-          {
-            "hour": 72,
-            "peakTimesRate": 0
-          },
-          {
-            "hour": 97,
-            "peakTimesRate": 0
-          },
-          {
-            "hour": 98,
-            "peakTimesRate": 0
-          },
-          {
-            "hour": 99,
-            "peakTimesRate": 0
-          },
-          {
-            "hour": 100,
-            "peakTimesRate": 0
-          },
-          {
-            "hour": 101,
-            "peakTimesRate": 0
-          },
-          {
-            "hour": 102,
-            "peakTimesRate": 0
-          },
-          {
-            "hour": 103,
-            "peakTimesRate": 0
-          },
-          {
-            "hour": 104,
-            "peakTimesRate": 0
-          },
-          {
-            "hour": 105,
-            "peakTimesRate": 0
-          },
-          {
-            "hour": 106,
-            "peakTimesRate": 0
-          },
-          {
-            "hour": 107,
-            "peakTimesRate": 0
-          },
-          {
-            "hour": 109,
-            "peakTimesRate": 0
-          },
-          {
-            "hour": 110,
-            "peakTimesRate": 0
-          },
-          {
-            "hour": 111,
-            "peakTimesRate": 0
-          },
-          {
-            "hour": 112,
-            "peakTimesRate": 0
-          },
-          {
-            "hour": 113,
-            "peakTimesRate": 0
-          },
-          {
-            "hour": 114,
-            "peakTimesRate": 0
-          },
-          {
-            "hour": 115,
-            "peakTimesRate": 0
-          },
-          {
-            "hour": 116,
-            "peakTimesRate": 0
-          },
-          {
-            "hour": 117,
-            "peakTimesRate": 0
-          },
-          {
-            "hour": 118,
-            "peakTimesRate": 0
-          },
-          {
-            "hour": 119,
-            "peakTimesRate": 0
-          },
-          {
-            "hour": 120,
-            "peakTimesRate": 0
-          },
-          {
-            "hour": 12,
-            "peakTimesRate": 0
-          },
-          {
-            "hour": 36,
-            "peakTimesRate": 0
-          },
-          {
-            "hour": 60,
-            "peakTimesRate": 0
-          },
-          {
-            "hour": 84,
-            "peakTimesRate": 0
-          },
-          {
-            "hour": 108,
-            "peakTimesRate": 0
-          },
-          {
-            "hour": 132,
-            "peakTimesRate": 0
-          },
-          {
-            "hour": 156,
-            "peakTimesRate": 0
-          }
-        ]
-      }
-    },
-    {
-      "header": {
-        "date": "2024-06-14T03:29:07.463Z",
-        "latestStep": 2,
-        "status": "pending",
-        "userId": "22222"
-      },
-      "id": 2,
-      "stepZero": {
-        "digitalSignageInformation": {
-          "description": "11111111111111",
-          "keywords": "11111111111111111111",
-          "title": "111111111"
-        },
-        "displaySignageCategoryId": "4NqwzTU",
+        "displaySignageCategoryId": "Category2",
         "accessibilityInformation": {
           "accessibility": "public",
           "location": "external"
@@ -1015,232 +753,157 @@
         },
         "industryFilter": {
           "industriesId": [
-            "RETAIL"
+            "FINANCE"
           ]
         },
         "predefinedFilters": {
           "filtersId": [
-            "Alcohol",
             "Violence"
           ]
         }
       },
       "stepOne": {
-        "technicalSpecifications": {
-          "brandId": "4",
-          "model": "hhhhhhhhhh",
-          "serialNumber": "aaaaaa",
-          "sound": true
+        "displayTechnicalSpecifications": {
+          "displayBrandId": "2",
+          "displayModel": "hh",
+          "displaySerialNumber": "hhhhhhhhhhhhhhh",
+          "displaySound": true
         },
-        "operatingSystem": {
-          "operatingSystem": "linux"
+        "displayOperatingSystem": "appleIos",
+        "displayAlignment": "horizontal",
+        "displayType": "floorStandScreen",
+        "floorStandNumberOfScreens": "one"
+      },
+      "common": {
+        "displayTime": {
+          "1": 3,
+          "2": 3,
+          "3": 3,
+          "4": 3,
+          "5": 3,
+          "6": 3,
+          "7": 3,
+          "8": 3,
+          "9": 3,
+          "10": 3,
+          "11": 3,
+          "12": 3,
+          "13": 3,
+          "14": 3,
+          "15": 3,
+          "16": 3,
+          "17": 3,
+          "18": 3,
+          "19": 3,
+          "20": 3,
+          "21": 3,
+          "22": 3,
+          "23": 3,
+          "24": 3
+        }
+      },
+      "stepTwo": {
+        "location": {
+          "placment": "ww",
+          "description": "ggggggg"
         },
-        "display": {
-          "alignment": "vertical",
-          "displaySizeTypeA": 57.3,
-          "displayTypeId": "floorStandScreen",
-          "numberOfScreens": "one",
-          "resolutionTypeA": "QHD"
-        },
-        "availability": [
+        "mediasOfADisplay": [
           {
-            "hour": 49,
-            "peakTimesRate": 0
+            "uid": "1",
+            "url": "/images/profile.jpg",
+            "name": "file",
+            "status": "done"
           },
           {
-            "hour": 50,
-            "peakTimesRate": 0
+            "uid": "2",
+            "url": "/images/profile.jpg",
+            "name": "file",
+            "status": "done"
           },
           {
-            "hour": 51,
-            "peakTimesRate": 0
+            "uid": "3",
+            "url": "/images/profile.jpg",
+            "name": "file",
+            "status": "done"
           },
           {
-            "hour": 52,
-            "peakTimesRate": 0
-          },
-          {
-            "hour": 53,
-            "peakTimesRate": 0
-          },
-          {
-            "hour": 54,
-            "peakTimesRate": 0
-          },
-          {
-            "hour": 55,
-            "peakTimesRate": 0
-          },
-          {
-            "hour": 56,
-            "peakTimesRate": 0
-          },
-          {
-            "hour": 57,
-            "peakTimesRate": 0
-          },
-          {
-            "hour": 58,
-            "peakTimesRate": 0
-          },
-          {
-            "hour": 59,
-            "peakTimesRate": 0
-          },
-          {
-            "hour": 60,
-            "peakTimesRate": 0
-          },
-          {
-            "hour": 61,
-            "peakTimesRate": 0
-          },
-          {
-            "hour": 62,
-            "peakTimesRate": 0
-          },
-          {
-            "hour": 63,
-            "peakTimesRate": 0
-          },
-          {
-            "hour": 64,
-            "peakTimesRate": 0
-          },
-          {
-            "hour": 65,
-            "peakTimesRate": 0
-          },
-          {
-            "hour": 66,
-            "peakTimesRate": 0
-          },
-          {
-            "hour": 67,
-            "peakTimesRate": 0
-          },
-          {
-            "hour": 68,
-            "peakTimesRate": 0
-          },
-          {
-            "hour": 69,
-            "peakTimesRate": 0
-          },
-          {
-            "hour": 70,
-            "peakTimesRate": 0
-          },
-          {
-            "hour": 71,
-            "peakTimesRate": 0
-          },
-          {
-            "hour": 72,
-            "peakTimesRate": 0
-          },
-          {
-            "hour": 145,
-            "peakTimesRate": 0
-          },
-          {
-            "hour": 146,
-            "peakTimesRate": 0
-          },
-          {
-            "hour": 147,
-            "peakTimesRate": 0
-          },
-          {
-            "hour": 148,
-            "peakTimesRate": 0
-          },
-          {
-            "hour": 149,
-            "peakTimesRate": 0
-          },
-          {
-            "hour": 150,
-            "peakTimesRate": 0
-          },
-          {
-            "hour": 151,
-            "peakTimesRate": 0
-          },
-          {
-            "hour": 152,
-            "peakTimesRate": 0
-          },
-          {
-            "hour": 153,
-            "peakTimesRate": 0
-          },
-          {
-            "hour": 154,
-            "peakTimesRate": 0
-          },
-          {
-            "hour": 155,
-            "peakTimesRate": 0
-          },
-          {
-            "hour": 156,
-            "peakTimesRate": 0
-          },
-          {
-            "hour": 157,
-            "peakTimesRate": 0
-          },
-          {
-            "hour": 158,
-            "peakTimesRate": 0
-          },
-          {
-            "hour": 159,
-            "peakTimesRate": 0
-          },
-          {
-            "hour": 160,
-            "peakTimesRate": 0
-          },
-          {
-            "hour": 161,
-            "peakTimesRate": 0
-          },
-          {
-            "hour": 162,
-            "peakTimesRate": 0
-          },
-          {
-            "hour": 163,
-            "peakTimesRate": 0
-          },
-          {
-            "hour": 164,
-            "peakTimesRate": 0
-          },
-          {
-            "hour": 165,
-            "peakTimesRate": 0
-          },
-          {
-            "hour": 166,
-            "peakTimesRate": 0
-          },
-          {
-            "hour": 167,
-            "peakTimesRate": 0
-          },
-          {
-            "hour": 168,
-            "peakTimesRate": 0
+            "uid": "4",
+            "url": "/images/profile.jpg",
+            "name": "file",
+            "status": "done"
           }
-        ]
+        ],
+        "onMapLocation": {
+          "lng": 8.243688024957013,
+          "lat": 50.084621835855486
+        },
+        "position": {
+          "addressSupplement": "ggggggggggggggggggg",
+          "city": "gggggggggggg",
+          "countryId": "FR",
+          "federalStateId": "CA-CA",
+          "number": "ggggggggggggggggg",
+          "street": "gggggg",
+          "zip": "gggggggggggg"
+        }
+      },
+      "stepThree": {
+        "priceCredits": 3,
+        "visibilityRate": 3,
+        "visitorCount": 3
       }
     },
     {
       "header": {
-        "date": "2024-06-14T03:25:05.320Z",
+        "date": "2024-06-22T03:30:07.295Z",
+        "latestStep": 2,
+        "status": "pending",
+        "userId": "22222"
+      },
+      "id": 2,
+      "stepZero": {
+        "digitalSignageInformation": {
+          "description": "wwwwwwwwwwwww",
+          "keywords": "wwwwwwww",
+          "title": "wwwwwww"
+        },
+        "displaySignageCategoryId": "Category2",
+        "accessibilityInformation": {
+          "accessibility": "public",
+          "location": "external"
+        },
+        "sharingDisplay": {
+          "shearOptions": "share"
+        },
+        "industryFilter": {
+          "industriesId": []
+        },
+        "predefinedFilters": {
+          "filtersId": []
+        }
+      },
+      "stepOne": {
+        "displayTechnicalSpecifications": {
+          "displayBrandId": "2",
+          "displayModel": "sssssssssss",
+          "displaySerialNumber": "sssssssssssssssssss",
+          "displaySound": true
+        },
+        "displayOperatingSystem": "googleAndroid",
+        "displayAlignment": "horizontal",
+        "displaySizeTypeA": 49.5,
+        "displayType": "LCDScreen",
+        "displayResolutionTypeA": "WQHD"
+      },
+      "common": {
+        "displayTime": {
+          "51": 0
+        }
+      }
+    },
+    {
+      "header": {
+        "date": "2024-06-22T14:04:23.642Z",
         "latestStep": 0,
         "status": "pending",
         "userId": "660c7e9c5eebdc6b0674e13a"
@@ -1249,12 +912,338 @@
     },
     {
       "header": {
-        "date": "2024-06-14T03:26:55.837Z",
+        "date": "2024-06-23T03:56:08.547Z",
+        "latestStep": 4,
+        "status": "pending",
+        "userId": "22222"
+      },
+      "id": 4,
+      "stepZero": {
+        "digitalSignageInformation": {
+          "description": "ffffff",
+          "keywords": "ffffffff",
+          "title": "ffffffff"
+        },
+        "displaySignageCategoryId": "Category2",
+        "accessibilityInformation": {
+          "accessibility": "public",
+          "location": "external"
+        },
+        "sharingDisplay": {
+          "shearOptions": "share"
+        },
+        "industryFilter": {
+          "industriesId": []
+        },
+        "predefinedFilters": {
+          "filtersId": []
+        }
+      },
+      "stepOne": {
+        "displayTechnicalSpecifications": {
+          "displayBrandId": "2",
+          "displayModel": "fff",
+          "displaySerialNumber": "ffffffffffffff",
+          "displaySound": true
+        },
+        "displayOperatingSystem": "googleAndroid",
+        "displayAlignment": "horizontal",
+        "displaySizeTypeA": 52.9,
+        "displayType": "LCDScreen",
+        "displayResolutionTypeA": "FullHD"
+      },
+      "common": {
+        "displayTime": {
+          "49": 1,
+          "50": 1,
+          "51": 1,
+          "52": 1,
+          "53": 2,
+          "54": 4,
+          "55": 4,
+          "56": 4,
+          "57": 4,
+          "58": 4,
+          "59": 4,
+          "60": 4,
+          "61": 4,
+          "62": 4,
+          "63": 4,
+          "64": 3,
+          "65": 3,
+          "66": 3,
+          "67": 3,
+          "68": 3,
+          "69": 1,
+          "70": 1,
+          "71": 1,
+          "72": 1
+        }
+      },
+      "stepTwo": {
+        "location": {
+          "placment": "ww",
+          "description": "dddddddddd"
+        },
+        "mediasOfADisplay": [
+          {
+            "uid": "1",
+            "url": "/images/profile.jpg",
+            "name": "file",
+            "status": "done"
+          },
+          {
+            "uid": "2",
+            "url": "/images/profile.jpg",
+            "name": "file",
+            "status": "done"
+          },
+          {
+            "uid": "3",
+            "url": "/images/profile.jpg",
+            "name": "file",
+            "status": "done"
+          },
+          {
+            "uid": "4",
+            "url": "/images/profile.jpg",
+            "name": "file",
+            "status": "done"
+          }
+        ],
+        "onMapLocation": {
+          "lng": 8.24772968383223,
+          "lat": 50.083680690615196
+        },
+        "position": {
+          "addressSupplement": "dddddddddddddddd",
+          "city": "dddddddddddddd",
+          "countryId": "UK",
+          "federalStateId": "TX-TX",
+          "number": "dddddddddddddddd",
+          "street": "ddddddddddddddddddd",
+          "zip": "ddddd"
+        }
+      },
+      "stepThree": {
+        "priceCredits": 4,
+        "visibilityRate": 4,
+        "visitorCount": 2
+      }
+    },
+    {
+      "header": {
+        "date": "2024-06-23T13:49:07.845Z",
         "latestStep": 0,
         "status": "pending",
         "userId": "660c7e9c5eebdc6b0674e13a"
       },
-      "id": 4
+      "id": 5
+    },
+    {
+      "header": {
+        "date": "2024-06-23T15:37:27.288Z",
+        "latestStep": 4,
+        "status": "pending",
+        "userId": "22222"
+      },
+      "id": 6,
+      "stepZero": {
+        "digitalSignageInformation": {
+          "description": "ffffffffffff",
+          "keywords": "fffffffff",
+          "title": "fffffffffffff"
+        },
+        "displaySignageCategoryId": "Category3",
+        "accessibilityInformation": {
+          "accessibility": "public",
+          "location": "internal"
+        },
+        "sharingDisplay": {
+          "shearOptions": "restrictionsShare"
+        },
+        "industryFilter": {
+          "industriesId": [
+            "FINANCE",
+            "HEALTHCARE",
+            "RETAIL"
+          ]
+        },
+        "predefinedFilters": {
+          "filtersId": [
+            "Tobacco",
+            "Eroticism"
+          ]
+        }
+      },
+      "stepOne": {
+        "displayTechnicalSpecifications": {
+          "displayBrandId": "2",
+          "displayModel": "tttttttttttt",
+          "displaySerialNumber": "ttttttttttttt",
+          "displaySound": true
+        },
+        "displayOperatingSystem": "microsoftWindows",
+        "displayAlignment": "horizontal",
+        "displaySizeTypeA": 46.7,
+        "displayType": "LCDScreen",
+        "displayResolutionTypeA": "HD"
+      },
+      "common": {
+        "displayTime": {
+          "29": 4,
+          "30": 4,
+          "31": 4,
+          "32": 4,
+          "33": 4,
+          "34": 4,
+          "35": 4,
+          "36": 4,
+          "37": 4,
+          "38": 4,
+          "39": 4,
+          "40": 4,
+          "41": 4,
+          "42": 4,
+          "43": 4,
+          "44": 4,
+          "45": 4,
+          "46": 4,
+          "51": 4,
+          "52": 4,
+          "53": 4,
+          "54": 4,
+          "55": 4,
+          "56": 4,
+          "57": 4,
+          "58": 4,
+          "59": 4,
+          "60": 4,
+          "61": 4,
+          "62": 4,
+          "63": 4,
+          "64": 4,
+          "65": 4,
+          "66": 4,
+          "67": 4,
+          "68": 4,
+          "69": 4,
+          "70": 4,
+          "71": 4,
+          "74": 3,
+          "75": 3,
+          "76": 3,
+          "77": 3,
+          "78": 3,
+          "79": 3,
+          "80": 3,
+          "81": 3,
+          "82": 3,
+          "83": 3,
+          "84": 3,
+          "85": 3,
+          "86": 3,
+          "87": 3,
+          "88": 3,
+          "89": 3,
+          "90": 3,
+          "91": 3,
+          "92": 3,
+          "93": 3,
+          "94": 3,
+          "95": 3,
+          "96": 1,
+          "99": 2,
+          "100": 2,
+          "101": 2,
+          "102": 2,
+          "103": 2,
+          "104": 2,
+          "105": 2,
+          "106": 2,
+          "107": 2,
+          "108": 2,
+          "109": 2,
+          "110": 2,
+          "111": 2,
+          "112": 2,
+          "113": 2,
+          "114": 2,
+          "115": 2,
+          "116": 2,
+          "117": 2,
+          "118": 2,
+          "119": 2,
+          "125": 1,
+          "126": 1,
+          "127": 1,
+          "128": 1,
+          "129": 1,
+          "130": 1,
+          "131": 1,
+          "132": 1,
+          "133": 1,
+          "134": 1,
+          "135": 1,
+          "136": 1,
+          "137": 1,
+          "138": 1,
+          "139": 1,
+          "140": 1,
+          "141": 1,
+          "142": 1
+        }
+      },
+      "stepTwo": {
+        "location": {
+          "placment": "ww",
+          "description": "sssssssssssss"
+        },
+        "mediasOfADisplay": [
+          {
+            "uid": "1",
+            "url": "/images/profile.jpg",
+            "name": "file",
+            "status": "done"
+          },
+          {
+            "uid": "2",
+            "url": "/images/profile.jpg",
+            "name": "file",
+            "status": "done"
+          },
+          {
+            "uid": "3",
+            "url": "/images/profile.jpg",
+            "name": "file",
+            "status": "done"
+          },
+          {
+            "uid": "4",
+            "url": "/images/profile.jpg",
+            "name": "file",
+            "status": "done"
+          }
+        ],
+        "onMapLocation": {
+          "lng": 8.246222194113614,
+          "lat": 50.086335699567584
+        },
+        "position": {
+          "addressSupplement": "ggggggggggggggggg",
+          "city": "ggggggggggggggg",
+          "countryId": "UK",
+          "federalStateId": "NY-NY",
+          "number": "ggggggg",
+          "street": "wwww",
+          "zip": "ggggggggggggg"
+        }
+      },
+      "stepThree": {
+        "priceCredits": 3,
+        "visibilityRate": 3,
+        "visitorCount": 2
+      }
     }
   ],
   "categories": [
@@ -1262,7 +1251,7 @@
       "id": "Category1",
       "title": "Electronic Devices",
       "description": "This category includes all electronic devices such as laptops, smartphones, and tablets.",
-      "color": "rgba(64, 224, 208, 1)",
+      "color": "rgba(255, 0, 255, 1)",
       "keywords": "electronics,laptops,smartphones,tablets"
     },
     {
@@ -1278,27 +1267,6 @@
       "description": "This category includes all types of clothing for men, women, and children.",
       "color": "rgba(7,7,235,1)",
       "keywords": "electronics,laptops,smartphones,tablets"
-    },
-    {
-      "title": "xxx",
-      "description": "xxx",
-      "color": "rgba(192, 192, 192, 1)",
-      "keywords": "xxx",
-      "id": "4NqwzTU"
-    },
-    {
-      "title": "xxx",
-      "description": "xxxxxxxxxxxxx",
-      "color": "rgba(0, 0, 128, 1)",
-      "keywords": "xxxxxxxxxxxx",
-      "id": "F63mVyZ"
-    },
-    {
-      "title": "gggg",
-      "description": "gggggggggggggggggggggggg",
-      "color": "rgba(20, 200, 14, 1)",
-      "keywords": "gggggggggggggggggggg",
-      "id": "SWKlYb2"
     }
   ],
   "predefinedFilters": [
