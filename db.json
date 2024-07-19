@@ -455,7 +455,7 @@
     {
       "id": "f456e23c-b12f-4e42-8c7b-a1987f7e4c9c",
       "header": {
-        "date": "2024-05-25T14:30:28.471Z",
+        "date": "2024-07-03T02:41:01.468Z",
         "latestStep": 4,
         "status": "pending",
         "userId": "22222"
@@ -510,7 +510,7 @@
       },
       "stepThree": {
         "businessModel": {
-          "businessModelId": "BM011"
+          "businessModelId": "BM004"
         }
       }
     }
@@ -518,24 +518,8 @@
   "usersCompanyProf": [],
   "countries": [
     {
-      "countryId": "US",
-      "label": "United States"
-    },
-    {
-      "countryId": "CA",
-      "label": "Canada"
-    },
-    {
-      "countryId": "UK",
-      "label": "United Kingdom"
-    },
-    {
       "countryId": "DE",
       "label": "Germany"
-    },
-    {
-      "countryId": "FR",
-      "label": "France"
     }
   ],
   "industriesSuggestion": [
@@ -552,24 +536,38 @@
       ],
       "label": "ggggg",
       "id": 2
+    },
+    {
+      "keywords": [
+        "fffffffffff"
+      ],
+      "label": "ggggg",
+      "id": 3
+    },
+    {
+      "keywords": [
+        "rrrrrrr"
+      ],
+      "label": "rrrrrrrrrr",
+      "id": 4
     }
   ],
   "industries": [
     {
       "industryId": "TECH",
-      "label": "Technology"
+      "label": "HealthcareHealthcareHealthcareHealthcareHealthcareHealthcare"
     },
     {
       "industryId": "FINANCE",
-      "label": "Finance"
+      "label": "FinanceFinanceFinanceFinanceFinanceFinanceFinanceFinance"
     },
     {
       "industryId": "RETAIL",
-      "label": "Retail"
+      "label": "RETAILRETAILRETAILRETAILRETAILRETAILRETAIL"
     },
     {
       "industryId": "HEALTHCARE",
-      "label": "Healthcare"
+      "label": "HealthcareHealthcareHealthcareHealthca"
     },
     {
       "industryId": "MANUFACTURING",
@@ -654,16 +652,68 @@
   ],
   "federalStates": [
     {
-      "federalStateId": "CA-CA",
-      "label": "California"
+      "federalStateId": "BW-BW",
+      "label": "Baden-Württemberg"
     },
     {
-      "federalStateId": "NY-NY",
-      "label": "New York"
+      "federalStateId": "BY-BY",
+      "label": "Bayern"
     },
     {
-      "federalStateId": "TX-TX",
-      "label": "Texas"
+      "federalStateId": "BE-BE",
+      "label": "Berlin"
+    },
+    {
+      "federalStateId": "BB-BB",
+      "label": "Brandenburg"
+    },
+    {
+      "federalStateId": "HB-HB",
+      "label": "Bremen"
+    },
+    {
+      "federalStateId": "HH-HH",
+      "label": "Hamburg"
+    },
+    {
+      "federalStateId": "HE-HE",
+      "label": "Hessen"
+    },
+    {
+      "federalStateId": "MV-MV",
+      "label": "Mecklenburg-Vorpommern"
+    },
+    {
+      "federalStateId": "NI-NI",
+      "label": "Niedersachsen"
+    },
+    {
+      "federalStateId": "NW-NW",
+      "label": "Nordrhein-Westfalen"
+    },
+    {
+      "federalStateId": "RP-RP",
+      "label": "Rheinland-Pfalz"
+    },
+    {
+      "federalStateId": "SL-SL",
+      "label": "Saarland"
+    },
+    {
+      "federalStateId": "SN-SN",
+      "label": "Sachsen"
+    },
+    {
+      "federalStateId": "ST-ST",
+      "label": "Sachsen-Anhalt"
+    },
+    {
+      "federalStateId": "SH-SH",
+      "label": "Schleswig-Holstein"
+    },
+    {
+      "federalStateId": "TH-TH",
+      "label": "Thüringen"
     }
   ],
   "countryCallingCodes": [
@@ -731,29 +781,399 @@
   "displays": [
     {
       "header": {
-        "date": "2024-06-22T14:26:22.837Z",
-        "latestStep": 4,
+        "date": "2024-07-15T04:31:49.685Z",
+        "latestStep": 1,
         "status": "pending",
         "userId": "22222"
       },
       "id": 1,
       "stepZero": {
         "digitalSignageInformation": {
-          "description": "ssssssssssss",
-          "keywords": "ssssssss",
-          "title": "sssssssssss"
+          "description": "qqqqqqq",
+          "keywords": "qqqqqqqqqqqqqqqq",
+          "title": "qqqqqqqqqq"
         },
         "displaySignageCategoryId": "Category2",
+        "accessibilityInformation": {
+          "accessibility": "public",
+          "location": "internal"
+        },
+        "sharingDisplay": {
+          "shearOptions": "restrictionsShare"
+        },
+        "industryFilter": {
+          "industriesId": []
+        },
+        "predefinedFilters": {
+          "filtersId": []
+        }
+      }
+    },
+    {
+      "header": {
+        "date": "2024-07-15T04:34:51.316Z",
+        "latestStep": 1,
+        "status": "pending",
+        "userId": "22222"
+      },
+      "id": 2,
+      "stepZero": {
+        "digitalSignageInformation": {
+          "description": "eeeeeeeeeeeeeee",
+          "keywords": "eeeeeeeeeeeeeeee",
+          "title": "eeeeeeee"
+        },
+        "displaySignageCategoryId": "Category1",
         "accessibilityInformation": {
           "accessibility": "public",
           "location": "external"
         },
         "sharingDisplay": {
-          "shearOptions": "share"
+          "shearOptions": "restrictionsShare"
         },
         "industryFilter": {
           "industriesId": [
             "FINANCE"
+          ]
+        },
+        "predefinedFilters": {
+          "filtersId": [
+            "Pharma"
+          ]
+        }
+      }
+    },
+    {
+      "header": {
+        "date": "2024-07-15T17:35:14.888Z",
+        "latestStep": 1,
+        "status": "pending",
+        "userId": "22222"
+      },
+      "id": 3,
+      "stepZero": {
+        "digitalSignageInformation": {
+          "description": "ddddddddddddddddddddddddddddddddddddddd",
+          "keywords": "ddddddddddddddddddddd",
+          "title": "ddddddddd"
+        },
+        "displaySignageCategoryId": "Category2",
+        "accessibilityInformation": {
+          "accessibility": "public",
+          "location": "internal"
+        },
+        "sharingDisplay": {
+          "shearOptions": "restrictionsShare",
+          "invitingMessage": "ssssssssssssss",
+          "partnerList": [
+            "ssssssssssss",
+            "aaaaaaaaaaaa"
+          ]
+        },
+        "industryFilter": {
+          "industriesId": [
+            "RETAIL"
+          ]
+        },
+        "predefinedFilters": {
+          "filtersId": [
+            "Violence"
+          ]
+        }
+      }
+    },
+    {
+      "header": {
+        "date": "2024-07-15T19:56:05.012Z",
+        "latestStep": 1,
+        "status": "pending",
+        "userId": "22222"
+      },
+      "id": 4,
+      "stepZero": {
+        "digitalSignageInformation": {
+          "description": "eeeeeeeeeeeeee",
+          "keywords": "eeeeeeeeeeeee",
+          "title": "eeeeeeeeeee"
+        },
+        "displaySignageCategoryId": "Category3",
+        "accessibilityInformation": {
+          "accessibility": "public",
+          "location": "internal"
+        },
+        "sharingDisplay": {
+          "shearOptions": "restrictionsShare",
+          "invitingMessage": "",
+          "partnerList": [
+            "ggggggggggg",
+            "ddddd",
+            "s",
+            "aasd",
+            "adsf",
+            "1"
+          ]
+        },
+        "industryFilter": {
+          "industriesId": [
+            "FINANCE"
+          ]
+        },
+        "predefinedFilters": {
+          "filtersId": [
+            "Pharma",
+            "Alcohol"
+          ]
+        }
+      }
+    },
+    {
+      "header": {
+        "date": "2024-07-19T02:32:05.713Z",
+        "latestStep": 1,
+        "status": "pending",
+        "userId": "22222"
+      },
+      "id": 5,
+      "stepZero": {
+        "digitalSignageInformation": {
+          "description": "wwwwwww",
+          "keywords": "wwwwwwwwwwwwwww",
+          "title": "wwwwwww"
+        },
+        "displaySignageCategoryId": "Category3",
+        "accessibilityInformation": {
+          "accessibility": "public",
+          "location": "internal"
+        },
+        "sharingDisplay": {
+          "shearOptions": "share",
+          "invitingMessage": "dddddddd",
+          "partnerList": [
+            "ssssssssssssss"
+          ]
+        },
+        "industryFilter": {
+          "industriesId": [
+            "FINANCE",
+            "TECH",
+            "RETAIL"
+          ]
+        },
+        "predefinedFilters": {
+          "filtersId": [
+            "Tobacco",
+            "ProtectionOfMinors"
+          ]
+        }
+      },
+      "stepOne": {
+        "displayTechnicalSpecifications": {
+          "displayBrandId": "2",
+          "displayModel": "sssssssssss",
+          "displaySerialNumber": "hhhhhhhhhhhhhhh",
+          "displaySound": "on"
+        },
+        "displayOperatingSystem": "googleAndroid",
+        "displayAlignment": "horizontal",
+        "displaySizeTypeA": 42,
+        "displayType": "LCDScreen",
+        "displayResolutionTypeA": "WQHD"
+      },
+      "common": {
+        "displayTime": {
+          "1": 1
+        }
+      },
+      "stepTwo": {
+        "location": {
+          "placment": "hhhhh",
+          "description": "hhhhhhhh"
+        },
+        "mediasOfADisplay": [
+          {
+            "uid": "1",
+            "url": "/images/profile.jpg",
+            "name": "file",
+            "status": "done"
+          },
+          {
+            "uid": "2",
+            "url": "/images/profile.jpg",
+            "name": "file",
+            "status": "done"
+          },
+          {
+            "uid": "3",
+            "url": "/images/profile.jpg",
+            "name": "file",
+            "status": "done"
+          },
+          {
+            "uid": "4",
+            "url": "/images/profile.jpg",
+            "name": "file",
+            "status": "done"
+          }
+        ],
+        "onMapLocation": {
+          "lng": 8.24471780271548,
+          "lat": 50.08781600603102
+        },
+        "position": {
+          "addressSupplement": "hhhhhhhhhhhhhhh",
+          "city": "hhhhhhhhhhhhhhh",
+          "countryId": "DE",
+          "federalStateId": "HE-HE",
+          "number": "hhhhhhhhhhhhhhhhhh",
+          "street": "hhhhhhhhh",
+          "zip": "hhhhhhhhhhhhh"
+        }
+      },
+      "stepThree": {
+        "priceCredits": 3,
+        "visibilityRate": 3,
+        "visitorCount": 3
+      },
+      "stepFour": {
+        "isActive": true,
+        "placeholderImages": [
+          {
+            "uid": "1",
+            "url": "/images/profile.jpg",
+            "name": "file",
+            "status": "done"
+          },
+          {
+            "uid": "2",
+            "url": "/images/profile.jpg",
+            "name": "file",
+            "status": "done"
+          },
+          {
+            "uid": "3",
+            "url": "/images/profile.jpg",
+            "name": "file",
+            "status": "done"
+          },
+          {
+            "uid": "4",
+            "url": "/images/profile.jpg",
+            "name": "file",
+            "status": "done"
+          }
+        ]
+      }
+    },
+    {
+      "header": {
+        "date": "2024-07-16T15:24:38.665Z",
+        "latestStep": 0,
+        "status": "pending",
+        "userId": "660c7e9c5eebdc6b0674e13a"
+      },
+      "id": 6
+    },
+    {
+      "header": {
+        "date": "2024-07-17T00:19:14.192Z",
+        "latestStep": 1,
+        "status": "pending",
+        "userId": "22222"
+      },
+      "id": 7,
+      "stepZero": {
+        "digitalSignageInformation": {
+          "description": "ddddddddd",
+          "keywords": "ddddddddddddd",
+          "title": "sdddf"
+        },
+        "displaySignageCategoryId": "Category1",
+        "accessibilityInformation": {
+          "accessibility": "public",
+          "location": "internal"
+        },
+        "sharingDisplay": {
+          "shearOptions": "restrictionsShare",
+          "invitingMessage": "The aroma of freshly baked bread filled the air, a symphony of sweet and yeasty. Sunlight streamed through the kitchen window, warming the worn wooden table. A robin perched on the windowsill, its red breast a cheerful splash of color. A gentle breeze rustled the leaves outside, carrying the whisper of a summer day.",
+          "partnerList": [
+            "notification+delivery@service.io",
+            "someone_special@freelancer.net",
+            "john.smith@company.org",
+            "jane.doe@example.com",
+            "jane.doe@example1.com",
+            "jane.doe@example2.com",
+            "jane.doe@example3.com",
+            "jane.doe@example4.com",
+            "jane.doe@example5.com",
+            "jane.doe@example6.com"
+          ]
+        },
+        "industryFilter": {
+          "industriesId": [
+            "FINANCE"
+          ]
+        },
+        "predefinedFilters": {
+          "filtersId": [
+            "Tobacco"
+          ]
+        }
+      }
+    },
+    {
+      "header": {
+        "date": "2024-07-17T03:26:11.981Z",
+        "latestStep": 0,
+        "status": "pending",
+        "userId": "660c7e9c5eebdc6b0674e13a"
+      },
+      "id": 8
+    },
+    {
+      "header": {
+        "date": "2024-07-17T14:17:02.946Z",
+        "latestStep": 0,
+        "status": "pending",
+        "userId": "660c7e9c5eebdc6b0674e13a"
+      },
+      "id": 9
+    },
+    {
+      "header": {
+        "date": "2024-07-19T01:28:31.467Z",
+        "latestStep": 0,
+        "status": "pending",
+        "userId": "660c7e9c5eebdc6b0674e13a"
+      },
+      "id": 10
+    },
+    {
+      "header": {
+        "date": "2024-07-19T03:24:59.000Z",
+        "latestStep": 2,
+        "status": "pending",
+        "userId": "22222"
+      },
+      "id": 11,
+      "stepZero": {
+        "digitalSignageInformation": {
+          "description": "cccccc",
+          "keywords": "ccccccccccccc",
+          "title": "qqq"
+        },
+        "displaySignageCategoryId": "Category2",
+        "accessibilityInformation": {
+          "accessibility": "public",
+          "location": "internal"
+        },
+        "sharingDisplay": {
+          "shearOptions": "notShare",
+          "invitingMessage": "",
+          "partnerList": []
+        },
+        "industryFilter": {
+          "industriesId": [
+            "TECH"
           ]
         },
         "predefinedFilters": {
@@ -765,485 +1185,66 @@
       "stepOne": {
         "displayTechnicalSpecifications": {
           "displayBrandId": "2",
-          "displayModel": "hh",
-          "displaySerialNumber": "hhhhhhhhhhhhhhh",
-          "displaySound": true
+          "displayModel": "vvvvvvv",
+          "displaySerialNumber": "vvvvvvvvvvvvvvvvv",
+          "displaySound": "on"
         },
-        "displayOperatingSystem": "appleIos",
-        "displayAlignment": "horizontal",
-        "displayType": "floorStandScreen",
-        "floorStandNumberOfScreens": "one"
+        "displayOperatingSystem": "googleAndroid",
+        "displayAlignment": "vertical",
+        "displaySizeTypeA": 8,
+        "displayType": "tablet",
+        "displayResolutionTypeB": "low"
       },
       "common": {
         "displayTime": {
-          "1": 3,
-          "2": 3,
-          "3": 3,
-          "4": 3,
-          "5": 3,
-          "6": 3,
-          "7": 3,
-          "8": 3,
-          "9": 3,
-          "10": 3,
-          "11": 3,
-          "12": 3,
-          "13": 3,
-          "14": 3,
-          "15": 3,
-          "16": 3,
-          "17": 3,
-          "18": 3,
-          "19": 3,
-          "20": 3,
-          "21": 3,
-          "22": 3,
-          "23": 3,
-          "24": 3
+          "26": 0
         }
-      },
-      "stepTwo": {
-        "location": {
-          "placment": "ww",
-          "description": "ggggggg"
-        },
-        "mediasOfADisplay": [
-          {
-            "uid": "1",
-            "url": "/images/profile.jpg",
-            "name": "file",
-            "status": "done"
-          },
-          {
-            "uid": "2",
-            "url": "/images/profile.jpg",
-            "name": "file",
-            "status": "done"
-          },
-          {
-            "uid": "3",
-            "url": "/images/profile.jpg",
-            "name": "file",
-            "status": "done"
-          },
-          {
-            "uid": "4",
-            "url": "/images/profile.jpg",
-            "name": "file",
-            "status": "done"
-          }
-        ],
-        "onMapLocation": {
-          "lng": 8.243688024957013,
-          "lat": 50.084621835855486
-        },
-        "position": {
-          "addressSupplement": "ggggggggggggggggggg",
-          "city": "gggggggggggg",
-          "countryId": "FR",
-          "federalStateId": "CA-CA",
-          "number": "ggggggggggggggggg",
-          "street": "gggggg",
-          "zip": "gggggggggggg"
-        }
-      },
-      "stepThree": {
-        "priceCredits": 3,
-        "visibilityRate": 3,
-        "visitorCount": 3
       }
     },
     {
       "header": {
-        "date": "2024-06-22T03:30:07.295Z",
-        "latestStep": 2,
+        "date": "2024-07-19T03:34:35.221Z",
+        "latestStep": 1,
         "status": "pending",
         "userId": "22222"
       },
-      "id": 2,
+      "id": 12,
       "stepZero": {
         "digitalSignageInformation": {
-          "description": "wwwwwwwwwwwww",
-          "keywords": "wwwwwwww",
-          "title": "wwwwwww"
+          "description": "sssssssss",
+          "keywords": "sssssssssss",
+          "title": "ssssssssss"
         },
         "displaySignageCategoryId": "Category2",
         "accessibilityInformation": {
-          "accessibility": "public",
-          "location": "external"
-        },
-        "sharingDisplay": {
-          "shearOptions": "share"
-        },
-        "industryFilter": {
-          "industriesId": []
-        },
-        "predefinedFilters": {
-          "filtersId": []
-        }
-      },
-      "stepOne": {
-        "displayTechnicalSpecifications": {
-          "displayBrandId": "2",
-          "displayModel": "sssssssssss",
-          "displaySerialNumber": "sssssssssssssssssss",
-          "displaySound": true
-        },
-        "displayOperatingSystem": "googleAndroid",
-        "displayAlignment": "horizontal",
-        "displaySizeTypeA": 49.5,
-        "displayType": "LCDScreen",
-        "displayResolutionTypeA": "WQHD"
-      },
-      "common": {
-        "displayTime": {
-          "51": 0
-        }
-      }
-    },
-    {
-      "header": {
-        "date": "2024-06-22T14:04:23.642Z",
-        "latestStep": 0,
-        "status": "pending",
-        "userId": "660c7e9c5eebdc6b0674e13a"
-      },
-      "id": 3
-    },
-    {
-      "header": {
-        "date": "2024-06-23T03:56:08.547Z",
-        "latestStep": 4,
-        "status": "pending",
-        "userId": "22222"
-      },
-      "id": 4,
-      "stepZero": {
-        "digitalSignageInformation": {
-          "description": "ffffff",
-          "keywords": "ffffffff",
-          "title": "ffffffff"
-        },
-        "displaySignageCategoryId": "Category2",
-        "accessibilityInformation": {
-          "accessibility": "public",
-          "location": "external"
-        },
-        "sharingDisplay": {
-          "shearOptions": "share"
-        },
-        "industryFilter": {
-          "industriesId": []
-        },
-        "predefinedFilters": {
-          "filtersId": []
-        }
-      },
-      "stepOne": {
-        "displayTechnicalSpecifications": {
-          "displayBrandId": "2",
-          "displayModel": "fff",
-          "displaySerialNumber": "ffffffffffffff",
-          "displaySound": true
-        },
-        "displayOperatingSystem": "googleAndroid",
-        "displayAlignment": "horizontal",
-        "displaySizeTypeA": 52.9,
-        "displayType": "LCDScreen",
-        "displayResolutionTypeA": "FullHD"
-      },
-      "common": {
-        "displayTime": {
-          "49": 1,
-          "50": 1,
-          "51": 1,
-          "52": 1,
-          "53": 2,
-          "54": 4,
-          "55": 4,
-          "56": 4,
-          "57": 4,
-          "58": 4,
-          "59": 4,
-          "60": 4,
-          "61": 4,
-          "62": 4,
-          "63": 4,
-          "64": 3,
-          "65": 3,
-          "66": 3,
-          "67": 3,
-          "68": 3,
-          "69": 1,
-          "70": 1,
-          "71": 1,
-          "72": 1
-        }
-      },
-      "stepTwo": {
-        "location": {
-          "placment": "ww",
-          "description": "dddddddddd"
-        },
-        "mediasOfADisplay": [
-          {
-            "uid": "1",
-            "url": "/images/profile.jpg",
-            "name": "file",
-            "status": "done"
-          },
-          {
-            "uid": "2",
-            "url": "/images/profile.jpg",
-            "name": "file",
-            "status": "done"
-          },
-          {
-            "uid": "3",
-            "url": "/images/profile.jpg",
-            "name": "file",
-            "status": "done"
-          },
-          {
-            "uid": "4",
-            "url": "/images/profile.jpg",
-            "name": "file",
-            "status": "done"
-          }
-        ],
-        "onMapLocation": {
-          "lng": 8.24772968383223,
-          "lat": 50.083680690615196
-        },
-        "position": {
-          "addressSupplement": "dddddddddddddddd",
-          "city": "dddddddddddddd",
-          "countryId": "UK",
-          "federalStateId": "TX-TX",
-          "number": "dddddddddddddddd",
-          "street": "ddddddddddddddddddd",
-          "zip": "ddddd"
-        }
-      },
-      "stepThree": {
-        "priceCredits": 4,
-        "visibilityRate": 4,
-        "visitorCount": 2
-      }
-    },
-    {
-      "header": {
-        "date": "2024-06-23T13:49:07.845Z",
-        "latestStep": 0,
-        "status": "pending",
-        "userId": "660c7e9c5eebdc6b0674e13a"
-      },
-      "id": 5
-    },
-    {
-      "header": {
-        "date": "2024-06-23T15:37:27.288Z",
-        "latestStep": 4,
-        "status": "pending",
-        "userId": "22222"
-      },
-      "id": 6,
-      "stepZero": {
-        "digitalSignageInformation": {
-          "description": "ffffffffffff",
-          "keywords": "fffffffff",
-          "title": "fffffffffffff"
-        },
-        "displaySignageCategoryId": "Category3",
-        "accessibilityInformation": {
-          "accessibility": "public",
+          "accessibility": "private",
           "location": "internal"
         },
         "sharingDisplay": {
-          "shearOptions": "restrictionsShare"
+          "shearOptions": "notShare",
+          "invitingMessage": "",
+          "partnerList": []
         },
         "industryFilter": {
           "industriesId": [
-            "FINANCE",
-            "HEALTHCARE",
-            "RETAIL"
+            "TECH"
           ]
         },
         "predefinedFilters": {
           "filtersId": [
-            "Tobacco",
-            "Eroticism"
+            "Tobacco"
           ]
         }
-      },
-      "stepOne": {
-        "displayTechnicalSpecifications": {
-          "displayBrandId": "2",
-          "displayModel": "tttttttttttt",
-          "displaySerialNumber": "ttttttttttttt",
-          "displaySound": true
-        },
-        "displayOperatingSystem": "microsoftWindows",
-        "displayAlignment": "horizontal",
-        "displaySizeTypeA": 46.7,
-        "displayType": "LCDScreen",
-        "displayResolutionTypeA": "HD"
-      },
-      "common": {
-        "displayTime": {
-          "29": 4,
-          "30": 4,
-          "31": 4,
-          "32": 4,
-          "33": 4,
-          "34": 4,
-          "35": 4,
-          "36": 4,
-          "37": 4,
-          "38": 4,
-          "39": 4,
-          "40": 4,
-          "41": 4,
-          "42": 4,
-          "43": 4,
-          "44": 4,
-          "45": 4,
-          "46": 4,
-          "51": 4,
-          "52": 4,
-          "53": 4,
-          "54": 4,
-          "55": 4,
-          "56": 4,
-          "57": 4,
-          "58": 4,
-          "59": 4,
-          "60": 4,
-          "61": 4,
-          "62": 4,
-          "63": 4,
-          "64": 4,
-          "65": 4,
-          "66": 4,
-          "67": 4,
-          "68": 4,
-          "69": 4,
-          "70": 4,
-          "71": 4,
-          "74": 3,
-          "75": 3,
-          "76": 3,
-          "77": 3,
-          "78": 3,
-          "79": 3,
-          "80": 3,
-          "81": 3,
-          "82": 3,
-          "83": 3,
-          "84": 3,
-          "85": 3,
-          "86": 3,
-          "87": 3,
-          "88": 3,
-          "89": 3,
-          "90": 3,
-          "91": 3,
-          "92": 3,
-          "93": 3,
-          "94": 3,
-          "95": 3,
-          "96": 1,
-          "99": 2,
-          "100": 2,
-          "101": 2,
-          "102": 2,
-          "103": 2,
-          "104": 2,
-          "105": 2,
-          "106": 2,
-          "107": 2,
-          "108": 2,
-          "109": 2,
-          "110": 2,
-          "111": 2,
-          "112": 2,
-          "113": 2,
-          "114": 2,
-          "115": 2,
-          "116": 2,
-          "117": 2,
-          "118": 2,
-          "119": 2,
-          "125": 1,
-          "126": 1,
-          "127": 1,
-          "128": 1,
-          "129": 1,
-          "130": 1,
-          "131": 1,
-          "132": 1,
-          "133": 1,
-          "134": 1,
-          "135": 1,
-          "136": 1,
-          "137": 1,
-          "138": 1,
-          "139": 1,
-          "140": 1,
-          "141": 1,
-          "142": 1
-        }
-      },
-      "stepTwo": {
-        "location": {
-          "placment": "ww",
-          "description": "sssssssssssss"
-        },
-        "mediasOfADisplay": [
-          {
-            "uid": "1",
-            "url": "/images/profile.jpg",
-            "name": "file",
-            "status": "done"
-          },
-          {
-            "uid": "2",
-            "url": "/images/profile.jpg",
-            "name": "file",
-            "status": "done"
-          },
-          {
-            "uid": "3",
-            "url": "/images/profile.jpg",
-            "name": "file",
-            "status": "done"
-          },
-          {
-            "uid": "4",
-            "url": "/images/profile.jpg",
-            "name": "file",
-            "status": "done"
-          }
-        ],
-        "onMapLocation": {
-          "lng": 8.246222194113614,
-          "lat": 50.086335699567584
-        },
-        "position": {
-          "addressSupplement": "ggggggggggggggggg",
-          "city": "ggggggggggggggg",
-          "countryId": "UK",
-          "federalStateId": "NY-NY",
-          "number": "ggggggg",
-          "street": "wwww",
-          "zip": "ggggggggggggg"
-        }
-      },
-      "stepThree": {
-        "priceCredits": 3,
-        "visibilityRate": 3,
-        "visitorCount": 2
       }
+    },
+    {
+      "header": {
+        "date": "2024-07-19T18:52:11.910Z",
+        "latestStep": 0,
+        "status": "pending",
+        "userId": "660c7e9c5eebdc6b0674e13a"
+      },
+      "id": 13
     }
   ],
   "categories": [
@@ -1251,22 +1252,50 @@
       "id": "Category1",
       "title": "Electronic Devices",
       "description": "This category includes all electronic devices such as laptops, smartphones, and tablets.",
-      "color": "rgba(255, 0, 255, 1)",
+      "color": "rgba(0, 255, 127, 1)",
       "keywords": "electronics,laptops,smartphones,tablets"
     },
     {
       "id": "Category2",
       "title": "Home Appliance",
       "description": "This category includes appliances used in the home, such as refrigerators, washing machines, and ovens.",
-      "color": "rgba(0, 255, 127, 1)",
+      "color": "rgba(255, 215, 0, 1)",
       "keywords": "electronics,laptops,smartphones,tablets"
     },
     {
       "id": "Category3",
       "title": "Clothing",
       "description": "This category includes all types of clothing for men, women, and children.",
-      "color": "rgba(7,7,235,1)",
+      "color": "rgba(167, 4, 4, 1)",
       "keywords": "electronics,laptops,smartphones,tablets"
+    },
+    {
+      "title": "tttttttttttt",
+      "description": "tttttttttt",
+      "color": "rgba(170, 175, 4, 1)",
+      "keywords": "tttttttttttttt",
+      "id": "WUWirvx"
+    },
+    {
+      "title": "hhhhhhh",
+      "description": "hhhhhhhhh",
+      "color": "rgba(31, 179, 158, 1)",
+      "keywords": "hhhhhhhh",
+      "id": "j3uKcez"
+    },
+    {
+      "title": "title",
+      "description": "Description",
+      "color": "rgba(0, 0, 128, 1)",
+      "keywords": "Keywords",
+      "id": "6PNxneb"
+    },
+    {
+      "title": "QQQQQQQQQQQQQ",
+      "description": "WWWWWWWWWWWWW",
+      "color": "rgba(0, 0, 128, 1)",
+      "keywords": "AAAAAAAAAAAAA",
+      "id": "qPxCU7f"
     }
   ],
   "predefinedFilters": [
@@ -1366,6 +1395,247 @@
       "displayBrandId": "13",
       "label": "Sceptre",
       "value": "sceptre"
+    }
+  ],
+  "displayList": [
+    {
+      "id": 1,
+      "digitalSignageInformation": {
+        "description": "description digitalSignageInformation ",
+        "keywords": "keywords digitalSignageInformation",
+        "title": "title digitalSignageInformation"
+      },
+      "displaySignageCategoryId": "Category2",
+      "accessibilityInformation": {
+        "accessibility": "public",
+        "location": "internal"
+      },
+      "sharingDisplay": {
+        "shearOptions": "share"
+      },
+      "industryFilter": {
+        "industriesId": []
+      },
+      "predefinedFilters": {
+        "filtersId": [
+          "Violence",
+          "Alcohol",
+          "Tobacco"
+        ]
+      },
+      "displayTechnicalSpecifications": {
+        "displayBrandId": "2",
+        "displayModel": "displayModel displayTechnicalSpecifications",
+        "displaySerialNumber": "displaySerialNumber displayTechnicalSpecifications",
+        "displaySound": "on"
+      },
+      "displayOperatingSystem": "appleIos",
+      "displayAlignment": "horizontal",
+      "displaySizeTypeA": 65.1,
+      "displayType": "floorStandScreen",
+      "floorStandNumberOfScreens": "one",
+      "displayResolutionTypeA": "HD",
+      "displayTime": {
+        "5": 2,
+        "6": 3,
+        "7": 3,
+        "8": 3,
+        "9": 1,
+        "10": 1,
+        "11": 4,
+        "12": 4,
+        "13": 4,
+        "14": 4,
+        "15": 4,
+        "16": 4,
+        "17": 2,
+        "18": 2,
+        "19": 4,
+        "20": 3,
+        "27": 1,
+        "28": 1,
+        "29": 2,
+        "30": 3,
+        "31": 3,
+        "32": 3,
+        "33": 1,
+        "34": 1,
+        "35": 4,
+        "36": 4,
+        "37": 4,
+        "38": 4,
+        "39": 4,
+        "40": 4,
+        "41": 2,
+        "42": 2,
+        "43": 4,
+        "44": 3,
+        "45": 3,
+        "46": 1,
+        "51": 1,
+        "52": 1,
+        "53": 2,
+        "54": 3,
+        "55": 3,
+        "56": 3,
+        "57": 1,
+        "58": 1,
+        "59": 4,
+        "60": 4,
+        "61": 4,
+        "62": 4,
+        "63": 4,
+        "64": 4,
+        "65": 2,
+        "66": 2,
+        "67": 4,
+        "68": 3,
+        "69": 3,
+        "70": 1,
+        "71": 1,
+        "75": 1,
+        "76": 1,
+        "77": 2,
+        "78": 3,
+        "79": 3,
+        "80": 3,
+        "81": 1,
+        "82": 1,
+        "83": 4,
+        "84": 4,
+        "85": 4,
+        "86": 4,
+        "87": 4,
+        "88": 4,
+        "89": 2,
+        "90": 2,
+        "91": 4,
+        "92": 3,
+        "93": 3,
+        "94": 1,
+        "101": 2,
+        "102": 3,
+        "103": 3,
+        "104": 3,
+        "105": 1,
+        "106": 1,
+        "107": 4,
+        "108": 4,
+        "109": 4,
+        "110": 4,
+        "111": 4,
+        "112": 4,
+        "113": 2,
+        "114": 2,
+        "115": 4,
+        "116": 3,
+        "125": 2,
+        "126": 3,
+        "127": 3,
+        "128": 3,
+        "129": 1,
+        "130": 1,
+        "131": 4,
+        "132": 4,
+        "133": 4,
+        "134": 4,
+        "135": 4,
+        "136": 4,
+        "137": 2,
+        "138": 2,
+        "139": 4,
+        "140": 3,
+        "149": 2,
+        "150": 3,
+        "151": 3,
+        "152": 3,
+        "153": 1,
+        "154": 1,
+        "155": 4,
+        "156": 4,
+        "157": 4,
+        "158": 4,
+        "159": 4,
+        "160": 4,
+        "161": 2,
+        "162": 2,
+        "163": 4,
+        "164": 3
+      },
+      "location": {
+        "placment": "placment location",
+        "description": "description location"
+      },
+      "mediasOfADisplay": [
+        {
+          "uid": "1",
+          "url": "/images/profile.jpg",
+          "name": "file",
+          "status": "done"
+        },
+        {
+          "uid": "2",
+          "url": "/images/profile.jpg",
+          "name": "file",
+          "status": "done"
+        },
+        {
+          "uid": "3",
+          "url": "/images/profile.jpg",
+          "name": "file",
+          "status": "done"
+        },
+        {
+          "uid": "4",
+          "url": "/images/profile.jpg",
+          "name": "file",
+          "status": "done"
+        }
+      ],
+      "onMapLocation": {
+        "lng": 8.243688024957013,
+        "lat": 50.084621835855486
+      },
+      "position": {
+        "addressSupplement": "addressSupplement position",
+        "city": "position",
+        "countryId": "FR",
+        "federalStateId": "CA-CA",
+        "number": "number position",
+        "street": "street position",
+        "zip": "zip position"
+      },
+      "priceCredits": 4,
+      "visibilityRate": 4,
+      "visitorCount": 3,
+      "duplicateNumber": 3,
+      "isActive": true,
+      "placeholderImages": [
+        {
+          "uid": "1",
+          "url": "/images/profile.jpg",
+          "name": "file",
+          "status": "done"
+        },
+        {
+          "uid": "2",
+          "url": "/images/profile.jpg",
+          "name": "file",
+          "status": "done"
+        },
+        {
+          "uid": "3",
+          "url": "/images/profile.jpg",
+          "name": "file",
+          "status": "done"
+        },
+        {
+          "uid": "4",
+          "url": "/images/profile.jpg",
+          "name": "file",
+          "status": "done"
+        }
+      ]
     }
   ]
 }
