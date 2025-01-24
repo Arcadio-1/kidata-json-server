@@ -351,22 +351,30 @@
   ],
   "industriesSuggestion": [
     {
-      "keywords": ["gggggggg"],
+      "keywords": [
+        "gggggggg"
+      ],
       "label": "ggggg",
       "id": 1
     },
     {
-      "keywords": ["ssssssssss"],
+      "keywords": [
+        "ssssssssss"
+      ],
       "label": "ggggg",
       "id": 2
     },
     {
-      "keywords": ["fffffffffff"],
+      "keywords": [
+        "fffffffffff"
+      ],
       "label": "ggggg",
       "id": 3
     },
     {
-      "keywords": ["rrrrrrr"],
+      "keywords": [
+        "rrrrrrr"
+      ],
       "label": "rrrrrrrrrr",
       "id": 4
     }
@@ -1090,7 +1098,9 @@
           "partnerList": []
         },
         "industryFilter": {
-          "industriesId": ["66bcd418448ffa01893ffd9a"]
+          "industriesId": [
+            "66bcd418448ffa01893ffd9a"
+          ]
         },
         "predefinedFilters": {
           "filtersId": []
@@ -1462,7 +1472,11 @@
       "phone": "123-456-7890",
       "responsiblePerson": "John Doe",
       "adminName": "Jane Smith",
-      "displaysOnlineId": ["partner01", "partner02", "partner02"],
+      "displaysOnlineId": [
+        "partner01",
+        "partner02",
+        "partner02"
+      ],
       "bookingUpdate": "2024-12-23T10:00:00Z",
       "status": "notBlocked"
     },
@@ -1475,7 +1489,10 @@
       "phone": "987-654-3210",
       "responsiblePerson": "Alice Brown",
       "adminName": "Bob Green",
-      "displaysOnlineId": ["partner01", "partner03"],
+      "displaysOnlineId": [
+        "partner01",
+        "partner03"
+      ],
       "bookingUpdate": "2024-12-22T09:00:00Z",
       "status": "blocked"
     },
@@ -1488,7 +1505,10 @@
       "phone": "555-123-4567",
       "responsiblePerson": "Chris Lee",
       "adminName": "Daniel Kim",
-      "displaysOnlineId": ["partner02", "partner04"],
+      "displaysOnlineId": [
+        "partner02",
+        "partner04"
+      ],
       "bookingUpdate": "2024-12-21T08:30:00Z",
       "status": "notBlocked"
     },
@@ -1501,7 +1521,10 @@
       "phone": "666-888-9999",
       "responsiblePerson": "David Wong",
       "adminName": "Emma White",
-      "displaysOnlineId": ["partner03", "partner05"],
+      "displaysOnlineId": [
+        "partner03",
+        "partner05"
+      ],
       "bookingUpdate": "2024-12-20T07:45:00Z",
       "status": "blocked"
     },
@@ -1514,7 +1537,10 @@
       "phone": "444-333-2222",
       "responsiblePerson": "Eve Harris",
       "adminName": "Frank Lewis",
-      "displaysOnlineId": ["partner04", "partner06"],
+      "displaysOnlineId": [
+        "partner04",
+        "partner06"
+      ],
       "bookingUpdate": "2024-12-19T06:15:00Z",
       "status": "notBlocked"
     },
@@ -1527,7 +1553,10 @@
       "phone": "111-222-3333",
       "responsiblePerson": "Gina Taylor",
       "adminName": "Hugh Clark",
-      "displaysOnlineId": ["partner05", "partner07"],
+      "displaysOnlineId": [
+        "partner05",
+        "partner07"
+      ],
       "bookingUpdate": "2024-12-18T05:00:00Z",
       "status": "blocked"
     },
@@ -1540,7 +1569,10 @@
       "phone": "777-888-9999",
       "responsiblePerson": "Harry Patel",
       "adminName": "Ivy Scott",
-      "displaysOnlineId": ["partner06", "partner08"],
+      "displaysOnlineId": [
+        "partner06",
+        "partner08"
+      ],
       "bookingUpdate": "2024-12-17T04:30:00Z",
       "status": "notBlocked"
     },
@@ -1553,7 +1585,10 @@
       "phone": "888-999-0000",
       "responsiblePerson": "Jack Ford",
       "adminName": "Karen Miller",
-      "displaysOnlineId": ["partner07", "partner09"],
+      "displaysOnlineId": [
+        "partner07",
+        "partner09"
+      ],
       "bookingUpdate": "2024-12-16T03:00:00Z",
       "status": "blocked"
     },
@@ -1566,7 +1601,10 @@
       "phone": "333-444-5555",
       "responsiblePerson": "Liam Davis",
       "adminName": "Megan Lewis",
-      "displaysOnlineId": ["partner08", "partner10"],
+      "displaysOnlineId": [
+        "partner08",
+        "partner10"
+      ],
       "bookingUpdate": "2024-12-15T02:30:00Z",
       "status": "notBlocked"
     },
@@ -1579,7 +1617,9 @@
       "phone": "222-333-4444",
       "responsiblePerson": "Nina Ford",
       "adminName": "Oscar Hunt",
-      "displaysOnlineId": ["partner09"],
+      "displaysOnlineId": [
+        "partner09"
+      ],
       "bookingUpdate": "2024-12-14T01:00:00Z",
       "status": "blocked"
     }
@@ -2614,23 +2654,41 @@
       "id": 2
     },
     {
-      "emails": ["c4netfff.9@gmail.com", "c4netfff.9@gmail.com"],
+      "emails": [
+        "c4netfff.9@gmail.com",
+        "c4netfff.9@gmail.com"
+      ],
       "id": 3
     },
     {
-      "emails": ["c4net.7@gmail.com", "c4net.8@gmail.com", "hgj@fsdf.com"],
+      "emails": [
+        "c4net.7@gmail.com",
+        "c4net.8@gmail.com",
+        "hgj@fsdf.com"
+      ],
       "id": 4
     },
     {
-      "emails": ["c4net.7@gmail.com", "hgj@fsdf.com"],
+      "emails": [
+        "c4net.7@gmail.com",
+        "hgj@fsdf.com"
+      ],
       "id": 5
     },
     {
-      "emails": ["c4net.8@gmail.com", "hgj@fsdf.com", "c4net.8@gmail.com"],
+      "emails": [
+        "c4net.8@gmail.com",
+        "hgj@fsdf.com",
+        "c4net.8@gmail.com"
+      ],
       "id": 6
     },
     {
-      "emails": ["c4net.8@gmail.com", "hgj@fsdf.com", "c4net.8@gmail.com"],
+      "emails": [
+        "c4net.8@gmail.com",
+        "hgj@fsdf.com",
+        "c4net.8@gmail.com"
+      ],
       "id": 7
     },
     {
@@ -2642,8 +2700,49 @@
       "id": 8
     },
     {
-      "emails": ["rkdo.skandari@gmail.com"],
+      "emails": [
+        "rkdo.skandari@gmail.com"
+      ],
       "id": 9
+    },
+    {
+      "emails": [
+        "rkdo.skandari@gmail.com",
+        "rkdo.skandari@gmail.com"
+      ],
+      "id": 10
+    },
+    {
+      "emails": [
+        "rkdo.skandari@gmail.com",
+        "c4net.7@gmail.com"
+      ],
+      "id": 11
+    },
+    {
+      "emails": [
+        "hgj@fsdf.com",
+        "c4net.8@gmail.com"
+      ],
+      "id": 12
+    },
+    {
+      "emails": [
+        "skndri-hosyn@outlook.com"
+      ],
+      "id": 13
+    },
+    {
+      "emails": [
+        "c4net.8@gmail.com"
+      ],
+      "id": 14
+    },
+    {
+      "emails": [
+        "c4net.8@gmail.com"
+      ],
+      "id": 15
     }
   ],
   "messageList": [
@@ -2691,6 +2790,16 @@
       "companyId": "1",
       "message": "sdfgdsfgsdfgdfg",
       "id": 9
+    },
+    {
+      "companyId": "1",
+      "message": "gghfhfgdhdfgh",
+      "id": 10
+    },
+    {
+      "companyId": "1",
+      "message": "fffffffffff",
+      "id": 11
     }
   ],
   "partnerDisplays": [
@@ -2731,7 +2840,13 @@
       "priceCategory": 2,
       "rate": 1,
       "utilizationRate": 4,
-      "availableDays": ["mon", "tue", "wed", "thu", "fri"],
+      "availableDays": [
+        "mon",
+        "tue",
+        "wed",
+        "thu",
+        "fri"
+      ],
       "companyLogo": "/assets/images/profile.webp",
       "isFavorite": true
     },
@@ -2739,7 +2854,6 @@
       "id": "2",
       "onlineId": "ONL002",
       "size": "55'' 140(cm)",
-
       "medias": [
         {
           "uid": "1",
@@ -2773,7 +2887,10 @@
       "priceCategory": 3,
       "rate": 4,
       "utilizationRate": 5,
-      "availableDays": ["sat", "sun"],
+      "availableDays": [
+        "sat",
+        "sun"
+      ],
       "companyLogo": "/assets/images/profile.webp",
       "isFavorite": true
     },
@@ -2781,7 +2898,6 @@
       "id": "3",
       "onlineId": "ONL003",
       "size": "55'' 140(cm)",
-
       "medias": [
         {
           "uid": "1",
@@ -2815,7 +2931,10 @@
       "priceCategory": 1,
       "rate": 3,
       "utilizationRate": 3,
-      "availableDays": ["mon", "fri"],
+      "availableDays": [
+        "mon",
+        "fri"
+      ],
       "companyLogo": "/assets/images/profile.webp",
       "isFavorite": false
     },
@@ -2856,7 +2975,10 @@
       "priceCategory": 4,
       "rate": 2,
       "utilizationRate": 4,
-      "availableDays": ["wed", "thu"],
+      "availableDays": [
+        "wed",
+        "thu"
+      ],
       "companyLogo": "/assets/images/profile.webp",
       "isFavorite": true
     },
@@ -2897,7 +3019,11 @@
       "priceCategory": 5,
       "rate": 5,
       "utilizationRate": 2,
-      "availableDays": ["mon", "tue", "sat"],
+      "availableDays": [
+        "mon",
+        "tue",
+        "sat"
+      ],
       "companyLogo": "/assets/images/profile.webp",
       "isFavorite": false
     },
@@ -2938,7 +3064,11 @@
       "priceCategory": 1,
       "rate": 4,
       "utilizationRate": 1,
-      "availableDays": ["mon", "tue", "wed"],
+      "availableDays": [
+        "mon",
+        "tue",
+        "wed"
+      ],
       "companyLogo": "/assets/images/profile.webp",
       "isFavorite": false
     },
@@ -2979,7 +3109,11 @@
       "priceCategory": 2,
       "rate": 3,
       "utilizationRate": 5,
-      "availableDays": ["thu", "fri", "sun"],
+      "availableDays": [
+        "thu",
+        "fri",
+        "sun"
+      ],
       "companyLogo": "/assets/images/profile.webp",
       "isFavorite": false
     },
@@ -3020,7 +3154,11 @@
       "priceCategory": 4,
       "rate": 2,
       "utilizationRate": 3,
-      "availableDays": ["mon", "wed", "sat"],
+      "availableDays": [
+        "mon",
+        "wed",
+        "sat"
+      ],
       "companyLogo": "/assets/images/profile.webp",
       "isFavorite": true
     },
@@ -3061,7 +3199,11 @@
       "priceCategory": 5,
       "rate": 5,
       "utilizationRate": 4,
-      "availableDays": ["tue", "thu", "sun"],
+      "availableDays": [
+        "tue",
+        "thu",
+        "sun"
+      ],
       "isFavorite": false,
       "companyLogo": "/assets/images/profile.webp"
     },
@@ -3069,7 +3211,6 @@
       "id": "10",
       "onlineId": "ONL010",
       "size": "55'' 140(cm)",
-
       "medias": [
         {
           "uid": "1",
@@ -3103,9 +3244,90 @@
       "priceCategory": 3,
       "rate": 4,
       "utilizationRate": 5,
-      "availableDays": ["mon", "fri", "sat"],
+      "availableDays": [
+        "mon",
+        "fri",
+        "sat"
+      ],
       "companyLogo": "/assets/images/profile.webp",
       "isFavorite": true
+    }
+  ],
+  "displaysShearRemove": [
+    {
+      "displayId": "display01",
+      "partnerId": "1",
+      "id": 1
+    },
+    {
+      "displayId": "display01",
+      "partnerId": "1",
+      "id": 2
+    },
+    {
+      "displayId": "display07",
+      "partnerId": "1",
+      "id": 3
+    },
+    {
+      "displayId": "display01",
+      "partnerId": "1",
+      "id": 4
+    },
+    {
+      "displayId": "display07",
+      "partnerId": "1",
+      "id": 5
+    },
+    {
+      "displayId": "display01",
+      "partnerId": "1",
+      "id": 6
+    },
+    {
+      "displayId": "display01",
+      "partnerId": "1",
+      "id": 7
+    },
+    {
+      "displayId": "display01",
+      "partnerId": "1",
+      "id": 8
+    },
+    {
+      "displayId": "display01",
+      "partnerId": "1",
+      "id": 9
+    },
+    {
+      "displayId": "display01",
+      "partnerId": "1",
+      "id": 10
+    },
+    {
+      "displayId": "display07",
+      "partnerId": "1",
+      "id": 11
+    },
+    {
+      "displayId": "display08",
+      "partnerId": "1",
+      "id": 12
+    },
+    {
+      "displayId": "display01",
+      "partnerId": "1",
+      "id": 13
+    },
+    {
+      "displayId": "display01",
+      "partnerId": "1",
+      "id": 14
+    },
+    {
+      "displayId": "display01",
+      "partnerId": "1",
+      "id": 15
     }
   ]
 }
