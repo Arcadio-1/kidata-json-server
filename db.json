@@ -1,5 +1,79 @@
 {
+  "delete": [
+    {
+      "id": "4",
+      "feedback": "found_alternative"
+    }
+  ],
+  "changePassword": [
+    {
+      "id": "10",
+      "currentPassword": "sdasd",
+      "newPassword": "QQQ111!!!q"
+    }
+  ],
+  "uploads": [
+    {
+      "id": "file-1741307599148-317038396.jpg",
+      "url": "http://localhost:8000/uploads/file-1741307599148-317038396.jpg",
+      "thumbUrl": "http://localhost:8000/uploads/thumbnail-file-1741307599148-317038396.jpg",
+      "name": "1a6e7d329eea293a869858a5ccba48f0.jpg",
+      "type": "logo",
+      "userId": "unknown",
+      "uploadDate": "2025-03-07T00:33:19.171Z"
+    },
+    {
+      "uid": "file-1741309099710-420284004.jpg",
+      "url": "http://localhost:8000/uploads/file-1741309099710-420284004.jpg",
+      "name": "29db121c322549a8159a1887a7f53f84.jpg",
+      "status": "done",
+      "type": "image/jpeg",
+      "thumbUrl": "http://localhost:8000/uploads/thumbnail-file-1741309099710-420284004.jpg",
+      "userId": "unknown"
+    },
+    {
+      "uid": "file-1741399770293-98708542.jpg",
+      "url": "http://localhost:8000/uploads/file-1741399770293-98708542.jpg",
+      "name": "584f519d9797132884a37dbfbf712e6b.jpg",
+      "status": "done",
+      "type": "image/jpeg",
+      "thumbUrl": "http://localhost:8000/uploads/thumbnail-file-1741399770293-98708542.jpg",
+      "userId": "unknown2"
+    },
+    {
+      "uid": "file-1741534107386-887272018.jpg",
+      "url": "http://localhost:8000/uploads/file-1741534107386-887272018.jpg",
+      "name": "29eeac4d442993f8f19f55e707bd6264.jpg",
+      "status": "done",
+      "type": "image/jpeg",
+      "thumbUrl": "http://localhost:8000/uploads/thumbnail-file-1741534107386-887272018.jpg",
+      "userId": "unknown"
+    },
+    {
+      "uid": "file-1741703837936-589917802.jpg",
+      "url": "http://localhost:8000/uploads/file-1741703837936-589917802.jpg",
+      "name": "7fbe3c9e118f3d39c16964d7f304c9ee.jpg",
+      "status": "done",
+      "type": "image/jpeg",
+      "thumbUrl": "http://localhost:8000/uploads/thumbnail-file-1741703837936-589917802.jpg",
+      "userId": "unknown"
+    }
+  ],
   "users": [
+    {
+      "id": "4040",
+      "email": "",
+      "firstName": "xxxxxxxxxxx",
+      "lastName": "xxxxxxxxxxxxxx",
+      "mobile": "",
+      "mobileDialingCodeId": "673e4733c48086fad20c61f4",
+      "phone": "333333333",
+      "phoneDialingCodeId": "673e4733c48086fad20c61f4",
+      "position": "xxxxxx",
+      "salutationId": "673e4733c48086fad20c6179",
+      "titleId": "673e4733c48086fad20c6193",
+      "username": "dfdfdfd"
+    },
     {
       "id": 1,
       "name": "Leanne Graham",
@@ -258,6 +332,13 @@
       "id": 14
     }
   ],
+  "usersAdditionalInformation": [
+    {
+      "id": "UID-KP5774",
+      "createDate": "2023-03-05T12:00:00.000Z",
+      "lastActivityDate": "2023-03-05T12:00:00.000Z"
+    }
+  ],
   "userscompanys": [
     {
       "id": "f456e23c-b12f-4e42-8c7b-a1987f7e4c9c",
@@ -351,22 +432,30 @@
   ],
   "industriesSuggestion": [
     {
-      "keywords": ["gggggggg"],
+      "keywords": [
+        "gggggggg"
+      ],
       "label": "ggggg",
       "id": 1
     },
     {
-      "keywords": ["ssssssssss"],
+      "keywords": [
+        "ssssssssss"
+      ],
       "label": "ggggg",
       "id": 2
     },
     {
-      "keywords": ["fffffffffff"],
+      "keywords": [
+        "fffffffffff"
+      ],
       "label": "ggggg",
       "id": 3
     },
     {
-      "keywords": ["rrrrrrr"],
+      "keywords": [
+        "rrrrrrr"
+      ],
       "label": "rrrrrrrrrr",
       "id": 4
     }
@@ -1090,7 +1179,9 @@
           "partnerList": []
         },
         "industryFilter": {
-          "industriesId": ["66bcd418448ffa01893ffd9a"]
+          "industriesId": [
+            "66bcd418448ffa01893ffd9a"
+          ]
         },
         "predefinedFilters": {
           "filtersId": []
@@ -1462,7 +1553,11 @@
       "phone": "123-456-7890",
       "responsiblePerson": "John Doe",
       "adminName": "Jane Smith",
-      "displaysOnlineId": ["partner01", "partner02", "partner02"],
+      "displaysOnlineId": [
+        "partner01",
+        "partner02",
+        "partner02"
+      ],
       "bookingUpdate": "2024-12-23T10:00:00Z",
       "status": "notBlocked"
     },
@@ -1475,7 +1570,10 @@
       "phone": "987-654-3210",
       "responsiblePerson": "Alice Brown",
       "adminName": "Bob Green",
-      "displaysOnlineId": ["partner01", "partner03"],
+      "displaysOnlineId": [
+        "partner01",
+        "partner03"
+      ],
       "bookingUpdate": "2024-12-22T09:00:00Z",
       "status": "blocked"
     },
@@ -1488,7 +1586,10 @@
       "phone": "555-123-4567",
       "responsiblePerson": "Chris Lee",
       "adminName": "Daniel Kim",
-      "displaysOnlineId": ["partner02", "partner04"],
+      "displaysOnlineId": [
+        "partner02",
+        "partner04"
+      ],
       "bookingUpdate": "2024-12-21T08:30:00Z",
       "status": "notBlocked"
     },
@@ -1501,7 +1602,10 @@
       "phone": "666-888-9999",
       "responsiblePerson": "David Wong",
       "adminName": "Emma White",
-      "displaysOnlineId": ["partner03", "partner05"],
+      "displaysOnlineId": [
+        "partner03",
+        "partner05"
+      ],
       "bookingUpdate": "2024-12-20T07:45:00Z",
       "status": "blocked"
     },
@@ -1514,7 +1618,10 @@
       "phone": "444-333-2222",
       "responsiblePerson": "Eve Harris",
       "adminName": "Frank Lewis",
-      "displaysOnlineId": ["partner04", "partner06"],
+      "displaysOnlineId": [
+        "partner04",
+        "partner06"
+      ],
       "bookingUpdate": "2024-12-19T06:15:00Z",
       "status": "notBlocked"
     },
@@ -1527,7 +1634,10 @@
       "phone": "111-222-3333",
       "responsiblePerson": "Gina Taylor",
       "adminName": "Hugh Clark",
-      "displaysOnlineId": ["partner05", "partner07"],
+      "displaysOnlineId": [
+        "partner05",
+        "partner07"
+      ],
       "bookingUpdate": "2024-12-18T05:00:00Z",
       "status": "blocked"
     },
@@ -1540,7 +1650,10 @@
       "phone": "777-888-9999",
       "responsiblePerson": "Harry Patel",
       "adminName": "Ivy Scott",
-      "displaysOnlineId": ["partner06", "partner08"],
+      "displaysOnlineId": [
+        "partner06",
+        "partner08"
+      ],
       "bookingUpdate": "2024-12-17T04:30:00Z",
       "status": "notBlocked"
     },
@@ -1553,7 +1666,10 @@
       "phone": "888-999-0000",
       "responsiblePerson": "Jack Ford",
       "adminName": "Karen Miller",
-      "displaysOnlineId": ["partner07", "partner09"],
+      "displaysOnlineId": [
+        "partner07",
+        "partner09"
+      ],
       "bookingUpdate": "2024-12-16T03:00:00Z",
       "status": "blocked"
     },
@@ -1566,7 +1682,10 @@
       "phone": "333-444-5555",
       "responsiblePerson": "Liam Davis",
       "adminName": "Megan Lewis",
-      "displaysOnlineId": ["partner08", "partner10"],
+      "displaysOnlineId": [
+        "partner08",
+        "partner10"
+      ],
       "bookingUpdate": "2024-12-15T02:30:00Z",
       "status": "notBlocked"
     },
@@ -1579,7 +1698,9 @@
       "phone": "222-333-4444",
       "responsiblePerson": "Nina Ford",
       "adminName": "Oscar Hunt",
-      "displaysOnlineId": ["partner09"],
+      "displaysOnlineId": [
+        "partner09"
+      ],
       "bookingUpdate": "2024-12-14T01:00:00Z",
       "status": "blocked"
     }
@@ -2614,23 +2735,41 @@
       "id": 2
     },
     {
-      "emails": ["c4netfff.9@gmail.com", "c4netfff.9@gmail.com"],
+      "emails": [
+        "c4netfff.9@gmail.com",
+        "c4netfff.9@gmail.com"
+      ],
       "id": 3
     },
     {
-      "emails": ["c4net.7@gmail.com", "c4net.8@gmail.com", "hgj@fsdf.com"],
+      "emails": [
+        "c4net.7@gmail.com",
+        "c4net.8@gmail.com",
+        "hgj@fsdf.com"
+      ],
       "id": 4
     },
     {
-      "emails": ["c4net.7@gmail.com", "hgj@fsdf.com"],
+      "emails": [
+        "c4net.7@gmail.com",
+        "hgj@fsdf.com"
+      ],
       "id": 5
     },
     {
-      "emails": ["c4net.8@gmail.com", "hgj@fsdf.com", "c4net.8@gmail.com"],
+      "emails": [
+        "c4net.8@gmail.com",
+        "hgj@fsdf.com",
+        "c4net.8@gmail.com"
+      ],
       "id": 6
     },
     {
-      "emails": ["c4net.8@gmail.com", "hgj@fsdf.com", "c4net.8@gmail.com"],
+      "emails": [
+        "c4net.8@gmail.com",
+        "hgj@fsdf.com",
+        "c4net.8@gmail.com"
+      ],
       "id": 7
     },
     {
@@ -2642,32 +2781,63 @@
       "id": 8
     },
     {
-      "emails": ["rkdo.skandari@gmail.com"],
+      "emails": [
+        "rkdo.skandari@gmail.com"
+      ],
       "id": 9
     },
     {
-      "emails": ["rkdo.skandari@gmail.com", "rkdo.skandari@gmail.com"],
+      "emails": [
+        "rkdo.skandari@gmail.com",
+        "rkdo.skandari@gmail.com"
+      ],
       "id": 10
     },
     {
-      "emails": ["rkdo.skandari@gmail.com", "c4net.7@gmail.com"],
+      "emails": [
+        "rkdo.skandari@gmail.com",
+        "c4net.7@gmail.com"
+      ],
       "id": 11
     },
     {
-      "emails": ["hgj@fsdf.com", "c4net.8@gmail.com"],
+      "emails": [
+        "hgj@fsdf.com",
+        "c4net.8@gmail.com"
+      ],
       "id": 12
     },
     {
-      "emails": ["skndri-hosyn@outlook.com"],
+      "emails": [
+        "skndri-hosyn@outlook.com"
+      ],
       "id": 13
     },
     {
-      "emails": ["c4net.8@gmail.com"],
+      "emails": [
+        "c4net.8@gmail.com"
+      ],
       "id": 14
     },
     {
-      "emails": ["c4net.8@gmail.com"],
+      "emails": [
+        "c4net.8@gmail.com"
+      ],
       "id": 15
+    },
+    {
+      "emails": [
+        "rkdo.skandari@gmail.com",
+        "rkdo.skandari@gmail.com"
+      ],
+      "id": 16
+    },
+    {
+      "emails": [
+        "rkdo.skandari@gmail.com",
+        "rkdo.skandari@gmail.com"
+      ],
+      "id": 17
     }
   ],
   "messageList": [
@@ -2725,6 +2895,16 @@
       "companyId": "1",
       "message": "fffffffffff",
       "id": 11
+    },
+    {
+      "companyId": "1",
+      "message": "eeeeeeeeeee",
+      "id": 12
+    },
+    {
+      "companyId": "1",
+      "message": "dfsdfsdf",
+      "id": 13
     }
   ],
   "partnerDisplays": [
@@ -2765,7 +2945,13 @@
       "priceCategory": 2,
       "rate": 1,
       "utilizationRate": 4,
-      "availableDays": ["mon", "tue", "wed", "thu", "fri"],
+      "availableDays": [
+        "mon",
+        "tue",
+        "wed",
+        "thu",
+        "fri"
+      ],
       "companyLogo": "/assets/images/profile.webp",
       "isFavorite": true
     },
@@ -2806,7 +2992,10 @@
       "priceCategory": 3,
       "rate": 4,
       "utilizationRate": 5,
-      "availableDays": ["sat", "sun"],
+      "availableDays": [
+        "sat",
+        "sun"
+      ],
       "companyLogo": "/assets/images/profile.webp",
       "isFavorite": true
     },
@@ -2847,7 +3036,10 @@
       "priceCategory": 1,
       "rate": 3,
       "utilizationRate": 3,
-      "availableDays": ["mon", "fri"],
+      "availableDays": [
+        "mon",
+        "fri"
+      ],
       "companyLogo": "/assets/images/profile.webp",
       "isFavorite": false
     },
@@ -2888,7 +3080,10 @@
       "priceCategory": 4,
       "rate": 2,
       "utilizationRate": 4,
-      "availableDays": ["wed", "thu"],
+      "availableDays": [
+        "wed",
+        "thu"
+      ],
       "companyLogo": "/assets/images/profile.webp",
       "isFavorite": true
     },
@@ -2929,7 +3124,11 @@
       "priceCategory": 5,
       "rate": 5,
       "utilizationRate": 2,
-      "availableDays": ["mon", "tue", "sat"],
+      "availableDays": [
+        "mon",
+        "tue",
+        "sat"
+      ],
       "companyLogo": "/assets/images/profile.webp",
       "isFavorite": false
     },
@@ -2970,7 +3169,11 @@
       "priceCategory": 1,
       "rate": 4,
       "utilizationRate": 1,
-      "availableDays": ["mon", "tue", "wed"],
+      "availableDays": [
+        "mon",
+        "tue",
+        "wed"
+      ],
       "companyLogo": "/assets/images/profile.webp",
       "isFavorite": false
     },
@@ -3011,7 +3214,11 @@
       "priceCategory": 2,
       "rate": 3,
       "utilizationRate": 5,
-      "availableDays": ["thu", "fri", "sun"],
+      "availableDays": [
+        "thu",
+        "fri",
+        "sun"
+      ],
       "companyLogo": "/assets/images/profile.webp",
       "isFavorite": false
     },
@@ -3052,7 +3259,11 @@
       "priceCategory": 4,
       "rate": 2,
       "utilizationRate": 3,
-      "availableDays": ["mon", "wed", "sat"],
+      "availableDays": [
+        "mon",
+        "wed",
+        "sat"
+      ],
       "companyLogo": "/assets/images/profile.webp",
       "isFavorite": true
     },
@@ -3093,7 +3304,11 @@
       "priceCategory": 5,
       "rate": 5,
       "utilizationRate": 4,
-      "availableDays": ["tue", "thu", "sun"],
+      "availableDays": [
+        "tue",
+        "thu",
+        "sun"
+      ],
       "isFavorite": false,
       "companyLogo": "/assets/images/profile.webp"
     },
@@ -3134,7 +3349,11 @@
       "priceCategory": 3,
       "rate": 4,
       "utilizationRate": 5,
-      "availableDays": ["mon", "fri", "sat"],
+      "availableDays": [
+        "mon",
+        "fri",
+        "sat"
+      ],
       "companyLogo": "/assets/images/profile.webp",
       "isFavorite": true
     }
@@ -3214,6 +3433,164 @@
       "displayId": "display01",
       "partnerId": "1",
       "id": 15
+    }
+  ],
+  "designs": [
+    {
+      "name": "Untitled project",
+      "json": "",
+      "width": 900,
+      "height": 1200,
+      "userId": "673e6974c48086fad20c7338",
+      "isPro": false,
+      "thumbnailUrl": "",
+      "isTemplate": false,
+      "createdAt": "2025-02-22T14:36:36.093Z",
+      "updatedAt": "2025-02-22T14:36:36.093Z",
+      "id": 1
+    },
+    {
+      "name": "Untitled project",
+      "json": "",
+      "width": 900,
+      "height": 1200,
+      "userId": "673e6974c48086fad20c7338",
+      "isPro": false,
+      "thumbnailUrl": "",
+      "isTemplate": false,
+      "createdAt": "2025-02-23T07:14:59.268Z",
+      "updatedAt": "2025-02-23T07:14:59.268Z",
+      "id": 2
+    },
+    {
+      "name": "Untitled project",
+      "json": "",
+      "width": 900,
+      "height": 1200,
+      "userId": "673e6974c48086fad20c7338",
+      "isPro": false,
+      "thumbnailUrl": "",
+      "isTemplate": false,
+      "createdAt": "2025-02-23T07:17:51.011Z",
+      "updatedAt": "2025-02-23T07:17:51.011Z",
+      "id": 3
+    },
+    {
+      "name": "",
+      "json": "{\"version\":\"5.3.0\",\"objects\":[{\"type\":\"rect\",\"version\":\"5.3.0\",\"originX\":\"left\",\"originY\":\"top\",\"left\":-23.5,\"top\":-287,\"width\":600,\"height\":600,\"fill\":\"rgba(33, 150, 243, 1)\",\"stroke\":null,\"strokeWidth\":1,\"strokeDashArray\":null,\"strokeLineCap\":\"butt\",\"strokeDashOffset\":0,\"strokeLineJoin\":\"miter\",\"strokeUniform\":false,\"strokeMiterLimit\":4,\"scaleX\":1,\"scaleY\":1,\"angle\":0,\"flipX\":false,\"flipY\":false,\"opacity\":1,\"shadow\":{\"color\":\"rgba(0,0,0,0.8)\",\"blur\":5,\"offsetX\":0,\"offsetY\":0,\"affectStroke\":false,\"nonScaling\":false},\"visible\":true,\"backgroundColor\":\"\",\"fillRule\":\"nonzero\",\"paintFirst\":\"fill\",\"globalCompositeOperation\":\"source-over\",\"skewX\":0,\"skewY\":0,\"rx\":0,\"ry\":0,\"name\":\"clip\",\"selectable\":false,\"hasControls\":false},{\"type\":\"rect\",\"version\":\"5.3.0\",\"originX\":\"left\",\"originY\":\"top\",\"left\":294.88,\"top\":275.03,\"width\":400,\"height\":400,\"fill\":\"rgba(196, 58, 58, 1)\",\"stroke\":\"rgba(239, 239, 239, 1)\",\"strokeWidth\":26,\"strokeDashArray\":[5,5],\"strokeLineCap\":\"butt\",\"strokeDashOffset\":0,\"strokeLineJoin\":\"miter\",\"strokeUniform\":false,\"strokeMiterLimit\":4,\"scaleX\":0.6,\"scaleY\":0.6,\"angle\":0,\"flipX\":false,\"flipY\":false,\"opacity\":1,\"shadow\":null,\"visible\":true,\"backgroundColor\":\"\",\"fillRule\":\"nonzero\",\"paintFirst\":\"fill\",\"globalCompositeOperation\":\"source-over\",\"skewX\":0,\"skewY\":0,\"rx\":50,\"ry\":50,\"selectable\":true,\"hasControls\":true},{\"type\":\"triangle\",\"version\":\"5.3.0\",\"originX\":\"left\",\"originY\":\"top\",\"left\":596.49,\"top\":-261.32,\"width\":400,\"height\":400,\"fill\":\"rgba(196, 58, 58, 1)\",\"stroke\":\"rgba(239, 239, 239, 1)\",\"strokeWidth\":0,\"strokeDashArray\":[5,5],\"strokeLineCap\":\"butt\",\"strokeDashOffset\":0,\"strokeLineJoin\":\"miter\",\"strokeUniform\":false,\"strokeMiterLimit\":4,\"scaleX\":3.01,\"scaleY\":1.5,\"angle\":90.48,\"flipX\":false,\"flipY\":false,\"opacity\":1,\"shadow\":null,\"visible\":true,\"backgroundColor\":\"\",\"fillRule\":\"nonzero\",\"paintFirst\":\"fill\",\"globalCompositeOperation\":\"source-over\",\"skewX\":0,\"skewY\":0,\"selectable\":true,\"hasControls\":true},{\"type\":\"polygon\",\"version\":\"5.3.0\",\"originX\":\"left\",\"originY\":\"top\",\"left\":-9.53,\"top\":-219.28,\"width\":400,\"height\":400,\"fill\":\"rgba(196, 58, 58, 1)\",\"stroke\":\"rgba(239, 239, 239, 1)\",\"strokeWidth\":26,\"strokeDashArray\":[5,5],\"strokeLineCap\":\"butt\",\"strokeDashOffset\":0,\"strokeLineJoin\":\"miter\",\"strokeUniform\":false,\"strokeMiterLimit\":4,\"scaleX\":1,\"scaleY\":1,\"angle\":2.92,\"flipX\":false,\"flipY\":false,\"opacity\":1,\"shadow\":null,\"visible\":true,\"backgroundColor\":\"\",\"fillRule\":\"nonzero\",\"paintFirst\":\"fill\",\"globalCompositeOperation\":\"source-over\",\"skewX\":0,\"skewY\":0,\"selectable\":true,\"hasControls\":true,\"points\":[{\"x\":0,\"y\":0},{\"x\":400,\"y\":0},{\"x\":200,\"y\":400}]},{\"type\":\"polygon\",\"version\":\"5.3.0\",\"originX\":\"left\",\"originY\":\"top\",\"left\":374.9,\"top\":-91.35,\"width\":600,\"height\":600,\"fill\":\"rgba(196, 58, 58, 1)\",\"stroke\":\"rgba(239, 239, 239, 1)\",\"strokeWidth\":26,\"strokeDashArray\":[5,5],\"strokeLineCap\":\"butt\",\"strokeDashOffset\":0,\"strokeLineJoin\":\"miter\",\"strokeUniform\":false,\"strokeMiterLimit\":4,\"scaleX\":0.71,\"scaleY\":0.71,\"angle\":343.82,\"flipX\":false,\"flipY\":false,\"opacity\":1,\"shadow\":null,\"visible\":true,\"backgroundColor\":\"\",\"fillRule\":\"nonzero\",\"paintFirst\":\"fill\",\"globalCompositeOperation\":\"source-over\",\"skewX\":0,\"skewY\":0,\"selectable\":true,\"hasControls\":true,\"points\":[{\"x\":300,\"y\":0},{\"x\":600,\"y\":300},{\"x\":300,\"y\":600},{\"x\":0,\"y\":300}]},{\"type\":\"textbox\",\"version\":\"5.3.0\",\"originX\":\"left\",\"originY\":\"top\",\"left\":102.09,\"top\":-280.02,\"width\":315.59,\"height\":90.4,\"fill\":\"rgba(255, 255, 255, 1)\",\"stroke\":null,\"strokeWidth\":1,\"strokeDashArray\":null,\"strokeLineCap\":\"butt\",\"strokeDashOffset\":0,\"strokeLineJoin\":\"miter\",\"strokeUniform\":false,\"strokeMiterLimit\":4,\"scaleX\":1.89,\"scaleY\":1.89,\"angle\":0,\"flipX\":false,\"flipY\":false,\"opacity\":1,\"shadow\":null,\"visible\":true,\"backgroundColor\":\"\",\"fillRule\":\"nonzero\",\"paintFirst\":\"fill\",\"globalCompositeOperation\":\"source-over\",\"skewX\":0,\"skewY\":0,\"fontFamily\":\"Arial\",\"fontWeight\":700,\"fontSize\":80,\"text\":\"Heading\",\"underline\":false,\"overline\":false,\"linethrough\":false,\"textAlign\":\"left\",\"fontStyle\":\"normal\",\"lineHeight\":1.16,\"textBackgroundColor\":\"\",\"charSpacing\":0,\"styles\":[],\"direction\":\"ltr\",\"path\":null,\"pathStartOffset\":0,\"pathSide\":\"left\",\"pathAlign\":\"baseline\",\"minWidth\":20,\"splitByGrapheme\":false,\"selectable\":false,\"hasControls\":false,\"editable\":true},{\"type\":\"circle\",\"version\":\"5.3.0\",\"originX\":\"left\",\"originY\":\"top\",\"left\":148.72,\"top\":412.43,\"width\":450,\"height\":450,\"fill\":\"rgba(56, 184, 137, 1)\",\"stroke\":\"rgba(0,0,0,1)\",\"strokeWidth\":0,\"strokeDashArray\":[],\"strokeLineCap\":\"butt\",\"strokeDashOffset\":0,\"strokeLineJoin\":\"miter\",\"strokeUniform\":false,\"strokeMiterLimit\":4,\"scaleX\":0.56,\"scaleY\":1,\"angle\":0,\"flipX\":false,\"flipY\":false,\"opacity\":1,\"shadow\":null,\"visible\":true,\"backgroundColor\":\"\",\"fillRule\":\"nonzero\",\"paintFirst\":\"fill\",\"globalCompositeOperation\":\"source-over\",\"skewX\":0,\"skewY\":0,\"radius\":225,\"startAngle\":0,\"endAngle\":360,\"selectable\":true,\"hasControls\":true},{\"type\":\"polygon\",\"version\":\"5.3.0\",\"originX\":\"left\",\"originY\":\"top\",\"left\":-5.74,\"top\":-175.41,\"width\":400,\"height\":400,\"fill\":\"rgba(56, 184, 137, 1)\",\"stroke\":\"rgba(0,0,0,1)\",\"strokeWidth\":0,\"strokeDashArray\":[],\"strokeLineCap\":\"butt\",\"strokeDashOffset\":0,\"strokeLineJoin\":\"miter\",\"strokeUniform\":false,\"strokeMiterLimit\":4,\"scaleX\":0.7,\"scaleY\":0.7,\"angle\":0,\"flipX\":false,\"flipY\":false,\"opacity\":1,\"shadow\":null,\"visible\":true,\"backgroundColor\":\"\",\"fillRule\":\"nonzero\",\"paintFirst\":\"fill\",\"globalCompositeOperation\":\"source-over\",\"skewX\":0,\"skewY\":0,\"selectable\":true,\"hasControls\":true,\"points\":[{\"x\":0,\"y\":0},{\"x\":400,\"y\":0},{\"x\":200,\"y\":400}]},{\"type\":\"textbox\",\"version\":\"5.3.0\",\"originX\":\"left\",\"originY\":\"top\",\"left\":-26.75,\"top\":-74.72,\"width\":315.59,\"height\":90.4,\"fill\":\"rgba(255, 255, 255, 1)\",\"stroke\":null,\"strokeWidth\":1,\"strokeDashArray\":null,\"strokeLineCap\":\"butt\",\"strokeDashOffset\":0,\"strokeLineJoin\":\"miter\",\"strokeUniform\":false,\"strokeMiterLimit\":4,\"scaleX\":1.89,\"scaleY\":1.89,\"angle\":0,\"flipX\":false,\"flipY\":false,\"opacity\":1,\"shadow\":null,\"visible\":true,\"backgroundColor\":\"\",\"fillRule\":\"nonzero\",\"paintFirst\":\"fill\",\"globalCompositeOperation\":\"source-over\",\"skewX\":0,\"skewY\":0,\"fontFamily\":\"Arial\",\"fontWeight\":700,\"fontSize\":80,\"text\":\"Heading\",\"underline\":false,\"overline\":false,\"linethrough\":false,\"textAlign\":\"left\",\"fontStyle\":\"normal\",\"lineHeight\":1.16,\"textBackgroundColor\":\"\",\"charSpacing\":0,\"styles\":[],\"direction\":\"ltr\",\"path\":null,\"pathStartOffset\":0,\"pathSide\":\"left\",\"pathAlign\":\"baseline\",\"minWidth\":20,\"splitByGrapheme\":false,\"selectable\":true,\"hasControls\":true,\"editable\":true},{\"type\":\"textbox\",\"version\":\"5.3.0\",\"originX\":\"left\",\"originY\":\"top\",\"left\":20.5,\"top\":255.52,\"width\":114.21,\"height\":55.37,\"fill\":\"rgba(3, 169, 244, 1)\",\"stroke\":null,\"strokeWidth\":1,\"strokeDashArray\":null,\"strokeLineCap\":\"butt\",\"strokeDashOffset\":0,\"strokeLineJoin\":\"miter\",\"strokeUniform\":false,\"strokeMiterLimit\":4,\"scaleX\":2.37,\"scaleY\":2.37,\"angle\":0,\"flipX\":false,\"flipY\":false,\"opacity\":1,\"shadow\":null,\"visible\":true,\"backgroundColor\":\"\",\"fillRule\":\"nonzero\",\"paintFirst\":\"fill\",\"globalCompositeOperation\":\"source-over\",\"skewX\":0,\"skewY\":0,\"fontFamily\":\"Brush Script MT\",\"fontWeight\":500,\"fontSize\":49,\"text\":\"Textbox\",\"underline\":true,\"overline\":false,\"linethrough\":false,\"textAlign\":\"left\",\"fontStyle\":\"italic\",\"lineHeight\":1.16,\"textBackgroundColor\":\"\",\"charSpacing\":0,\"styles\":[],\"direction\":\"ltr\",\"path\":null,\"pathStartOffset\":0,\"pathSide\":\"left\",\"pathAlign\":\"baseline\",\"minWidth\":20,\"splitByGrapheme\":false,\"selectable\":true,\"hasControls\":true,\"editable\":true},{\"type\":\"textbox\",\"version\":\"5.3.0\",\"originX\":\"left\",\"originY\":\"top\",\"left\":519.64,\"top\":596.11,\"width\":315.59,\"height\":90.4,\"fill\":\"rgba(56, 184, 137, 1)\",\"stroke\":null,\"strokeWidth\":1,\"strokeDashArray\":null,\"strokeLineCap\":\"butt\",\"strokeDashOffset\":0,\"strokeLineJoin\":\"miter\",\"strokeUniform\":false,\"strokeMiterLimit\":4,\"scaleX\":1,\"scaleY\":1,\"angle\":0,\"flipX\":false,\"flipY\":false,\"opacity\":1,\"shadow\":null,\"visible\":true,\"backgroundColor\":\"\",\"fillRule\":\"nonzero\",\"paintFirst\":\"fill\",\"globalCompositeOperation\":\"source-over\",\"skewX\":0,\"skewY\":0,\"fontFamily\":\"Arial\",\"fontWeight\":700,\"fontSize\":80,\"text\":\"Heading\",\"underline\":false,\"overline\":false,\"linethrough\":false,\"textAlign\":\"left\",\"fontStyle\":\"normal\",\"lineHeight\":1.16,\"textBackgroundColor\":\"\",\"charSpacing\":0,\"styles\":[],\"direction\":\"ltr\",\"path\":null,\"pathStartOffset\":0,\"pathSide\":\"left\",\"pathAlign\":\"baseline\",\"minWidth\":20,\"splitByGrapheme\":false,\"selectable\":true,\"hasControls\":true,\"editable\":true}],\"clipPath\":{\"type\":\"rect\",\"version\":\"5.3.0\",\"originX\":\"left\",\"originY\":\"top\",\"left\":-23.5,\"top\":-287,\"width\":600,\"height\":600,\"fill\":\"rgba(33, 150, 243, 1)\",\"stroke\":null,\"strokeWidth\":1,\"strokeDashArray\":null,\"strokeLineCap\":\"butt\",\"strokeDashOffset\":0,\"strokeLineJoin\":\"miter\",\"strokeUniform\":false,\"strokeMiterLimit\":4,\"scaleX\":1,\"scaleY\":1,\"angle\":0,\"flipX\":false,\"flipY\":false,\"opacity\":1,\"shadow\":{\"color\":\"rgba(0,0,0,0.8)\",\"blur\":5,\"offsetX\":0,\"offsetY\":0,\"affectStroke\":false,\"nonScaling\":false},\"visible\":true,\"backgroundColor\":\"\",\"fillRule\":\"nonzero\",\"paintFirst\":\"fill\",\"globalCompositeOperation\":\"source-over\",\"skewX\":0,\"skewY\":0,\"rx\":0,\"ry\":0,\"selectable\":true,\"hasControls\":true}}",
+      "width": 600,
+      "height": 600,
+      "userId": "",
+      "isPro": false,
+      "thumbnailUrl": "",
+      "isTemplate": false,
+      "createdAt": "2025-03-13T02:27:39.548Z",
+      "updatedAt": "2025-03-13T02:27:39.548Z",
+      "id": 4
+    },
+    {
+      "name": "",
+      "json": "{\"version\":\"5.3.0\",\"objects\":[{\"type\":\"rect\",\"version\":\"5.3.0\",\"originX\":\"left\",\"originY\":\"top\",\"left\":-7.5,\"top\":-374,\"width\":900,\"height\":1200,\"fill\":\"white\",\"stroke\":null,\"strokeWidth\":1,\"strokeDashArray\":null,\"strokeLineCap\":\"butt\",\"strokeDashOffset\":0,\"strokeLineJoin\":\"miter\",\"strokeUniform\":false,\"strokeMiterLimit\":4,\"scaleX\":1,\"scaleY\":1,\"angle\":0,\"flipX\":false,\"flipY\":false,\"opacity\":1,\"shadow\":{\"color\":\"rgba(0,0,0,0.8)\",\"blur\":5,\"offsetX\":0,\"offsetY\":0,\"affectStroke\":false,\"nonScaling\":false},\"visible\":true,\"backgroundColor\":\"\",\"fillRule\":\"nonzero\",\"paintFirst\":\"fill\",\"globalCompositeOperation\":\"source-over\",\"skewX\":0,\"skewY\":0,\"rx\":0,\"ry\":0,\"name\":\"clip\",\"selectable\":false,\"hasControls\":false},{\"type\":\"path\",\"version\":\"5.3.0\",\"originX\":\"left\",\"originY\":\"top\",\"left\":193.55,\"top\":-191.51,\"width\":552.32,\"height\":598.65,\"fill\":null,\"stroke\":\"rgba(0,0,0,1)\",\"strokeWidth\":2,\"strokeDashArray\":null,\"strokeLineCap\":\"round\",\"strokeDashOffset\":0,\"strokeLineJoin\":\"round\",\"strokeUniform\":false,\"strokeMiterLimit\":10,\"scaleX\":1,\"scaleY\":1,\"angle\":0,\"flipX\":false,\"flipY\":false,\"opacity\":1,\"shadow\":null,\"visible\":true,\"backgroundColor\":\"\",\"fillRule\":\"nonzero\",\"paintFirst\":\"fill\",\"globalCompositeOperation\":\"source-over\",\"skewX\":0,\"skewY\":0,\"selectable\":true,\"hasControls\":true,\"path\":[[\"M\",237.7624396186422,41.07471877639932],[\"Q\",237.7644396186422,41.07471877639932,238.964803315795,41.07471877639932],[\"Q\",240.1651670129478,41.07471877639932,241.3655307101006,41.07471877639932],[\"Q\",242.56589440725338,41.07471877639932,246.16698549871182,39.875508933732135],[\"Q\",249.76807659017027,38.67629909106495,256.9702587730871,38.67629909106495],[\"Q\",264.1724409560039,38.67629909106495,273.77535053322634,38.67629909106495],[\"Q\",283.37826011044876,38.67629909106495,292.98116968767124,41.07471877639938],[\"Q\",302.5840792648937,43.47313846173381,318.1888073278801,45.8715581470683],[\"Q\",333.7935353908665,48.26997783240279,366.2033552139924,56.664446731073326],[\"Q\",398.61317503711825,65.05891562974386,401.01390243142384,66.25812547241105],[\"Q\",403.41462982572943,67.45733531507824,475.4364516548977,99.83600106709343],[\"Q\",547.458273484066,132.21466681910863,554.6604556669829,139.40992587511192],[\"Q\",561.8626378498998,146.60518493111522,569.0648200328166,193.37436879513706],[\"Q\",576.2670022157333,240.1435526591589,554.6604556669828,271.3230085685067],[\"Q\",533.0539091182322,302.50246447785446,499.44372559795374,331.2835007018679],[\"Q\",465.83354207767525,360.0645369258814,427.42190376878546,378.0526845658897],[\"Q\",389.01026545989566,396.040832205898,328.9920806022554,391.24399283522916],[\"Q\",268.9738957446151,386.4471534645603,247.36734919586456,373.25584519522084],[\"Q\",225.76080264711402,360.0645369258814,210.15607458412757,333.6819203872024],[\"Q\",194.5513465211411,307.29930384852344,194.5513465211411,303.7016743205218],[\"Q\",194.5513465211411,300.1040447925202,204.1542560983636,248.53802155782944],[\"Q\",213.75716567558607,196.97199832313868,229.36189373857252,168.19096209912527],[\"Q\",244.96662180155897,139.40992587511187,307.38553405350484,69.85575500041278],[\"Q\",369.8044463054507,0.30158412571370263,403.4146298257293,-18.88577335696192],[\"Q\",437.02481334600793,-38.07313083963754,463.43281468336966,-44.06918005297362],[\"Q\",489.8408160207314,-50.0652292663097,515.0484536609403,-45.26838989564084],[\"Q\",540.2560913011491,-40.471550524971974,572.6659111242749,-22.48340288496354],[\"Q\",605.0757309474006,-4.4952552449551035,638.6859144676791,21.887361293723842],[\"Q\",672.2960979879576,48.26997783240279,697.5037356281667,79.44943374175062],[\"Q\",722.7113732683758,110.62888965109846,728.7131917541398,149.0036046164497],[\"Q\",734.7150102399037,187.37831958180095,728.7131917541398,224.5538247044849],[\"Q\",722.7113732683758,261.72932982716884,696.303371931014,301.3032546351873],[\"Q\",669.8953705936522,340.8771794432057,631.4837322847624,369.6582156672191],[\"Q\",593.0720939758726,398.4392518912325,558.2615467584412,404.4353011045686],[\"Q\",523.4509995410099,410.43135031790473,487.4400886264258,394.8416223632309],[\"Q\",451.4291777118417,379.25189440855706,427.42190376878557,346.8732286565419],[\"Q\",403.41462982572943,314.4945629045268,399.813538734271,277.31905778184284],[\"Q\",396.21244764281255,240.1435526591589,413.0175394029518,189.77673926713538],[\"Q\",429.82263116309105,139.40992587511187,459.8317235919112,87.84390264042116],[\"Q\",489.8408160207314,36.27787940573046,519.8499084495514,-3.296045402287973],[\"Q\",549.8590008783715,-42.869970210306406,573.8662748214277,-68.0533769063181],[\"Q\",597.873548764484,-93.23678360232981,608.6768220388592,-99.23283281566597],[\"Q\",619.4800953132344,-105.22888202900214,632.6840959819152,-100.43204265833322],[\"Q\",645.888096650596,-95.6352032876643,668.6950068964993,-72.850216276987],[\"Q\",691.5019171424026,-50.0652292663097,711.9080999940003,-16.48735367162743],[\"Q\",732.314282845598,17.090521923054837,740.7168287256677,63.85970578707665],[\"Q\",749.1193746057374,110.62888965109846,739.516465028515,157.39807351512025],[\"Q\",729.9135554512925,204.16725737914203,699.9044630224723,238.9443428164916],[\"Q\",669.8953705936522,273.72142825384117,619.4800953132343,295.3072054218512],[\"Q\",569.0648200328164,316.8929825898613,521.0502721467043,315.69377274719403],[\"Q\",473.03572426059213,314.4945629045268,435.8244496488552,292.90878573651673],[\"Q\",398.61317503711825,271.3230085685067,379.4073558826733,230.549873917821],[\"Q\",360.20153672822835,189.77673926713533,357.80080933392276,121.42177823510349],[\"Q\",355.40008193961717,53.06681720307165,374.6059010940621,-15.288143828960216],[\"Q\",393.8117202485071,-83.64310486099208,425.02117637448,-122.01781982634327],[\"Q\",456.2306325004529,-160.39253479169446,487.4400886264258,-173.58384306103395],[\"Q\",518.6495447523987,-186.77515133037343,539.0557276039964,-189.1735710157079],[\"Q\",559.4619104555941,-191.57199070104235,575.0666385185805,-181.97831195970454],[\"Q\",590.6713665815669,-172.38463321836673,613.4782768274703,-146.00201667968776],[\"Q\",636.2851870733737,-119.61940014100878,648.2888240449016,-80.04547533299038],[\"Q\",660.2924610164296,-40.471550524971974,656.6913699249712,9.895262867051514],[\"Q\",653.0902788335129,60.262076259075,629.0830048904568,113.02730933643295],[\"Q\",605.0757309474006,165.7925424137909,565.4637289413581,205.36646722180933],[\"Q\",525.8517269353156,244.94039202982776,482.6386338378145,268.9245888831723],[\"Q\",439.4255407403134,292.90878573651685,409.41644831149324,297.70562510718565],[\"Q\",379.4073558826731,302.50246447785446,362.6022641225339,296.5064152645184],[\"Q\",345.7971723623947,290.51036605118236,319.38917102503297,259.33091014183447],[\"Q\",292.98116968767124,228.15145423248657,258.1706224702398,168.19096209912533],[\"Q\",223.36007525280831,108.23046996576409,211.35643828128036,66.25812547241117],[\"Q\",199.3528013097524,24.285780979058245,206.55498349266924,-2.0968355596207005],[\"Q\",213.75716567558607,-28.479452098299646,234.16334852718376,-50.06522926630976],[\"Q\",254.56953137878145,-71.65100643431987,280.9775327161432,-81.24468517565762],[\"Q\",307.3855340535049,-90.83836391699538,334.9938990880194,-86.04152454632649],[\"Q\",362.60226412253394,-81.2446851756576,393.8117202485069,-64.45574737831646],[\"Q\",425.02117637447986,-47.666809580975325,455.0302688032999,-0.89762571695357],[\"L\",485.04136123212,45.87355814706819]]}],\"clipPath\":{\"type\":\"rect\",\"version\":\"5.3.0\",\"originX\":\"left\",\"originY\":\"top\",\"left\":-7.5,\"top\":-374,\"width\":900,\"height\":1200,\"fill\":\"white\",\"stroke\":null,\"strokeWidth\":1,\"strokeDashArray\":null,\"strokeLineCap\":\"butt\",\"strokeDashOffset\":0,\"strokeLineJoin\":\"miter\",\"strokeUniform\":false,\"strokeMiterLimit\":4,\"scaleX\":1,\"scaleY\":1,\"angle\":0,\"flipX\":false,\"flipY\":false,\"opacity\":1,\"shadow\":{\"color\":\"rgba(0,0,0,0.8)\",\"blur\":5,\"offsetX\":0,\"offsetY\":0,\"affectStroke\":false,\"nonScaling\":false},\"visible\":true,\"backgroundColor\":\"\",\"fillRule\":\"nonzero\",\"paintFirst\":\"fill\",\"globalCompositeOperation\":\"source-over\",\"skewX\":0,\"skewY\":0,\"rx\":0,\"ry\":0,\"selectable\":true,\"hasControls\":true}}",
+      "width": 900,
+      "height": 1200,
+      "userId": "",
+      "isPro": false,
+      "thumbnailUrl": "",
+      "isTemplate": false,
+      "createdAt": "2025-02-24T14:33:36.804Z",
+      "updatedAt": "2025-02-24T14:33:36.804Z",
+      "id": 5
+    },
+    {
+      "name": "",
+      "json": "{\"version\":\"5.3.0\",\"objects\":[{\"type\":\"rect\",\"version\":\"5.3.0\",\"originX\":\"left\",\"originY\":\"top\",\"left\":-7.5,\"top\":-374,\"width\":900,\"height\":1200,\"fill\":\"rgba(141, 51, 194, 1)\",\"stroke\":null,\"strokeWidth\":1,\"strokeDashArray\":null,\"strokeLineCap\":\"butt\",\"strokeDashOffset\":0,\"strokeLineJoin\":\"miter\",\"strokeUniform\":false,\"strokeMiterLimit\":4,\"scaleX\":1,\"scaleY\":1,\"angle\":0,\"flipX\":false,\"flipY\":false,\"opacity\":1,\"shadow\":{\"color\":\"rgba(0,0,0,0.8)\",\"blur\":5,\"offsetX\":0,\"offsetY\":0,\"affectStroke\":false,\"nonScaling\":false},\"visible\":true,\"backgroundColor\":\"\",\"fillRule\":\"nonzero\",\"paintFirst\":\"fill\",\"globalCompositeOperation\":\"source-over\",\"skewX\":0,\"skewY\":0,\"rx\":0,\"ry\":0,\"name\":\"clip\",\"selectable\":false,\"hasControls\":false},{\"type\":\"path\",\"version\":\"5.3.0\",\"originX\":\"left\",\"originY\":\"top\",\"left\":89.26,\"top\":-226.43,\"width\":552.32,\"height\":598.65,\"fill\":\"rgba(190, 190, 226, 0)\",\"stroke\":\"rgba(43, 223, 255, 1)\",\"strokeWidth\":2,\"strokeDashArray\":null,\"strokeLineCap\":\"round\",\"strokeDashOffset\":0,\"strokeLineJoin\":\"round\",\"strokeUniform\":false,\"strokeMiterLimit\":10,\"scaleX\":1.29,\"scaleY\":1.73,\"angle\":0,\"flipX\":false,\"flipY\":false,\"opacity\":1,\"shadow\":null,\"visible\":true,\"backgroundColor\":\"\",\"fillRule\":\"nonzero\",\"paintFirst\":\"fill\",\"globalCompositeOperation\":\"source-over\",\"skewX\":0,\"skewY\":0,\"selectable\":true,\"hasControls\":true,\"path\":[[\"M\",237.7624396186422,41.07471877639932],[\"Q\",237.7644396186422,41.07471877639932,238.964803315795,41.07471877639932],[\"Q\",240.1651670129478,41.07471877639932,241.3655307101006,41.07471877639932],[\"Q\",242.56589440725338,41.07471877639932,246.16698549871182,39.875508933732135],[\"Q\",249.76807659017027,38.67629909106495,256.9702587730871,38.67629909106495],[\"Q\",264.1724409560039,38.67629909106495,273.77535053322634,38.67629909106495],[\"Q\",283.37826011044876,38.67629909106495,292.98116968767124,41.07471877639938],[\"Q\",302.5840792648937,43.47313846173381,318.1888073278801,45.8715581470683],[\"Q\",333.7935353908665,48.26997783240279,366.2033552139924,56.664446731073326],[\"Q\",398.61317503711825,65.05891562974386,401.01390243142384,66.25812547241105],[\"Q\",403.41462982572943,67.45733531507824,475.4364516548977,99.83600106709343],[\"Q\",547.458273484066,132.21466681910863,554.6604556669829,139.40992587511192],[\"Q\",561.8626378498998,146.60518493111522,569.0648200328166,193.37436879513706],[\"Q\",576.2670022157333,240.1435526591589,554.6604556669828,271.3230085685067],[\"Q\",533.0539091182322,302.50246447785446,499.44372559795374,331.2835007018679],[\"Q\",465.83354207767525,360.0645369258814,427.42190376878546,378.0526845658897],[\"Q\",389.01026545989566,396.040832205898,328.9920806022554,391.24399283522916],[\"Q\",268.9738957446151,386.4471534645603,247.36734919586456,373.25584519522084],[\"Q\",225.76080264711402,360.0645369258814,210.15607458412757,333.6819203872024],[\"Q\",194.5513465211411,307.29930384852344,194.5513465211411,303.7016743205218],[\"Q\",194.5513465211411,300.1040447925202,204.1542560983636,248.53802155782944],[\"Q\",213.75716567558607,196.97199832313868,229.36189373857252,168.19096209912527],[\"Q\",244.96662180155897,139.40992587511187,307.38553405350484,69.85575500041278],[\"Q\",369.8044463054507,0.30158412571370263,403.4146298257293,-18.88577335696192],[\"Q\",437.02481334600793,-38.07313083963754,463.43281468336966,-44.06918005297362],[\"Q\",489.8408160207314,-50.0652292663097,515.0484536609403,-45.26838989564084],[\"Q\",540.2560913011491,-40.471550524971974,572.6659111242749,-22.48340288496354],[\"Q\",605.0757309474006,-4.4952552449551035,638.6859144676791,21.887361293723842],[\"Q\",672.2960979879576,48.26997783240279,697.5037356281667,79.44943374175062],[\"Q\",722.7113732683758,110.62888965109846,728.7131917541398,149.0036046164497],[\"Q\",734.7150102399037,187.37831958180095,728.7131917541398,224.5538247044849],[\"Q\",722.7113732683758,261.72932982716884,696.303371931014,301.3032546351873],[\"Q\",669.8953705936522,340.8771794432057,631.4837322847624,369.6582156672191],[\"Q\",593.0720939758726,398.4392518912325,558.2615467584412,404.4353011045686],[\"Q\",523.4509995410099,410.43135031790473,487.4400886264258,394.8416223632309],[\"Q\",451.4291777118417,379.25189440855706,427.42190376878557,346.8732286565419],[\"Q\",403.41462982572943,314.4945629045268,399.813538734271,277.31905778184284],[\"Q\",396.21244764281255,240.1435526591589,413.0175394029518,189.77673926713538],[\"Q\",429.82263116309105,139.40992587511187,459.8317235919112,87.84390264042116],[\"Q\",489.8408160207314,36.27787940573046,519.8499084495514,-3.296045402287973],[\"Q\",549.8590008783715,-42.869970210306406,573.8662748214277,-68.0533769063181],[\"Q\",597.873548764484,-93.23678360232981,608.6768220388592,-99.23283281566597],[\"Q\",619.4800953132344,-105.22888202900214,632.6840959819152,-100.43204265833322],[\"Q\",645.888096650596,-95.6352032876643,668.6950068964993,-72.850216276987],[\"Q\",691.5019171424026,-50.0652292663097,711.9080999940003,-16.48735367162743],[\"Q\",732.314282845598,17.090521923054837,740.7168287256677,63.85970578707665],[\"Q\",749.1193746057374,110.62888965109846,739.516465028515,157.39807351512025],[\"Q\",729.9135554512925,204.16725737914203,699.9044630224723,238.9443428164916],[\"Q\",669.8953705936522,273.72142825384117,619.4800953132343,295.3072054218512],[\"Q\",569.0648200328164,316.8929825898613,521.0502721467043,315.69377274719403],[\"Q\",473.03572426059213,314.4945629045268,435.8244496488552,292.90878573651673],[\"Q\",398.61317503711825,271.3230085685067,379.4073558826733,230.549873917821],[\"Q\",360.20153672822835,189.77673926713533,357.80080933392276,121.42177823510349],[\"Q\",355.40008193961717,53.06681720307165,374.6059010940621,-15.288143828960216],[\"Q\",393.8117202485071,-83.64310486099208,425.02117637448,-122.01781982634327],[\"Q\",456.2306325004529,-160.39253479169446,487.4400886264258,-173.58384306103395],[\"Q\",518.6495447523987,-186.77515133037343,539.0557276039964,-189.1735710157079],[\"Q\",559.4619104555941,-191.57199070104235,575.0666385185805,-181.97831195970454],[\"Q\",590.6713665815669,-172.38463321836673,613.4782768274703,-146.00201667968776],[\"Q\",636.2851870733737,-119.61940014100878,648.2888240449016,-80.04547533299038],[\"Q\",660.2924610164296,-40.471550524971974,656.6913699249712,9.895262867051514],[\"Q\",653.0902788335129,60.262076259075,629.0830048904568,113.02730933643295],[\"Q\",605.0757309474006,165.7925424137909,565.4637289413581,205.36646722180933],[\"Q\",525.8517269353156,244.94039202982776,482.6386338378145,268.9245888831723],[\"Q\",439.4255407403134,292.90878573651685,409.41644831149324,297.70562510718565],[\"Q\",379.4073558826731,302.50246447785446,362.6022641225339,296.5064152645184],[\"Q\",345.7971723623947,290.51036605118236,319.38917102503297,259.33091014183447],[\"Q\",292.98116968767124,228.15145423248657,258.1706224702398,168.19096209912533],[\"Q\",223.36007525280831,108.23046996576409,211.35643828128036,66.25812547241117],[\"Q\",199.3528013097524,24.285780979058245,206.55498349266924,-2.0968355596207005],[\"Q\",213.75716567558607,-28.479452098299646,234.16334852718376,-50.06522926630976],[\"Q\",254.56953137878145,-71.65100643431987,280.9775327161432,-81.24468517565762],[\"Q\",307.3855340535049,-90.83836391699538,334.9938990880194,-86.04152454632649],[\"Q\",362.60226412253394,-81.2446851756576,393.8117202485069,-64.45574737831646],[\"Q\",425.02117637447986,-47.666809580975325,455.0302688032999,-0.89762571695357],[\"L\",485.04136123212,45.87355814706819]]},{\"type\":\"textbox\",\"version\":\"5.3.0\",\"originX\":\"left\",\"originY\":\"top\",\"left\":422.49,\"top\":558.11,\"width\":453.83,\"height\":195.26,\"fill\":\"rgba(255, 253, 255, 1)\",\"stroke\":null,\"strokeWidth\":1,\"strokeDashArray\":null,\"strokeLineCap\":\"butt\",\"strokeDashOffset\":0,\"strokeLineJoin\":\"miter\",\"strokeUniform\":false,\"strokeMiterLimit\":4,\"scaleX\":1,\"scaleY\":1,\"angle\":0,\"flipX\":false,\"flipY\":false,\"opacity\":1,\"shadow\":null,\"visible\":true,\"backgroundColor\":\"\",\"fillRule\":\"nonzero\",\"paintFirst\":\"fill\",\"globalCompositeOperation\":\"source-over\",\"skewX\":0,\"skewY\":0,\"fontFamily\":\"Times New Roman\",\"fontWeight\":700,\"fontSize\":80,\"text\":\"Paragraph\\ndfgdfg\",\"underline\":true,\"overline\":false,\"linethrough\":false,\"textAlign\":\"center\",\"fontStyle\":\"normal\",\"lineHeight\":1.16,\"textBackgroundColor\":\"\",\"charSpacing\":0,\"styles\":[],\"direction\":\"ltr\",\"path\":null,\"pathStartOffset\":0,\"pathSide\":\"left\",\"pathAlign\":\"baseline\",\"minWidth\":20,\"splitByGrapheme\":false,\"selectable\":true,\"hasControls\":true,\"editable\":true},{\"type\":\"textbox\",\"version\":\"5.3.0\",\"originX\":\"left\",\"originY\":\"top\",\"left\":3.58,\"top\":-338.01,\"width\":453.83,\"height\":195.26,\"fill\":\"rgba(255, 253, 255, 1)\",\"stroke\":null,\"strokeWidth\":1,\"strokeDashArray\":null,\"strokeLineCap\":\"butt\",\"strokeDashOffset\":0,\"strokeLineJoin\":\"miter\",\"strokeUniform\":false,\"strokeMiterLimit\":4,\"scaleX\":1,\"scaleY\":1,\"angle\":0,\"flipX\":false,\"flipY\":false,\"opacity\":1,\"shadow\":null,\"visible\":true,\"backgroundColor\":\"\",\"fillRule\":\"nonzero\",\"paintFirst\":\"fill\",\"globalCompositeOperation\":\"source-over\",\"skewX\":0,\"skewY\":0,\"fontFamily\":\"Times New Roman\",\"fontWeight\":700,\"fontSize\":80,\"text\":\"Paragraph\\ndfgdfg\",\"underline\":true,\"overline\":false,\"linethrough\":false,\"textAlign\":\"left\",\"fontStyle\":\"normal\",\"lineHeight\":1.16,\"textBackgroundColor\":\"\",\"charSpacing\":0,\"styles\":[],\"direction\":\"ltr\",\"path\":null,\"pathStartOffset\":0,\"pathSide\":\"left\",\"pathAlign\":\"baseline\",\"minWidth\":20,\"splitByGrapheme\":false,\"selectable\":true,\"hasControls\":true,\"editable\":true}],\"clipPath\":{\"type\":\"rect\",\"version\":\"5.3.0\",\"originX\":\"left\",\"originY\":\"top\",\"left\":-7.5,\"top\":-374,\"width\":900,\"height\":1200,\"fill\":\"rgba(141, 51, 194, 1)\",\"stroke\":null,\"strokeWidth\":1,\"strokeDashArray\":null,\"strokeLineCap\":\"butt\",\"strokeDashOffset\":0,\"strokeLineJoin\":\"miter\",\"strokeUniform\":false,\"strokeMiterLimit\":4,\"scaleX\":1,\"scaleY\":1,\"angle\":0,\"flipX\":false,\"flipY\":false,\"opacity\":1,\"shadow\":{\"color\":\"rgba(0,0,0,0.8)\",\"blur\":5,\"offsetX\":0,\"offsetY\":0,\"affectStroke\":false,\"nonScaling\":false},\"visible\":true,\"backgroundColor\":\"\",\"fillRule\":\"nonzero\",\"paintFirst\":\"fill\",\"globalCompositeOperation\":\"source-over\",\"skewX\":0,\"skewY\":0,\"rx\":0,\"ry\":0,\"selectable\":true,\"hasControls\":true}}",
+      "width": 900,
+      "height": 1200,
+      "userId": "",
+      "isPro": false,
+      "thumbnailUrl": "",
+      "isTemplate": false,
+      "createdAt": "2025-03-13T12:18:07.428Z",
+      "updatedAt": "2025-03-13T12:18:07.428Z",
+      "id": 6
+    },
+    {
+      "name": "",
+      "json": "{\"version\":\"5.3.0\",\"objects\":[{\"type\":\"rect\",\"version\":\"5.3.0\",\"originX\":\"left\",\"originY\":\"top\",\"left\":172.5,\"top\":-374,\"width\":900,\"height\":1200,\"fill\":\"rgba(3, 169, 244, 1)\",\"stroke\":null,\"strokeWidth\":1,\"strokeDashArray\":null,\"strokeLineCap\":\"butt\",\"strokeDashOffset\":0,\"strokeLineJoin\":\"miter\",\"strokeUniform\":false,\"strokeMiterLimit\":4,\"scaleX\":1,\"scaleY\":1,\"angle\":0,\"flipX\":false,\"flipY\":false,\"opacity\":1,\"shadow\":{\"color\":\"rgba(0,0,0,0.8)\",\"blur\":5,\"offsetX\":0,\"offsetY\":0,\"affectStroke\":false,\"nonScaling\":false},\"visible\":true,\"backgroundColor\":\"\",\"fillRule\":\"nonzero\",\"paintFirst\":\"fill\",\"globalCompositeOperation\":\"source-over\",\"skewX\":0,\"skewY\":0,\"rx\":0,\"ry\":0,\"name\":\"clip\",\"selectable\":false,\"hasControls\":false},{\"type\":\"triangle\",\"version\":\"5.3.0\",\"originX\":\"left\",\"originY\":\"top\",\"left\":210.73,\"top\":284.79,\"width\":400,\"height\":400,\"fill\":\"rgba(147, 123, 123, 1)\",\"stroke\":\"rgba(196, 23, 139, 1)\",\"strokeWidth\":20,\"strokeDashArray\":[],\"strokeLineCap\":\"butt\",\"strokeDashOffset\":0,\"strokeLineJoin\":\"miter\",\"strokeUniform\":false,\"strokeMiterLimit\":4,\"scaleX\":1,\"scaleY\":1,\"angle\":0,\"flipX\":false,\"flipY\":false,\"opacity\":0.42,\"shadow\":null,\"visible\":true,\"backgroundColor\":\"\",\"fillRule\":\"nonzero\",\"paintFirst\":\"fill\",\"globalCompositeOperation\":\"source-over\",\"skewX\":0,\"skewY\":0,\"selectable\":true,\"hasControls\":true},{\"type\":\"rect\",\"version\":\"5.3.0\",\"originX\":\"left\",\"originY\":\"top\",\"left\":288.31,\"top\":428.04,\"width\":400,\"height\":400,\"fill\":\"rgba(147, 123, 123, 1)\",\"stroke\":\"rgba(0, 0, 0, 1)\",\"strokeWidth\":70,\"strokeDashArray\":[],\"strokeLineCap\":\"butt\",\"strokeDashOffset\":0,\"strokeLineJoin\":\"miter\",\"strokeUniform\":false,\"strokeMiterLimit\":4,\"scaleX\":0.52,\"scaleY\":0.52,\"angle\":0,\"flipX\":false,\"flipY\":false,\"opacity\":1,\"shadow\":null,\"visible\":true,\"backgroundColor\":\"\",\"fillRule\":\"nonzero\",\"paintFirst\":\"fill\",\"globalCompositeOperation\":\"source-over\",\"skewX\":0,\"skewY\":0,\"rx\":0,\"ry\":0,\"selectable\":true,\"hasControls\":true},{\"type\":\"rect\",\"version\":\"5.3.0\",\"originX\":\"left\",\"originY\":\"top\",\"left\":259.84,\"top\":-254.83,\"width\":400,\"height\":400,\"fill\":\"rgba(78, 74, 74, 1)\",\"stroke\":\"rgba(37, 31, 35, 1)\",\"strokeWidth\":33,\"strokeDashArray\":[],\"strokeLineCap\":\"butt\",\"strokeDashOffset\":0,\"strokeLineJoin\":\"miter\",\"strokeUniform\":false,\"strokeMiterLimit\":4,\"scaleX\":1,\"scaleY\":1,\"angle\":0,\"flipX\":false,\"flipY\":false,\"opacity\":1,\"shadow\":null,\"visible\":true,\"backgroundColor\":\"\",\"fillRule\":\"nonzero\",\"paintFirst\":\"fill\",\"globalCompositeOperation\":\"source-over\",\"skewX\":0,\"skewY\":0,\"rx\":50,\"ry\":50,\"selectable\":true,\"hasControls\":true},{\"type\":\"textbox\",\"version\":\"5.3.0\",\"originX\":\"left\",\"originY\":\"top\",\"left\":254.63,\"top\":717.03,\"width\":315.59,\"height\":90.4,\"fill\":\"rgba(78, 74, 74, 1)\",\"stroke\":null,\"strokeWidth\":1,\"strokeDashArray\":null,\"strokeLineCap\":\"butt\",\"strokeDashOffset\":0,\"strokeLineJoin\":\"miter\",\"strokeUniform\":false,\"strokeMiterLimit\":4,\"scaleX\":1,\"scaleY\":1,\"angle\":0,\"flipX\":false,\"flipY\":false,\"opacity\":1,\"shadow\":null,\"visible\":true,\"backgroundColor\":\"\",\"fillRule\":\"nonzero\",\"paintFirst\":\"fill\",\"globalCompositeOperation\":\"source-over\",\"skewX\":0,\"skewY\":0,\"fontFamily\":\"Arial\",\"fontWeight\":700,\"fontSize\":80,\"text\":\"Heading\",\"underline\":false,\"overline\":false,\"linethrough\":false,\"textAlign\":\"left\",\"fontStyle\":\"normal\",\"lineHeight\":1.16,\"textBackgroundColor\":\"\",\"charSpacing\":0,\"styles\":[],\"direction\":\"ltr\",\"path\":null,\"pathStartOffset\":0,\"pathSide\":\"left\",\"pathAlign\":\"baseline\",\"minWidth\":20,\"splitByGrapheme\":false,\"selectable\":true,\"hasControls\":true,\"editable\":true},{\"type\":\"textbox\",\"version\":\"5.3.0\",\"originX\":\"left\",\"originY\":\"top\",\"left\":680.46,\"top\":247.1,\"width\":251.78,\"height\":49.72,\"fill\":\"rgba(78, 74, 74, 1)\",\"stroke\":null,\"strokeWidth\":1,\"strokeDashArray\":null,\"strokeLineCap\":\"butt\",\"strokeDashOffset\":0,\"strokeLineJoin\":\"miter\",\"strokeUniform\":false,\"strokeMiterLimit\":4,\"scaleX\":1,\"scaleY\":1,\"angle\":0,\"flipX\":false,\"flipY\":false,\"opacity\":1,\"shadow\":null,\"visible\":true,\"backgroundColor\":\"\",\"fillRule\":\"nonzero\",\"paintFirst\":\"fill\",\"globalCompositeOperation\":\"source-over\",\"skewX\":0,\"skewY\":0,\"fontFamily\":\"Arial\",\"fontWeight\":600,\"fontSize\":44,\"text\":\"Subheading\",\"underline\":false,\"overline\":false,\"linethrough\":false,\"textAlign\":\"left\",\"fontStyle\":\"normal\",\"lineHeight\":1.16,\"textBackgroundColor\":\"\",\"charSpacing\":0,\"styles\":[],\"direction\":\"ltr\",\"path\":null,\"pathStartOffset\":0,\"pathSide\":\"left\",\"pathAlign\":\"baseline\",\"minWidth\":20,\"splitByGrapheme\":false,\"selectable\":true,\"hasControls\":true,\"editable\":true},{\"type\":\"textbox\",\"version\":\"5.3.0\",\"originX\":\"left\",\"originY\":\"top\",\"left\":392.91,\"top\":-174.29,\"width\":136.17,\"height\":33.9,\"fill\":\"rgba(246, 240, 240, 1)\",\"stroke\":null,\"strokeWidth\":1,\"strokeDashArray\":null,\"strokeLineCap\":\"butt\",\"strokeDashOffset\":0,\"strokeLineJoin\":\"miter\",\"strokeUniform\":false,\"strokeMiterLimit\":4,\"scaleX\":2.36,\"scaleY\":2.36,\"angle\":41.54,\"flipX\":false,\"flipY\":false,\"opacity\":1,\"shadow\":null,\"visible\":true,\"backgroundColor\":\"\",\"fillRule\":\"nonzero\",\"paintFirst\":\"fill\",\"globalCompositeOperation\":\"source-over\",\"skewX\":0,\"skewY\":0,\"fontFamily\":\"Brush Script MT\",\"fontWeight\":700,\"fontSize\":30,\"text\":\"Textbgfdbox\",\"underline\":false,\"overline\":false,\"linethrough\":false,\"textAlign\":\"left\",\"fontStyle\":\"normal\",\"lineHeight\":1.16,\"textBackgroundColor\":\"\",\"charSpacing\":0,\"styles\":[],\"direction\":\"ltr\",\"path\":null,\"pathStartOffset\":0,\"pathSide\":\"left\",\"pathAlign\":\"baseline\",\"minWidth\":20,\"splitByGrapheme\":false,\"selectable\":true,\"hasControls\":true,\"editable\":true},{\"type\":\"rect\",\"version\":\"5.3.0\",\"originX\":\"left\",\"originY\":\"top\",\"left\":528.99,\"top\":200.35,\"width\":400,\"height\":400,\"fill\":\"rgba(147, 123, 123, 1)\",\"stroke\":\"rgba(0, 0, 0, 1)\",\"strokeWidth\":20,\"strokeDashArray\":[],\"strokeLineCap\":\"butt\",\"strokeDashOffset\":0,\"strokeLineJoin\":\"miter\",\"strokeUniform\":false,\"strokeMiterLimit\":4,\"scaleX\":1,\"scaleY\":1,\"angle\":0,\"flipX\":false,\"flipY\":false,\"opacity\":1,\"shadow\":null,\"visible\":true,\"backgroundColor\":\"\",\"fillRule\":\"nonzero\",\"paintFirst\":\"fill\",\"globalCompositeOperation\":\"source-over\",\"skewX\":0,\"skewY\":0,\"rx\":0,\"ry\":0,\"selectable\":true,\"hasControls\":true},{\"type\":\"rect\",\"version\":\"5.3.0\",\"originX\":\"left\",\"originY\":\"top\",\"left\":841.5,\"top\":-200.25,\"width\":400,\"height\":400,\"fill\":\"rgba(147, 123, 123, 1)\",\"stroke\":\"rgba(0, 0, 0, 1)\",\"strokeWidth\":20,\"strokeDashArray\":[],\"strokeLineCap\":\"butt\",\"strokeDashOffset\":0,\"strokeLineJoin\":\"miter\",\"strokeUniform\":false,\"strokeMiterLimit\":4,\"scaleX\":1,\"scaleY\":1,\"angle\":59.19,\"flipX\":false,\"flipY\":false,\"opacity\":0.5,\"shadow\":null,\"visible\":true,\"backgroundColor\":\"\",\"fillRule\":\"nonzero\",\"paintFirst\":\"fill\",\"globalCompositeOperation\":\"source-over\",\"skewX\":0,\"skewY\":0,\"rx\":0,\"ry\":0,\"selectable\":true,\"hasControls\":true},{\"type\":\"textbox\",\"version\":\"5.3.0\",\"originX\":\"left\",\"originY\":\"top\",\"left\":617.9,\"top\":38.53,\"width\":315.59,\"height\":90.4,\"fill\":\"rgba(255, 235, 59, 1)\",\"stroke\":null,\"strokeWidth\":1,\"strokeDashArray\":null,\"strokeLineCap\":\"butt\",\"strokeDashOffset\":0,\"strokeLineJoin\":\"miter\",\"strokeUniform\":false,\"strokeMiterLimit\":4,\"scaleX\":1,\"scaleY\":1,\"angle\":0,\"flipX\":false,\"flipY\":false,\"opacity\":0.5,\"shadow\":null,\"visible\":true,\"backgroundColor\":\"\",\"fillRule\":\"nonzero\",\"paintFirst\":\"fill\",\"globalCompositeOperation\":\"source-over\",\"skewX\":0,\"skewY\":0,\"fontFamily\":\"Arial\",\"fontWeight\":700,\"fontSize\":80,\"text\":\"Heading\",\"underline\":false,\"overline\":false,\"linethrough\":false,\"textAlign\":\"left\",\"fontStyle\":\"normal\",\"lineHeight\":1.16,\"textBackgroundColor\":\"\",\"charSpacing\":0,\"styles\":[],\"direction\":\"ltr\",\"path\":null,\"pathStartOffset\":0,\"pathSide\":\"left\",\"pathAlign\":\"baseline\",\"minWidth\":20,\"splitByGrapheme\":false,\"selectable\":true,\"hasControls\":true,\"editable\":true},{\"type\":\"path\",\"version\":\"5.3.0\",\"originX\":\"left\",\"originY\":\"top\",\"left\":588.26,\"top\":305.63,\"width\":571.27,\"height\":803.26,\"fill\":null,\"stroke\":\"rgba(255, 152, 0, 1)\",\"strokeWidth\":54,\"strokeDashArray\":null,\"strokeLineCap\":\"round\",\"strokeDashOffset\":0,\"strokeLineJoin\":\"round\",\"strokeUniform\":false,\"strokeMiterLimit\":10,\"scaleX\":0.48,\"scaleY\":0.48,\"angle\":0,\"flipX\":false,\"flipY\":false,\"opacity\":1,\"shadow\":null,\"visible\":true,\"backgroundColor\":\"\",\"fillRule\":\"nonzero\",\"paintFirst\":\"fill\",\"globalCompositeOperation\":\"source-over\",\"skewX\":0,\"skewY\":0,\"selectable\":true,\"hasControls\":true,\"path\":[[\"M\",223.5562369521655,330.43926647036426],[\"Q\",223.6102369521655,330.43926647036426,225.79880704185808,330.43926647036426],[\"Q\",227.98737713155066,330.43926647036426,229.0816621763969,330.43926647036426],[\"Q\",230.17594722124312,330.43926647036426,232.3645173109357,330.43926647036426],[\"Q\",234.55308740062827,330.43926647036426,242.21308271455223,330.43926647036426],[\"Q\",249.8730780284762,330.43926647036426,259.72164343209266,332.62797354985497],[\"Q\",269.57020883570914,334.8166806293457,279.41877423932567,335.911034169091],[\"Q\",289.2673396429422,337.00538770883634,300.21019009140497,338.09974124858167],[\"Q\",311.15304053986773,339.194094788327,316.62446576409917,339.194094788327],[\"Q\",322.0958909883306,339.194094788327,328.6616012574083,340.2884483280723],[\"Q\",335.22731152648595,341.38280186781765,342.8873068404099,341.38280186781765],[\"Q\",350.54730215433386,341.38280186781765,360.3958675579504,341.38280186781765],[\"Q\",370.24443296156693,341.38280186781765,381.1872834100297,340.2884483280723],[\"Q\",392.13013385849246,339.194094788327,404.1672693518015,337.00538770883634],[\"Q\",416.20440484511056,334.8166806293457,428.2415403384196,332.62797354985497],[\"Q\",440.27867583172866,330.43926647036426,450.1272412353452,327.1562058511283],[\"Q\",459.9758066389617,323.8731452318923,468.730086997732,321.6844381524017],[\"Q\",477.4843673565022,319.4957310729111,487.3329327601187,316.2126704536751],[\"Q\",497.18149816373517,312.92960983443913,507.0300635673516,308.5521956754578],[\"Q\",516.8786289709681,304.1747815164765,526.7271943745847,298.7030138177499],[\"Q\",536.5757597782012,293.23124611902324,544.2357550921251,286.6651248805513],[\"Q\",551.895750406049,280.0990036420793,565.0271709442045,272.438528863862],[\"Q\",578.15859148236,264.7780540856447,593.4785821102078,253.8345186881915],[\"Q\",608.7985727380556,242.8909832907383,623.0242783210573,234.13615497277573],[\"Q\",637.249983904059,225.38132665481317,650.3814044422143,216.62649833685055],[\"Q\",663.5128249803695,207.87167001888793,673.3613903839861,200.21119524067063],[\"Q\",683.2099557876027,192.55072046245334,690.8699511015266,185.98459922398138],[\"Q\",698.5299464154505,179.4184779855094,705.0956566845281,171.75800320729218],[\"Q\",711.6613669536057,164.09752842907494,717.132792177837,155.34270011111232],[\"Q\",722.6042174020683,146.5878717931497,726.9813575814536,136.73868993544176],[\"Q\",731.3584977608389,126.88950807773381,733.5470678505314,115.94597268028053],[\"Q\",735.735637940224,105.00243728282726,735.735637940224,95.15325542511931],[\"Q\",735.735637940224,85.30407356741136,735.735637940224,73.26618463021282],[\"Q\",735.735637940224,61.228295693014275,733.5470678505314,51.37911383530633],[\"Q\",731.3584977608389,41.52993197759838,728.0756426263,30.586396580145134],[\"Q\",724.7927874917611,19.642861182691888,719.3213622675297,8.699325785238614],[\"Q\",713.8499370432983,-2.244209612214661,709.4727968639131,-9.904684390431896],[\"Q\",705.095656684528,-17.56515916864913,700.7185165051429,-24.131280407121096],[\"Q\",696.3413763257579,-30.69740164559306,693.058521191219,-35.07481580457434],[\"Q\",689.7756660566802,-39.452229963555624,685.398525877295,-47.112704741772944],[\"Q\",681.0213856979099,-54.773179519990265,677.7385305633711,-59.15059367897152],[\"Q\",674.4556754288324,-63.52800783795277,672.2671053391397,-64.6223613776981],[\"Q\",670.078535249447,-65.71671491744343,665.701395070062,-66.81106845718875],[\"Q\",661.3242548906769,-67.90542199693408,658.041399756138,-68.99977553667941],[\"Q\",654.7585446215992,-70.09412907642474,650.381404442214,-70.09412907642474],[\"Q\",646.0042642628289,-70.09412907642474,640.5328390385976,-70.09412907642474],[\"Q\",635.0614138143662,-70.09412907642474,626.307133455596,-66.81106845718875],[\"Q\",617.5528530968259,-63.52800783795277,607.7042876932093,-56.96188659948086],[\"Q\",597.8557222895927,-50.395765361008955,588.0071568859763,-40.54658350330101],[\"Q\",578.15859148236,-30.69740164559306,567.2157410338971,-20.848219787885114],[\"Q\",556.2728905854342,-10.999037930177167,543.141470047279,5.416265166002688],[\"Q\",530.0100495091237,21.831568262182543,522.3500541951996,38.24687135836248],[\"Q\",514.6900588812755,54.66217445454242,511.40720374673674,73.26618463021288],[\"Q\",508.12434861219793,91.87019480588333,508.12434861219793,114.8516191405352],[\"Q\",508.12434861219793,137.83304347518708,512.501488791583,163.00317488932956],[\"Q\",516.8786289709681,188.17330630347203,524.5386242848921,216.6264983368505],[\"Q\",532.1986195988161,245.07969037022895,544.2357550921251,272.4385288638621],[\"Q\",556.2728905854342,299.7973673574952,569.4043111235895,321.68443815240175],[\"Q\",582.5357316617449,343.5715089473083,595.6671521999002,361.0811655832334],[\"Q\",608.7985727380556,378.59082221915855,626.307133455596,395.00612531533847],[\"Q\",643.8156941731365,411.4214284115184,658.041399756138,424.55367088846236],[\"Q\",672.2671053391396,437.68591336540635,673.361390383986,437.68591336540635],[\"Q\",674.4556754288324,437.68591336540635,684.3042408324488,447.53509522311424],[\"Q\",694.1528062360653,457.38427708082213,702.9070865948355,463.95039831929404],[\"Q\",711.6613669536057,470.51651955776595,720.415647312376,479.27134787572857],[\"Q\",729.1699276711463,488.0261761936912,736.8299229850702,497.87535805139913],[\"Q\",744.4899182989941,507.7245399091071,751.0556285680717,518.6680753065602],[\"Q\",757.6213388371493,529.6116107040135,764.187049106227,539.4607925617215],[\"Q\",770.7527593753048,549.3099744194295,775.1298995546899,556.9704491976468],[\"Q\",779.5070397340751,564.630923975864,781.6956098237677,570.1026916745906],[\"Q\",783.8841799134602,575.5744593733172,786.0727500031527,579.9518735322986],[\"Q\",788.2613200928452,584.32928769128,790.4498901825377,588.7067018502613],[\"Q\",792.6384602722303,593.0841160092426,792.6384602722303,596.3671766284785],[\"Q\",792.6384602722303,599.6502372477145,792.6384602722303,601.8389443272051],[\"Q\",792.6384602722303,604.0276514066958,793.7327453170766,605.122004946441],[\"Q\",794.8270303619229,606.2163584861863,794.8270303619229,607.3107120259317],[\"Q\",794.8270303619229,608.4050655656771,794.8270303619229,609.4994191054224],[\"Q\",794.8270303619229,610.5937726451676,794.8270303619229,612.7824797246583],[\"Q\",794.8270303619229,614.9711868041489,794.8270303619229,616.0655403438942],[\"Q\",794.8270303619229,617.1598938836395,794.8270303619229,619.3486009631301],[\"Q\",794.8270303619229,621.5373080426208,794.8270303619229,623.7260151221114],[\"Q\",794.8270303619229,625.9147222016021,794.8270303619229,628.1034292810929],[\"Q\",794.8270303619229,630.2921363605836,794.8270303619229,632.4808434400742],[\"Q\",794.8270303619229,634.6695505195647,794.8270303619229,639.046964678546],[\"Q\",794.8270303619229,643.4243788375273,794.8270303619229,649.9905000759993],[\"Q\",794.8270303619229,656.5566213144713,793.7327453170766,667.5001567119245],[\"Q\",792.6384602722303,678.4436921093778,790.4498901825377,687.1985204273404],[\"Q\",788.2613200928452,695.9533487453031,786.0727500031527,703.6138235235203],[\"Q\",783.8841799134602,711.2742983017375,780.6013247789214,716.7460660004641],[\"Q\",777.3184696443825,722.2178336991907,774.0356145098436,724.4065407786813],[\"Q\",770.7527593753048,726.595247858172,766.3756191959196,727.6896013979174],[\"Q\",761.9984790165345,728.7839549376628,755.4327687474569,729.8783084774082],[\"Q\",748.8670584783792,730.9726620171535,740.1127781196091,732.0670155568988],[\"Q\",731.3584977608389,733.1613690966441,720.415647312376,733.1613690966441],[\"Q\",709.4727968639131,733.1613690966441,697.4356613706042,732.0670155568988],[\"Q\",685.3985258772952,730.9726620171535,673.3613903839861,729.8783084774082],[\"Q\",661.3242548906769,728.7839549376628,651.4756894870604,726.5952478581721],[\"Q\",641.627124083444,724.4065407786815,635.0614138143663,723.3121872389361],[\"Q\",628.4957035452887,722.2178336991907,623.0242783210573,720.0291266197],[\"Q\",617.5528530968259,717.8404195402094,613.1757129174407,714.5573589209735],[\"Q\",608.7985727380556,711.2742983017375,605.5157176035168,710.1799447619923],[\"Q\",602.232862468978,709.085591222247,601.1385774241317,707.9912376825016],[\"Q\",600.0442923792853,706.8968841427562,598.950007334439,705.802530603011],[\"Q\",597.8557222895927,704.7081770632657,596.7614372447465,703.6138235235203],[\"Q\",595.6671521999003,702.5194699837749,594.572867155054,701.4251164440296],[\"Q\",593.4785821102078,700.3307629042844,592.3842970653615,698.1420558247937],[\"Q\",591.2900120205152,695.9533487453031,590.1957269756689,693.7646416658124],[\"Q\",589.1014419308226,691.5759345863218,586.91287184113,690.4815810465764],[\"Q\",584.7243017514375,689.387227506831,583.6300167065912,688.2928739670857],[\"Q\",582.5357316617449,687.1985204273404,581.4414466168987,683.9154598081045],[\"Q\",580.3471615720525,680.6323991888686,578.15859148236,676.2549850298872],[\"Q\",575.9700213926674,671.8775708709057,572.6871662581284,666.4058031721792],[\"Q\",569.4043111235894,660.9340354734526,565.0271709442044,653.2735606952353],[\"Q\",560.6500307648193,645.6130859170181,552.9900354508954,630.2921363605835],[\"Q\",545.3300401369715,614.9711868041489,533.2929046436624,595.272823088733],[\"Q\",521.2557691503532,575.5744593733172,508.124348612198,554.781742118156],[\"Q\",494.9929280740427,533.9890248629949,478.57865240134845,515.3850146873244],[\"Q\",462.1643767286542,496.7810045116538,451.2215262801914,480.3657014154739],[\"Q\",440.27867583172866,463.950398319294,432.6186805178047,450.81815584235017],[\"Q\",424.95868520388075,437.68591336540635,418.3929749348031,423.45931734871704],[\"Q\",411.8272646657254,409.2327213320277,407.4501244863403,393.91177177559314],[\"Q\",403.0729843069552,378.59082221915855,398.69584412757007,361.0811655832334],[\"Q\",394.3187039481849,343.5715089473083,392.13013385849234,330.4392664703644],[\"Q\",389.94156376879977,317.30702399342044,386.65870863426096,308.5521956754578],[\"Q\",383.37585349972215,299.7973673574952,382.2815684548759,294.32559965876857],[\"Q\",381.1872834100297,288.85383196004193,380.09299836518335,283.3820642613153],[\"Q\",378.998713320337,277.91029656258866,377.9044282754908,273.53288240360735],[\"Q\",376.81014323064454,269.15546824462604,376.81014323064454,265.87240762539005],[\"Q\",376.81014323064454,262.58934700615407,375.71585818579825,261.4949934664088],[\"Q\",374.62157314095197,260.40063992666353,373.5272880961057,259.3062863869182],[\"Q\",372.4330030512594,258.2119328471729,372.4330030512594,257.11757930742755],[\"Q\",372.4330030512594,256.0232257676822,372.4330030512594,254.92887222793695],[\"Q\",372.4330030512594,253.83451868819168,371.33871800641316,252.74016514844635],[\"Q\",370.24443296156693,251.64581160870102,370.24443296156693,250.5514580689557],[\"Q\",370.24443296156693,249.45710452921037,369.15014791672064,247.26839744971966],[\"Q\",368.05586287187435,245.07969037022895,366.961577827028,242.8909832907383],[\"Q\",365.86729278218166,240.70227621124764,364.77300773733543,235.23050851252106],[\"Q\",363.6787226924892,229.75874081379447,360.39586755795034,218.8152054163412],[\"Q\",357.1130124234115,207.87167001888793,354.92444233371896,195.83378108168932],[\"Q\",352.73587224402644,183.79589214449072,349.4530171094876,169.56929612780152],[\"Q\",346.1701619749487,155.34270011111232,341.79302179556356,141.11610409442306],[\"Q\",337.4158816161784,126.88950807773381,334.1330264816396,112.66291206104455],[\"Q\",330.8501713471008,98.4363160443553,328.6616012574082,88.5871341866474],[\"Q\",326.47303116771565,78.73795232893951,325.3787461228694,78.73795232893951],[\"Q\",324.2844610780232,78.73795232893951,323.1901760331769,72.17183109046755],[\"Q\",322.0958909883306,65.60570985199558,321.0016059434844,62.3226492327596],[\"L\",319.8533208986382,58.98558861352362]]}],\"clipPath\":{\"type\":\"rect\",\"version\":\"5.3.0\",\"originX\":\"left\",\"originY\":\"top\",\"left\":172.5,\"top\":-374,\"width\":900,\"height\":1200,\"fill\":\"rgba(3, 169, 244, 1)\",\"stroke\":null,\"strokeWidth\":1,\"strokeDashArray\":null,\"strokeLineCap\":\"butt\",\"strokeDashOffset\":0,\"strokeLineJoin\":\"miter\",\"strokeUniform\":false,\"strokeMiterLimit\":4,\"scaleX\":1,\"scaleY\":1,\"angle\":0,\"flipX\":false,\"flipY\":false,\"opacity\":1,\"shadow\":{\"color\":\"rgba(0,0,0,0.8)\",\"blur\":5,\"offsetX\":0,\"offsetY\":0,\"affectStroke\":false,\"nonScaling\":false},\"visible\":true,\"backgroundColor\":\"\",\"fillRule\":\"nonzero\",\"paintFirst\":\"fill\",\"globalCompositeOperation\":\"source-over\",\"skewX\":0,\"skewY\":0,\"rx\":0,\"ry\":0,\"selectable\":true,\"hasControls\":true}}",
+      "width": 900,
+      "height": 1200,
+      "userId": "",
+      "isPro": false,
+      "thumbnailUrl": "",
+      "isTemplate": false,
+      "createdAt": "2025-02-26T03:40:23.837Z",
+      "updatedAt": "2025-02-26T03:40:23.837Z",
+      "id": 7
+    },
+    {
+      "name": "",
+      "json": "{\"version\":\"5.3.0\",\"objects\":[{\"type\":\"rect\",\"version\":\"5.3.0\",\"originX\":\"left\",\"originY\":\"top\",\"left\":-23.5,\"top\":-287,\"width\":600,\"height\":600,\"fill\":\"rgba(33, 150, 243, 1)\",\"stroke\":null,\"strokeWidth\":1,\"strokeDashArray\":null,\"strokeLineCap\":\"butt\",\"strokeDashOffset\":0,\"strokeLineJoin\":\"miter\",\"strokeUniform\":false,\"strokeMiterLimit\":4,\"scaleX\":1,\"scaleY\":1,\"angle\":0,\"flipX\":false,\"flipY\":false,\"opacity\":1,\"shadow\":{\"color\":\"rgba(0,0,0,0.8)\",\"blur\":5,\"offsetX\":0,\"offsetY\":0,\"affectStroke\":false,\"nonScaling\":false},\"visible\":true,\"backgroundColor\":\"\",\"fillRule\":\"nonzero\",\"paintFirst\":\"fill\",\"globalCompositeOperation\":\"source-over\",\"skewX\":0,\"skewY\":0,\"rx\":0,\"ry\":0,\"name\":\"clip\",\"selectable\":false,\"hasControls\":false},{\"type\":\"rect\",\"version\":\"5.3.0\",\"originX\":\"left\",\"originY\":\"top\",\"left\":294.88,\"top\":275.03,\"width\":400,\"height\":400,\"fill\":\"rgba(196, 58, 58, 1)\",\"stroke\":\"rgba(239, 239, 239, 1)\",\"strokeWidth\":26,\"strokeDashArray\":[5,5],\"strokeLineCap\":\"butt\",\"strokeDashOffset\":0,\"strokeLineJoin\":\"miter\",\"strokeUniform\":false,\"strokeMiterLimit\":4,\"scaleX\":0.6,\"scaleY\":0.6,\"angle\":0,\"flipX\":false,\"flipY\":false,\"opacity\":1,\"shadow\":null,\"visible\":true,\"backgroundColor\":\"\",\"fillRule\":\"nonzero\",\"paintFirst\":\"fill\",\"globalCompositeOperation\":\"source-over\",\"skewX\":0,\"skewY\":0,\"rx\":50,\"ry\":50,\"selectable\":true,\"hasControls\":true},{\"type\":\"triangle\",\"version\":\"5.3.0\",\"originX\":\"left\",\"originY\":\"top\",\"left\":569.13,\"top\":-345.57,\"width\":400,\"height\":400,\"fill\":\"rgba(196, 58, 58, 1)\",\"stroke\":\"rgba(239, 239, 239, 1)\",\"strokeWidth\":0,\"strokeDashArray\":[5,5],\"strokeLineCap\":\"butt\",\"strokeDashOffset\":0,\"strokeLineJoin\":\"miter\",\"strokeUniform\":false,\"strokeMiterLimit\":4,\"scaleX\":3.01,\"scaleY\":1.5,\"angle\":90.48,\"flipX\":false,\"flipY\":false,\"opacity\":1,\"shadow\":null,\"visible\":true,\"backgroundColor\":\"\",\"fillRule\":\"nonzero\",\"paintFirst\":\"fill\",\"globalCompositeOperation\":\"source-over\",\"skewX\":0,\"skewY\":0,\"selectable\":true,\"hasControls\":true},{\"type\":\"polygon\",\"version\":\"5.3.0\",\"originX\":\"left\",\"originY\":\"top\",\"left\":51.76,\"top\":-244.45,\"width\":400,\"height\":400,\"fill\":\"rgba(196, 58, 58, 1)\",\"stroke\":\"rgba(239, 239, 239, 1)\",\"strokeWidth\":26,\"strokeDashArray\":[5,5],\"strokeLineCap\":\"butt\",\"strokeDashOffset\":0,\"strokeLineJoin\":\"miter\",\"strokeUniform\":false,\"strokeMiterLimit\":4,\"scaleX\":1,\"scaleY\":1,\"angle\":2.92,\"flipX\":false,\"flipY\":false,\"opacity\":1,\"shadow\":null,\"visible\":true,\"backgroundColor\":\"\",\"fillRule\":\"nonzero\",\"paintFirst\":\"fill\",\"globalCompositeOperation\":\"source-over\",\"skewX\":0,\"skewY\":0,\"selectable\":true,\"hasControls\":true,\"points\":[{\"x\":0,\"y\":0},{\"x\":400,\"y\":0},{\"x\":200,\"y\":400}]},{\"type\":\"polygon\",\"version\":\"5.3.0\",\"originX\":\"left\",\"originY\":\"top\",\"left\":374.9,\"top\":-91.35,\"width\":600,\"height\":600,\"fill\":\"rgba(196, 58, 58, 1)\",\"stroke\":\"rgba(239, 239, 239, 1)\",\"strokeWidth\":26,\"strokeDashArray\":[5,5],\"strokeLineCap\":\"butt\",\"strokeDashOffset\":0,\"strokeLineJoin\":\"miter\",\"strokeUniform\":false,\"strokeMiterLimit\":4,\"scaleX\":0.71,\"scaleY\":0.71,\"angle\":343.82,\"flipX\":false,\"flipY\":false,\"opacity\":1,\"shadow\":null,\"visible\":true,\"backgroundColor\":\"\",\"fillRule\":\"nonzero\",\"paintFirst\":\"fill\",\"globalCompositeOperation\":\"source-over\",\"skewX\":0,\"skewY\":0,\"selectable\":true,\"hasControls\":true,\"points\":[{\"x\":300,\"y\":0},{\"x\":600,\"y\":300},{\"x\":300,\"y\":600},{\"x\":0,\"y\":300}]},{\"type\":\"textbox\",\"version\":\"5.3.0\",\"originX\":\"left\",\"originY\":\"top\",\"left\":102.09,\"top\":-280.02,\"width\":315.59,\"height\":90.4,\"fill\":\"rgba(255, 255, 255, 1)\",\"stroke\":null,\"strokeWidth\":1,\"strokeDashArray\":null,\"strokeLineCap\":\"butt\",\"strokeDashOffset\":0,\"strokeLineJoin\":\"miter\",\"strokeUniform\":false,\"strokeMiterLimit\":4,\"scaleX\":1.89,\"scaleY\":1.89,\"angle\":0,\"flipX\":false,\"flipY\":false,\"opacity\":1,\"shadow\":null,\"visible\":true,\"backgroundColor\":\"\",\"fillRule\":\"nonzero\",\"paintFirst\":\"fill\",\"globalCompositeOperation\":\"source-over\",\"skewX\":0,\"skewY\":0,\"fontFamily\":\"Arial\",\"fontWeight\":700,\"fontSize\":80,\"text\":\"Heading\",\"underline\":false,\"overline\":false,\"linethrough\":false,\"textAlign\":\"left\",\"fontStyle\":\"normal\",\"lineHeight\":1.16,\"textBackgroundColor\":\"\",\"charSpacing\":0,\"styles\":[],\"direction\":\"ltr\",\"path\":null,\"pathStartOffset\":0,\"pathSide\":\"left\",\"pathAlign\":\"baseline\",\"minWidth\":20,\"splitByGrapheme\":false,\"selectable\":false,\"hasControls\":false,\"editable\":true},{\"type\":\"circle\",\"version\":\"5.3.0\",\"originX\":\"left\",\"originY\":\"top\",\"left\":148.72,\"top\":412.43,\"width\":450,\"height\":450,\"fill\":\"rgba(56, 184, 137, 1)\",\"stroke\":\"rgba(0,0,0,1)\",\"strokeWidth\":0,\"strokeDashArray\":[],\"strokeLineCap\":\"butt\",\"strokeDashOffset\":0,\"strokeLineJoin\":\"miter\",\"strokeUniform\":false,\"strokeMiterLimit\":4,\"scaleX\":0.56,\"scaleY\":1,\"angle\":0,\"flipX\":false,\"flipY\":false,\"opacity\":1,\"shadow\":null,\"visible\":true,\"backgroundColor\":\"\",\"fillRule\":\"nonzero\",\"paintFirst\":\"fill\",\"globalCompositeOperation\":\"source-over\",\"skewX\":0,\"skewY\":0,\"radius\":225,\"startAngle\":0,\"endAngle\":360,\"selectable\":true,\"hasControls\":true},{\"type\":\"polygon\",\"version\":\"5.3.0\",\"originX\":\"left\",\"originY\":\"top\",\"left\":303.97,\"top\":64.22,\"width\":400,\"height\":400,\"fill\":\"rgba(56, 184, 137, 1)\",\"stroke\":\"rgba(0,0,0,1)\",\"strokeWidth\":0,\"strokeDashArray\":[],\"strokeLineCap\":\"butt\",\"strokeDashOffset\":0,\"strokeLineJoin\":\"miter\",\"strokeUniform\":false,\"strokeMiterLimit\":4,\"scaleX\":0.7,\"scaleY\":0.7,\"angle\":0,\"flipX\":false,\"flipY\":false,\"opacity\":1,\"shadow\":null,\"visible\":true,\"backgroundColor\":\"\",\"fillRule\":\"nonzero\",\"paintFirst\":\"fill\",\"globalCompositeOperation\":\"source-over\",\"skewX\":0,\"skewY\":0,\"selectable\":true,\"hasControls\":true,\"points\":[{\"x\":0,\"y\":0},{\"x\":400,\"y\":0},{\"x\":200,\"y\":400}]},{\"type\":\"textbox\",\"version\":\"5.3.0\",\"originX\":\"left\",\"originY\":\"top\",\"left\":-9.24,\"top\":-109.73,\"width\":315.59,\"height\":90.4,\"fill\":\"rgba(255, 255, 255, 1)\",\"stroke\":null,\"strokeWidth\":1,\"strokeDashArray\":null,\"strokeLineCap\":\"butt\",\"strokeDashOffset\":0,\"strokeLineJoin\":\"miter\",\"strokeUniform\":false,\"strokeMiterLimit\":4,\"scaleX\":1.89,\"scaleY\":1.89,\"angle\":0,\"flipX\":false,\"flipY\":false,\"opacity\":1,\"shadow\":null,\"visible\":true,\"backgroundColor\":\"\",\"fillRule\":\"nonzero\",\"paintFirst\":\"fill\",\"globalCompositeOperation\":\"source-over\",\"skewX\":0,\"skewY\":0,\"fontFamily\":\"Arial\",\"fontWeight\":700,\"fontSize\":80,\"text\":\"Heading\",\"underline\":false,\"overline\":false,\"linethrough\":false,\"textAlign\":\"left\",\"fontStyle\":\"normal\",\"lineHeight\":1.16,\"textBackgroundColor\":\"\",\"charSpacing\":0,\"styles\":[],\"direction\":\"ltr\",\"path\":null,\"pathStartOffset\":0,\"pathSide\":\"left\",\"pathAlign\":\"baseline\",\"minWidth\":20,\"splitByGrapheme\":false,\"selectable\":true,\"hasControls\":true,\"editable\":true},{\"type\":\"textbox\",\"version\":\"5.3.0\",\"originX\":\"left\",\"originY\":\"top\",\"left\":20.5,\"top\":255.52,\"width\":114.21,\"height\":55.37,\"fill\":\"rgba(3, 169, 244, 1)\",\"stroke\":null,\"strokeWidth\":1,\"strokeDashArray\":null,\"strokeLineCap\":\"butt\",\"strokeDashOffset\":0,\"strokeLineJoin\":\"miter\",\"strokeUniform\":false,\"strokeMiterLimit\":4,\"scaleX\":2.37,\"scaleY\":2.37,\"angle\":0,\"flipX\":false,\"flipY\":false,\"opacity\":1,\"shadow\":null,\"visible\":true,\"backgroundColor\":\"\",\"fillRule\":\"nonzero\",\"paintFirst\":\"fill\",\"globalCompositeOperation\":\"source-over\",\"skewX\":0,\"skewY\":0,\"fontFamily\":\"Brush Script MT\",\"fontWeight\":500,\"fontSize\":49,\"text\":\"Textbox\",\"underline\":true,\"overline\":false,\"linethrough\":false,\"textAlign\":\"left\",\"fontStyle\":\"italic\",\"lineHeight\":1.16,\"textBackgroundColor\":\"\",\"charSpacing\":0,\"styles\":[],\"direction\":\"ltr\",\"path\":null,\"pathStartOffset\":0,\"pathSide\":\"left\",\"pathAlign\":\"baseline\",\"minWidth\":20,\"splitByGrapheme\":false,\"selectable\":true,\"hasControls\":true,\"editable\":true},{\"type\":\"textbox\",\"version\":\"5.3.0\",\"originX\":\"left\",\"originY\":\"top\",\"left\":519.64,\"top\":596.11,\"width\":315.59,\"height\":90.4,\"fill\":\"rgba(56, 184, 137, 1)\",\"stroke\":null,\"strokeWidth\":1,\"strokeDashArray\":null,\"strokeLineCap\":\"butt\",\"strokeDashOffset\":0,\"strokeLineJoin\":\"miter\",\"strokeUniform\":false,\"strokeMiterLimit\":4,\"scaleX\":1,\"scaleY\":1,\"angle\":0,\"flipX\":false,\"flipY\":false,\"opacity\":1,\"shadow\":null,\"visible\":true,\"backgroundColor\":\"\",\"fillRule\":\"nonzero\",\"paintFirst\":\"fill\",\"globalCompositeOperation\":\"source-over\",\"skewX\":0,\"skewY\":0,\"fontFamily\":\"Arial\",\"fontWeight\":700,\"fontSize\":80,\"text\":\"Heading\",\"underline\":false,\"overline\":false,\"linethrough\":false,\"textAlign\":\"left\",\"fontStyle\":\"normal\",\"lineHeight\":1.16,\"textBackgroundColor\":\"\",\"charSpacing\":0,\"styles\":[],\"direction\":\"ltr\",\"path\":null,\"pathStartOffset\":0,\"pathSide\":\"left\",\"pathAlign\":\"baseline\",\"minWidth\":20,\"splitByGrapheme\":false,\"selectable\":true,\"hasControls\":true,\"editable\":true}],\"clipPath\":{\"type\":\"rect\",\"version\":\"5.3.0\",\"originX\":\"left\",\"originY\":\"top\",\"left\":-23.5,\"top\":-287,\"width\":600,\"height\":600,\"fill\":\"rgba(33, 150, 243, 1)\",\"stroke\":null,\"strokeWidth\":1,\"strokeDashArray\":null,\"strokeLineCap\":\"butt\",\"strokeDashOffset\":0,\"strokeLineJoin\":\"miter\",\"strokeUniform\":false,\"strokeMiterLimit\":4,\"scaleX\":1,\"scaleY\":1,\"angle\":0,\"flipX\":false,\"flipY\":false,\"opacity\":1,\"shadow\":{\"color\":\"rgba(0,0,0,0.8)\",\"blur\":5,\"offsetX\":0,\"offsetY\":0,\"affectStroke\":false,\"nonScaling\":false},\"visible\":true,\"backgroundColor\":\"\",\"fillRule\":\"nonzero\",\"paintFirst\":\"fill\",\"globalCompositeOperation\":\"source-over\",\"skewX\":0,\"skewY\":0,\"rx\":0,\"ry\":0,\"selectable\":true,\"hasControls\":true}}",
+      "width": 600,
+      "height": 600,
+      "userId": "",
+      "isPro": false,
+      "thumbnailUrl": "",
+      "isTemplate": false,
+      "createdAt": "2025-03-13T02:28:50.695Z",
+      "updatedAt": "2025-03-13T02:28:50.695Z",
+      "id": 8
+    },
+    {
+      "name": "Untitled project",
+      "json": "",
+      "width": 900,
+      "height": 1200,
+      "userId": "67c59d65483e2344ce5caf01",
+      "isPro": false,
+      "thumbnailUrl": "",
+      "isTemplate": false,
+      "createdAt": "2025-03-13T12:11:27.168Z",
+      "updatedAt": "2025-03-13T12:11:27.168Z",
+      "id": 9
+    },
+    {
+      "name": "",
+      "json": "{\"version\":\"5.3.0\",\"objects\":[{\"type\":\"rect\",\"version\":\"5.3.0\",\"originX\":\"left\",\"originY\":\"top\",\"left\":-23.5,\"top\":-287,\"width\":600,\"height\":600,\"fill\":\"rgba(73, 32, 146, 1)\",\"stroke\":null,\"strokeWidth\":1,\"strokeDashArray\":null,\"strokeLineCap\":\"butt\",\"strokeDashOffset\":0,\"strokeLineJoin\":\"miter\",\"strokeUniform\":false,\"strokeMiterLimit\":4,\"scaleX\":1,\"scaleY\":1,\"angle\":0,\"flipX\":false,\"flipY\":false,\"opacity\":1,\"shadow\":{\"color\":\"rgba(0,0,0,0.8)\",\"blur\":5,\"offsetX\":0,\"offsetY\":0,\"affectStroke\":false,\"nonScaling\":false},\"visible\":true,\"backgroundColor\":\"\",\"fillRule\":\"nonzero\",\"paintFirst\":\"fill\",\"globalCompositeOperation\":\"source-over\",\"skewX\":0,\"skewY\":0,\"rx\":0,\"ry\":0,\"name\":\"clip\",\"selectable\":false,\"hasControls\":false},{\"type\":\"textbox\",\"version\":\"5.3.0\",\"originX\":\"left\",\"originY\":\"top\",\"left\":102.09,\"top\":-280.02,\"width\":315.59,\"height\":90.4,\"fill\":\"rgba(255, 255, 255, 1)\",\"stroke\":null,\"strokeWidth\":1,\"strokeDashArray\":null,\"strokeLineCap\":\"butt\",\"strokeDashOffset\":0,\"strokeLineJoin\":\"miter\",\"strokeUniform\":false,\"strokeMiterLimit\":4,\"scaleX\":1.89,\"scaleY\":1.89,\"angle\":0,\"flipX\":false,\"flipY\":false,\"opacity\":1,\"shadow\":null,\"visible\":true,\"backgroundColor\":\"\",\"fillRule\":\"nonzero\",\"paintFirst\":\"fill\",\"globalCompositeOperation\":\"source-over\",\"skewX\":0,\"skewY\":0,\"fontFamily\":\"Arial\",\"fontWeight\":700,\"fontSize\":80,\"text\":\"Heading\",\"underline\":false,\"overline\":false,\"linethrough\":false,\"textAlign\":\"left\",\"fontStyle\":\"normal\",\"lineHeight\":1.16,\"textBackgroundColor\":\"\",\"charSpacing\":0,\"styles\":[],\"direction\":\"ltr\",\"path\":null,\"pathStartOffset\":0,\"pathSide\":\"left\",\"pathAlign\":\"baseline\",\"minWidth\":20,\"splitByGrapheme\":false,\"selectable\":false,\"hasControls\":false,\"editable\":true},{\"type\":\"circle\",\"version\":\"5.3.0\",\"originX\":\"left\",\"originY\":\"top\",\"left\":148.72,\"top\":412.43,\"width\":450,\"height\":450,\"fill\":\"rgba(56, 184, 137, 1)\",\"stroke\":\"rgba(0,0,0,1)\",\"strokeWidth\":0,\"strokeDashArray\":[],\"strokeLineCap\":\"butt\",\"strokeDashOffset\":0,\"strokeLineJoin\":\"miter\",\"strokeUniform\":false,\"strokeMiterLimit\":4,\"scaleX\":0.56,\"scaleY\":1,\"angle\":0,\"flipX\":false,\"flipY\":false,\"opacity\":1,\"shadow\":null,\"visible\":true,\"backgroundColor\":\"\",\"fillRule\":\"nonzero\",\"paintFirst\":\"fill\",\"globalCompositeOperation\":\"source-over\",\"skewX\":0,\"skewY\":0,\"radius\":225,\"startAngle\":0,\"endAngle\":360,\"selectable\":true,\"hasControls\":true},{\"type\":\"textbox\",\"version\":\"5.3.0\",\"originX\":\"left\",\"originY\":\"top\",\"left\":519.64,\"top\":596.11,\"width\":315.59,\"height\":90.4,\"fill\":\"rgba(56, 184, 137, 1)\",\"stroke\":null,\"strokeWidth\":1,\"strokeDashArray\":null,\"strokeLineCap\":\"butt\",\"strokeDashOffset\":0,\"strokeLineJoin\":\"miter\",\"strokeUniform\":false,\"strokeMiterLimit\":4,\"scaleX\":1,\"scaleY\":1,\"angle\":0,\"flipX\":false,\"flipY\":false,\"opacity\":1,\"shadow\":null,\"visible\":true,\"backgroundColor\":\"\",\"fillRule\":\"nonzero\",\"paintFirst\":\"fill\",\"globalCompositeOperation\":\"source-over\",\"skewX\":0,\"skewY\":0,\"fontFamily\":\"Arial\",\"fontWeight\":700,\"fontSize\":80,\"text\":\"Heading\",\"underline\":false,\"overline\":false,\"linethrough\":false,\"textAlign\":\"left\",\"fontStyle\":\"normal\",\"lineHeight\":1.16,\"textBackgroundColor\":\"\",\"charSpacing\":0,\"styles\":[],\"direction\":\"ltr\",\"path\":null,\"pathStartOffset\":0,\"pathSide\":\"left\",\"pathAlign\":\"baseline\",\"minWidth\":20,\"splitByGrapheme\":false,\"selectable\":true,\"hasControls\":true,\"editable\":true},{\"type\":\"rect\",\"version\":\"5.3.0\",\"originX\":\"left\",\"originY\":\"top\",\"left\":-162.61,\"top\":-217.1,\"width\":400,\"height\":400,\"fill\":\"rgba(43, 211, 149, 1)\",\"stroke\":\"rgba(6, 9, 62, 1)\",\"strokeWidth\":24,\"strokeDashArray\":[5,5],\"strokeLineCap\":\"butt\",\"strokeDashOffset\":0,\"strokeLineJoin\":\"miter\",\"strokeUniform\":false,\"strokeMiterLimit\":4,\"scaleX\":1,\"scaleY\":1,\"angle\":0,\"flipX\":false,\"flipY\":false,\"opacity\":1,\"shadow\":null,\"visible\":true,\"backgroundColor\":\"\",\"fillRule\":\"nonzero\",\"paintFirst\":\"fill\",\"globalCompositeOperation\":\"source-over\",\"skewX\":0,\"skewY\":0,\"rx\":0,\"ry\":0,\"selectable\":true,\"hasControls\":true}],\"clipPath\":{\"type\":\"rect\",\"version\":\"5.3.0\",\"originX\":\"left\",\"originY\":\"top\",\"left\":-23.5,\"top\":-287,\"width\":600,\"height\":600,\"fill\":\"rgba(73, 32, 146, 1)\",\"stroke\":null,\"strokeWidth\":1,\"strokeDashArray\":null,\"strokeLineCap\":\"butt\",\"strokeDashOffset\":0,\"strokeLineJoin\":\"miter\",\"strokeUniform\":false,\"strokeMiterLimit\":4,\"scaleX\":1,\"scaleY\":1,\"angle\":0,\"flipX\":false,\"flipY\":false,\"opacity\":1,\"shadow\":{\"color\":\"rgba(0,0,0,0.8)\",\"blur\":5,\"offsetX\":0,\"offsetY\":0,\"affectStroke\":false,\"nonScaling\":false},\"visible\":true,\"backgroundColor\":\"\",\"fillRule\":\"nonzero\",\"paintFirst\":\"fill\",\"globalCompositeOperation\":\"source-over\",\"skewX\":0,\"skewY\":0,\"rx\":0,\"ry\":0,\"selectable\":true,\"hasControls\":true}}",
+      "width": 600,
+      "height": 600,
+      "userId": "",
+      "isPro": false,
+      "thumbnailUrl": "",
+      "isTemplate": false,
+      "createdAt": "2025-03-13T13:10:28.131Z",
+      "updatedAt": "2025-03-13T13:10:28.131Z",
+      "id": 10
+    },
+    {
+      "name": "",
+      "json": "{\"version\":\"5.3.0\",\"objects\":[{\"type\":\"rect\",\"version\":\"5.3.0\",\"originX\":\"left\",\"originY\":\"top\",\"left\":-23.5,\"top\":-287,\"width\":600,\"height\":600,\"fill\":\"rgba(63, 81, 181, 1)\",\"stroke\":null,\"strokeWidth\":1,\"strokeDashArray\":null,\"strokeLineCap\":\"butt\",\"strokeDashOffset\":0,\"strokeLineJoin\":\"miter\",\"strokeUniform\":false,\"strokeMiterLimit\":4,\"scaleX\":1,\"scaleY\":1,\"angle\":0,\"flipX\":false,\"flipY\":false,\"opacity\":1,\"shadow\":{\"color\":\"rgba(0,0,0,0.8)\",\"blur\":5,\"offsetX\":0,\"offsetY\":0,\"affectStroke\":false,\"nonScaling\":false},\"visible\":true,\"backgroundColor\":\"\",\"fillRule\":\"nonzero\",\"paintFirst\":\"fill\",\"globalCompositeOperation\":\"source-over\",\"skewX\":0,\"skewY\":0,\"rx\":0,\"ry\":0,\"name\":\"clip\",\"selectable\":false,\"hasControls\":false},{\"type\":\"rect\",\"version\":\"5.3.0\",\"originX\":\"left\",\"originY\":\"top\",\"left\":294.88,\"top\":275.03,\"width\":400,\"height\":400,\"fill\":\"rgba(196, 58, 58, 1)\",\"stroke\":\"rgba(239, 239, 239, 1)\",\"strokeWidth\":26,\"strokeDashArray\":[5,5],\"strokeLineCap\":\"butt\",\"strokeDashOffset\":0,\"strokeLineJoin\":\"miter\",\"strokeUniform\":false,\"strokeMiterLimit\":4,\"scaleX\":0.6,\"scaleY\":0.6,\"angle\":0,\"flipX\":false,\"flipY\":false,\"opacity\":1,\"shadow\":null,\"visible\":true,\"backgroundColor\":\"\",\"fillRule\":\"nonzero\",\"paintFirst\":\"fill\",\"globalCompositeOperation\":\"source-over\",\"skewX\":0,\"skewY\":0,\"rx\":50,\"ry\":50,\"selectable\":true,\"hasControls\":true},{\"type\":\"triangle\",\"version\":\"5.3.0\",\"originX\":\"left\",\"originY\":\"top\",\"left\":596.49,\"top\":-261.32,\"width\":400,\"height\":400,\"fill\":\"rgba(196, 58, 58, 1)\",\"stroke\":\"rgba(239, 239, 239, 1)\",\"strokeWidth\":0,\"strokeDashArray\":[5,5],\"strokeLineCap\":\"butt\",\"strokeDashOffset\":0,\"strokeLineJoin\":\"miter\",\"strokeUniform\":false,\"strokeMiterLimit\":4,\"scaleX\":3.01,\"scaleY\":1.5,\"angle\":90.48,\"flipX\":false,\"flipY\":false,\"opacity\":1,\"shadow\":null,\"visible\":true,\"backgroundColor\":\"\",\"fillRule\":\"nonzero\",\"paintFirst\":\"fill\",\"globalCompositeOperation\":\"source-over\",\"skewX\":0,\"skewY\":0,\"selectable\":true,\"hasControls\":true},{\"type\":\"polygon\",\"version\":\"5.3.0\",\"originX\":\"left\",\"originY\":\"top\",\"left\":-9.53,\"top\":-219.28,\"width\":400,\"height\":400,\"fill\":\"rgba(196, 58, 58, 1)\",\"stroke\":\"rgba(239, 239, 239, 1)\",\"strokeWidth\":26,\"strokeDashArray\":[5,5],\"strokeLineCap\":\"butt\",\"strokeDashOffset\":0,\"strokeLineJoin\":\"miter\",\"strokeUniform\":false,\"strokeMiterLimit\":4,\"scaleX\":1,\"scaleY\":1,\"angle\":2.92,\"flipX\":false,\"flipY\":false,\"opacity\":1,\"shadow\":null,\"visible\":true,\"backgroundColor\":\"\",\"fillRule\":\"nonzero\",\"paintFirst\":\"fill\",\"globalCompositeOperation\":\"source-over\",\"skewX\":0,\"skewY\":0,\"selectable\":true,\"hasControls\":true,\"points\":[{\"x\":0,\"y\":0},{\"x\":400,\"y\":0},{\"x\":200,\"y\":400}]},{\"type\":\"polygon\",\"version\":\"5.3.0\",\"originX\":\"left\",\"originY\":\"top\",\"left\":374.9,\"top\":-91.35,\"width\":600,\"height\":600,\"fill\":\"rgba(196, 58, 58, 1)\",\"stroke\":\"rgba(239, 239, 239, 1)\",\"strokeWidth\":26,\"strokeDashArray\":[5,5],\"strokeLineCap\":\"butt\",\"strokeDashOffset\":0,\"strokeLineJoin\":\"miter\",\"strokeUniform\":false,\"strokeMiterLimit\":4,\"scaleX\":0.71,\"scaleY\":0.71,\"angle\":343.82,\"flipX\":false,\"flipY\":false,\"opacity\":1,\"shadow\":null,\"visible\":true,\"backgroundColor\":\"\",\"fillRule\":\"nonzero\",\"paintFirst\":\"fill\",\"globalCompositeOperation\":\"source-over\",\"skewX\":0,\"skewY\":0,\"selectable\":true,\"hasControls\":true,\"points\":[{\"x\":300,\"y\":0},{\"x\":600,\"y\":300},{\"x\":300,\"y\":600},{\"x\":0,\"y\":300}]},{\"type\":\"textbox\",\"version\":\"5.3.0\",\"originX\":\"left\",\"originY\":\"top\",\"left\":102.09,\"top\":-280.02,\"width\":315.59,\"height\":90.4,\"fill\":\"rgba(255, 255, 255, 1)\",\"stroke\":null,\"strokeWidth\":1,\"strokeDashArray\":null,\"strokeLineCap\":\"butt\",\"strokeDashOffset\":0,\"strokeLineJoin\":\"miter\",\"strokeUniform\":false,\"strokeMiterLimit\":4,\"scaleX\":1.89,\"scaleY\":1.89,\"angle\":0,\"flipX\":false,\"flipY\":false,\"opacity\":1,\"shadow\":null,\"visible\":true,\"backgroundColor\":\"\",\"fillRule\":\"nonzero\",\"paintFirst\":\"fill\",\"globalCompositeOperation\":\"source-over\",\"skewX\":0,\"skewY\":0,\"fontFamily\":\"Arial\",\"fontWeight\":700,\"fontSize\":80,\"text\":\"Heading\",\"underline\":false,\"overline\":false,\"linethrough\":false,\"textAlign\":\"left\",\"fontStyle\":\"normal\",\"lineHeight\":1.16,\"textBackgroundColor\":\"\",\"charSpacing\":0,\"styles\":[],\"direction\":\"ltr\",\"path\":null,\"pathStartOffset\":0,\"pathSide\":\"left\",\"pathAlign\":\"baseline\",\"minWidth\":20,\"splitByGrapheme\":false,\"selectable\":false,\"hasControls\":false,\"editable\":true},{\"type\":\"circle\",\"version\":\"5.3.0\",\"originX\":\"left\",\"originY\":\"top\",\"left\":148.72,\"top\":412.43,\"width\":450,\"height\":450,\"fill\":\"rgba(56, 184, 137, 1)\",\"stroke\":\"rgba(0,0,0,1)\",\"strokeWidth\":0,\"strokeDashArray\":[],\"strokeLineCap\":\"butt\",\"strokeDashOffset\":0,\"strokeLineJoin\":\"miter\",\"strokeUniform\":false,\"strokeMiterLimit\":4,\"scaleX\":0.56,\"scaleY\":1,\"angle\":0,\"flipX\":false,\"flipY\":false,\"opacity\":1,\"shadow\":null,\"visible\":true,\"backgroundColor\":\"\",\"fillRule\":\"nonzero\",\"paintFirst\":\"fill\",\"globalCompositeOperation\":\"source-over\",\"skewX\":0,\"skewY\":0,\"radius\":225,\"startAngle\":0,\"endAngle\":360,\"selectable\":true,\"hasControls\":true},{\"type\":\"polygon\",\"version\":\"5.3.0\",\"originX\":\"left\",\"originY\":\"top\",\"left\":260.14,\"top\":-278.28,\"width\":400,\"height\":400,\"fill\":\"rgba(56, 184, 137, 1)\",\"stroke\":\"rgba(0,0,0,1)\",\"strokeWidth\":0,\"strokeDashArray\":[],\"strokeLineCap\":\"butt\",\"strokeDashOffset\":0,\"strokeLineJoin\":\"miter\",\"strokeUniform\":false,\"strokeMiterLimit\":4,\"scaleX\":0.7,\"scaleY\":0.7,\"angle\":0,\"flipX\":false,\"flipY\":false,\"opacity\":1,\"shadow\":null,\"visible\":true,\"backgroundColor\":\"\",\"fillRule\":\"nonzero\",\"paintFirst\":\"fill\",\"globalCompositeOperation\":\"source-over\",\"skewX\":0,\"skewY\":0,\"selectable\":true,\"hasControls\":true,\"points\":[{\"x\":0,\"y\":0},{\"x\":400,\"y\":0},{\"x\":200,\"y\":400}]},{\"type\":\"textbox\",\"version\":\"5.3.0\",\"originX\":\"left\",\"originY\":\"top\",\"left\":-40.98,\"top\":85.06,\"width\":315.59,\"height\":90.4,\"fill\":\"rgba(255, 255, 255, 1)\",\"stroke\":null,\"strokeWidth\":1,\"strokeDashArray\":null,\"strokeLineCap\":\"butt\",\"strokeDashOffset\":0,\"strokeLineJoin\":\"miter\",\"strokeUniform\":false,\"strokeMiterLimit\":4,\"scaleX\":1.89,\"scaleY\":1.89,\"angle\":0,\"flipX\":false,\"flipY\":false,\"opacity\":1,\"shadow\":null,\"visible\":true,\"backgroundColor\":\"\",\"fillRule\":\"nonzero\",\"paintFirst\":\"fill\",\"globalCompositeOperation\":\"source-over\",\"skewX\":0,\"skewY\":0,\"fontFamily\":\"Arial\",\"fontWeight\":700,\"fontSize\":80,\"text\":\"Heading\",\"underline\":false,\"overline\":false,\"linethrough\":false,\"textAlign\":\"left\",\"fontStyle\":\"normal\",\"lineHeight\":1.16,\"textBackgroundColor\":\"\",\"charSpacing\":0,\"styles\":[],\"direction\":\"ltr\",\"path\":null,\"pathStartOffset\":0,\"pathSide\":\"left\",\"pathAlign\":\"baseline\",\"minWidth\":20,\"splitByGrapheme\":false,\"selectable\":true,\"hasControls\":true,\"editable\":true},{\"type\":\"textbox\",\"version\":\"5.3.0\",\"originX\":\"left\",\"originY\":\"top\",\"left\":20.5,\"top\":255.52,\"width\":114.21,\"height\":55.37,\"fill\":\"rgba(3, 169, 244, 1)\",\"stroke\":null,\"strokeWidth\":1,\"strokeDashArray\":null,\"strokeLineCap\":\"butt\",\"strokeDashOffset\":0,\"strokeLineJoin\":\"miter\",\"strokeUniform\":false,\"strokeMiterLimit\":4,\"scaleX\":2.37,\"scaleY\":2.37,\"angle\":0,\"flipX\":false,\"flipY\":false,\"opacity\":1,\"shadow\":null,\"visible\":true,\"backgroundColor\":\"\",\"fillRule\":\"nonzero\",\"paintFirst\":\"fill\",\"globalCompositeOperation\":\"source-over\",\"skewX\":0,\"skewY\":0,\"fontFamily\":\"Brush Script MT\",\"fontWeight\":500,\"fontSize\":49,\"text\":\"Textbox\",\"underline\":true,\"overline\":false,\"linethrough\":false,\"textAlign\":\"left\",\"fontStyle\":\"italic\",\"lineHeight\":1.16,\"textBackgroundColor\":\"\",\"charSpacing\":0,\"styles\":[],\"direction\":\"ltr\",\"path\":null,\"pathStartOffset\":0,\"pathSide\":\"left\",\"pathAlign\":\"baseline\",\"minWidth\":20,\"splitByGrapheme\":false,\"selectable\":true,\"hasControls\":true,\"editable\":true},{\"type\":\"rect\",\"version\":\"5.3.0\",\"originX\":\"left\",\"originY\":\"top\",\"left\":5.97,\"top\":-172.18,\"width\":400,\"height\":400,\"fill\":\"rgba(0,0,0,1)\",\"stroke\":\"rgba(246, 23, 23, 1)\",\"strokeWidth\":48,\"strokeDashArray\":[],\"strokeLineCap\":\"butt\",\"strokeDashOffset\":0,\"strokeLineJoin\":\"miter\",\"strokeUniform\":false,\"strokeMiterLimit\":4,\"scaleX\":1,\"scaleY\":1,\"angle\":0,\"flipX\":false,\"flipY\":false,\"opacity\":0.5,\"shadow\":null,\"visible\":true,\"backgroundColor\":\"\",\"fillRule\":\"nonzero\",\"paintFirst\":\"fill\",\"globalCompositeOperation\":\"source-over\",\"skewX\":0,\"skewY\":0,\"rx\":50,\"ry\":50,\"selectable\":true,\"hasControls\":true},{\"type\":\"textbox\",\"version\":\"5.3.0\",\"originX\":\"left\",\"originY\":\"top\",\"left\":519.64,\"top\":596.11,\"width\":315.59,\"height\":90.4,\"fill\":\"rgba(56, 184, 137, 1)\",\"stroke\":null,\"strokeWidth\":1,\"strokeDashArray\":null,\"strokeLineCap\":\"butt\",\"strokeDashOffset\":0,\"strokeLineJoin\":\"miter\",\"strokeUniform\":false,\"strokeMiterLimit\":4,\"scaleX\":1,\"scaleY\":1,\"angle\":0,\"flipX\":false,\"flipY\":false,\"opacity\":1,\"shadow\":null,\"visible\":true,\"backgroundColor\":\"\",\"fillRule\":\"nonzero\",\"paintFirst\":\"fill\",\"globalCompositeOperation\":\"source-over\",\"skewX\":0,\"skewY\":0,\"fontFamily\":\"Arial\",\"fontWeight\":700,\"fontSize\":80,\"text\":\"Heading\",\"underline\":false,\"overline\":false,\"linethrough\":false,\"textAlign\":\"left\",\"fontStyle\":\"normal\",\"lineHeight\":1.16,\"textBackgroundColor\":\"\",\"charSpacing\":0,\"styles\":[],\"direction\":\"ltr\",\"path\":null,\"pathStartOffset\":0,\"pathSide\":\"left\",\"pathAlign\":\"baseline\",\"minWidth\":20,\"splitByGrapheme\":false,\"selectable\":true,\"hasControls\":true,\"editable\":true},{\"type\":\"path\",\"version\":\"5.3.0\",\"originX\":\"left\",\"originY\":\"top\",\"left\":35.82,\"top\":-148.93,\"width\":446.47,\"height\":237.21,\"fill\":null,\"stroke\":\"rgba(0,0,0,1)\",\"strokeWidth\":2,\"strokeDashArray\":null,\"strokeLineCap\":\"round\",\"strokeDashOffset\":0,\"strokeLineJoin\":\"round\",\"strokeUniform\":false,\"strokeMiterLimit\":10,\"scaleX\":1,\"scaleY\":1,\"angle\":0,\"flipX\":false,\"flipY\":false,\"opacity\":1,\"shadow\":null,\"visible\":true,\"backgroundColor\":\"\",\"fillRule\":\"nonzero\",\"paintFirst\":\"fill\",\"globalCompositeOperation\":\"source-over\",\"skewX\":0,\"skewY\":0,\"selectable\":true,\"hasControls\":true,\"path\":[[\"M\",486.56972524859094,107.05306774550452],[\"Q\",486.56772524859093,107.05506774550452,485.47344020374464,108.14942128524984],[\"Q\",484.37915515889836,109.24377482499517,483.2848701140521,110.88530513461316],[\"Q\",482.1905850692059,112.52683544423115,481.0963000243596,113.62118898397648],[\"Q\",480.0020149795133,114.71554252372181,477.81344488982074,116.35707283333983],[\"Q\",475.62487480012817,117.99860314295785,472.88916218801245,119.64013345257584],[\"Q\",470.15344957589673,121.28166376219383,466.8705944413579,122.92319407181179],[\"Q\",463.5877393068191,124.56472438142976,459.7577416498571,125.65907792117508],[\"Q\",455.9277439928951,126.75343146092041,451.00346129108686,128.3949617705384],[\"Q\",446.0791785892786,130.0364920801564,438.4191832753547,131.67802238977436],[\"Q\",430.7591879614308,133.31955269939232,370.57351049488545,133.31955269939232],[\"Q\",310.3878330283401,133.31955269939232,257.3150083532956,123.4703708416844],[\"Q\",204.2421836782511,113.62118898397648,167.58363467590075,104.31918389614123],[\"Q\",130.9250856735504,95.01717880830597,101.926531985124,84.07364341085272],[\"Q\",72.9279782966976,73.13010801339948,59.796557758542264,61.63939584607354],[\"Q\",46.665137220386924,50.1486836787476,43.38228208584809,39.75232505116702],[\"Q\",40.099426951309255,29.355966423586437,40.099426951309255,17.318077486387864],[\"Q\",40.099426951309255,5.28018854918929,41.19371199615554,-5.663346848263984],[\"Q\",42.28799704100183,-16.60688224571726,45.570852175540665,-24.267357023934522],[\"Q\",48.8537073100795,-31.927831802151786,53.23084748946462,-41.77701365985973],[\"Q\",57.607987668849745,-51.62619551756768,60.89084280338858,-56.550786446421625],[\"Q\",64.17369793792741,-61.47537737527557,68.00369559488936,-67.49432184387484],[\"Q\",71.83369325185132,-73.51326631247412,74.56940586396703,-75.7019733919648],[\"Q\",77.30511847608275,-77.89068047145548,81.68225865546785,-77.89068047145548],[\"Q\",86.05939883485294,-77.89068047145548,94.26653667120007,-73.51326631247417],[\"Q\",102.4736745075472,-69.13585215349286,113.96366747843314,-58.19231675603962],[\"Q\",125.45366044931907,-47.24878135858637,138.03793846505127,-30.833478262406487],[\"Q\",150.62221648078346,-14.418175166226604,162.11220945166937,2.5443046998259433],[\"Q\",173.60220242255528,19.50678456587849,185.63933791586433,39.205148281294356],[\"Q\",197.67647340917338,58.90351199671022,209.16646638005932,76.9603454025081],[\"Q\",220.65645935094525,95.01717880830597,221.2036018733684,95.56435557817863],[\"Q\",221.75074439579154,96.1115323480513,236.52359250121629,116.35707283333977],[\"Q\",251.29644060664103,136.60261331862824,258.4092933981418,143.7159113269729],[\"Q\",265.5221461896426,150.82920933531756,272.08785645872035,154.65944672442618],[\"Q\",278.6535667277981,158.4896841135348,284.6721344744526,159.03686088340746],[\"Q\",290.69070222110713,159.58403765328012,299.4449825798774,156.84815380391683],[\"Q\",308.1992629386476,154.11226995455354,321.87782599922605,148.6405022558269],[\"Q\",335.5563890598045,143.16873455710027,348.14066707553667,138.2441436282463],[\"Q\",360.72494509126886,133.31955269939232,371.6677955397317,128.94213854041104],[\"Q\",382.6106459881945,124.56472438142976,390.27064130211846,119.09295668270312],[\"Q\",397.9306366160424,113.62118898397648,403.4020618402738,105.41353743588655],[\"Q\",408.8734870645052,97.20588588779663,410.5149146317746,89.5454111095793],[\"Q\",412.15634219904405,81.88493633136198,409.4206295869283,74.77163832301741],[\"Q\",406.6849169748126,67.65834031467284,397.3834940936192,62.186572615946204],[\"Q\",388.08207121242583,56.71480491721957,383.70493103304074,56.71480491721957],[\"Q\",379.32779085365564,56.71480491721957,372.2149380621549,57.26198168709223],[\"Q\",365.10208527065413,57.809158456964894,351.97066473249873,61.09221907620085],[\"Q\",338.83924419434334,64.3752796954368,313.1235456404558,69.84704739416347],[\"Q\",287.40784708656827,75.31881509289013,254.57929574117992,77.50752217238079],[\"Q\",221.75074439579154,79.69622925187144,190.01647809524945,76.96034540250812],[\"Q\",158.28221179470737,74.2244615531448,134.75508333051238,67.65834031467284],[\"Q\",111.22795486631739,61.09221907620088,95.90796423846948,51.79021398836559],[\"Q\",80.58797361062156,42.48820890053031,73.47512081912075,31.544673503077064],[\"Q\",66.36226802761993,20.601138105623818,63.62655541550424,4.1858350094439345],[\"Q\",60.89084280338855,-12.229468086735949,66.36226802761993,-35.21089242138777],[\"L\",71.83569325185131,-58.19431675603959]]},{\"type\":\"path\",\"version\":\"5.3.0\",\"originX\":\"left\",\"originY\":\"top\",\"left\":37.19,\"top\":19.6,\"width\":518.42,\"height\":250.37,\"fill\":null,\"stroke\":\"rgba(0,0,0,1)\",\"strokeWidth\":2,\"strokeDashArray\":null,\"strokeLineCap\":\"round\",\"strokeDashOffset\":0,\"strokeLineJoin\":\"round\",\"strokeUniform\":false,\"strokeMiterLimit\":10,\"scaleX\":1,\"scaleY\":1,\"angle\":0,\"flipX\":false,\"flipY\":false,\"opacity\":1,\"shadow\":null,\"visible\":true,\"backgroundColor\":\"\",\"fillRule\":\"nonzero\",\"paintFirst\":\"fill\",\"globalCompositeOperation\":\"source-over\",\"skewX\":0,\"skewY\":0,\"selectable\":true,\"hasControls\":true,\"path\":[[\"M\",331.18124888041945,-105.25151896508858],[\"Q\",331.17924888041944,-105.24951896508858,330.08496383557315,-104.15516542534327],[\"Q\",328.99067879072686,-103.06081188559796,326.25496617861114,-99.77775126636197],[\"Q\",323.5192535664954,-96.49469064712599,320.7835409543797,-92.66445325801736],[\"Q\",318.047828342264,-88.83421586890873,313.6706881628789,-84.45680170992743],[\"Q\",309.2935479834938,-80.07938755094614,304.91640780410864,-75.15479662209216],[\"Q\",300.5392676247235,-70.23020569323819,295.6149849229153,-65.30561476438422],[\"Q\",290.69070222110713,-60.38102383553024,285.7664195192989,-55.4564329066763],[\"Q\",280.84213681749065,-50.53184197782235,273.72928402598984,-43.96572073935039],[\"Q\",266.616431234489,-37.39959950087842,260.5978634878345,-31.927831802151786],[\"Q\",254.57929574117995,-26.45606410342515,247.4664429496791,-20.98429640469854],[\"Q\",240.35359015817826,-15.512528705971931,234.3350224115237,-10.587937777117958],[\"Q\",228.31645466486916,-5.663346848263984,219.56217430609894,0.35559762033531683],[\"Q\",210.80789394732872,6.374542088934618,200.95932854371222,12.940663327406554],[\"Q\",191.1107631400957,19.50678456587849,179.07362764678666,26.62008257422309],[\"Q\",167.0364921534776,33.73338058256769,154.45221413774541,40.299501821039655],[\"Q\",141.86793612201322,46.86562305951162,128.1893730614347,53.431744297983585],[\"Q\",114.5108100008562,59.99786553645555,95.36082171604633,68.75269385441817],[\"Q\",76.21083343123647,77.50752217238079,39.00514190646301,90.63976464932466],[\"Q\",1.799450381689553,103.77200712626853,-30.481958441275694,105.41353743588652],[\"Q\",-62.76336726424094,107.05506774550452,-63.857652309087214,105.96071420575919],[\"Q\",-64.95193735393349,104.86636066601386,-66.5933649212029,100.48894650703258],[\"Q\",-68.23479248847232,96.1115323480513,-68.78193501089545,85.71517372047072],[\"Q\",-69.32907753331858,75.31881509289013,-66.04622239877976,64.37527969543686],[\"Q\",-62.76336726424094,53.431744297983585,-62.2162247418178,52.33739075823826],[\"Q\",-61.66908221939465,51.24303721849293,-52.36765933820129,36.46926443193104],[\"Q\",-43.06623645700793,21.695491645369145,-33.21767105339141,13.487840097279218],[\"Q\",-23.369105649774895,5.28018854918929,-15.709110335850951,1.9971279299532796],[\"Q\",-8.049115021927008,-1.2859326892827312,-7.50197249950385,-1.2859326892827312],[\"Q\",-6.954829977080692,-1.2859326892827312,0.7051653368432511,-1.833109459155395],[\"Q\",8.365160650767194,-2.3802862290280586,50.4951348773489,16.22372394664248],[\"Q\",92.62510910393061,34.82773412231302,127.64223053901154,53.431744297983585],[\"Q\",162.65935197409246,72.03575447365415,200.95932854371222,88.451057569834],[\"Q\",239.25930511333198,104.86636066601386,279.74785177264425,117.99860314295776],[\"Q\",320.23639843195656,131.13084561990166,347.5935245531135,136.60261331862833],[\"Q\",374.9506506742705,142.074381017355,389.7234987796953,143.1687345571003],[\"Q\",404.49634688512015,144.2630880968456,408.87348706450524,144.81026486671826],[\"Q\",413.25062724389034,145.35744163659092,431.3063304838539,143.1687345571003],[\"L\",449.3640337238175,140.97802747760966]]}],\"clipPath\":{\"type\":\"rect\",\"version\":\"5.3.0\",\"originX\":\"left\",\"originY\":\"top\",\"left\":-23.5,\"top\":-287,\"width\":600,\"height\":600,\"fill\":\"rgba(63, 81, 181, 1)\",\"stroke\":null,\"strokeWidth\":1,\"strokeDashArray\":null,\"strokeLineCap\":\"butt\",\"strokeDashOffset\":0,\"strokeLineJoin\":\"miter\",\"strokeUniform\":false,\"strokeMiterLimit\":4,\"scaleX\":1,\"scaleY\":1,\"angle\":0,\"flipX\":false,\"flipY\":false,\"opacity\":1,\"shadow\":{\"color\":\"rgba(0,0,0,0.8)\",\"blur\":5,\"offsetX\":0,\"offsetY\":0,\"affectStroke\":false,\"nonScaling\":false},\"visible\":true,\"backgroundColor\":\"\",\"fillRule\":\"nonzero\",\"paintFirst\":\"fill\",\"globalCompositeOperation\":\"source-over\",\"skewX\":0,\"skewY\":0,\"rx\":0,\"ry\":0,\"selectable\":true,\"hasControls\":true}}",
+      "width": 600,
+      "height": 600,
+      "userId": "",
+      "isPro": false,
+      "thumbnailUrl": "",
+      "isTemplate": false,
+      "createdAt": "2025-03-13T13:18:26.341Z",
+      "updatedAt": "2025-03-13T13:18:26.341Z",
+      "id": 11
+    },
+    {
+      "name": "",
+      "json": "{\"version\":\"5.3.0\",\"objects\":[{\"type\":\"rect\",\"version\":\"5.3.0\",\"originX\":\"left\",\"originY\":\"top\",\"left\":-373,\"top\":-374,\"width\":1200,\"height\":1200,\"fill\":\"rgba(68, 184, 199, 1)\",\"stroke\":null,\"strokeWidth\":1,\"strokeDashArray\":null,\"strokeLineCap\":\"butt\",\"strokeDashOffset\":0,\"strokeLineJoin\":\"miter\",\"strokeUniform\":false,\"strokeMiterLimit\":4,\"scaleX\":1,\"scaleY\":1,\"angle\":0,\"flipX\":false,\"flipY\":false,\"opacity\":1,\"shadow\":{\"color\":\"rgba(0,0,0,0.8)\",\"blur\":5,\"offsetX\":0,\"offsetY\":0,\"affectStroke\":false,\"nonScaling\":false},\"visible\":true,\"backgroundColor\":\"\",\"fillRule\":\"nonzero\",\"paintFirst\":\"fill\",\"globalCompositeOperation\":\"source-over\",\"skewX\":0,\"skewY\":0,\"rx\":0,\"ry\":0,\"name\":\"clip\",\"selectable\":false,\"hasControls\":false},{\"type\":\"image\",\"version\":\"5.3.0\",\"originX\":\"left\",\"originY\":\"top\",\"left\":507.01,\"top\":509.67,\"width\":300,\"height\":300,\"fill\":\"rgb(0,0,0)\",\"stroke\":null,\"strokeWidth\":0,\"strokeDashArray\":null,\"strokeLineCap\":\"butt\",\"strokeDashOffset\":0,\"strokeLineJoin\":\"miter\",\"strokeUniform\":false,\"strokeMiterLimit\":4,\"scaleX\":1,\"scaleY\":1,\"angle\":0,\"flipX\":false,\"flipY\":false,\"opacity\":1,\"shadow\":null,\"visible\":true,\"backgroundColor\":\"\",\"fillRule\":\"nonzero\",\"paintFirst\":\"fill\",\"globalCompositeOperation\":\"source-over\",\"skewX\":0,\"skewY\":0,\"cropX\":0,\"cropY\":0,\"selectable\":true,\"hasControls\":true,\"src\":\"https://api.qrserver.com/v1/create-qr-code/?data=lucide.dev%2Ficons%2Fqr-code%3Fdata%3DFFF&size=300x300\",\"crossOrigin\":\"anonymous\",\"filters\":[]},{\"type\":\"textbox\",\"version\":\"5.3.0\",\"originX\":\"left\",\"originY\":\"top\",\"left\":75.78,\"top\":-326.98,\"width\":315.59,\"height\":90.4,\"fill\":\"rgba(0, 137, 23, 1)\",\"stroke\":null,\"strokeWidth\":1,\"strokeDashArray\":null,\"strokeLineCap\":\"butt\",\"strokeDashOffset\":0,\"strokeLineJoin\":\"miter\",\"strokeUniform\":false,\"strokeMiterLimit\":4,\"scaleX\":1,\"scaleY\":1,\"angle\":0,\"flipX\":false,\"flipY\":false,\"opacity\":1,\"shadow\":null,\"visible\":true,\"backgroundColor\":\"\",\"fillRule\":\"nonzero\",\"paintFirst\":\"fill\",\"globalCompositeOperation\":\"source-over\",\"skewX\":0,\"skewY\":0,\"fontFamily\":\"Arial\",\"fontWeight\":700,\"fontSize\":80,\"text\":\"KiData\",\"underline\":false,\"overline\":false,\"linethrough\":false,\"textAlign\":\"center\",\"fontStyle\":\"normal\",\"lineHeight\":1.16,\"textBackgroundColor\":\"\",\"charSpacing\":0,\"styles\":[],\"direction\":\"ltr\",\"path\":null,\"pathStartOffset\":0,\"pathSide\":\"left\",\"pathAlign\":\"baseline\",\"minWidth\":20,\"splitByGrapheme\":false,\"selectable\":true,\"hasControls\":true,\"editable\":true}],\"clipPath\":{\"type\":\"rect\",\"version\":\"5.3.0\",\"originX\":\"left\",\"originY\":\"top\",\"left\":-373,\"top\":-374,\"width\":1200,\"height\":1200,\"fill\":\"rgba(68, 184, 199, 1)\",\"stroke\":null,\"strokeWidth\":1,\"strokeDashArray\":null,\"strokeLineCap\":\"butt\",\"strokeDashOffset\":0,\"strokeLineJoin\":\"miter\",\"strokeUniform\":false,\"strokeMiterLimit\":4,\"scaleX\":1,\"scaleY\":1,\"angle\":0,\"flipX\":false,\"flipY\":false,\"opacity\":1,\"shadow\":{\"color\":\"rgba(0,0,0,0.8)\",\"blur\":5,\"offsetX\":0,\"offsetY\":0,\"affectStroke\":false,\"nonScaling\":false},\"visible\":true,\"backgroundColor\":\"\",\"fillRule\":\"nonzero\",\"paintFirst\":\"fill\",\"globalCompositeOperation\":\"source-over\",\"skewX\":0,\"skewY\":0,\"rx\":0,\"ry\":0,\"selectable\":true,\"hasControls\":true}}",
+      "width": 1200,
+      "height": 1200,
+      "userId": "",
+      "isPro": false,
+      "thumbnailUrl": "",
+      "isTemplate": false,
+      "createdAt": "2025-03-14T03:40:45.172Z",
+      "updatedAt": "2025-03-14T03:40:45.172Z",
+      "id": 12
     }
   ]
 }
