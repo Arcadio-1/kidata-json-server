@@ -1,4 +1,1485 @@
 {
+  "userActivityLogs": [
+    {
+      "id": "1",
+      "userId": "user1",
+      "date": "2025-04-16T16:52:43.000Z",
+      "activity": "Display created",
+      "roleLabel": "General Manager",
+      "roleId": "1",
+      "resourceType": "DISPLAY",
+      "resourceId": "display1",
+      "additionalInformation": "Created a new digital display in the system."
+    },
+    {
+      "id": "2",
+      "userId": "user2",
+      "date": "2025-04-17T09:15:00.000Z",
+      "activity": "Advertisement approved",
+      "roleLabel": "Content Manager",
+      "roleId": "2",
+      "resourceType": "AD",
+      "resourceId": "ad1",
+      "additionalInformation": "Approved advertisement for the summer campaign."
+    },
+    {
+      "id": "3",
+      "userId": "user3",
+      "date": "2025-04-18T11:30:15.000Z",
+      "activity": "Broadcast scheduled",
+      "roleLabel": "Content Manager",
+      "roleId": "2",
+      "resourceType": "MEDIAPOOL",
+      "resourceId": "media1",
+      "additionalInformation": "Scheduled a broadcast for the upcoming event."
+    },
+    {
+      "id": "4",
+      "userId": "user4",
+      "date": "2025-04-19T14:45:30.000Z",
+      "activity": "Display created",
+      "roleLabel": "General Manager",
+      "roleId": "1",
+      "resourceType": "PLAYLIST",
+      "resourceId": "playlist1",
+      "additionalInformation": "Added a new playlist for the morning show."
+    },
+    {
+      "id": "5",
+      "userId": "user5",
+      "date": "2025-04-20T18:00:00.000Z",
+      "activity": "User registered",
+      "roleLabel": "Content Manager",
+      "roleId": "3",
+      "resourceType": "USER",
+      "resourceId": "userReg1",
+      "additionalInformation": "Processed new user registration."
+    },
+    {
+      "id": "6",
+      "userId": "user1",
+      "date": "2025-04-21T08:20:10.000Z",
+      "activity": "Content updated",
+      "roleLabel": "Content Manager",
+      "roleId": "2",
+      "resourceType": "SHORT_PLAYLIST",
+      "resourceId": "shortlist1",
+      "additionalInformation": "Updated content for the short playlist."
+    },
+    {
+      "id": "7",
+      "userId": "user2",
+      "date": "2025-04-22T12:15:25.000Z",
+      "activity": "Advertisement approved",
+      "roleLabel": "General Manager",
+      "roleId": "1",
+      "resourceType": "AD",
+      "resourceId": "ad2",
+      "additionalInformation": "Re-approved advertisement after modifications."
+    },
+    {
+      "id": "8",
+      "userId": "user3",
+      "date": "2025-04-23T16:40:50.000Z",
+      "activity": "Broadcast scheduled",
+      "roleLabel": "Content Manager",
+      "roleId": "3",
+      "resourceType": "MEDIAPOOL",
+      "resourceId": "media2",
+      "additionalInformation": "Broadcast scheduled for a live sports event."
+    },
+    {
+      "id": "9",
+      "userId": "user4",
+      "date": "2025-04-24T10:05:05.000Z",
+      "activity": "Display created",
+      "roleLabel": "General Manager",
+      "roleId": "1",
+      "resourceType": "DISPLAY",
+      "resourceId": "display2",
+      "additionalInformation": "Installed a new display in the lobby."
+    },
+    {
+      "id": "10",
+      "userId": "user5",
+      "date": "2025-04-25T13:30:30.000Z",
+      "activity": "Content updated",
+      "roleLabel": "Content Manager",
+      "roleId": "2",
+      "resourceType": "PLAYLIST",
+      "resourceId": "playlist2",
+      "additionalInformation": "Updated weekend programming playlist."
+    },
+    {
+      "id": "11",
+      "userId": "user1",
+      "date": "2025-04-26T15:45:00.000Z",
+      "activity": "User registered",
+      "roleLabel": "General Manager",
+      "roleId": "1",
+      "resourceType": "USER",
+      "resourceId": "userReg2",
+      "additionalInformation": "Completed the user registration process."
+    },
+    {
+      "id": "12",
+      "userId": "user2",
+      "date": "2025-04-27T09:10:35.000Z",
+      "activity": "Broadcast scheduled",
+      "roleLabel": "Content Manager",
+      "roleId": "3",
+      "resourceType": "MEDIAPOOL",
+      "resourceId": "media3",
+      "additionalInformation": "Scheduled a breaking news broadcast."
+    },
+    {
+      "id": "13",
+      "userId": "user3",
+      "date": "2025-04-28T11:20:45.000Z",
+      "activity": "Display created",
+      "roleLabel": "General Manager",
+      "roleId": "2",
+      "resourceType": "DISPLAY",
+      "resourceId": "display3",
+      "additionalInformation": "Installed a new digital display in the main hall."
+    },
+    {
+      "id": "14",
+      "userId": "user4",
+      "date": "2025-04-29T14:35:55.000Z",
+      "activity": "Advertisement approved",
+      "roleLabel": "Content Manager",
+      "roleId": "1",
+      "resourceType": "AD",
+      "resourceId": "ad3",
+      "additionalInformation": "Approved advertisement for a product launch."
+    },
+    {
+      "id": "15",
+      "userId": "user5",
+      "date": "2025-04-30T17:50:20.000Z",
+      "activity": "Content updated",
+      "roleLabel": "General Manager",
+      "roleId": "3",
+      "resourceType": "SHORT_PLAYLIST",
+      "resourceId": "shortlist2",
+      "additionalInformation": "Updated content for the short playlist segment."
+    },
+    {
+      "id": "16",
+      "userId": "user1",
+      "date": "2025-05-01T09:00:00.000Z",
+      "activity": "User registered",
+      "roleLabel": "General Manager",
+      "roleId": "1",
+      "resourceType": "USER",
+      "resourceId": "userReg3",
+      "additionalInformation": "User registration completed via mobile app."
+    },
+    {
+      "id": "17",
+      "userId": "user2",
+      "date": "2025-05-02T12:00:30.000Z",
+      "activity": "Display created",
+      "roleLabel": "Content Manager",
+      "roleId": "2",
+      "resourceType": "DISPLAY",
+      "resourceId": "display4",
+      "additionalInformation": "New display created for the product showcase."
+    },
+    {
+      "id": "18",
+      "userId": "user3",
+      "date": "2025-05-03T15:30:15.000Z",
+      "activity": "Advertisement approved",
+      "roleLabel": "General Manager",
+      "roleId": "1",
+      "resourceType": "AD",
+      "resourceId": "ad4",
+      "additionalInformation": "Approved an ad campaign for Q2 initiatives."
+    },
+    {
+      "id": "19",
+      "userId": "user4",
+      "date": "2025-05-04T11:45:45.000Z",
+      "activity": "Broadcast scheduled",
+      "roleLabel": "Content Manager",
+      "roleId": "3",
+      "resourceType": "MEDIAPOOL",
+      "resourceId": "media4",
+      "additionalInformation": "Scheduled live news update broadcast."
+    },
+    {
+      "id": "20",
+      "userId": "user5",
+      "date": "2025-05-05T14:10:10.000Z",
+      "activity": "Content updated",
+      "roleLabel": "General Manager",
+      "roleId": "1",
+      "resourceType": "PLAYLIST",
+      "resourceId": "playlist3",
+      "additionalInformation": "Updated playlist for holiday specials."
+    },
+    {
+      "id": "21",
+      "userId": "user1",
+      "date": "2025-05-06T16:55:30.000Z",
+      "activity": "User registered",
+      "roleLabel": "Content Manager",
+      "roleId": "2",
+      "resourceType": "USER",
+      "resourceId": "userReg4",
+      "additionalInformation": "User signed up through the website."
+    },
+    {
+      "id": "22",
+      "userId": "user2",
+      "date": "2025-05-07T10:20:25.000Z",
+      "activity": "Display created",
+      "roleLabel": "General Manager",
+      "roleId": "1",
+      "resourceType": "DISPLAY",
+      "resourceId": "display5",
+      "additionalInformation": "Created an interactive display at the main entrance."
+    },
+    {
+      "id": "23",
+      "userId": "user3",
+      "date": "2025-05-08T13:35:40.000Z",
+      "activity": "Advertisement approved",
+      "roleLabel": "Content Manager",
+      "roleId": "3",
+      "resourceType": "AD",
+      "resourceId": "ad5",
+      "additionalInformation": "Ad approved for a seasonal discount offer."
+    },
+    {
+      "id": "24",
+      "userId": "user4",
+      "date": "2025-05-09T15:50:55.000Z",
+      "activity": "Broadcast scheduled",
+      "roleLabel": "General Manager",
+      "roleId": "2",
+      "resourceType": "MEDIAPOOL",
+      "resourceId": "media5",
+      "additionalInformation": "Scheduled broadcast for a live interview."
+    },
+    {
+      "id": "25",
+      "userId": "user5",
+      "date": "2025-05-10T09:25:10.000Z",
+      "activity": "Content updated",
+      "roleLabel": "Content Manager",
+      "roleId": "1",
+      "resourceType": "PLAYLIST",
+      "resourceId": "playlist4",
+      "additionalInformation": "Updated playlist for the music hour show."
+    },
+    {
+      "id": "26",
+      "userId": "user1",
+      "date": "2025-05-11T12:40:20.000Z",
+      "activity": "User registered",
+      "roleLabel": "General Manager",
+      "roleId": "2",
+      "resourceType": "USER",
+      "resourceId": "userReg5",
+      "additionalInformation": "New user registered via social media."
+    },
+    {
+      "id": "27",
+      "userId": "user2",
+      "date": "2025-05-12T14:55:35.000Z",
+      "activity": "Display created",
+      "roleLabel": "Content Manager",
+      "roleId": "1",
+      "resourceType": "DISPLAY",
+      "resourceId": "display6",
+      "additionalInformation": "Set up a display in the new branch office."
+    },
+    {
+      "id": "28",
+      "userId": "user3",
+      "date": "2025-05-13T17:10:50.000Z",
+      "activity": "Advertisement approved",
+      "roleLabel": "General Manager",
+      "roleId": "3",
+      "resourceType": "AD",
+      "resourceId": "ad6",
+      "additionalInformation": "Approved creative ad for rebranding efforts."
+    },
+    {
+      "id": "29",
+      "userId": "user4",
+      "date": "2025-05-14T09:30:05.000Z",
+      "activity": "Broadcast scheduled",
+      "roleLabel": "Content Manager",
+      "roleId": "2",
+      "resourceType": "MEDIAPOOL",
+      "resourceId": "media6",
+      "additionalInformation": "Scheduled broadcast for the evening news."
+    },
+    {
+      "id": "30",
+      "userId": "user5",
+      "date": "2025-05-15T11:45:10.000Z",
+      "activity": "Content updated",
+      "roleLabel": "General Manager",
+      "roleId": "1",
+      "resourceType": "PLAYLIST",
+      "resourceId": "playlist5",
+      "additionalInformation": "Updated playlist content for prime time shows."
+    }
+  ],
+  "generalAccessAreas": [
+    {
+      "id": "1",
+      "generalAccessAreas": [
+        "GENERAL_AD",
+        "GENERAL_PLAYLIST",
+        "GENERAL_PRIVATE_PLAYLIST",
+        "GENERAL_SHORT_PLAYLIST",
+        "GENERAL_PRIVATE_SHORT_PLAYLIST"
+      ]
+    }
+  ],
+  "userAssignedDisplays": [
+    {
+      "id": "1",
+      "userAssignedDisplays": [
+        {
+          "id": "display1",
+          "displayType": "screen",
+          "title": "Main Lobby Display",
+          "description": "Display for the main lobby area",
+          "categoryLabel": "Hospitality",
+          "categoryColor": "#FF5733",
+          "street": "Main Street",
+          "number": "100",
+          "AddressSupplement": "Suite 5",
+          "Zip": "12345",
+          "City": "Metropolis",
+          "mediasOfADisplay": [
+            {
+              "uid": "media1",
+              "url": "/assets/images/profile.webp",
+              "name": "Lobby Image",
+              "status": "done",
+              "type": "image/jpeg",
+              "thumbUrl": "/assets/images/profile.webp"
+            },
+            {
+              "uid": "media2",
+              "url": "/assets/images/profile.webp",
+              "name": "Lobby Video",
+              "status": "uploading",
+              "type": "video/mp4",
+              "thumbUrl": "/assets/images/profile.webp"
+            }
+          ]
+        },
+        {
+          "id": "display2",
+          "displayType": "kiosk",
+          "title": "Event Kiosk Display",
+          "description": "Interactive kiosk at the event center",
+          "categoryLabel": "Events",
+          "categoryColor": "#00AABB",
+          "street": "Event Boulevard",
+          "number": "250",
+          "AddressSupplement": "Near the park",
+          "Zip": "54321",
+          "City": "Centerville",
+          "mediasOfADisplay": [
+            {
+              "uid": "media3",
+              "url": "/assets/images/profile.webp",
+              "name": "Kiosk Photo",
+              "status": "done",
+              "type": "image/jpeg",
+              "thumbUrl": "/assets/images/profile.webp"
+            },
+            {
+              "uid": "media4",
+              "url": "/assets/images/profile.webp",
+              "name": "Kiosk Demo",
+              "status": "error",
+              "type": "video/mp4",
+              "thumbUrl": "/assets/images/profile.webp"
+            }
+          ]
+        },
+        {
+          "id": "display3",
+          "displayType": "billboard",
+          "title": "Outdoor Billboard",
+          "description": "Billboard for advertising events",
+          "categoryLabel": "Advertising",
+          "categoryColor": "#00FF00",
+          "street": "Highway Road",
+          "number": "50",
+          "AddressSupplement": "Next to the mall",
+          "Zip": "67890",
+          "City": "Uptown",
+          "mediasOfADisplay": [
+            {
+              "uid": "media5",
+              "url": "/assets/images/profile.webp",
+              "name": "Billboard Ad",
+              "status": "done",
+              "type": "image/jpeg",
+              "thumbUrl": "/assets/images/profile.webp"
+            }
+          ]
+        },
+        {
+          "id": "display4",
+          "displayType": "billboard",
+          "title": "Outdoor Billboard",
+          "description": "Billboard for advertising events",
+          "categoryLabel": "Advertising",
+          "categoryColor": "#00FF00",
+          "street": "Highway Road",
+          "number": "50",
+          "AddressSupplement": "Next to the mall",
+          "Zip": "67890",
+          "City": "Uptown",
+          "mediasOfADisplay": [
+            {
+              "uid": "media5",
+              "url": "/assets/images/profile.webp",
+              "name": "Billboard Ad",
+              "status": "done",
+              "type": "image/jpeg",
+              "thumbUrl": "/assets/images/profile.webp"
+            }
+          ]
+        },
+        {
+          "id": "display5",
+          "displayType": "billboard",
+          "title": "Outdoor Billboard",
+          "description": "Billboard for advertising events",
+          "categoryLabel": "Advertising",
+          "categoryColor": "#00FF00",
+          "street": "Highway Road",
+          "number": "50",
+          "AddressSupplement": "Next to the mall",
+          "Zip": "67890",
+          "City": "Uptown",
+          "mediasOfADisplay": [
+            {
+              "uid": "media5",
+              "url": "/assets/images/profile.webp",
+              "name": "Billboard Ad",
+              "status": "done",
+              "type": "image/jpeg",
+              "thumbUrl": "/assets/images/profile.webp"
+            }
+          ]
+        },
+        {
+          "id": "display6",
+          "displayType": "billboard",
+          "title": "Outdoor Billboard",
+          "description": "Billboard for advertising events",
+          "categoryLabel": "Advertising",
+          "categoryColor": "#00FF00",
+          "street": "Highway Road",
+          "number": "50",
+          "AddressSupplement": "Next to the mall",
+          "Zip": "67890",
+          "City": "Uptown",
+          "mediasOfADisplay": [
+            {
+              "uid": "media5",
+              "url": "/assets/images/profile.webp",
+              "name": "Billboard Ad",
+              "status": "done",
+              "type": "image/jpeg",
+              "thumbUrl": "/assets/images/profile.webp"
+            }
+          ]
+        },
+        {
+          "id": "display7",
+          "displayType": "billboard",
+          "title": "Outdoor Billboard",
+          "description": "Billboard for advertising events",
+          "categoryLabel": "Advertising",
+          "categoryColor": "#00FF00",
+          "street": "Highway Road",
+          "number": "50",
+          "AddressSupplement": "Next to the mall",
+          "Zip": "67890",
+          "City": "Uptown",
+          "mediasOfADisplay": [
+            {
+              "uid": "media5",
+              "url": "/assets/images/profile.webp",
+              "name": "Billboard Ad",
+              "status": "done",
+              "type": "image/jpeg",
+              "thumbUrl": "/assets/images/profile.webp"
+            }
+          ]
+        },
+        {
+          "id": "display8",
+          "displayType": "billboard",
+          "title": "Outdoor Billboard",
+          "description": "Billboard for advertising events",
+          "categoryLabel": "Advertising",
+          "categoryColor": "#00FF00",
+          "street": "Highway Road",
+          "number": "50",
+          "AddressSupplement": "Next to the mall",
+          "Zip": "67890",
+          "City": "Uptown",
+          "mediasOfADisplay": [
+            {
+              "uid": "media5",
+              "url": "/assets/images/profile.webp",
+              "name": "Billboard Ad",
+              "status": "done",
+              "type": "image/jpeg",
+              "thumbUrl": "/assets/images/profile.webp"
+            }
+          ]
+        },
+        {
+          "id": "display9",
+          "displayType": "billboard",
+          "title": "Outdoor Billboard",
+          "description": "Billboard for advertising events",
+          "categoryLabel": "Advertising",
+          "categoryColor": "#00FF00",
+          "street": "Highway Road",
+          "number": "50",
+          "AddressSupplement": "Next to the mall",
+          "Zip": "67890",
+          "City": "Uptown",
+          "mediasOfADisplay": [
+            {
+              "uid": "media5",
+              "url": "/assets/images/profile.webp",
+              "name": "Billboard Ad",
+              "status": "done",
+              "type": "image/jpeg",
+              "thumbUrl": "/assets/images/profile.webp"
+            }
+          ]
+        },
+        {
+          "id": "display10",
+          "displayType": "billboard",
+          "title": "Outdoor Billboard",
+          "description": "Billboard for advertising events",
+          "categoryLabel": "Advertising",
+          "categoryColor": "#00FF00",
+          "street": "Highway Road",
+          "number": "50",
+          "AddressSupplement": "Next to the mall",
+          "Zip": "67890",
+          "City": "Uptown",
+          "mediasOfADisplay": [
+            {
+              "uid": "media5",
+              "url": "/assets/images/profile.webp",
+              "name": "Billboard Ad",
+              "status": "done",
+              "type": "image/jpeg",
+              "thumbUrl": "/assets/images/profile.webp"
+            }
+          ]
+        },
+        {
+          "id": "display11",
+          "displayType": "billboard",
+          "title": "Outdoor Billboard",
+          "description": "Billboard for advertising events",
+          "categoryLabel": "Advertising",
+          "categoryColor": "#00FF00",
+          "street": "Highway Road",
+          "number": "50",
+          "AddressSupplement": "Next to the mall",
+          "Zip": "67890",
+          "City": "Uptown",
+          "mediasOfADisplay": [
+            {
+              "uid": "media5",
+              "url": "/assets/images/profile.webp",
+              "name": "Billboard Ad",
+              "status": "done",
+              "type": "image/jpeg",
+              "thumbUrl": "/assets/images/profile.webp"
+            }
+          ]
+        },
+        {
+          "id": "display12",
+          "displayType": "billboard",
+          "title": "Outdoor Billboard",
+          "description": "Billboard for advertising events",
+          "categoryLabel": "Advertising",
+          "categoryColor": "#00FF00",
+          "street": "Highway Road",
+          "number": "50",
+          "AddressSupplement": "Next to the mall",
+          "Zip": "67890",
+          "City": "Uptown",
+          "mediasOfADisplay": [
+            {
+              "uid": "media5",
+              "url": "/assets/images/profile.webp",
+              "name": "Billboard Ad",
+              "status": "done",
+              "type": "image/jpeg",
+              "thumbUrl": "/assets/images/profile.webp"
+            }
+          ]
+        },
+        {
+          "id": "display13",
+          "displayType": "billboard",
+          "title": "Outdoor Billboard",
+          "description": "Billboard for advertising events",
+          "categoryLabel": "Advertising",
+          "categoryColor": "#00FF00",
+          "street": "Highway Road",
+          "number": "50",
+          "AddressSupplement": "Next to the mall",
+          "Zip": "67890",
+          "City": "Uptown",
+          "mediasOfADisplay": [
+            {
+              "uid": "media5",
+              "url": "/assets/images/profile.webp",
+              "name": "Billboard Ad",
+              "status": "done",
+              "type": "image/jpeg",
+              "thumbUrl": "/assets/images/profile.webp"
+            }
+          ]
+        },
+        {
+          "id": "display14",
+          "displayType": "billboard",
+          "title": "Outdoor Billboard",
+          "description": "Billboard for advertising events",
+          "categoryLabel": "Advertising",
+          "categoryColor": "#00FF00",
+          "street": "Highway Road",
+          "number": "50",
+          "AddressSupplement": "Next to the mall",
+          "Zip": "67890",
+          "City": "Uptown",
+          "mediasOfADisplay": [
+            {
+              "uid": "media5",
+              "url": "/assets/images/profile.webp",
+              "name": "Billboard Ad",
+              "status": "done",
+              "type": "image/jpeg",
+              "thumbUrl": "/assets/images/profile.webp"
+            }
+          ]
+        },
+        {
+          "id": "display15",
+          "displayType": "billboard",
+          "title": "Outdoor Billboard",
+          "description": "Billboard for advertising events",
+          "categoryLabel": "Advertising",
+          "categoryColor": "#00FF00",
+          "street": "Highway Road",
+          "number": "50",
+          "AddressSupplement": "Next to the mall",
+          "Zip": "67890",
+          "City": "Uptown",
+          "mediasOfADisplay": [
+            {
+              "uid": "media5",
+              "url": "/assets/images/profile.webp",
+              "name": "Billboard Ad",
+              "status": "done",
+              "type": "image/jpeg",
+              "thumbUrl": "/assets/images/profile.webp"
+            }
+          ]
+        },
+        {
+          "id": "display16",
+          "displayType": "billboard",
+          "title": "Outdoor Billboard",
+          "description": "Billboard for advertising events",
+          "categoryLabel": "Advertising",
+          "categoryColor": "#00FF00",
+          "street": "Highway Road",
+          "number": "50",
+          "AddressSupplement": "Next to the mall",
+          "Zip": "67890",
+          "City": "Uptown",
+          "mediasOfADisplay": [
+            {
+              "uid": "media5",
+              "url": "/assets/images/profile.webp",
+              "name": "Billboard Ad",
+              "status": "done",
+              "type": "image/jpeg",
+              "thumbUrl": "/assets/images/profile.webp"
+            }
+          ]
+        },
+        {
+          "id": "display17",
+          "displayType": "billboard",
+          "title": "Outdoor Billboard",
+          "description": "Billboard for advertising events",
+          "categoryLabel": "Advertising",
+          "categoryColor": "#00FF00",
+          "street": "Highway Road",
+          "number": "50",
+          "AddressSupplement": "Next to the mall",
+          "Zip": "67890",
+          "City": "Uptown",
+          "mediasOfADisplay": [
+            {
+              "uid": "media5",
+              "url": "/assets/images/profile.webp",
+              "name": "Billboard Ad",
+              "status": "done",
+              "type": "image/jpeg",
+              "thumbUrl": "/assets/images/profile.webp"
+            }
+          ]
+        },
+        {
+          "id": "display18",
+          "displayType": "billboard",
+          "title": "Outdoor Billboard",
+          "description": "Billboard for advertising events",
+          "categoryLabel": "Advertising",
+          "categoryColor": "#00FF00",
+          "street": "Highway Road",
+          "number": "50",
+          "AddressSupplement": "Next to the mall",
+          "Zip": "67890",
+          "City": "Uptown",
+          "mediasOfADisplay": [
+            {
+              "uid": "media5",
+              "url": "/assets/images/profile.webp",
+              "name": "Billboard Ad",
+              "status": "done",
+              "type": "image/jpeg",
+              "thumbUrl": "/assets/images/profile.webp"
+            }
+          ]
+        },
+        {
+          "id": "display19",
+          "displayType": "billboard",
+          "title": "Outdoor Billboard",
+          "description": "Billboard for advertising events",
+          "categoryLabel": "Advertising",
+          "categoryColor": "#00FF00",
+          "street": "Highway Road",
+          "number": "50",
+          "AddressSupplement": "Next to the mall",
+          "Zip": "67890",
+          "City": "Uptown",
+          "mediasOfADisplay": [
+            {
+              "uid": "media5",
+              "url": "/assets/images/profile.webp",
+              "name": "Billboard Ad",
+              "status": "done",
+              "type": "image/jpeg",
+              "thumbUrl": "/assets/images/profile.webp"
+            }
+          ]
+        },
+        {
+          "id": "display20",
+          "displayType": "billboard",
+          "title": "Outdoor Billboard",
+          "description": "Billboard for advertising events",
+          "categoryLabel": "Advertising",
+          "categoryColor": "#00FF00",
+          "street": "Highway Road",
+          "number": "50",
+          "AddressSupplement": "Next to the mall",
+          "Zip": "67890",
+          "City": "Uptown",
+          "mediasOfADisplay": [
+            {
+              "uid": "media5",
+              "url": "/assets/images/profile.webp",
+              "name": "Billboard Ad",
+              "status": "done",
+              "type": "image/jpeg",
+              "thumbUrl": "/assets/images/profile.webp"
+            }
+          ]
+        },
+        {
+          "id": "display21",
+          "displayType": "billboard",
+          "title": "Outdoor Billboard",
+          "description": "Billboard for advertising events",
+          "categoryLabel": "Advertising",
+          "categoryColor": "#00FF00",
+          "street": "Highway Road",
+          "number": "50",
+          "AddressSupplement": "Next to the mall",
+          "Zip": "67890",
+          "City": "Uptown",
+          "mediasOfADisplay": [
+            {
+              "uid": "media5",
+              "url": "/assets/images/profile.webp",
+              "name": "Billboard Ad",
+              "status": "done",
+              "type": "image/jpeg",
+              "thumbUrl": "/assets/images/profile.webp"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "userAssignedMediapools": [
+    {
+      "id": "1",
+      "userAssignedMediapools": [
+        {
+          "id": "mediapool2",
+          "title": "Nature Photography Pool",
+          "description": "Collection of nature and wildlife images",
+          "categoryLabel": "Nature",
+          "categoryColor": "#00FF00",
+          "uploadedBy": "Sabine Mueller",
+          "createDate": "2025-04-09T12:00:00Z",
+          "thumbUrl": "/assets/images/profile.webp",
+          "type": "image/jpeg",
+          "mediaType": "general"
+        },
+        {
+          "id": "mediapool3",
+          "title": "Travel Adventures Pool",
+          "description": "Collection of travel and adventure videos",
+          "categoryLabel": "Travel",
+          "categoryColor": "#FF4500",
+          "uploadedBy": "Sabine Mueller",
+          "createDate": "2025-04-10T12:00:00Z",
+          "thumbUrl": "/assets/images/profile.webp",
+          "type": "video/mp4",
+          "mediaType": "background"
+        },
+        {
+          "id": "mediapool4",
+          "title": "Food Recipes Pool",
+          "description": "Collection of food and recipe videos",
+          "categoryLabel": "Food",
+          "categoryColor": "#FFD700",
+          "uploadedBy": "Sabine Mueller",
+          "createDate": "2025-04-11T12:00:00Z",
+          "thumbUrl": "/assets/images/profile.webp",
+          "type": "video/mp4",
+          "mediaType": "general"
+        },
+        {
+          "id": "mediapool5",
+          "title": "Fitness Pool",
+          "description": "Collection of fitness and workout videos",
+          "categoryLabel": "Fitness",
+          "categoryColor": "#FF69B4",
+          "uploadedBy": "Sabine Mueller",
+          "createDate": "2025-04-12T12:00:00Z",
+          "thumbUrl": "/assets/images/profile.webp",
+          "type": "video/mp4",
+          "mediaType": "general"
+        },
+        {
+          "id": "mediapool6",
+          "title": "Technology Pool",
+          "description": "Collection of tech and gadget reviews",
+          "categoryLabel": "Technology",
+          "categoryColor": "#1E90FF",
+          "uploadedBy": "Sabine Mueller",
+          "createDate": "2025-04-13T12:00:00Z",
+          "thumbUrl": "/assets/images/profile.webp",
+          "type": "video/mp4",
+          "mediaType": "background"
+        },
+        {
+          "id": "mediapool7",
+          "title": "Art and Design Pool",
+          "description": "Collection of art and design inspirations",
+          "categoryLabel": "Art",
+          "categoryColor": "#8A2BE2",
+          "uploadedBy": "Sabine Mueller",
+          "createDate": "2025-04-14T12:00:00Z",
+          "thumbUrl": "/assets/images/profile.webp",
+          "type": "image/jpeg",
+          "mediaType": "general"
+        },
+        {
+          "id": "mediapool8",
+          "title": "Music Pool",
+          "description": "Collection of music and audio tracks",
+          "categoryLabel": "Music",
+          "categoryColor": "#FF6347",
+          "uploadedBy": "Sabine Mueller",
+          "createDate": "2025-04-15T12:00:00Z",
+          "thumbUrl": "/assets/images/profile.webp",
+          "type": "audio/mp3",
+          "mediaType": "background"
+        },
+        {
+          "id": "mediapool9",
+          "title": "Education Pool",
+          "description": "Collection of educational videos",
+          "categoryLabel": "Education",
+          "categoryColor": "#32CD32",
+          "uploadedBy": "Sabine Mueller",
+          "createDate": "2025-04-16T12:00:00Z",
+          "thumbUrl": "/assets/images/profile.webp",
+          "type": "video/mp4",
+          "mediaType": "background"
+        },
+        {
+          "id": "mediapool10",
+          "title": "Gaming Pool",
+          "description": "Collection of gaming highlights",
+          "categoryLabel": "Gaming",
+          "categoryColor": "#FF00FF",
+          "uploadedBy": "Sabine Mueller",
+          "createDate": "2025-04-17T12:00:00Z",
+          "thumbUrl": "/assets/images/profile.webp",
+          "type": "video/mp4",
+          "mediaType": "background"
+        },
+        {
+          "id": "mediapool11",
+          "title": "Fashion Pool",
+          "description": "Collection of fashion and style videos",
+          "categoryLabel": "Fashion",
+          "categoryColor": "#FF1493",
+          "uploadedBy": "Sabine Mueller",
+          "createDate": "2025-04-18T12:00:00Z",
+          "thumbUrl": "/assets/images/profile.webp",
+          "type": "video/mp4",
+          "mediaType": "commercial"
+        },
+        {
+          "id": "mediapool12",
+          "title": "Science Pool",
+          "description": "Collection of science and discovery videos",
+          "categoryLabel": "Science",
+          "categoryColor": "#00CED1",
+          "uploadedBy": "Sabine Mueller",
+          "createDate": "2025-04-19T12:00:00Z",
+          "thumbUrl": "/assets/images/profile.webp",
+          "type": "video/mp4",
+          "mediaType": "commercial"
+        },
+        {
+          "id": "mediapool13",
+          "title": "History Pool",
+          "description": "Collection of historical documentaries",
+          "categoryLabel": "History",
+          "categoryColor": "#8B4513",
+          "uploadedBy": "Sabine Mueller",
+          "createDate": "2025-04-20T12:00:00Z",
+          "thumbUrl": "/assets/images/profile.webp",
+          "type": "video/mp4",
+          "mediaType": "commercial"
+        },
+        {
+          "id": "mediapool14",
+          "title": "Comedy Pool",
+          "description": "Collection of comedy and funny videos",
+          "categoryLabel": "Comedy",
+          "categoryColor": "#FFD700",
+          "uploadedBy": "Sabine Mueller",
+          "createDate": "2025-04-21T12:00:00Z",
+          "thumbUrl": "/assets/images/profile.webp",
+          "type": "video/mp4",
+          "mediaType": "general"
+        },
+        {
+          "id": "mediapool15",
+          "title": "Sports Pool",
+          "description": "Collection of sports highlights",
+          "categoryLabel": "Sports",
+          "categoryColor": "#FF4500",
+          "uploadedBy": "Sabine Mueller",
+          "createDate": "2025-04-22T12:00:00Z",
+          "thumbUrl": "/assets/images/profile.webp",
+          "type": "video/mp4",
+          "mediaType": "general"
+        },
+        {
+          "id": "mediapool16",
+          "title": "Health Pool",
+          "description": "Collection of health and wellness videos",
+          "categoryLabel": "Health",
+          "categoryColor": "#32CD32",
+          "uploadedBy": "Sabine Mueller",
+          "createDate": "2025-04-23T12:00:00Z",
+          "thumbUrl": "/assets/images/profile.webp",
+          "type": "video/mp4",
+          "mediaType": "commercial"
+        },
+        {
+          "id": "mediapool17",
+          "title": "DIY Pool",
+          "description": "Collection of DIY and crafting videos",
+          "categoryLabel": "DIY",
+          "categoryColor": "#FF69B4",
+          "uploadedBy": "Sabine Mueller",
+          "createDate": "2025-04-24T12:00:00Z",
+          "thumbUrl": "/assets/images/profile.webp",
+          "type": "video/mp4",
+          "mediaType": "general"
+        },
+        {
+          "id": "mediapool18",
+          "title": "Business Pool",
+          "description": "Collection of business and finance videos",
+          "categoryLabel": "Business",
+          "categoryColor": "#1E90FF",
+          "uploadedBy": "Sabine Mueller",
+          "createDate": "2025-04-25T12:00:00Z",
+          "thumbUrl": "/assets/images/profile.webp",
+          "type": "video/mp4",
+          "mediaType": "commercial"
+        },
+        {
+          "id": "mediapool19",
+          "title": "Travel Pool",
+          "description": "Collection of travel guides and tips",
+          "categoryLabel": "Travel",
+          "categoryColor": "#FF4500",
+          "uploadedBy": "Sabine Mueller",
+          "createDate": "2025-04-26T12:00:00Z",
+          "thumbUrl": "/assets/images/profile.webp",
+          "type": "video/mp4",
+          "mediaType": "general"
+        },
+        {
+          "id": "mediapool20",
+          "title": "Adventure Pool",
+          "description": "Collection of adventure and exploration videos",
+          "categoryLabel": "Adventure",
+          "categoryColor": "#8A2BE2",
+          "uploadedBy": "Sabine Mueller",
+          "createDate": "2025-04-27T12:00:00Z",
+          "thumbUrl": "/assets/images/profile.webp",
+          "type": "video/mp4",
+          "mediaType": "general"
+        },
+        {
+          "id": "mediapool1",
+          "title": "Art Gallery Pool",
+          "description": "Collection of art images",
+          "categoryLabel": "Art",
+          "categoryColor": "#33FFCE",
+          "uploadedBy": "Sabine Mueller",
+          "createDate": "2025-04-08T12:00:00Z",
+          "thumbUrl": "/assets/images/profile.webp",
+          "type": "image/jpeg",
+          "mediaType": "general"
+        }
+      ]
+    }
+  ],
+  "userAssignedAds": [
+    {
+      "id": "1",
+      "userAssignedAds": [
+        {
+          "id": "ad1",
+          "title": "Big Summer Sale",
+          "description": "Promotional ad for summer sale",
+          "categoryLabel": "Retail",
+          "categoryColor": "#3377FF",
+          "uploadedBy": "user4",
+          "createDate": "2025-03-25T10:00:00Z",
+          "thumbnailUrl": "/assets/images/profile.webp"
+        },
+        {
+          "id": "ad2",
+          "title": "New Smartphone Launch",
+          "description": "Advertisement for the new smartphone",
+          "categoryLabel": "Technology",
+          "categoryColor": "#FF9933",
+          "uploadedBy": "user5",
+          "createDate": "2025-04-01T09:15:00Z",
+          "thumbnailUrl": "/assets/images/profile.webp"
+        },
+        {
+          "id": "ad3",
+          "title": "Weekend Flash Deal",
+          "description": "Limited time online flash deal",
+          "categoryLabel": "Deals",
+          "categoryColor": "#FF6600",
+          "uploadedBy": "user6",
+          "createDate": "2025-04-07T15:20:00Z",
+          "thumbnailUrl": "/assets/images/profile.webp"
+        }
+      ]
+    }
+  ],
+  "userAssignedShortPlayLists": [
+    {
+      "id": "1",
+      "userAssignedShortPlayLists": [
+        {
+          "id": "shortplaylist1",
+          "title": "Quick Tips",
+          "description": "Short playlist of quick tips",
+          "categoryLabel": "Education",
+          "categoryColor": "#FF33A1",
+          "uploadedBy": "user7",
+          "createDate": "2025-02-15T09:45:00Z",
+          "thumbnailUrl": "/assets/images/profile.webp"
+        },
+        {
+          "id": "shortplaylist2",
+          "title": "Daily Motivation",
+          "description": "Inspirational quotes and messages",
+          "categoryLabel": "Motivation",
+          "categoryColor": "#CCFF00",
+          "uploadedBy": "user8",
+          "createDate": "2025-03-10T07:30:00Z",
+          "thumbnailUrl": "/assets/images/profile.webp"
+        }
+      ]
+    }
+  ],
+  "userAssignedPlayLists": [
+    {
+      "id": "1",
+      "userAssignedPlayLists": [
+        {
+          "id": "playlist1",
+          "title": "Event Recap",
+          "description": "Playlist of the week's best moments",
+          "categoryLabel": "Entertainment",
+          "categoryColor": "#33FF57",
+          "uploadedBy": "user9",
+          "createDate": "2025-01-10T10:00:00Z",
+          "thumbnailUrl": "/assets/images/profile.webp"
+        },
+        {
+          "id": "playlist2",
+          "title": "Workshop Highlights",
+          "description": "Highlights from recent workshops",
+          "categoryLabel": "Training",
+          "categoryColor": "#FFAA00",
+          "uploadedBy": "user10",
+          "createDate": "2025-02-20T11:15:00Z",
+          "thumbnailUrl": "/assets/images/profile.webp"
+        },
+        {
+          "id": "playlist3",
+          "title": "Weekly Summary",
+          "description": "Weekly summary of events and news",
+          "categoryLabel": "News",
+          "categoryColor": "#0099CC",
+          "uploadedBy": "user11",
+          "createDate": "2025-03-30T13:00:00Z",
+          "thumbnailUrl": "/assets/images/profile.webp"
+        }
+      ]
+    }
+  ],
+  "userAssignedUsers": [
+    {
+      "id": "1",
+      "userAssignedUsers": [
+        {
+          "id": "user1",
+          "username": "alice",
+          "profileImageUrl": "/assets/images/profile.webp",
+          "firstName": "Alice",
+          "lastName": "Wonderland",
+          "departmentLabel": "IT",
+          "categoryLabel": "Administrator",
+          "categoryColor": "#000000",
+          "roles": [
+            {
+              "label": "Admin",
+              "id": "role1"
+            },
+            {
+              "label": "Editor",
+              "id": "role2"
+            }
+          ],
+          "invitedBy": "admin",
+          "invitedDate": "2025-03-01T07:30:00Z"
+        },
+        {
+          "id": "user2",
+          "username": "bob",
+          "profileImageUrl": "/assets/images/profile.webp",
+          "firstName": "Bob",
+          "lastName": "Builder",
+          "departmentLabel": "Marketing",
+          "categoryLabel": "User",
+          "categoryColor": "#FF00FF",
+          "roles": [
+            {
+              "label": "Viewer",
+              "id": "role3"
+            }
+          ],
+          "invitedBy": "alice",
+          "invitedDate": "2025-04-05T10:30:00Z"
+        },
+        {
+          "id": "user3",
+          "username": "charlie",
+          "profileImageUrl": "/assets/images/profile.webp",
+          "firstName": "Charlie",
+          "lastName": "Chaplin",
+          "departmentLabel": "Sales",
+          "categoryLabel": "Editor",
+          "categoryColor": "#00CC66",
+          "roles": [
+            {
+              "label": "Editor",
+              "id": "role2"
+            }
+          ],
+          "invitedBy": "alice",
+          "invitedDate": "2025-04-03T11:45:00Z"
+        }
+      ]
+    }
+  ],
+  "companyRoles": {
+    "1": [
+      {
+        "id": "1",
+        "label": "admin"
+      },
+      {
+        "id": "2",
+        "label": "content manager"
+      },
+      {
+        "id": "3",
+        "label": "user manager"
+      }
+    ],
+    "2": [
+      {
+        "id": "2",
+        "label": "content manager"
+      },
+      {
+        "id": "3",
+        "label": "user manager"
+      }
+    ]
+  },
+  "list": [
+    {
+      "id": "1",
+      "owner": 101,
+      "title": "Modern Apartment in Downtown",
+      "description": "A stunning modern apartment with all the amenities, including a gym and pool.",
+      "property_type": "Apartment",
+      "price": "$1500/month",
+      "location": "New York, NY",
+      "bedrooms": 2,
+      "bathrooms": 2,
+      "area": "1200 sqft",
+      "amenities": "Gym, Pool, WiFi",
+      "rating": "4.5",
+      "available": true,
+      "tags": "modern, luxury",
+      "image_caption": "Front view of the apartment building",
+      "created_at": "2023-01-01T10:00:00Z",
+      "updated_at": "2023-01-05T12:00:00Z"
+    },
+    {
+      "id": "2",
+      "owner": 102,
+      "title": "Cozy Suburban House",
+      "description": "A charming house located in a quiet suburb with a spacious backyard.",
+      "property_type": "House",
+      "price": "$350,000",
+      "location": "Los Angeles, CA",
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "area": "1800 sqft",
+      "amenities": "Garage, Garden, Fireplace",
+      "rating": "4.2",
+      "available": true,
+      "tags": "cozy, family",
+      "image_caption": "Spacious front yard",
+      "created_at": "2023-02-10T09:30:00Z",
+      "updated_at": "2023-02-15T11:45:00Z"
+    },
+    {
+      "id": "3",
+      "owner": 103,
+      "title": "Luxury Penthouse Suite",
+      "description": "Experience luxury living in this exclusive penthouse with panoramic city views.",
+      "property_type": "Penthouse",
+      "price": "$5000/month",
+      "location": "Chicago, IL",
+      "bedrooms": 4,
+      "bathrooms": 3,
+      "area": "2500 sqft",
+      "amenities": "Rooftop, Concierge, Private Elevator",
+      "rating": "4.8",
+      "available": false,
+      "tags": "luxury, exclusive",
+      "image_caption": "City skyline from the penthouse",
+      "created_at": "2023-03-05T14:00:00Z",
+      "updated_at": "2023-03-10T16:20:00Z"
+    },
+    {
+      "id": "4",
+      "owner": 104,
+      "title": "Charming Cottage Retreat",
+      "description": "A peaceful cottage retreat perfect for a weekend getaway.",
+      "property_type": "Cottage",
+      "price": "$200/night",
+      "location": "Nashville, TN",
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "area": "600 sqft",
+      "amenities": "Fireplace, Garden, Patio",
+      "rating": "4.0",
+      "available": true,
+      "tags": "charming, getaway",
+      "image_caption": "Cozy cottage exterior",
+      "created_at": "2023-04-01T08:00:00Z",
+      "updated_at": "2023-04-02T09:00:00Z"
+    },
+    {
+      "id": "5",
+      "owner": 105,
+      "title": "Spacious Family Home",
+      "description": "Ideal for families, this home offers ample space and a large backyard.",
+      "property_type": "House",
+      "price": "$450,000",
+      "location": "Austin, TX",
+      "bedrooms": 4,
+      "bathrooms": 3,
+      "area": "2200 sqft",
+      "amenities": "Garage, Backyard, Modern Kitchen",
+      "rating": "4.3",
+      "available": false,
+      "tags": "family, spacious",
+      "image_caption": "Backyard with garden",
+      "created_at": "2023-03-15T11:15:00Z",
+      "updated_at": "2023-03-20T13:30:00Z"
+    },
+    {
+      "id": "6",
+      "owner": 106,
+      "title": "Urban Studio Loft",
+      "description": "A trendy studio loft in the heart of the city, perfect for young professionals.",
+      "property_type": "Studio",
+      "price": "$1200/month",
+      "location": "San Francisco, CA",
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "area": "800 sqft",
+      "amenities": "Open Plan, Modern Design, City Views",
+      "rating": "4.6",
+      "available": true,
+      "tags": "urban, trendy",
+      "image_caption": "Interior of the loft",
+      "created_at": "2023-02-25T07:45:00Z",
+      "updated_at": "2023-03-01T10:00:00Z"
+    },
+    {
+      "id": "7",
+      "owner": 107,
+      "title": "Rustic Farmhouse",
+      "description": "A beautifully restored farmhouse with a blend of rustic charm and modern comforts.",
+      "property_type": "Farmhouse",
+      "price": "$300,000",
+      "location": "Denver, CO",
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "area": "1600 sqft",
+      "amenities": "Barn, Garden, Rustic Decor",
+      "rating": "4.4",
+      "available": true,
+      "tags": "rustic, charming",
+      "image_caption": "Front view of the farmhouse",
+      "created_at": "2023-01-20T12:00:00Z",
+      "updated_at": "2023-01-25T14:00:00Z"
+    },
+    {
+      "id": "8",
+      "owner": 108,
+      "title": "Beachfront Villa",
+      "description": "Enjoy stunning ocean views from this luxurious beachfront villa.",
+      "property_type": "Villa",
+      "price": "$750,000",
+      "location": "Miami, FL",
+      "bedrooms": 5,
+      "bathrooms": 4,
+      "area": "3000 sqft",
+      "amenities": "Pool, Private Beach, Balcony",
+      "rating": "4.9",
+      "available": false,
+      "tags": "beachfront, luxury",
+      "image_caption": "Sunset view over the ocean",
+      "created_at": "2023-03-10T15:00:00Z",
+      "updated_at": "2023-03-15T17:30:00Z"
+    },
+    {
+      "id": "9",
+      "owner": 109,
+      "title": "Downtown Condo",
+      "description": "A sleek and modern condo located in the bustling downtown area.",
+      "property_type": "Condo",
+      "price": "$2200/month",
+      "location": "Seattle, WA",
+      "bedrooms": 2,
+      "bathrooms": 2,
+      "area": "1100 sqft",
+      "amenities": "Balcony, Gym, Security",
+      "rating": "4.1",
+      "available": true,
+      "tags": "modern, convenient",
+      "image_caption": "Condo building exterior",
+      "created_at": "2023-04-03T10:30:00Z",
+      "updated_at": "2023-04-04T11:15:00Z"
+    },
+    {
+      "id": "10",
+      "owner": 110,
+      "title": "Countryside Estate",
+      "description": "A magnificent estate in the countryside offering privacy and natural beauty.",
+      "property_type": "Estate",
+      "price": "$1,200,000",
+      "location": "Greenwich, CT",
+      "bedrooms": 6,
+      "bathrooms": 5,
+      "area": "5000 sqft",
+      "amenities": "Large Gardens, Pool, Home Theater",
+      "rating": "4.7",
+      "available": true,
+      "tags": "spacious, exclusive",
+      "image_caption": "Aerial view of the estate",
+      "created_at": "2023-02-05T13:00:00Z",
+      "updated_at": "2023-02-10T14:30:00Z"
+    }
+  ],
   "delete": [
     {
       "id": "4",
@@ -56,6 +1537,27 @@
       "status": "done",
       "type": "image/jpeg",
       "thumbUrl": "http://localhost:8000/uploads/thumbnail-file-1741703837936-589917802.jpg",
+      "userId": "unknown"
+    },
+    {
+      "id": "jj-iOZf"
+    },
+    {
+      "uid": "file-1744241561719-92011761.jpg",
+      "url": "http://localhost:8000/uploads/file-1744241561719-92011761.jpg",
+      "name": "photo_2_2025-04-03_20-33-16.jpg",
+      "status": "done",
+      "type": "image/jpeg",
+      "thumbUrl": "http://localhost:8000/uploads/thumbnail-file-1744241561719-92011761.jpg",
+      "userId": "unknown"
+    },
+    {
+      "uid": "file-1744244931521-115953612.jpg",
+      "url": "http://localhost:8000/uploads/file-1744244931521-115953612.jpg",
+      "name": "photo_25_2025-04-03_20-33-16.jpg",
+      "status": "done",
+      "type": "image/jpeg",
+      "thumbUrl": "http://localhost:8000/uploads/thumbnail-file-1744244931521-115953612.jpg",
       "userId": "unknown"
     }
   ],
@@ -432,30 +1934,22 @@
   ],
   "industriesSuggestion": [
     {
-      "keywords": [
-        "gggggggg"
-      ],
+      "keywords": ["gggggggg"],
       "label": "ggggg",
       "id": 1
     },
     {
-      "keywords": [
-        "ssssssssss"
-      ],
+      "keywords": ["ssssssssss"],
       "label": "ggggg",
       "id": 2
     },
     {
-      "keywords": [
-        "fffffffffff"
-      ],
+      "keywords": ["fffffffffff"],
       "label": "ggggg",
       "id": 3
     },
     {
-      "keywords": [
-        "rrrrrrr"
-      ],
+      "keywords": ["rrrrrrr"],
       "label": "rrrrrrrrrr",
       "id": 4
     }
@@ -1179,9 +2673,7 @@
           "partnerList": []
         },
         "industryFilter": {
-          "industriesId": [
-            "66bcd418448ffa01893ffd9a"
-          ]
+          "industriesId": ["66bcd418448ffa01893ffd9a"]
         },
         "predefinedFilters": {
           "filtersId": []
@@ -1553,11 +3045,7 @@
       "phone": "123-456-7890",
       "responsiblePerson": "John Doe",
       "adminName": "Jane Smith",
-      "displaysOnlineId": [
-        "partner01",
-        "partner02",
-        "partner02"
-      ],
+      "displaysOnlineId": ["partner01", "partner02", "partner02"],
       "bookingUpdate": "2024-12-23T10:00:00Z",
       "status": "notBlocked"
     },
@@ -1570,10 +3058,7 @@
       "phone": "987-654-3210",
       "responsiblePerson": "Alice Brown",
       "adminName": "Bob Green",
-      "displaysOnlineId": [
-        "partner01",
-        "partner03"
-      ],
+      "displaysOnlineId": ["partner01", "partner03"],
       "bookingUpdate": "2024-12-22T09:00:00Z",
       "status": "blocked"
     },
@@ -1586,10 +3071,7 @@
       "phone": "555-123-4567",
       "responsiblePerson": "Chris Lee",
       "adminName": "Daniel Kim",
-      "displaysOnlineId": [
-        "partner02",
-        "partner04"
-      ],
+      "displaysOnlineId": ["partner02", "partner04"],
       "bookingUpdate": "2024-12-21T08:30:00Z",
       "status": "notBlocked"
     },
@@ -1602,10 +3084,7 @@
       "phone": "666-888-9999",
       "responsiblePerson": "David Wong",
       "adminName": "Emma White",
-      "displaysOnlineId": [
-        "partner03",
-        "partner05"
-      ],
+      "displaysOnlineId": ["partner03", "partner05"],
       "bookingUpdate": "2024-12-20T07:45:00Z",
       "status": "blocked"
     },
@@ -1618,10 +3097,7 @@
       "phone": "444-333-2222",
       "responsiblePerson": "Eve Harris",
       "adminName": "Frank Lewis",
-      "displaysOnlineId": [
-        "partner04",
-        "partner06"
-      ],
+      "displaysOnlineId": ["partner04", "partner06"],
       "bookingUpdate": "2024-12-19T06:15:00Z",
       "status": "notBlocked"
     },
@@ -1634,10 +3110,7 @@
       "phone": "111-222-3333",
       "responsiblePerson": "Gina Taylor",
       "adminName": "Hugh Clark",
-      "displaysOnlineId": [
-        "partner05",
-        "partner07"
-      ],
+      "displaysOnlineId": ["partner05", "partner07"],
       "bookingUpdate": "2024-12-18T05:00:00Z",
       "status": "blocked"
     },
@@ -1650,10 +3123,7 @@
       "phone": "777-888-9999",
       "responsiblePerson": "Harry Patel",
       "adminName": "Ivy Scott",
-      "displaysOnlineId": [
-        "partner06",
-        "partner08"
-      ],
+      "displaysOnlineId": ["partner06", "partner08"],
       "bookingUpdate": "2024-12-17T04:30:00Z",
       "status": "notBlocked"
     },
@@ -1666,10 +3136,7 @@
       "phone": "888-999-0000",
       "responsiblePerson": "Jack Ford",
       "adminName": "Karen Miller",
-      "displaysOnlineId": [
-        "partner07",
-        "partner09"
-      ],
+      "displaysOnlineId": ["partner07", "partner09"],
       "bookingUpdate": "2024-12-16T03:00:00Z",
       "status": "blocked"
     },
@@ -1682,10 +3149,7 @@
       "phone": "333-444-5555",
       "responsiblePerson": "Liam Davis",
       "adminName": "Megan Lewis",
-      "displaysOnlineId": [
-        "partner08",
-        "partner10"
-      ],
+      "displaysOnlineId": ["partner08", "partner10"],
       "bookingUpdate": "2024-12-15T02:30:00Z",
       "status": "notBlocked"
     },
@@ -1698,9 +3162,7 @@
       "phone": "222-333-4444",
       "responsiblePerson": "Nina Ford",
       "adminName": "Oscar Hunt",
-      "displaysOnlineId": [
-        "partner09"
-      ],
+      "displaysOnlineId": ["partner09"],
       "bookingUpdate": "2024-12-14T01:00:00Z",
       "status": "blocked"
     }
@@ -2735,41 +4197,23 @@
       "id": 2
     },
     {
-      "emails": [
-        "c4netfff.9@gmail.com",
-        "c4netfff.9@gmail.com"
-      ],
+      "emails": ["c4netfff.9@gmail.com", "c4netfff.9@gmail.com"],
       "id": 3
     },
     {
-      "emails": [
-        "c4net.7@gmail.com",
-        "c4net.8@gmail.com",
-        "hgj@fsdf.com"
-      ],
+      "emails": ["c4net.7@gmail.com", "c4net.8@gmail.com", "hgj@fsdf.com"],
       "id": 4
     },
     {
-      "emails": [
-        "c4net.7@gmail.com",
-        "hgj@fsdf.com"
-      ],
+      "emails": ["c4net.7@gmail.com", "hgj@fsdf.com"],
       "id": 5
     },
     {
-      "emails": [
-        "c4net.8@gmail.com",
-        "hgj@fsdf.com",
-        "c4net.8@gmail.com"
-      ],
+      "emails": ["c4net.8@gmail.com", "hgj@fsdf.com", "c4net.8@gmail.com"],
       "id": 6
     },
     {
-      "emails": [
-        "c4net.8@gmail.com",
-        "hgj@fsdf.com",
-        "c4net.8@gmail.com"
-      ],
+      "emails": ["c4net.8@gmail.com", "hgj@fsdf.com", "c4net.8@gmail.com"],
       "id": 7
     },
     {
@@ -2781,62 +4225,39 @@
       "id": 8
     },
     {
-      "emails": [
-        "rkdo.skandari@gmail.com"
-      ],
+      "emails": ["rkdo.skandari@gmail.com"],
       "id": 9
     },
     {
-      "emails": [
-        "rkdo.skandari@gmail.com",
-        "rkdo.skandari@gmail.com"
-      ],
+      "emails": ["rkdo.skandari@gmail.com", "rkdo.skandari@gmail.com"],
       "id": 10
     },
     {
-      "emails": [
-        "rkdo.skandari@gmail.com",
-        "c4net.7@gmail.com"
-      ],
+      "emails": ["rkdo.skandari@gmail.com", "c4net.7@gmail.com"],
       "id": 11
     },
     {
-      "emails": [
-        "hgj@fsdf.com",
-        "c4net.8@gmail.com"
-      ],
+      "emails": ["hgj@fsdf.com", "c4net.8@gmail.com"],
       "id": 12
     },
     {
-      "emails": [
-        "skndri-hosyn@outlook.com"
-      ],
+      "emails": ["skndri-hosyn@outlook.com"],
       "id": 13
     },
     {
-      "emails": [
-        "c4net.8@gmail.com"
-      ],
+      "emails": ["c4net.8@gmail.com"],
       "id": 14
     },
     {
-      "emails": [
-        "c4net.8@gmail.com"
-      ],
+      "emails": ["c4net.8@gmail.com"],
       "id": 15
     },
     {
-      "emails": [
-        "rkdo.skandari@gmail.com",
-        "rkdo.skandari@gmail.com"
-      ],
+      "emails": ["rkdo.skandari@gmail.com", "rkdo.skandari@gmail.com"],
       "id": 16
     },
     {
-      "emails": [
-        "rkdo.skandari@gmail.com",
-        "rkdo.skandari@gmail.com"
-      ],
+      "emails": ["rkdo.skandari@gmail.com", "rkdo.skandari@gmail.com"],
       "id": 17
     }
   ],
@@ -2905,6 +4326,56 @@
       "companyId": "1",
       "message": "dfsdfsdf",
       "id": 13
+    },
+    {
+      "companyId": "3",
+      "message": "ccccccccccc",
+      "id": 14
+    },
+    {
+      "companyId": "2",
+      "message": "fffffffff",
+      "id": 15
+    },
+    {
+      "companyId": "2",
+      "message": "XXX",
+      "id": 16
+    },
+    {
+      "companyId": "2",
+      "message": "sssssss",
+      "id": 17
+    },
+    {
+      "companyId": "1",
+      "message": "XXXX",
+      "id": 18
+    },
+    {
+      "companyId": "2",
+      "message": "x",
+      "id": 19
+    },
+    {
+      "companyId": "3",
+      "message": "X\n",
+      "id": 20
+    },
+    {
+      "companyId": "3",
+      "message": "XX",
+      "id": 21
+    },
+    {
+      "companyId": "3",
+      "message": "XXX",
+      "id": 22
+    },
+    {
+      "companyId": "3",
+      "message": "XXX",
+      "id": 23
     }
   ],
   "partnerDisplays": [
@@ -2945,13 +4416,7 @@
       "priceCategory": 2,
       "rate": 1,
       "utilizationRate": 4,
-      "availableDays": [
-        "mon",
-        "tue",
-        "wed",
-        "thu",
-        "fri"
-      ],
+      "availableDays": ["mon", "tue", "wed", "thu", "fri"],
       "companyLogo": "/assets/images/profile.webp",
       "isFavorite": true
     },
@@ -2992,10 +4457,7 @@
       "priceCategory": 3,
       "rate": 4,
       "utilizationRate": 5,
-      "availableDays": [
-        "sat",
-        "sun"
-      ],
+      "availableDays": ["sat", "sun"],
       "companyLogo": "/assets/images/profile.webp",
       "isFavorite": true
     },
@@ -3036,10 +4498,7 @@
       "priceCategory": 1,
       "rate": 3,
       "utilizationRate": 3,
-      "availableDays": [
-        "mon",
-        "fri"
-      ],
+      "availableDays": ["mon", "fri"],
       "companyLogo": "/assets/images/profile.webp",
       "isFavorite": false
     },
@@ -3080,10 +4539,7 @@
       "priceCategory": 4,
       "rate": 2,
       "utilizationRate": 4,
-      "availableDays": [
-        "wed",
-        "thu"
-      ],
+      "availableDays": ["wed", "thu"],
       "companyLogo": "/assets/images/profile.webp",
       "isFavorite": true
     },
@@ -3124,11 +4580,7 @@
       "priceCategory": 5,
       "rate": 5,
       "utilizationRate": 2,
-      "availableDays": [
-        "mon",
-        "tue",
-        "sat"
-      ],
+      "availableDays": ["mon", "tue", "sat"],
       "companyLogo": "/assets/images/profile.webp",
       "isFavorite": false
     },
@@ -3169,11 +4621,7 @@
       "priceCategory": 1,
       "rate": 4,
       "utilizationRate": 1,
-      "availableDays": [
-        "mon",
-        "tue",
-        "wed"
-      ],
+      "availableDays": ["mon", "tue", "wed"],
       "companyLogo": "/assets/images/profile.webp",
       "isFavorite": false
     },
@@ -3214,11 +4662,7 @@
       "priceCategory": 2,
       "rate": 3,
       "utilizationRate": 5,
-      "availableDays": [
-        "thu",
-        "fri",
-        "sun"
-      ],
+      "availableDays": ["thu", "fri", "sun"],
       "companyLogo": "/assets/images/profile.webp",
       "isFavorite": false
     },
@@ -3259,11 +4703,7 @@
       "priceCategory": 4,
       "rate": 2,
       "utilizationRate": 3,
-      "availableDays": [
-        "mon",
-        "wed",
-        "sat"
-      ],
+      "availableDays": ["mon", "wed", "sat"],
       "companyLogo": "/assets/images/profile.webp",
       "isFavorite": true
     },
@@ -3304,11 +4744,7 @@
       "priceCategory": 5,
       "rate": 5,
       "utilizationRate": 4,
-      "availableDays": [
-        "tue",
-        "thu",
-        "sun"
-      ],
+      "availableDays": ["tue", "thu", "sun"],
       "isFavorite": false,
       "companyLogo": "/assets/images/profile.webp"
     },
@@ -3349,11 +4785,7 @@
       "priceCategory": 3,
       "rate": 4,
       "utilizationRate": 5,
-      "availableDays": [
-        "mon",
-        "fri",
-        "sat"
-      ],
+      "availableDays": ["mon", "fri", "sat"],
       "companyLogo": "/assets/images/profile.webp",
       "isFavorite": true
     }
@@ -3591,6 +5023,45 @@
       "createdAt": "2025-03-14T03:40:45.172Z",
       "updatedAt": "2025-03-14T03:40:45.172Z",
       "id": 12
+    },
+    {
+      "name": "Untitled project",
+      "json": "",
+      "width": 900,
+      "height": 1200,
+      "userId": "67c59d65483e2344ce5caf01",
+      "isPro": false,
+      "thumbnailUrl": "",
+      "isTemplate": false,
+      "createdAt": "2025-03-18T13:13:56.390Z",
+      "updatedAt": "2025-03-18T13:13:56.390Z",
+      "id": 13
+    },
+    {
+      "name": "",
+      "json": "{\"version\":\"5.3.0\",\"objects\":[{\"type\":\"rect\",\"version\":\"5.3.0\",\"originX\":\"left\",\"originY\":\"top\",\"left\":-23.5,\"top\":-287,\"width\":800,\"height\":1200,\"fill\":\"rgba(244, 67, 54, 1)\",\"stroke\":null,\"strokeWidth\":1,\"strokeDashArray\":null,\"strokeLineCap\":\"butt\",\"strokeDashOffset\":0,\"strokeLineJoin\":\"miter\",\"strokeUniform\":false,\"strokeMiterLimit\":4,\"scaleX\":1,\"scaleY\":1,\"angle\":0,\"flipX\":false,\"flipY\":false,\"opacity\":1,\"shadow\":{\"color\":\"rgba(0,0,0,0.8)\",\"blur\":5,\"offsetX\":0,\"offsetY\":0,\"affectStroke\":false,\"nonScaling\":false},\"visible\":true,\"backgroundColor\":\"\",\"fillRule\":\"nonzero\",\"paintFirst\":\"fill\",\"globalCompositeOperation\":\"source-over\",\"skewX\":0,\"skewY\":0,\"rx\":0,\"ry\":0,\"name\":\"clip\",\"selectable\":false,\"hasControls\":false},{\"type\":\"rect\",\"version\":\"5.3.0\",\"originX\":\"left\",\"originY\":\"top\",\"left\":189.82,\"top\":290.35,\"width\":400,\"height\":400,\"fill\":\"rgba(196, 58, 58, 1)\",\"stroke\":\"rgba(239, 239, 239, 1)\",\"strokeWidth\":26,\"strokeDashArray\":[5,5],\"strokeLineCap\":\"butt\",\"strokeDashOffset\":0,\"strokeLineJoin\":\"miter\",\"strokeUniform\":false,\"strokeMiterLimit\":4,\"scaleX\":0.6,\"scaleY\":0.6,\"angle\":0,\"flipX\":false,\"flipY\":false,\"opacity\":1,\"shadow\":null,\"visible\":true,\"backgroundColor\":\"\",\"fillRule\":\"nonzero\",\"paintFirst\":\"fill\",\"globalCompositeOperation\":\"source-over\",\"skewX\":0,\"skewY\":0,\"rx\":50,\"ry\":50,\"selectable\":true,\"hasControls\":true},{\"type\":\"polygon\",\"version\":\"5.3.0\",\"originX\":\"left\",\"originY\":\"top\",\"left\":291.01,\"top\":-44.23,\"width\":600,\"height\":600,\"fill\":\"rgba(209, 191, 191, 1)\",\"stroke\":\"rgba(239, 239, 239, 1)\",\"strokeWidth\":26,\"strokeDashArray\":[5,5],\"strokeLineCap\":\"butt\",\"strokeDashOffset\":0,\"strokeLineJoin\":\"miter\",\"strokeUniform\":false,\"strokeMiterLimit\":4,\"scaleX\":0.71,\"scaleY\":0.71,\"angle\":32.48,\"flipX\":false,\"flipY\":false,\"opacity\":1,\"shadow\":null,\"visible\":true,\"backgroundColor\":\"\",\"fillRule\":\"nonzero\",\"paintFirst\":\"fill\",\"globalCompositeOperation\":\"source-over\",\"skewX\":0,\"skewY\":0,\"selectable\":true,\"hasControls\":true,\"points\":[{\"x\":300,\"y\":0},{\"x\":600,\"y\":300},{\"x\":300,\"y\":600},{\"x\":0,\"y\":300}]},{\"type\":\"textbox\",\"version\":\"5.3.0\",\"originX\":\"left\",\"originY\":\"top\",\"left\":102.09,\"top\":-280.02,\"width\":315.59,\"height\":90.4,\"fill\":\"rgba(255, 255, 255, 1)\",\"stroke\":null,\"strokeWidth\":1,\"strokeDashArray\":null,\"strokeLineCap\":\"butt\",\"strokeDashOffset\":0,\"strokeLineJoin\":\"miter\",\"strokeUniform\":false,\"strokeMiterLimit\":4,\"scaleX\":1.89,\"scaleY\":1.89,\"angle\":0,\"flipX\":false,\"flipY\":false,\"opacity\":1,\"shadow\":null,\"visible\":true,\"backgroundColor\":\"\",\"fillRule\":\"nonzero\",\"paintFirst\":\"fill\",\"globalCompositeOperation\":\"source-over\",\"skewX\":0,\"skewY\":0,\"fontFamily\":\"Arial\",\"fontWeight\":700,\"fontSize\":80,\"text\":\"Heading\",\"underline\":false,\"overline\":false,\"linethrough\":false,\"textAlign\":\"left\",\"fontStyle\":\"normal\",\"lineHeight\":1.16,\"textBackgroundColor\":\"\",\"charSpacing\":0,\"styles\":[],\"direction\":\"ltr\",\"path\":null,\"pathStartOffset\":0,\"pathSide\":\"left\",\"pathAlign\":\"baseline\",\"minWidth\":20,\"splitByGrapheme\":false,\"selectable\":false,\"hasControls\":false,\"editable\":true},{\"type\":\"textbox\",\"version\":\"5.3.0\",\"originX\":\"left\",\"originY\":\"top\",\"left\":-55.3,\"top\":-96.76,\"width\":315.59,\"height\":82.49,\"fill\":\"rgba(19, 246, 163, 1)\",\"stroke\":null,\"strokeWidth\":1,\"strokeDashArray\":null,\"strokeLineCap\":\"butt\",\"strokeDashOffset\":0,\"strokeLineJoin\":\"miter\",\"strokeUniform\":false,\"strokeMiterLimit\":4,\"scaleX\":1,\"scaleY\":1,\"angle\":0,\"flipX\":false,\"flipY\":false,\"opacity\":1,\"shadow\":null,\"visible\":true,\"backgroundColor\":\"\",\"fillRule\":\"nonzero\",\"paintFirst\":\"fill\",\"globalCompositeOperation\":\"source-over\",\"skewX\":0,\"skewY\":0,\"fontFamily\":\"Arial\",\"fontWeight\":700,\"fontSize\":73,\"text\":\"Test\",\"underline\":true,\"overline\":false,\"linethrough\":false,\"textAlign\":\"center\",\"fontStyle\":\"italic\",\"lineHeight\":1.16,\"textBackgroundColor\":\"\",\"charSpacing\":0,\"styles\":[],\"direction\":\"ltr\",\"path\":null,\"pathStartOffset\":0,\"pathSide\":\"left\",\"pathAlign\":\"baseline\",\"minWidth\":20,\"splitByGrapheme\":false,\"selectable\":true,\"hasControls\":true,\"editable\":true},{\"type\":\"circle\",\"version\":\"5.3.0\",\"originX\":\"left\",\"originY\":\"top\",\"left\":315.07,\"top\":638.36,\"width\":450,\"height\":450,\"fill\":\"rgba(56, 184, 137, 1)\",\"stroke\":\"rgba(0,0,0,1)\",\"strokeWidth\":0,\"strokeDashArray\":[],\"strokeLineCap\":\"butt\",\"strokeDashOffset\":0,\"strokeLineJoin\":\"miter\",\"strokeUniform\":false,\"strokeMiterLimit\":4,\"scaleX\":0.48,\"scaleY\":0.47,\"angle\":0,\"flipX\":false,\"flipY\":false,\"opacity\":1,\"shadow\":null,\"visible\":true,\"backgroundColor\":\"\",\"fillRule\":\"nonzero\",\"paintFirst\":\"fill\",\"globalCompositeOperation\":\"source-over\",\"skewX\":0,\"skewY\":0,\"radius\":225,\"startAngle\":0,\"endAngle\":360,\"selectable\":true,\"hasControls\":true},{\"type\":\"textbox\",\"version\":\"5.3.0\",\"originX\":\"left\",\"originY\":\"top\",\"left\":297.38,\"top\":-70.55,\"width\":114.21,\"height\":55.37,\"fill\":\"rgba(3, 169, 244, 1)\",\"stroke\":null,\"strokeWidth\":1,\"strokeDashArray\":null,\"strokeLineCap\":\"butt\",\"strokeDashOffset\":0,\"strokeLineJoin\":\"miter\",\"strokeUniform\":false,\"strokeMiterLimit\":4,\"scaleX\":2.37,\"scaleY\":2.37,\"angle\":0,\"flipX\":false,\"flipY\":false,\"opacity\":1,\"shadow\":null,\"visible\":true,\"backgroundColor\":\"\",\"fillRule\":\"nonzero\",\"paintFirst\":\"fill\",\"globalCompositeOperation\":\"source-over\",\"skewX\":0,\"skewY\":0,\"fontFamily\":\"Brush Script MT\",\"fontWeight\":500,\"fontSize\":49,\"text\":\"Textbox\",\"underline\":true,\"overline\":false,\"linethrough\":false,\"textAlign\":\"left\",\"fontStyle\":\"italic\",\"lineHeight\":1.16,\"textBackgroundColor\":\"\",\"charSpacing\":0,\"styles\":[],\"direction\":\"ltr\",\"path\":null,\"pathStartOffset\":0,\"pathSide\":\"left\",\"pathAlign\":\"baseline\",\"minWidth\":20,\"splitByGrapheme\":false,\"selectable\":true,\"hasControls\":true,\"editable\":true},{\"type\":\"textbox\",\"version\":\"5.3.0\",\"originX\":\"left\",\"originY\":\"top\",\"left\":228.53,\"top\":140.92,\"width\":315.59,\"height\":90.4,\"fill\":\"rgba(56, 184, 137, 1)\",\"stroke\":null,\"strokeWidth\":1,\"strokeDashArray\":null,\"strokeLineCap\":\"butt\",\"strokeDashOffset\":0,\"strokeLineJoin\":\"miter\",\"strokeUniform\":false,\"strokeMiterLimit\":4,\"scaleX\":0.85,\"scaleY\":0.85,\"angle\":0,\"flipX\":false,\"flipY\":false,\"opacity\":1,\"shadow\":null,\"visible\":true,\"backgroundColor\":\"\",\"fillRule\":\"nonzero\",\"paintFirst\":\"fill\",\"globalCompositeOperation\":\"source-over\",\"skewX\":0,\"skewY\":0,\"fontFamily\":\"Arial\",\"fontWeight\":700,\"fontSize\":80,\"text\":\"Heading\",\"underline\":false,\"overline\":false,\"linethrough\":false,\"textAlign\":\"left\",\"fontStyle\":\"normal\",\"lineHeight\":1.16,\"textBackgroundColor\":\"\",\"charSpacing\":0,\"styles\":[],\"direction\":\"ltr\",\"path\":null,\"pathStartOffset\":0,\"pathSide\":\"left\",\"pathAlign\":\"baseline\",\"minWidth\":20,\"splitByGrapheme\":false,\"selectable\":true,\"hasControls\":true,\"editable\":true},{\"type\":\"circle\",\"version\":\"5.3.0\",\"originX\":\"left\",\"originY\":\"top\",\"left\":32.4,\"top\":19.46,\"width\":450,\"height\":450,\"fill\":\"rgba(19, 246, 163, 1)\",\"stroke\":\"rgba(0,0,0,1)\",\"strokeWidth\":50,\"strokeDashArray\":[5,5],\"strokeLineCap\":\"butt\",\"strokeDashOffset\":0,\"strokeLineJoin\":\"miter\",\"strokeUniform\":false,\"strokeMiterLimit\":4,\"scaleX\":0.58,\"scaleY\":0.58,\"angle\":0,\"flipX\":false,\"flipY\":false,\"opacity\":0.45,\"shadow\":null,\"visible\":true,\"backgroundColor\":\"\",\"fillRule\":\"nonzero\",\"paintFirst\":\"fill\",\"globalCompositeOperation\":\"source-over\",\"skewX\":0,\"skewY\":0,\"radius\":225,\"startAngle\":0,\"endAngle\":360,\"selectable\":true,\"hasControls\":true},{\"type\":\"textbox\",\"version\":\"5.3.0\",\"originX\":\"left\",\"originY\":\"top\",\"left\":27.89,\"top\":-195.89,\"width\":315.59,\"height\":90.4,\"fill\":\"rgba(255, 255, 255, 1)\",\"stroke\":null,\"strokeWidth\":1,\"strokeDashArray\":null,\"strokeLineCap\":\"butt\",\"strokeDashOffset\":0,\"strokeLineJoin\":\"miter\",\"strokeUniform\":false,\"strokeMiterLimit\":4,\"scaleX\":0.49,\"scaleY\":0.49,\"angle\":0,\"flipX\":false,\"flipY\":false,\"opacity\":1,\"shadow\":null,\"visible\":true,\"backgroundColor\":\"\",\"fillRule\":\"nonzero\",\"paintFirst\":\"fill\",\"globalCompositeOperation\":\"source-over\",\"skewX\":0,\"skewY\":0,\"fontFamily\":\"Arial\",\"fontWeight\":700,\"fontSize\":80,\"text\":\"Heading\",\"underline\":false,\"overline\":false,\"linethrough\":false,\"textAlign\":\"left\",\"fontStyle\":\"normal\",\"lineHeight\":1.16,\"textBackgroundColor\":\"\",\"charSpacing\":0,\"styles\":[],\"direction\":\"ltr\",\"path\":null,\"pathStartOffset\":0,\"pathSide\":\"left\",\"pathAlign\":\"baseline\",\"minWidth\":20,\"splitByGrapheme\":false,\"selectable\":true,\"hasControls\":true,\"editable\":true},{\"type\":\"path\",\"version\":\"5.3.0\",\"originX\":\"left\",\"originY\":\"top\",\"left\":17.24,\"top\":-128.17,\"width\":203.56,\"height\":29.54,\"fill\":null,\"stroke\":\"rgba(0,0,0,1)\",\"strokeWidth\":2,\"strokeDashArray\":null,\"strokeLineCap\":\"round\",\"strokeDashOffset\":0,\"strokeLineJoin\":\"round\",\"strokeUniform\":false,\"strokeMiterLimit\":10,\"scaleX\":1,\"scaleY\":1,\"angle\":0,\"flipX\":false,\"flipY\":false,\"opacity\":1,\"shadow\":null,\"visible\":true,\"backgroundColor\":\"\",\"fillRule\":\"nonzero\",\"paintFirst\":\"fill\",\"globalCompositeOperation\":\"source-over\",\"skewX\":0,\"skewY\":0,\"selectable\":true,\"hasControls\":true,\"path\":[[\"M\",18.23525525820794,-127.16584893677435],[\"Q\",18.237255258207938,-127.16584893677435,18.78445088064295,-127.16584893677435],[\"Q\",19.331646503077963,-127.16584893677435,19.87884212551299,-127.16584893677435],[\"Q\",20.426037747948016,-127.16584893677435,21.520428992818054,-126.61874757715113],[\"Q\",22.614820237688093,-126.0716462175279,23.709211482558132,-124.97744349828145],[\"Q\",24.80360272742817,-123.88324077903499,26.992385217168263,-122.78903805978852],[\"Q\",29.181167706908354,-121.69483534054206,31.369950196648418,-120.6006326212956],[\"Q\",33.55873268638848,-119.50642990204915,35.74751517612859,-118.95932854242592],[\"Q\",37.93629766586869,-118.4122271828027,41.76666702291382,-116.22382174430976],[\"Q\",45.59703637995895,-114.03541630581682,48.333014492134055,-113.48831494619358],[\"Q\",51.06899260430916,-112.94121358657034,58.729731318399445,-110.75280814807742],[\"Q\",66.39047003248973,-108.5644027095845,93.75025115424077,-104.73469319222188],[\"Q\",121.11003227599181,-100.90498367485927,135.88431408173736,-100.35788231523604],[\"Q\",150.6585958874829,-99.81078095561281,159.96092146887824,-99.81078095561281],[\"Q\",169.26324705027358,-99.81078095561281,182.9431376111491,-98.71657823636635],[\"Q\",196.62302817202462,-97.62237551711988,205.92535375341996,-97.62237551711988],[\"Q\",215.2276793348153,-97.62237551711988,216.32207057968535,-97.62237551711988],[\"Q\",217.4164618245554,-97.62237551711988,219.05804869186045,-97.62237551711988],[\"Q\",220.6996355591655,-97.62237551711988,221.24683118160053,-98.16947687674312],[\"Q\",221.79402680403555,-98.71657823636636,221.79402680403555,-99.26367959598959],[\"Q\",221.79402680403555,-99.81078095561281,221.24683118160053,-99.81078095561281],[\"Q\",220.6996355591655,-99.81078095561281,220.1524399367305,-100.35788231523604],[\"Q\",219.6052443142955,-100.90498367485927,219.05804869186048,-100.90498367485927],[\"Q\",218.51085306942545,-100.90498367485927,218.51085306942545,-101.45208503448251],[\"Q\",218.51085306942545,-101.99918639410575,217.96365744699042,-102.54628775372896],[\"Q\",217.4164618245554,-103.09338911335217,215.22767933481532,-104.73469319222187],[\"Q\",213.03889684507524,-106.37599727109156,211.9445056002052,-106.92309863071479],[\"Q\",210.85011435533514,-107.47019999033802,208.11413624316003,-108.5644027095845],[\"Q\",205.37815813098493,-109.65860542883098,204.83096250854993,-109.65860542883098],[\"Q\",204.28376688611493,-109.65860542883098,203.7365712636799,-109.65860542883098],[\"Q\",203.18937564124488,-109.65860542883098,199.35900628419972,-110.20570678845421],[\"Q\",195.52863692715457,-110.75280814807743,193.3398544374145,-110.75280814807743],[\"Q\",191.1510719476744,-110.75280814807743,186.77350696819425,-110.75280814807743],[\"Q\",182.3959419887141,-110.75280814807743,178.01837700923392,-110.75280814807743],[\"Q\",173.64081202975373,-110.75280814807743,147.92261777530777,-110.75280814807743],[\"Q\",122.20442352086181,-110.75280814807743,121.11003227599178,-110.75280814807743],[\"Q\",120.01564103112176,-110.75280814807743,106.33575047024624,-110.75280814807743],[\"Q\",92.65585990937072,-110.75280814807743,78.4287737260602,-111.29990950770068],[\"Q\",64.20168754274968,-111.84701086732392,54.899361961354316,-112.94121358657037],[\"Q\",45.59703637995895,-114.03541630581682,37.936297665868665,-115.12961902506329],[\"Q\",30.27555895177838,-116.22382174430976,27.539580839603275,-117.31802446355623],[\"L\",24.801602727428172,-118.41422718280269]]},{\"type\":\"path\",\"version\":\"5.3.0\",\"originX\":\"left\",\"originY\":\"top\",\"left\":528.56,\"top\":117.31,\"width\":195.65,\"height\":39.02,\"fill\":null,\"stroke\":\"rgba(0,0,0,1)\",\"strokeWidth\":2,\"strokeDashArray\":null,\"strokeLineCap\":\"round\",\"strokeDashOffset\":0,\"strokeLineJoin\":\"round\",\"strokeUniform\":false,\"strokeMiterLimit\":10,\"scaleX\":1,\"scaleY\":1,\"angle\":0,\"flipX\":false,\"flipY\":false,\"opacity\":1,\"shadow\":null,\"visible\":true,\"backgroundColor\":\"\",\"fillRule\":\"nonzero\",\"paintFirst\":\"fill\",\"globalCompositeOperation\":\"source-over\",\"skewX\":0,\"skewY\":0,\"selectable\":true,\"hasControls\":true,\"path\":[[\"M\",135.33911845930234,-69.17510481671182],[\"Q\",135.33711845930233,-69.17310481671183,133.69553159199725,-69.17310481671183],[\"Q\",132.05394472469217,-69.17310481671183,130.95955347982215,-68.07890209746535],[\"Q\",129.86516223495212,-66.98469937821886,128.22357536764707,-66.43759801859565],[\"Q\",126.58198850034202,-65.89049665897244,124.39320601060192,-64.79629393972598],[\"Q\",122.20442352086181,-63.70209122047953,120.56283665355676,-62.60788850123308],[\"Q\",118.9212497862517,-61.513685781986624,116.1852716740766,-60.41948306274014],[\"Q\",113.4492935619015,-59.32528034349366,111.26051107216142,-58.231077624247206],[\"Q\",109.07172858242134,-57.13687490500075,107.43014171511629,-55.49557082613106],[\"Q\",105.78855484781124,-53.85426674726136,103.05257673563614,-53.30716538763812],[\"Q\",100.31659862346103,-52.76006402801488,95.93903364398085,-50.571658589521945],[\"Q\",91.56146866450067,-48.38325315102901,80.07036059336525,-46.1948477125361],[\"Q\",68.57925252222984,-44.006442274043195,54.35216633891929,-43.459340914419954],[\"Q\",40.12508015560874,-42.91223955479671,25.350798349863197,-43.459340914419954],[\"Q\",10.576516544117652,-44.006442274043195,0.7269953402872744,-46.74194907215937],[\"Q\",-9.122525863543103,-49.47745587027555,-10.764112730848154,-50.571658589521974],[\"Q\",-12.405699598153205,-51.6658613087684,-12.405699598153205,-52.21296266839164],[\"Q\",-12.405699598153205,-52.76006402801488,-12.952895220588232,-54.94846946650782],[\"Q\",-13.500090843023258,-57.13687490500075,-11.31130835328318,-60.966584422363354],[\"Q\",-9.122525863543103,-64.79629393972596,-5.839352128932973,-67.53180073784213],[\"Q\",-2.556178394322842,-70.26730753595831,3.4629734524623785,-73.00281433407446],[\"Q\",9.482125299247599,-75.7383211321906,20.973233370383042,-76.83252385143706],[\"Q\",32.464341441518485,-77.92672657068351,43.9554495126539,-75.7383211321906],[\"Q\",55.446557583789314,-73.5499156936977,64.20168754274965,-69.72020617633507],[\"Q\",72.95681750170999,-65.89049665897244,87.73109930745554,-59.8723817031169],[\"Q\",102.50538111320108,-53.85426674726136,118.37405416381668,-48.38325315102904],[\"Q\",134.24272721443228,-42.91223955479671,146.28103090800272,-40.72383411630378],[\"Q\",158.31933460157316,-38.53542867781084,164.88568207079342,-38.53542867781084],[\"Q\",171.45202954001368,-38.53542867781084,173.09361640731873,-38.53542867781084],[\"Q\",174.73520327462379,-38.53542867781084,175.82959451949384,-38.53542867781084],[\"Q\",176.9239857643639,-38.53542867781084,177.47118138679892,-39.08253003743408],[\"Q\",178.01837700923394,-39.629631397057324,179.11276825410397,-39.629631397057324],[\"Q\",180.207159498974,-39.629631397057324,181.30155074384405,-40.176732756680565],[\"Q\",182.3959419887141,-40.723834116303806,182.3959419887141,-41.27093547592702],[\"Q\",182.3959419887141,-41.81803683555023,181.84874636627907,-42.91223955479671],[\"Q\",181.30155074384405,-44.006442274043195,176.9239857643639,-46.1948477125361],[\"L\",172.54442078488373,-48.38525315102901]]},{\"type\":\"textbox\",\"version\":\"5.3.0\",\"originX\":\"left\",\"originY\":\"top\",\"left\":204.07,\"top\":232.79,\"width\":315.59,\"height\":90.4,\"fill\":\"rgba(235, 47, 47, 1)\",\"stroke\":null,\"strokeWidth\":1,\"strokeDashArray\":null,\"strokeLineCap\":\"butt\",\"strokeDashOffset\":0,\"strokeLineJoin\":\"miter\",\"strokeUniform\":false,\"strokeMiterLimit\":4,\"scaleX\":1,\"scaleY\":1,\"angle\":0,\"flipX\":false,\"flipY\":false,\"opacity\":1,\"shadow\":null,\"visible\":true,\"backgroundColor\":\"\",\"fillRule\":\"nonzero\",\"paintFirst\":\"fill\",\"globalCompositeOperation\":\"source-over\",\"skewX\":0,\"skewY\":0,\"fontFamily\":\"Brush Script MT\",\"fontWeight\":700,\"fontSize\":80,\"text\":\"Heading\",\"underline\":true,\"overline\":false,\"linethrough\":false,\"textAlign\":\"center\",\"fontStyle\":\"normal\",\"lineHeight\":1.16,\"textBackgroundColor\":\"\",\"charSpacing\":0,\"styles\":[],\"direction\":\"ltr\",\"path\":null,\"pathStartOffset\":0,\"pathSide\":\"left\",\"pathAlign\":\"baseline\",\"minWidth\":20,\"splitByGrapheme\":false,\"selectable\":true,\"hasControls\":true,\"editable\":true},{\"type\":\"triangle\",\"version\":\"5.3.0\",\"originX\":\"left\",\"originY\":\"top\",\"left\":356.24,\"top\":278.89,\"width\":400,\"height\":400,\"fill\":\"rgba(184, 35, 180, 1)\",\"stroke\":\"rgba(40, 205, 35, 1)\",\"strokeWidth\":50,\"strokeDashArray\":[5,5],\"strokeLineCap\":\"butt\",\"strokeDashOffset\":0,\"strokeLineJoin\":\"miter\",\"strokeUniform\":false,\"strokeMiterLimit\":4,\"scaleX\":0.81,\"scaleY\":0.81,\"angle\":0,\"flipX\":false,\"flipY\":false,\"opacity\":0.62,\"shadow\":null,\"visible\":true,\"backgroundColor\":\"\",\"fillRule\":\"nonzero\",\"paintFirst\":\"fill\",\"globalCompositeOperation\":\"source-over\",\"skewX\":0,\"skewY\":0,\"selectable\":true,\"hasControls\":true},{\"type\":\"image\",\"version\":\"5.3.0\",\"originX\":\"left\",\"originY\":\"top\",\"left\":-5.59,\"top\":628.18,\"width\":300,\"height\":300,\"fill\":\"rgb(0,0,0)\",\"stroke\":null,\"strokeWidth\":0,\"strokeDashArray\":null,\"strokeLineCap\":\"butt\",\"strokeDashOffset\":0,\"strokeLineJoin\":\"miter\",\"strokeUniform\":false,\"strokeMiterLimit\":4,\"scaleX\":0.89,\"scaleY\":0.89,\"angle\":0,\"flipX\":false,\"flipY\":false,\"opacity\":1,\"shadow\":null,\"visible\":true,\"backgroundColor\":\"\",\"fillRule\":\"nonzero\",\"paintFirst\":\"fill\",\"globalCompositeOperation\":\"source-over\",\"skewX\":0,\"skewY\":0,\"cropX\":0,\"cropY\":0,\"selectable\":true,\"hasControls\":true,\"src\":\"https://api.qrserver.com/v1/create-qr-code/?data=https%3A%2F%2Fwww.figma.com%2Fdesign%2Fgf2ZVLjiyhj8AOu0e2WC8D%2FUsers%3Fnode-id%3D0-1%26p%3Df%26t%3DnJ440lpCFVvA7AO8-0&size=300x300\",\"crossOrigin\":\"anonymous\",\"filters\":[]}],\"clipPath\":{\"type\":\"rect\",\"version\":\"5.3.0\",\"originX\":\"left\",\"originY\":\"top\",\"left\":-23.5,\"top\":-287,\"width\":800,\"height\":1200,\"fill\":\"rgba(244, 67, 54, 1)\",\"stroke\":null,\"strokeWidth\":1,\"strokeDashArray\":null,\"strokeLineCap\":\"butt\",\"strokeDashOffset\":0,\"strokeLineJoin\":\"miter\",\"strokeUniform\":false,\"strokeMiterLimit\":4,\"scaleX\":1,\"scaleY\":1,\"angle\":0,\"flipX\":false,\"flipY\":false,\"opacity\":1,\"shadow\":{\"color\":\"rgba(0,0,0,0.8)\",\"blur\":5,\"offsetX\":0,\"offsetY\":0,\"affectStroke\":false,\"nonScaling\":false},\"visible\":true,\"backgroundColor\":\"\",\"fillRule\":\"nonzero\",\"paintFirst\":\"fill\",\"globalCompositeOperation\":\"source-over\",\"skewX\":0,\"skewY\":0,\"rx\":0,\"ry\":0,\"selectable\":true,\"hasControls\":true}}",
+      "width": 800,
+      "height": 1200,
+      "userId": "",
+      "isPro": false,
+      "thumbnailUrl": "",
+      "isTemplate": false,
+      "createdAt": "2025-03-18T13:27:42.262Z",
+      "updatedAt": "2025-03-18T13:27:42.262Z",
+      "id": 14
+    },
+    {
+      "name": "Untitled project",
+      "json": "",
+      "width": 900,
+      "height": 1200,
+      "userId": "67c59d65483e2344ce5caf01",
+      "isPro": false,
+      "thumbnailUrl": "",
+      "isTemplate": false,
+      "createdAt": "2025-03-18T13:28:14.689Z",
+      "updatedAt": "2025-03-18T13:28:14.689Z",
+      "id": 15
     }
   ]
 }
