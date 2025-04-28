@@ -6,7 +6,7 @@ const path = require("path");
 const sharp = require("sharp");
 
 const server = jsonServer.create();
-// const router = jsonServer.router("db.json");
+// const router = jsonServer.router("db-2.json");
 const router = jsonServer.router("db.json");
 const middlewares = jsonServer.defaults();
 
