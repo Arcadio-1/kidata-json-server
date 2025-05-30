@@ -1,4 +1,66 @@
 {
+  "ADApproveInfo": [
+    {
+      "id": "1",
+      "onlineId": "ADS-ON1624",
+      "title": "Lorem Ipsum",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "categoryLabel": "Closing and Fashion",
+      "fileFormat": "Video / MP4",
+      "resolution": "3840 x 2160 (4K UHD)",
+      "orientation": "Landscape",
+      "size": "1,3 MB",
+      "length": "00:25:30"
+    },
+    {
+      "id": "2",
+      "onlineId": "ADS-ON1625",
+      "title": "Dolor Sit Amet",
+      "description": "Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+      "categoryLabel": "Automotive",
+      "fileFormat": "Image / JPEG",
+      "resolution": "1920 x 1080 (Full HD)",
+      "orientation": "Landscape",
+      "size": "2,5 MB",
+      "length": "00:00:00"
+    },
+    {
+      "id": "3",
+      "onlineId": "ADS-ON1626",
+      "title": "Consectetur Adipiscing",
+      "description": "Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
+      "categoryLabel": "Electronics",
+      "fileFormat": "Video / MOV",
+      "resolution": "1280 x 720 (HD)",
+      "orientation": "Landscape",
+      "size": "800 KB",
+      "length": "00:05:00"
+    },
+    {
+      "id": "4",
+      "onlineId": "ADS-ON1627",
+      "title": "Sed Do Eiusmod",
+      "description": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "categoryLabel": "Travel",
+      "fileFormat": "Image / PNG",
+      "resolution": "1080 x 1920 (Vertical)",
+      "orientation": "Portrait",
+      "size": "3,2 MB",
+      "length": "00:00:00"
+    },
+    {
+      "id": "5",
+      "onlineId": "ADS-ON1628",
+      "title": "Tempor Incididunt",
+      "description": "Tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam.",
+      "categoryLabel": "Food & Beverage",
+      "fileFormat": "Video / AVI",
+      "resolution": "640 x 480 (SD)",
+      "orientation": "Landscape",
+      "size": "500 KB",
+      "length": "00:02:45"
+    }
+  ],
   "notificationsList": [
     {
       "id": "1",
@@ -12,6 +74,7 @@
       "isSeen": false,
       "type": "COMPANY_INVITATION",
       "resourceId": "",
+      "invitationId": "",
       "resourceOnlineId": "",
       "additionalInformation": "Please respond within 7 days."
     },
@@ -27,6 +90,7 @@
       "isSeen": true,
       "type": "AD_APPROVE",
       "resourceId": "ad_789",
+      "invitationId": "",
       "resourceOnlineId": "online_ad_789",
       "additionalInformation": "Ad campaign starts tomorrow."
     },
@@ -42,6 +106,7 @@
       "isSeen": true,
       "type": "KIDATA_SERVICE",
       "resourceId": "srv_333",
+      "invitationId": "",
       "resourceOnlineId": "srv_online_333",
       "additionalInformation": "New analytics features added."
     },
@@ -57,6 +122,7 @@
       "isSeen": false,
       "type": "MESSAGE",
       "resourceId": "msg_101",
+      "invitationId": "",
       "resourceOnlineId": "msg_online_101",
       "additionalInformation": "Deadline: April 30, 2025."
     },
@@ -72,6 +138,7 @@
       "isSeen": false,
       "type": "PARTNER_INVITATION",
       "resourceId": "partner_001",
+      "invitationId": "11",
       "resourceOnlineId": "partner_online_001",
       "additionalInformation": "Looking forward to collaboration."
     },
@@ -87,6 +154,7 @@
       "isSeen": true,
       "type": "KIDATA_SERVICE",
       "resourceId": "srv_334",
+      "invitationId": "",
       "resourceOnlineId": "srv_online_334",
       "additionalInformation": "Downtime from 2AM to 4AM UTC."
     },
@@ -102,6 +170,7 @@
       "isSeen": false,
       "type": "MESSAGE",
       "resourceId": "sys_001",
+      "invitationId": "",
       "resourceOnlineId": "sys_online_001",
       "additionalInformation": "Review the changes at your earliest convenience."
     },
@@ -117,6 +186,7 @@
       "isSeen": true,
       "type": "PARTNER_INVITATION",
       "resourceId": "partner_002",
+      "invitationId": "10",
       "resourceOnlineId": "partner_online_002",
       "additionalInformation": "Feel free to reach out for further discussions."
     },
@@ -132,6 +202,7 @@
       "isSeen": false,
       "type": "AD_APPROVE",
       "resourceId": "ad_790",
+      "invitationId": "",
       "resourceOnlineId": "online_ad_790",
       "additionalInformation": "Expected completion: May 5, 2025."
     },
@@ -147,6 +218,7 @@
       "isSeen": true,
       "type": "COMPANY_SERVICE",
       "resourceId": "contract_003",
+      "invitationId": "",
       "resourceOnlineId": "contract_online_003",
       "additionalInformation": "Renewal due by May 10, 2025."
     }
@@ -2086,22 +2158,30 @@
   ],
   "industriesSuggestion": [
     {
-      "keywords": ["gggggggg"],
+      "keywords": [
+        "gggggggg"
+      ],
       "label": "ggggg",
       "id": 1
     },
     {
-      "keywords": ["ssssssssss"],
+      "keywords": [
+        "ssssssssss"
+      ],
       "label": "ggggg",
       "id": 2
     },
     {
-      "keywords": ["fffffffffff"],
+      "keywords": [
+        "fffffffffff"
+      ],
       "label": "ggggg",
       "id": 3
     },
     {
-      "keywords": ["rrrrrrr"],
+      "keywords": [
+        "rrrrrrr"
+      ],
       "label": "rrrrrrrrrr",
       "id": 4
     }
@@ -2825,7 +2905,9 @@
           "partnerList": []
         },
         "industryFilter": {
-          "industriesId": ["66bcd418448ffa01893ffd9a"]
+          "industriesId": [
+            "66bcd418448ffa01893ffd9a"
+          ]
         },
         "predefinedFilters": {
           "filtersId": []
@@ -3197,7 +3279,11 @@
       "phone": "123-456-7890",
       "responsiblePerson": "John Doe",
       "adminName": "Jane Smith",
-      "displaysOnlineId": ["partner01", "partner02", "partner02"],
+      "displaysOnlineId": [
+        "partner01",
+        "partner02",
+        "partner02"
+      ],
       "bookingUpdate": "2024-12-23T10:00:00Z",
       "status": "notBlocked"
     },
@@ -3210,7 +3296,10 @@
       "phone": "987-654-3210",
       "responsiblePerson": "Alice Brown",
       "adminName": "Bob Green",
-      "displaysOnlineId": ["partner01", "partner03"],
+      "displaysOnlineId": [
+        "partner01",
+        "partner03"
+      ],
       "bookingUpdate": "2024-12-22T09:00:00Z",
       "status": "blocked"
     },
@@ -3223,7 +3312,10 @@
       "phone": "555-123-4567",
       "responsiblePerson": "Chris Lee",
       "adminName": "Daniel Kim",
-      "displaysOnlineId": ["partner02", "partner04"],
+      "displaysOnlineId": [
+        "partner02",
+        "partner04"
+      ],
       "bookingUpdate": "2024-12-21T08:30:00Z",
       "status": "notBlocked"
     },
@@ -3236,7 +3328,10 @@
       "phone": "666-888-9999",
       "responsiblePerson": "David Wong",
       "adminName": "Emma White",
-      "displaysOnlineId": ["partner03", "partner05"],
+      "displaysOnlineId": [
+        "partner03",
+        "partner05"
+      ],
       "bookingUpdate": "2024-12-20T07:45:00Z",
       "status": "blocked"
     },
@@ -3249,7 +3344,10 @@
       "phone": "444-333-2222",
       "responsiblePerson": "Eve Harris",
       "adminName": "Frank Lewis",
-      "displaysOnlineId": ["partner04", "partner06"],
+      "displaysOnlineId": [
+        "partner04",
+        "partner06"
+      ],
       "bookingUpdate": "2024-12-19T06:15:00Z",
       "status": "notBlocked"
     },
@@ -3262,7 +3360,10 @@
       "phone": "111-222-3333",
       "responsiblePerson": "Gina Taylor",
       "adminName": "Hugh Clark",
-      "displaysOnlineId": ["partner05", "partner07"],
+      "displaysOnlineId": [
+        "partner05",
+        "partner07"
+      ],
       "bookingUpdate": "2024-12-18T05:00:00Z",
       "status": "blocked"
     },
@@ -3275,7 +3376,10 @@
       "phone": "777-888-9999",
       "responsiblePerson": "Harry Patel",
       "adminName": "Ivy Scott",
-      "displaysOnlineId": ["partner06", "partner08"],
+      "displaysOnlineId": [
+        "partner06",
+        "partner08"
+      ],
       "bookingUpdate": "2024-12-17T04:30:00Z",
       "status": "notBlocked"
     },
@@ -3288,7 +3392,10 @@
       "phone": "888-999-0000",
       "responsiblePerson": "Jack Ford",
       "adminName": "Karen Miller",
-      "displaysOnlineId": ["partner07", "partner09"],
+      "displaysOnlineId": [
+        "partner07",
+        "partner09"
+      ],
       "bookingUpdate": "2024-12-16T03:00:00Z",
       "status": "blocked"
     },
@@ -3301,7 +3408,10 @@
       "phone": "333-444-5555",
       "responsiblePerson": "Liam Davis",
       "adminName": "Megan Lewis",
-      "displaysOnlineId": ["partner08", "partner10"],
+      "displaysOnlineId": [
+        "partner08",
+        "partner10"
+      ],
       "bookingUpdate": "2024-12-15T02:30:00Z",
       "status": "notBlocked"
     },
@@ -3314,7 +3424,9 @@
       "phone": "222-333-4444",
       "responsiblePerson": "Nina Ford",
       "adminName": "Oscar Hunt",
-      "displaysOnlineId": ["partner09"],
+      "displaysOnlineId": [
+        "partner09"
+      ],
       "bookingUpdate": "2024-12-14T01:00:00Z",
       "status": "blocked"
     }
@@ -4349,23 +4461,41 @@
       "id": 2
     },
     {
-      "emails": ["c4netfff.9@gmail.com", "c4netfff.9@gmail.com"],
+      "emails": [
+        "c4netfff.9@gmail.com",
+        "c4netfff.9@gmail.com"
+      ],
       "id": 3
     },
     {
-      "emails": ["c4net.7@gmail.com", "c4net.8@gmail.com", "hgj@fsdf.com"],
+      "emails": [
+        "c4net.7@gmail.com",
+        "c4net.8@gmail.com",
+        "hgj@fsdf.com"
+      ],
       "id": 4
     },
     {
-      "emails": ["c4net.7@gmail.com", "hgj@fsdf.com"],
+      "emails": [
+        "c4net.7@gmail.com",
+        "hgj@fsdf.com"
+      ],
       "id": 5
     },
     {
-      "emails": ["c4net.8@gmail.com", "hgj@fsdf.com", "c4net.8@gmail.com"],
+      "emails": [
+        "c4net.8@gmail.com",
+        "hgj@fsdf.com",
+        "c4net.8@gmail.com"
+      ],
       "id": 6
     },
     {
-      "emails": ["c4net.8@gmail.com", "hgj@fsdf.com", "c4net.8@gmail.com"],
+      "emails": [
+        "c4net.8@gmail.com",
+        "hgj@fsdf.com",
+        "c4net.8@gmail.com"
+      ],
       "id": 7
     },
     {
@@ -4377,39 +4507,62 @@
       "id": 8
     },
     {
-      "emails": ["rkdo.skandari@gmail.com"],
+      "emails": [
+        "rkdo.skandari@gmail.com"
+      ],
       "id": 9
     },
     {
-      "emails": ["rkdo.skandari@gmail.com", "rkdo.skandari@gmail.com"],
+      "emails": [
+        "rkdo.skandari@gmail.com",
+        "rkdo.skandari@gmail.com"
+      ],
       "id": 10
     },
     {
-      "emails": ["rkdo.skandari@gmail.com", "c4net.7@gmail.com"],
+      "emails": [
+        "rkdo.skandari@gmail.com",
+        "c4net.7@gmail.com"
+      ],
       "id": 11
     },
     {
-      "emails": ["hgj@fsdf.com", "c4net.8@gmail.com"],
+      "emails": [
+        "hgj@fsdf.com",
+        "c4net.8@gmail.com"
+      ],
       "id": 12
     },
     {
-      "emails": ["skndri-hosyn@outlook.com"],
+      "emails": [
+        "skndri-hosyn@outlook.com"
+      ],
       "id": 13
     },
     {
-      "emails": ["c4net.8@gmail.com"],
+      "emails": [
+        "c4net.8@gmail.com"
+      ],
       "id": 14
     },
     {
-      "emails": ["c4net.8@gmail.com"],
+      "emails": [
+        "c4net.8@gmail.com"
+      ],
       "id": 15
     },
     {
-      "emails": ["rkdo.skandari@gmail.com", "rkdo.skandari@gmail.com"],
+      "emails": [
+        "rkdo.skandari@gmail.com",
+        "rkdo.skandari@gmail.com"
+      ],
       "id": 16
     },
     {
-      "emails": ["rkdo.skandari@gmail.com", "rkdo.skandari@gmail.com"],
+      "emails": [
+        "rkdo.skandari@gmail.com",
+        "rkdo.skandari@gmail.com"
+      ],
       "id": 17
     }
   ],
@@ -4568,7 +4721,13 @@
       "priceCategory": 2,
       "rate": 1,
       "utilizationRate": 4,
-      "availableDays": ["mon", "tue", "wed", "thu", "fri"],
+      "availableDays": [
+        "mon",
+        "tue",
+        "wed",
+        "thu",
+        "fri"
+      ],
       "companyLogo": "/assets/images/profile.webp",
       "isFavorite": true
     },
@@ -4609,7 +4768,10 @@
       "priceCategory": 3,
       "rate": 4,
       "utilizationRate": 5,
-      "availableDays": ["sat", "sun"],
+      "availableDays": [
+        "sat",
+        "sun"
+      ],
       "companyLogo": "/assets/images/profile.webp",
       "isFavorite": true
     },
@@ -4650,7 +4812,10 @@
       "priceCategory": 1,
       "rate": 3,
       "utilizationRate": 3,
-      "availableDays": ["mon", "fri"],
+      "availableDays": [
+        "mon",
+        "fri"
+      ],
       "companyLogo": "/assets/images/profile.webp",
       "isFavorite": false
     },
@@ -4691,7 +4856,10 @@
       "priceCategory": 4,
       "rate": 2,
       "utilizationRate": 4,
-      "availableDays": ["wed", "thu"],
+      "availableDays": [
+        "wed",
+        "thu"
+      ],
       "companyLogo": "/assets/images/profile.webp",
       "isFavorite": true
     },
@@ -4732,7 +4900,11 @@
       "priceCategory": 5,
       "rate": 5,
       "utilizationRate": 2,
-      "availableDays": ["mon", "tue", "sat"],
+      "availableDays": [
+        "mon",
+        "tue",
+        "sat"
+      ],
       "companyLogo": "/assets/images/profile.webp",
       "isFavorite": false
     },
@@ -4773,7 +4945,11 @@
       "priceCategory": 1,
       "rate": 4,
       "utilizationRate": 1,
-      "availableDays": ["mon", "tue", "wed"],
+      "availableDays": [
+        "mon",
+        "tue",
+        "wed"
+      ],
       "companyLogo": "/assets/images/profile.webp",
       "isFavorite": false
     },
@@ -4814,7 +4990,11 @@
       "priceCategory": 2,
       "rate": 3,
       "utilizationRate": 5,
-      "availableDays": ["thu", "fri", "sun"],
+      "availableDays": [
+        "thu",
+        "fri",
+        "sun"
+      ],
       "companyLogo": "/assets/images/profile.webp",
       "isFavorite": false
     },
@@ -4855,7 +5035,11 @@
       "priceCategory": 4,
       "rate": 2,
       "utilizationRate": 3,
-      "availableDays": ["mon", "wed", "sat"],
+      "availableDays": [
+        "mon",
+        "wed",
+        "sat"
+      ],
       "companyLogo": "/assets/images/profile.webp",
       "isFavorite": true
     },
@@ -4896,7 +5080,11 @@
       "priceCategory": 5,
       "rate": 5,
       "utilizationRate": 4,
-      "availableDays": ["tue", "thu", "sun"],
+      "availableDays": [
+        "tue",
+        "thu",
+        "sun"
+      ],
       "isFavorite": false,
       "companyLogo": "/assets/images/profile.webp"
     },
@@ -4937,7 +5125,11 @@
       "priceCategory": 3,
       "rate": 4,
       "utilizationRate": 5,
-      "availableDays": ["mon", "fri", "sat"],
+      "availableDays": [
+        "mon",
+        "fri",
+        "sat"
+      ],
       "companyLogo": "/assets/images/profile.webp",
       "isFavorite": true
     }
@@ -5017,6 +5209,1569 @@
       "displayId": "display01",
       "partnerId": "1",
       "id": 15
+    }
+  ],
+  "departments": [
+    {
+      "id": "1",
+      "name": "Management / Executive"
+    },
+    {
+      "id": "2",
+      "name": "Assistance & Secretariat"
+    },
+    {
+      "id": "3",
+      "name": "Human Resources (HR)"
+    },
+    {
+      "id": "4",
+      "name": "Finance & Controlling"
+    },
+    {
+      "id": "5",
+      "name": "Sales & Business Development"
+    },
+    {
+      "id": "6",
+      "name": "Marketing & PR"
+    },
+    {
+      "id": "7",
+      "name": "Customer Service / Support"
+    },
+    {
+      "id": "8",
+      "name": "IT & Development"
+    },
+    {
+      "id": "9",
+      "name": "Procurement & Logistics"
+    },
+    {
+      "id": "10",
+      "name": "Production & Engineering"
+    },
+    {
+      "id": "11",
+      "name": "Research & Development (R&D)"
+    },
+    {
+      "id": "12",
+      "name": "Quality Management"
+    },
+    {
+      "id": "13",
+      "name": "Legal & Compliance"
+    },
+    {
+      "id": "14",
+      "name": "Facility Management"
+    },
+    {
+      "id": "15",
+      "name": "Other"
+    }
+  ],
+  "companies": [
+    {
+      "id": "1",
+      "name": "Company 1"
+    },
+    {
+      "id": "2",
+      "name": "Company 2"
+    },
+    {
+      "id": "3",
+      "name": "Company 3"
+    },
+    {
+      "id": "4",
+      "name": "Company 4"
+    }
+  ],
+  "roles": [
+    {
+      "id": "1",
+      "label": "Adminstartor",
+      "desc": "The administrator manages the entire KiData account."
+    },
+    {
+      "id": "2",
+      "label": "Content Manager",
+      "desc": "A Content Manager is responsible for the content."
+    },
+    {
+      "id": "3",
+      "label": "Spot Manager",
+      "desc": "An Spot Manager creates and manages advertisements."
+    },
+    {
+      "id": "4",
+      "label": "Asset Manager",
+      "desc": "An Asset Manager manages the files in the media pool."
+    },
+    {
+      "id": "5",
+      "label": "User Manager",
+      "desc": "A User Manager manages user accounts and their roles."
+    },
+    {
+      "id": "6",
+      "label": "KiData Manager",
+      "desc": "A KiData Manager mangers kidata accounts."
+    },
+    {
+      "id": "7",
+      "label": "Advetisement Manager",
+      "desc": "An advertisement manager manges ads."
+    },
+    {
+      "id": "8",
+      "label": "Partner Manager",
+      "desc": "A partner manager manages the partner of the company."
+    },
+    {
+      "id": "9",
+      "label": "Category Manager",
+      "desc": "A category Manager manages..."
+    },
+    {
+      "id": "10",
+      "label": "Scheduling Manager",
+      "desc": "An Scheduling manager manages ...."
+    }
+  ],
+  "singleRoles": [
+    {
+      "id": "1",
+      "roles": [
+        {
+          "id": "8",
+          "label": "Partner Manager",
+          "desc": ""
+        },
+        {
+          "id": "3",
+          "label": "spot Manager",
+          "desc": ""
+        }
+      ],
+      "roleName": "hhhh",
+      "roleDesc": "hhhhhh",
+      "rolePermissions": [
+        "adSpot_assignCategories",
+        "adSpot_createCategories",
+        "adSpot_setToPrivate",
+        "adSpot_uploadFinishedSpots",
+        "adSpot_createInEditor",
+        "adSpot_editWithoutApproval",
+        "adSpot_saveDraft",
+        "adSpot_saveCommercial",
+        "adSpot_approveCommercial",
+        "adSpot_synchronizeCommercial",
+        "adSpot_archiveCommercial",
+        "adSpot_deleteCommercial",
+        "adSpot_blockUnblock",
+        "adSpot_swapCommercials"
+      ]
+    },
+    {
+      "id": "2",
+      "roles": [
+        {
+          "id": "1",
+          "label": "administrator",
+          "desc": ""
+        },
+        {
+          "id": "7",
+          "label": "Advertisement Manager",
+          "desc": ""
+        }
+      ],
+      "roleName": "TEST ROLE",
+      "roleDesc": "TEST ROLE",
+      "rolePermissions": [
+        "Advertisement",
+        "CREATE_AD",
+        "DELETE_AD",
+        "GET_AD",
+        "EDIT_AD_GENERAL_INFO",
+        "SET_AD_LOCK",
+        "SET_AD_ARCHIVE",
+        "SET_AD_COMMERCIAL",
+        "SWAP_AD",
+        "SET_AD_CONFIRMED_SYNC_COMMERCIAL",
+        "SET_AD_SYNC_COMMERCIAL",
+        "SAVE_AD_DRAFT",
+        "CONFIRM_AD",
+        "CONFIRM_AD_COMMERCIAL"
+      ]
+    },
+    {
+      "id": "3",
+      "roles": [
+        {
+          "id": "2",
+          "label": "Content Manager",
+          "desc": ""
+        },
+        {
+          "id": "1",
+          "label": "administrator",
+          "desc": ""
+        }
+      ],
+      "roleName": "sss",
+      "roleDesc": "ddd",
+      "rolePermissions": [
+        "CREATE_DISPLAY"
+      ]
+    },
+    {
+      "id": "4",
+      "roles": [
+        {
+          "id": "1",
+          "label": "administrator",
+          "desc": ""
+        },
+        {
+          "id": "5",
+          "label": "User Manager",
+          "desc": ""
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "roles": [
+        {
+          "id": "3",
+          "label": "Spot Manager",
+          "desc": ""
+        },
+        {
+          "id": "1",
+          "label": "administrator",
+          "desc": ""
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "roles": [],
+      "roleName": "TEST ROLE",
+      "roleDesc": "TEST ROLE",
+      "rolePermissions": [
+        "display",
+        "CREATE_DISPLAY",
+        "DUPLICATE_DISPLAY",
+        "DELETE_DISPLAY",
+        "SET_DISPLAY_LOCK",
+        "GET_PARTNER_DISPLAYS_INFO",
+        "GET_PARTNERS_DISPLAYS_INFO",
+        "SET_DISPLAY_ACCESS_CONTROLS",
+        "SET_DISPLAY_CATEGORY",
+        "SET_DISPLAY_SPECIFICATION",
+        "MANAGE_DISPLAY_CONTENT_FILTERS",
+        "EDIT_DISPLAY",
+        "SET_DISPLAY_GENERAL_INFO",
+        "SET_DISPLAY_AVAILABLE_TIMES",
+        "SET_DISPLAY_LOCATION_ADDRESS",
+        "SET_DISPLAY_VALUATION",
+        "SET_DISPLAY_PRICE_RATE",
+        "MANAGE_LOCATION_MEDIA",
+        "MANAGE_PLACEHOLDER_MEDIA",
+        "SET_DISPLAY_STATUS",
+        "SEND_DISPLAY_TOKEN",
+        "SET_PARTNER_FAVORITE_DISPLAY"
+      ]
+    },
+    {
+      "id": "7",
+      "roles": [
+        {
+          "id": "2",
+          "label": "Content Manager",
+          "desc": ""
+        }
+      ]
+    },
+    {
+      "id": "8",
+      "roles": [
+        {
+          "id": "3",
+          "label": "Spot Manager",
+          "desc": ""
+        }
+      ]
+    },
+    {
+      "id": "9",
+      "roles": [
+        {
+          "id": "5",
+          "label": "User Manager",
+          "desc": ""
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "roles": [
+        {
+          "id": "6",
+          "label": "Kidata Manager",
+          "desc": ""
+        }
+      ]
+    }
+  ],
+  "userPermissions": [
+    {
+      "id": "1",
+      "label": "administrator",
+      "permissions": [
+        "DUPLICATE_DISPLAY",
+        "GET_PARTNERS_DISPLAYS_INFO",
+        "SET_DISPLAY_ACCESS_CONTROLS",
+        "SET_DISPLAY_CATEGORY",
+        "SET_DISPLAY_SPECIFICATION",
+        "MANAGE_DISPLAY_CONTENT_FILTERS",
+        "EDIT_DISPLAY",
+        "SET_DISPLAY_AVAILABLE_TIMES",
+        "SET_DISPLAY_VALUATION",
+        "SET_DISPLAY_PRICE_RATE",
+        "MANAGE_LOCATION_MEDIA",
+        "MANAGE_PLACEHOLDER_MEDIA",
+        "SET_DISPLAY_STATUS",
+        "SEND_DISPLAY_TOKEN",
+        "SET_PARTNER_FAVORITE_DISPLAY",
+        "UPLOAD_MEDIAPOOL_MEDIA",
+        "DELETE_MEDIAPOOL_MEDIA",
+        "GET_PUBLIC_MEDIA",
+        "GET_PRIVATE_MEDIA",
+        "EDIT_PUBLIC_MEDIA_GENERAL_INFO",
+        "EDIT_PRIVATE_MEDIA_GENERAL_INFO",
+        "SET_PUBLIC_MEDIA_STATUS",
+        "SET_PRIVATE_MEDIA_STATUS",
+        "EDIT_PUBLIC_MEDIA_MEDIATYPE",
+        "EDIT_PRIVATE_MEDIA_MEDIATYPE",
+        "EDIT_PUBLIC_MEDIA_INFOACCESS",
+        "EDIT_PRIVATE_MEDIA_INFOACCESS",
+        "SET_PUBLIC_MEDIA_MEDIATYPE",
+        "SET_PRIVATE_MEDIA_MEDIATYPE",
+        "ASSIGN_PRIVATE_FILES",
+        "adSpot_generalInformation",
+        "adSpot_assignCategories",
+        "adSpot_createCategories",
+        "adSpot_setToPrivate",
+        "adSpot_uploadFinishedSpots",
+        "adSpot_createInEditor",
+        "adSpot_editWithoutApproval",
+        "adSpot_saveDraft",
+        "adSpot_saveCommercial",
+        "adSpot_approveCommercial",
+        "adSpot_synchronizeCommercial",
+        "adSpot_archiveCommercial",
+        "adSpot_deleteCommercial",
+        "adSpot_blockUnblock",
+        "adSpot_swapCommercials",
+        "CREATE_ADBLOCK",
+        "DELETE_ADBLOCK",
+        "GET_ADBLOCK",
+        "EDIT_ADBLOCK_GENERAL_INFO",
+        "EDIT_ADBLOCK_INUSE",
+        "EDIT_ADBLOCK_DRAFT",
+        "SAVE_ADBLOCK",
+        "CREATE_AD",
+        "DELETE_AD",
+        "GET_AD",
+        "EDIT_AD_GENERAL_INFO",
+        "SET_AD_LOCK",
+        "SET_AD_ARCHIVE",
+        "SET_AD_COMMERCIAL",
+        "SWAP_AD",
+        "SET_AD_CONFIRMED_SYNC_COMMERCIAL",
+        "SET_AD_SYNC_COMMERCIAL",
+        "SAVE_AD_DRAFT",
+        "CONFIRM_AD",
+        "CONFIRM_AD_COMMERCIAL",
+        "CREATE_SCHEDULE",
+        "DELETE_SCHEDULE_SHIPMENT",
+        "GET_SCHEDULE",
+        "EDIT_SCHEDULE_GENERAL_INFO",
+        "COMPILE_SCHEDULE_BROADCAST",
+        "SAVE_SCHEDUAL_SHIPMENT_TEMPLATE",
+        "SET_SCHEDUAL_PLACE_SHIPMENT",
+        "SET_SCHEDUAL_PROGRAM_OWN_DISPLAY",
+        "SET_SCHEDUAL_PROGRAM_PARTNER_DISPLAY",
+        "SAVE_SCHEDUAL_SHIPMENT",
+        "INVITE_USERS",
+        "CREATE_CUSTOM_ROLE",
+        "DUPLICATE_ROLE",
+        "CREATE_USER",
+        "INVITE_EXTERNAL_USER",
+        "SEND_MESSAGE",
+        "DELETE_USER",
+        "DELETE_EXTERNAL_USER",
+        "DELETE_CUSTOM_ROLE",
+        "GET_USERS",
+        "GET_USER_EXTENDED",
+        "GET_COMPANY_INFO",
+        "GET_USER_ROLE_DETAILS",
+        "ASSIGN_ROLE",
+        "EDIT_CUSTOM_ROLE_PERMISSION",
+        "RENAME_CUSTOM_ROLE",
+        "EDIT_USER_STATUS",
+        "EDIT_USER",
+        "EDIT_EXTERNAL_USER",
+        "ASSIGN_ROLE_EXTERNAL",
+        "INVITE_PARTNER",
+        "SEND_MESSAGE_PARTNER_ADMIN",
+        "DELETE_PARTNER",
+        "UNSHARE_DISPLAY",
+        "GET_PARTNERS",
+        "GET_PARTNER_COMPANY_INFO",
+        "GET_PARTNER_ADMIN_INFO",
+        "GET_SHARED_DISPLAYS",
+        "SET_PARTNER_STATUS",
+        "MANAGE_CATEGORY"
+      ]
+    },
+    {
+      "id": "2",
+      "label": "Content manager",
+      "permissions": [
+        "UPLOAD_MEDIAPOOL_MEDIA",
+        "DELETE_MEDIAPOOL_MEDIA",
+        "GET_PUBLIC_MEDIA",
+        "GET_PRIVATE_MEDIA",
+        "EDIT_PUBLIC_MEDIA_GENERAL_INFO",
+        "EDIT_PRIVATE_MEDIA_GENERAL_INFO",
+        "SET_PUBLIC_MEDIA_STATUS",
+        "SET_PRIVATE_MEDIA_STATUS",
+        "EDIT_PUBLIC_MEDIA_MEDIATYPE",
+        "EDIT_PRIVATE_MEDIA_MEDIATYPE",
+        "EDIT_PUBLIC_MEDIA_INFOACCESS",
+        "EDIT_PRIVATE_MEDIA_INFOACCESS",
+        "SET_PUBLIC_MEDIA_MEDIATYPE",
+        "SET_PRIVATE_MEDIA_MEDIATYPE",
+        "ASSIGN_PRIVATE_FILES",
+        "CREATE_ADBLOCK",
+        "DELETE_ADBLOCK",
+        "GET_ADBLOCK",
+        "EDIT_ADBLOCK_GENERAL_INFO",
+        "EDIT_ADBLOCK_INUSE",
+        "EDIT_ADBLOCK_DRAFT",
+        "SAVE_ADBLOCK"
+      ]
+    },
+    {
+      "id": "3",
+      "label": "Spot Manager",
+      "permissions": [
+        "adSpot_generalInformation",
+        "adSpot_assignCategories",
+        "adSpot_createCategories",
+        "adSpot_setToPrivate",
+        "adSpot_uploadFinishedSpots",
+        "adSpot_createInEditor",
+        "adSpot_editWithoutApproval",
+        "adSpot_saveDraft",
+        "adSpot_saveCommercial",
+        "adSpot_approveCommercial",
+        "adSpot_synchronizeCommercial",
+        "adSpot_archiveCommercial",
+        "adSpot_deleteCommercial",
+        "adSpot_blockUnblock",
+        "adSpot_swapCommercials"
+      ]
+    },
+    {
+      "id": "4",
+      "label": "Asset Manager",
+      "permissions": [
+        "UPLOAD_MEDIAPOOL_MEDIA",
+        "DELETE_MEDIAPOOL_MEDIA",
+        "GET_PUBLIC_MEDIA",
+        "GET_PRIVATE_MEDIA",
+        "EDIT_PUBLIC_MEDIA_GENERAL_INFO",
+        "EDIT_PRIVATE_MEDIA_GENERAL_INFO",
+        "SET_PUBLIC_MEDIA_STATUS",
+        "SET_PRIVATE_MEDIA_STATUS",
+        "EDIT_PUBLIC_MEDIA_MEDIATYPE",
+        "EDIT_PRIVATE_MEDIA_MEDIATYPE",
+        "EDIT_PUBLIC_MEDIA_INFOACCESS",
+        "EDIT_PRIVATE_MEDIA_INFOACCESS",
+        "SET_PUBLIC_MEDIA_MEDIATYPE",
+        "SET_PRIVATE_MEDIA_MEDIATYPE",
+        "ASSIGN_PRIVATE_FILES"
+      ]
+    },
+    {
+      "id": "5",
+      "label": "User Manager",
+      "permissions": [
+        "INVITE_USERS",
+        "CREATE_CUSTOM_ROLE",
+        "DUPLICATE_ROLE",
+        "CREATE_USER",
+        "INVITE_EXTERNAL_USER",
+        "SEND_MESSAGE",
+        "DELETE_USER",
+        "DELETE_EXTERNAL_USER",
+        "DELETE_CUSTOM_ROLE",
+        "GET_USERS",
+        "GET_USER_EXTENDED",
+        "GET_COMPANY_INFO",
+        "GET_USER_ROLE_DETAILS",
+        "ASSIGN_ROLE",
+        "EDIT_CUSTOM_ROLE_PERMISSION",
+        "RENAME_CUSTOM_ROLE",
+        "EDIT_USER_STATUS",
+        "EDIT_USER",
+        "EDIT_EXTERNAL_USER",
+        "ASSIGN_ROLE_EXTERNAL"
+      ]
+    },
+    {
+      "id": "6",
+      "label": "Kidata Manager",
+      "permissions": [
+        "DUPLICATE_DISPLAY",
+        "GET_PARTNERS_DISPLAYS_INFO",
+        "SET_DISPLAY_ACCESS_CONTROLS",
+        "SET_DISPLAY_CATEGORY",
+        "SET_DISPLAY_SPECIFICATION",
+        "MANAGE_DISPLAY_CONTENT_FILTERS",
+        "EDIT_DISPLAY",
+        "SET_DISPLAY_AVAILABLE_TIMES",
+        "SET_DISPLAY_VALUATION",
+        "SET_DISPLAY_PRICE_RATE",
+        "MANAGE_LOCATION_MEDIA",
+        "MANAGE_PLACEHOLDER_MEDIA",
+        "SET_DISPLAY_STATUS",
+        "SEND_DISPLAY_TOKEN",
+        "SET_PARTNER_FAVORITE_DISPLAY"
+      ]
+    },
+    {
+      "id": "7",
+      "label": "Advertisement Manager",
+      "permissions": [
+        "CREATE_AD",
+        "DELETE_AD",
+        "GET_AD",
+        "EDIT_AD_GENERAL_INFO",
+        "SET_AD_LOCK",
+        "SET_AD_ARCHIVE",
+        "SET_AD_COMMERCIAL",
+        "SWAP_AD",
+        "SET_AD_CONFIRMED_SYNC_COMMERCIAL",
+        "SET_AD_SYNC_COMMERCIAL",
+        "SAVE_AD_DRAFT",
+        "CONFIRM_AD",
+        "CONFIRM_AD_COMMERCIAL"
+      ]
+    },
+    {
+      "id": "8",
+      "label": "Partner Manager",
+      "roleName": [
+        "Partner Manager"
+      ],
+      "permissions": [
+        "INVITE_PARTNER",
+        "SEND_MESSAGE_PARTNER_ADMIN",
+        "DELETE_PARTNER",
+        "UNSHARE_DISPLAY",
+        "GET_PARTNERS",
+        "GET_PARTNER_COMPANY_INFO",
+        "GET_PARTNER_ADMIN_INFO",
+        "GET_SHARED_DISPLAYS",
+        "SET_PARTNER_STATUS"
+      ]
+    },
+    {
+      "id": "9",
+      "label": "Category Manager",
+      "permissions": [
+        "MANAGE_CATEGORY"
+      ]
+    },
+    {
+      "id": "10",
+      "label": "Scheduling Manager",
+      "permissions": [
+        "CREATE_SCHEDULE",
+        "DELETE_SCHEDULE_SHIPMENT",
+        "GET_SCHEDULE",
+        "EDIT_SCHEDULE_GENERAL_INFO",
+        "COMPILE_SCHEDULE_BROADCAST",
+        "SAVE_SCHEDUAL_SHIPMENT_TEMPLATE",
+        "SET_SCHEDUAL_PLACE_SHIPMENT",
+        "SET_SCHEDUAL_PROGRAM_OWN_DISPLAY",
+        "SET_SCHEDUAL_PROGRAM_PARTNER_DISPLAY",
+        "SAVE_SCHEDUAL_SHIPMENT"
+      ]
+    }
+  ],
+  "userGeneralAccessArea": [
+    {
+      "id": "1",
+      "label": "displays",
+      "permission": [
+        "GENERAL_DISPLAY"
+      ]
+    },
+    {
+      "id": "2",
+      "label": "mediaPool",
+      "permission": [
+        "GENERAL_MEDIAPOOL"
+      ]
+    },
+    {
+      "id": "3",
+      "label": "Private Media Pool",
+      "permission": [
+        "GENERAL_PRIVATE_MEDIAPOOL"
+      ]
+    },
+    {
+      "id": "4",
+      "label": "Advertisements",
+      "permission": [
+        "GENERAL_AD"
+      ]
+    },
+    {
+      "id": "5",
+      "label": "Playlist",
+      "permission": [
+        "GENERAL_PLAYLIST"
+      ]
+    },
+    {
+      "id": "6",
+      "label": "Private Playlist",
+      "permission": [
+        "GENERAL_PRIVATE_PLAYLIST"
+      ]
+    },
+    {
+      "id": "7",
+      "label": "Short Playlist",
+      "permission": [
+        "GENERAL_SHORT_PLAYLIST"
+      ]
+    },
+    {
+      "id": "8",
+      "label": "Private Short Playlist",
+      "permission": [
+        "GENERAL_DISPLAY",
+        "GENERAL_MEDIAPOOL",
+        "GENERAL_PRIVATE_MEDIAPOOL"
+      ]
+    },
+    {
+      "id": "9",
+      "label": "User Managemet",
+      "permission": [
+        "GENERAL_USER_MANAGEMENT"
+      ]
+    }
+  ],
+  "usersCompanyList": [
+    {
+      "id": "1",
+      "companyId": "1",
+      "companyName": "Tech Solutions Inc.",
+      "logo": "/assets/images/profile.webp",
+      "createDate": "2023-01-15T10:30:00Z",
+      "street": "123 Tech Lane",
+      "streetNumber": "W-34-2",
+      "zipCode": "90001",
+      "city": "Los Angeles",
+      "phone": "123-456-7890",
+      "email": "contact@techsolutions.com",
+      "responsiblePersonName": "John",
+      "responsiblePersonLastName": "Doe",
+      "adminName": "Jane",
+      "adminLastName": "Smith",
+      "adminPhone": "321-654-0987",
+      "adminUsername": "admin_tech01"
+    },
+    {
+      "id": "2",
+      "companyId": "2",
+      "companyName": "Creative Media Group",
+      "logo": "/assets/images/profile.webp",
+      "createDate": "2022-12-10T15:00:00Z",
+      "street": "456 Creative Blvd",
+      "streetNumber": "W-34-2",
+      "zipCode": "10001",
+      "city": "New York",
+      "phone": "987-654-3210",
+      "email": "support@creativemedia.com",
+      "responsiblePersonName": "Alice",
+      "responsiblePersonLastName": "Brown",
+      "adminName": "Bob",
+      "adminLastName": "Green",
+      "adminPhone": "654-321-7890",
+      "adminUsername": "admin_creative02"
+    },
+    {
+      "id": "3",
+      "companyId": "3",
+      "companyName": "Innovative Tech Solutions",
+      "logo": "/assets/images/profile.webp",
+      "createDate": "2023-05-20T09:00:00Z",
+      "street": "789 Innovation Way",
+      "streetNumber": "W-34-2",
+      "zipCode": "60601",
+      "city": "Chicago",
+      "phone": "555-123-4567",
+      "email": "contact@innovativetech.com",
+      "responsiblePersonName": "Chris",
+      "responsiblePersonLastName": "Lee",
+      "adminName": "Daniel",
+      "adminLastName": "Kim",
+      "adminPhone": "567-890-1234",
+      "adminUsername": "admin_innovative03"
+    },
+    {
+      "id": "4",
+      "companyId": "4",
+      "companyName": "Elite Software Solutions",
+      "logo": "/assets/images/profile.webp",
+      "createDate": "2023-03-01T14:00:00Z",
+      "street": "101 Elite Avenue",
+      "streetNumber": "W-34-2",
+      "zipCode": "94101",
+      "city": "San Francisco",
+      "phone": "666-888-9999",
+      "email": "info@elitesoftware.com",
+      "responsiblePersonName": "David",
+      "responsiblePersonLastName": "Wong",
+      "adminName": "Emma",
+      "adminLastName": "White",
+      "adminPhone": "432-567-8901",
+      "adminUsername": "admin_elite04"
+    },
+    {
+      "id": "5",
+      "companyId": "5",
+      "companyName": "Global Tech Innovations",
+      "logo": "/assets/images/profile.webp",
+      "createDate": "2023-06-15T12:30:00Z",
+      "street": "202 Global St.",
+      "streetNumber": "W-34-2",
+      "zipCode": "75201",
+      "city": "Dallas",
+      "phone": "444-333-2222",
+      "email": "contact@globaltech.com",
+      "responsiblePersonName": "Eve",
+      "responsiblePersonLastName": "Harris",
+      "adminName": "Frank",
+      "adminLastName": "Lewis",
+      "adminPhone": "321-123-4567",
+      "adminUsername": "admin_global05"
+    },
+    {
+      "id": "6",
+      "companyId": "6",
+      "companyName": "NextGen Solutions",
+      "logo": "/assets/images/profile.webp",
+      "createDate": "2023-02-25T16:45:00Z",
+      "street": "303 NextGen Road",
+      "streetNumber": "W-34-2",
+      "zipCode": "80202",
+      "city": "Denver",
+      "phone": "111-222-3333",
+      "email": "info@nextgensolutions.com",
+      "responsiblePersonName": "Gina",
+      "responsiblePersonLastName": "Taylor",
+      "adminName": "Hugh",
+      "adminLastName": "Clark",
+      "adminPhone": "123-456-7899",
+      "adminUsername": "admin_nextgen06"
+    },
+    {
+      "id": "7",
+      "companyId": "7",
+      "companyName": "Tech Innovators LLC",
+      "logo": "/assets/images/profile.webp",
+      "createDate": "2023-09-10T08:15:00Z",
+      "street": "404 Innovators Lane",
+      "streetNumber": "W-34-2",
+      "zipCode": "48201",
+      "city": "Detroit",
+      "phone": "777-888-9999",
+      "email": "contact@techinnovators.com",
+      "responsiblePersonName": "Harry",
+      "responsiblePersonLastName": "Patel",
+      "adminName": "Ivy",
+      "adminLastName": "Scott",
+      "adminPhone": "567-890-4321",
+      "adminUsername": "admin_innovators07"
+    },
+    {
+      "id": "8",
+      "companyId": "8",
+      "companyName": "Digital Solutions Co.",
+      "logo": "/assets/images/profile.webp",
+      "createDate": "2023-04-30T11:00:00Z",
+      "street": "505 Digital Plaza",
+      "streetNumber": "W-34-2",
+      "zipCode": "30301",
+      "city": "Atlanta",
+      "phone": "888-999-0000",
+      "email": "info@digitalsolutions.com",
+      "responsiblePersonName": "Jack",
+      "responsiblePersonLastName": "Ford",
+      "adminName": "Karen",
+      "adminLastName": "Miller",
+      "adminPhone": "456-123-7890",
+      "adminUsername": "admin_digital08"
+    },
+    {
+      "id": "9",
+      "companyId": "9",
+      "companyName": "Pioneer Innovations",
+      "logo": "/assets/images/profile.webp",
+      "createDate": "2023-11-01T13:30:00Z",
+      "street": "606 Pioneer Way",
+      "streetNumber": "W-34-2",
+      "zipCode": "37067",
+      "city": "Franklin",
+      "phone": "333-444-5555",
+      "email": "contact@pioneerinnovations.com",
+      "responsiblePersonName": "Liam",
+      "responsiblePersonLastName": "Davis",
+      "adminName": "Megan",
+      "adminLastName": "Lewis",
+      "adminPhone": "789-012-3456",
+      "adminUsername": "admin_pioneer09"
+    },
+    {
+      "id": "10",
+      "companyId": "10",
+      "companyName": "Visionary Enterprises",
+      "logo": "/assets/images/profile.webp",
+      "createDate": "2023-08-05T07:45:00Z",
+      "street": "707 Visionary Blvd",
+      "streetNumber": "W-34-2",
+      "zipCode": "33101",
+      "city": "Miami",
+      "phone": "222-333-4444",
+      "email": "support@visionaryenterprises.com",
+      "responsiblePersonName": "Nina",
+      "responsiblePersonLastName": "Ford",
+      "adminName": "Oscar",
+      "adminLastName": "Hunt",
+      "adminPhone": "654-987-3210",
+      "adminUsername": "admin_visionary10"
+    }
+  ],
+  "singleUser": [
+    {
+      "id": "1",
+      "salutation": "Ms.",
+      "title": "",
+      "firstName": "Jane",
+      "lastName": "Smith",
+      "userName": "admin_tech01",
+      "position": "System Administrator",
+      "mobile": "+989-912-8877805",
+      "phone": "+989-21-22328916",
+      "emailAddress": "janesmith@gmail.com",
+      "companyName": "Tech Solutions Inc.",
+      "categoryId": "67c2b9dba86e4b8ae53b97cf",
+      "departmentId": "Management/Executive",
+      "status": "Paused",
+      "invitedPerson": "Jane",
+      "affiliation": "external",
+      "entryDate": "2023-05-10T08:30:00Z",
+      "lastActivity": "2024-04-15T17:45:00Z",
+      "onlineId": "5415",
+      "userImage": "/assets/images/profile.webp",
+      "categoryColor": "#3498db",
+      "categoryTitle": "Administration Team",
+      "isCustomeRole": true,
+      "generalAccessAreas": [
+        {
+          "id": "8",
+          "label": "Private Short Playlist"
+        }
+      ],
+      "roles": []
+    },
+    {
+      "id": "2",
+      "salutation": "Mr.",
+      "title": "",
+      "firstName": "Bob",
+      "lastName": "Green",
+      "userName": "admin_creative02",
+      "position": "Creative Director",
+      "mobile": "+989-912-8877805",
+      "phone": "+989-21-22328916",
+      "emailAddress": "bobgreen@gmail.com",
+      "companyName": "Creative Media Group",
+      "categoryId": "6804d850d0c3daef8b80d6b4",
+      "departmentId": "Assistance&Secretariat",
+      "status": "Active",
+      "invitedPerson": "Bob",
+      "affiliation": "internal",
+      "entryDate": "2022-11-05T09:00:00Z",
+      "lastActivity": "2024-03-20T14:22:00Z",
+      "onlineId": "8541",
+      "userImage": "/assets/images/profile.webp",
+      "isCustomeRole": true,
+      "generalAccessAreas": [],
+      "roles": [
+        {
+          "label": "administrator",
+          "id": "1"
+        },
+        {
+          "label": "Advertisement Manager",
+          "id": "7"
+        }
+      ],
+      "categoryColor": "#2ecc71",
+      "categoryTitle": "Creative Team"
+    },
+    {
+      "id": "3",
+      "salutation": "Mr.",
+      "title": "",
+      "firstName": "Daniel",
+      "lastName": "Kim",
+      "userName": "admin_innovative03",
+      "position": "CTO",
+      "mobile": "+989-912-8877805",
+      "phone": "+989-21-22328916",
+      "emailAddress": "danielkim@gmail.com",
+      "companyName": "Innovative Tech Solutions",
+      "categoryId": "67c2b9dba86e4b8ae53b97cf",
+      "departmentId": "Human Resource(HR)",
+      "status": "Active",
+      "invitedPerson": "Daniel",
+      "affiliation": "external",
+      "entryDate": "2023-01-15T11:15:00Z",
+      "lastActivity": "2024-02-28T08:10:00Z",
+      "onlineId": "97984",
+      "userImage": "/assets/images/profile.webp",
+      "generalAccessAreas": [],
+      "roles": [
+        {
+          "label": "Content Manager",
+          "id": "2"
+        },
+        {
+          "label": "administrator",
+          "id": "1"
+        }
+      ],
+      "categoryColor": "#e74c3c",
+      "categoryTitle": "Leadership Team"
+    },
+    {
+      "id": "4",
+      "salutation": "Ms.",
+      "title": "",
+      "firstName": "Emma",
+      "lastName": "White",
+      "userName": "admin_elite04",
+      "position": "Software Architect",
+      "mobile": "+989-912-8877805",
+      "phone": "+989-21-22328916",
+      "emailAddress": "emmawhite@gmail.com",
+      "companyName": "Elite Software Solutions",
+      "categoryId": "6804d850d0c3daef8b80d6b4",
+      "departmentId": "Finance&Controlling",
+      "status": "Paused",
+      "invitedPerson": "Emma",
+      "affiliation": "internal",
+      "entryDate": "2023-08-01T10:00:00Z",
+      "lastActivity": "2024-04-16T09:00:00Z",
+      "onlineId": "97841",
+      "userImage": "/assets/images/profile.webp",
+      "generalAccessAreas": [],
+      "roles": [
+        {
+          "label": "administrator",
+          "id": "1"
+        },
+        {
+          "label": "User Manager",
+          "id": "5"
+        }
+      ],
+      "categoryColor": "#9b59b6",
+      "categoryTitle": "Engineering Team"
+    },
+    {
+      "id": "5",
+      "salutation": "Mr.",
+      "title": "",
+      "firstName": "Frank",
+      "lastName": "Lewis",
+      "userName": "admin_global05",
+      "position": "Network Administrator",
+      "mobile": "+989-912-8877805",
+      "phone": "+989-21-22328916",
+      "emailAddress": "frank.lewis@gmail.com",
+      "companyName": "Global Tech Innovations",
+      "categoryId": "67c2b9dba86e4b8ae53b97cf",
+      "departmentId": "Sales & Business Development",
+      "status": "Active",
+      "invitedPerson": "Frank",
+      "affiliation": "external",
+      "entryDate": "2021-12-10T13:30:00Z",
+      "lastActivity": "2023-12-01T16:45:00Z",
+      "onlineId": "45871",
+      "userImage": "/assets/images/profile.webp",
+      "generalAccessAreas": [],
+      "roles": [
+        {
+          "label": "Spot Manager",
+          "id": "3"
+        },
+        {
+          "label": "administrator",
+          "id": "1"
+        }
+      ],
+      "categoryColor": "#f39c12",
+      "categoryTitle": "IT Team"
+    },
+    {
+      "id": "6",
+      "salutation": "Mr.",
+      "title": "",
+      "firstName": "Hugh",
+      "lastName": "Clark",
+      "userName": "admin_nextgen06",
+      "position": "DevOps Engineer",
+      "mobile": "+989-912-8877805",
+      "phone": "+989-21-22328916",
+      "emailAddress": "hughclark@gmail.com",
+      "companyName": "NextGen Solutions",
+      "categoryId": "6804d850d0c3daef8b80d6b4",
+      "departmentId": "Marketing & PR",
+      "status": "Paused",
+      "invitedPerson": "Hugh",
+      "affiliation": "external",
+      "entryDate": "2022-06-20T08:00:00Z",
+      "lastActivity": "2024-04-10T12:00:00Z",
+      "onlineId": "129785",
+      "userImage": "/assets/images/profile.webp",
+      "generalAccessAreas": [],
+      "roles": [],
+      "categoryColor": "#1abc9c",
+      "categoryTitle": "Operations Team"
+    },
+    {
+      "id": "7",
+      "salutation": "Ms.",
+      "title": "",
+      "firstName": "Ivy",
+      "lastName": "Scott",
+      "userName": "admin_innovators07",
+      "position": "Security Specialist",
+      "mobile": "+989-912-8877805",
+      "phone": "+989-21-22328916",
+      "emailAddress": "ivyscott@gmail.com",
+      "companyName": "Tech Innovators LLC",
+      "categoryId": "67c2b9dba86e4b8ae53b97cf",
+      "departmentId": "Customer Service / Support",
+      "status": "Active",
+      "invitedPerson": "Ivy",
+      "affiliation": "internal",
+      "entryDate": "2024-02-01T09:30:00Z",
+      "lastActivity": "2024-02-01T09:30:00Z",
+      "onlineId": "547698",
+      "userImage": "/assets/images/profile.webp",
+      "generalAccessAreas": [],
+      "roles": [
+        {
+          "label": "Content Manager",
+          "id": "2"
+        }
+      ],
+      "categoryColor": "#34495e",
+      "categoryTitle": "Security Team"
+    },
+    {
+      "id": "8",
+      "salutation": "Ms.",
+      "title": "",
+      "firstName": "Karen",
+      "lastName": "Miller",
+      "userName": "admin_digital08",
+      "position": "Database Administrator",
+      "mobile": "+989-912-8877805",
+      "phone": "+989-21-22328916",
+      "emailAddress": "karenmiller@solutions.com",
+      "companyName": "Digital Solutions Co.",
+      "categoryId": "6804d850d0c3daef8b80d6b4",
+      "departmentId": "IT & Developement",
+      "status": "Active",
+      "invitedPerson": "Karen",
+      "affiliation": "internal",
+      "entryDate": "2023-03-10T14:20:00Z",
+      "lastActivity": "2024-01-15T10:05:00Z",
+      "onlineId": "32574",
+      "userImage": "/assets/images/profile.webp",
+      "generalAccessAreas": [],
+      "roles": [
+        {
+          "label": "Spot Manager",
+          "id": "3"
+        }
+      ],
+      "categoryColor": "#7f8c8d",
+      "categoryTitle": "Data Team"
+    },
+    {
+      "id": "9",
+      "salutation": "Ms.",
+      "title": "",
+      "firstName": "Megan",
+      "lastName": "Lewis",
+      "userName": "admin_pioneer09",
+      "position": "Cloud Architect",
+      "mobile": "+989-912-8877805",
+      "phone": "+989-21-22328916",
+      "emailAddress": "megan@lewis.com",
+      "companyName": "Pioneer Innovations",
+      "categoryId": "67c2b9dba86e4b8ae53b97cf",
+      "departmentId": "Procurement & Logistics",
+      "status": "Paused",
+      "invitedPerson": "Megan",
+      "affiliation": "internal",
+      "entryDate": "2022-09-25T15:45:00Z",
+      "lastActivity": "2024-04-14T11:30:00Z",
+      "onlineId": "46987",
+      "userImage": "/assets/images/profile.webp",
+      "generalAccessAreas": [],
+      "roles": [
+        {
+          "label": "User Manager",
+          "id": "5"
+        }
+      ],
+      "categoryColor": "#e67e22",
+      "categoryTitle": "Cloud Team"
+    },
+    {
+      "id": "10",
+      "salutation": "Mr.",
+      "title": "",
+      "firstName": "Oscar",
+      "lastName": "Hunt",
+      "userName": "admin_visionary10",
+      "position": "CIO",
+      "mobile": "+989-912-8877805",
+      "phone": "+989-21-22328916",
+      "emailAddress": "oscar@.hunt.com",
+      "companyName": "Visionary Enterprises",
+      "categoryId": "6804d850d0c3daef8b80d6b4",
+      "departmentId": "Facility Management",
+      "status": "Active",
+      "invitedPerson": "Oscar",
+      "affiliation": "external",
+      "entryDate": "2023-07-18T10:10:00Z",
+      "lastActivity": "2024-04-17T08:00:00Z",
+      "onlineId": "23574",
+      "userImage": "/assets/images/profile.webp",
+      "generalAccessAreas": [],
+      "roles": [
+        {
+          "label": "Kidata Manager",
+          "id": "6"
+        }
+      ],
+      "categoryColor": "#2c3e50",
+      "categoryTitle": "Leadership Team"
+    }
+  ],
+  "usersOverview": [
+    {
+      "id": "1",
+      "companyId": "1",
+      "onlineId": "5415",
+      "userName": "admin_tech01",
+      "userImage": "/assets/images/profile.webp",
+      "firstName": "Jane",
+      "lastName": "Smith",
+      "email": "janesmith@gmail.com",
+      "phone": "321-654-0987",
+      "position": "System Administrator",
+      "companyName": "Tech Solutions Inc.",
+      "department": "Management/Executive",
+      "roles": [
+        {
+          "label": "Partner Manager",
+          "id": "8"
+        },
+        {
+          "label": "spot Manager",
+          "id": "3"
+        }
+      ],
+      "categoryColor": "#3498db",
+      "categoryTitle": "Administration Team",
+      "affiliation": "external",
+      "status": "paused"
+    },
+    {
+      "id": "2",
+      "companyId": "2",
+      "onlineId": "8541",
+      "userName": "admin_creative02",
+      "userImage": "/assets/images/profile.webp",
+      "firstName": "Bob",
+      "lastName": "Green",
+      "email": "bobgreen@gmail.com",
+      "phone": "654-321-7890",
+      "position": "Creative Director",
+      "companyName": "Creative Media Group",
+      "department": "Assistance&Secretariat",
+      "roles": [
+        {
+          "label": "administrator",
+          "id": "1"
+        },
+        {
+          "label": "Advertisement Manager",
+          "id": "7"
+        }
+      ],
+      "categoryColor": "#2ecc71",
+      "categoryTitle": "Creative Team",
+      "affiliation": "internal",
+      "status": "active"
+    },
+    {
+      "id": "3",
+      "companyId": "3",
+      "onlineId": "97984",
+      "userName": "admin_innovative03",
+      "userImage": "/assets/images/profile.webp",
+      "firstName": "Daniel",
+      "lastName": "Kim",
+      "email": "danielkim@gmail.com",
+      "phone": "567-890-1234",
+      "position": "CTO",
+      "companyName": "Innovative Tech Solutions",
+      "department": "Human Resource(HR)",
+      "roles": [
+        {
+          "label": "Content Manager",
+          "id": "2"
+        },
+        {
+          "label": "administrator",
+          "id": "1"
+        }
+      ],
+      "categoryColor": "#e74c3c",
+      "categoryTitle": "Leadership Team",
+      "affiliation": "external",
+      "status": "active"
+    },
+    {
+      "id": "4",
+      "companyId": "4",
+      "onlineId": "97841",
+      "userName": "admin_elite04",
+      "userImage": "/assets/images/profile.webp",
+      "firstName": "Emma",
+      "lastName": "White",
+      "email": "emmawhite@gmail.com",
+      "phone": "432-567-8901",
+      "position": "Software Architect",
+      "companyName": "Elite Software Solutions",
+      "department": "Finance&Controlling",
+      "roles": [
+        {
+          "label": "administrator",
+          "id": "1"
+        },
+        {
+          "label": "User Manager",
+          "id": "5"
+        }
+      ],
+      "categoryColor": "#9b59b6",
+      "categoryTitle": "Engineering Team",
+      "affiliation": "internal",
+      "status": "paused"
+    },
+    {
+      "id": "5",
+      "companyId": "5",
+      "onlineId": "45871",
+      "userName": "admin_global05",
+      "userImage": "/assets/images/profile.webp",
+      "firstName": "Frank",
+      "lastName": "Lewis",
+      "email": "frank.lewis@gmail.com",
+      "phone": "321-123-4567",
+      "position": "Network Administrator",
+      "companyName": "Global Tech Innovations",
+      "department": "Sales & Business Development",
+      "roles": [
+        {
+          "label": "Spot Manager",
+          "id": "3"
+        },
+        {
+          "label": "administrator",
+          "id": "1"
+        }
+      ],
+      "categoryColor": "#f39c12",
+      "categoryTitle": "IT Team",
+      "affiliation": "external",
+      "status": "active"
+    },
+    {
+      "id": "6",
+      "companyId": "6",
+      "onlineId": "129785",
+      "userName": "admin_nextgen06",
+      "userImage": "/assets/images/profile.webp",
+      "firstName": "Hugh",
+      "lastName": "Clark",
+      "email": "hughclark@gmail.com",
+      "phone": "123-456-7899",
+      "position": "DevOps Engineer",
+      "companyName": "NextGen Solutions",
+      "department": "Marketing & PR",
+      "roles": [],
+      "categoryColor": "#1abc9c",
+      "categoryTitle": "Operations Team",
+      "affiliation": "external",
+      "status": "paused"
+    },
+    {
+      "id": "7",
+      "companyId": "7",
+      "onlineId": "547698",
+      "userName": "admin_innovators07",
+      "userImage": "/assets/images/profile.webp",
+      "firstName": "Ivy",
+      "lastName": "Scott",
+      "email": "ivyscott@gmail.com",
+      "phone": "567-890-4321",
+      "position": "Security Specialist",
+      "companyName": "Tech Innovators LLC",
+      "department": "Customer Service / Support",
+      "roles": [
+        {
+          "label": "Content Manager",
+          "id": "2"
+        }
+      ],
+      "categoryColor": "#34495e",
+      "categoryTitle": "Security Team",
+      "affiliation": "internal",
+      "status": "active"
+    },
+    {
+      "id": "8",
+      "companyId": "8",
+      "onlineId": "32574",
+      "userName": "admin_digital08",
+      "userImage": "/assets/images/profile.webp",
+      "firstName": "Karen",
+      "lastName": "Miller",
+      "email": "karenmiller@solutions.com",
+      "phone": "456-123-7890",
+      "position": "Database Administrator",
+      "companyName": "Digital Solutions Co.",
+      "department": "IT & Developement",
+      "roles": [
+        {
+          "label": "Spot Manager",
+          "id": "3"
+        }
+      ],
+      "categoryColor": "#7f8c8d",
+      "categoryTitle": "Data Team",
+      "affiliation": "internal",
+      "status": "active"
+    },
+    {
+      "id": "9",
+      "companyId": "9",
+      "onlineId": "46987",
+      "userName": "admin_pioneer09",
+      "userImage": "/assets/images/profile.webp",
+      "firstName": "Megan",
+      "lastName": "Lewis",
+      "email": "megan@lewis.com",
+      "phone": "789-012-3456",
+      "position": "Cloud Architect",
+      "companyName": "Pioneer Innovations",
+      "department": "Procurement & Logistics",
+      "roles": [
+        {
+          "label": "User Manager",
+          "id": "5"
+        }
+      ],
+      "categoryColor": "#e67e22",
+      "categoryTitle": "Cloud Team",
+      "affiliation": "internal",
+      "status": "paused"
+    },
+    {
+      "id": "10",
+      "companyId": "10",
+      "onlineId": "23574",
+      "userName": "admin_visionary10",
+      "userImage": "/assets/images/profile.webp",
+      "firstName": "Oscar",
+      "lastName": "Hunt",
+      "email": "oscar@.hunt.com",
+      "phone": "654-987-3210",
+      "position": "CIO",
+      "companyName": "Visionary Enterprises",
+      "department": "Facility Management",
+      "roles": [
+        {
+          "label": "Kidata Manager",
+          "id": "6"
+        }
+      ],
+      "categoryColor": "#2c3e50",
+      "categoryTitle": "Leadership Team",
+      "affiliation": "external",
+      "status": "active"
+    }
+  ],
+  "userInfoList": [
+    {
+      "id": "1",
+      "profileImage": "/assets/images/profile.webp",
+      "username": "admin_tech01",
+      "firstName": "Jane",
+      "lastName": "Smith",
+      "email": "jane.smith@techsolutions.com",
+      "phone": "321-654-0987",
+      "companyName": "Tech Solutions Inc.",
+      "userId": "1"
+    },
+    {
+      "id": "2",
+      "profileImage": "/assets/images/profile.webp",
+      "username": "admin_creative02",
+      "firstName": "Bob",
+      "lastName": "Green",
+      "email": "bob.green@creativemedia.com",
+      "phone": "654-321-7890",
+      "companyName": "Creative Media Group",
+      "userId": "2"
+    },
+    {
+      "id": "3",
+      "profileImage": "/assets/images/profile.webp",
+      "username": "admin_innovative03",
+      "firstName": "Daniel",
+      "lastName": "Kim",
+      "email": "daniel.kim@innovativetech.com",
+      "phone": "567-890-1234",
+      "companyName": "Innovative Tech Solutions",
+      "userId": "3"
+    },
+    {
+      "id": "4",
+      "profileImage": "/assets/images/profile.webp",
+      "username": "admin_elite04",
+      "firstName": "Emma",
+      "lastName": "White",
+      "email": "emma.white@elitesoftware.com",
+      "phone": "432-567-8901",
+      "companyName": "Elite Software Solutions",
+      "userId": "4"
+    },
+    {
+      "id": "5",
+      "profileImage": "/assets/images/profile.webp",
+      "username": "admin_global05",
+      "firstName": "Frank",
+      "lastName": "Lewis",
+      "email": "frank.lewis@globaltech.com",
+      "phone": "321-123-4567",
+      "companyName": "Global Tech Innovations",
+      "userId": "5"
+    },
+    {
+      "id": "6",
+      "profileImage": "/assets/images/profile.webp",
+      "username": "admin_nextgen06",
+      "firstName": "Hugh",
+      "lastName": "Clark",
+      "email": "hugh.clark@nextgensolutions.com",
+      "phone": "123-456-7899",
+      "companyName": "NextGen Solutions",
+      "userId": "6"
+    },
+    {
+      "id": "7",
+      "profileImage": "/assets/images/profile.webp",
+      "username": "admin_innovators07",
+      "firstName": "Ivy",
+      "lastName": "Scott",
+      "email": "ivy.scott@techinnovators.com",
+      "phone": "567-890-4321",
+      "companyName": "Tech Innovators LLC",
+      "userId": "7"
+    },
+    {
+      "id": "8",
+      "profileImage": "/assets/images/profile.webp",
+      "username": "admin_digital08",
+      "firstName": "Karen",
+      "lastName": "Miller",
+      "email": "karen.miller@digitalsolutions.com",
+      "phone": "456-123-7890",
+      "companyName": "Digital Solutions Co.",
+      "userId": "8"
+    },
+    {
+      "id": "9",
+      "profileImage": "/assets/images/profile.webp",
+      "username": "admin_pioneer09",
+      "firstName": "Megan",
+      "lastName": "Lewis",
+      "email": "megan.lewis@pioneerinnovations.com",
+      "phone": "789-012-3456",
+      "companyName": "Pioneer Innovations",
+      "userId": "9"
+    },
+    {
+      "id": "10",
+      "profileImage": "/assets/images/profile.webp",
+      "username": "admin_visionary10",
+      "firstName": "Oscar",
+      "lastName": "Hunt",
+      "email": "oscar.hunt@visionaryenterprises.com",
+      "phone": "654-987-3210",
+      "companyName": "Visionary Enterprises",
+      "userId": "10"
     }
   ],
   "designs": [
@@ -5214,6 +6969,19 @@
       "createdAt": "2025-03-18T13:28:14.689Z",
       "updatedAt": "2025-03-18T13:28:14.689Z",
       "id": 15
+    },
+    {
+      "name": "",
+      "json": "{\"version\":\"5.3.0\",\"objects\":[{\"type\":\"rect\",\"version\":\"5.3.0\",\"originX\":\"left\",\"originY\":\"top\",\"left\":24.5,\"top\":-278,\"width\":900,\"height\":1200,\"fill\":\"white\",\"stroke\":null,\"strokeWidth\":1,\"strokeDashArray\":null,\"strokeLineCap\":\"butt\",\"strokeDashOffset\":0,\"strokeLineJoin\":\"miter\",\"strokeUniform\":false,\"strokeMiterLimit\":4,\"scaleX\":1,\"scaleY\":1,\"angle\":0,\"flipX\":false,\"flipY\":false,\"opacity\":1,\"shadow\":{\"color\":\"rgba(0,0,0,0.8)\",\"blur\":5,\"offsetX\":0,\"offsetY\":0,\"affectStroke\":false,\"nonScaling\":false},\"visible\":true,\"backgroundColor\":\"\",\"fillRule\":\"nonzero\",\"paintFirst\":\"fill\",\"globalCompositeOperation\":\"source-over\",\"skewX\":0,\"skewY\":0,\"rx\":0,\"ry\":0,\"name\":\"clip\",\"selectable\":false,\"hasControls\":false},{\"type\":\"rect\",\"version\":\"5.3.0\",\"originX\":\"left\",\"originY\":\"top\",\"left\":212.64,\"top\":90.6,\"width\":400,\"height\":400,\"fill\":\"rgba(188, 24, 24, 1)\",\"stroke\":\"rgba(0,0,0,1)\",\"strokeWidth\":2,\"strokeDashArray\":[],\"strokeLineCap\":\"butt\",\"strokeDashOffset\":0,\"strokeLineJoin\":\"miter\",\"strokeUniform\":false,\"strokeMiterLimit\":4,\"scaleX\":1,\"scaleY\":1,\"angle\":314.98,\"flipX\":false,\"flipY\":false,\"opacity\":1,\"shadow\":null,\"visible\":true,\"backgroundColor\":\"\",\"fillRule\":\"nonzero\",\"paintFirst\":\"fill\",\"globalCompositeOperation\":\"source-over\",\"skewX\":0,\"skewY\":0,\"rx\":0,\"ry\":0,\"selectable\":true,\"hasControls\":true}],\"clipPath\":{\"type\":\"rect\",\"version\":\"5.3.0\",\"originX\":\"left\",\"originY\":\"top\",\"left\":24.5,\"top\":-278,\"width\":900,\"height\":1200,\"fill\":\"white\",\"stroke\":null,\"strokeWidth\":1,\"strokeDashArray\":null,\"strokeLineCap\":\"butt\",\"strokeDashOffset\":0,\"strokeLineJoin\":\"miter\",\"strokeUniform\":false,\"strokeMiterLimit\":4,\"scaleX\":1,\"scaleY\":1,\"angle\":0,\"flipX\":false,\"flipY\":false,\"opacity\":1,\"shadow\":{\"color\":\"rgba(0,0,0,0.8)\",\"blur\":5,\"offsetX\":0,\"offsetY\":0,\"affectStroke\":false,\"nonScaling\":false},\"visible\":true,\"backgroundColor\":\"\",\"fillRule\":\"nonzero\",\"paintFirst\":\"fill\",\"globalCompositeOperation\":\"source-over\",\"skewX\":0,\"skewY\":0,\"rx\":0,\"ry\":0,\"selectable\":true,\"hasControls\":true}}",
+      "width": 900,
+      "height": 1200,
+      "userId": "",
+      "isPro": false,
+      "thumbnailUrl": "",
+      "isTemplate": false,
+      "createdAt": "2025-05-29T00:42:58.943Z",
+      "updatedAt": "2025-05-29T00:42:58.943Z",
+      "id": 16
     }
   ]
 }
