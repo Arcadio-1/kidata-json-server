@@ -6657,11 +6657,18 @@
   ],
   "accountSetting": {
     "loginTime": "2024",
-    "company": { "label": "SISCO", "id": "5" },
+    "company": {
+      "label": "SISCO",
+      "id": "5"
+    },
     "companyLogo": "/assets/images/profile.webp",
     "credit": "1500.00 Euro",
     "onlineId": "CD-2243",
-    "userName": "Milad_Dev"
+    "userName": "Milad_Dev",
+    "kiDataPlan": {
+      "label": "Kidata Plus",
+      "planId": "2"
+    }
   },
   "storageUsage": {
     "images": 24,
@@ -6673,42 +6680,66 @@
     {
       "id": "addon-1",
       "title": "10 GB storage package",
-      "price": { "label": "€9.99", "message": "per month" }
+      "price": {
+        "label": "€9.99",
+        "message": "per month"
+      }
     },
     {
       "id": "addon-2",
       "title": "Fast Synchronization",
-      "price": { "label": "€4.99", "message": "per 50GB" }
+      "price": {
+        "label": "€4.99",
+        "message": "per 50GB"
+      }
     },
     {
       "id": "addon-3",
       "title": "Template Bundle",
-      "price": { "label": "€15.99", "message": "per 10GB" }
+      "price": {
+        "label": "€15.99",
+        "message": "per 10GB"
+      }
     },
     {
       "id": "addon-4",
       "title": "Extra Storage",
-      "price": { "label": "€14.99", "message": "per 100GB" }
+      "price": {
+        "label": "€14.99",
+        "message": "per 100GB"
+      }
     },
     {
       "id": "addon-5",
       "title": "Extra Storage",
-      "price": { "label": "€24.99", "message": "per 2GB" }
+      "price": {
+        "label": "€24.99",
+        "message": "per 2GB"
+      }
     },
     {
       "id": "addon-6",
       "title": "Extra Storage",
-      "price": { "label": "€24.99", "message": "per 2GB" }
+      "price": {
+        "label": "€24.99",
+        "message": "per 2GB"
+      }
     },
     {
       "id": "addon-7",
       "title": "Extra Storage",
-      "price": { "label": "€24.99", "message": "per 2GB" }
+      "price": {
+        "label": "€24.99",
+        "message": "per 2GB"
+      }
     },
     {
       "id": "addon-8",
       "title": "Extra Storage",
-      "price": { "label": "€24.99", "message": "per 2GB" }
+      "price": {
+        "label": "€24.99",
+        "message": "per 2GB"
+      }
     }
   ],
   "smartGuides": [
@@ -6754,15 +6785,376 @@
     }
   ],
   "monthlyEarnings": [
-    { "month": "January", "earnings": 10 },
-    { "month": "February", "earnings": 30 },
-    { "month": "March", "earnings": 50 },
-    { "month": "April", "earnings": 40 },
-    { "month": "May", "earnings": 60 },
-    { "month": "June", "earnings": 20 }
+    {
+      "month": "January",
+      "earnings": 10
+    },
+    {
+      "month": "February",
+      "earnings": 30
+    },
+    {
+      "month": "March",
+      "earnings": 50
+    },
+    {
+      "month": "April",
+      "earnings": 40
+    },
+    {
+      "month": "May",
+      "earnings": 60
+    },
+    {
+      "month": "June",
+      "earnings": 20
+    }
   ],
   "accountsOnwBills": [1, 2],
   "accountsPartnerBookings": [1, 2, 3, 4, 5],
+  "notificationCarouselMessage": [
+    {
+      "id": "1",
+      "lang": "en",
+      "order": 1,
+      "title": "Your display utilization has doubled!"
+    },
+    {
+      "id": "2",
+      "lang": "en",
+      "order": 2,
+      "title": "Tip: Drag & drop to upload media faster."
+    }
+  ],
+  "accountSettingCompanyInfo": [
+    {
+      "id": "user_001",
+      "addressData": {
+        "companyName": "Acme Logisticssdsd",
+        "companyFormId": "gmbh",
+        "street": "Hauptstraße",
+        "number": "42A",
+        "addressSupplement": "3rd Floor",
+        "zip": "10115",
+        "city": "Berlin",
+        "federalStateId": "BE",
+        "countryId": "EN",
+        "phone": "301234567",
+        "mobile": "1512345678",
+        "fax": "301234568",
+        "phoneDialingCodeId": "683b1d7a2e82f31453637444",
+        "mobileDialingCodeId": "683b1d7a2e82f31453637444",
+        "faxDialingCodeId": "683b1d7a2e82f31453637444",
+        "webUrl": "https://acme.example",
+        "email": "info@acme.example"
+      },
+      "legalPerson": {
+        "firstName": "Max",
+        "lastName": "Mustermann",
+        "position": "Managing Director",
+        "salutationId": "mr",
+        "titleId": null
+      },
+      "industryInformation": {
+        "industryName": "Agriculture",
+        "industryDescription": "mkissdhsd",
+        "industryId": "Agriculture",
+        "taxIdentificationNumber": "2352363",
+        "taxVatNumber": "ABA454841"
+      },
+      "paymentInformation": {
+        "billingIsDiffer": false,
+        "billingSalutationId": "MR",
+        "billingTitleId": "NONE",
+        "billingFirstName": "Milad",
+        "billingLastName": "Tavassoti",
+        "billingStreet": "Musterstraße",
+        "billingNumber": "12A",
+        "billingAddressSupplement": "Wohnung 4",
+        "billingZip": "10115",
+        "billingCity": "Berlin",
+        "billingFederalStateId": "BE",
+        "billingCountryId": "DE"
+      }
+    }
+  ],
+  "tariffs": [
+    {
+      "id": "1",
+      "currentPlan": "KiData Basic",
+      "price": "0€",
+      "description": "With the Plus plan, you can manage any number of displays and benefit from precise content control via configurable categories, industry filters, and predefined multi-filters.With up to 15 user accounts, advanced analytics features, and the option to export to PDF and CSV, this plan is ideal for teams with professional requirements.You can use up to 20 playlists with spots up to 30 seconds long and up to 30 minutes long – ideal for structured and longer campaigns.50 design templates, 10 GB of cloud storage, a sophisticated duplication workflow, and private mode round out the package. Support is available via email.",
+      "details": {
+        "activeDisplays": "1",
+        "bookingInPartnerNetwork": false,
+        "targetedDisplaySharing": false,
+        "VipPartner": "—",
+        "configurableCategories": "Basic",
+        "industryFilter": "—",
+        "predefinedMultiFilters": "—",
+        "privateMode": false,
+        "expressSynchronization": false,
+        "maxSpotDuration": "15s",
+        "playListQuota": "1",
+        "maxPlayListDuration": "2 min",
+        "precisionOfPlay": "Minute",
+        "teamSize": "1",
+        "extendedUserRoles": false,
+        "individualUserRoles": false,
+        "designTemplates": "5",
+        "cloudStorageIncluded": "1 GB",
+        "duplicateWorkFlow": false,
+        "analyticTools": "Basic",
+        "dataExport": "CSV",
+        "levelOfSupport": "Community"
+      }
+    },
+    {
+      "id": "2",
+      "currentPlan": "KiData Plus",
+      "price": "29€",
+      "description": "With the Plus plan, you can manage any number of displays and benefit from precise content control via configurable categories, industry filters, and predefined multi-filters.With up to 15 user accounts, advanced analytics features, and the option to export to PDF and CSV, this plan is ideal for teams with professional requirements.You can use up to 20 playlists with spots up to 30 seconds long and up to 30 minutes long – ideal for structured and longer campaigns.50 design templates, 10 GB of cloud storage, a sophisticated duplication workflow, and private mode round out the package. Support is available via email.",
+      "details": {
+        "activeDisplays": "5",
+        "bookingInPartnerNetwork": true,
+        "targetedDisplaySharing": true,
+        "VipPartner": "Selected",
+        "configurableCategories": "Standard",
+        "industryFilter": "Basic",
+        "predefinedMultiFilters": "5",
+        "privateMode": true,
+        "expressSynchronization": true,
+        "maxSpotDuration": "30s",
+        "playListQuota": "5",
+        "maxPlayListDuration": "10 min",
+        "precisionOfPlay": "30s",
+        "teamSize": "5",
+        "extendedUserRoles": true,
+        "individualUserRoles": false,
+        "designTemplates": "25",
+        "cloudStorageIncluded": "10 GB",
+        "duplicateWorkFlow": true,
+        "analyticTools": "Standard",
+        "dataExport": "CSV, JSON",
+        "levelOfSupport": "Standard (email)"
+      }
+    },
+    {
+      "id": "3",
+      "currentPlan": "KiData Pro",
+      "price": "99€",
+      "description": "With the Plus plan, you can manage any number of displays and benefit from precise content control via configurable categories, industry filters, and predefined multi-filters.With up to 15 user accounts, advanced analytics features, and the option to export to PDF and CSV, this plan is ideal for teams with professional requirements.You can use up to 20 playlists with spots up to 30 seconds long and up to 30 minutes long – ideal for structured and longer campaigns.50 design templates, 10 GB of cloud storage, a sophisticated duplication workflow, and private mode round out the package. Support is available via email.",
+      "details": {
+        "activeDisplays": "20",
+        "bookingInPartnerNetwork": true,
+        "targetedDisplaySharing": true,
+        "VipPartner": "Premium",
+        "configurableCategories": "Advanced",
+        "industryFilter": "Advanced",
+        "predefinedMultiFilters": "Unlimited",
+        "privateMode": true,
+        "expressSynchronization": true,
+        "maxSpotDuration": "60s",
+        "playListQuota": "Unlimited",
+        "maxPlayListDuration": "60 min",
+        "precisionOfPlay": "Second",
+        "teamSize": "20",
+        "extendedUserRoles": true,
+        "individualUserRoles": true,
+        "designTemplates": "100+",
+        "cloudStorageIncluded": "100 GB",
+        "duplicateWorkFlow": true,
+        "analyticTools": "Advanced (funnels, cohorts)",
+        "dataExport": "CSV, JSON, XLSX",
+        "levelOfSupport": "Priority (email & chat)"
+      }
+    },
+    {
+      "id": "4",
+      "currentPlan": "KiData Enterprise",
+      "price": "Custom",
+      "description": "With the Plus plan, you can manage any number of displays and benefit from precise content control via configurable categories, industry filters, and predefined multi-filters.With up to 15 user accounts, advanced analytics features, and the option to export to PDF and CSV, this plan is ideal for teams with professional requirements.You can use up to 20 playlists with spots up to 30 seconds long and up to 30 minutes long – ideal for structured and longer campaigns.50 design templates, 10 GB of cloud storage, a sophisticated duplication workflow, and private mode round out the package. Support is available via email.",
+      "details": {
+        "activeDisplays": "Unlimited",
+        "bookingInPartnerNetwork": true,
+        "targetedDisplaySharing": true,
+        "VipPartner": "All",
+        "configurableCategories": "Custom",
+        "industryFilter": "Custom",
+        "predefinedMultiFilters": "Unlimited",
+        "privateMode": true,
+        "expressSynchronization": true,
+        "maxSpotDuration": "120s",
+        "playListQuota": "Unlimited",
+        "maxPlayListDuration": "Unlimited",
+        "precisionOfPlay": "Sub-second",
+        "teamSize": "Unlimited",
+        "extendedUserRoles": true,
+        "individualUserRoles": true,
+        "designTemplates": "Custom / BYO",
+        "cloudStorageIncluded": "1 TB",
+        "duplicateWorkFlow": true,
+        "analyticTools": "Enterprise (APIs, dashboards)",
+        "dataExport": "CSV, JSON, XLSX, API",
+        "levelOfSupport": "24/7 dedicated"
+      }
+    }
+  ],
+
+  "tariffPlans": [
+    {
+      "id": "free",
+      "name": "Free",
+      "isCurrent": false,
+      "price": "",
+      "features": {
+        "activeDisplays": "1",
+        "bookingInPartnerNetwork": false,
+        "targetedDisplaySharing": false,
+        "vipPartner": "—",
+        "configurableCategories": "—",
+        "industryFilter": "—",
+        "predefinedMultiFilters": "—",
+        "privateMode": false,
+        "expressSynchronization": false,
+        "maxSpotDuration": "10 sec",
+        "playlistQuota": "1",
+        "maxPlaylistDuration": "1 min / 10 min",
+        "precisionOfPlay": "60 min",
+        "teamSize": "1",
+        "extendedUserRoles": false,
+        "individualUserRoles": false,
+        "designTemplates": "5",
+        "cloudStorageIncluded": "1 GB",
+        "duplicizerWorkflow": false,
+        "analyticTools": "—",
+        "dataExport": "—",
+        "levelOfSupport": "Help Center"
+      }
+    },
+    {
+      "id": "basic",
+      "name": "Basic",
+      "isCurrent": false,
+      "price": "",
+      "features": {
+        "activeDisplays": "5",
+        "bookingInPartnerNetwork": true,
+        "targetedDisplaySharing": true,
+        "vipPartner": "3",
+        "configurableCategories": "3",
+        "industryFilter": "3",
+        "predefinedMultiFilters": "3",
+        "privateMode": false,
+        "expressSynchronization": false,
+        "maxSpotDuration": "30 sec",
+        "playlistQuota": "5",
+        "maxPlaylistDuration": "2 min / 30 min",
+        "precisionOfPlay": "60 min",
+        "teamSize": "5",
+        "extendedUserRoles": false,
+        "individualUserRoles": false,
+        "designTemplates": "10",
+        "cloudStorageIncluded": "5 GB",
+        "duplicizerWorkflow": false,
+        "analyticTools": "Basic Statistics",
+        "dataExport": "PDF",
+        "levelOfSupport": "Chatbot"
+      }
+    },
+    {
+      "id": "plus",
+      "name": "Plus",
+      "isCurrent": false,
+      "price": "",
+      "features": {
+        "activeDisplays": "any number",
+        "bookingInPartnerNetwork": true,
+        "targetedDisplaySharing": true,
+        "vipPartner": "10",
+        "configurableCategories": "10",
+        "industryFilter": "5",
+        "predefinedMultiFilters": "5",
+        "privateMode": true,
+        "expressSynchronization": false,
+        "maxSpotDuration": "30 sec",
+        "playlistQuota": "20",
+        "maxPlaylistDuration": "2 min / 30 min",
+        "precisionOfPlay": "30 min",
+        "teamSize": "15",
+        "extendedUserRoles": true,
+        "individualUserRoles": false,
+        "designTemplates": "50",
+        "cloudStorageIncluded": "10 GB",
+        "duplicizerWorkflow": true,
+        "analyticTools": "extended",
+        "dataExport": "PDF + CSV",
+        "levelOfSupport": "Mail"
+      }
+    },
+    {
+      "id": "pro",
+      "name": "Pro",
+      "isCurrent": true,
+      "price": "",
+      "features": {
+        "activeDisplays": "any number",
+        "bookingInPartnerNetwork": true,
+        "targetedDisplaySharing": true,
+        "vipPartner": "50",
+        "configurableCategories": "50",
+        "industryFilter": "10",
+        "predefinedMultiFilters": "10",
+        "privateMode": true,
+        "expressSynchronization": true,
+        "maxSpotDuration": "60 sec",
+        "playlistQuota": "50",
+        "maxPlaylistDuration": "10 min / 60 min",
+        "precisionOfPlay": "10 min",
+        "teamSize": "50",
+        "extendedUserRoles": true,
+        "individualUserRoles": true,
+        "designTemplates": "100",
+        "cloudStorageIncluded": "100 GB",
+        "duplicizerWorkflow": true,
+        "analyticTools": "all",
+        "dataExport": "PDF + CSV",
+        "levelOfSupport": "fee-based service hotline"
+      }
+    },
+    {
+      "id": "enterprise",
+      "name": "Enterprise",
+      "isCurrent": false,
+      "description": "from 500 displays",
+      "price": "",
+      "features": {
+        "activeDisplays": "from 500 displays / any number",
+        "bookingInPartnerNetwork": true,
+        "targetedDisplaySharing": true,
+        "vipPartner": "unlimited",
+        "configurableCategories": "unlimited",
+        "industryFilter": "unlimited",
+        "predefinedMultiFilters": "unlimited",
+        "privateMode": true,
+        "expressSynchronization": true,
+        "maxSpotDuration": "unlimited",
+        "playlistQuota": "unlimited",
+        "maxPlaylistDuration": "unlimited",
+        "precisionOfPlay": "to the minute",
+        "teamSize": "unlimited",
+        "extendedUserRoles": true,
+        "individualUserRoles": true,
+        "designTemplates": "unlimited",
+        "cloudStorageIncluded": "unlimited",
+        "duplicizerWorkflow": true,
+        "analyticTools": "all + KI Analytics",
+        "dataExport": "extended export",
+        "levelOfSupport": "free service hotline"
+      }
+    }
+  ],
+
   "designs": [
     {
       "name": "Untitled project",
