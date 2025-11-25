@@ -2158,22 +2158,30 @@
   ],
   "industriesSuggestion": [
     {
-      "keywords": ["gggggggg"],
+      "keywords": [
+        "gggggggg"
+      ],
       "label": "ggggg",
       "id": 1
     },
     {
-      "keywords": ["ssssssssss"],
+      "keywords": [
+        "ssssssssss"
+      ],
       "label": "ggggg",
       "id": 2
     },
     {
-      "keywords": ["fffffffffff"],
+      "keywords": [
+        "fffffffffff"
+      ],
       "label": "ggggg",
       "id": 3
     },
     {
-      "keywords": ["rrrrrrr"],
+      "keywords": [
+        "rrrrrrr"
+      ],
       "label": "rrrrrrrrrr",
       "id": 4
     }
@@ -2897,7 +2905,9 @@
           "partnerList": []
         },
         "industryFilter": {
-          "industriesId": ["66bcd418448ffa01893ffd9a"]
+          "industriesId": [
+            "66bcd418448ffa01893ffd9a"
+          ]
         },
         "predefinedFilters": {
           "filtersId": []
@@ -3269,7 +3279,11 @@
       "phone": "123-456-7890",
       "responsiblePerson": "John Doe",
       "adminName": "Jane Smith",
-      "displaysOnlineId": ["partner01", "partner02", "partner02"],
+      "displaysOnlineId": [
+        "partner01",
+        "partner02",
+        "partner02"
+      ],
       "bookingUpdate": "2024-12-23T10:00:00Z",
       "status": "notBlocked"
     },
@@ -3282,7 +3296,10 @@
       "phone": "987-654-3210",
       "responsiblePerson": "Alice Brown",
       "adminName": "Bob Green",
-      "displaysOnlineId": ["partner01", "partner03"],
+      "displaysOnlineId": [
+        "partner01",
+        "partner03"
+      ],
       "bookingUpdate": "2024-12-22T09:00:00Z",
       "status": "blocked"
     },
@@ -3295,7 +3312,10 @@
       "phone": "555-123-4567",
       "responsiblePerson": "Chris Lee",
       "adminName": "Daniel Kim",
-      "displaysOnlineId": ["partner02", "partner04"],
+      "displaysOnlineId": [
+        "partner02",
+        "partner04"
+      ],
       "bookingUpdate": "2024-12-21T08:30:00Z",
       "status": "notBlocked"
     },
@@ -3308,7 +3328,10 @@
       "phone": "666-888-9999",
       "responsiblePerson": "David Wong",
       "adminName": "Emma White",
-      "displaysOnlineId": ["partner03", "partner05"],
+      "displaysOnlineId": [
+        "partner03",
+        "partner05"
+      ],
       "bookingUpdate": "2024-12-20T07:45:00Z",
       "status": "blocked"
     },
@@ -3321,7 +3344,10 @@
       "phone": "444-333-2222",
       "responsiblePerson": "Eve Harris",
       "adminName": "Frank Lewis",
-      "displaysOnlineId": ["partner04", "partner06"],
+      "displaysOnlineId": [
+        "partner04",
+        "partner06"
+      ],
       "bookingUpdate": "2024-12-19T06:15:00Z",
       "status": "notBlocked"
     },
@@ -3334,7 +3360,10 @@
       "phone": "111-222-3333",
       "responsiblePerson": "Gina Taylor",
       "adminName": "Hugh Clark",
-      "displaysOnlineId": ["partner05", "partner07"],
+      "displaysOnlineId": [
+        "partner05",
+        "partner07"
+      ],
       "bookingUpdate": "2024-12-18T05:00:00Z",
       "status": "blocked"
     },
@@ -3347,7 +3376,10 @@
       "phone": "777-888-9999",
       "responsiblePerson": "Harry Patel",
       "adminName": "Ivy Scott",
-      "displaysOnlineId": ["partner06", "partner08"],
+      "displaysOnlineId": [
+        "partner06",
+        "partner08"
+      ],
       "bookingUpdate": "2024-12-17T04:30:00Z",
       "status": "notBlocked"
     },
@@ -3360,7 +3392,10 @@
       "phone": "888-999-0000",
       "responsiblePerson": "Jack Ford",
       "adminName": "Karen Miller",
-      "displaysOnlineId": ["partner07", "partner09"],
+      "displaysOnlineId": [
+        "partner07",
+        "partner09"
+      ],
       "bookingUpdate": "2024-12-16T03:00:00Z",
       "status": "blocked"
     },
@@ -3373,7 +3408,10 @@
       "phone": "333-444-5555",
       "responsiblePerson": "Liam Davis",
       "adminName": "Megan Lewis",
-      "displaysOnlineId": ["partner08", "partner10"],
+      "displaysOnlineId": [
+        "partner08",
+        "partner10"
+      ],
       "bookingUpdate": "2024-12-15T02:30:00Z",
       "status": "notBlocked"
     },
@@ -3386,7 +3424,9 @@
       "phone": "222-333-4444",
       "responsiblePerson": "Nina Ford",
       "adminName": "Oscar Hunt",
-      "displaysOnlineId": ["partner09"],
+      "displaysOnlineId": [
+        "partner09"
+      ],
       "bookingUpdate": "2024-12-14T01:00:00Z",
       "status": "blocked"
     }
@@ -4421,23 +4461,41 @@
       "id": 2
     },
     {
-      "emails": ["c4netfff.9@gmail.com", "c4netfff.9@gmail.com"],
+      "emails": [
+        "c4netfff.9@gmail.com",
+        "c4netfff.9@gmail.com"
+      ],
       "id": 3
     },
     {
-      "emails": ["c4net.7@gmail.com", "c4net.8@gmail.com", "hgj@fsdf.com"],
+      "emails": [
+        "c4net.7@gmail.com",
+        "c4net.8@gmail.com",
+        "hgj@fsdf.com"
+      ],
       "id": 4
     },
     {
-      "emails": ["c4net.7@gmail.com", "hgj@fsdf.com"],
+      "emails": [
+        "c4net.7@gmail.com",
+        "hgj@fsdf.com"
+      ],
       "id": 5
     },
     {
-      "emails": ["c4net.8@gmail.com", "hgj@fsdf.com", "c4net.8@gmail.com"],
+      "emails": [
+        "c4net.8@gmail.com",
+        "hgj@fsdf.com",
+        "c4net.8@gmail.com"
+      ],
       "id": 6
     },
     {
-      "emails": ["c4net.8@gmail.com", "hgj@fsdf.com", "c4net.8@gmail.com"],
+      "emails": [
+        "c4net.8@gmail.com",
+        "hgj@fsdf.com",
+        "c4net.8@gmail.com"
+      ],
       "id": 7
     },
     {
@@ -4449,39 +4507,62 @@
       "id": 8
     },
     {
-      "emails": ["rkdo.skandari@gmail.com"],
+      "emails": [
+        "rkdo.skandari@gmail.com"
+      ],
       "id": 9
     },
     {
-      "emails": ["rkdo.skandari@gmail.com", "rkdo.skandari@gmail.com"],
+      "emails": [
+        "rkdo.skandari@gmail.com",
+        "rkdo.skandari@gmail.com"
+      ],
       "id": 10
     },
     {
-      "emails": ["rkdo.skandari@gmail.com", "c4net.7@gmail.com"],
+      "emails": [
+        "rkdo.skandari@gmail.com",
+        "c4net.7@gmail.com"
+      ],
       "id": 11
     },
     {
-      "emails": ["hgj@fsdf.com", "c4net.8@gmail.com"],
+      "emails": [
+        "hgj@fsdf.com",
+        "c4net.8@gmail.com"
+      ],
       "id": 12
     },
     {
-      "emails": ["skndri-hosyn@outlook.com"],
+      "emails": [
+        "skndri-hosyn@outlook.com"
+      ],
       "id": 13
     },
     {
-      "emails": ["c4net.8@gmail.com"],
+      "emails": [
+        "c4net.8@gmail.com"
+      ],
       "id": 14
     },
     {
-      "emails": ["c4net.8@gmail.com"],
+      "emails": [
+        "c4net.8@gmail.com"
+      ],
       "id": 15
     },
     {
-      "emails": ["rkdo.skandari@gmail.com", "rkdo.skandari@gmail.com"],
+      "emails": [
+        "rkdo.skandari@gmail.com",
+        "rkdo.skandari@gmail.com"
+      ],
       "id": 16
     },
     {
-      "emails": ["rkdo.skandari@gmail.com", "rkdo.skandari@gmail.com"],
+      "emails": [
+        "rkdo.skandari@gmail.com",
+        "rkdo.skandari@gmail.com"
+      ],
       "id": 17
     }
   ],
@@ -4640,7 +4721,13 @@
       "priceCategory": 2,
       "rate": 1,
       "utilizationRate": 4,
-      "availableDays": ["mon", "tue", "wed", "thu", "fri"],
+      "availableDays": [
+        "mon",
+        "tue",
+        "wed",
+        "thu",
+        "fri"
+      ],
       "companyLogo": "/assets/images/profile.webp",
       "isFavorite": true
     },
@@ -4681,7 +4768,10 @@
       "priceCategory": 3,
       "rate": 4,
       "utilizationRate": 5,
-      "availableDays": ["sat", "sun"],
+      "availableDays": [
+        "sat",
+        "sun"
+      ],
       "companyLogo": "/assets/images/profile.webp",
       "isFavorite": true
     },
@@ -4722,7 +4812,10 @@
       "priceCategory": 1,
       "rate": 3,
       "utilizationRate": 3,
-      "availableDays": ["mon", "fri"],
+      "availableDays": [
+        "mon",
+        "fri"
+      ],
       "companyLogo": "/assets/images/profile.webp",
       "isFavorite": false
     },
@@ -4763,7 +4856,10 @@
       "priceCategory": 4,
       "rate": 2,
       "utilizationRate": 4,
-      "availableDays": ["wed", "thu"],
+      "availableDays": [
+        "wed",
+        "thu"
+      ],
       "companyLogo": "/assets/images/profile.webp",
       "isFavorite": true
     },
@@ -4804,7 +4900,11 @@
       "priceCategory": 5,
       "rate": 5,
       "utilizationRate": 2,
-      "availableDays": ["mon", "tue", "sat"],
+      "availableDays": [
+        "mon",
+        "tue",
+        "sat"
+      ],
       "companyLogo": "/assets/images/profile.webp",
       "isFavorite": false
     },
@@ -4845,7 +4945,11 @@
       "priceCategory": 1,
       "rate": 4,
       "utilizationRate": 1,
-      "availableDays": ["mon", "tue", "wed"],
+      "availableDays": [
+        "mon",
+        "tue",
+        "wed"
+      ],
       "companyLogo": "/assets/images/profile.webp",
       "isFavorite": false
     },
@@ -4886,7 +4990,11 @@
       "priceCategory": 2,
       "rate": 3,
       "utilizationRate": 5,
-      "availableDays": ["thu", "fri", "sun"],
+      "availableDays": [
+        "thu",
+        "fri",
+        "sun"
+      ],
       "companyLogo": "/assets/images/profile.webp",
       "isFavorite": false
     },
@@ -4927,7 +5035,11 @@
       "priceCategory": 4,
       "rate": 2,
       "utilizationRate": 3,
-      "availableDays": ["mon", "wed", "sat"],
+      "availableDays": [
+        "mon",
+        "wed",
+        "sat"
+      ],
       "companyLogo": "/assets/images/profile.webp",
       "isFavorite": true
     },
@@ -4968,7 +5080,11 @@
       "priceCategory": 5,
       "rate": 5,
       "utilizationRate": 4,
-      "availableDays": ["tue", "thu", "sun"],
+      "availableDays": [
+        "tue",
+        "thu",
+        "sun"
+      ],
       "isFavorite": false,
       "companyLogo": "/assets/images/profile.webp"
     },
@@ -5009,7 +5125,11 @@
       "priceCategory": 3,
       "rate": 4,
       "utilizationRate": 5,
-      "availableDays": ["mon", "fri", "sat"],
+      "availableDays": [
+        "mon",
+        "fri",
+        "sat"
+      ],
       "companyLogo": "/assets/images/profile.webp",
       "isFavorite": true
     }
@@ -5306,7 +5426,9 @@
       ],
       "roleName": "sss",
       "roleDesc": "ddd",
-      "rolePermissions": ["CREATE_DISPLAY"]
+      "rolePermissions": [
+        "CREATE_DISPLAY"
+      ]
     },
     {
       "id": "4",
@@ -5547,6 +5669,7 @@
       "id": "MSG-1",
       "ticketId": "TCK-101",
       "sender": "user_123",
+      "side": "user",
       "message": "I reset my password but still can’t log in.",
       "timestamp": "2025-04-16T16:55:00.000Z"
     },
@@ -5554,6 +5677,7 @@
       "id": "MSG-2",
       "ticketId": "TCK-101",
       "sender": "agent_45",
+      "side": "super",
       "message": "Thanks—do you see an error message?",
       "timestamp": "2025-04-16T17:05:00.000Z"
     },
@@ -5561,6 +5685,7 @@
       "id": "MSG-3",
       "ticketId": "TCK-101",
       "sender": "user_123",
+      "side": "user",
       "message": "Yes, it says ‘Invalid credentials’.",
       "timestamp": "2025-04-16T17:08:30.000Z"
     },
@@ -5568,6 +5693,7 @@
       "id": "MSG-4",
       "ticketId": "TCK-102",
       "sender": "user_987",
+      "side": "user",
       "message": "Invoice shows $200 but billing shows $180.",
       "timestamp": "2025-04-17T09:25:00.000Z"
     },
@@ -5575,6 +5701,7 @@
       "id": "MSG-5",
       "ticketId": "TCK-102",
       "sender": "agent_12",
+      "side": "super",
       "message": "We’re checking with finance.",
       "timestamp": "2025-04-17T09:40:00.000Z"
     },
@@ -5582,6 +5709,7 @@
       "id": "MSG-6",
       "ticketId": "TCK-103",
       "sender": "user_555",
+      "side": "user",
       "message": "App closes immediately after I tap the icon.",
       "timestamp": "2025-04-14T08:41:30.000Z"
     },
@@ -5589,6 +5717,7 @@
       "id": "MSG-7",
       "ticketId": "TCK-103",
       "sender": "agent_32",
+      "side": "super",
       "message": "Which OS version are you using?",
       "timestamp": "2025-04-14T08:42:30.000Z"
     },
@@ -5596,6 +5725,7 @@
       "id": "MSG-8",
       "ticketId": "TCK-106",
       "sender": "user_654",
+      "side": "user",
       "message": "Requested password reset twice, no email received.",
       "timestamp": "2025-04-10T09:30:00.000Z"
     },
@@ -5603,6 +5733,7 @@
       "id": "MSG-9",
       "ticketId": "TCK-106",
       "sender": "agent_22",
+      "side": "super",
       "message": "Check your spam folder please.",
       "timestamp": "2025-04-10T09:45:00.000Z"
     },
@@ -5610,6 +5741,7 @@
       "id": "MSG-10",
       "ticketId": "TCK-110",
       "sender": "user_963",
+      "side": "user",
       "message": "My card was charged twice for one order.",
       "timestamp": "2025-04-05T13:30:00.000Z"
     },
@@ -5617,6 +5749,7 @@
       "id": "MSG-11",
       "ticketId": "TCK-110",
       "sender": "agent_99",
+      "side": "super",
       "message": "We’ve refunded the duplicate charge.",
       "timestamp": "2025-04-05T13:50:00.000Z"
     }
@@ -5895,7 +6028,9 @@
     {
       "id": "8",
       "label": "Partner Manager",
-      "roleName": ["Partner Manager"],
+      "roleName": [
+        "Partner Manager"
+      ],
       "permissions": [
         "INVITE_PARTNER",
         "SEND_MESSAGE_PARTNER_ADMIN",
@@ -5911,7 +6046,9 @@
     {
       "id": "9",
       "label": "Category Manager",
-      "permissions": ["MANAGE_CATEGORY"]
+      "permissions": [
+        "MANAGE_CATEGORY"
+      ]
     },
     {
       "id": "10",
@@ -5934,37 +6071,51 @@
     {
       "id": "1",
       "label": "displays",
-      "permission": ["GENERAL_DISPLAY"]
+      "permission": [
+        "GENERAL_DISPLAY"
+      ]
     },
     {
       "id": "2",
       "label": "mediaPool",
-      "permission": ["GENERAL_MEDIAPOOL"]
+      "permission": [
+        "GENERAL_MEDIAPOOL"
+      ]
     },
     {
       "id": "3",
       "label": "Private Media Pool",
-      "permission": ["GENERAL_PRIVATE_MEDIAPOOL"]
+      "permission": [
+        "GENERAL_PRIVATE_MEDIAPOOL"
+      ]
     },
     {
       "id": "4",
       "label": "Advertisements",
-      "permission": ["GENERAL_AD"]
+      "permission": [
+        "GENERAL_AD"
+      ]
     },
     {
       "id": "5",
       "label": "Playlist",
-      "permission": ["GENERAL_PLAYLIST"]
+      "permission": [
+        "GENERAL_PLAYLIST"
+      ]
     },
     {
       "id": "6",
       "label": "Private Playlist",
-      "permission": ["GENERAL_PRIVATE_PLAYLIST"]
+      "permission": [
+        "GENERAL_PRIVATE_PLAYLIST"
+      ]
     },
     {
       "id": "7",
       "label": "Short Playlist",
-      "permission": ["GENERAL_SHORT_PLAYLIST"]
+      "permission": [
+        "GENERAL_SHORT_PLAYLIST"
+      ]
     },
     {
       "id": "8",
@@ -5978,7 +6129,9 @@
     {
       "id": "9",
       "label": "User Managemet",
-      "permission": ["GENERAL_USER_MANAGEMENT"]
+      "permission": [
+        "GENERAL_USER_MANAGEMENT"
+      ]
     }
   ],
   "usersCompanyList": [
@@ -6869,7 +7022,10 @@
   ],
   "accountSetting": {
     "loginTime": "2024",
-    "company": { "label": "SISCO", "id": "5" },
+    "company": {
+      "label": "SISCO",
+      "id": "5"
+    },
     "companyLogo": "/assets/images/profile.webp",
     "credit": "1500.00 Euro",
     "onlineId": "CD-2243",
@@ -6885,42 +7041,66 @@
     {
       "id": "addon-1",
       "title": "10 GB storage package",
-      "price": { "label": "€9.99", "message": "per month" }
+      "price": {
+        "label": "€9.99",
+        "message": "per month"
+      }
     },
     {
       "id": "addon-2",
       "title": "Fast Synchronization",
-      "price": { "label": "€4.99", "message": "per 50GB" }
+      "price": {
+        "label": "€4.99",
+        "message": "per 50GB"
+      }
     },
     {
       "id": "addon-3",
       "title": "Template Bundle",
-      "price": { "label": "€15.99", "message": "per 10GB" }
+      "price": {
+        "label": "€15.99",
+        "message": "per 10GB"
+      }
     },
     {
       "id": "addon-4",
       "title": "Extra Storage",
-      "price": { "label": "€14.99", "message": "per 100GB" }
+      "price": {
+        "label": "€14.99",
+        "message": "per 100GB"
+      }
     },
     {
       "id": "addon-5",
       "title": "Extra Storage",
-      "price": { "label": "€24.99", "message": "per 2GB" }
+      "price": {
+        "label": "€24.99",
+        "message": "per 2GB"
+      }
     },
     {
       "id": "addon-6",
       "title": "Extra Storage",
-      "price": { "label": "€24.99", "message": "per 2GB" }
+      "price": {
+        "label": "€24.99",
+        "message": "per 2GB"
+      }
     },
     {
       "id": "addon-7",
       "title": "Extra Storage",
-      "price": { "label": "€24.99", "message": "per 2GB" }
+      "price": {
+        "label": "€24.99",
+        "message": "per 2GB"
+      }
     },
     {
       "id": "addon-8",
       "title": "Extra Storage",
-      "price": { "label": "€24.99", "message": "per 2GB" }
+      "price": {
+        "label": "€24.99",
+        "message": "per 2GB"
+      }
     }
   ],
   "smartGuides": [
@@ -6966,27 +7146,100 @@
     }
   ],
   "monthlyEarnings": [
-    { "month": "January", "earnings": 10 },
-    { "month": "February", "earnings": 30 },
-    { "month": "March", "earnings": 50 },
-    { "month": "April", "earnings": 40 },
-    { "month": "May", "earnings": 60 },
-    { "month": "June", "earnings": 20 }
-  ],
-  "accountsOnwBills": [1, 2],
-  "accountsPartnerBookings": [1, 2, 3, 4, 5],
-  "notificationCarouselMessage": [
     {
-      "id": "1",
-      "lang": "en",
-      "order": 1,
-      "title": "Your display utilization has doubled!"
+      "month": "January",
+      "earnings": 10
     },
     {
-      "id": "2",
-      "lang": "en",
-      "order": 2,
-      "title": "Tip: Drag & drop to upload media faster."
+      "month": "February",
+      "earnings": 30
+    },
+    {
+      "month": "March",
+      "earnings": 50
+    },
+    {
+      "month": "April",
+      "earnings": 40
+    },
+    {
+      "month": "May",
+      "earnings": 60
+    },
+    {
+      "month": "June",
+      "earnings": 20
+    }
+  ],
+  "companyBalance": {
+    "value": 1500
+  },
+  "currentPlan": {
+    "id": "pro",
+    "name": "KiData Pro",
+    "price": 12.99
+  },
+  "accountsOnwBills": [
+    1,
+    2
+  ],
+  "accountsPartnerBookings": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "notificationCarouselMessage": [
+    {
+      "id": "a3f8d0a5-2b0a-4b3b-8d12-9b5fd8f2a7c1",
+      "date": "2025-07-15T08:30:00.000Z",
+      "title": "Welcome to our Summer Release ☀️"
+    },
+    {
+      "id": "6a2b0c9e-8d4a-4b1e-9f1a-5f0b1e3c7d92",
+      "date": "2025-08-01T10:00:00.000Z",
+      "title": "New Feature: Dark Mode"
+    },
+    {
+      "id": "c7f1a2d4-9b88-4e4e-a3b3-1b9f0a3d2c44",
+      "date": "2025-08-18T12:00:00.000Z",
+      "title": "Tip of the Week: Keyboard Shortcuts"
+    },
+    {
+      "id": "f21b0e77-3f9e-4693-9c2d-5b6a1a8d0b3e",
+      "date": "2025-09-01T07:00:00.000Z",
+      "title": "Back to Work Sale: Up to 30% Off"
+    },
+    {
+      "id": "0e9a1d44-2c3b-4b77-9a22-0b5e9a1f2c6d",
+      "date": "2025-09-10T16:30:00.000Z",
+      "title": "We Hit 10,000 Users — Thank You!"
+    },
+    {
+      "id": "b4a2c7d8-9e1f-4d2a-8a6e-3f2b1c7d9e00",
+      "date": "2025-09-22T09:15:00.000Z",
+      "title": "Scheduled Maintenance: Sept 25, 02:00–03:00 UTC"
+    },
+    {
+      "id": "e8d2b7c1-6a45-4a9c-b3e1-9f0c2d7a1b55",
+      "date": "2025-09-28T14:45:00.000Z",
+      "title": "New Blog: Performance Tuning Guide"
+    },
+    {
+      "id": "9f7a2c1e-3d44-49a0-8e2f-7c1b2a9d3f66",
+      "date": "2025-10-03T11:00:00.000Z",
+      "title": "Outage Resolved: Postmortem Inside"
+    },
+    {
+      "id": "2c4e7a9b-1d22-4a88-b0a1-3f6e9c0d7b11",
+      "date": "2025-10-08T18:20:00.000Z",
+      "title": "Refer a Friend, Get 20% Off"
+    },
+    {
+      "id": "7b1e9a2c-5d3f-4f80-9b77-0c2a1e5f9d33",
+      "date": "2025-10-11T09:00:00.000Z",
+      "title": "Support Hours Extended: 7 Days a Week"
     }
   ],
   "accountSettingCompanyInfo": [
@@ -7091,7 +7344,7 @@
         "id": "basic",
         "name": "KiData Basic",
         "price": "5",
-        "description": "With the Plus plan, you can manage any number of displays and benefit from precise content control via configurable categories, industry filters, and predefined multi-filters.With up to 15 user accounts, advanced analytics features, and the option to export to PDF and CSV, this plan is ideal for teams with professional requirements.You can use up to 20 playlists with spots up to 30 seconds long and up to 30 minutes long – ideal for structured and longer campaigns.50 design templates, 10 GB of cloud storage, a sophisticated duplication workflow, and private mode round out the package. Support is available via email.",
+        "description": "With the Plus plan, you can manage any number of displays and benefit from precise content control via configurable categories, industry filters, and predefined multi-filters.With up to 15 user accounts, advanced analytics features, and the option to export to PDF and CSV, this plan is ideal for teams with professional requirements.You can use up to 20 playlists.",
         "level": 1,
         "alternativeId": "plus",
         "benefits": [
@@ -7134,17 +7387,12 @@
         "id": "plus",
         "name": "KiData Plus",
         "price": "10",
-        "description": "With the Plus plan, you can manage any number of displays and benefit from precise content control via configurable categories, industry filters, and predefined multi-filters.With up to 15 user accounts, advanced analytics features, and the option to export to PDF and CSV, this plan is ideal for teams with professional requirements.You can use up to 20 playlists with spots up to 30 seconds long and up to 30 minutes long – ideal for structured and longer campaigns.50 design templates, 10 GB of cloud storage, a sophisticated duplication workflow, and private mode round out the package. Support is available via email.",
+        "description": " control via configurable categories, industry filters, and predefined multi-filters.With up to 15 user accounts, and up to 30 minutes long – ideal for structured and longer campaigns.50 design templates, 10 GB of cloud storage, a sophisticated duplication workflow, and private mode round out the package. Support is available via email.",
         "level": 2,
         "alternativeId": "pro",
         "benefits": [
-          "Up to 10 screens and campaigns up to 14 days",
-          "Basic categories with limited filters",
-          "Access to a small partner list",
           "Sync every 30 minutes for regular updates",
           "Teams up to 5 users with fixed roles",
-          "20 GB storage included",
-          "Core templates for a quick start",
           "Overview analytics with top-line metrics",
           "Standard email support within 2 business days"
         ],
@@ -7228,9 +7476,6 @@
           "Full flexibility with unrestricted categories and custom filters",
           "VIP partnerships without limits for maximum network reach",
           "Real-time synchronization – instant updates across your entire network",
-          "Complete team freedom with unlimited users and fully customizable roles",
-          "Massive storage capacity – because big businesses need big space",
-          "Premium templates to keep your content always on brand",
           "Comprehensive analytics suite for deep, actionable insights",
           "Dedicated support & priority service whenever you need it"
         ],
@@ -7534,7 +7779,9 @@
       "updatedAt": "2025-06-22T10:00:00.000Z",
       "isArchived": false,
       "isBookmarked": true,
-      "AttachmentsFilesUrl": ["/src/assets/images/logos/alpha_kidata_logo.png"]
+      "AttachmentsFilesUrl": [
+        "/src/assets/images/logos/alpha_kidata_logo.png"
+      ]
     },
     {
       "id": "MSG-ROOT-1002",
@@ -7588,7 +7835,9 @@
       "sender": "john.doe@example.com",
       "message": "Hey team, I'm seeing intermittent login errors this morning.",
       "timestamp": "2025-08-19T09:20:00.000Z",
-      "AttachmentsFilesUrl": ["/src/assets/images/logos/alpha_kidata_logo.png"]
+      "AttachmentsFilesUrl": [
+        "/src/assets/images/logos/alpha_kidata_logo.png"
+      ]
     },
     {
       "id": "CM-2002",
@@ -7971,6 +8220,1677 @@
       "additionalInfo": [],
       "url": "/assets/videos/test-video.mp4",
       "thumbUrl": "/assets/images/profile.webp"
+    }
+  ],
+  "dashboardLayout": {
+    "version": 1,
+    "layoutLg": [
+      {
+        "i": "greeting",
+        "x": 0,
+        "y": 0,
+        "w": 6,
+        "h": 3,
+        "visible": true
+      },
+      {
+        "i": "notification",
+        "x": 6,
+        "y": 0,
+        "w": 6,
+        "h": 3,
+        "visible": true
+      },
+      {
+        "i": "main",
+        "x": 0,
+        "y": 3,
+        "w": 4,
+        "h": 6,
+        "visible": true
+      },
+      {
+        "i": "storage",
+        "x": 4,
+        "y": 3,
+        "w": 8,
+        "h": 6,
+        "visible": true
+      },
+      {
+        "i": "earning",
+        "x": 0,
+        "y": 9,
+        "w": 12,
+        "h": 8,
+        "visible": true
+      },
+      {
+        "i": "bills",
+        "x": 0,
+        "y": 17,
+        "w": 6,
+        "h": 4,
+        "visible": true
+      },
+      {
+        "i": "partner",
+        "x": 6,
+        "y": 17,
+        "w": 6,
+        "h": 4,
+        "visible": true
+      },
+      {
+        "i": "offers",
+        "x": 0,
+        "y": 21,
+        "w": 12,
+        "h": 6,
+        "visible": true
+      },
+      {
+        "i": "guides",
+        "x": 0,
+        "y": 27,
+        "w": 12,
+        "h": 6,
+        "visible": true
+      }
+    ]
+  },
+  "ticketsWithCountSupper": {
+    "items": [
+      {
+        "id": "0b9d5d2e-6f9a-4f2a-9f5a-1fa95b9d1a10",
+        "companyId": "comp-acme",
+        "companyName": "Acme Corp",
+        "title": "API outage: intermittent 500 errors",
+        "description": "Multiple endpoints returning 500 since early morning; impact on order processing.",
+        "category": "TECHNICAL",
+        "priority": "HIGH",
+        "status": "OPEN",
+        "isSeen": false,
+        "createdBy": "user:jane.doe@acme.com",
+        "assignedAgentId": "agent_001",
+        "assignedAgentName": "Lea Schneider",
+        "createdAt": "2025-10-28T09:12:00.000Z",
+        "updatedAt": "2025-11-05T16:40:00.000Z"
+      },
+      {
+        "id": "1b3e9f46-2aa6-4d6a-9a27-1f1c2b3d4e5f",
+        "companyId": "comp-globex",
+        "companyName": "Globex Corporation",
+        "title": "Invoice discrepancy for October",
+        "description": "Charged for 120 seats but only 100 active users. Please review and credit.",
+        "category": "BILLING",
+        "priority": "MEDIUM",
+        "status": "IN_PROCESS",
+        "isSeen": true,
+        "createdBy": "user:ap@globex.com",
+        "assignedAgentId": "agent_002",
+        "assignedAgentName": "Tomás Álvarez",
+        "createdAt": "2025-11-01T10:05:00.000Z",
+        "updatedAt": "2025-11-04T14:20:00.000Z"
+      },
+      {
+        "id": "22c0f5a8-7a4e-4a2d-b8c5-8897c9e1f2a3",
+        "companyId": "comp-initech",
+        "companyName": "Initech",
+        "title": "Cannot reset password with SSO",
+        "description": "Users federated via Azure AD receive an error during password reset flow.",
+        "category": "ACCOUNT",
+        "priority": "HIGH",
+        "status": "ON_HOLD",
+        "isSeen": true,
+        "createdBy": "user:peter.gibbons@initech.com",
+        "assignedAgentId": "agent_003",
+        "assignedAgentName": "Priya Kapoor",
+        "createdAt": "2025-10-30T08:45:00.000Z",
+        "updatedAt": "2025-11-02T09:10:00.000Z"
+      },
+      {
+        "id": "3393c9b0-0c7d-4a1b-8f2d-55a4b6c7d8e9",
+        "companyId": "comp-umbrella",
+        "companyName": "Umbrella GmbH",
+        "title": "Webhook retries failing",
+        "description": "Retries stop after second attempt; delivery status stuck in \"pending\".",
+        "category": "TECHNICAL",
+        "priority": "MEDIUM",
+        "status": "RESOLVED",
+        "isSeen": true,
+        "createdBy": "user:support@umbrella.de",
+        "assignedAgentId": "agent_001",
+        "assignedAgentName": "Lea Schneider",
+        "createdAt": "2025-09-18T12:00:00.000Z",
+        "updatedAt": "2025-09-19T16:30:00.000Z",
+        "closedAt": "2025-09-19T16:30:00.000Z"
+      },
+      {
+        "id": "48a1b2c3-d4e5-46f7-8901-23456789abcd",
+        "companyId": "comp-stark",
+        "companyName": "Stark Industries",
+        "title": "Change company name on contract",
+        "description": "Legal entity updated; need the subscription contract to reflect new name.",
+        "category": "OTHER",
+        "priority": "LOW",
+        "status": "CLOSED",
+        "isSeen": true,
+        "createdBy": "user:pepper.potts@stark.com",
+        "assignedAgentId": "agent_002",
+        "assignedAgentName": "Tomás Álvarez",
+        "createdAt": "2025-05-10T09:00:00.000Z",
+        "updatedAt": "2025-05-12T13:00:00.000Z",
+        "closedAt": "2025-05-12T13:00:00.000Z"
+      },
+      {
+        "id": "5f6e7d8c-9b0a-4c3d-8e7f-6a5b4c3d2e1f",
+        "companyId": "comp-wayne",
+        "companyName": "Wayne Enterprises",
+        "title": "Card charged twice",
+        "description": "Duplicate charge observed for invoice #INV-2025-1105.",
+        "category": "BILLING",
+        "priority": "CRITICAL",
+        "status": "OPEN",
+        "isSeen": false,
+        "createdBy": "user:lucius.fox@wayne.com",
+        "createdAt": "2025-11-05T07:55:00.000Z",
+        "updatedAt": "2025-11-06T08:10:00.000Z"
+      },
+      {
+        "id": "6a7b8c9d-0e1f-4a2b-9c8d-7e6f5a4b3c2d",
+        "companyId": "comp-soylent",
+        "companyName": "Soylent AG",
+        "title": "Severe latency in EU-West",
+        "description": "p95 latency > 3s for read operations from EU-West region.",
+        "category": "TECHNICAL",
+        "priority": "CRITICAL",
+        "status": "IN_PROCESS",
+        "isSeen": true,
+        "createdBy": "system:monitoring",
+        "assignedAgentId": "agent_001",
+        "assignedAgentName": "Lea Schneider",
+        "createdAt": "2025-11-03T06:20:00.000Z",
+        "updatedAt": "2025-11-06T07:45:00.000Z"
+      },
+      {
+        "id": "7c8d9e0f-1a2b-4c3d-9e8f-0a1b2c3d4e5f",
+        "companyId": "comp-tyrell",
+        "companyName": "Tyrell Corp",
+        "title": "Locked out after 2FA device lost",
+        "description": "Primary admin lost security key; need emergency recovery.",
+        "category": "ACCOUNT",
+        "priority": "HIGH",
+        "status": "RESOLVED",
+        "isSeen": true,
+        "createdBy": "user:rachel@tyrell.com",
+        "assignedAgentId": "agent_003",
+        "assignedAgentName": "Priya Kapoor",
+        "createdAt": "2025-08-22T11:10:00.000Z",
+        "updatedAt": "2025-08-22T15:25:00.000Z",
+        "closedAt": "2025-08-22T15:25:00.000Z"
+      },
+      {
+        "id": "8d9e0f1a-2b3c-4d5e-8f9a-1b2c3d4e5f60",
+        "companyId": "comp-hooli",
+        "companyName": "Hooli",
+        "title": "Feature request: CSV export delimiter",
+        "description": "Allow selecting semicolon as delimiter for EU locales.",
+        "category": "OTHER",
+        "priority": "MEDIUM",
+        "status": "ON_HOLD",
+        "isSeen": false,
+        "createdBy": "user:ops@hooli.com",
+        "assignedAgentId": "agent_002",
+        "assignedAgentName": "Tomás Álvarez",
+        "createdAt": "2025-07-01T09:30:00.000Z",
+        "updatedAt": "2025-07-05T10:00:00.000Z"
+      },
+      {
+        "id": "9e0f1a2b-3c4d-5e6f-9a8b-2c3d4e5f6071",
+        "companyId": "comp-vandelay",
+        "companyName": "Vandelay Industries",
+        "title": "Incorrect DE tax rate applied",
+        "description": "VAT calculated at 16% instead of 19% on invoice #2025-0314.",
+        "category": "BILLING",
+        "priority": "HIGH",
+        "status": "CLOSED",
+        "isSeen": true,
+        "createdBy": "user:accounting@vandelay.de",
+        "assignedAgentId": "agent_002",
+        "assignedAgentName": "Tomás Álvarez",
+        "createdAt": "2025-03-14T13:15:00.000Z",
+        "updatedAt": "2025-03-15T09:05:00.000Z",
+        "closedAt": "2025-03-15T09:05:00.000Z"
+      },
+      {
+        "id": "a0b1c2d3-e4f5-46a7-89b0-1c2d3e4f5a6b",
+        "companyId": "comp-cyberdyne",
+        "companyName": "Cyberdyne Systems",
+        "title": "Create additional admin role",
+        "description": "Need to delegate billing-only admin to finance team.",
+        "category": "ACCOUNT",
+        "priority": "LOW",
+        "status": "OPEN",
+        "isSeen": true,
+        "createdBy": "user:sarah.connor@cyberdyne.com",
+        "createdAt": "2025-10-01T08:00:00.000Z",
+        "updatedAt": "2025-10-02T08:20:00.000Z"
+      },
+      {
+        "id": "b1c2d3e4-f5a6-47b8-90c1-2d3e4f5a6b7c",
+        "companyId": "comp-bluesun",
+        "companyName": "Blue Sun",
+        "title": "Data import job stuck",
+        "description": "Nightly import from S3 not progressing beyond 12%.",
+        "category": "TECHNICAL",
+        "priority": "CRITICAL",
+        "status": "RESOLVED",
+        "isSeen": true,
+        "createdBy": "system:ingestion",
+        "assignedAgentId": "agent_001",
+        "assignedAgentName": "Lea Schneider",
+        "createdAt": "2025-09-30T05:40:00.000Z",
+        "updatedAt": "2025-10-01T06:15:00.000Z",
+        "closedAt": "2025-10-01T06:15:00.000Z"
+      },
+      {
+        "id": "c2d3e4f5-a6b7-48c9-01d2-3e4f5a6b7c8d",
+        "companyId": "comp-wonka",
+        "companyName": "Wonka Industries",
+        "title": "Clarification on seat-based pricing",
+        "description": "Need breakdown of costs for seasonal seat increases.",
+        "category": "OTHER",
+        "priority": "LOW",
+        "status": "IN_PROCESS",
+        "isSeen": true,
+        "createdBy": "user:finance@wonka.co",
+        "assignedAgentId": "agent_003",
+        "assignedAgentName": "Priya Kapoor",
+        "createdAt": "2025-11-04T10:25:00.000Z",
+        "updatedAt": "2025-11-05T11:00:00.000Z"
+      },
+      {
+        "id": "d3e4f5a6-b7c8-49da-12e3-4f5a6b7c8d9e",
+        "companyId": "comp-gringotts",
+        "companyName": "Gringotts Bank",
+        "title": "Bank transfer missing",
+        "description": "Wire transfer sent on 2025-06-11 not reflected in account.",
+        "category": "BILLING",
+        "priority": "MEDIUM",
+        "status": "CLOSED",
+        "isSeen": true,
+        "createdBy": "user:treasury@gringotts.bank",
+        "assignedAgentId": "agent_002",
+        "assignedAgentName": "Tomás Álvarez",
+        "createdAt": "2025-06-12T14:00:00.000Z",
+        "updatedAt": "2025-06-14T10:10:00.000Z",
+        "closedAt": "2025-06-14T10:10:00.000Z"
+      }
+    ],
+    "totalCount": 14
+  },
+  "ticketSupper": [
+    {
+      "id": "0b9d5d2e-6f9a-4f2a-9f5a-1fa95b9d1a10",
+      "companyId": "comp-acme",
+      "companyName": "Acme Corp",
+      "title": "API outage: intermittent 500 errors",
+      "description": "Multiple endpoints returning 500 since early morning; impact on order processing.",
+      "category": "TECHNICAL",
+      "priority": "HIGH",
+      "status": "OPEN",
+      "isSeen": false,
+      "createdBy": "user:jane.doe@acme.com",
+      "assignedAgentId": "agent_001",
+      "assignedAgentName": "Lea Schneider",
+      "createdAt": "2025-10-28T09:12:00.000Z",
+      "updatedAt": "2025-11-05T16:40:00.000Z",
+      "messages": [
+        {
+          "id": "7c7b9e4a-1d9b-4f0f-8a11-5b8c7a0a1f01",
+          "ticketId": "0b9d5d2e-6f9a-4f2a-9f5a-1fa95b9d1a10",
+          "sender": "jane.doe@acme.com",
+          "message": "<p>We are seeing intermittent 500 errors on /orders and /payments. Began around 07:45 UTC. Please advise.</p>",
+          "timestamp": "2025-10-28T09:12:00.000Z",
+          "side": "user"
+        },
+        {
+          "id": "b0c1b2a3-4d5e-46f7-98a1-234567890001",
+          "ticketId": "0b9d5d2e-6f9a-4f2a-9f5a-1fa95b9d1a10",
+          "sender": "Lea Schneider",
+          "message": "<p>Triage in progress. Initial logs suggest elevated error rates from the database connection pool.</p>",
+          "timestamp": "2025-10-28T09:25:00.000Z",
+          "isInternal": true,
+          "side": "super"
+        },
+        {
+          "id": "0f2a3b4c-5d6e-47f8-9012-abcdefabcdef",
+          "ticketId": "0b9d5d2e-6f9a-4f2a-9f5a-1fa95b9d1a10",
+          "sender": "Lea Schneider",
+          "message": "<p>Hi Jane, we are investigating an upstream DB saturation issue. We will update here as we mitigate.</p>",
+          "timestamp": "2025-10-28T09:40:00.000Z",
+          "side": "super"
+        },
+        {
+          "id": "9aa0b1c2-d3e4-45f6-8a90-111213141516",
+          "ticketId": "0b9d5d2e-6f9a-4f2a-9f5a-1fa95b9d1a10",
+          "sender": "Lea Schneider",
+          "message": "<p>Update: mitigation deployed to increase pool size and add circuit breakers. Monitoring impact.</p>",
+          "timestamp": "2025-11-05T16:40:00.000Z",
+          "side": "super"
+        }
+      ]
+    },
+    {
+      "id": "1b3e9f46-2aa6-4d6a-9a27-1f1c2b3d4e5f",
+      "companyId": "comp-globex",
+      "companyName": "Globex Corporation",
+      "title": "Invoice discrepancy for October",
+      "description": "Charged for 120 seats but only 100 active users. Please review and credit.",
+      "category": "BILLING",
+      "priority": "MEDIUM",
+      "status": "IN_PROCESS",
+      "isSeen": true,
+      "createdBy": "user:ap@globex.com",
+      "assignedAgentId": "agent_002",
+      "assignedAgentName": "Tomás Álvarez",
+      "createdAt": "2025-11-01T10:05:00.000Z",
+      "updatedAt": "2025-11-04T14:20:00.000Z",
+      "messages": [
+        {
+          "id": "2a3b4c5d-6e7f-4890-a1b2-c3d4e5f6a701",
+          "ticketId": "1b3e9f46-2aa6-4d6a-9a27-1f1c2b3d4e5f",
+          "sender": "ap@globex.com",
+          "message": "<p>Our October invoice shows 120 seats. We only have 100 active users.</p>",
+          "timestamp": "2025-11-01T10:05:00.000Z",
+          "AttachmentsFilesUrl": [
+            "https://files.example.com/globex/invoice-2025-10.pdf",
+            "https://files.example.com/globex/user-count-2025-10.csv"
+          ],
+          "side": "user"
+        },
+        {
+          "id": "3b4c5d6e-7f80-491a-b2c3-d4e5f6a7b802",
+          "ticketId": "1b3e9f46-2aa6-4d6a-9a27-1f1c2b3d4e5f",
+          "sender": "Tomás Álvarez",
+          "message": "<p>Thanks for the details. We will reconcile license usage vs. billing and report back.</p>",
+          "timestamp": "2025-11-01T11:00:00.000Z",
+          "side": "super"
+        },
+        {
+          "id": "4c5d6e7f-8091-4a2b-c3d4-e5f6a7b8c903",
+          "ticketId": "1b3e9f46-2aa6-4d6a-9a27-1f1c2b3d4e5f",
+          "sender": "Tomás Álvarez",
+          "message": "<p>Reconciliation started; variance likely due to suspended users not reflected in billing snapshot.</p>",
+          "timestamp": "2025-11-02T09:00:00.000Z",
+          "isInternal": true,
+          "side": "super"
+        },
+        {
+          "id": "5d6e7f80-091a-4b2c-d3e4-f5a6b7c8d004",
+          "ticketId": "1b3e9f46-2aa6-4d6a-9a27-1f1c2b3d4e5f",
+          "sender": "Tomás Álvarez",
+          "message": "<p>Update: preliminary review indicates 20 suspended users billed in error. Credit request submitted to finance.</p>",
+          "timestamp": "2025-11-04T14:20:00.000Z",
+          "side": "super"
+        }
+      ]
+    },
+    {
+      "id": "22c0f5a8-7a4e-4a2d-b8c5-8897c9e1f2a3",
+      "companyId": "comp-initech",
+      "companyName": "Initech",
+      "title": "Cannot reset password with SSO",
+      "description": "Users federated via Azure AD receive an error during password reset flow.",
+      "category": "ACCOUNT",
+      "priority": "HIGH",
+      "status": "ON_HOLD",
+      "isSeen": true,
+      "createdBy": "user:peter.gibbons@initech.com",
+      "assignedAgentId": "agent_003",
+      "assignedAgentName": "Priya Kapoor",
+      "createdAt": "2025-10-30T08:45:00.000Z",
+      "updatedAt": "2025-11-02T09:10:00.000Z",
+      "messages": [
+        {
+          "id": "6e7f8091-0a2b-4c3d-d4e5-f6a7b8c9d105",
+          "ticketId": "22c0f5a8-7a4e-4a2d-b8c5-8897c9e1f2a3",
+          "sender": "peter.gibbons@initech.com",
+          "message": "<p>Federated users get an error when attempting password reset. SSO via Azure AD.</p>",
+          "timestamp": "2025-10-30T08:45:00.000Z",
+          "side": "user"
+        },
+        {
+          "id": "7f80910a-2b3c-4d5e-e6f7-a8b9c0d1e206",
+          "ticketId": "22c0f5a8-7a4e-4a2d-b8c5-8897c9e1f2a3",
+          "sender": "Priya Kapoor",
+          "message": "<p>For federated users, password reset is managed by your IdP. Please have an Azure AD admin reset credentials or disable SSPR override.</p>",
+          "timestamp": "2025-10-30T09:10:00.000Z",
+          "side": "super"
+        },
+        {
+          "id": "80910a2b-3c4d-5e6f-f7a8-b9c0d1e2f307",
+          "ticketId": "22c0f5a8-7a4e-4a2d-b8c5-8897c9e1f2a3",
+          "sender": "Priya Kapoor",
+          "message": "<p>Escalating to Azure support to confirm expected behavior with our app registration.</p>",
+          "timestamp": "2025-11-01T10:00:00.000Z",
+          "isInternal": true,
+          "side": "super"
+        },
+        {
+          "id": "910a2b3c-4d5e-6f70-a8b9-c0d1e2f3a408",
+          "ticketId": "22c0f5a8-7a4e-4a2d-b8c5-8897c9e1f2a3",
+          "sender": "Priya Kapoor",
+          "message": "<p>Holding pending vendor confirmation. We will update once we hear back.</p>",
+          "timestamp": "2025-11-02T09:10:00.000Z",
+          "side": "super"
+        }
+      ]
+    },
+    {
+      "id": "3393c9b0-0c7d-4a1b-8f2d-55a4b6c7d8e9",
+      "companyId": "comp-umbrella",
+      "companyName": "Umbrella GmbH",
+      "title": "Webhook retries failing",
+      "description": "Retries stop after second attempt; delivery status stuck in \"pending\".",
+      "category": "TECHNICAL",
+      "priority": "MEDIUM",
+      "status": "RESOLVED",
+      "isSeen": true,
+      "createdBy": "user:support@umbrella.de",
+      "assignedAgentId": "agent_001",
+      "assignedAgentName": "Lea Schneider",
+      "createdAt": "2025-09-18T12:00:00.000Z",
+      "updatedAt": "2025-09-19T16:30:00.000Z",
+      "closedAt": "2025-09-19T16:30:00.000Z",
+      "messages": [
+        {
+          "id": "a1b2c3d4-e5f6-47a8-9012-34567890ab09",
+          "ticketId": "3393c9b0-0c7d-4a1b-8f2d-55a4b6c7d8e9",
+          "sender": "support@umbrella.de",
+          "message": "<p>Webhook retries never exceed 2 attempts. Status remains pending for hours.</p>",
+          "timestamp": "2025-09-18T12:00:00.000Z",
+          "side": "user"
+        },
+        {
+          "id": "b2c3d4e5-f6a7-48b9-0123-4567890abc10",
+          "ticketId": "3393c9b0-0c7d-4a1b-8f2d-55a4b6c7d8e9",
+          "sender": "Lea Schneider",
+          "message": "<p>Issue reproduced. Likely regression in retry backoff scheduler.</p>",
+          "timestamp": "2025-09-18T13:05:00.000Z",
+          "isInternal": true,
+          "side": "super"
+        },
+        {
+          "id": "c3d4e5f6-a7b8-49c0-1234-567890abcd11",
+          "ticketId": "3393c9b0-0c7d-4a1b-8f2d-55a4b6c7d8e9",
+          "sender": "Lea Schneider",
+          "message": "<p>Fix deployed to retry scheduler. Your deliveries should now progress. Please confirm.</p>",
+          "timestamp": "2025-09-19T16:30:00.000Z",
+          "AttachmentsFilesUrl": [
+            "https://status.example.com/incidents/2025-09-19-postmortem.pdf"
+          ],
+          "side": "super"
+        }
+      ]
+    },
+    {
+      "id": "48a1b2c3-d4e5-46f7-8901-23456789abcd",
+      "companyId": "comp-stark",
+      "companyName": "Stark Industries",
+      "title": "Change company name on contract",
+      "description": "Legal entity updated; need the subscription contract to reflect new name.",
+      "category": "OTHER",
+      "priority": "LOW",
+      "status": "CLOSED",
+      "isSeen": true,
+      "createdBy": "user:pepper.potts@stark.com",
+      "assignedAgentId": "agent_002",
+      "assignedAgentName": "Tomás Álvarez",
+      "createdAt": "2025-05-10T09:00:00.000Z",
+      "updatedAt": "2025-05-12T13:00:00.000Z",
+      "closedAt": "2025-05-12T13:00:00.000Z",
+      "messages": [
+        {
+          "id": "d4e5f6a7-b8c9-40d1-2345-67890abcde12",
+          "ticketId": "48a1b2c3-d4e5-46f7-8901-23456789abcd",
+          "sender": "pepper.potts@stark.com",
+          "message": "<p>Please update the contract to our new legal name.</p>",
+          "timestamp": "2025-05-10T09:00:00.000Z",
+          "AttachmentsFilesUrl": [
+            "https://files.example.com/stark/registry-change.pdf"
+          ],
+          "side": "user"
+        },
+        {
+          "id": "e5f6a7b8-c9d0-41e2-3456-7890abcdef13",
+          "ticketId": "48a1b2c3-d4e5-46f7-8901-23456789abcd",
+          "sender": "Tomás Álvarez",
+          "message": "<p>Received. We'll prepare an amendment and route for e-signature.</p>",
+          "timestamp": "2025-05-11T10:20:00.000Z",
+          "side": "super"
+        },
+        {
+          "id": "f6a7b8c9-d0e1-42f3-4567-890abcdef014",
+          "ticketId": "48a1b2c3-d4e5-46f7-8901-23456789abcd",
+          "sender": "Tomás Álvarez",
+          "message": "<p>Contract updated and fully executed. Closing the ticket.</p>",
+          "timestamp": "2025-05-12T13:00:00.000Z",
+          "side": "super"
+        }
+      ]
+    },
+    {
+      "id": "5f6e7d8c-9b0a-4c3d-8e7f-6a5b4c3d2e1f",
+      "companyId": "comp-wayne",
+      "companyName": "Wayne Enterprises",
+      "title": "Card charged twice",
+      "description": "Duplicate charge observed for invoice #INV-2025-1105.",
+      "category": "BILLING",
+      "priority": "CRITICAL",
+      "status": "OPEN",
+      "isSeen": false,
+      "createdBy": "user:lucius.fox@wayne.com",
+      "createdAt": "2025-11-05T07:55:00.000Z",
+      "updatedAt": "2025-11-06T08:10:00.000Z",
+      "messages": [
+        {
+          "id": "0a1b2c3d-4e5f-4601-9a2b-3c4d5e6f7a15",
+          "ticketId": "5f6e7d8c-9b0a-4c3d-8e7f-6a5b4c3d2e1f",
+          "sender": "lucius.fox@wayne.com",
+          "message": "<p>We were charged twice for invoice INV-2025-1105. Please reverse the duplicate.</p>",
+          "timestamp": "2025-11-05T07:55:00.000Z",
+          "side": "user"
+        },
+        {
+          "id": "1b2c3d4e-5f60-4712-a3b4-c5d6e7f8a916",
+          "ticketId": "5f6e7d8c-9b0a-4c3d-8e7f-6a5b4c3d2e1f",
+          "sender": "Billing Queue",
+          "message": "<p>Detected duplicate Stripe charge for the same invoice key. Investigating reconciliation job.</p>",
+          "timestamp": "2025-11-05T08:30:00.000Z",
+          "isInternal": true,
+          "side": "super"
+        },
+        {
+          "id": "2c3d4e5f-6071-4823-b4c5-d6e7f8a9b017",
+          "ticketId": "5f6e7d8c-9b0a-4c3d-8e7f-6a5b4c3d2e1f",
+          "sender": "billing@support.example",
+          "message": "<p>We have identified a duplicate payment. Refund is being prepared; we will notify once processed.</p>",
+          "timestamp": "2025-11-06T08:10:00.000Z",
+          "side": "super"
+        }
+      ]
+    },
+    {
+      "id": "6a7b8c9d-0e1f-4a2b-9c8d-7e6f5a4b3c2d",
+      "companyId": "comp-soylent",
+      "companyName": "Soylent AG",
+      "title": "Severe latency in EU-West",
+      "description": "p95 latency > 3s for read operations from EU-West region.",
+      "category": "TECHNICAL",
+      "priority": "CRITICAL",
+      "status": "IN_PROCESS",
+      "isSeen": true,
+      "createdBy": "system:monitoring",
+      "assignedAgentId": "agent_001",
+      "assignedAgentName": "Lea Schneider",
+      "createdAt": "2025-11-03T06:20:00.000Z",
+      "updatedAt": "2025-11-06T07:45:00.000Z",
+      "messages": [
+        {
+          "id": "3d4e5f60-7182-4934-c5d6-e7f8a9b0c118",
+          "ticketId": "6a7b8c9d-0e1f-4a2b-9c8d-7e6f5a4b3c2d",
+          "sender": "system:monitoring",
+          "message": "<p>Alert opened: EU-West read latency above threshold for 10 minutes.</p>",
+          "timestamp": "2025-11-03T06:20:00.000Z",
+          "side": "super"
+        },
+        {
+          "id": "4e5f6071-8293-4a45-d6e7-f8a9b0c1d219",
+          "ticketId": "6a7b8c9d-0e1f-4a2b-9c8d-7e6f5a4b3c2d",
+          "sender": "Lea Schneider",
+          "message": "<p>Root cause likely noisy neighbor on DB read replicas; rebalancing traffic.</p>",
+          "timestamp": "2025-11-03T06:25:00.000Z",
+          "isInternal": true,
+          "side": "super"
+        },
+        {
+          "id": "5f607182-9394-4b56-e7f8-a9b0c1d2e31a",
+          "ticketId": "6a7b8c9d-0e1f-4a2b-9c8d-7e6f5a4b3c2d",
+          "sender": "Lea Schneider",
+          "message": "<p>We have shifted read traffic and increased replica capacity. Monitoring latency graphs.</p>",
+          "timestamp": "2025-11-03T06:40:00.000Z",
+          "side": "super"
+        },
+        {
+          "id": "60718293-9495-4c67-f8a9-b0c1d2e3f41b",
+          "ticketId": "6a7b8c9d-0e1f-4a2b-9c8d-7e6f5a4b3c2d",
+          "sender": "Lea Schneider",
+          "message": "<p>Further tuning underway; planning read-replica replacement during low-traffic window.</p>",
+          "timestamp": "2025-11-06T07:45:00.000Z",
+          "side": "super"
+        }
+      ]
+    },
+    {
+      "id": "7c8d9e0f-1a2b-4c3d-9e8f-0a1b2c3d4e5f",
+      "companyId": "comp-tyrell",
+      "companyName": "Tyrell Corp",
+      "title": "Locked out after 2FA device lost",
+      "description": "Primary admin lost security key; need emergency recovery.",
+      "category": "ACCOUNT",
+      "priority": "HIGH",
+      "status": "RESOLVED",
+      "isSeen": true,
+      "createdBy": "user:rachel@tyrell.com",
+      "assignedAgentId": "agent_003",
+      "assignedAgentName": "Priya Kapoor",
+      "createdAt": "2025-08-22T11:10:00.000Z",
+      "updatedAt": "2025-08-22T15:25:00.000Z",
+      "closedAt": "2025-08-22T15:25:00.000Z",
+      "messages": [
+        {
+          "id": "71829394-9596-4d78-0a1b-2c3d4e5f062c",
+          "ticketId": "7c8d9e0f-1a2b-4c3d-9e8f-0a1b2c3d4e5f",
+          "sender": "rachel@tyrell.com",
+          "message": "<p>Admin lost their security key. We need recovery ASAP.</p>",
+          "timestamp": "2025-08-22T11:10:00.000Z",
+          "side": "user"
+        },
+        {
+          "id": "82939495-9697-4e89-1b2c-3d4e5f60723d",
+          "ticketId": "7c8d9e0f-1a2b-4c3d-9e8f-0a1b2c3d4e5f",
+          "sender": "Priya Kapoor",
+          "message": "<p>We have verified ownership. Temporary codes issued; please rotate keys after login.</p>",
+          "timestamp": "2025-08-22T11:20:00.000Z",
+          "side": "super"
+        },
+        {
+          "id": "93949596-9798-4f9a-2c3d-4e5f6071824e",
+          "ticketId": "7c8d9e0f-1a2b-4c3d-9e8f-0a1b2c3d4e5f",
+          "sender": "Priya Kapoor",
+          "message": "<p>Recovery complete and security keys re-enrolled. Resolving.</p>",
+          "timestamp": "2025-08-22T15:25:00.000Z",
+          "side": "super"
+        }
+      ]
+    },
+    {
+      "id": "8d9e0f1a-2b3c-4d5e-8f9a-1b2c3d4e5f60",
+      "companyId": "comp-hooli",
+      "companyName": "Hooli",
+      "title": "Feature request: CSV export delimiter",
+      "description": "Allow selecting semicolon as delimiter for EU locales.",
+      "category": "OTHER",
+      "priority": "MEDIUM",
+      "status": "ON_HOLD",
+      "isSeen": false,
+      "createdBy": "user:ops@hooli.com",
+      "assignedAgentId": "agent_002",
+      "assignedAgentName": "Tomás Álvarez",
+      "createdAt": "2025-07-01T09:30:00.000Z",
+      "updatedAt": "2025-07-05T10:00:00.000Z",
+      "messages": [
+        {
+          "id": "aabbccdd-eeff-4001-8002-000000000001",
+          "ticketId": "8d9e0f1a-2b3c-4d5e-8f9a-1b2c3d4e5f60",
+          "sender": "ops@hooli.com",
+          "message": "<p>Please add an option to export CSV with semicolon delimiter for EU.</p>",
+          "timestamp": "2025-07-01T09:30:00.000Z",
+          "side": "user"
+        },
+        {
+          "id": "aabbccdd-eeff-4002-8003-000000000002",
+          "ticketId": "8d9e0f1a-2b3c-4d5e-8f9a-1b2c3d4e5f60",
+          "sender": "Tomás Álvarez",
+          "message": "<p>Good suggestion. Logged with product team for prioritization.</p>",
+          "timestamp": "2025-07-02T08:10:00.000Z",
+          "side": "super"
+        },
+        {
+          "id": "aabbccdd-eeff-4003-8004-000000000003",
+          "ticketId": "8d9e0f1a-2b3c-4d5e-8f9a-1b2c3d4e5f60",
+          "sender": "Product Board",
+          "message": "<p>Feature accepted. Tentatively targeting Q4; awaiting capacity.</p>",
+          "timestamp": "2025-07-05T10:00:00.000Z",
+          "side": "super"
+        }
+      ]
+    },
+    {
+      "id": "9e0f1a2b-3c4d-5e6f-9a8b-2c3d4e5f6071",
+      "companyId": "comp-vandelay",
+      "companyName": "Vandelay Industries",
+      "title": "Incorrect DE tax rate applied",
+      "description": "VAT calculated at 16% instead of 19% on invoice #2025-0314.",
+      "category": "BILLING",
+      "priority": "HIGH",
+      "status": "CLOSED",
+      "isSeen": true,
+      "createdBy": "user:accounting@vandelay.de",
+      "assignedAgentId": "agent_002",
+      "assignedAgentName": "Tomás Álvarez",
+      "createdAt": "2025-03-14T13:15:00.000Z",
+      "updatedAt": "2025-03-15T09:05:00.000Z",
+      "closedAt": "2025-03-15T09:05:00.000Z",
+      "messages": [
+        {
+          "id": "bbccdde0-ff01-4104-8005-000000000004",
+          "ticketId": "9e0f1a2b-3c4d-5e6f-9a8b-2c3d4e5f6071",
+          "sender": "accounting@vandelay.de",
+          "message": "<p>Invoice shows 16% VAT; correct rate is 19%.</p>",
+          "timestamp": "2025-03-14T13:15:00.000Z",
+          "side": "user"
+        },
+        {
+          "id": "bbccdde0-ff01-4105-8006-000000000005",
+          "ticketId": "9e0f1a2b-3c4d-5e6f-9a8b-2c3d4e5f6071",
+          "sender": "Tomás Álvarez",
+          "message": "<p>Confirmed misconfiguration for Germany tax region. Preparing credit note.</p>",
+          "timestamp": "2025-03-14T16:00:00.000Z",
+          "isInternal": true,
+          "side": "super"
+        },
+        {
+          "id": "bbccdde0-ff01-4106-8007-000000000006",
+          "ticketId": "9e0f1a2b-3c4d-5e6f-9a8b-2c3d4e5f6071",
+          "sender": "Tomás Álvarez",
+          "message": "<p>Credit memo issued and invoice corrected to 19% VAT. Closing the ticket.</p>",
+          "timestamp": "2025-03-15T09:05:00.000Z",
+          "AttachmentsFilesUrl": [
+            "https://files.example.com/vandelay/credit-memo-2025-0314.pdf"
+          ],
+          "side": "super"
+        }
+      ]
+    },
+    {
+      "id": "a0b1c2d3-e4f5-46a7-89b0-1c2d3e4f5a6b",
+      "companyId": "comp-cyberdyne",
+      "companyName": "Cyberdyne Systems",
+      "title": "Create additional admin role",
+      "description": "Need to delegate billing-only admin to finance team.",
+      "category": "ACCOUNT",
+      "priority": "LOW",
+      "status": "OPEN",
+      "isSeen": true,
+      "createdBy": "user:sarah.connor@cyberdyne.com",
+      "createdAt": "2025-10-01T08:00:00.000Z",
+      "updatedAt": "2025-10-02T08:20:00.000Z",
+      "messages": [
+        {
+          "id": "ccddeeff-0011-4207-8008-000000000007",
+          "ticketId": "a0b1c2d3-e4f5-46a7-89b0-1c2d3e4f5a6b",
+          "sender": "sarah.connor@cyberdyne.com",
+          "message": "<p>Requesting a role that can manage billing only, without access to user data.</p>",
+          "timestamp": "2025-10-01T08:00:00.000Z",
+          "side": "user"
+        },
+        {
+          "id": "ccddeeff-0011-4208-8009-000000000008",
+          "ticketId": "a0b1c2d3-e4f5-46a7-89b0-1c2d3e4f5a6b",
+          "sender": "Support",
+          "message": "<p>Thanks, this aligns with our upcoming role templates. We'll share an ETA soon.</p>",
+          "timestamp": "2025-10-01T12:00:00.000Z",
+          "side": "super"
+        },
+        {
+          "id": "ccddeeff-0011-4209-8010-000000000009",
+          "ticketId": "a0b1c2d3-e4f5-46a7-89b0-1c2d3e4f5a6b",
+          "sender": "Product Team",
+          "message": "<p>Spec drafted for Billing Admin role. Needs security review.</p>",
+          "timestamp": "2025-10-02T08:20:00.000Z",
+          "isInternal": true,
+          "side": "super"
+        }
+      ]
+    },
+    {
+      "id": "b1c2d3e4-f5a6-47b8-90c1-2d3e4f5a6b7c",
+      "companyId": "comp-bluesun",
+      "companyName": "Blue Sun",
+      "title": "Data import job stuck",
+      "description": "Nightly import from S3 not progressing beyond 12%.",
+      "category": "TECHNICAL",
+      "priority": "CRITICAL",
+      "status": "RESOLVED",
+      "isSeen": true,
+      "createdBy": "system:ingestion",
+      "assignedAgentId": "agent_001",
+      "assignedAgentName": "Lea Schneider",
+      "createdAt": "2025-09-30T05:40:00.000Z",
+      "updatedAt": "2025-10-01T06:15:00.000Z",
+      "closedAt": "2025-10-01T06:15:00.000Z",
+      "messages": [
+        {
+          "id": "ddeeff00-1122-4210-8011-000000000010",
+          "ticketId": "b1c2d3e4-f5a6-47b8-90c1-2d3e4f5a6b7c",
+          "sender": "system:ingestion",
+          "message": "<p>Import job stalled at 12% for 20 minutes.</p>",
+          "timestamp": "2025-09-30T05:40:00.000Z",
+          "side": "super"
+        },
+        {
+          "id": "ddeeff00-1122-4211-8012-000000000011",
+          "ticketId": "b1c2d3e4-f5a6-47b8-90c1-2d3e4f5a6b7c",
+          "sender": "Lea Schneider",
+          "message": "<p>Issue traced to a corrupted parquet batch. Re-running from checkpoint.</p>",
+          "timestamp": "2025-09-30T06:05:00.000Z",
+          "side": "super"
+        },
+        {
+          "id": "ddeeff00-1122-4212-8013-000000000012",
+          "ticketId": "b1c2d3e4-f5a6-47b8-90c1-2d3e4f5a6b7c",
+          "sender": "Lea Schneider",
+          "message": "<p>Job completed successfully. Backfill executed for affected window.</p>",
+          "timestamp": "2025-10-01T06:15:00.000Z",
+          "AttachmentsFilesUrl": [
+            "https://files.example.com/bluesun/ingestion-report-2025-10-01.csv"
+          ],
+          "side": "super"
+        }
+      ]
+    },
+    {
+      "id": "c2d3e4f5-a6b7-48c9-01d2-3e4f5a6b7c8d",
+      "companyId": "comp-wonka",
+      "companyName": "Wonka Industries",
+      "title": "Clarification on seat-based pricing",
+      "description": "Need breakdown of costs for seasonal seat increases.",
+      "category": "OTHER",
+      "priority": "LOW",
+      "status": "IN_PROCESS",
+      "isSeen": true,
+      "createdBy": "user:finance@wonka.co",
+      "assignedAgentId": "agent_003",
+      "assignedAgentName": "Priya Kapoor",
+      "createdAt": "2025-11-04T10:25:00.000Z",
+      "updatedAt": "2025-11-05T11:00:00.000Z",
+      "messages": [
+        {
+          "id": "eeff0011-2233-4313-8014-000000000013",
+          "ticketId": "c2d3e4f5-a6b7-48c9-01d2-3e4f5a6b7c8d",
+          "sender": "finance@wonka.co",
+          "message": "<p>Can you provide pricing details when we temporarily add seats during peak season?</p>",
+          "timestamp": "2025-11-04T10:25:00.000Z",
+          "side": "user"
+        },
+        {
+          "id": "eeff0011-2233-4314-8015-000000000014",
+          "ticketId": "c2d3e4f5-a6b7-48c9-01d2-3e4f5a6b7c8d",
+          "sender": "Priya Kapoor",
+          "message": "<p>We will share a tiered breakdown including proration and volume discounts.</p>",
+          "timestamp": "2025-11-04T11:00:00.000Z",
+          "side": "super"
+        },
+        {
+          "id": "eeff0011-2233-4315-8016-000000000015",
+          "ticketId": "c2d3e4f5-a6b7-48c9-01d2-3e4f5a6b7c8d",
+          "sender": "Priya Kapoor",
+          "message": "<p>Attached is the draft pricing model for review.</p>",
+          "timestamp": "2025-11-05T11:00:00.000Z",
+          "AttachmentsFilesUrl": [
+            "https://files.example.com/wonka/seasonal-seat-pricing.xlsx"
+          ],
+          "side": "super"
+        }
+      ]
+    },
+    {
+      "id": "d3e4f5a6-b7c8-49da-12e3-4f5a6b7c8d9e",
+      "companyId": "comp-gringotts",
+      "companyName": "Gringotts Bank",
+      "title": "Bank transfer missing",
+      "description": "Wire transfer sent on 2025-06-11 not reflected in account.",
+      "category": "BILLING",
+      "priority": "MEDIUM",
+      "status": "CLOSED",
+      "isSeen": true,
+      "createdBy": "user:treasury@gringotts.bank",
+      "assignedAgentId": "agent_002",
+      "assignedAgentName": "Tomás Álvarez",
+      "createdAt": "2025-06-12T14:00:00.000Z",
+      "updatedAt": "2025-06-14T10:10:00.000Z",
+      "closedAt": "2025-06-14T10:10:00.000Z",
+      "messages": [
+        {
+          "id": "ff001122-3344-4416-8017-000000000016",
+          "ticketId": "d3e4f5a6-b7c8-49da-12e3-4f5a6b7c8d9e",
+          "sender": "treasury@gringotts.bank",
+          "message": "<p>We sent a wire on 2025-06-11. Funds not showing in our account.</p>",
+          "timestamp": "2025-06-12T14:00:00.000Z",
+          "AttachmentsFilesUrl": [
+            "https://files.example.com/gringotts/wire-proof-2025-06-11.pdf"
+          ],
+          "side": "user"
+        },
+        {
+          "id": "ff001122-3344-4417-8018-000000000017",
+          "ticketId": "d3e4f5a6-b7c8-49da-12e3-4f5a6b7c8d9e",
+          "sender": "Tomás Álvarez",
+          "message": "<p>We have contacted our payment processor to trace the transfer.</p>",
+          "timestamp": "2025-06-13T09:30:00.000Z",
+          "side": "super"
+        },
+        {
+          "id": "ff001122-3344-4418-8019-000000000018",
+          "ticketId": "d3e4f5a6-b7c8-49da-12e3-4f5a6b7c8d9e",
+          "sender": "Tomás Álvarez",
+          "message": "<p>Funds located and applied to your account. Closing the ticket.</p>",
+          "timestamp": "2025-06-14T10:10:00.000Z",
+          "side": "super"
+        }
+      ]
+    }
+  ],
+  "superSystemGeneralInfo": {
+    "customers": "20",
+    "packages": "26",
+    "profiles": "19",
+    "reseller": "34",
+    "statistics": "119",
+    "techData": "XYZ.3.45",
+    "traffic": "2.3 GB",
+    "users": {
+      "roles": "12",
+      "users": "142"
+    },
+    "version": "beta"
+  },
+  "notifications-with-count-items": [
+    {
+      "id": "noti-1",
+      "title": "System maintenance scheduled",
+      "description": "We will perform scheduled system maintenance tonight at 23:00 UTC.",
+      "date": "2025-11-18T08:30:00.000Z",
+      "type": "SYSTEM",
+      "category": "ALERT",
+      "isSeen": false,
+      "actionUrl": "/status/maintenance",
+      "targetScope": "ALL_USERS"
+    },
+    {
+      "id": "noti-2",
+      "title": "Welcome to Super Admin Center",
+      "description": "Here are some tips to get started with the notification center.",
+      "date": "2025-11-17T14:12:00.000Z",
+      "type": "SYSTEM",
+      "category": "INFO",
+      "isSeen": false,
+      "actionUrl": "/getting-started",
+      "targetScope": "INTERNAL"
+    },
+    {
+      "id": "noti-3",
+      "title": "New company policy update",
+      "description": "Please review the updated remote work policy.",
+      "date": "2025-11-15T09:00:00.000Z",
+      "type": "COMPANY",
+      "category": "INFO",
+      "isSeen": true,
+      "actionUrl": "/policies/remote-work",
+      "targetScope": "ALL_COMPANIES"
+    },
+    {
+      "id": "noti-4",
+      "title": "Password expires soon",
+      "description": "Your password will expire in 5 days. Please update it to avoid losing access.",
+      "date": "2025-11-14T18:45:00.000Z",
+      "type": "SYSTEM",
+      "category": "ALERT",
+      "isSeen": false,
+      "actionUrl": "/account/security",
+      "targetScope": "ALL_USERS"
+    },
+    {
+      "id": "noti-5",
+      "title": "New comment on your post",
+      "description": "Alex commented on your announcement: \"Q4 goals & roadmap\".",
+      "date": "2025-11-13T11:20:00.000Z",
+      "type": "PERSONAL",
+      "category": "SOCIAL",
+      "isSeen": true,
+      "actionUrl": "/feed/post/123/comments",
+      "targetScope": null
+    },
+    {
+      "id": "noti-6",
+      "title": "Company workspace reached 80% storage",
+      "description": "Your organization is close to its storage limit. Consider cleaning up or upgrading.",
+      "date": "2025-11-12T07:05:00.000Z",
+      "type": "COMPANY",
+      "category": "ALERT",
+      "isSeen": false,
+      "actionUrl": "/billing/storage",
+      "targetScope": "ALL_COMPANIES"
+    },
+    {
+      "id": "noti-7",
+      "title": "You have been assigned a new task",
+      "description": "You were assigned to: \"Prepare monthly performance report\".",
+      "date": "2025-11-10T16:10:00.000Z",
+      "type": "PERSONAL",
+      "category": "INFO",
+      "isSeen": true,
+      "actionUrl": "/tasks/789",
+      "targetScope": null
+    },
+    {
+      "id": "noti-8",
+      "title": "New feature: Advanced Filters",
+      "description": "Try the new advanced notification filters in the Super Notification Center.",
+      "date": "2025-11-09T10:00:00.000Z",
+      "type": "SYSTEM",
+      "category": "OTHER",
+      "isSeen": false,
+      "actionUrl": "/features/advanced-filters",
+      "targetScope": "ALL_USERS"
+    },
+    {
+      "id": "noti-9",
+      "title": "Weekly company digest",
+      "description": "Summary of this week’s most important updates and announcements.",
+      "date": "2025-11-08T08:00:00.000Z",
+      "type": "COMPANY",
+      "category": "INFO",
+      "isSeen": true,
+      "actionUrl": "/digest/weekly/2025-11-08",
+      "targetScope": "ALL_COMPANIES"
+    },
+    {
+      "id": "noti-10",
+      "title": "Colleague joined your team",
+      "description": "Maria Garcia has joined the Analytics team. Say hi!",
+      "date": "2025-11-07T13:30:00.000Z",
+      "type": "COMPANY",
+      "category": "SOCIAL",
+      "isSeen": false,
+      "actionUrl": "/directory/users/maria-garcia",
+      "targetScope": "ALL_USERS"
+    },
+    {
+      "id": "noti-11",
+      "title": "Security recommendation",
+      "description": "Enable two-factor authentication to increase account security.",
+      "date": "2025-11-06T06:45:00.000Z",
+      "type": "SYSTEM",
+      "category": "SYSTEM",
+      "isSeen": true,
+      "actionUrl": "/account/security/2fa",
+      "targetScope": "ALL_USERS"
+    },
+    {
+      "id": "noti-12",
+      "title": "Fun Friday event",
+      "description": "Join the virtual team-building session this Friday at 16:00.",
+      "date": "2025-11-05T12:15:00.000Z",
+      "type": "COMPANY",
+      "category": "OTHER",
+      "isSeen": false,
+      "actionUrl": null,
+      "targetScope": "ALL_COMPANIES"
+    }
+  ],
+  "notifications-with-count": {
+    "items": [
+      {
+        "id": "noti-1",
+        "title": "System maintenance scheduled",
+        "description": "We will perform scheduled system maintenance tonight at 23:00 UTC.",
+        "date": "2025-11-18T08:30:00.000Z",
+        "type": "SYSTEM",
+        "category": "ALERT",
+        "isSeen": false,
+        "actionUrl": "/status/maintenance",
+        "targetScope": "ALL_USERS"
+      },
+      {
+        "id": "noti-2",
+        "title": "Welcome to Super Admin Center",
+        "description": "Here are some tips to get started with the notification center.",
+        "date": "2025-11-17T14:12:00.000Z",
+        "type": "SYSTEM",
+        "category": "INFO",
+        "isSeen": false,
+        "actionUrl": "/getting-started",
+        "targetScope": "INTERNAL"
+      },
+      {
+        "id": "noti-3",
+        "title": "New company policy update",
+        "description": "Please review the updated remote work policy.",
+        "date": "2025-11-15T09:00:00.000Z",
+        "type": "COMPANY",
+        "category": "INFO",
+        "isSeen": true,
+        "actionUrl": "/policies/remote-work",
+        "targetScope": "ALL_COMPANIES"
+      },
+      {
+        "id": "noti-4",
+        "title": "Password expires soon",
+        "description": "Your password will expire in 5 days. Please update it to avoid losing access.",
+        "date": "2025-11-14T18:45:00.000Z",
+        "type": "SYSTEM",
+        "category": "ALERT",
+        "isSeen": false,
+        "actionUrl": "/account/security",
+        "targetScope": "ALL_USERS"
+      },
+      {
+        "id": "noti-5",
+        "title": "New comment on your post",
+        "description": "Alex commented on your announcement: \"Q4 goals & roadmap\".",
+        "date": "2025-11-13T11:20:00.000Z",
+        "type": "PERSONAL",
+        "category": "SOCIAL",
+        "isSeen": true,
+        "actionUrl": "/feed/post/123/comments",
+        "targetScope": null
+      },
+      {
+        "id": "noti-6",
+        "title": "Company workspace reached 80% storage",
+        "description": "Your organization is close to its storage limit. Consider cleaning up or upgrading.",
+        "date": "2025-11-12T07:05:00.000Z",
+        "type": "COMPANY",
+        "category": "ALERT",
+        "isSeen": false,
+        "actionUrl": "/billing/storage",
+        "targetScope": "ALL_COMPANIES"
+      },
+      {
+        "id": "noti-7",
+        "title": "You have been assigned a new task",
+        "description": "You were assigned to: \"Prepare monthly performance report\".",
+        "date": "2025-11-10T16:10:00.000Z",
+        "type": "PERSONAL",
+        "category": "INFO",
+        "isSeen": true,
+        "actionUrl": "/tasks/789",
+        "targetScope": null
+      },
+      {
+        "id": "noti-8",
+        "title": "New feature: Advanced Filters",
+        "description": "Try the new advanced notification filters in the Super Notification Center.",
+        "date": "2025-11-09T10:00:00.000Z",
+        "type": "SYSTEM",
+        "category": "OTHER",
+        "isSeen": false,
+        "actionUrl": "/features/advanced-filters",
+        "targetScope": "ALL_USERS"
+      },
+      {
+        "id": "noti-9",
+        "title": "Weekly company digest",
+        "description": "Summary of this week’s most important updates and announcements.",
+        "date": "2025-11-08T08:00:00.000Z",
+        "type": "COMPANY",
+        "category": "INFO",
+        "isSeen": true,
+        "actionUrl": "/digest/weekly/2025-11-08",
+        "targetScope": "ALL_COMPANIES"
+      },
+      {
+        "id": "noti-10",
+        "title": "Colleague joined your team",
+        "description": "Maria Garcia has joined the Analytics team. Say hi!",
+        "date": "2025-11-07T13:30:00.000Z",
+        "type": "COMPANY",
+        "category": "SOCIAL",
+        "isSeen": false,
+        "actionUrl": "/directory/users/maria-garcia",
+        "targetScope": "ALL_USERS"
+      },
+      {
+        "id": "noti-11",
+        "title": "Security recommendation",
+        "description": "Enable two-factor authentication to increase account security.",
+        "date": "2025-11-06T06:45:00.000Z",
+        "type": "SYSTEM",
+        "category": "SYSTEM",
+        "isSeen": true,
+        "actionUrl": "/account/security/2fa",
+        "targetScope": "ALL_USERS"
+      },
+      {
+        "id": "noti-12",
+        "title": "Fun Friday event",
+        "description": "Join the virtual team-building session this Friday at 16:00.",
+        "date": "2025-11-05T12:15:00.000Z",
+        "type": "COMPANY",
+        "category": "OTHER",
+        "isSeen": false,
+        "actionUrl": null,
+        "targetScope": "ALL_COMPANIES"
+      }
+    ],
+    "totalCount": 12
+  },
+  "companyApproval": {
+    "items": [
+      {
+        "id": "cmp-001",
+        "companyId": "C-1001",
+        "companyName": "Acme Retail GmbH",
+        "ownerName": "Anna Schmidt",
+        "ownerEmail": "anna.schmidt@acme-retail.com",
+        "country": "Germany",
+        "created": "2025-01-10T09:30:00.000Z",
+        "updated": "2025-01-15T14:45:00.000Z",
+        "status": "PENDING",
+        "isSeen": false
+      },
+      {
+        "id": "cmp-002",
+        "companyId": "C-1002",
+        "companyName": "NovaTech Solutions",
+        "ownerName": "John Doe",
+        "ownerEmail": "john.doe@novatech.io",
+        "country": "United States",
+        "created": "2025-02-02T11:15:00.000Z",
+        "updated": "2025-02-05T08:20:00.000Z",
+        "status": "APPROVED",
+        "isSeen": true
+      },
+      {
+        "id": "cmp-003",
+        "companyId": "C-1003",
+        "companyName": "GreenLeaf Markets",
+        "ownerName": "Maria Rossi",
+        "ownerEmail": "m.rossi@greenleaf.it",
+        "country": "Italy",
+        "created": "2025-03-01T07:00:00.000Z",
+        "updated": "2025-03-03T16:10:00.000Z",
+        "status": "ON_CORRECTION",
+        "isSeen": false
+      },
+      {
+        "id": "cmp-004",
+        "companyId": "C-1004",
+        "companyName": "Skyline Logistics",
+        "ownerName": "Peter Müller",
+        "ownerEmail": "p.mueller@skyline-logistics.de",
+        "country": "Germany",
+        "created": "2025-03-20T10:05:00.000Z",
+        "updated": "2025-03-21T12:30:00.000Z",
+        "status": "REJECTED",
+        "isSeen": true
+      },
+      {
+        "id": "cmp-005",
+        "companyId": "C-1005",
+        "companyName": "BlueOcean Media AG",
+        "ownerName": "Sophie Keller",
+        "ownerEmail": "s.keller@blueocean-media.com",
+        "country": "Switzerland",
+        "created": "2025-04-01T08:00:00.000Z",
+        "updated": "2025-04-02T09:45:00.000Z",
+        "status": "PENDING",
+        "isSeen": false
+      },
+      {
+        "id": "cmp-006",
+        "companyId": "C-1006",
+        "companyName": "UrbanComms Ltd",
+        "ownerName": "Liam Johnson",
+        "ownerEmail": "liam.johnson@urbancomms.co.uk",
+        "country": "United Kingdom",
+        "created": "2025-04-05T12:10:00.000Z",
+        "updated": "2025-04-06T15:30:00.000Z",
+        "status": "PENDING",
+        "isSeen": true
+      },
+      {
+        "id": "cmp-007",
+        "companyId": "C-1007",
+        "companyName": "PixelPoint Studio",
+        "ownerName": "Emily Clark",
+        "ownerEmail": "emily@pixelpoint.studio",
+        "country": "Canada",
+        "created": "2025-04-10T09:25:00.000Z",
+        "updated": "2025-04-11T10:40:00.000Z",
+        "status": "APPROVED",
+        "isSeen": true
+      },
+      {
+        "id": "cmp-008",
+        "companyId": "C-1008",
+        "companyName": "Sunrise Grocery Chain",
+        "ownerName": "Hiro Tanaka",
+        "ownerEmail": "hiro.tanaka@sunrise-grocery.jp",
+        "country": "Japan",
+        "created": "2025-04-12T06:45:00.000Z",
+        "updated": "2025-04-13T13:05:00.000Z",
+        "status": "ON_CORRECTION",
+        "isSeen": false
+      },
+      {
+        "id": "cmp-009",
+        "companyId": "C-1009",
+        "companyName": "MetroBike Sharing",
+        "ownerName": "Carlos Alvarez",
+        "ownerEmail": "c.alvarez@metrobike.es",
+        "country": "Spain",
+        "created": "2025-04-15T08:20:00.000Z",
+        "updated": "2025-04-16T09:10:00.000Z",
+        "status": "REJECTED",
+        "isSeen": false
+      },
+      {
+        "id": "cmp-010",
+        "companyId": "C-1010",
+        "companyName": "NordicHome Interiors",
+        "ownerName": "Eva Lund",
+        "ownerEmail": "eva.lund@nordichome.se",
+        "country": "Sweden",
+        "created": "2025-04-18T10:00:00.000Z",
+        "updated": "2025-04-19T11:30:00.000Z",
+        "status": "PENDING",
+        "isSeen": true
+      },
+      {
+        "id": "cmp-011",
+        "companyId": "C-1011",
+        "companyName": "QuickByte Software",
+        "ownerName": "Rahul Mehta",
+        "ownerEmail": "rahul.mehta@quickbyte.in",
+        "country": "India",
+        "created": "2025-04-20T07:15:00.000Z",
+        "updated": "2025-04-21T08:50:00.000Z",
+        "status": "APPROVED",
+        "isSeen": false
+      },
+      {
+        "id": "cmp-012",
+        "companyId": "C-1012",
+        "companyName": "DesertStar Advertising",
+        "ownerName": "Fatima Al-Sayed",
+        "ownerEmail": "fatima@desertstar-ads.ae",
+        "country": "United Arab Emirates",
+        "created": "2025-04-22T09:40:00.000Z",
+        "updated": "2025-04-23T16:00:00.000Z",
+        "status": "ON_CORRECTION",
+        "isSeen": true
+      }
+    ],
+    "totalCount": 12
+  },
+  "super-company-approvals": [
+    {
+      "id": "cmp-001",
+      "companyId": "C-1001",
+      "companyName": "Acme Retail Group",
+      "ownerName": "Alice Johnson",
+      "ownerEmail": "alice.johnson@acmeretail.com",
+      "country": "Germany",
+      "created": "2025-04-01T09:32:00.000Z",
+      "updated": "2025-04-03T15:10:00.000Z",
+      "status": "PENDING",
+      "isSeen": false,
+      "registration": {
+        "id": "reg-1001",
+        "header": {
+          "userId": "user-1001",
+          "latestStep": 4,
+          "date": "2025-04-01T09:32:00.000Z",
+          "isBasicComplete": true,
+          "fullRegistrationStatus": "pending"
+        },
+        "stepZero": {
+          "addressData": {
+            "companyName": "Acme Retail Group",
+            "companyFormId": "gmbh",
+            "street": "Alexanderplatz",
+            "number": "1",
+            "addressSupplement": "3rd Floor",
+            "zip": "10178",
+            "city": "Berlin",
+            "federalStateId": "BE",
+            "countryId": "DE",
+            "phone": "301234567",
+            "mobile": "1712345678",
+            "fax": "",
+            "phoneDialingCodeId": "+49",
+            "mobileDialingCodeId": "+49",
+            "faxDialingCodeId": null,
+            "webUrl": "https://www.acmeretail.com",
+            "email": "info@acmeretail.com"
+          },
+          "legalPerson": {
+            "salutationId": "mr",
+            "titleId": null,
+            "firstName": "Alice",
+            "lastName": "Johnson",
+            "position": "CEO"
+          }
+        },
+        "stepOne": {
+          "administrator": {
+            "isTakenOver": true,
+            "salutationId": "mr",
+            "titleId": null,
+            "firstName": "Alice",
+            "lastName": "Johnson",
+            "position": "Admin",
+            "mobile": "1712345678",
+            "mobileDialingCodeId": "+49",
+            "phoneDialingCodeId": "+49",
+            "phone": "301234567",
+            "email": "alice.johnson@acmeretail.com",
+            "username": "alice.johnson"
+          }
+        },
+        "stepTwo": {
+          "businessModel": {
+            "businessModelId": "retail-chain"
+          }
+        },
+        "stepThree": {
+          "billingAddress": {
+            "isDiffer": false,
+            "salutationId": "mr",
+            "titleId": null,
+            "firstName": "Alice",
+            "lastName": "Johnson",
+            "street": "Alexanderplatz",
+            "number": "1",
+            "addressSupplement": "3rd Floor",
+            "zip": "10178",
+            "city": "Berlin",
+            "federalStateId": "BE",
+            "countryId": "DE"
+          },
+          "paymentInformation": {
+            "paymentMethodId": "sepa",
+            "accountOwner": "Acme Retail Group GmbH",
+            "IBAN": "DE89370400440532013000",
+            "BIC": "COBADEFFXXX"
+          },
+          "receiveEmail": true
+        },
+        "stepFour": {
+          "industry": {
+            "name": "Retail",
+            "description": "Consumer electronics and home appliances",
+            "id": "retail"
+          },
+          "tax": {
+            "identificationNumber": "DE123456789",
+            "vatNumber": "DE123456789"
+          }
+        }
+      },
+      "medias": {
+        "businessLicense": [
+          {
+            "id": "file-lic-001",
+            "url": "https://example.com/docs/acme-business-license.pdf",
+            "name": "acme-business-license.pdf"
+          }
+        ],
+        "idCard": [
+          {
+            "id": "file-id-001",
+            "url": "https://example.com/docs/alice-id-front.jpg",
+            "name": "alice-id-front.jpg"
+          }
+        ],
+        "logo": [
+          {
+            "id": "file-logo-001",
+            "url": "https://example.com/media/acme-logo.png",
+            "name": "acme-logo.png"
+          }
+        ]
+      },
+      "actions": [
+        {
+          "id": "act-001-1",
+          "appliedById": "admin-01",
+          "appliedByName": "Super Admin",
+          "date": "2025-04-02T10:15:00.000Z",
+          "status": "ON_CORRECTION",
+          "message": "Please upload your business license document."
+        }
+      ]
+    },
+    {
+      "id": "cmp-002",
+      "companyId": "C-1002",
+      "companyName": "Bright Media Studio",
+      "ownerName": "Bob Martin",
+      "ownerEmail": "bob.martin@brightmedia.io",
+      "country": "Netherlands",
+      "created": "2025-03-22T12:00:00.000Z",
+      "updated": "2025-03-25T08:45:00.000Z",
+      "status": "APPROVED",
+      "isSeen": true,
+      "website": "https://brightmedia.io",
+      "phone": "+31 20 5551234",
+      "city": "Amsterdam",
+      "address": "Keizersgracht 100, 1015 CV Amsterdam, Netherlands",
+      "description": "Creative agency producing digital campaigns and OOH assets.",
+      "extraFields": {
+        "industry": "Marketing & Advertising",
+        "vatNumber": "NL987654321B01",
+        "notes": "High volume advertiser"
+      },
+      "actions": [
+        {
+          "id": "act-002-1",
+          "appliedById": "admin-01",
+          "appliedByName": "Super Admin",
+          "date": "2025-03-23T10:15:00.000Z",
+          "status": "ON_CORRECTION",
+          "message": "Add company address to the profile."
+        },
+        {
+          "id": "act-002-2",
+          "appliedById": "admin-02",
+          "appliedByName": "Review Admin",
+          "date": "2025-03-25T08:45:00.000Z",
+          "status": "APPROVED",
+          "message": "All documents verified. Company approved."
+        }
+      ]
+    },
+    {
+      "id": "cmp-003",
+      "companyId": "C-1003",
+      "companyName": "Urban Eats Delivery",
+      "ownerName": "Carla Gomez",
+      "ownerEmail": "carla.gomez@urbaneats.app",
+      "country": "Spain",
+      "created": "2025-04-05T14:20:00.000Z",
+      "updated": "2025-04-06T09:00:00.000Z",
+      "status": "ON_CORRECTION",
+      "isSeen": true,
+      "website": "https://urbaneats.app",
+      "phone": "+34 91 123 4567",
+      "city": "Madrid",
+      "address": "Gran Vía 18, 28013 Madrid, Spain",
+      "description": "Food delivery marketplace with local restaurant partners.",
+      "extraFields": {
+        "industry": "Food Delivery",
+        "foundedYear": "2021",
+        "hasNDA": "yes"
+      },
+      "actions": [
+        {
+          "id": "act-003-1",
+          "appliedById": "admin-03",
+          "appliedByName": "Compliance Admin",
+          "date": "2025-04-06T09:00:00.000Z",
+          "status": "ON_CORRECTION",
+          "message": "Upload proof of address and update company legal name."
+        }
+      ]
+    },
+    {
+      "id": "cmp-004",
+      "companyId": "C-1004",
+      "companyName": "ZenFit Wellness GmbH",
+      "ownerName": "Daniel Schmidt",
+      "ownerEmail": "daniel.schmidt@zenfit.de",
+      "country": "Germany",
+      "created": "2025-02-10T10:00:00.000Z",
+      "updated": "2025-02-15T16:30:00.000Z",
+      "status": "REJECTED",
+      "isSeen": true,
+      "website": "https://zenfit.de",
+      "phone": "+49 89 987654",
+      "city": "Munich",
+      "address": "Leopoldstrasse 50, 80802 München, Germany",
+      "description": "Boutique fitness and wellness centers across Bavaria.",
+      "extraFields": {
+        "industry": "Fitness",
+        "reasonForRejection": "Documents did not match the legal entity.",
+        "reapplyAfter": "2025-06-01"
+      },
+      "actions": [
+        {
+          "id": "act-004-1",
+          "appliedById": "admin-01",
+          "appliedByName": "Super Admin",
+          "date": "2025-02-12T11:45:00.000Z",
+          "status": "ON_CORRECTION",
+          "message": "Company name in documents differs from registration form."
+        },
+        {
+          "id": "act-004-2",
+          "appliedById": "admin-01",
+          "appliedByName": "Super Admin",
+          "date": "2025-02-15T16:30:00.000Z",
+          "status": "REJECTED",
+          "message": "Requested corrections were not provided in time."
+        }
+      ]
+    },
+    {
+      "id": "cmp-005",
+      "companyId": "C-1005",
+      "companyName": "Skyline Digital OOH",
+      "ownerName": "Elena Rossi",
+      "ownerEmail": "elena.rossi@skylinedigital.com",
+      "country": "Italy",
+      "created": "2025-04-07T08:00:00.000Z",
+      "updated": "2025-04-07T08:00:00.000Z",
+      "status": "PENDING",
+      "isSeen": false,
+      "website": "https://skylinedigital.com",
+      "phone": "+39 02 7654321",
+      "city": "Milan",
+      "address": "Via Torino 25, 20123 Milano MI, Italy",
+      "description": "Programmatic digital out-of-home network across major cities.",
+      "extraFields": {
+        "industry": "Digital OOH",
+        "screensCount": "120",
+        "notes": null
+      },
+      "actions": []
     }
   ]
 }

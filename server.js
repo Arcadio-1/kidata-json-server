@@ -15,7 +15,7 @@ server.use(middlewares);
 
 // Simulate a network delay for every request (1.5 seconds)
 server.use((req, res, next) => {
-  setTimeout(next, 1500);
+  setTimeout(next, 1000);
 });
 
 // Set up file upload support
