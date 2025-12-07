@@ -2158,30 +2158,22 @@
   ],
   "industriesSuggestion": [
     {
-      "keywords": [
-        "gggggggg"
-      ],
+      "keywords": ["gggggggg"],
       "label": "ggggg",
       "id": 1
     },
     {
-      "keywords": [
-        "ssssssssss"
-      ],
+      "keywords": ["ssssssssss"],
       "label": "ggggg",
       "id": 2
     },
     {
-      "keywords": [
-        "fffffffffff"
-      ],
+      "keywords": ["fffffffffff"],
       "label": "ggggg",
       "id": 3
     },
     {
-      "keywords": [
-        "rrrrrrr"
-      ],
+      "keywords": ["rrrrrrr"],
       "label": "rrrrrrrrrr",
       "id": 4
     }
@@ -2905,9 +2897,7 @@
           "partnerList": []
         },
         "industryFilter": {
-          "industriesId": [
-            "66bcd418448ffa01893ffd9a"
-          ]
+          "industriesId": ["66bcd418448ffa01893ffd9a"]
         },
         "predefinedFilters": {
           "filtersId": []
@@ -3279,11 +3269,7 @@
       "phone": "123-456-7890",
       "responsiblePerson": "John Doe",
       "adminName": "Jane Smith",
-      "displaysOnlineId": [
-        "partner01",
-        "partner02",
-        "partner02"
-      ],
+      "displaysOnlineId": ["partner01", "partner02", "partner02"],
       "bookingUpdate": "2024-12-23T10:00:00Z",
       "status": "notBlocked"
     },
@@ -3296,10 +3282,7 @@
       "phone": "987-654-3210",
       "responsiblePerson": "Alice Brown",
       "adminName": "Bob Green",
-      "displaysOnlineId": [
-        "partner01",
-        "partner03"
-      ],
+      "displaysOnlineId": ["partner01", "partner03"],
       "bookingUpdate": "2024-12-22T09:00:00Z",
       "status": "blocked"
     },
@@ -3312,10 +3295,7 @@
       "phone": "555-123-4567",
       "responsiblePerson": "Chris Lee",
       "adminName": "Daniel Kim",
-      "displaysOnlineId": [
-        "partner02",
-        "partner04"
-      ],
+      "displaysOnlineId": ["partner02", "partner04"],
       "bookingUpdate": "2024-12-21T08:30:00Z",
       "status": "notBlocked"
     },
@@ -3328,10 +3308,7 @@
       "phone": "666-888-9999",
       "responsiblePerson": "David Wong",
       "adminName": "Emma White",
-      "displaysOnlineId": [
-        "partner03",
-        "partner05"
-      ],
+      "displaysOnlineId": ["partner03", "partner05"],
       "bookingUpdate": "2024-12-20T07:45:00Z",
       "status": "blocked"
     },
@@ -3344,10 +3321,7 @@
       "phone": "444-333-2222",
       "responsiblePerson": "Eve Harris",
       "adminName": "Frank Lewis",
-      "displaysOnlineId": [
-        "partner04",
-        "partner06"
-      ],
+      "displaysOnlineId": ["partner04", "partner06"],
       "bookingUpdate": "2024-12-19T06:15:00Z",
       "status": "notBlocked"
     },
@@ -3360,10 +3334,7 @@
       "phone": "111-222-3333",
       "responsiblePerson": "Gina Taylor",
       "adminName": "Hugh Clark",
-      "displaysOnlineId": [
-        "partner05",
-        "partner07"
-      ],
+      "displaysOnlineId": ["partner05", "partner07"],
       "bookingUpdate": "2024-12-18T05:00:00Z",
       "status": "blocked"
     },
@@ -3376,10 +3347,7 @@
       "phone": "777-888-9999",
       "responsiblePerson": "Harry Patel",
       "adminName": "Ivy Scott",
-      "displaysOnlineId": [
-        "partner06",
-        "partner08"
-      ],
+      "displaysOnlineId": ["partner06", "partner08"],
       "bookingUpdate": "2024-12-17T04:30:00Z",
       "status": "notBlocked"
     },
@@ -3392,10 +3360,7 @@
       "phone": "888-999-0000",
       "responsiblePerson": "Jack Ford",
       "adminName": "Karen Miller",
-      "displaysOnlineId": [
-        "partner07",
-        "partner09"
-      ],
+      "displaysOnlineId": ["partner07", "partner09"],
       "bookingUpdate": "2024-12-16T03:00:00Z",
       "status": "blocked"
     },
@@ -3408,10 +3373,7 @@
       "phone": "333-444-5555",
       "responsiblePerson": "Liam Davis",
       "adminName": "Megan Lewis",
-      "displaysOnlineId": [
-        "partner08",
-        "partner10"
-      ],
+      "displaysOnlineId": ["partner08", "partner10"],
       "bookingUpdate": "2024-12-15T02:30:00Z",
       "status": "notBlocked"
     },
@@ -3424,9 +3386,7 @@
       "phone": "222-333-4444",
       "responsiblePerson": "Nina Ford",
       "adminName": "Oscar Hunt",
-      "displaysOnlineId": [
-        "partner09"
-      ],
+      "displaysOnlineId": ["partner09"],
       "bookingUpdate": "2024-12-14T01:00:00Z",
       "status": "blocked"
     }
@@ -4461,41 +4421,23 @@
       "id": 2
     },
     {
-      "emails": [
-        "c4netfff.9@gmail.com",
-        "c4netfff.9@gmail.com"
-      ],
+      "emails": ["c4netfff.9@gmail.com", "c4netfff.9@gmail.com"],
       "id": 3
     },
     {
-      "emails": [
-        "c4net.7@gmail.com",
-        "c4net.8@gmail.com",
-        "hgj@fsdf.com"
-      ],
+      "emails": ["c4net.7@gmail.com", "c4net.8@gmail.com", "hgj@fsdf.com"],
       "id": 4
     },
     {
-      "emails": [
-        "c4net.7@gmail.com",
-        "hgj@fsdf.com"
-      ],
+      "emails": ["c4net.7@gmail.com", "hgj@fsdf.com"],
       "id": 5
     },
     {
-      "emails": [
-        "c4net.8@gmail.com",
-        "hgj@fsdf.com",
-        "c4net.8@gmail.com"
-      ],
+      "emails": ["c4net.8@gmail.com", "hgj@fsdf.com", "c4net.8@gmail.com"],
       "id": 6
     },
     {
-      "emails": [
-        "c4net.8@gmail.com",
-        "hgj@fsdf.com",
-        "c4net.8@gmail.com"
-      ],
+      "emails": ["c4net.8@gmail.com", "hgj@fsdf.com", "c4net.8@gmail.com"],
       "id": 7
     },
     {
@@ -4507,62 +4449,39 @@
       "id": 8
     },
     {
-      "emails": [
-        "rkdo.skandari@gmail.com"
-      ],
+      "emails": ["rkdo.skandari@gmail.com"],
       "id": 9
     },
     {
-      "emails": [
-        "rkdo.skandari@gmail.com",
-        "rkdo.skandari@gmail.com"
-      ],
+      "emails": ["rkdo.skandari@gmail.com", "rkdo.skandari@gmail.com"],
       "id": 10
     },
     {
-      "emails": [
-        "rkdo.skandari@gmail.com",
-        "c4net.7@gmail.com"
-      ],
+      "emails": ["rkdo.skandari@gmail.com", "c4net.7@gmail.com"],
       "id": 11
     },
     {
-      "emails": [
-        "hgj@fsdf.com",
-        "c4net.8@gmail.com"
-      ],
+      "emails": ["hgj@fsdf.com", "c4net.8@gmail.com"],
       "id": 12
     },
     {
-      "emails": [
-        "skndri-hosyn@outlook.com"
-      ],
+      "emails": ["skndri-hosyn@outlook.com"],
       "id": 13
     },
     {
-      "emails": [
-        "c4net.8@gmail.com"
-      ],
+      "emails": ["c4net.8@gmail.com"],
       "id": 14
     },
     {
-      "emails": [
-        "c4net.8@gmail.com"
-      ],
+      "emails": ["c4net.8@gmail.com"],
       "id": 15
     },
     {
-      "emails": [
-        "rkdo.skandari@gmail.com",
-        "rkdo.skandari@gmail.com"
-      ],
+      "emails": ["rkdo.skandari@gmail.com", "rkdo.skandari@gmail.com"],
       "id": 16
     },
     {
-      "emails": [
-        "rkdo.skandari@gmail.com",
-        "rkdo.skandari@gmail.com"
-      ],
+      "emails": ["rkdo.skandari@gmail.com", "rkdo.skandari@gmail.com"],
       "id": 17
     }
   ],
@@ -4721,13 +4640,7 @@
       "priceCategory": 2,
       "rate": 1,
       "utilizationRate": 4,
-      "availableDays": [
-        "mon",
-        "tue",
-        "wed",
-        "thu",
-        "fri"
-      ],
+      "availableDays": ["mon", "tue", "wed", "thu", "fri"],
       "companyLogo": "/assets/images/profile.webp",
       "isFavorite": true
     },
@@ -4768,10 +4681,7 @@
       "priceCategory": 3,
       "rate": 4,
       "utilizationRate": 5,
-      "availableDays": [
-        "sat",
-        "sun"
-      ],
+      "availableDays": ["sat", "sun"],
       "companyLogo": "/assets/images/profile.webp",
       "isFavorite": true
     },
@@ -4812,10 +4722,7 @@
       "priceCategory": 1,
       "rate": 3,
       "utilizationRate": 3,
-      "availableDays": [
-        "mon",
-        "fri"
-      ],
+      "availableDays": ["mon", "fri"],
       "companyLogo": "/assets/images/profile.webp",
       "isFavorite": false
     },
@@ -4856,10 +4763,7 @@
       "priceCategory": 4,
       "rate": 2,
       "utilizationRate": 4,
-      "availableDays": [
-        "wed",
-        "thu"
-      ],
+      "availableDays": ["wed", "thu"],
       "companyLogo": "/assets/images/profile.webp",
       "isFavorite": true
     },
@@ -4900,11 +4804,7 @@
       "priceCategory": 5,
       "rate": 5,
       "utilizationRate": 2,
-      "availableDays": [
-        "mon",
-        "tue",
-        "sat"
-      ],
+      "availableDays": ["mon", "tue", "sat"],
       "companyLogo": "/assets/images/profile.webp",
       "isFavorite": false
     },
@@ -4945,11 +4845,7 @@
       "priceCategory": 1,
       "rate": 4,
       "utilizationRate": 1,
-      "availableDays": [
-        "mon",
-        "tue",
-        "wed"
-      ],
+      "availableDays": ["mon", "tue", "wed"],
       "companyLogo": "/assets/images/profile.webp",
       "isFavorite": false
     },
@@ -4990,11 +4886,7 @@
       "priceCategory": 2,
       "rate": 3,
       "utilizationRate": 5,
-      "availableDays": [
-        "thu",
-        "fri",
-        "sun"
-      ],
+      "availableDays": ["thu", "fri", "sun"],
       "companyLogo": "/assets/images/profile.webp",
       "isFavorite": false
     },
@@ -5035,11 +4927,7 @@
       "priceCategory": 4,
       "rate": 2,
       "utilizationRate": 3,
-      "availableDays": [
-        "mon",
-        "wed",
-        "sat"
-      ],
+      "availableDays": ["mon", "wed", "sat"],
       "companyLogo": "/assets/images/profile.webp",
       "isFavorite": true
     },
@@ -5080,11 +4968,7 @@
       "priceCategory": 5,
       "rate": 5,
       "utilizationRate": 4,
-      "availableDays": [
-        "tue",
-        "thu",
-        "sun"
-      ],
+      "availableDays": ["tue", "thu", "sun"],
       "isFavorite": false,
       "companyLogo": "/assets/images/profile.webp"
     },
@@ -5125,11 +5009,7 @@
       "priceCategory": 3,
       "rate": 4,
       "utilizationRate": 5,
-      "availableDays": [
-        "mon",
-        "fri",
-        "sat"
-      ],
+      "availableDays": ["mon", "fri", "sat"],
       "companyLogo": "/assets/images/profile.webp",
       "isFavorite": true
     }
@@ -5426,9 +5306,7 @@
       ],
       "roleName": "sss",
       "roleDesc": "ddd",
-      "rolePermissions": [
-        "CREATE_DISPLAY"
-      ]
+      "rolePermissions": ["CREATE_DISPLAY"]
     },
     {
       "id": "4",
@@ -6028,9 +5906,7 @@
     {
       "id": "8",
       "label": "Partner Manager",
-      "roleName": [
-        "Partner Manager"
-      ],
+      "roleName": ["Partner Manager"],
       "permissions": [
         "INVITE_PARTNER",
         "SEND_MESSAGE_PARTNER_ADMIN",
@@ -6046,9 +5922,7 @@
     {
       "id": "9",
       "label": "Category Manager",
-      "permissions": [
-        "MANAGE_CATEGORY"
-      ]
+      "permissions": ["MANAGE_CATEGORY"]
     },
     {
       "id": "10",
@@ -6071,51 +5945,37 @@
     {
       "id": "1",
       "label": "displays",
-      "permission": [
-        "GENERAL_DISPLAY"
-      ]
+      "permission": ["GENERAL_DISPLAY"]
     },
     {
       "id": "2",
       "label": "mediaPool",
-      "permission": [
-        "GENERAL_MEDIAPOOL"
-      ]
+      "permission": ["GENERAL_MEDIAPOOL"]
     },
     {
       "id": "3",
       "label": "Private Media Pool",
-      "permission": [
-        "GENERAL_PRIVATE_MEDIAPOOL"
-      ]
+      "permission": ["GENERAL_PRIVATE_MEDIAPOOL"]
     },
     {
       "id": "4",
       "label": "Advertisements",
-      "permission": [
-        "GENERAL_AD"
-      ]
+      "permission": ["GENERAL_AD"]
     },
     {
       "id": "5",
       "label": "Playlist",
-      "permission": [
-        "GENERAL_PLAYLIST"
-      ]
+      "permission": ["GENERAL_PLAYLIST"]
     },
     {
       "id": "6",
       "label": "Private Playlist",
-      "permission": [
-        "GENERAL_PRIVATE_PLAYLIST"
-      ]
+      "permission": ["GENERAL_PRIVATE_PLAYLIST"]
     },
     {
       "id": "7",
       "label": "Short Playlist",
-      "permission": [
-        "GENERAL_SHORT_PLAYLIST"
-      ]
+      "permission": ["GENERAL_SHORT_PLAYLIST"]
     },
     {
       "id": "8",
@@ -6129,9 +5989,7 @@
     {
       "id": "9",
       "label": "User Managemet",
-      "permission": [
-        "GENERAL_USER_MANAGEMENT"
-      ]
+      "permission": ["GENERAL_USER_MANAGEMENT"]
     }
   ],
   "usersCompanyList": [
@@ -7179,17 +7037,8 @@
     "name": "KiData Pro",
     "price": 12.99
   },
-  "accountsOnwBills": [
-    1,
-    2
-  ],
-  "accountsPartnerBookings": [
-    1,
-    2,
-    3,
-    4,
-    5
-  ],
+  "accountsOnwBills": [1, 2],
+  "accountsPartnerBookings": [1, 2, 3, 4, 5],
   "notificationCarouselMessage": [
     {
       "id": "a3f8d0a5-2b0a-4b3b-8d12-9b5fd8f2a7c1",
@@ -7779,9 +7628,7 @@
       "updatedAt": "2025-06-22T10:00:00.000Z",
       "isArchived": false,
       "isBookmarked": true,
-      "AttachmentsFilesUrl": [
-        "/src/assets/images/logos/alpha_kidata_logo.png"
-      ]
+      "AttachmentsFilesUrl": ["/src/assets/images/logos/alpha_kidata_logo.png"]
     },
     {
       "id": "MSG-ROOT-1002",
@@ -7835,9 +7682,7 @@
       "sender": "john.doe@example.com",
       "message": "Hey team, I'm seeing intermittent login errors this morning.",
       "timestamp": "2025-08-19T09:20:00.000Z",
-      "AttachmentsFilesUrl": [
-        "/src/assets/images/logos/alpha_kidata_logo.png"
-      ]
+      "AttachmentsFilesUrl": ["/src/assets/images/logos/alpha_kidata_logo.png"]
     },
     {
       "id": "CM-2002",
@@ -9891,6 +9736,374 @@
         "notes": null
       },
       "actions": []
+    }
+  ],
+  "editCompanyApproval": {
+    "totalCount": 4,
+    "items": [
+      {
+        "id": "eca-001",
+        "companyId": "cmp-001",
+        "companyName": "Acme Media GmbH",
+        "requestedByName": "Anna Schmidt",
+        "requestedByEmail": "anna.schmidt@acme-media.de",
+        "country": "Germany",
+        "category": "GENERAL_DATA",
+        "created": "2025-02-01T09:00:00.000Z",
+        "updated": "2025-02-01T09:05:00.000Z",
+        "status": "PENDING",
+        "isSeen": false
+      },
+      {
+        "id": "eca-002",
+        "companyId": "cmp-002",
+        "companyName": "Bluewave Retail AG",
+        "requestedByName": "Lukas Meier",
+        "requestedByEmail": "lukas.meier@bluewave-retail.at",
+        "country": "Austria",
+        "category": "PAYMENT_AND_BILLING",
+        "created": "2025-02-02T10:15:00.000Z",
+        "updated": "2025-02-02T10:20:00.000Z",
+        "status": "ON_CORRECTION",
+        "isSeen": true
+      },
+      {
+        "id": "eca-003",
+        "companyId": "cmp-003",
+        "companyName": "Sunrise Fitness Studios",
+        "requestedByName": "Maria Rossi",
+        "requestedByEmail": "m.rossi@sunrise-fitness.it",
+        "country": "Italy",
+        "category": "BUSINESS_AND_TAX",
+        "created": "2025-02-03T08:30:00.000Z",
+        "updated": "2025-02-03T09:00:00.000Z",
+        "status": "APPROVED",
+        "isSeen": true
+      },
+      {
+        "id": "eca-004",
+        "companyId": "cmp-004",
+        "companyName": "Global Food Services Ltd.",
+        "requestedByName": "John Miller",
+        "requestedByEmail": "john.miller@globalfood.co.uk",
+        "country": "United Kingdom",
+        "category": "OTHER",
+        "created": "2025-02-04T11:45:00.000Z",
+        "updated": "2025-02-04T12:10:00.000Z",
+        "status": "REJECTED",
+        "isSeen": true
+      }
+    ]
+  },
+  "super-edit-company-approvals": [
+    {
+      "id": "eca-001",
+      "companyId": "cmp-001",
+      "companyName": "Acme Media GmbH",
+      "requestedByName": "Anna Schmidt",
+      "requestedByEmail": "anna.schmidt@acme-media.de",
+      "country": "Germany",
+      "category": "GENERAL_DATA",
+      "created": "2025-02-01T09:00:00.000Z",
+      "updated": "2025-02-01T09:05:00.000Z",
+      "status": "PENDING",
+      "isSeen": false,
+      "currentInfo": {
+        "addressData": {
+          "companyName": "Acme Media GmbH",
+          "companyFormId": null,
+          "street": "Hauptstrasse",
+          "number": "12",
+          "addressSupplement": "",
+          "zip": "10115",
+          "city": "Berlin",
+          "federalStateId": null,
+          "countryId": "de",
+          "phone": "",
+          "mobile": "",
+          "fax": "",
+          "phoneDialingCodeId": null,
+          "mobileDialingCodeId": null,
+          "faxDialingCodeId": null,
+          "webUrl": "",
+          "email": "info@acme-media.de"
+        },
+        "industry": {
+          "name": "Media & Advertising",
+          "description": "",
+          "id": "ind-media"
+        },
+        "receiveEmail": true
+      },
+      "requestedInfo": {
+        "addressData": {
+          "companyName": "Acme Media GmbH",
+          "companyFormId": null,
+          "street": "Alexanderplatz",
+          "number": "5A",
+          "addressSupplement": "",
+          "zip": "10178",
+          "city": "Berlin",
+          "federalStateId": null,
+          "countryId": "de",
+          "phone": "",
+          "mobile": "",
+          "fax": "",
+          "phoneDialingCodeId": null,
+          "mobileDialingCodeId": null,
+          "faxDialingCodeId": null,
+          "webUrl": "",
+          "email": "contact@acme-media.de"
+        },
+        "industry": {
+          "name": "Digital Media",
+          "description": "",
+          "id": "ind-digital-media"
+        },
+        "receiveEmail": true
+      },
+      "medias": {
+        "businessLicense": [],
+        "idCard": [],
+        "logo": []
+      },
+      "actions": []
+    },
+    {
+      "id": "eca-002",
+      "companyId": "cmp-002",
+      "companyName": "Bluewave Retail AG",
+      "requestedByName": "Lukas Meier",
+      "requestedByEmail": "lukas.meier@bluewave-retail.at",
+      "country": "Austria",
+      "category": "PAYMENT_AND_BILLING",
+      "created": "2025-02-02T10:15:00.000Z",
+      "updated": "2025-02-02T10:20:00.000Z",
+      "status": "ON_CORRECTION",
+      "isSeen": true,
+      "currentInfo": {
+        "addressData": {
+          "companyName": "Bluewave Retail AG",
+          "companyFormId": null,
+          "street": "Mariahilfer Strasse",
+          "number": "22",
+          "addressSupplement": "",
+          "zip": "1070",
+          "city": "Wien",
+          "federalStateId": null,
+          "countryId": "at",
+          "phone": "",
+          "mobile": "",
+          "fax": "",
+          "phoneDialingCodeId": null,
+          "mobileDialingCodeId": null,
+          "faxDialingCodeId": null,
+          "webUrl": "",
+          "email": "office@bluewave-retail.at"
+        },
+        "paymentInformation": {
+          "paymentMethodId": "credit-card",
+          "accountOwner": "Bluewave Retail AG",
+          "IBAN": "AT611904300234573201",
+          "BIC": "HYPEAT22"
+        },
+        "receiveEmail": true
+      },
+      "requestedInfo": {
+        "addressData": {
+          "companyName": "Bluewave Retail AG",
+          "companyFormId": null,
+          "street": "Neubaugasse",
+          "number": "5",
+          "addressSupplement": "",
+          "zip": "1070",
+          "city": "Wien",
+          "federalStateId": null,
+          "countryId": "at",
+          "phone": "",
+          "mobile": "",
+          "fax": "",
+          "phoneDialingCodeId": null,
+          "mobileDialingCodeId": null,
+          "faxDialingCodeId": null,
+          "webUrl": "",
+          "email": "billing@bluewave-retail.at"
+        },
+        "paymentInformation": {
+          "paymentMethodId": "sepa",
+          "accountOwner": "Bluewave Retail AG",
+          "IBAN": "AT121904300234573201",
+          "BIC": "SPADATW1"
+        },
+        "receiveEmail": false
+      },
+      "medias": {
+        "businessLicense": [],
+        "idCard": [],
+        "logo": []
+      },
+      "actions": [
+        {
+          "id": "act-002-1",
+          "appliedById": "super-001",
+          "appliedByName": "Super Admin One",
+          "date": "2025-02-02T10:30:00.000Z",
+          "status": "ON_CORRECTION",
+          "message": "Please confirm the new IBAN belongs to the company."
+        }
+      ]
+    },
+    {
+      "id": "eca-003",
+      "companyId": "cmp-003",
+      "companyName": "Sunrise Fitness Studios",
+      "requestedByName": "Maria Rossi",
+      "requestedByEmail": "m.rossi@sunrise-fitness.it",
+      "country": "Italy",
+      "category": "BUSINESS_AND_TAX",
+      "created": "2025-02-03T08:30:00.000Z",
+      "updated": "2025-02-03T09:00:00.000Z",
+      "status": "APPROVED",
+      "isSeen": true,
+      "currentInfo": {
+        "addressData": {
+          "companyName": "Sunrise Fitness Studios",
+          "companyFormId": null,
+          "street": "Via Roma",
+          "number": "10",
+          "addressSupplement": "",
+          "zip": "00100",
+          "city": "Roma",
+          "federalStateId": null,
+          "countryId": "it",
+          "phone": "",
+          "mobile": "",
+          "fax": "",
+          "phoneDialingCodeId": null,
+          "mobileDialingCodeId": null,
+          "faxDialingCodeId": null,
+          "webUrl": "",
+          "email": "info@sunrise-fitness.it"
+        },
+        "tax": {
+          "identificationNumber": "IT12345678901",
+          "vatNumber": "IT99999999999"
+        },
+        "receiveEmail": true
+      },
+      "requestedInfo": {
+        "addressData": {
+          "companyName": "Sunrise Fitness Studios",
+          "companyFormId": null,
+          "street": "Via Milano",
+          "number": "25",
+          "addressSupplement": "",
+          "zip": "20100",
+          "city": "Milano",
+          "federalStateId": null,
+          "countryId": "it",
+          "phone": "",
+          "mobile": "",
+          "fax": "",
+          "phoneDialingCodeId": null,
+          "mobileDialingCodeId": null,
+          "faxDialingCodeId": null,
+          "webUrl": "",
+          "email": "milano@sunrise-fitness.it"
+        },
+        "tax": {
+          "identificationNumber": "IT12345678901",
+          "vatNumber": "IT11111111111"
+        },
+        "receiveEmail": true
+      },
+      "medias": {
+        "businessLicense": [],
+        "idCard": [],
+        "logo": []
+      },
+      "actions": [
+        {
+          "id": "act-003-1",
+          "appliedById": "super-002",
+          "appliedByName": "Super Admin Two",
+          "date": "2025-02-03T08:45:00.000Z",
+          "status": "APPROVED",
+          "message": "Tax data checked and approved."
+        }
+      ]
+    },
+    {
+      "id": "eca-004",
+      "companyId": "cmp-004",
+      "companyName": "Global Food Services Ltd.",
+      "requestedByName": "John Miller",
+      "requestedByEmail": "john.miller@globalfood.co.uk",
+      "country": "United Kingdom",
+      "category": "OTHER",
+      "created": "2025-02-04T11:45:00.000Z",
+      "updated": "2025-02-04T12:10:00.000Z",
+      "status": "REJECTED",
+      "isSeen": true,
+      "currentInfo": {
+        "addressData": {
+          "companyName": "Global Food Services Ltd.",
+          "companyFormId": null,
+          "street": "Baker Street",
+          "number": "221B",
+          "addressSupplement": "",
+          "zip": "NW1 6XE",
+          "city": "London",
+          "federalStateId": null,
+          "countryId": "gb",
+          "phone": "",
+          "mobile": "",
+          "fax": "",
+          "phoneDialingCodeId": null,
+          "mobileDialingCodeId": null,
+          "faxDialingCodeId": null,
+          "webUrl": "",
+          "email": "info@globalfood.co.uk"
+        },
+        "receiveEmail": true
+      },
+      "requestedInfo": {
+        "addressData": {
+          "companyName": "Global Food Services Ltd.",
+          "companyFormId": null,
+          "street": "Unknown Street",
+          "number": "0",
+          "addressSupplement": "",
+          "zip": "00000",
+          "city": "Nowhere",
+          "federalStateId": null,
+          "countryId": "gb",
+          "phone": "",
+          "mobile": "",
+          "fax": "",
+          "phoneDialingCodeId": null,
+          "mobileDialingCodeId": null,
+          "faxDialingCodeId": null,
+          "webUrl": "",
+          "email": "wrong@globalfood.co.uk"
+        },
+        "receiveEmail": false
+      },
+      "medias": {
+        "businessLicense": [],
+        "idCard": [],
+        "logo": []
+      },
+      "actions": [
+        {
+          "id": "act-004-1",
+          "appliedById": "super-001",
+          "appliedByName": "Super Admin One",
+          "date": "2025-02-04T12:05:00.000Z",
+          "status": "REJECTED",
+          "message": "Provided data is not valid. Please correct and resubmit."
+        }
+      ]
     }
   ]
 }
