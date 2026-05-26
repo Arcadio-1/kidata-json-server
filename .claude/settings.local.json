@@ -4,7 +4,8 @@
       "Bash(node -e:*)",
       "Bash(node:*)",
       "Bash(curl:*)",
-      "Bash(taskkill:*)"
+      "Bash(taskkill:*)",
+      "Bash(npm audit:*)"
     ]
   }
 }
