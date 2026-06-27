@@ -4729,7 +4729,8 @@
         "fri"
       ],
       "companyLogo": "/assets/images/profile.webp",
-      "isFavorite": true
+      "isFavorite": true,
+      "creditsPerSlot": 150
     },
     {
       "id": "2",
@@ -4773,7 +4774,8 @@
         "sun"
       ],
       "companyLogo": "/assets/images/profile.webp",
-      "isFavorite": true
+      "isFavorite": true,
+      "creditsPerSlot": 200
     },
     {
       "id": "3",
@@ -4817,7 +4819,8 @@
         "fri"
       ],
       "companyLogo": "/assets/images/profile.webp",
-      "isFavorite": false
+      "isFavorite": false,
+      "creditsPerSlot": 180
     },
     {
       "id": "4",
@@ -4861,7 +4864,8 @@
         "thu"
       ],
       "companyLogo": "/assets/images/profile.webp",
-      "isFavorite": true
+      "isFavorite": true,
+      "creditsPerSlot": 250
     },
     {
       "id": "5",
@@ -4906,7 +4910,8 @@
         "sat"
       ],
       "companyLogo": "/assets/images/profile.webp",
-      "isFavorite": false
+      "isFavorite": false,
+      "creditsPerSlot": 120
     },
     {
       "id": "6",
@@ -4951,7 +4956,8 @@
         "wed"
       ],
       "companyLogo": "/assets/images/profile.webp",
-      "isFavorite": false
+      "isFavorite": false,
+      "creditsPerSlot": 300
     },
     {
       "id": "7",
@@ -4996,7 +5002,8 @@
         "sun"
       ],
       "companyLogo": "/assets/images/profile.webp",
-      "isFavorite": false
+      "isFavorite": false,
+      "creditsPerSlot": 175
     },
     {
       "id": "8",
@@ -5041,7 +5048,8 @@
         "sat"
       ],
       "companyLogo": "/assets/images/profile.webp",
-      "isFavorite": true
+      "isFavorite": true,
+      "creditsPerSlot": 220
     },
     {
       "id": "9",
@@ -5086,7 +5094,8 @@
         "sun"
       ],
       "isFavorite": false,
-      "companyLogo": "/assets/images/profile.webp"
+      "companyLogo": "/assets/images/profile.webp",
+      "creditsPerSlot": 160
     },
     {
       "id": "10",
@@ -5131,7 +5140,8 @@
         "sat"
       ],
       "companyLogo": "/assets/images/profile.webp",
-      "isFavorite": true
+      "isFavorite": true,
+      "creditsPerSlot": 280
     }
   ],
   "displaysShearRemove": [
@@ -7037,72 +7047,418 @@
     "spots": 10,
     "commercials": 20
   },
-  "addOns": [
-    {
-      "id": "addon-1",
-      "title": "10 GB storage package",
-      "price": {
-        "label": "€9.99",
-        "message": "per month"
-      }
+  "addOns": {
+    "summary": {
+      "activeCount": 3,
+      "monthlyTotal": 45.97,
+      "billedWithPlan": "Business Pro",
+      "vatRate": 19
     },
-    {
-      "id": "addon-2",
-      "title": "Fast Synchronization",
-      "price": {
-        "label": "€4.99",
-        "message": "per 50GB"
+    "addOns": [
+      {
+        "id": "addon-1",
+        "name": "Extra Cloud Storage",
+        "description": "Add 100 GB of cloud storage to your account for media files and backups.",
+        "category": "storage",
+        "price": 9.99,
+        "icon": "HardDrive",
+        "benefits": [
+          "100 GB additional storage",
+          "Automatic backups",
+          "Fast CDN delivery",
+          "File versioning"
+        ],
+        "isActive": true,
+        "tags": [
+          "active",
+          "popular"
+        ],
+        "hasQuantity": false,
+        "quantityLabel": null,
+        "currentQuantity": 1,
+        "minQuantity": 1,
+        "maxQuantity": 1
+      },
+      {
+        "id": "addon-2",
+        "name": "Premium Backup",
+        "description": "Daily automated backups with 30-day retention and one-click restore.",
+        "category": "storage",
+        "price": 14.99,
+        "icon": "DatabaseBackup",
+        "benefits": [
+          "Daily automated backups",
+          "30-day retention",
+          "One-click restore",
+          "Encrypted storage"
+        ],
+        "isActive": false,
+        "tags": [
+          "new"
+        ],
+        "hasQuantity": false,
+        "quantityLabel": null,
+        "currentQuantity": 1,
+        "minQuantity": 1,
+        "maxQuantity": 1
+      },
+      {
+        "id": "addon-3",
+        "name": "Archive Storage",
+        "description": "Long-term archival storage for compliance and record keeping.",
+        "category": "storage",
+        "price": 4.99,
+        "icon": "Archive",
+        "benefits": [
+          "500 GB archive space",
+          "Compliance ready",
+          "Encrypted at rest",
+          "Yearly export"
+        ],
+        "isActive": false,
+        "tags": [],
+        "hasQuantity": false,
+        "quantityLabel": null,
+        "currentQuantity": 1,
+        "minQuantity": 1,
+        "maxQuantity": 1
+      },
+      {
+        "id": "addon-4",
+        "name": "Extra Team Members",
+        "description": "Add additional team member seats to your account.",
+        "category": "usersAndAccess",
+        "price": 5.99,
+        "icon": "Users",
+        "benefits": [
+          "Per-seat pricing",
+          "Role-based access",
+          "Activity tracking",
+          "SSO compatible"
+        ],
+        "isActive": true,
+        "tags": [
+          "active",
+          "popular"
+        ],
+        "hasQuantity": true,
+        "quantityLabel": "seats",
+        "currentQuantity": 3,
+        "minQuantity": 1,
+        "maxQuantity": 50
+      },
+      {
+        "id": "addon-5",
+        "name": "Advanced Roles",
+        "description": "Create custom roles with granular permission controls.",
+        "category": "usersAndAccess",
+        "price": 7.99,
+        "icon": "ShieldCheck",
+        "benefits": [
+          "Custom role builder",
+          "Granular permissions",
+          "Department scoping",
+          "Audit trail"
+        ],
+        "isActive": false,
+        "tags": [],
+        "hasQuantity": false,
+        "quantityLabel": null,
+        "currentQuantity": 1,
+        "minQuantity": 1,
+        "maxQuantity": 1
+      },
+      {
+        "id": "addon-6",
+        "name": "Extra Displays",
+        "description": "Add more display slots to manage additional screens.",
+        "category": "displaysAndSharing",
+        "price": 12.99,
+        "icon": "Monitor",
+        "benefits": [
+          "Per-display pricing",
+          "Remote management",
+          "Scheduling support",
+          "Health monitoring"
+        ],
+        "isActive": true,
+        "tags": [
+          "active"
+        ],
+        "hasQuantity": true,
+        "quantityLabel": "displays",
+        "currentQuantity": 2,
+        "minQuantity": 1,
+        "maxQuantity": 100
+      },
+      {
+        "id": "addon-7",
+        "name": "Partner Network Plus",
+        "description": "Unlock advanced partner network sharing and collaboration features.",
+        "category": "displaysAndSharing",
+        "price": 19.99,
+        "icon": "Network",
+        "benefits": [
+          "Unlimited partner sharing",
+          "Revenue splitting",
+          "Cross-network booking",
+          "Priority listing"
+        ],
+        "isActive": false,
+        "tags": [
+          "popular"
+        ],
+        "hasQuantity": false,
+        "quantityLabel": null,
+        "currentQuantity": 1,
+        "minQuantity": 1,
+        "maxQuantity": 1
+      },
+      {
+        "id": "addon-8",
+        "name": "Display Kiosk Mode",
+        "description": "Lock displays into kiosk mode for public-facing deployments.",
+        "category": "displaysAndSharing",
+        "price": 3.99,
+        "icon": "LockKeyhole",
+        "benefits": [
+          "Kiosk lockdown",
+          "Auto-restart",
+          "Remote unlock",
+          "Tamper detection"
+        ],
+        "isActive": false,
+        "tags": [
+          "new"
+        ],
+        "hasQuantity": false,
+        "quantityLabel": null,
+        "currentQuantity": 1,
+        "minQuantity": 1,
+        "maxQuantity": 1
+      },
+      {
+        "id": "addon-9",
+        "name": "HD Video Ads",
+        "description": "Upload and schedule HD video advertisements up to 4K resolution.",
+        "category": "adsAndMedia",
+        "price": 11.99,
+        "icon": "Film",
+        "benefits": [
+          "4K video support",
+          "60fps playback",
+          "Auto-transcoding",
+          "Scheduled rotation"
+        ],
+        "isActive": false,
+        "tags": [
+          "popular"
+        ],
+        "hasQuantity": false,
+        "quantityLabel": null,
+        "currentQuantity": 1,
+        "minQuantity": 1,
+        "maxQuantity": 1
+      },
+      {
+        "id": "addon-10",
+        "name": "Extra Ad Categories",
+        "description": "Add more advertising categories to organize and target your content.",
+        "category": "adsAndMedia",
+        "price": 3.99,
+        "icon": "LayoutGrid",
+        "benefits": [
+          "Custom categories",
+          "Category-based scheduling",
+          "Targeted delivery",
+          "Category analytics"
+        ],
+        "isActive": false,
+        "tags": [],
+        "hasQuantity": true,
+        "quantityLabel": "categories",
+        "currentQuantity": 5,
+        "minQuantity": 1,
+        "maxQuantity": 30
+      },
+      {
+        "id": "addon-11",
+        "name": "Interactive Media",
+        "description": "Enable touch and QR code interactive content on your displays.",
+        "category": "adsAndMedia",
+        "price": 15.99,
+        "icon": "Touchpad",
+        "benefits": [
+          "Touch interactivity",
+          "QR code overlays",
+          "Lead capture",
+          "Engagement tracking"
+        ],
+        "isActive": false,
+        "tags": [
+          "new"
+        ],
+        "hasQuantity": false,
+        "quantityLabel": null,
+        "currentQuantity": 1,
+        "minQuantity": 1,
+        "maxQuantity": 1
+      },
+      {
+        "id": "addon-12",
+        "name": "Advanced Analytics",
+        "description": "Unlock detailed analytics dashboards with audience insights.",
+        "category": "analyticsAndReporting",
+        "price": 16.99,
+        "icon": "BarChart3",
+        "benefits": [
+          "Audience demographics",
+          "Heatmap analysis",
+          "Conversion tracking",
+          "Custom date ranges"
+        ],
+        "isActive": false,
+        "tags": [
+          "popular"
+        ],
+        "hasQuantity": false,
+        "quantityLabel": null,
+        "currentQuantity": 1,
+        "minQuantity": 1,
+        "maxQuantity": 1
+      },
+      {
+        "id": "addon-13",
+        "name": "Custom Reports",
+        "description": "Generate and schedule custom PDF and CSV reports.",
+        "category": "analyticsAndReporting",
+        "price": 8.99,
+        "icon": "FileSpreadsheet",
+        "benefits": [
+          "Scheduled reports",
+          "PDF & CSV export",
+          "White-label branding",
+          "Email delivery"
+        ],
+        "isActive": false,
+        "tags": [],
+        "hasQuantity": false,
+        "quantityLabel": null,
+        "currentQuantity": 1,
+        "minQuantity": 1,
+        "maxQuantity": 1
+      },
+      {
+        "id": "addon-14",
+        "name": "Priority Support",
+        "description": "Get priority response times and a dedicated support agent.",
+        "category": "supportAndServices",
+        "price": 24.99,
+        "icon": "Headset",
+        "benefits": [
+          "1-hour response time",
+          "Dedicated agent",
+          "Phone support",
+          "Screen sharing"
+        ],
+        "isActive": false,
+        "tags": [
+          "popular"
+        ],
+        "hasQuantity": false,
+        "quantityLabel": null,
+        "currentQuantity": 1,
+        "minQuantity": 1,
+        "maxQuantity": 1
+      },
+      {
+        "id": "addon-15",
+        "name": "Onboarding Package",
+        "description": "Professional onboarding session with setup assistance.",
+        "category": "supportAndServices",
+        "price": 49.99,
+        "icon": "GraduationCap",
+        "benefits": [
+          "1-on-1 session",
+          "Custom setup",
+          "Training materials",
+          "30-day follow-up"
+        ],
+        "isActive": false,
+        "tags": [],
+        "hasQuantity": false,
+        "quantityLabel": null,
+        "currentQuantity": 1,
+        "minQuantity": 1,
+        "maxQuantity": 1
+      },
+      {
+        "id": "addon-16",
+        "name": "Two-Factor Auth",
+        "description": "Enable mandatory two-factor authentication for all team members.",
+        "category": "securityAndCompliance",
+        "price": 2.99,
+        "icon": "KeyRound",
+        "benefits": [
+          "TOTP & SMS",
+          "Mandatory enforcement",
+          "Recovery codes",
+          "Login audit log"
+        ],
+        "isActive": false,
+        "tags": [],
+        "hasQuantity": false,
+        "quantityLabel": null,
+        "currentQuantity": 1,
+        "minQuantity": 1,
+        "maxQuantity": 1
+      },
+      {
+        "id": "addon-17",
+        "name": "Data Encryption Plus",
+        "description": "End-to-end encryption for all stored data and file transfers.",
+        "category": "securityAndCompliance",
+        "price": 9.99,
+        "icon": "Lock",
+        "benefits": [
+          "AES-256 encryption",
+          "Encrypted transfers",
+          "Key management",
+          "Compliance reports"
+        ],
+        "isActive": false,
+        "tags": [
+          "new"
+        ],
+        "hasQuantity": false,
+        "quantityLabel": null,
+        "currentQuantity": 1,
+        "minQuantity": 1,
+        "maxQuantity": 1
+      },
+      {
+        "id": "addon-18",
+        "name": "Audit Compliance",
+        "description": "Full audit trail and compliance reporting for regulated industries.",
+        "category": "securityAndCompliance",
+        "price": 19.99,
+        "icon": "ClipboardCheck",
+        "benefits": [
+          "Full audit trail",
+          "GDPR compliance tools",
+          "Data retention policies",
+          "Export for auditors"
+        ],
+        "isActive": false,
+        "tags": [],
+        "hasQuantity": false,
+        "quantityLabel": null,
+        "currentQuantity": 1,
+        "minQuantity": 1,
+        "maxQuantity": 1
       }
-    },
-    {
-      "id": "addon-3",
-      "title": "Template Bundle",
-      "price": {
-        "label": "€15.99",
-        "message": "per 10GB"
-      }
-    },
-    {
-      "id": "addon-4",
-      "title": "Extra Storage",
-      "price": {
-        "label": "€14.99",
-        "message": "per 100GB"
-      }
-    },
-    {
-      "id": "addon-5",
-      "title": "Extra Storage",
-      "price": {
-        "label": "€24.99",
-        "message": "per 2GB"
-      }
-    },
-    {
-      "id": "addon-6",
-      "title": "Extra Storage",
-      "price": {
-        "label": "€24.99",
-        "message": "per 2GB"
-      }
-    },
-    {
-      "id": "addon-7",
-      "title": "Extra Storage",
-      "price": {
-        "label": "€24.99",
-        "message": "per 2GB"
-      }
-    },
-    {
-      "id": "addon-8",
-      "title": "Extra Storage",
-      "price": {
-        "label": "€24.99",
-        "message": "per 2GB"
-      }
-    }
-  ],
+    ]
+  },
   "smartGuides": [
     {
       "id": "1",
@@ -11281,10 +11637,10 @@
     }
   ],
   "walletBalance": {
-    "purchasedCredits": 15000,
+    "purchasedCredits": 15914,
     "earnedCredits": 8350,
-    "totalCredits": 23350,
-    "lastUpdated": "2025-04-28T12:37:46.000Z",
+    "totalCredits": 24264,
+    "lastUpdated": "2026-06-24T09:23:46.490Z",
     "currency": "EUR",
     "conversionRate": 100
   },
@@ -11382,12 +11738,36 @@
       "totalExpensesChange": 19.5
     },
     "chartData": [
-      { "month": "Jul", "expenses": 3200, "income": 5800 },
-      { "month": "Aug", "expenses": 4100, "income": 7200 },
-      { "month": "Sep", "expenses": 3800, "income": 6500 },
-      { "month": "Oct", "expenses": 5200, "income": 8900 },
-      { "month": "Nov", "expenses": 4600, "income": 9200 },
-      { "month": "Dec", "expenses": 4300, "income": 11700 }
+      {
+        "month": "Jul",
+        "expenses": 3200,
+        "income": 5800
+      },
+      {
+        "month": "Aug",
+        "expenses": 4100,
+        "income": 7200
+      },
+      {
+        "month": "Sep",
+        "expenses": 3800,
+        "income": 6500
+      },
+      {
+        "month": "Oct",
+        "expenses": 5200,
+        "income": 8900
+      },
+      {
+        "month": "Nov",
+        "expenses": 4600,
+        "income": 9200
+      },
+      {
+        "month": "Dec",
+        "expenses": 4300,
+        "income": 11700
+      }
     ],
     "transactions": [
       {
@@ -11468,7 +11848,7 @@
         "id": "sub_kidata_pro",
         "name": "KiData Pro",
         "description": "Full marketplace access, analytics, priority support",
-        "priceEur": 29.0,
+        "priceEur": 29,
         "billingPeriod": "monthly",
         "nextBillingDate": "2025-05-28",
         "status": "active"
@@ -11477,7 +11857,7 @@
         "id": "sub_extra_storage",
         "name": "Extra Storage",
         "description": "+100 GB cloud storage for your marketplace assets",
-        "priceEur": 9.0,
+        "priceEur": 9,
         "billingPeriod": "monthly",
         "nextBillingDate": "2025-05-28",
         "status": "active"
@@ -11489,7 +11869,7 @@
         "subscriptionName": "KiData Pro",
         "invoiceNumber": "INV-0003-05-24-3",
         "date": "2025-04-28",
-        "amountEur": -29.0,
+        "amountEur": -29,
         "status": "paid"
       },
       {
@@ -11497,7 +11877,7 @@
         "subscriptionName": "Extra Storage",
         "invoiceNumber": "INV-0003-05-24-3",
         "date": "2025-04-28",
-        "amountEur": -9.0,
+        "amountEur": -9,
         "status": "paid"
       },
       {
@@ -11505,7 +11885,7 @@
         "subscriptionName": "KiData Pro",
         "invoiceNumber": "INV-0003-05-24-2",
         "date": "2025-03-28",
-        "amountEur": -29.0,
+        "amountEur": -29,
         "status": "paid"
       },
       {
@@ -11513,7 +11893,7 @@
         "subscriptionName": "Extra Storage",
         "invoiceNumber": "INV-0003-05-24-2",
         "date": "2025-03-28",
-        "amountEur": -9.0,
+        "amountEur": -9,
         "status": "paid"
       },
       {
@@ -11521,7 +11901,7 @@
         "subscriptionName": "KiData Pro",
         "invoiceNumber": "INV-0003-05-24-1",
         "date": "2025-02-28",
-        "amountEur": -29.0,
+        "amountEur": -29,
         "status": "paid"
       },
       {
@@ -11529,8 +11909,1171 @@
         "subscriptionName": "Extra Storage",
         "invoiceNumber": "INV-0003-05-24-1",
         "date": "2025-02-28",
-        "amountEur": -9.0,
+        "amountEur": -9,
         "status": "paid"
+      }
+    ]
+  },
+  "transactionDetails": [
+    {
+      "id": "tx_001",
+      "companyAccountName": "Florian Schafft GmbH",
+      "companyId": "comp_001",
+      "amountEur": 30,
+      "amountCredits": 3000,
+      "date": "2025-04-21T10:30:00.000Z",
+      "status": "successful",
+      "referenceNumber": "REF-2025-04-001",
+      "description": "Booking income from display rental",
+      "bookingId": "bk_101",
+      "type": "income"
+    },
+    {
+      "id": "tx_002",
+      "companyAccountName": "Partner GmbH",
+      "companyId": "comp_002",
+      "amountEur": 50,
+      "amountCredits": 5000,
+      "date": "2025-04-20T15:45:00.000Z",
+      "status": "successful",
+      "referenceNumber": "REF-2025-04-002",
+      "description": "Booking income from shared display",
+      "bookingId": "bk_102",
+      "type": "income"
+    },
+    {
+      "id": "tx_003",
+      "companyAccountName": "Client GmbH",
+      "companyId": "comp_003",
+      "amountEur": 15,
+      "amountCredits": 1500,
+      "date": "2025-04-19T09:20:00.000Z",
+      "status": "successful",
+      "referenceNumber": "REF-2025-04-003",
+      "description": "Booking income from ad placement",
+      "bookingId": "bk_103",
+      "type": "income"
+    },
+    {
+      "id": "tx_004",
+      "companyAccountName": null,
+      "companyId": null,
+      "amountEur": 60,
+      "amountCredits": 6000,
+      "date": "2025-04-18T14:00:00.000Z",
+      "status": "successful",
+      "referenceNumber": "REF-2025-04-004",
+      "description": "Wallet top-up via credit card",
+      "paymentMethod": "Visa •••• 4242",
+      "type": "topup"
+    },
+    {
+      "id": "tx_005",
+      "companyAccountName": "Rent Payment GmbH",
+      "companyId": "comp_004",
+      "amountEur": 25,
+      "amountCredits": 2500,
+      "date": "2025-04-18T11:30:00.000Z",
+      "status": "successful",
+      "referenceNumber": "REF-2025-04-005",
+      "description": "Booking expense for display rental",
+      "bookingId": "bk_104",
+      "type": "expense"
+    },
+    {
+      "id": "tx_006",
+      "companyAccountName": "Alina Peters GmbH",
+      "companyId": "comp_005",
+      "amountEur": 15,
+      "amountCredits": 1500,
+      "date": "2025-04-16T16:15:00.000Z",
+      "status": "successful",
+      "referenceNumber": "REF-2025-04-006",
+      "description": "Booking expense for ad placement",
+      "bookingId": "bk_105",
+      "type": "expense"
+    },
+    {
+      "id": "tx_007",
+      "companyAccountName": "Digital GmbH",
+      "companyId": "comp_006",
+      "amountEur": 25,
+      "amountCredits": 2500,
+      "date": "2025-04-15T13:45:00.000Z",
+      "status": "successful",
+      "referenceNumber": "REF-2025-04-007",
+      "description": "Booking income from digital signage",
+      "bookingId": "bk_106",
+      "type": "income"
+    },
+    {
+      "id": "tx_008",
+      "companyAccountName": "Rent Subscription",
+      "companyId": "comp_007",
+      "amountEur": 8,
+      "amountCredits": 800,
+      "date": "2025-04-14T10:00:00.000Z",
+      "status": "successful",
+      "referenceNumber": "REF-2025-04-008",
+      "description": "Booking expense for subscription display",
+      "bookingId": "bk_107",
+      "type": "expense"
+    }
+  ],
+  "subscriptionDetails": [
+    {
+      "id": "sub_kidata_pro",
+      "name": "KiData Pro",
+      "type": "plan",
+      "status": "active",
+      "description": "Full marketplace access, analytics, priority support",
+      "priceEur": 29,
+      "billingPeriod": "monthly",
+      "nextBillingDate": "2025-05-28",
+      "paymentMethod": "Visa •••• 4242",
+      "netAmount": 24.37,
+      "vatAmount": 4.63,
+      "activeSince": "2024-06-01",
+      "features": [
+        {
+          "name": "Unlimited display listings",
+          "included": true
+        },
+        {
+          "name": "Advanced analytics dashboard",
+          "included": true
+        },
+        {
+          "name": "Priority email support",
+          "included": true
+        },
+        {
+          "name": "Custom branding",
+          "included": true
+        },
+        {
+          "name": "API access",
+          "included": false
+        }
+      ],
+      "invoiceHistory": [
+        {
+          "id": "inv_001",
+          "invoiceNumber": "INV-0003-05-24-3",
+          "date": "2025-04-28",
+          "amount": 29,
+          "status": "paid"
+        },
+        {
+          "id": "inv_003",
+          "invoiceNumber": "INV-0003-05-24-2",
+          "date": "2025-03-28",
+          "amount": 29,
+          "status": "paid"
+        },
+        {
+          "id": "inv_005",
+          "invoiceNumber": "INV-0003-05-24-1",
+          "date": "2025-02-28",
+          "amount": 29,
+          "status": "paid"
+        }
+      ]
+    },
+    {
+      "id": "sub_extra_storage",
+      "name": "Extra Storage",
+      "type": "addon",
+      "status": "active",
+      "description": "+100 GB cloud storage for your marketplace assets",
+      "priceEur": 9,
+      "billingPeriod": "monthly",
+      "nextBillingDate": "2025-05-28",
+      "paymentMethod": "Visa •••• 4242",
+      "netAmount": 7.56,
+      "vatAmount": 1.44,
+      "activeSince": "2024-09-15",
+      "features": [
+        {
+          "name": "100 GB additional storage",
+          "included": true
+        },
+        {
+          "name": "Automatic backup",
+          "included": true
+        },
+        {
+          "name": "File versioning",
+          "included": true
+        }
+      ],
+      "invoiceHistory": [
+        {
+          "id": "inv_002",
+          "invoiceNumber": "INV-0003-05-24-3",
+          "date": "2025-04-28",
+          "amount": 9,
+          "status": "paid"
+        },
+        {
+          "id": "inv_004",
+          "invoiceNumber": "INV-0003-05-24-2",
+          "date": "2025-03-28",
+          "amount": 9,
+          "status": "paid"
+        },
+        {
+          "id": "inv_006",
+          "invoiceNumber": "INV-0003-05-24-1",
+          "date": "2025-02-28",
+          "amount": 9,
+          "status": "paid"
+        }
+      ]
+    }
+  ],
+  "invoiceDetails": [
+    {
+      "id": "inv_001",
+      "invoiceNumber": "INV-0003-05-24-3",
+      "invoiceDate": "2025-04-28",
+      "billingPeriod": "Apr 2025",
+      "status": "paid",
+      "paymentMethod": "Visa •••• 4242",
+      "subscriptionId": "sub_kidata_pro",
+      "subscriptionName": "KiData Pro",
+      "lineItems": [
+        {
+          "description": "KiData Pro - Monthly Plan",
+          "quantity": 1,
+          "unitPrice": 24.37,
+          "total": 24.37
+        }
+      ],
+      "vatAmount": 4.63,
+      "totalAmount": 29
+    },
+    {
+      "id": "inv_002",
+      "invoiceNumber": "INV-0003-05-24-3",
+      "invoiceDate": "2025-04-28",
+      "billingPeriod": "Apr 2025",
+      "status": "paid",
+      "paymentMethod": "Visa •••• 4242",
+      "subscriptionId": "sub_extra_storage",
+      "subscriptionName": "Extra Storage",
+      "lineItems": [
+        {
+          "description": "Extra Storage - 100 GB Add-on",
+          "quantity": 1,
+          "unitPrice": 7.56,
+          "total": 7.56
+        }
+      ],
+      "vatAmount": 1.44,
+      "totalAmount": 9
+    },
+    {
+      "id": "inv_003",
+      "invoiceNumber": "INV-0003-05-24-2",
+      "invoiceDate": "2025-03-28",
+      "billingPeriod": "Mar 2025",
+      "status": "paid",
+      "paymentMethod": "Visa •••• 4242",
+      "subscriptionId": "sub_kidata_pro",
+      "subscriptionName": "KiData Pro",
+      "lineItems": [
+        {
+          "description": "KiData Pro - Monthly Plan",
+          "quantity": 1,
+          "unitPrice": 24.37,
+          "total": 24.37
+        }
+      ],
+      "vatAmount": 4.63,
+      "totalAmount": 29
+    },
+    {
+      "id": "inv_004",
+      "invoiceNumber": "INV-0003-05-24-2",
+      "invoiceDate": "2025-03-28",
+      "billingPeriod": "Mar 2025",
+      "status": "paid",
+      "paymentMethod": "Visa •••• 4242",
+      "subscriptionId": "sub_extra_storage",
+      "subscriptionName": "Extra Storage",
+      "lineItems": [
+        {
+          "description": "Extra Storage - 100 GB Add-on",
+          "quantity": 1,
+          "unitPrice": 7.56,
+          "total": 7.56
+        }
+      ],
+      "vatAmount": 1.44,
+      "totalAmount": 9
+    },
+    {
+      "id": "inv_005",
+      "invoiceNumber": "INV-0003-05-24-1",
+      "invoiceDate": "2025-02-28",
+      "billingPeriod": "Feb 2025",
+      "status": "paid",
+      "paymentMethod": "Visa •••• 4242",
+      "subscriptionId": "sub_kidata_pro",
+      "subscriptionName": "KiData Pro",
+      "lineItems": [
+        {
+          "description": "KiData Pro - Monthly Plan",
+          "quantity": 1,
+          "unitPrice": 24.37,
+          "total": 24.37
+        }
+      ],
+      "vatAmount": 4.63,
+      "totalAmount": 29
+    },
+    {
+      "id": "inv_006",
+      "invoiceNumber": "INV-0003-05-24-1",
+      "invoiceDate": "2025-02-28",
+      "billingPeriod": "Feb 2025",
+      "status": "paid",
+      "paymentMethod": "Visa •••• 4242",
+      "subscriptionId": "sub_extra_storage",
+      "subscriptionName": "Extra Storage",
+      "lineItems": [
+        {
+          "description": "Extra Storage - 100 GB Add-on",
+          "quantity": 1,
+          "unitPrice": 7.56,
+          "total": 7.56
+        }
+      ],
+      "vatAmount": 1.44,
+      "totalAmount": 9
+    }
+  ],
+  "bookingDetails": [
+    {
+      "id": "bk_101",
+      "partnerInfo": {
+        "companyName": "Florian Schafft GmbH",
+        "companyId": "comp_001",
+        "contactPerson": "Florian Schafft",
+        "email": "florian@schafft.de",
+        "phone": "+49 170 1234567",
+        "partnerSince": "2024-03-15"
+      },
+      "lastBooking": {
+        "bookingId": "BK-2025-0421",
+        "displayName": "Display Munich Central #12",
+        "displayId": "dsp_012",
+        "duration": "7 days",
+        "startDate": "2025-04-14",
+        "endDate": "2025-04-21",
+        "creditsEarned": 3000,
+        "status": "completed"
+      },
+      "bookingOverview": [
+        {
+          "date": "2025-04-14",
+          "event": "Booking confirmed",
+          "status": "completed"
+        },
+        {
+          "date": "2025-04-15",
+          "event": "Ad content uploaded",
+          "status": "completed"
+        },
+        {
+          "date": "2025-04-16",
+          "event": "Display activated",
+          "status": "completed"
+        },
+        {
+          "date": "2025-04-21",
+          "event": "Booking period ended",
+          "status": "completed"
+        },
+        {
+          "date": "2025-04-21",
+          "event": "Credits transferred",
+          "status": "completed"
+        }
+      ]
+    },
+    {
+      "id": "bk_102",
+      "partnerInfo": {
+        "companyName": "Partner GmbH",
+        "companyId": "comp_002",
+        "contactPerson": "Anna Mueller",
+        "email": "anna@partner.de",
+        "phone": "+49 171 9876543",
+        "partnerSince": "2024-01-10"
+      },
+      "lastBooking": {
+        "bookingId": "BK-2025-0420",
+        "displayName": "Display Berlin Alexanderplatz #05",
+        "displayId": "dsp_005",
+        "duration": "14 days",
+        "startDate": "2025-04-06",
+        "endDate": "2025-04-20",
+        "creditsEarned": 5000,
+        "status": "completed"
+      },
+      "bookingOverview": [
+        {
+          "date": "2025-04-06",
+          "event": "Booking confirmed",
+          "status": "completed"
+        },
+        {
+          "date": "2025-04-07",
+          "event": "Ad content uploaded",
+          "status": "completed"
+        },
+        {
+          "date": "2025-04-08",
+          "event": "Display activated",
+          "status": "completed"
+        },
+        {
+          "date": "2025-04-20",
+          "event": "Booking period ended",
+          "status": "completed"
+        },
+        {
+          "date": "2025-04-20",
+          "event": "Credits transferred",
+          "status": "completed"
+        }
+      ]
+    },
+    {
+      "id": "bk_103",
+      "partnerInfo": {
+        "companyName": "Client GmbH",
+        "companyId": "comp_003",
+        "contactPerson": "Max Weber",
+        "email": "max@client.de",
+        "phone": "+49 172 5551234",
+        "partnerSince": "2024-07-22"
+      },
+      "lastBooking": {
+        "bookingId": "BK-2025-0419",
+        "displayName": "Display Hamburg Jungfernstieg #08",
+        "displayId": "dsp_008",
+        "duration": "3 days",
+        "startDate": "2025-04-16",
+        "endDate": "2025-04-19",
+        "creditsEarned": 1500,
+        "status": "completed"
+      },
+      "bookingOverview": [
+        {
+          "date": "2025-04-16",
+          "event": "Booking confirmed",
+          "status": "completed"
+        },
+        {
+          "date": "2025-04-17",
+          "event": "Ad content uploaded",
+          "status": "completed"
+        },
+        {
+          "date": "2025-04-17",
+          "event": "Display activated",
+          "status": "completed"
+        },
+        {
+          "date": "2025-04-19",
+          "event": "Booking period ended",
+          "status": "completed"
+        },
+        {
+          "date": "2025-04-19",
+          "event": "Credits transferred",
+          "status": "completed"
+        }
+      ]
+    },
+    {
+      "id": "bk_104",
+      "partnerInfo": {
+        "companyName": "Rent Payment GmbH",
+        "companyId": "comp_004",
+        "contactPerson": "Julia Fischer",
+        "email": "julia@rentpayment.de",
+        "phone": "+49 173 6667890",
+        "partnerSince": "2023-11-05"
+      },
+      "lastBooking": {
+        "bookingId": "BK-2025-0418",
+        "displayName": "Display Frankfurt Zeil #03",
+        "displayId": "dsp_003",
+        "duration": "10 days",
+        "startDate": "2025-04-08",
+        "endDate": "2025-04-18",
+        "creditsEarned": 2500,
+        "status": "completed"
+      },
+      "bookingOverview": [
+        {
+          "date": "2025-04-08",
+          "event": "Booking confirmed",
+          "status": "completed"
+        },
+        {
+          "date": "2025-04-09",
+          "event": "Ad content uploaded",
+          "status": "completed"
+        },
+        {
+          "date": "2025-04-10",
+          "event": "Display activated",
+          "status": "completed"
+        },
+        {
+          "date": "2025-04-18",
+          "event": "Booking period ended",
+          "status": "completed"
+        },
+        {
+          "date": "2025-04-18",
+          "event": "Credits transferred",
+          "status": "completed"
+        }
+      ]
+    },
+    {
+      "id": "bk_105",
+      "partnerInfo": {
+        "companyName": "Alina Peters GmbH",
+        "companyId": "comp_005",
+        "contactPerson": "Alina Peters",
+        "email": "alina@peters.de",
+        "phone": "+49 174 7778901",
+        "partnerSince": "2024-05-18"
+      },
+      "lastBooking": {
+        "bookingId": "BK-2025-0416",
+        "displayName": "Display Stuttgart Koenigstr #11",
+        "displayId": "dsp_011",
+        "duration": "5 days",
+        "startDate": "2025-04-11",
+        "endDate": "2025-04-16",
+        "creditsEarned": 1500,
+        "status": "completed"
+      },
+      "bookingOverview": [
+        {
+          "date": "2025-04-11",
+          "event": "Booking confirmed",
+          "status": "completed"
+        },
+        {
+          "date": "2025-04-12",
+          "event": "Ad content uploaded",
+          "status": "completed"
+        },
+        {
+          "date": "2025-04-13",
+          "event": "Display activated",
+          "status": "completed"
+        },
+        {
+          "date": "2025-04-16",
+          "event": "Booking period ended",
+          "status": "completed"
+        },
+        {
+          "date": "2025-04-16",
+          "event": "Credits transferred",
+          "status": "completed"
+        }
+      ]
+    },
+    {
+      "id": "bk_106",
+      "partnerInfo": {
+        "companyName": "Digital GmbH",
+        "companyId": "comp_006",
+        "contactPerson": "Thomas Braun",
+        "email": "thomas@digital.de",
+        "phone": "+49 175 8889012",
+        "partnerSince": "2024-02-28"
+      },
+      "lastBooking": {
+        "bookingId": "BK-2025-0415",
+        "displayName": "Display Cologne Schildergasse #07",
+        "displayId": "dsp_007",
+        "duration": "7 days",
+        "startDate": "2025-04-08",
+        "endDate": "2025-04-15",
+        "creditsEarned": 2500,
+        "status": "completed"
+      },
+      "bookingOverview": [
+        {
+          "date": "2025-04-08",
+          "event": "Booking confirmed",
+          "status": "completed"
+        },
+        {
+          "date": "2025-04-09",
+          "event": "Ad content uploaded",
+          "status": "completed"
+        },
+        {
+          "date": "2025-04-10",
+          "event": "Display activated",
+          "status": "completed"
+        },
+        {
+          "date": "2025-04-15",
+          "event": "Booking period ended",
+          "status": "completed"
+        },
+        {
+          "date": "2025-04-15",
+          "event": "Credits transferred",
+          "status": "completed"
+        }
+      ]
+    },
+    {
+      "id": "bk_107",
+      "partnerInfo": {
+        "companyName": "Rent Subscription",
+        "companyId": "comp_007",
+        "contactPerson": "Laura Schmidt",
+        "email": "laura@rentsub.de",
+        "phone": "+49 176 9990123",
+        "partnerSince": "2024-08-12"
+      },
+      "lastBooking": {
+        "bookingId": "BK-2025-0414",
+        "displayName": "Display Dusseldorf Altstadt #02",
+        "displayId": "dsp_002",
+        "duration": "4 days",
+        "startDate": "2025-04-10",
+        "endDate": "2025-04-14",
+        "creditsEarned": 800,
+        "status": "completed"
+      },
+      "bookingOverview": [
+        {
+          "date": "2025-04-10",
+          "event": "Booking confirmed",
+          "status": "completed"
+        },
+        {
+          "date": "2025-04-11",
+          "event": "Ad content uploaded",
+          "status": "completed"
+        },
+        {
+          "date": "2025-04-12",
+          "event": "Display activated",
+          "status": "completed"
+        },
+        {
+          "date": "2025-04-14",
+          "event": "Booking period ended",
+          "status": "completed"
+        },
+        {
+          "date": "2025-04-14",
+          "event": "Credits transferred",
+          "status": "completed"
+        }
+      ]
+    }
+  ],
+  "addOnBundles": [
+    {
+      "id": "bundle-1",
+      "badge": "Growth Bundle",
+      "title": "Get started fast",
+      "description": "Everything you need to scale your digital signage operation quickly.",
+      "includedAddOns": [
+        "Extra Cloud Storage",
+        "Extra Team Members",
+        "Extra Displays",
+        "Advanced Analytics"
+      ],
+      "savingsAmount": 12,
+      "savingsPercent": 25,
+      "bundlePrice": 35.97,
+      "originalPrice": 47.96,
+      "isFeatured": false
+    },
+    {
+      "id": "bundle-2",
+      "badge": "Professional Bundle",
+      "title": "For growing teams",
+      "description": "Advanced tools for professional teams managing multiple locations.",
+      "includedAddOns": [
+        "Extra Cloud Storage",
+        "Advanced Roles",
+        "Partner Network Plus",
+        "HD Video Ads",
+        "Priority Support"
+      ],
+      "savingsAmount": 20,
+      "savingsPercent": 30,
+      "bundlePrice": 49.97,
+      "originalPrice": 69.95,
+      "isFeatured": true
+    },
+    {
+      "id": "bundle-3",
+      "badge": "Enterprise Bundle",
+      "title": "Full power unlocked",
+      "description": "Complete enterprise solution with security, compliance, and premium support.",
+      "includedAddOns": [
+        "Premium Backup",
+        "Advanced Roles",
+        "Advanced Analytics",
+        "Priority Support",
+        "Data Encryption Plus",
+        "Audit Compliance"
+      ],
+      "savingsAmount": 30,
+      "savingsPercent": 28,
+      "bundlePrice": 74.94,
+      "originalPrice": 104.94,
+      "isFeatured": false
+    }
+  ],
+  "currentOffers": {
+    "bundles": [
+      {
+        "id": "offer-bundle-1",
+        "badge": "Growth Bundle",
+        "discountPercent": 33,
+        "isFeatured": false,
+        "title": "Get started fast",
+        "description": "Everything you need to scale your digital signage operation quickly. Includes extra storage, team members, displays, and analytics to accelerate your growth from day one.",
+        "includedItems": [
+          {
+            "icon": "HardDrive",
+            "name": "Extra Storage +100 GB",
+            "standalonePrice": 8.9
+          },
+          {
+            "icon": "Users",
+            "name": "Extra Team Members +5",
+            "standalonePrice": 12.5
+          },
+          {
+            "icon": "Monitor",
+            "name": "Extra Displays +3",
+            "standalonePrice": 9.9
+          },
+          {
+            "icon": "BarChart3",
+            "name": "Advanced Analytics",
+            "standalonePrice": 14.9
+          }
+        ],
+        "originalPrice": 46.2,
+        "bundlePrice": 30.95,
+        "daysLeft": 14,
+        "validUntil": "2026-06-30"
+      },
+      {
+        "id": "offer-bundle-2",
+        "badge": "Pro Visibility Bundle",
+        "discountPercent": 27,
+        "isFeatured": true,
+        "title": "Maximize your reach",
+        "description": "Boost visibility and engagement with HD video ads, partner network access, and priority support. Perfect for businesses ready to expand their digital presence.",
+        "includedItems": [
+          {
+            "icon": "Video",
+            "name": "HD Video Ads",
+            "standalonePrice": 19.9
+          },
+          {
+            "icon": "Network",
+            "name": "Partner Network Plus",
+            "standalonePrice": 14.9
+          },
+          {
+            "icon": "Headphones",
+            "name": "Priority Support",
+            "standalonePrice": 9.9
+          },
+          {
+            "icon": "BarChart3",
+            "name": "Advanced Analytics",
+            "standalonePrice": 14.9
+          }
+        ],
+        "originalPrice": 59.6,
+        "bundlePrice": 43.5,
+        "daysLeft": 14,
+        "validUntil": "2026-06-30"
+      },
+      {
+        "id": "offer-bundle-3",
+        "badge": "Team Scale Bundle",
+        "discountPercent": 28,
+        "isFeatured": false,
+        "title": "Scale your team efficiently",
+        "description": "Add more team members, define advanced roles, and manage user assignments with ease. Built for growing organizations that need structured access control.",
+        "includedItems": [
+          {
+            "icon": "Users",
+            "name": "Extra Team Members +10",
+            "standalonePrice": 22.5
+          },
+          {
+            "icon": "Shield",
+            "name": "Advanced Roles",
+            "standalonePrice": 11.9
+          },
+          {
+            "icon": "UserCog",
+            "name": "User Assignment Pro",
+            "standalonePrice": 8.9
+          },
+          {
+            "icon": "Headphones",
+            "name": "Priority Support",
+            "standalonePrice": 9.9
+          }
+        ],
+        "originalPrice": 53.2,
+        "bundlePrice": 38.3,
+        "daysLeft": 10,
+        "validUntil": "2026-06-30"
+      },
+      {
+        "id": "offer-bundle-4",
+        "badge": "Content Creator Bundle",
+        "discountPercent": 31,
+        "isFeatured": false,
+        "title": "Create stunning content",
+        "description": "Unlock premium media tools, extra storage, and HD video capabilities. Ideal for content creators who need powerful media management and production tools.",
+        "includedItems": [
+          {
+            "icon": "HardDrive",
+            "name": "Extra Storage +250 GB",
+            "standalonePrice": 18.9
+          },
+          {
+            "icon": "Video",
+            "name": "HD Video Ads",
+            "standalonePrice": 19.9
+          },
+          {
+            "icon": "Image",
+            "name": "Media Pool Premium",
+            "standalonePrice": 12.9
+          },
+          {
+            "icon": "Palette",
+            "name": "Advanced Editor Tools",
+            "standalonePrice": 9.9
+          }
+        ],
+        "originalPrice": 61.6,
+        "bundlePrice": 42.5,
+        "daysLeft": 7,
+        "validUntil": "2026-06-30"
+      },
+      {
+        "id": "offer-bundle-5",
+        "badge": "Compliance & Privacy Bundle",
+        "discountPercent": 29,
+        "isFeatured": false,
+        "title": "Stay compliant with confidence",
+        "description": "Comprehensive security and compliance package with encryption, audit trails, and GDPR tools. Essential for businesses handling sensitive data and regulatory requirements.",
+        "includedItems": [
+          {
+            "icon": "Lock",
+            "name": "Data Encryption Plus",
+            "standalonePrice": 14.9
+          },
+          {
+            "icon": "FileCheck",
+            "name": "Audit Compliance",
+            "standalonePrice": 11.9
+          },
+          {
+            "icon": "ShieldCheck",
+            "name": "GDPR Toolkit",
+            "standalonePrice": 9.9
+          },
+          {
+            "icon": "Database",
+            "name": "Premium Backup",
+            "standalonePrice": 12.9
+          }
+        ],
+        "originalPrice": 49.6,
+        "bundlePrice": 35.2,
+        "daysLeft": 12,
+        "validUntil": "2026-06-30"
+      }
+    ],
+    "flashDeals": [
+      {
+        "id": "flash-1",
+        "icon": "BarChart3",
+        "iconColor": "text-blue-500",
+        "iconBg": "bg-blue-50",
+        "title": "Statistics & Analytics — First 3 Months Free",
+        "description": "Get full access to advanced analytics and reporting dashboards at no cost for your first 3 months.",
+        "daysLeft": 12,
+        "originalPrice": 14.9,
+        "dealPrice": 0,
+        "dealLabel": "Free",
+        "actionLabel": "Claim Free",
+        "actionVariant": "free"
+      },
+      {
+        "id": "flash-2",
+        "icon": "Headphones",
+        "iconColor": "text-purple-500",
+        "iconBg": "bg-purple-50",
+        "title": "Better Support — Priority Queue Access",
+        "description": "Jump to the front of the line with priority support. Faster response times and dedicated agents.",
+        "daysLeft": 7,
+        "originalPrice": 19.9,
+        "dealPrice": 14.95,
+        "dealLabel": "14,95 €/mo",
+        "actionLabel": "Claim",
+        "actionVariant": "claim"
+      },
+      {
+        "id": "flash-3",
+        "icon": "HardDrive",
+        "iconColor": "text-emerald-500",
+        "iconBg": "bg-emerald-50",
+        "title": "Extra Storage +250 GB — First Month Free",
+        "description": "Expand your storage instantly with 250 GB of additional cloud space, free for the first month.",
+        "daysLeft": 3,
+        "originalPrice": 18.9,
+        "dealPrice": 0,
+        "dealLabel": "Free",
+        "actionLabel": "Claim Free",
+        "actionVariant": "free"
+      },
+      {
+        "id": "flash-4",
+        "icon": "Users",
+        "iconColor": "text-amber-500",
+        "iconBg": "bg-amber-50",
+        "title": "Additional Partners +3 — Special Rate",
+        "description": "Add up to 3 more partners to your network at a discounted monthly rate. Limited availability.",
+        "daysLeft": 9,
+        "originalPrice": 12.9,
+        "dealPrice": 8.19,
+        "dealLabel": "8,19 €/mo",
+        "actionLabel": "Claim",
+        "actionVariant": "claim"
+      },
+      {
+        "id": "flash-5",
+        "icon": "Zap",
+        "iconColor": "text-rose-500",
+        "iconBg": "bg-rose-50",
+        "title": "Fast Commercial Sync — First 2 Months Free",
+        "description": "Instantly sync your commercial content across all displays with zero delay, free for 2 months.",
+        "daysLeft": 3,
+        "originalPrice": 11.9,
+        "dealPrice": 0,
+        "dealLabel": "Free",
+        "actionLabel": "Claim Free",
+        "actionVariant": "free"
+      }
+    ]
+  },
+  "cart": {
+    "items": [
+      {
+        "id": "cart-item-1719000000001-sub01",
+        "type": "subscription",
+        "addedAt": "2026-06-24T08:00:00.000Z",
+        "planId": "plan-business-pro",
+        "planName": "Business Pro",
+        "planLevel": 3,
+        "priceEur": 49.99,
+        "billingPeriod": "monthly",
+        "validity": {
+          "isValid": true
+        }
+      },
+      {
+        "id": "cart-item-1719000000002-addon01",
+        "type": "addOn",
+        "addedAt": "2026-06-24T08:05:00.000Z",
+        "addOnId": "addon-1",
+        "addOnName": "Extra Cloud Storage",
+        "priceEur": 9.99,
+        "category": "storage",
+        "quantity": 1,
+        "validity": {
+          "isValid": true
+        }
+      },
+      {
+        "id": "cart-item-1719000000003-addon02",
+        "type": "addOn",
+        "addedAt": "2026-06-24T08:06:00.000Z",
+        "addOnId": "addon-4",
+        "addOnName": "Extra Team Members",
+        "priceEur": 5.99,
+        "category": "usersAndAccess",
+        "quantity": 3,
+        "discount": {
+          "offerId": "bundle-team",
+          "offerName": "Team Starter Bundle",
+          "discountType": "percentage",
+          "discountValue": 10,
+          "originalPrice": 17.97,
+          "finalPrice": 16.17
+        },
+        "validity": {
+          "isValid": true
+        }
+      },
+      {
+        "id": "cart-item-1719000000004-cred01",
+        "type": "credit",
+        "addedAt": "2026-06-24T08:10:00.000Z",
+        "packageId": "credits-5000",
+        "packageName": "5 000 Credit Pack",
+        "credits": 5000,
+        "bonusCredits": 500,
+        "priceEur": 50,
+        "pricePerCredit": 0.01,
+        "validity": {
+          "isValid": true
+        }
+      }
+    ]
+  },
+  "scheduleBookings": {
+    "bookings": [
+      {
+        "id": "sb-seed-001",
+        "bookingNumber": "SCH-100001",
+        "title": "Lobby Weekly Campaign",
+        "displayId": "display01",
+        "displayName": "Main Lobby Display",
+        "displayAddress": "123 Tech Lane, 90001, Los Angeles",
+        "contentId": "media-001",
+        "contentType": "media",
+        "scheduleType": "weekly",
+        "startDate": "2026-06-16",
+        "endDate": "2026-06-22",
+        "eventsCount": 5,
+        "status": "active",
+        "paymentStatus": "paid",
+        "displaySource": "shared",
+        "creditsCharged": 1150,
+        "createdAt": "2026-06-15T10:30:00.000Z"
+      },
+      {
+        "id": "sb-seed-002",
+        "bookingNumber": "SCH-100002",
+        "title": "Own Display Promo",
+        "displayId": "1",
+        "displayName": "Office Entrance Screen",
+        "displayAddress": "Street A, 12345, City A",
+        "contentId": "playlist-002",
+        "contentType": "playlist",
+        "scheduleType": "weekly",
+        "startDate": "2026-06-09",
+        "endDate": "2026-06-15",
+        "eventsCount": 7,
+        "status": "active",
+        "paymentStatus": "free",
+        "displaySource": "own",
+        "creditsCharged": 0,
+        "createdAt": "2026-06-08T14:00:00.000Z"
+      },
+      {
+        "id": "sb-seed-003",
+        "bookingNumber": "SCH-100003",
+        "title": "Partner Screen Campaign",
+        "displayId": "display07",
+        "displayName": "Partner Storefront",
+        "displayAddress": "456 Commerce St, 90002, San Francisco",
+        "contentId": "media-003",
+        "contentType": "media",
+        "scheduleType": "weekly",
+        "startDate": "2026-06-23",
+        "endDate": "2026-06-29",
+        "eventsCount": 3,
+        "status": "pending",
+        "paymentStatus": "paid",
+        "displaySource": "shared",
+        "creditsCharged": 690,
+        "createdAt": "2026-06-20T09:15:00.000Z"
+      },
+      {
+        "id": "sb-1782290578201-hgrr3j",
+        "bookingNumber": "DS-329497",
+        "title": "Main Lobby Display Schedule",
+        "displayId": "display01",
+        "displayName": "Main Lobby Display",
+        "displayAddress": "123 Tech Lane, 90001, Los Angeles",
+        "contentId": "media-001",
+        "contentType": "media",
+        "scheduleType": "weekly",
+        "startDate": "2026-07-01",
+        "endDate": "2026-07-07",
+        "eventsCount": 0,
+        "status": "active",
+        "paymentStatus": "paid",
+        "displaySource": "shared",
+        "creditsCharged": 1050,
+        "createdAt": "2026-06-24T08:42:58.201Z"
+      },
+      {
+        "id": "sb-1782290578201-oym8oz",
+        "bookingNumber": "DS-123124",
+        "title": "Entrance Hall Screen Schedule",
+        "displayId": "display03",
+        "displayName": "Entrance Hall Screen",
+        "displayAddress": "45 Market St, 10001, New York",
+        "contentId": "playlist-002",
+        "contentType": "playlist",
+        "scheduleType": "weekly",
+        "startDate": "2026-07-01",
+        "endDate": "2026-07-14",
+        "eventsCount": 0,
+        "status": "active",
+        "paymentStatus": "paid",
+        "displaySource": "shared",
+        "creditsCharged": 2800,
+        "createdAt": "2026-06-24T08:42:58.201Z"
+      },
+      {
+        "id": "sb-1782293026496-8qzgjk",
+        "bookingNumber": "DS-815081",
+        "title": "fffffffffvasf (2) Schedule",
+        "displayId": "6a135c6ff9b6fee3e46569b4",
+        "displayName": "fffffffffvasf (2)",
+        "displayAddress": "Street, 32423, sdf",
+        "contentId": 1,
+        "contentType": "playlist",
+        "scheduleType": "weekly",
+        "startDate": "2026-06-24T08:44:23.229Z",
+        "endDate": "2026-06-24",
+        "eventsCount": 1,
+        "status": "active",
+        "paymentStatus": "paid",
+        "displaySource": "shared",
+        "creditsCharged": 200,
+        "createdAt": "2026-06-24T09:23:46.496Z"
       }
     ]
   }

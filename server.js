@@ -8,6 +8,9 @@ const registerNestedDataRoutes = require("./src/routes/nestedData");
 const registerTicketRoutes = require("./src/routes/tickets");
 const registerMessageRoutes = require("./src/routes/messages");
 const registerNotificationRoutes = require("./src/routes/notifications");
+const registerAddOnRoutes = require("./src/routes/addOns");
+const registerCartRoutes = require("./src/routes/cart");
+const registerScheduleBookingRoutes = require("./src/routes/scheduleBookings");
 
 const server = jsonServer.create();
 // const router = jsonServer.router("db-2.json");
@@ -29,6 +32,9 @@ registerNestedDataRoutes(server, router);
 registerTicketRoutes(server, router);
 registerMessageRoutes(server, router);
 registerNotificationRoutes(server, router);
+registerAddOnRoutes(server, router);
+registerCartRoutes(server, router);
+registerScheduleBookingRoutes(server, router);
 
 // Use JSON Server's auto-generated endpoints from db.json
 server.use(router);
