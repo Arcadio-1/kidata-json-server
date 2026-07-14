@@ -11,6 +11,7 @@ const registerNotificationRoutes = require("./src/routes/notifications");
 const registerAddOnRoutes = require("./src/routes/addOns");
 const registerCartRoutes = require("./src/routes/cart");
 const registerScheduleBookingRoutes = require("./src/routes/scheduleBookings");
+const registerCompanyApprovalRoutes = require("./src/routes/companyApprovals");
 
 const server = jsonServer.create();
 // const router = jsonServer.router("db-2.json");
@@ -35,6 +36,7 @@ registerNotificationRoutes(server, router);
 registerAddOnRoutes(server, router);
 registerCartRoutes(server, router);
 registerScheduleBookingRoutes(server, router);
+registerCompanyApprovalRoutes(server, router);
 
 // Use JSON Server's auto-generated endpoints from db.json
 server.use(router);
