@@ -13195,5 +13195,1018 @@
         "createdAt": "2026-06-24T09:23:46.496Z"
       }
     ]
-  }
+  },
+  "superCompanyManagementCompanies": [
+    {
+      "id": "company-acme",
+      "onlineId": "CMP-1001",
+      "legacyIds": ["1", "cmp-001", "C-1001"],
+      "operationalStatus": "active",
+      "registrationStatus": "approved",
+      "permissionProfile": "full",
+      "version": 3,
+      "createdAt": "2025-01-10T09:30:00.000Z",
+      "updatedAt": "2026-07-18T10:00:00.000Z",
+      "profile": {
+        "addressData": {
+          "companyName": "Acme Retail GmbH",
+          "companyFormId": "gmbh",
+          "street": "Hauptstrasse",
+          "number": "12",
+          "addressSupplement": "",
+          "zip": "10115",
+          "city": "Berlin",
+          "federalStateId": "be",
+          "countryId": "de",
+          "countryLabel": "Germany",
+          "phone": "301234500",
+          "mobile": "1715550101",
+          "fax": "301234599",
+          "phoneDialingCodeId": "de",
+          "mobileDialingCodeId": "de",
+          "faxDialingCodeId": "de",
+          "webUrl": "https://acme-retail.example",
+          "email": "office@acme-retail.example"
+        },
+        "legalPerson": {
+          "salutationId": "mrs",
+          "titleId": null,
+          "firstName": "Anna",
+          "lastName": "Schmidt",
+          "position": "Managing Director"
+        },
+        "administrator": {
+          "isTakenOver": true,
+          "salutationId": "mrs",
+          "titleId": null,
+          "firstName": "Anna",
+          "lastName": "Schmidt",
+          "position": "Administrator",
+          "mobile": "1715550101",
+          "mobileDialingCodeId": "de",
+          "phoneDialingCodeId": "de",
+          "phone": "301234500",
+          "email": "anna.schmidt@acme-retail.example",
+          "username": "anna.schmidt"
+        },
+        "businessModel": { "businessModelId": "retail" },
+        "billingAddress": {
+          "isDiffer": false,
+          "salutationId": "mrs",
+          "titleId": null,
+          "firstName": "Anna",
+          "lastName": "Schmidt",
+          "street": "Hauptstrasse",
+          "number": "12",
+          "addressSupplement": "",
+          "zip": "10115",
+          "city": "Berlin",
+          "federalStateId": "be",
+          "countryId": "de"
+        },
+        "paymentInformation": {
+          "paymentMethodId": "sepa",
+          "accountOwner": "Acme Retail GmbH",
+          "IBAN": "DE89370400440532013000",
+          "BIC": "COBADEFFXXX"
+        },
+        "industry": {
+          "name": "Retail",
+          "description": "Retail and digital storefronts",
+          "id": "retail"
+        },
+        "tax": {
+          "identificationNumber": "DE-ACME-1001",
+          "vatNumber": "DE123456789"
+        },
+        "receiveEmail": true
+      },
+      "medias": {
+        "businessLicense": [
+          {
+            "uid": "doc-acme-license",
+            "url": "http://localhost:8000/uploads/acme-license.pdf",
+            "name": "business-license.pdf",
+            "status": "done",
+            "type": "application/pdf",
+            "thumbUrl": null
+          }
+        ],
+        "idCard": [
+          {
+            "uid": "doc-acme-id",
+            "url": "http://localhost:8000/uploads/acme-id.png",
+            "name": "identity-document.png",
+            "status": "done",
+            "type": "image/png",
+            "thumbUrl": "http://localhost:8000/uploads/acme-id-thumb.png"
+          }
+        ],
+        "logo": [
+          {
+            "uid": "logo-acme",
+            "url": "http://localhost:8000/uploads/acme-logo.png",
+            "name": "acme-logo.png",
+            "status": "done",
+            "type": "image/png",
+            "thumbUrl": "http://localhost:8000/uploads/acme-logo-thumb.png"
+          }
+        ]
+      },
+      "subscription": {
+        "currentTariffId": "plus",
+        "status": "active",
+        "effectiveAt": "2026-01-01T00:00:00.000Z",
+        "renewsAt": "2027-01-01T00:00:00.000Z",
+        "activeAddOnCount": 1,
+        "addOnMonthlyTotal": 17.97,
+        "currency": "EUR"
+      },
+      "summary": {
+        "generatedAt": "2026-07-18T10:00:00.000Z",
+        "userCount": 3,
+        "activeUserCount": 3,
+        "roleCount": 3,
+        "customRoleCount": 2,
+        "displayCount": 7,
+        "mediaCount": 24,
+        "playlistCount": 8,
+        "scheduleCount": 4,
+        "partnerCount": 2,
+        "pendingApprovalCount": 1,
+        "storageUsage": {
+          "images": 14,
+          "videos": 7,
+          "spots": 2,
+          "commercials": 1
+        },
+        "balance": 1250
+      }
+    },
+    {
+      "id": "company-bluewave",
+      "onlineId": "CMP-1002",
+      "legacyIds": ["2", "cmp-002", "C-1002"],
+      "operationalStatus": "suspended",
+      "registrationStatus": "approved",
+      "permissionProfile": "restricted",
+      "version": 7,
+      "createdAt": "2025-02-02T11:15:00.000Z",
+      "updatedAt": "2026-07-17T08:30:00.000Z",
+      "profile": {
+        "addressData": {
+          "companyName": "Bluewave Retail AG",
+          "companyFormId": "ag",
+          "street": "Ringstrasse",
+          "number": "8",
+          "addressSupplement": "Floor 2",
+          "zip": "1010",
+          "city": "Vienna",
+          "federalStateId": "wien",
+          "countryId": "at",
+          "countryLabel": "Austria",
+          "phone": "15550100",
+          "mobile": "6605550100",
+          "fax": "15550199",
+          "phoneDialingCodeId": "at",
+          "mobileDialingCodeId": "at",
+          "faxDialingCodeId": "at",
+          "webUrl": "https://bluewave.example",
+          "email": "office@bluewave.example"
+        },
+        "legalPerson": {
+          "salutationId": "mr",
+          "titleId": null,
+          "firstName": "Lukas",
+          "lastName": "Meier",
+          "position": "Director"
+        },
+        "administrator": {
+          "isTakenOver": true,
+          "salutationId": "mr",
+          "titleId": null,
+          "firstName": "Lukas",
+          "lastName": "Meier",
+          "position": "Administrator",
+          "mobile": "6605550100",
+          "mobileDialingCodeId": "at",
+          "phoneDialingCodeId": "at",
+          "phone": "15550100",
+          "email": "lukas.meier@bluewave.example",
+          "username": "lukas.meier"
+        },
+        "businessModel": { "businessModelId": "retail" },
+        "billingAddress": {
+          "isDiffer": false,
+          "salutationId": "mr",
+          "titleId": null,
+          "firstName": "Lukas",
+          "lastName": "Meier",
+          "street": "Ringstrasse",
+          "number": "8",
+          "addressSupplement": "Floor 2",
+          "zip": "1010",
+          "city": "Vienna",
+          "federalStateId": "wien",
+          "countryId": "at"
+        },
+        "paymentInformation": {
+          "paymentMethodId": "sepa",
+          "accountOwner": "Bluewave Retail AG",
+          "IBAN": "AT611904300234573201",
+          "BIC": "BKAUATWW"
+        },
+        "industry": {
+          "name": "Retail",
+          "description": "Retail services",
+          "id": "retail"
+        },
+        "tax": {
+          "identificationNumber": "AT-BLUE-1002",
+          "vatNumber": "ATU12345678"
+        },
+        "receiveEmail": false
+      },
+      "medias": {
+        "businessLicense": [
+          {
+            "uid": "doc-bluewave-license",
+            "url": "http://localhost:8000/uploads/bluewave-license.pdf",
+            "name": "business-license.pdf",
+            "status": "done",
+            "type": "application/pdf",
+            "thumbUrl": null
+          }
+        ],
+        "idCard": [
+          {
+            "uid": "doc-bluewave-id",
+            "url": "http://localhost:8000/uploads/bluewave-id.png",
+            "name": "identity-document.png",
+            "status": "done",
+            "type": "image/png",
+            "thumbUrl": null
+          }
+        ],
+        "logo": []
+      },
+      "subscription": {
+        "currentTariffId": "basic",
+        "status": "active",
+        "effectiveAt": "2026-02-01T00:00:00.000Z",
+        "renewsAt": "2027-02-01T00:00:00.000Z",
+        "activeAddOnCount": 1,
+        "addOnMonthlyTotal": 9.99,
+        "currency": "EUR"
+      },
+      "summary": {
+        "generatedAt": "2026-07-17T08:30:00.000Z",
+        "userCount": 2,
+        "activeUserCount": 1,
+        "roleCount": 2,
+        "customRoleCount": 1,
+        "displayCount": 2,
+        "mediaCount": 5,
+        "playlistCount": 2,
+        "scheduleCount": 1,
+        "partnerCount": 0,
+        "pendingApprovalCount": 0,
+        "storageUsage": {
+          "images": 3,
+          "videos": 2,
+          "spots": 0,
+          "commercials": 0
+        },
+        "balance": null
+      }
+    },
+    {
+      "id": "company-greenleaf",
+      "onlineId": "CMP-1003",
+      "legacyIds": ["3", "cmp-003", "C-1003"],
+      "operationalStatus": "active",
+      "registrationStatus": "pending",
+      "permissionProfile": "full",
+      "version": 1,
+      "createdAt": "2026-07-15T07:00:00.000Z",
+      "updatedAt": "2026-07-18T09:00:00.000Z",
+      "profile": {
+        "addressData": {
+          "companyName": "GreenLeaf Markets SRL",
+          "companyFormId": "srl",
+          "street": "Via Verde",
+          "number": "21",
+          "addressSupplement": "",
+          "zip": "20121",
+          "city": "Milan",
+          "federalStateId": "mi",
+          "countryId": "it",
+          "countryLabel": "Italy",
+          "phone": "025550100",
+          "mobile": "3355550100",
+          "fax": "",
+          "phoneDialingCodeId": "it",
+          "mobileDialingCodeId": "it",
+          "faxDialingCodeId": "it",
+          "webUrl": "https://greenleaf.example",
+          "email": "office@greenleaf.example"
+        },
+        "legalPerson": {
+          "salutationId": "mrs",
+          "titleId": null,
+          "firstName": "Maria",
+          "lastName": "Rossi",
+          "position": "Owner"
+        },
+        "administrator": {
+          "isTakenOver": true,
+          "salutationId": "mrs",
+          "titleId": null,
+          "firstName": "Maria",
+          "lastName": "Rossi",
+          "position": "Administrator",
+          "mobile": "3355550100",
+          "mobileDialingCodeId": "it",
+          "phoneDialingCodeId": "it",
+          "phone": "025550100",
+          "email": "maria.rossi@greenleaf.example",
+          "username": "maria.rossi"
+        },
+        "businessModel": { "businessModelId": "retail" },
+        "billingAddress": {
+          "isDiffer": false,
+          "salutationId": "mrs",
+          "titleId": null,
+          "firstName": "Maria",
+          "lastName": "Rossi",
+          "street": "Via Verde",
+          "number": "21",
+          "addressSupplement": "",
+          "zip": "20121",
+          "city": "Milan",
+          "federalStateId": "mi",
+          "countryId": "it"
+        },
+        "paymentInformation": {
+          "paymentMethodId": null,
+          "accountOwner": "",
+          "IBAN": "",
+          "BIC": ""
+        },
+        "industry": {
+          "name": "Food retail",
+          "description": "Sustainable food markets",
+          "id": "food-retail"
+        },
+        "tax": {
+          "identificationNumber": "IT-GREEN-1003",
+          "vatNumber": "IT12345678901"
+        },
+        "receiveEmail": true
+      },
+      "medias": {
+        "businessLicense": [],
+        "idCard": [],
+        "logo": []
+      },
+      "subscription": {
+        "currentTariffId": "free",
+        "status": "active",
+        "effectiveAt": "2026-07-15T07:00:00.000Z",
+        "renewsAt": null,
+        "activeAddOnCount": 0,
+        "addOnMonthlyTotal": 0,
+        "currency": "EUR"
+      },
+      "summary": {
+        "generatedAt": "2026-07-18T09:00:00.000Z",
+        "userCount": 1,
+        "activeUserCount": 1,
+        "roleCount": 1,
+        "customRoleCount": 0,
+        "displayCount": 0,
+        "mediaCount": 0,
+        "playlistCount": 0,
+        "scheduleCount": 0,
+        "partnerCount": 0,
+        "pendingApprovalCount": 1,
+        "storageUsage": {
+          "images": 0,
+          "videos": 0,
+          "spots": 0,
+          "commercials": 0
+        },
+        "balance": null
+      }
+    }
+  ],
+  "superCompanyManagementUsers": [
+    {
+      "id": "user-acme-owner",
+      "companyId": "company-acme",
+      "onlineId": "USR-1001",
+      "username": "anna.schmidt",
+      "profileImageUrl": "",
+      "profileImageThumbUrl": "",
+      "firstName": "Anna",
+      "lastName": "Schmidt",
+      "phone": "301234500",
+      "email": "anna.schmidt@acme-retail.example",
+      "position": "Managing Director",
+      "departmentId": "management",
+      "departmentTitle": "Management",
+      "roleId": "role-acme-admin",
+      "role": { "id": "role-acme-admin", "enName": "Administrator", "deName": "Administrator" },
+      "categoryId": "management",
+      "categoryTitle": "Management",
+      "categoryColor": "#3366CC",
+      "userType": "companyOwner",
+      "employmentType": "internal",
+      "status": "active",
+      "isSystemInactive": false,
+      "entryDate": "2025-01-10T09:30:00.000Z",
+      "lastActivity": "2026-07-18T09:50:00.000Z",
+      "twoFactor": { "enabled": true, "lastResetAt": null },
+      "assignedResourceCounts": { "displays": 7, "media": 24 },
+      "version": 4,
+      "updatedAt": "2026-07-18T09:50:00.000Z",
+      "allowedActions": ["VIEW_COMPANY_USERS", "EDIT_COMPANY_USER", "ASSIGN_COMPANY_USER_ROLE", "SET_COMPANY_USER_STATUS", "RESET_COMPANY_USER_TWO_FACTOR"]
+    },
+    {
+      "id": "user-acme-alex",
+      "companyId": "company-acme",
+      "onlineId": "USR-1002",
+      "username": "alex.morgan.acme",
+      "profileImageUrl": "",
+      "profileImageThumbUrl": "",
+      "firstName": "Alex",
+      "lastName": "Morgan",
+      "phone": "301234501",
+      "email": "alex.morgan@acme-retail.example",
+      "position": "Content Manager",
+      "departmentId": "content",
+      "departmentTitle": "Content",
+      "roleId": "role-acme-content",
+      "role": { "id": "role-acme-content", "enName": "Content Manager", "deName": "Content-Manager" },
+      "categoryId": "content",
+      "categoryTitle": "Content",
+      "categoryColor": "#22AA88",
+      "userType": "companyUser",
+      "employmentType": "internal",
+      "status": "active",
+      "isSystemInactive": false,
+      "entryDate": "2025-03-01T08:00:00.000Z",
+      "lastActivity": "2026-07-18T08:10:00.000Z",
+      "twoFactor": { "enabled": false, "lastResetAt": null },
+      "assignedResourceCounts": { "displays": 2, "media": 10 },
+      "version": 2,
+      "updatedAt": "2026-07-18T08:10:00.000Z",
+      "allowedActions": ["VIEW_COMPANY_USERS", "EDIT_COMPANY_USER", "ASSIGN_COMPANY_USER_ROLE", "SET_COMPANY_USER_STATUS", "RESET_COMPANY_USER_TWO_FACTOR"]
+    },
+    {
+      "id": "user-acme-sam",
+      "companyId": "company-acme",
+      "onlineId": "USR-1003",
+      "username": "sam.taylor.acme",
+      "profileImageUrl": "",
+      "profileImageThumbUrl": "",
+      "firstName": "Sam",
+      "lastName": "Taylor",
+      "phone": "301234502",
+      "email": "sam.taylor@acme-retail.example",
+      "position": "Campaign Specialist",
+      "departmentId": "marketing",
+      "departmentTitle": "Marketing",
+      "roleId": "role-acme-campaign",
+      "role": { "id": "role-acme-campaign", "enName": "Campaign Manager", "deName": "Kampagnenmanager" },
+      "categoryId": "marketing",
+      "categoryTitle": "Marketing",
+      "categoryColor": "#AA66CC",
+      "userType": "companyUser",
+      "employmentType": "internal",
+      "status": "active",
+      "isSystemInactive": false,
+      "entryDate": "2025-04-01T08:00:00.000Z",
+      "lastActivity": "2026-07-17T15:00:00.000Z",
+      "twoFactor": { "enabled": true, "lastResetAt": null },
+      "assignedResourceCounts": { "displays": 1, "media": 4 },
+      "version": 9,
+      "updatedAt": "2026-07-17T15:00:00.000Z",
+      "allowedActions": ["VIEW_COMPANY_USERS", "EDIT_COMPANY_USER", "ASSIGN_COMPANY_USER_ROLE", "SET_COMPANY_USER_STATUS", "RESET_COMPANY_USER_TWO_FACTOR"]
+    },
+    {
+      "id": "user-bluewave-alex",
+      "companyId": "company-bluewave",
+      "onlineId": "USR-2001",
+      "username": "alex.morgan.bluewave",
+      "profileImageUrl": "",
+      "profileImageThumbUrl": "",
+      "firstName": "Alex",
+      "lastName": "Morgan",
+      "phone": "15550101",
+      "email": "alex.morgan@bluewave.example",
+      "position": "Content Manager",
+      "departmentId": "content",
+      "departmentTitle": "Content",
+      "roleId": "role-bluewave-content",
+      "role": { "id": "role-bluewave-content", "enName": "Content Manager", "deName": "Content-Manager" },
+      "categoryId": "content",
+      "categoryTitle": "Content",
+      "categoryColor": "#22AA88",
+      "userType": "companyUser",
+      "employmentType": "external",
+      "status": "paused",
+      "isSystemInactive": true,
+      "entryDate": "2025-05-01T08:00:00.000Z",
+      "lastActivity": "2026-06-30T12:00:00.000Z",
+      "twoFactor": { "enabled": true, "lastResetAt": "2026-01-10T10:00:00.000Z" },
+      "assignedResourceCounts": { "displays": 1, "media": 2 },
+      "version": 5,
+      "updatedAt": "2026-06-30T12:00:00.000Z",
+      "allowedActions": ["VIEW_COMPANY_USERS"]
+    },
+    {
+      "id": "user-bluewave-owner",
+      "companyId": "company-bluewave",
+      "onlineId": "USR-2002",
+      "username": "lukas.meier",
+      "profileImageUrl": "",
+      "profileImageThumbUrl": "",
+      "firstName": "Lukas",
+      "lastName": "Meier",
+      "phone": "15550100",
+      "email": "lukas.meier@bluewave.example",
+      "position": "Director",
+      "departmentId": "management",
+      "departmentTitle": "Management",
+      "roleId": "role-bluewave-admin",
+      "role": { "id": "role-bluewave-admin", "enName": "Administrator", "deName": "Administrator" },
+      "categoryId": "management",
+      "categoryTitle": "Management",
+      "categoryColor": "#3366CC",
+      "userType": "companyOwner",
+      "employmentType": "internal",
+      "status": "active",
+      "isSystemInactive": false,
+      "entryDate": "2025-02-02T11:15:00.000Z",
+      "lastActivity": "2026-07-01T12:00:00.000Z",
+      "twoFactor": { "enabled": true, "lastResetAt": null },
+      "assignedResourceCounts": { "displays": 2, "media": 5 },
+      "version": 3,
+      "updatedAt": "2026-07-01T12:00:00.000Z",
+      "allowedActions": ["VIEW_COMPANY_USERS"]
+    },
+    {
+      "id": "user-greenleaf-owner",
+      "companyId": "company-greenleaf",
+      "onlineId": "USR-3001",
+      "username": "maria.rossi",
+      "profileImageUrl": "",
+      "profileImageThumbUrl": "",
+      "firstName": "Maria",
+      "lastName": "Rossi",
+      "phone": "025550100",
+      "email": "maria.rossi@greenleaf.example",
+      "position": "Owner",
+      "departmentId": "management",
+      "departmentTitle": "Management",
+      "roleId": "role-greenleaf-admin",
+      "role": { "id": "role-greenleaf-admin", "enName": "Administrator", "deName": "Administrator" },
+      "categoryId": "management",
+      "categoryTitle": "Management",
+      "categoryColor": "#3366CC",
+      "userType": "companyOwner",
+      "employmentType": "internal",
+      "status": "pending",
+      "isSystemInactive": false,
+      "entryDate": "2026-07-15T07:00:00.000Z",
+      "lastActivity": "2026-07-18T09:00:00.000Z",
+      "twoFactor": { "enabled": false, "lastResetAt": null },
+      "assignedResourceCounts": { "displays": 0, "media": 0 },
+      "version": 1,
+      "updatedAt": "2026-07-18T09:00:00.000Z",
+      "allowedActions": ["VIEW_COMPANY_USERS"]
+    }
+  ],
+  "superCompanyManagementRoles": [
+    {
+      "id": "role-acme-admin",
+      "companyId": "company-acme",
+      "key": "ADMINISTRATOR",
+      "enName": "Administrator",
+      "deName": "Administrator",
+      "enDescription": "System administrator role",
+      "deDescription": "Systemadministratorrolle",
+      "isSystem": true,
+      "isCustom": false,
+      "isMutable": false,
+      "isAssignable": true,
+      "assignedUserCount": 1,
+      "actionKeys": ["CREATE_DISPLAY", "UPLOAD_MEDIAPOOL_MEDIA", "MANAGE_ROLE"],
+      "version": 4,
+      "createdAt": "2025-01-10T09:30:00.000Z",
+      "updatedAt": "2026-06-01T10:00:00.000Z",
+      "allowedActions": []
+    },
+    {
+      "id": "role-acme-content",
+      "companyId": "company-acme",
+      "key": "CONTENT_MANAGER",
+      "enName": "Content Manager",
+      "deName": "Content-Manager",
+      "enDescription": "System content role",
+      "deDescription": "Systemrolle für Inhalte",
+      "isSystem": true,
+      "isCustom": false,
+      "isMutable": false,
+      "isAssignable": true,
+      "assignedUserCount": 1,
+      "actionKeys": ["UPLOAD_MEDIAPOOL_MEDIA"],
+      "version": 2,
+      "createdAt": "2025-01-10T09:30:00.000Z",
+      "updatedAt": "2026-01-01T10:00:00.000Z",
+      "allowedActions": []
+    },
+    {
+      "id": "role-acme-campaign",
+      "companyId": "company-acme",
+      "key": "CUSTOM_CAMPAIGN_MANAGER",
+      "enName": "Campaign Manager",
+      "deName": "Kampagnenmanager",
+      "enDescription": "Custom campaign operations",
+      "deDescription": "Benutzerdefinierte Kampagnenverwaltung",
+      "isSystem": false,
+      "isCustom": true,
+      "isMutable": true,
+      "isAssignable": true,
+      "assignedUserCount": 1,
+      "actionKeys": ["CREATE_DISPLAY", "UPLOAD_MEDIAPOOL_MEDIA"],
+      "version": 9,
+      "createdAt": "2025-04-01T08:00:00.000Z",
+      "updatedAt": "2026-07-17T15:00:00.000Z",
+      "allowedActions": []
+    },
+    {
+      "id": "role-bluewave-admin",
+      "companyId": "company-bluewave",
+      "key": "ADMINISTRATOR",
+      "enName": "Administrator",
+      "deName": "Administrator",
+      "enDescription": "System administrator role",
+      "deDescription": "Systemadministratorrolle",
+      "isSystem": true,
+      "isCustom": false,
+      "isMutable": false,
+      "isAssignable": true,
+      "assignedUserCount": 1,
+      "actionKeys": ["CREATE_DISPLAY", "MANAGE_ROLE"],
+      "version": 3,
+      "createdAt": "2025-02-02T11:15:00.000Z",
+      "updatedAt": "2026-01-01T10:00:00.000Z",
+      "allowedActions": []
+    },
+    {
+      "id": "role-bluewave-content",
+      "companyId": "company-bluewave",
+      "key": "CUSTOM_CONTENT_MANAGER",
+      "enName": "Content Manager",
+      "deName": "Content-Manager",
+      "enDescription": "Custom content role",
+      "deDescription": "Benutzerdefinierte Inhaltsrolle",
+      "isSystem": false,
+      "isCustom": true,
+      "isMutable": true,
+      "isAssignable": true,
+      "assignedUserCount": 1,
+      "actionKeys": ["UPLOAD_MEDIAPOOL_MEDIA"],
+      "version": 5,
+      "createdAt": "2025-05-01T08:00:00.000Z",
+      "updatedAt": "2026-06-30T12:00:00.000Z",
+      "allowedActions": []
+    },
+    {
+      "id": "role-greenleaf-admin",
+      "companyId": "company-greenleaf",
+      "key": "ADMINISTRATOR",
+      "enName": "Administrator",
+      "deName": "Administrator",
+      "enDescription": "System administrator role",
+      "deDescription": "Systemadministratorrolle",
+      "isSystem": true,
+      "isCustom": false,
+      "isMutable": false,
+      "isAssignable": true,
+      "assignedUserCount": 1,
+      "actionKeys": ["CREATE_DISPLAY"],
+      "version": 1,
+      "createdAt": "2026-07-15T07:00:00.000Z",
+      "updatedAt": "2026-07-15T07:00:00.000Z",
+      "allowedActions": []
+    }
+  ],
+  "superCompanyManagementPermissionCatalog": [
+    {
+      "id": "displays",
+      "enLabel": "Displays",
+      "deLabel": "Displays",
+      "actions": [
+        { "actionKey": "CREATE_DISPLAY", "enLabel": "Create displays", "deLabel": "Displays erstellen" },
+        { "actionKey": "SET_DISPLAY_STATUS", "enLabel": "Change display status", "deLabel": "Displaystatus ändern" }
+      ]
+    },
+    {
+      "id": "mediaPool",
+      "enLabel": "Media pool",
+      "deLabel": "Medienpool",
+      "actions": [
+        { "actionKey": "UPLOAD_MEDIAPOOL_MEDIA", "enLabel": "Upload media", "deLabel": "Medien hochladen" },
+        { "actionKey": "DELETE_MEDIAPOOL_MEDIA", "enLabel": "Delete media", "deLabel": "Medien löschen" }
+      ]
+    },
+    {
+      "id": "userManagement",
+      "enLabel": "User management",
+      "deLabel": "Benutzerverwaltung",
+      "actions": [
+        { "actionKey": "MANAGE_ROLE", "enLabel": "Manage roles", "deLabel": "Rollen verwalten" },
+        { "actionKey": "SET_USER_STATUS", "enLabel": "Change user status", "deLabel": "Benutzerstatus ändern" }
+      ]
+    }
+  ],
+  "superCompanyManagementApprovals": [
+    {
+      "id": "approval-registration-greenleaf",
+      "companyId": "company-greenleaf",
+      "companyName": "GreenLeaf Markets SRL",
+      "companyOnlineId": "CMP-1003",
+      "type": "REGISTRATION",
+      "status": "PENDING",
+      "isSeen": false,
+      "requester": { "id": "user-greenleaf-owner", "name": "Maria Rossi", "email": "maria.rossi@greenleaf.example" },
+      "submittedAt": "2026-07-15T07:00:00.000Z",
+      "updatedAt": "2026-07-18T09:00:00.000Z",
+      "shortSummary": "Initial company registration",
+      "registrationSnapshot": {
+        "profile": { "companyName": "GreenLeaf Markets SRL", "countryId": "it" },
+        "medias": { "businessLicense": [], "idCard": [], "logo": [] }
+      },
+      "medias": { "businessLicense": [], "idCard": [], "logo": [] },
+      "history": [],
+      "version": 1,
+      "allowedActions": []
+    },
+    {
+      "id": "approval-profile-acme",
+      "companyId": "company-acme",
+      "companyName": "Acme Retail GmbH",
+      "companyOnlineId": "CMP-1001",
+      "type": "PROFILE_EDIT",
+      "status": "PENDING",
+      "isSeen": true,
+      "requester": { "id": "user-acme-owner", "name": "Anna Schmidt", "email": "anna.schmidt@acme-retail.example" },
+      "submittedAt": "2026-07-16T08:00:00.000Z",
+      "updatedAt": "2026-07-18T08:00:00.000Z",
+      "shortSummary": "Company web URL and phone change",
+      "currentInfo": {
+        "addressData": { "webUrl": "https://acme-retail.example", "phone": "301234500" }
+      },
+      "requestedInfo": {
+        "addressData": { "webUrl": "https://new.acme-retail.example", "phone": "301234555" }
+      },
+      "medias": { "businessLicense": [], "idCard": [], "logo": [] },
+      "history": [],
+      "version": 6,
+      "allowedActions": []
+    },
+    {
+      "id": "approval-profile-bluewave-final",
+      "companyId": "company-bluewave",
+      "companyName": "Bluewave Retail AG",
+      "companyOnlineId": "CMP-1002",
+      "type": "PROFILE_EDIT",
+      "status": "APPROVED",
+      "isSeen": true,
+      "requester": { "id": "user-bluewave-owner", "name": "Lukas Meier", "email": "lukas.meier@bluewave.example" },
+      "submittedAt": "2026-06-01T08:00:00.000Z",
+      "updatedAt": "2026-06-02T08:00:00.000Z",
+      "shortSummary": "Finalized billing-address update",
+      "currentInfo": { "billingAddress": { "city": "Vienna" } },
+      "requestedInfo": { "billingAddress": { "city": "Vienna" } },
+      "medias": { "businessLicense": [], "idCard": [], "logo": [] },
+      "history": [
+        { "id": "approval-action-bluewave", "actor": { "id": "admin-001", "name": "Mock Super Admin" }, "timestamp": "2026-06-02T08:00:00.000Z", "status": "APPROVED", "message": null }
+      ],
+      "version": 2,
+      "allowedActions": []
+    }
+  ],
+  "superCompanyManagementAuditEvents": [
+    {
+      "id": "audit-acme-profile",
+      "timestamp": "2026-07-01T10:00:00.000Z",
+      "actor": { "id": "admin-001", "name": "Mock Super Admin" },
+      "companyId": "company-acme",
+      "actionType": "company.profile.billingPayment.updated",
+      "entityType": "company",
+      "entityId": "company-acme",
+      "before": { "paymentInformation": "[REDACTED]" },
+      "after": { "paymentInformation": "[REDACTED]" },
+      "reason": "Support-assisted billing profile correction",
+      "result": "success",
+      "correlationId": "corr-acme-profile"
+    },
+    {
+      "id": "audit-bluewave-suspended",
+      "timestamp": "2026-07-10T12:00:00.000Z",
+      "actor": { "id": "admin-002", "name": "Restricted Mock Admin" },
+      "companyId": "company-bluewave",
+      "actionType": "company.suspended",
+      "entityType": "company",
+      "entityId": "company-bluewave",
+      "before": { "operationalStatus": "active" },
+      "after": { "operationalStatus": "suspended" },
+      "reason": "Deterministic suspension fixture",
+      "result": "success",
+      "correlationId": "corr-bluewave-suspended"
+    }
+  ],
+  "superCompanyManagementPackages": [
+    {
+      "companyId": "company-acme",
+      "version": 8,
+      "tariff": {
+        "tariffId": "plus",
+        "status": "active",
+        "effectiveAt": "2026-01-01T00:00:00.000Z",
+        "renewsAt": "2027-01-01T00:00:00.000Z"
+      },
+      "addOns": [
+        {
+          "addOnId": "addon-4",
+          "status": "active",
+          "quantity": 3,
+          "unitPrice": 5.99,
+          "effectiveAt": "2026-03-01T00:00:00.000Z",
+          "endsAt": null,
+          "source": "seed",
+          "offerId": null
+        }
+      ],
+      "appliedPromotions": [],
+      "pricing": {
+        "currency": "EUR",
+        "tariffMonthly": 0,
+        "addOnsMonthly": 0,
+        "discountMonthly": 0,
+        "totalMonthly": 0,
+        "vatRate": 19,
+        "billedWithPlan": "KiData Plus"
+      },
+      "externalSync": {
+        "billing": "notRequired",
+        "lastAttemptAt": null,
+        "message": null
+      },
+      "entitlements": {},
+      "addOnEntitlements": { "teamSize": 18 },
+      "allowedActions": [],
+      "resourceUsage": { "displays": 7, "users": 3, "storageUsedGb": 18 },
+      "downgradeChecks": [
+        {
+          "targetTariffId": "free",
+          "eligible": false,
+          "violations": [
+            { "code": "DISPLAY_LIMIT_EXCEEDED", "message": "Company has 7 displays; target allows 1", "entityType": "company", "entityId": "company-acme" },
+            { "code": "USER_LIMIT_EXCEEDED", "message": "Company has 3 users; target allows 1", "entityType": "company", "entityId": "company-acme" },
+            { "code": "STORAGE_LIMIT_EXCEEDED", "message": "Company uses 18 GB; target allows 1 GB", "entityType": "company", "entityId": "company-acme" }
+          ]
+        }
+      ],
+      "offers": [
+        {
+          "id": "offer-acme-growth",
+          "label": "Growth Support Offer",
+          "eligible": true,
+          "status": "active",
+          "includedAddOnIds": ["addon-1", "addon-4"],
+          "discountType": "percentage",
+          "discountValue": 15,
+          "validFrom": "2026-07-01T00:00:00.000Z",
+          "validUntil": "2026-12-31T23:59:59.000Z"
+        },
+        {
+          "id": "offer-acme-expired",
+          "label": "Expired Spring Offer",
+          "eligible": false,
+          "status": "expired",
+          "includedAddOnIds": ["addon-1"],
+          "discountType": "fixed",
+          "discountValue": 5,
+          "validFrom": "2025-03-01T00:00:00.000Z",
+          "validUntil": "2025-03-31T23:59:59.000Z"
+        }
+      ]
+    },
+    {
+      "companyId": "company-bluewave",
+      "version": 5,
+      "tariff": {
+        "tariffId": "basic",
+        "status": "active",
+        "effectiveAt": "2026-02-01T00:00:00.000Z",
+        "renewsAt": "2027-02-01T00:00:00.000Z"
+      },
+      "addOns": [
+        {
+          "addOnId": "addon-1",
+          "status": "active",
+          "quantity": 1,
+          "unitPrice": 9.99,
+          "effectiveAt": "2026-02-01T00:00:00.000Z",
+          "endsAt": null,
+          "source": "seed",
+          "offerId": null
+        }
+      ],
+      "appliedPromotions": [],
+      "pricing": {
+        "currency": "EUR",
+        "tariffMonthly": 0,
+        "addOnsMonthly": 0,
+        "discountMonthly": 0,
+        "totalMonthly": 0,
+        "vatRate": 19,
+        "billedWithPlan": "KiData Basic"
+      },
+      "externalSync": {
+        "billing": "failed",
+        "lastAttemptAt": "2026-07-17T08:20:00.000Z",
+        "message": "Mock billing provider synchronization failed; contact support before retrying."
+      },
+      "entitlements": {},
+      "addOnEntitlements": { "cloudStorageIncluded": "105 GB" },
+      "allowedActions": [],
+      "resourceUsage": { "displays": 2, "users": 2, "storageUsedGb": 4 },
+      "downgradeChecks": [],
+      "offers": [
+        {
+          "id": "offer-bluewave-expired",
+          "label": "Expired Recovery Offer",
+          "eligible": false,
+          "status": "expired",
+          "includedAddOnIds": ["addon-1"],
+          "discountType": "fixed",
+          "discountValue": 3,
+          "validFrom": "2025-01-01T00:00:00.000Z",
+          "validUntil": "2025-01-31T23:59:59.000Z"
+        }
+      ]
+    },
+    {
+      "companyId": "company-greenleaf",
+      "version": 1,
+      "tariff": {
+        "tariffId": "free",
+        "status": "active",
+        "effectiveAt": "2026-07-15T07:00:00.000Z",
+        "renewsAt": null
+      },
+      "addOns": [],
+      "appliedPromotions": [],
+      "pricing": {
+        "currency": "EUR",
+        "tariffMonthly": 0,
+        "addOnsMonthly": 0,
+        "discountMonthly": 0,
+        "totalMonthly": 0,
+        "vatRate": 19,
+        "billedWithPlan": "KiData Free"
+      },
+      "externalSync": {
+        "billing": "notRequired",
+        "lastAttemptAt": null,
+        "message": null
+      },
+      "entitlements": {},
+      "addOnEntitlements": {},
+      "allowedActions": [],
+      "resourceUsage": { "displays": 0, "users": 1, "storageUsedGb": 0 },
+      "downgradeChecks": [],
+      "offers": []
+    }
+  ],
+  "superCompanyManagementPackageHistory": [
+    {
+      "id": "package-history-acme-addon",
+      "companyId": "company-acme",
+      "timestamp": "2026-03-01T00:00:00.000Z",
+      "type": "ADD_ON_ASSIGNED",
+      "before": null,
+      "after": { "addOnId": "addon-4", "quantity": 3 },
+      "reason": "Sales-assisted team expansion",
+      "salesReference": "SALE-ACME-2026-03",
+      "auditEventId": "audit-acme-addon"
+    }
+  ],
+  "superCompanyManagementIdempotency": []
 }
