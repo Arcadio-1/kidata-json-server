@@ -48,7 +48,56 @@ const RESTRICTED_ACTIONS = Object.freeze([
   ACTIONS.VIEW_COMPANY_AUDIT_LOG,
 ]);
 
+const PROFILE_SECTION_CONTRACTS = Object.freeze({
+  general: Object.freeze({
+    action: ACTIONS.EDIT_COMPANY_GENERAL,
+    groups: Object.freeze(["addressData", "legalPerson"]),
+  }),
+  administrator: Object.freeze({
+    action: ACTIONS.EDIT_COMPANY_ADMINISTRATOR,
+    groups: Object.freeze(["administrator"]),
+  }),
+  businessTax: Object.freeze({
+    action: ACTIONS.EDIT_COMPANY_BUSINESS_TAX,
+    groups: Object.freeze(["businessModel", "industry", "tax"]),
+  }),
+  billingPayment: Object.freeze({
+    action: ACTIONS.EDIT_COMPANY_BILLING_PAYMENT,
+    groups: Object.freeze([
+      "billingAddress",
+      "paymentInformation",
+      "receiveEmail",
+    ]),
+    requiresReason: true,
+  }),
+});
+
+const SENSITIVE_AUDIT_KEY =
+  /(?:iban|bic|accountowner|payment|password|secret|token|twofactor|2fa|identity|idcard)/i;
+
 const clone = (value) => JSON.parse(JSON.stringify(value));
+
+const isPlainObject = (value) =>
+  value !== null &&
+  typeof value === "object" &&
+  !Array.isArray(value) &&
+  Object.getPrototypeOf(value) === Object.prototype;
+
+const redactAuditValue = (value, key = "") => {
+  if (SENSITIVE_AUDIT_KEY.test(key)) return "[REDACTED]";
+  if (Array.isArray(value)) {
+    return value.map((item) => redactAuditValue(item));
+  }
+  if (isPlainObject(value)) {
+    return Object.fromEntries(
+      Object.entries(value).map(([nestedKey, nestedValue]) => [
+        nestedKey,
+        redactAuditValue(nestedValue, nestedKey),
+      ])
+    );
+  }
+  return value;
+};
 
 const sendError = (res, status, code, message, extra = {}) =>
   res.status(status).json({ message, code, ...extra });
@@ -293,6 +342,94 @@ const maskCompany = (company, allowedActions) => {
   return output;
 };
 
+const validateProfileChanges = (profile, contract, changes) => {
+  const fieldErrors = {};
+  if (!isPlainObject(changes) || Object.keys(changes).length === 0) {
+    return { changes: null, fieldErrors: { changes: ["Provide at least one change"] } };
+  }
+
+  const unknownGroups = Object.keys(changes).filter(
+    (group) => !contract.groups.includes(group)
+  );
+  for (const group of unknownGroups) {
+    fieldErrors[`changes.${group}`] = ["Field is not writable in this section"];
+  }
+
+  const validated = {};
+  for (const group of contract.groups) {
+    if (!Object.prototype.hasOwnProperty.call(changes, group)) continue;
+    const currentValue = profile[group];
+    const nextValue = changes[group];
+
+    if (isPlainObject(currentValue)) {
+      if (!isPlainObject(nextValue)) {
+        fieldErrors[`changes.${group}`] = ["Expected an object"];
+        continue;
+      }
+      const unknownFields = Object.keys(nextValue).filter(
+        (field) => !Object.prototype.hasOwnProperty.call(currentValue, field)
+      );
+      for (const field of unknownFields) {
+        fieldErrors[`changes.${group}.${field}`] = [
+          "Field is not writable in this section",
+        ];
+      }
+      const groupChanges = {};
+      for (const [field, value] of Object.entries(nextValue)) {
+        if (unknownFields.includes(field)) continue;
+        const currentFieldValue = currentValue[field];
+        const hasCompatibleType =
+          value === null
+            ? currentFieldValue === null
+            : typeof value === typeof currentFieldValue ||
+              (["number", "string"].includes(typeof value) &&
+                ["number", "string"].includes(typeof currentFieldValue));
+        if (!hasCompatibleType || typeof value === "object") {
+          fieldErrors[`changes.${group}.${field}`] = ["Invalid field value"];
+          continue;
+        }
+        if (
+          group === "paymentInformation" &&
+          typeof value === "string" &&
+          value.includes("•")
+        ) {
+          fieldErrors[`changes.${group}.${field}`] = [
+            "Masked values cannot be submitted",
+          ];
+          continue;
+        }
+        groupChanges[field] = value;
+      }
+      if (Object.keys(groupChanges).length > 0) validated[group] = groupChanges;
+      continue;
+    }
+
+    if (typeof nextValue !== typeof currentValue || typeof nextValue === "object") {
+      fieldErrors[`changes.${group}`] = ["Invalid field value"];
+      continue;
+    }
+    validated[group] = nextValue;
+  }
+
+  if (Object.keys(fieldErrors).length > 0) {
+    return { changes: null, fieldErrors };
+  }
+  if (Object.keys(validated).length === 0) {
+    return { changes: null, fieldErrors: { changes: ["Provide at least one change"] } };
+  }
+  return { changes: validated, fieldErrors: null };
+};
+
+const mergeProfileChanges = (profile, changes) => {
+  const nextProfile = clone(profile);
+  for (const [group, value] of Object.entries(changes)) {
+    nextProfile[group] = isPlainObject(value)
+      ? { ...nextProfile[group], ...value }
+      : value;
+  }
+  return nextProfile;
+};
+
 const calculatePackageProjection = (db, packageRecord, companyActions) => {
   const output = clone(packageRecord);
   const tariff = getTariffs(db).find(
@@ -440,6 +577,140 @@ module.exports = function registerCompanyManagementRoutes(server, router) {
       data: maskCompany(company, allowedActions),
     });
   });
+
+  server.patch(
+    `${ROOT}/companies/:companyId/profile/:section`,
+    (req, res) => {
+      const company = requireCompany(router.db, res, req.params.companyId);
+      if (!company) return;
+
+      const contract = PROFILE_SECTION_CONTRACTS[req.params.section];
+      if (!contract) {
+        return sendError(
+          res,
+          404,
+          "PROFILE_SECTION_NOT_FOUND",
+          "Profile section not found"
+        );
+      }
+      if (!getCompanyActions(company).includes(contract.action)) {
+        return sendError(
+          res,
+          403,
+          "ACTION_NOT_ALLOWED",
+          "The mock operator cannot edit this company profile section"
+        );
+      }
+
+      const body = isPlainObject(req.body) ? req.body : {};
+      if (!Number.isInteger(body.version) || body.version < 0) {
+        return sendError(
+          res,
+          400,
+          "VALIDATION_ERROR",
+          "The profile update is invalid",
+          { fieldErrors: { version: ["Expected a non-negative integer"] } }
+        );
+      }
+      if (body.version !== company.version) {
+        return sendError(
+          res,
+          409,
+          "VERSION_CONFLICT",
+          "The company profile changed after it was loaded",
+          { currentVersion: company.version }
+        );
+      }
+
+      const reason = typeof body.reason === "string" ? body.reason.trim() : "";
+      if (contract.requiresReason && !reason) {
+        return sendError(
+          res,
+          400,
+          "VALIDATION_ERROR",
+          "A reason is required for billing and payment changes",
+          { fieldErrors: { reason: ["Reason is required"] } }
+        );
+      }
+      if (reason.length > 1000) {
+        return sendError(
+          res,
+          400,
+          "VALIDATION_ERROR",
+          "The profile update is invalid",
+          { fieldErrors: { reason: ["Reason must be 1000 characters or fewer"] } }
+        );
+      }
+
+      const validation = validateProfileChanges(
+        company.profile,
+        contract,
+        body.changes
+      );
+      if (validation.fieldErrors) {
+        return sendError(
+          res,
+          400,
+          "VALIDATION_ERROR",
+          "The profile update is invalid",
+          { fieldErrors: validation.fieldErrors }
+        );
+      }
+
+      const timestamp = new Date().toISOString();
+      const nextCompany = {
+        ...clone(company),
+        profile: mergeProfileChanges(company.profile, validation.changes),
+        version: company.version + 1,
+        updatedAt: timestamp,
+      };
+      const suffix = `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
+      const correlationId = `cm-profile-${suffix}`;
+      const auditEvent = {
+        id: `audit-${suffix}`,
+        timestamp,
+        actor: {
+          id: String(req.get("x-mock-super-admin-id") || "super-admin-local"),
+          name: String(req.get("x-mock-super-admin-name") || "Local Super Admin"),
+        },
+        companyId: company.id,
+        actionType: `company.profile.${req.params.section}.updated`,
+        entityType: "company",
+        entityId: company.id,
+        before: redactAuditValue(
+          Object.fromEntries(
+            Object.keys(validation.changes).map((group) => [
+              group,
+              company.profile[group],
+            ])
+          )
+        ),
+        after: redactAuditValue(validation.changes),
+        reason: reason || null,
+        result: "success",
+        correlationId,
+      };
+
+      router.db
+        .get("superCompanyManagementCompanies")
+        .find({ id: company.id })
+        .assign(nextCompany)
+        .value();
+      router.db
+        .get("superCompanyManagementAuditEvents")
+        .push(auditEvent)
+        .value();
+      router.db.write();
+
+      const allowedActions = getCompanyActions(nextCompany);
+      return res.json({
+        message: "Company profile section updated",
+        data: maskCompany(nextCompany, allowedActions),
+        auditEvent,
+        correlationId,
+      });
+    }
+  );
 
   server.get(`${ROOT}/permission-catalog`, (req, res) => {
     res.json(
