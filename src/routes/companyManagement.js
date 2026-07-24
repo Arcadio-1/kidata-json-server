@@ -1,4 +1,5 @@
 const express = require("express");
+const { redactAuditValue } = require("../utils/companyManagementAudit");
 
 const ROOT = "/super/company-management";
 const DEFAULT_PAGE_SIZE = 10;
@@ -72,9 +73,6 @@ const PROFILE_SECTION_CONTRACTS = Object.freeze({
   }),
 });
 
-const SENSITIVE_AUDIT_KEY =
-  /(?:iban|bic|accountowner|payment|password|secret|token|twofactor|2fa|identity|idcard)/i;
-
 const clone = (value) => JSON.parse(JSON.stringify(value));
 
 const isPlainObject = (value) =>
@@ -82,22 +80,6 @@ const isPlainObject = (value) =>
   typeof value === "object" &&
   !Array.isArray(value) &&
   Object.getPrototypeOf(value) === Object.prototype;
-
-const redactAuditValue = (value, key = "") => {
-  if (SENSITIVE_AUDIT_KEY.test(key)) return "[REDACTED]";
-  if (Array.isArray(value)) {
-    return value.map((item) => redactAuditValue(item));
-  }
-  if (isPlainObject(value)) {
-    return Object.fromEntries(
-      Object.entries(value).map(([nestedKey, nestedValue]) => [
-        nestedKey,
-        redactAuditValue(nestedValue, nestedKey),
-      ])
-    );
-  }
-  return value;
-};
 
 const sendError = (res, status, code, message, extra = {}) =>
   res.status(status).json({ message, code, ...extra });
@@ -704,9 +686,17 @@ module.exports = function registerCompanyManagementRoutes(server, router) {
 
       const allowedActions = getCompanyActions(nextCompany);
       return res.json({
-        message: "Company profile section updated",
+        message: "Company profile section updated in local demo data",
         data: maskCompany(nextCompany, allowedActions),
         auditEvent,
+        mockOnly: true,
+        warnings: [
+          {
+            code: "MOCK_ONLY_CHANGE",
+            message:
+              "Only canonical Company Management mock data was changed",
+          },
+        ],
         correlationId,
       });
     }
