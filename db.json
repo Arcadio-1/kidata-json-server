@@ -13200,11 +13200,7 @@
     {
       "id": "company-acme",
       "onlineId": "CMP-1001",
-      "legacyIds": [
-        "1",
-        "cmp-001",
-        "C-1001"
-      ],
+      "legacyIds": ["1", "cmp-001", "C-1001"],
       "operationalStatus": "active",
       "registrationStatus": "approved",
       "permissionProfile": "full",
@@ -13253,9 +13249,7 @@
           "email": "anna.schmidt@acme-retail.example",
           "username": "anna.schmidt"
         },
-        "businessModel": {
-          "businessModelId": "retail"
-        },
+        "businessModel": { "businessModelId": "retail" },
         "billingAddress": {
           "isDiffer": false,
           "salutationId": "mrs",
@@ -13352,11 +13346,7 @@
     {
       "id": "company-bluewave",
       "onlineId": "CMP-1002",
-      "legacyIds": [
-        "2",
-        "cmp-002",
-        "C-1002"
-      ],
+      "legacyIds": ["2", "cmp-002", "C-1002"],
       "operationalStatus": "suspended",
       "registrationStatus": "approved",
       "permissionProfile": "restricted",
@@ -13405,9 +13395,7 @@
           "email": "lukas.meier@bluewave.example",
           "username": "lukas.meier"
         },
-        "businessModel": {
-          "businessModelId": "retail"
-        },
+        "businessModel": { "businessModelId": "retail" },
         "billingAddress": {
           "isDiffer": false,
           "salutationId": "mr",
@@ -13495,11 +13483,7 @@
     {
       "id": "company-greenleaf",
       "onlineId": "CMP-1003",
-      "legacyIds": [
-        "3",
-        "cmp-003",
-        "C-1003"
-      ],
+      "legacyIds": ["3", "cmp-003", "C-1003"],
       "operationalStatus": "active",
       "registrationStatus": "pending",
       "permissionProfile": "full",
@@ -13548,9 +13532,7 @@
           "email": "maria.rossi@greenleaf.example",
           "username": "maria.rossi"
         },
-        "businessModel": {
-          "businessModelId": "retail"
-        },
+        "businessModel": { "businessModelId": "retail" },
         "billingAddress": {
           "isDiffer": false,
           "salutationId": "mrs",
@@ -13634,11 +13616,7 @@
       "departmentId": "management",
       "departmentTitle": "Management",
       "roleId": "role-acme-admin",
-      "role": {
-        "id": "role-acme-admin",
-        "enName": "Administrator",
-        "deName": "Administrator"
-      },
+      "role": { "id": "role-acme-admin", "enName": "Administrator", "deName": "Administrator" },
       "categoryId": "management",
       "categoryTitle": "Management",
       "categoryColor": "#3366CC",
@@ -13648,23 +13626,11 @@
       "isSystemInactive": false,
       "entryDate": "2025-01-10T09:30:00.000Z",
       "lastActivity": "2026-07-18T09:50:00.000Z",
-      "twoFactor": {
-        "enabled": true,
-        "lastResetAt": null
-      },
-      "assignedResourceCounts": {
-        "displays": 7,
-        "media": 24
-      },
+      "twoFactor": { "enabled": true, "lastResetAt": null },
+      "assignedResourceCounts": { "displays": 7, "media": 24 },
       "version": 4,
       "updatedAt": "2026-07-18T09:50:00.000Z",
-      "allowedActions": [
-        "VIEW_COMPANY_USERS",
-        "EDIT_COMPANY_USER",
-        "ASSIGN_COMPANY_USER_ROLE",
-        "SET_COMPANY_USER_STATUS",
-        "RESET_COMPANY_USER_TWO_FACTOR"
-      ]
+      "allowedActions": ["VIEW_COMPANY_USERS", "EDIT_COMPANY_USER", "ASSIGN_COMPANY_USER_ROLE", "SET_COMPANY_USER_STATUS", "RESET_COMPANY_USER_TWO_FACTOR"]
     },
     {
       "id": "user-acme-alex",
@@ -13681,11 +13647,7 @@
       "departmentId": "content",
       "departmentTitle": "Content",
       "roleId": "role-acme-content",
-      "role": {
-        "id": "role-acme-content",
-        "enName": "Content Manager",
-        "deName": "Content-Manager"
-      },
+      "role": { "id": "role-acme-content", "enName": "Content Manager", "deName": "Content-Manager" },
       "categoryId": "content",
       "categoryTitle": "Content",
       "categoryColor": "#22AA88",
@@ -13695,23 +13657,11 @@
       "isSystemInactive": false,
       "entryDate": "2025-03-01T08:00:00.000Z",
       "lastActivity": "2026-07-18T08:10:00.000Z",
-      "twoFactor": {
-        "enabled": false,
-        "lastResetAt": null
-      },
-      "assignedResourceCounts": {
-        "displays": 2,
-        "media": 10
-      },
+      "twoFactor": { "enabled": false, "lastResetAt": null },
+      "assignedResourceCounts": { "displays": 2, "media": 10 },
       "version": 2,
       "updatedAt": "2026-07-18T08:10:00.000Z",
-      "allowedActions": [
-        "VIEW_COMPANY_USERS",
-        "EDIT_COMPANY_USER",
-        "ASSIGN_COMPANY_USER_ROLE",
-        "SET_COMPANY_USER_STATUS",
-        "RESET_COMPANY_USER_TWO_FACTOR"
-      ]
+      "allowedActions": ["VIEW_COMPANY_USERS", "EDIT_COMPANY_USER", "ASSIGN_COMPANY_USER_ROLE", "SET_COMPANY_USER_STATUS", "RESET_COMPANY_USER_TWO_FACTOR"]
     },
     {
       "id": "user-acme-sam",
@@ -13728,11 +13678,7 @@
       "departmentId": "marketing",
       "departmentTitle": "Marketing",
       "roleId": "role-acme-campaign",
-      "role": {
-        "id": "role-acme-campaign",
-        "enName": "Campaign Manager",
-        "deName": "Kampagnenmanager"
-      },
+      "role": { "id": "role-acme-campaign", "enName": "Campaign Manager", "deName": "Kampagnenmanager" },
       "categoryId": "marketing",
       "categoryTitle": "Marketing",
       "categoryColor": "#AA66CC",
@@ -13742,23 +13688,11 @@
       "isSystemInactive": false,
       "entryDate": "2025-04-01T08:00:00.000Z",
       "lastActivity": "2026-07-17T15:00:00.000Z",
-      "twoFactor": {
-        "enabled": true,
-        "lastResetAt": null
-      },
-      "assignedResourceCounts": {
-        "displays": 1,
-        "media": 4
-      },
+      "twoFactor": { "enabled": true, "lastResetAt": null },
+      "assignedResourceCounts": { "displays": 1, "media": 4 },
       "version": 9,
       "updatedAt": "2026-07-17T15:00:00.000Z",
-      "allowedActions": [
-        "VIEW_COMPANY_USERS",
-        "EDIT_COMPANY_USER",
-        "ASSIGN_COMPANY_USER_ROLE",
-        "SET_COMPANY_USER_STATUS",
-        "RESET_COMPANY_USER_TWO_FACTOR"
-      ]
+      "allowedActions": ["VIEW_COMPANY_USERS", "EDIT_COMPANY_USER", "ASSIGN_COMPANY_USER_ROLE", "SET_COMPANY_USER_STATUS", "RESET_COMPANY_USER_TWO_FACTOR"]
     },
     {
       "id": "user-bluewave-alex",
@@ -13775,11 +13709,7 @@
       "departmentId": "content",
       "departmentTitle": "Content",
       "roleId": "role-bluewave-content",
-      "role": {
-        "id": "role-bluewave-content",
-        "enName": "Content Manager",
-        "deName": "Content-Manager"
-      },
+      "role": { "id": "role-bluewave-content", "enName": "Content Manager", "deName": "Content-Manager" },
       "categoryId": "content",
       "categoryTitle": "Content",
       "categoryColor": "#22AA88",
@@ -13789,19 +13719,11 @@
       "isSystemInactive": true,
       "entryDate": "2025-05-01T08:00:00.000Z",
       "lastActivity": "2026-06-30T12:00:00.000Z",
-      "twoFactor": {
-        "enabled": true,
-        "lastResetAt": "2026-01-10T10:00:00.000Z"
-      },
-      "assignedResourceCounts": {
-        "displays": 1,
-        "media": 2
-      },
+      "twoFactor": { "enabled": true, "lastResetAt": "2026-01-10T10:00:00.000Z" },
+      "assignedResourceCounts": { "displays": 1, "media": 2 },
       "version": 5,
       "updatedAt": "2026-06-30T12:00:00.000Z",
-      "allowedActions": [
-        "VIEW_COMPANY_USERS"
-      ]
+      "allowedActions": ["VIEW_COMPANY_USERS"]
     },
     {
       "id": "user-bluewave-owner",
@@ -13818,11 +13740,7 @@
       "departmentId": "management",
       "departmentTitle": "Management",
       "roleId": "role-bluewave-admin",
-      "role": {
-        "id": "role-bluewave-admin",
-        "enName": "Administrator",
-        "deName": "Administrator"
-      },
+      "role": { "id": "role-bluewave-admin", "enName": "Administrator", "deName": "Administrator" },
       "categoryId": "management",
       "categoryTitle": "Management",
       "categoryColor": "#3366CC",
@@ -13832,19 +13750,11 @@
       "isSystemInactive": false,
       "entryDate": "2025-02-02T11:15:00.000Z",
       "lastActivity": "2026-07-01T12:00:00.000Z",
-      "twoFactor": {
-        "enabled": true,
-        "lastResetAt": null
-      },
-      "assignedResourceCounts": {
-        "displays": 2,
-        "media": 5
-      },
+      "twoFactor": { "enabled": true, "lastResetAt": null },
+      "assignedResourceCounts": { "displays": 2, "media": 5 },
       "version": 3,
       "updatedAt": "2026-07-01T12:00:00.000Z",
-      "allowedActions": [
-        "VIEW_COMPANY_USERS"
-      ]
+      "allowedActions": ["VIEW_COMPANY_USERS"]
     },
     {
       "id": "user-greenleaf-owner",
@@ -13861,11 +13771,7 @@
       "departmentId": "management",
       "departmentTitle": "Management",
       "roleId": "role-greenleaf-admin",
-      "role": {
-        "id": "role-greenleaf-admin",
-        "enName": "Administrator",
-        "deName": "Administrator"
-      },
+      "role": { "id": "role-greenleaf-admin", "enName": "Administrator", "deName": "Administrator" },
       "categoryId": "management",
       "categoryTitle": "Management",
       "categoryColor": "#3366CC",
@@ -13875,19 +13781,11 @@
       "isSystemInactive": false,
       "entryDate": "2026-07-15T07:00:00.000Z",
       "lastActivity": "2026-07-18T09:00:00.000Z",
-      "twoFactor": {
-        "enabled": false,
-        "lastResetAt": null
-      },
-      "assignedResourceCounts": {
-        "displays": 0,
-        "media": 0
-      },
+      "twoFactor": { "enabled": false, "lastResetAt": null },
+      "assignedResourceCounts": { "displays": 0, "media": 0 },
       "version": 1,
       "updatedAt": "2026-07-18T09:00:00.000Z",
-      "allowedActions": [
-        "VIEW_COMPANY_USERS"
-      ]
+      "allowedActions": ["VIEW_COMPANY_USERS"]
     }
   ],
   "superCompanyManagementRoles": [
@@ -13904,11 +13802,7 @@
       "isMutable": false,
       "isAssignable": true,
       "assignedUserCount": 1,
-      "actionKeys": [
-        "CREATE_DISPLAY",
-        "UPLOAD_MEDIAPOOL_MEDIA",
-        "MANAGE_ROLE"
-      ],
+      "actionKeys": ["CREATE_DISPLAY", "UPLOAD_MEDIAPOOL_MEDIA", "MANAGE_ROLE"],
       "version": 4,
       "createdAt": "2025-01-10T09:30:00.000Z",
       "updatedAt": "2026-06-01T10:00:00.000Z",
@@ -13927,9 +13821,7 @@
       "isMutable": false,
       "isAssignable": true,
       "assignedUserCount": 1,
-      "actionKeys": [
-        "UPLOAD_MEDIAPOOL_MEDIA"
-      ],
+      "actionKeys": ["UPLOAD_MEDIAPOOL_MEDIA"],
       "version": 2,
       "createdAt": "2025-01-10T09:30:00.000Z",
       "updatedAt": "2026-01-01T10:00:00.000Z",
@@ -13948,10 +13840,7 @@
       "isMutable": true,
       "isAssignable": true,
       "assignedUserCount": 1,
-      "actionKeys": [
-        "CREATE_DISPLAY",
-        "UPLOAD_MEDIAPOOL_MEDIA"
-      ],
+      "actionKeys": ["CREATE_DISPLAY", "UPLOAD_MEDIAPOOL_MEDIA"],
       "version": 9,
       "createdAt": "2025-04-01T08:00:00.000Z",
       "updatedAt": "2026-07-17T15:00:00.000Z",
@@ -13970,10 +13859,7 @@
       "isMutable": false,
       "isAssignable": true,
       "assignedUserCount": 1,
-      "actionKeys": [
-        "CREATE_DISPLAY",
-        "MANAGE_ROLE"
-      ],
+      "actionKeys": ["CREATE_DISPLAY", "MANAGE_ROLE"],
       "version": 3,
       "createdAt": "2025-02-02T11:15:00.000Z",
       "updatedAt": "2026-01-01T10:00:00.000Z",
@@ -13992,9 +13878,7 @@
       "isMutable": true,
       "isAssignable": true,
       "assignedUserCount": 1,
-      "actionKeys": [
-        "UPLOAD_MEDIAPOOL_MEDIA"
-      ],
+      "actionKeys": ["UPLOAD_MEDIAPOOL_MEDIA"],
       "version": 5,
       "createdAt": "2025-05-01T08:00:00.000Z",
       "updatedAt": "2026-06-30T12:00:00.000Z",
@@ -14013,9 +13897,7 @@
       "isMutable": false,
       "isAssignable": true,
       "assignedUserCount": 1,
-      "actionKeys": [
-        "CREATE_DISPLAY"
-      ],
+      "actionKeys": ["CREATE_DISPLAY"],
       "version": 1,
       "createdAt": "2026-07-15T07:00:00.000Z",
       "updatedAt": "2026-07-15T07:00:00.000Z",
@@ -14028,16 +13910,8 @@
       "enLabel": "Displays",
       "deLabel": "Displays",
       "actions": [
-        {
-          "actionKey": "CREATE_DISPLAY",
-          "enLabel": "Create displays",
-          "deLabel": "Displays erstellen"
-        },
-        {
-          "actionKey": "SET_DISPLAY_STATUS",
-          "enLabel": "Change display status",
-          "deLabel": "Displaystatus ändern"
-        }
+        { "actionKey": "CREATE_DISPLAY", "enLabel": "Create displays", "deLabel": "Displays erstellen" },
+        { "actionKey": "SET_DISPLAY_STATUS", "enLabel": "Change display status", "deLabel": "Displaystatus ändern" }
       ]
     },
     {
@@ -14045,16 +13919,8 @@
       "enLabel": "Media pool",
       "deLabel": "Medienpool",
       "actions": [
-        {
-          "actionKey": "UPLOAD_MEDIAPOOL_MEDIA",
-          "enLabel": "Upload media",
-          "deLabel": "Medien hochladen"
-        },
-        {
-          "actionKey": "DELETE_MEDIAPOOL_MEDIA",
-          "enLabel": "Delete media",
-          "deLabel": "Medien löschen"
-        }
+        { "actionKey": "UPLOAD_MEDIAPOOL_MEDIA", "enLabel": "Upload media", "deLabel": "Medien hochladen" },
+        { "actionKey": "DELETE_MEDIAPOOL_MEDIA", "enLabel": "Delete media", "deLabel": "Medien löschen" }
       ]
     },
     {
@@ -14062,16 +13928,8 @@
       "enLabel": "User management",
       "deLabel": "Benutzerverwaltung",
       "actions": [
-        {
-          "actionKey": "MANAGE_ROLE",
-          "enLabel": "Manage roles",
-          "deLabel": "Rollen verwalten"
-        },
-        {
-          "actionKey": "SET_USER_STATUS",
-          "enLabel": "Change user status",
-          "deLabel": "Benutzerstatus ändern"
-        }
+        { "actionKey": "MANAGE_ROLE", "enLabel": "Manage roles", "deLabel": "Rollen verwalten" },
+        { "actionKey": "SET_USER_STATUS", "enLabel": "Change user status", "deLabel": "Benutzerstatus ändern" }
       ]
     }
   ],
@@ -14084,30 +13942,15 @@
       "type": "REGISTRATION",
       "status": "PENDING",
       "isSeen": false,
-      "requester": {
-        "id": "user-greenleaf-owner",
-        "name": "Maria Rossi",
-        "email": "maria.rossi@greenleaf.example"
-      },
+      "requester": { "id": "user-greenleaf-owner", "name": "Maria Rossi", "email": "maria.rossi@greenleaf.example" },
       "submittedAt": "2026-07-15T07:00:00.000Z",
       "updatedAt": "2026-07-18T09:00:00.000Z",
       "shortSummary": "Initial company registration",
       "registrationSnapshot": {
-        "profile": {
-          "companyName": "GreenLeaf Markets SRL",
-          "countryId": "it"
-        },
-        "medias": {
-          "businessLicense": [],
-          "idCard": [],
-          "logo": []
-        }
+        "profile": { "companyName": "GreenLeaf Markets SRL", "countryId": "it" },
+        "medias": { "businessLicense": [], "idCard": [], "logo": [] }
       },
-      "medias": {
-        "businessLicense": [],
-        "idCard": [],
-        "logo": []
-      },
+      "medias": { "businessLicense": [], "idCard": [], "logo": [] },
       "history": [],
       "version": 1,
       "allowedActions": []
@@ -14120,31 +13963,17 @@
       "type": "PROFILE_EDIT",
       "status": "PENDING",
       "isSeen": true,
-      "requester": {
-        "id": "user-acme-owner",
-        "name": "Anna Schmidt",
-        "email": "anna.schmidt@acme-retail.example"
-      },
+      "requester": { "id": "user-acme-owner", "name": "Anna Schmidt", "email": "anna.schmidt@acme-retail.example" },
       "submittedAt": "2026-07-16T08:00:00.000Z",
       "updatedAt": "2026-07-18T08:00:00.000Z",
       "shortSummary": "Company web URL and phone change",
       "currentInfo": {
-        "addressData": {
-          "webUrl": "https://acme-retail.example",
-          "phone": "301234500"
-        }
+        "addressData": { "webUrl": "https://acme-retail.example", "phone": "301234500" }
       },
       "requestedInfo": {
-        "addressData": {
-          "webUrl": "https://new.acme-retail.example",
-          "phone": "301234555"
-        }
+        "addressData": { "webUrl": "https://new.acme-retail.example", "phone": "301234555" }
       },
-      "medias": {
-        "businessLicense": [],
-        "idCard": [],
-        "logo": []
-      },
+      "medias": { "businessLicense": [], "idCard": [], "logo": [] },
       "history": [],
       "version": 6,
       "allowedActions": []
@@ -14157,40 +13986,15 @@
       "type": "PROFILE_EDIT",
       "status": "APPROVED",
       "isSeen": true,
-      "requester": {
-        "id": "user-bluewave-owner",
-        "name": "Lukas Meier",
-        "email": "lukas.meier@bluewave.example"
-      },
+      "requester": { "id": "user-bluewave-owner", "name": "Lukas Meier", "email": "lukas.meier@bluewave.example" },
       "submittedAt": "2026-06-01T08:00:00.000Z",
       "updatedAt": "2026-06-02T08:00:00.000Z",
       "shortSummary": "Finalized billing-address update",
-      "currentInfo": {
-        "billingAddress": {
-          "city": "Vienna"
-        }
-      },
-      "requestedInfo": {
-        "billingAddress": {
-          "city": "Vienna"
-        }
-      },
-      "medias": {
-        "businessLicense": [],
-        "idCard": [],
-        "logo": []
-      },
+      "currentInfo": { "billingAddress": { "city": "Vienna" } },
+      "requestedInfo": { "billingAddress": { "city": "Vienna" } },
+      "medias": { "businessLicense": [], "idCard": [], "logo": [] },
       "history": [
-        {
-          "id": "approval-action-bluewave",
-          "actor": {
-            "id": "admin-001",
-            "name": "Mock Super Admin"
-          },
-          "timestamp": "2026-06-02T08:00:00.000Z",
-          "status": "APPROVED",
-          "message": null
-        }
+        { "id": "approval-action-bluewave", "actor": { "id": "admin-001", "name": "Mock Super Admin" }, "timestamp": "2026-06-02T08:00:00.000Z", "status": "APPROVED", "message": null }
       ],
       "version": 2,
       "allowedActions": []
@@ -14200,20 +14004,13 @@
     {
       "id": "audit-acme-profile",
       "timestamp": "2026-07-01T10:00:00.000Z",
-      "actor": {
-        "id": "admin-001",
-        "name": "Mock Super Admin"
-      },
+      "actor": { "id": "admin-001", "name": "Mock Super Admin" },
       "companyId": "company-acme",
       "actionType": "company.profile.billingPayment.updated",
       "entityType": "company",
       "entityId": "company-acme",
-      "before": {
-        "paymentInformation": "[REDACTED]"
-      },
-      "after": {
-        "paymentInformation": "[REDACTED]"
-      },
+      "before": { "paymentInformation": "[REDACTED]" },
+      "after": { "paymentInformation": "[REDACTED]" },
       "reason": "Support-assisted billing profile correction",
       "result": "success",
       "correlationId": "corr-acme-profile"
@@ -14221,20 +14018,13 @@
     {
       "id": "audit-bluewave-suspended",
       "timestamp": "2026-07-10T12:00:00.000Z",
-      "actor": {
-        "id": "admin-002",
-        "name": "Restricted Mock Admin"
-      },
+      "actor": { "id": "admin-002", "name": "Restricted Mock Admin" },
       "companyId": "company-bluewave",
       "actionType": "company.suspended",
       "entityType": "company",
       "entityId": "company-bluewave",
-      "before": {
-        "operationalStatus": "active"
-      },
-      "after": {
-        "operationalStatus": "suspended"
-      },
+      "before": { "operationalStatus": "active" },
+      "after": { "operationalStatus": "suspended" },
       "reason": "Deterministic suspension fixture",
       "result": "success",
       "correlationId": "corr-bluewave-suspended"
@@ -14278,38 +14068,17 @@
         "message": null
       },
       "entitlements": {},
-      "addOnEntitlements": {
-        "teamSize": 18
-      },
+      "addOnEntitlements": { "teamSize": 18 },
       "allowedActions": [],
-      "resourceUsage": {
-        "displays": 7,
-        "users": 3,
-        "storageUsedGb": 18
-      },
+      "resourceUsage": { "displays": 7, "users": 3, "storageUsedGb": 18 },
       "downgradeChecks": [
         {
           "targetTariffId": "free",
           "eligible": false,
           "violations": [
-            {
-              "code": "DISPLAY_LIMIT_EXCEEDED",
-              "message": "Company has 7 displays; target allows 1",
-              "entityType": "company",
-              "entityId": "company-acme"
-            },
-            {
-              "code": "USER_LIMIT_EXCEEDED",
-              "message": "Company has 3 users; target allows 1",
-              "entityType": "company",
-              "entityId": "company-acme"
-            },
-            {
-              "code": "STORAGE_LIMIT_EXCEEDED",
-              "message": "Company uses 18 GB; target allows 1 GB",
-              "entityType": "company",
-              "entityId": "company-acme"
-            }
+            { "code": "DISPLAY_LIMIT_EXCEEDED", "message": "Company has 7 displays; target allows 1", "entityType": "company", "entityId": "company-acme" },
+            { "code": "USER_LIMIT_EXCEEDED", "message": "Company has 3 users; target allows 1", "entityType": "company", "entityId": "company-acme" },
+            { "code": "STORAGE_LIMIT_EXCEEDED", "message": "Company uses 18 GB; target allows 1 GB", "entityType": "company", "entityId": "company-acme" }
           ]
         }
       ],
@@ -14319,10 +14088,7 @@
           "label": "Growth Support Offer",
           "eligible": true,
           "status": "active",
-          "includedAddOnIds": [
-            "addon-1",
-            "addon-4"
-          ],
+          "includedAddOnIds": ["addon-1", "addon-4"],
           "discountType": "percentage",
           "discountValue": 15,
           "validFrom": "2026-07-01T00:00:00.000Z",
@@ -14333,9 +14099,7 @@
           "label": "Expired Spring Offer",
           "eligible": false,
           "status": "expired",
-          "includedAddOnIds": [
-            "addon-1"
-          ],
+          "includedAddOnIds": ["addon-1"],
           "discountType": "fixed",
           "discountValue": 5,
           "validFrom": "2025-03-01T00:00:00.000Z",
@@ -14380,15 +14144,9 @@
         "message": "Mock billing provider synchronization failed; contact support before retrying."
       },
       "entitlements": {},
-      "addOnEntitlements": {
-        "cloudStorageIncluded": "105 GB"
-      },
+      "addOnEntitlements": { "cloudStorageIncluded": "105 GB" },
       "allowedActions": [],
-      "resourceUsage": {
-        "displays": 2,
-        "users": 2,
-        "storageUsedGb": 4
-      },
+      "resourceUsage": { "displays": 2, "users": 2, "storageUsedGb": 4 },
       "downgradeChecks": [],
       "offers": [
         {
@@ -14396,9 +14154,7 @@
           "label": "Expired Recovery Offer",
           "eligible": false,
           "status": "expired",
-          "includedAddOnIds": [
-            "addon-1"
-          ],
+          "includedAddOnIds": ["addon-1"],
           "discountType": "fixed",
           "discountValue": 3,
           "validFrom": "2025-01-01T00:00:00.000Z",
@@ -14434,11 +14190,7 @@
       "entitlements": {},
       "addOnEntitlements": {},
       "allowedActions": [],
-      "resourceUsage": {
-        "displays": 0,
-        "users": 1,
-        "storageUsedGb": 0
-      },
+      "resourceUsage": { "displays": 0, "users": 1, "storageUsedGb": 0 },
       "downgradeChecks": [],
       "offers": []
     }
@@ -14450,10 +14202,7 @@
       "timestamp": "2026-03-01T00:00:00.000Z",
       "type": "ADD_ON_ASSIGNED",
       "before": null,
-      "after": {
-        "addOnId": "addon-4",
-        "quantity": 3
-      },
+      "after": { "addOnId": "addon-4", "quantity": 3 },
       "reason": "Sales-assisted team expansion",
       "salesReference": "SALE-ACME-2026-03",
       "auditEventId": "audit-acme-addon"
