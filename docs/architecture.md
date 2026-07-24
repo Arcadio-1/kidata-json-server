@@ -29,4 +29,5 @@ The last position prevents generated CRUD handlers from shadowing custom behavio
 
 - A focused route change normally needs only its route module, related utility, and route-level checks.
 - Changes to `server.js`, route order, adapter behavior, body parsing, or upload wiring require broader regression checks because they affect multiple modules.
+- `npm start` loads `nodemon.json`; keep `data/` and `uploads/` outside its watch scope so runtime writes cannot restart in-flight requests.
 - No environment variables are read by the application; the port is the fixed `8000` in `server.js`.

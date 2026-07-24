@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon server.js",
+    "start": "nodemon --config nodemon.json server.js",
     "test:company-management": "node --test src/utils/companyManagementAudit.test.js",
     "test:split-db": "node --test src/db/SplitFileAdapter.test.js",
     "db:split": "node scripts/split-db.js",

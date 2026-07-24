@@ -21,7 +21,7 @@
       "addOnName": "Extra Cloud Storage",
       "priceEur": 9.99,
       "category": "storage",
-      "quantity": 1,
+      "quantity": 2,
       "validity": {
         "isValid": true
       }
@@ -34,7 +34,7 @@
       "addOnName": "Extra Team Members",
       "priceEur": 5.99,
       "category": "usersAndAccess",
-      "quantity": 3,
+      "quantity": 4,
       "discount": {
         "offerId": "bundle-team",
         "offerName": "Team Starter Bundle",
@@ -55,6 +55,20 @@
       "packageName": "5 000 Credit Pack",
       "credits": 5000,
       "bonusCredits": 500,
+      "priceEur": 50,
+      "pricePerCredit": 0.01,
+      "validity": {
+        "isValid": true
+      }
+    },
+    {
+      "id": "cart-item-1784934956431-gv4h49",
+      "type": "credit",
+      "addedAt": "2026-07-24T23:15:56.431Z",
+      "packageId": "pkg_5000",
+      "packageName": "5,000 Cr Package",
+      "credits": 5000,
+      "bonusCredits": 0,
       "priceEur": 50,
       "pricePerCredit": 0.01,
       "validity": {
