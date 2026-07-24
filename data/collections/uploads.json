@@ -1,0 +1,68 @@
+[
+  {
+    "id": "file-1741307599148-317038396.jpg",
+    "url": "http://localhost:8000/uploads/file-1741307599148-317038396.jpg",
+    "thumbUrl": "http://localhost:8000/uploads/thumbnail-file-1741307599148-317038396.jpg",
+    "name": "1a6e7d329eea293a869858a5ccba48f0.jpg",
+    "type": "logo",
+    "userId": "unknown",
+    "uploadDate": "2025-03-07T00:33:19.171Z"
+  },
+  {
+    "uid": "file-1741309099710-420284004.jpg",
+    "url": "http://localhost:8000/uploads/file-1741309099710-420284004.jpg",
+    "name": "29db121c322549a8159a1887a7f53f84.jpg",
+    "status": "done",
+    "type": "image/jpeg",
+    "thumbUrl": "http://localhost:8000/uploads/thumbnail-file-1741309099710-420284004.jpg",
+    "userId": "unknown"
+  },
+  {
+    "uid": "file-1741399770293-98708542.jpg",
+    "url": "http://localhost:8000/uploads/file-1741399770293-98708542.jpg",
+    "name": "584f519d9797132884a37dbfbf712e6b.jpg",
+    "status": "done",
+    "type": "image/jpeg",
+    "thumbUrl": "http://localhost:8000/uploads/thumbnail-file-1741399770293-98708542.jpg",
+    "userId": "unknown2"
+  },
+  {
+    "uid": "file-1741534107386-887272018.jpg",
+    "url": "http://localhost:8000/uploads/file-1741534107386-887272018.jpg",
+    "name": "29eeac4d442993f8f19f55e707bd6264.jpg",
+    "status": "done",
+    "type": "image/jpeg",
+    "thumbUrl": "http://localhost:8000/uploads/thumbnail-file-1741534107386-887272018.jpg",
+    "userId": "unknown"
+  },
+  {
+    "uid": "file-1741703837936-589917802.jpg",
+    "url": "http://localhost:8000/uploads/file-1741703837936-589917802.jpg",
+    "name": "7fbe3c9e118f3d39c16964d7f304c9ee.jpg",
+    "status": "done",
+    "type": "image/jpeg",
+    "thumbUrl": "http://localhost:8000/uploads/thumbnail-file-1741703837936-589917802.jpg",
+    "userId": "unknown"
+  },
+  {
+    "id": "jj-iOZf"
+  },
+  {
+    "uid": "file-1744241561719-92011761.jpg",
+    "url": "http://localhost:8000/uploads/file-1744241561719-92011761.jpg",
+    "name": "photo_2_2025-04-03_20-33-16.jpg",
+    "status": "done",
+    "type": "image/jpeg",
+    "thumbUrl": "http://localhost:8000/uploads/thumbnail-file-1744241561719-92011761.jpg",
+    "userId": "unknown"
+  },
+  {
+    "uid": "file-1744244931521-115953612.jpg",
+    "url": "http://localhost:8000/uploads/file-1744244931521-115953612.jpg",
+    "name": "photo_25_2025-04-03_20-33-16.jpg",
+    "status": "done",
+    "type": "image/jpeg",
+    "thumbUrl": "http://localhost:8000/uploads/thumbnail-file-1744244931521-115953612.jpg",
+    "userId": "unknown"
+  }
+]

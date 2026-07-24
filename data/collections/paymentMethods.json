@@ -1,0 +1,14 @@
+[
+  {
+    "paymentMethodId": "CARD",
+    "label": "Credit Card"
+  },
+  {
+    "paymentMethodId": "BANK",
+    "label": "Bank Transfer"
+  },
+  {
+    "paymentMethodId": "WALLET",
+    "label": "Digital Wallet"
+  }
+]

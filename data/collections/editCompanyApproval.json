@@ -1,0 +1,57 @@
+{
+  "totalCount": 4,
+  "items": [
+    {
+      "id": "eca-001",
+      "companyId": "cmp-001",
+      "companyName": "Acme Media GmbH",
+      "requestedByName": "Anna Schmidt",
+      "requestedByEmail": "anna.schmidt@acme-media.de",
+      "country": "Germany",
+      "category": "GENERAL_DATA",
+      "created": "2025-02-01T09:00:00.000Z",
+      "updated": "2025-02-01T09:05:00.000Z",
+      "status": "PENDING",
+      "isSeen": false
+    },
+    {
+      "id": "eca-002",
+      "companyId": "cmp-002",
+      "companyName": "Bluewave Retail AG",
+      "requestedByName": "Lukas Meier",
+      "requestedByEmail": "lukas.meier@bluewave-retail.at",
+      "country": "Austria",
+      "category": "PAYMENT_AND_BILLING",
+      "created": "2025-02-02T10:15:00.000Z",
+      "updated": "2025-02-02T10:20:00.000Z",
+      "status": "ON_CORRECTION",
+      "isSeen": true
+    },
+    {
+      "id": "eca-003",
+      "companyId": "cmp-003",
+      "companyName": "Sunrise Fitness Studios",
+      "requestedByName": "Maria Rossi",
+      "requestedByEmail": "m.rossi@sunrise-fitness.it",
+      "country": "Italy",
+      "category": "BUSINESS_AND_TAX",
+      "created": "2025-02-03T08:30:00.000Z",
+      "updated": "2025-02-03T09:00:00.000Z",
+      "status": "APPROVED",
+      "isSeen": true
+    },
+    {
+      "id": "eca-004",
+      "companyId": "cmp-004",
+      "companyName": "Global Food Services Ltd.",
+      "requestedByName": "John Miller",
+      "requestedByEmail": "john.miller@globalfood.co.uk",
+      "country": "United Kingdom",
+      "category": "OTHER",
+      "created": "2025-02-04T11:45:00.000Z",
+      "updated": "2025-02-04T12:10:00.000Z",
+      "status": "REJECTED",
+      "isSeen": true
+    }
+  ]
+}

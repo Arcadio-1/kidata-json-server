@@ -1,5 +1,7 @@
 const jsonServer = require("json-server");
 const express = require("express");
+const path = require("path");
+const low = require("lowdb");
 
 const delayMiddleware = require("./src/middleware/delay");
 const { upload, uploadDir } = require("./src/middleware/upload");
@@ -13,10 +15,11 @@ const registerCartRoutes = require("./src/routes/cart");
 const registerScheduleBookingRoutes = require("./src/routes/scheduleBookings");
 const registerCompanyApprovalRoutes = require("./src/routes/companyApprovals");
 const registerCompanyManagementRoutes = require("./src/routes/companyManagement");
+const SplitFileAdapter = require("./src/db/SplitFileAdapter");
 
 const server = jsonServer.create();
-// const router = jsonServer.router("db-2.json");
-const router = jsonServer.router("db.json");
+const db = low(new SplitFileAdapter(path.join(__dirname, "data")));
+const router = jsonServer.router(db);
 const middlewares = jsonServer.defaults();
 
 // Use default middlewares (logger, static, cors, and no-cache)
@@ -40,7 +43,7 @@ registerScheduleBookingRoutes(server, router);
 registerCompanyApprovalRoutes(server, router);
 registerCompanyManagementRoutes(server, router);
 
-// Use JSON Server's auto-generated endpoints from db.json
+// Use JSON Server's auto-generated endpoints from the split database
 server.use(router);
 
 const app = express();

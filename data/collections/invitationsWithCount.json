@@ -1,0 +1,50 @@
+{
+  "items": [
+    {
+      "id": "inv-001",
+      "companyName": "TechCorp Solutions",
+      "companyId": "comp-101",
+      "date": "2025-04-16T16:52:43.000Z",
+      "type": "COMPANY_INVITATION",
+      "status": "PENDING",
+      "isSeen": false
+    },
+    {
+      "id": "inv-002",
+      "companyName": "Global Partners Ltd.",
+      "companyId": "comp-102",
+      "date": "2025-05-02T10:15:00.000Z",
+      "type": "PARTNER_INVITATION",
+      "status": "APPROVED",
+      "isSeen": true
+    },
+    {
+      "id": "inv-003",
+      "companyName": "NextGen Innovations",
+      "companyId": "comp-103",
+      "date": "2025-06-20T08:30:00.000Z",
+      "type": "COMPANY_INVITATION",
+      "status": "REJECT",
+      "isSeen": true
+    },
+    {
+      "id": "inv-004",
+      "companyName": "FutureTech Partners",
+      "companyId": "comp-104",
+      "date": "2025-07-10T14:45:00.000Z",
+      "type": "PARTNER_INVITATION",
+      "status": "PENDING",
+      "isSeen": false
+    },
+    {
+      "id": "inv-005",
+      "companyName": "Enterprise Hub",
+      "companyId": "comp-105",
+      "date": "2025-08-01T09:00:00.000Z",
+      "type": "COMPANY_INVITATION",
+      "status": "APPROVED",
+      "isSeen": false
+    }
+  ],
+  "totalCount": 5
+}

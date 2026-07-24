@@ -1,0 +1,149 @@
+{
+  "items": [
+    {
+      "id": "cmp-001",
+      "companyId": "C-1001",
+      "companyName": "Acme Retail GmbH",
+      "ownerName": "Anna Schmidt",
+      "ownerEmail": "anna.schmidt@acme-retail.com",
+      "country": "Germany",
+      "created": "2025-01-10T09:30:00.000Z",
+      "updated": "2025-01-15T14:45:00.000Z",
+      "status": "PENDING",
+      "isSeen": true
+    },
+    {
+      "id": "cmp-002",
+      "companyId": "C-1002",
+      "companyName": "NovaTech Solutions",
+      "ownerName": "John Doe",
+      "ownerEmail": "john.doe@novatech.io",
+      "country": "United States",
+      "created": "2025-02-02T11:15:00.000Z",
+      "updated": "2025-02-05T08:20:00.000Z",
+      "status": "APPROVED",
+      "isSeen": true
+    },
+    {
+      "id": "cmp-003",
+      "companyId": "C-1003",
+      "companyName": "GreenLeaf Markets",
+      "ownerName": "Maria Rossi",
+      "ownerEmail": "m.rossi@greenleaf.it",
+      "country": "Italy",
+      "created": "2025-03-01T07:00:00.000Z",
+      "updated": "2025-03-03T16:10:00.000Z",
+      "status": "ON_CORRECTION",
+      "isSeen": false
+    },
+    {
+      "id": "cmp-004",
+      "companyId": "C-1004",
+      "companyName": "Skyline Logistics",
+      "ownerName": "Peter Müller",
+      "ownerEmail": "p.mueller@skyline-logistics.de",
+      "country": "Germany",
+      "created": "2025-03-20T10:05:00.000Z",
+      "updated": "2025-03-21T12:30:00.000Z",
+      "status": "REJECTED",
+      "isSeen": true
+    },
+    {
+      "id": "cmp-005",
+      "companyId": "C-1005",
+      "companyName": "BlueOcean Media AG",
+      "ownerName": "Sophie Keller",
+      "ownerEmail": "s.keller@blueocean-media.com",
+      "country": "Switzerland",
+      "created": "2025-04-01T08:00:00.000Z",
+      "updated": "2025-04-02T09:45:00.000Z",
+      "status": "PENDING",
+      "isSeen": false
+    },
+    {
+      "id": "cmp-006",
+      "companyId": "C-1006",
+      "companyName": "UrbanComms Ltd",
+      "ownerName": "Liam Johnson",
+      "ownerEmail": "liam.johnson@urbancomms.co.uk",
+      "country": "United Kingdom",
+      "created": "2025-04-05T12:10:00.000Z",
+      "updated": "2025-04-06T15:30:00.000Z",
+      "status": "PENDING",
+      "isSeen": true
+    },
+    {
+      "id": "cmp-007",
+      "companyId": "C-1007",
+      "companyName": "PixelPoint Studio",
+      "ownerName": "Emily Clark",
+      "ownerEmail": "emily@pixelpoint.studio",
+      "country": "Canada",
+      "created": "2025-04-10T09:25:00.000Z",
+      "updated": "2025-04-11T10:40:00.000Z",
+      "status": "APPROVED",
+      "isSeen": true
+    },
+    {
+      "id": "cmp-008",
+      "companyId": "C-1008",
+      "companyName": "Sunrise Grocery Chain",
+      "ownerName": "Hiro Tanaka",
+      "ownerEmail": "hiro.tanaka@sunrise-grocery.jp",
+      "country": "Japan",
+      "created": "2025-04-12T06:45:00.000Z",
+      "updated": "2025-04-13T13:05:00.000Z",
+      "status": "ON_CORRECTION",
+      "isSeen": false
+    },
+    {
+      "id": "cmp-009",
+      "companyId": "C-1009",
+      "companyName": "MetroBike Sharing",
+      "ownerName": "Carlos Alvarez",
+      "ownerEmail": "c.alvarez@metrobike.es",
+      "country": "Spain",
+      "created": "2025-04-15T08:20:00.000Z",
+      "updated": "2025-04-16T09:10:00.000Z",
+      "status": "REJECTED",
+      "isSeen": false
+    },
+    {
+      "id": "cmp-010",
+      "companyId": "C-1010",
+      "companyName": "NordicHome Interiors",
+      "ownerName": "Eva Lund",
+      "ownerEmail": "eva.lund@nordichome.se",
+      "country": "Sweden",
+      "created": "2025-04-18T10:00:00.000Z",
+      "updated": "2025-04-19T11:30:00.000Z",
+      "status": "PENDING",
+      "isSeen": true
+    },
+    {
+      "id": "cmp-011",
+      "companyId": "C-1011",
+      "companyName": "QuickByte Software",
+      "ownerName": "Rahul Mehta",
+      "ownerEmail": "rahul.mehta@quickbyte.in",
+      "country": "India",
+      "created": "2025-04-20T07:15:00.000Z",
+      "updated": "2025-04-21T08:50:00.000Z",
+      "status": "APPROVED",
+      "isSeen": false
+    },
+    {
+      "id": "cmp-012",
+      "companyId": "C-1012",
+      "companyName": "DesertStar Advertising",
+      "ownerName": "Fatima Al-Sayed",
+      "ownerEmail": "fatima@desertstar-ads.ae",
+      "country": "United Arab Emirates",
+      "created": "2025-04-22T09:40:00.000Z",
+      "updated": "2025-04-23T16:00:00.000Z",
+      "status": "ON_CORRECTION",
+      "isSeen": true
+    }
+  ],
+  "totalCount": 12
+}

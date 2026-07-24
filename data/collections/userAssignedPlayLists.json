@@ -1,0 +1,37 @@
+[
+  {
+    "id": "1",
+    "userAssignedPlayLists": [
+      {
+        "id": "playlist1",
+        "title": "Event Recap",
+        "description": "Playlist of the week's best moments",
+        "categoryLabel": "Entertainment",
+        "categoryColor": "#33FF57",
+        "uploadedBy": "user9",
+        "createDate": "2025-01-10T10:00:00Z",
+        "thumbnailUrl": "/assets/images/profile.webp"
+      },
+      {
+        "id": "playlist2",
+        "title": "Workshop Highlights",
+        "description": "Highlights from recent workshops",
+        "categoryLabel": "Training",
+        "categoryColor": "#FFAA00",
+        "uploadedBy": "user10",
+        "createDate": "2025-02-20T11:15:00Z",
+        "thumbnailUrl": "/assets/images/profile.webp"
+      },
+      {
+        "id": "playlist3",
+        "title": "Weekly Summary",
+        "description": "Weekly summary of events and news",
+        "categoryLabel": "News",
+        "categoryColor": "#0099CC",
+        "uploadedBy": "user11",
+        "createDate": "2025-03-30T13:00:00Z",
+        "thumbnailUrl": "/assets/images/profile.webp"
+      }
+    ]
+  }
+]

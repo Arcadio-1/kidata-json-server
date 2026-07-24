@@ -1,0 +1,45 @@
+[
+  {
+    "id": "promo_starter",
+    "name": "Starter Bundle",
+    "baseCredits": 5000,
+    "bonusPercentage": 10,
+    "bonusCredits": 500,
+    "totalCredits": 5500,
+    "priceEur": 50,
+    "savings": 5,
+    "pricePerHundredCredits": 0.9091,
+    "badge": "Starter Bundle",
+    "expiryYears": 3,
+    "isFeatured": false
+  },
+  {
+    "id": "promo_pro",
+    "name": "Pro Bundle",
+    "baseCredits": 12000,
+    "bonusPercentage": 25,
+    "bonusCredits": 3000,
+    "totalCredits": 15000,
+    "priceEur": 120,
+    "savings": 30,
+    "pricePerHundredCredits": 0.8,
+    "badge": "Pro Bundle 🔥",
+    "expiryYears": 3,
+    "isFeatured": true,
+    "label": "Most Popular Offer"
+  },
+  {
+    "id": "promo_team",
+    "name": "Team Bundle",
+    "baseCredits": 30000,
+    "bonusPercentage": 40,
+    "bonusCredits": 12000,
+    "totalCredits": 42000,
+    "priceEur": 300,
+    "savings": 120,
+    "pricePerHundredCredits": 0.7143,
+    "badge": "Team Bundle",
+    "expiryYears": 3,
+    "isFeatured": false
+  }
+]

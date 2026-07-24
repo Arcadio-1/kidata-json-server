@@ -1,0 +1,84 @@
+[
+  {
+    "id": "f456e23c-b12f-4e42-8c7b-a1987f7e4c9c",
+    "header": {
+      "date": "2024-08-12T13:06:26.227Z",
+      "latestStep": 4,
+      "status": "pending",
+      "userId": "22222"
+    },
+    "stepZero": {
+      "addressData": {
+        "companyName": "ffffffff",
+        "companyFormId": "6665a04027c8f5aa2bf1f0cf",
+        "street": "ffffffffffff",
+        "number": "ffffffffff",
+        "addressSupplement": "ffffffffff",
+        "zip": "33333333333",
+        "city": "dddd",
+        "federalStateId": "6665a04027c8f5aa2bf1f447",
+        "countryId": "6665a04027c8f5aa2bf1f046",
+        "phone": "33333333333",
+        "mobile": "33333333333333333",
+        "fax": "3333333333",
+        "phoneCountryCodeId": "49",
+        "mobileCountryCodeId": "49",
+        "faxCountryCodeId": "49",
+        "webUrl": "",
+        "email": "ffffff@ffff.com"
+      },
+      "legalPerson": {
+        "firstName": "hossein",
+        "lastName": "skandari",
+        "position": "dev",
+        "salutationId": "MR",
+        "titleId": "CEO"
+      }
+    },
+    "stepOne": {
+      "administrator": {
+        "isTakeOver": true,
+        "email": "hgj@fsdf.com",
+        "firstName": "hossein",
+        "lastName": "skandari",
+        "mobile": "33333333",
+        "mobileCountryCodeId": "49",
+        "position": "dev",
+        "salutationId": "MR",
+        "titleId": "CEO",
+        "username": "ddddd"
+      }
+    },
+    "stepTwo": {
+      "industry": {
+        "description": "rrrrrrrrrrr",
+        "industryId": "TECH",
+        "industryName": "rrrrrrrr"
+      }
+    },
+    "stepThree": {
+      "businessModel": {
+        "businessModelId": "BM002"
+      }
+    },
+    "stepFour": {
+      "billingAddress": {
+        "isDiffer": true
+      },
+      "paymentInformation": {
+        "accountOwner": "hhhhhhhhh",
+        "BIC": "hhhhhhhhhh",
+        "IBAN": "hhhhhhhhhhhhhhhh",
+        "paymentMethodId": "BANK"
+      },
+      "proof": {
+        "businessLicenseUrl": "url",
+        "idCardUrl": "url"
+      },
+      "tax": {
+        "identificationNumber": "hhhh",
+        "vatNumber": "hhhhhhhhhhhhhh"
+      }
+    }
+  }
+]

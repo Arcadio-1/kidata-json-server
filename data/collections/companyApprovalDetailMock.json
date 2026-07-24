@@ -1,0 +1,119 @@
+{
+  "registration": {
+    "id": "registration-mock",
+    "header": {
+      "userId": "user-mock",
+      "latestStep": 4,
+      "date": "2025-01-10T09:30:00.000Z",
+      "isBasicComplete": true,
+      "fullRegistrationStatus": "pending"
+    },
+    "info": {
+      "addressData": {
+        "companyName": "Mock Company GmbH",
+        "companyFormId": "gmbh",
+        "street": "Alexanderplatz",
+        "number": "1",
+        "addressSupplement": "3rd Floor",
+        "zip": "10178",
+        "city": "Berlin",
+        "federalStateId": "BE",
+        "countryId": "DE",
+        "phone": "301234567",
+        "mobile": "1712345678",
+        "fax": "",
+        "phoneDialingCodeId": "+49",
+        "mobileDialingCodeId": "+49",
+        "faxDialingCodeId": null,
+        "webUrl": "https://example.com",
+        "email": "company@example.com"
+      },
+      "legalPerson": {
+        "salutationId": "mr",
+        "titleId": null,
+        "firstName": "Max",
+        "lastName": "Mustermann",
+        "position": "Managing Director"
+      },
+      "administrator": {
+        "isTakenOver": true,
+        "salutationId": "mr",
+        "titleId": null,
+        "firstName": "Max",
+        "lastName": "Mustermann",
+        "position": "Administrator",
+        "mobile": "1712345678",
+        "mobileDialingCodeId": "+49",
+        "phoneDialingCodeId": "+49",
+        "phone": "301234567",
+        "email": "admin@example.com",
+        "username": "company.admin"
+      },
+      "businessModel": {
+        "businessModelId": "retail-chain"
+      },
+      "billingAddress": {
+        "isDiffer": false,
+        "salutationId": "mr",
+        "titleId": null,
+        "firstName": "Max",
+        "lastName": "Mustermann",
+        "street": "Alexanderplatz",
+        "number": "1",
+        "addressSupplement": "3rd Floor",
+        "zip": "10178",
+        "city": "Berlin",
+        "federalStateId": "BE",
+        "countryId": "DE"
+      },
+      "paymentInformation": {
+        "paymentMethodId": "sepa",
+        "accountOwner": "Mock Company GmbH",
+        "IBAN": "DE89370400440532013000",
+        "BIC": "COBADEFFXXX"
+      },
+      "industry": {
+        "name": "Retail",
+        "description": "Digital signage and retail media",
+        "id": "retail"
+      },
+      "tax": {
+        "identificationNumber": "DE123456789",
+        "vatNumber": "DE123456789"
+      },
+      "receiveEmail": true
+    }
+  },
+  "medias": {
+    "businessLicense": [
+      {
+        "uid": "business-license-mock",
+        "url": "http://localhost:8000/uploads/file-1741301986576-402840178.jpg",
+        "name": "business-license.jpg",
+        "status": "done",
+        "type": "image/jpeg",
+        "thumbUrl": "http://localhost:8000/uploads/file-1741301986576-402840178.jpg"
+      }
+    ],
+    "idCard": [
+      {
+        "uid": "id-card-mock",
+        "url": "http://localhost:8000/uploads/file-1741302671531-453111314.jpg",
+        "name": "owner-id-card.jpg",
+        "status": "done",
+        "type": "image/jpeg",
+        "thumbUrl": "http://localhost:8000/uploads/file-1741302671531-453111314.jpg"
+      }
+    ],
+    "logo": [
+      {
+        "uid": "company-logo-mock",
+        "url": "http://localhost:8000/uploads/file-1741307599148-317038396.jpg",
+        "name": "company-logo.jpg",
+        "status": "done",
+        "type": "image/jpeg",
+        "thumbUrl": "http://localhost:8000/uploads/thumbnail-file-1741307599148-317038396.jpg"
+      }
+    ]
+  }
+}

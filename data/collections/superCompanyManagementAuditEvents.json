@@ -1,0 +1,44 @@
+[
+  {
+    "id": "audit-acme-profile",
+    "timestamp": "2026-07-01T10:00:00.000Z",
+    "actor": {
+      "id": "admin-001",
+      "name": "Mock Super Admin"
+    },
+    "companyId": "company-acme",
+    "actionType": "company.profile.billingPayment.updated",
+    "entityType": "company",
+    "entityId": "company-acme",
+    "before": {
+      "paymentInformation": "[REDACTED]"
+    },
+    "after": {
+      "paymentInformation": "[REDACTED]"
+    },
+    "reason": "Support-assisted billing profile correction",
+    "result": "success",
+    "correlationId": "corr-acme-profile"
+  },
+  {
+    "id": "audit-bluewave-suspended",
+    "timestamp": "2026-07-10T12:00:00.000Z",
+    "actor": {
+      "id": "admin-002",
+      "name": "Restricted Mock Admin"
+    },
+    "companyId": "company-bluewave",
+    "actionType": "company.suspended",
+    "entityType": "company",
+    "entityId": "company-bluewave",
+    "before": {
+      "operationalStatus": "active"
+    },
+    "after": {
+      "operationalStatus": "suspended"
+    },
+    "reason": "Deterministic suspension fixture",
+    "result": "success",
+    "correlationId": "corr-bluewave-suspended"
+  }
+]

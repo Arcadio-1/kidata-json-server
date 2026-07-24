@@ -1,0 +1,187 @@
+{
+  "summary": {
+    "currentBalance": 23350,
+    "creditIncome": 11700,
+    "creditIncomeChange": 118.5,
+    "creditHanded": 5000,
+    "creditHandedChange": 0,
+    "totalExpenses": 4300,
+    "totalExpensesChange": 19.5
+  },
+  "chartData": [
+    {
+      "month": "Jul",
+      "expenses": 3200,
+      "income": 5800
+    },
+    {
+      "month": "Aug",
+      "expenses": 4100,
+      "income": 7200
+    },
+    {
+      "month": "Sep",
+      "expenses": 3800,
+      "income": 6500
+    },
+    {
+      "month": "Oct",
+      "expenses": 5200,
+      "income": 8900
+    },
+    {
+      "month": "Nov",
+      "expenses": 4600,
+      "income": 9200
+    },
+    {
+      "month": "Dec",
+      "expenses": 4300,
+      "income": 11700
+    }
+  ],
+  "transactions": [
+    {
+      "id": "tx_001",
+      "type": "income",
+      "from": "Booking Income",
+      "to": "Florian Schafft",
+      "description": null,
+      "amount": 3000,
+      "date": "2025-04-21T10:30:00.000Z"
+    },
+    {
+      "id": "tx_002",
+      "type": "income",
+      "from": "Booking Income",
+      "to": "Partner GmbH",
+      "description": null,
+      "amount": 5000,
+      "date": "2025-04-20T15:45:00.000Z"
+    },
+    {
+      "id": "tx_003",
+      "type": "income",
+      "from": "Booking Income",
+      "to": "Client GmbH",
+      "description": null,
+      "amount": 1500,
+      "date": "2025-04-19T09:20:00.000Z"
+    },
+    {
+      "id": "tx_004",
+      "type": "topup",
+      "from": "Credits Added",
+      "to": "Order: Top-Up Package",
+      "description": null,
+      "amount": 6000,
+      "date": "2025-04-18T14:00:00.000Z"
+    },
+    {
+      "id": "tx_005",
+      "type": "expense",
+      "from": "Booking Expense",
+      "to": "Rent Payment GmbH",
+      "description": null,
+      "amount": -2500,
+      "date": "2025-04-18T11:30:00.000Z"
+    },
+    {
+      "id": "tx_006",
+      "type": "expense",
+      "from": "Booking Expense",
+      "to": "Alina Peters GmbH",
+      "description": null,
+      "amount": -1500,
+      "date": "2025-04-16T16:15:00.000Z"
+    },
+    {
+      "id": "tx_007",
+      "type": "income",
+      "from": "Booking Income",
+      "to": "Digital GmbH",
+      "description": null,
+      "amount": 2500,
+      "date": "2025-04-15T13:45:00.000Z"
+    },
+    {
+      "id": "tx_008",
+      "type": "expense",
+      "from": "Booking Expense",
+      "to": "Rent Subscription",
+      "description": null,
+      "amount": -800,
+      "date": "2025-04-14T10:00:00.000Z"
+    }
+  ],
+  "subscriptions": [
+    {
+      "id": "sub_kidata_pro",
+      "name": "KiData Pro",
+      "description": "Full marketplace access, analytics, priority support",
+      "priceEur": 29,
+      "billingPeriod": "monthly",
+      "nextBillingDate": "2025-05-28",
+      "status": "active"
+    },
+    {
+      "id": "sub_extra_storage",
+      "name": "Extra Storage",
+      "description": "+100 GB cloud storage for your marketplace assets",
+      "priceEur": 9,
+      "billingPeriod": "monthly",
+      "nextBillingDate": "2025-05-28",
+      "status": "active"
+    }
+  ],
+  "invoiceHistory": [
+    {
+      "id": "inv_001",
+      "subscriptionName": "KiData Pro",
+      "invoiceNumber": "INV-0003-05-24-3",
+      "date": "2025-04-28",
+      "amountEur": -29,
+      "status": "paid"
+    },
+    {
+      "id": "inv_002",
+      "subscriptionName": "Extra Storage",
+      "invoiceNumber": "INV-0003-05-24-3",
+      "date": "2025-04-28",
+      "amountEur": -9,
+      "status": "paid"
+    },
+    {
+      "id": "inv_003",
+      "subscriptionName": "KiData Pro",
+      "invoiceNumber": "INV-0003-05-24-2",
+      "date": "2025-03-28",
+      "amountEur": -29,
+      "status": "paid"
+    },
+    {
+      "id": "inv_004",
+      "subscriptionName": "Extra Storage",
+      "invoiceNumber": "INV-0003-05-24-2",
+      "date": "2025-03-28",
+      "amountEur": -9,
+      "status": "paid"
+    },
+    {
+      "id": "inv_005",
+      "subscriptionName": "KiData Pro",
+      "invoiceNumber": "INV-0003-05-24-1",
+      "date": "2025-02-28",
+      "amountEur": -29,
+      "status": "paid"
+    },
+    {
+      "id": "inv_006",
+      "subscriptionName": "Extra Storage",
+      "invoiceNumber": "INV-0003-05-24-1",
+      "date": "2025-02-28",
+      "amountEur": -9,
+      "status": "paid"
+    }
+  ]
+}

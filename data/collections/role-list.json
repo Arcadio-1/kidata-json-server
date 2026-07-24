@@ -1,0 +1,23 @@
+[
+  {
+    "id": "6892f1fa9e652a0fcf347ad6",
+    "name": "Display Manager",
+    "description": "this role is for managing displays",
+    "permissions": [
+      "CREATE_DISPLAY",
+      "SET_DISPLAY_GENERAL_INFO",
+      "SET_DISPLAY_SPECIFICATION",
+      "SET_DISPLAY_VALUATION",
+      "SET_PLACEHOLDER_MEDIA",
+      "adSpot_editWithoutApproval",
+      "SET_DISPLAY_STATUS",
+      "adSpot_saveCommercial",
+      "adSpot_approveCommercial",
+      "adSpot_synchronizeCommercial",
+      "adSpot_archiveCommercial",
+      "adSpot_deleteCommercial",
+      "adSpot_blockUnblock",
+      "adSpot_swapCommercials"
+    ]
+  }
+]

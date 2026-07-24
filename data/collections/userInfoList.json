@@ -1,0 +1,112 @@
+[
+  {
+    "id": "1",
+    "profileImage": "/assets/images/profile.webp",
+    "username": "admin_tech01",
+    "firstName": "Jane",
+    "lastName": "Smith",
+    "email": "jane.smith@techsolutions.com",
+    "phone": "321-654-0987",
+    "companyName": "Tech Solutions Inc.",
+    "userId": "1"
+  },
+  {
+    "id": "2",
+    "profileImage": "/assets/images/profile.webp",
+    "username": "admin_creative02",
+    "firstName": "Bob",
+    "lastName": "Green",
+    "email": "bob.green@creativemedia.com",
+    "phone": "654-321-7890",
+    "companyName": "Creative Media Group",
+    "userId": "2"
+  },
+  {
+    "id": "3",
+    "profileImage": "/assets/images/profile.webp",
+    "username": "admin_innovative03",
+    "firstName": "Daniel",
+    "lastName": "Kim",
+    "email": "daniel.kim@innovativetech.com",
+    "phone": "567-890-1234",
+    "companyName": "Innovative Tech Solutions",
+    "userId": "3"
+  },
+  {
+    "id": "4",
+    "profileImage": "/assets/images/profile.webp",
+    "username": "admin_elite04",
+    "firstName": "Emma",
+    "lastName": "White",
+    "email": "emma.white@elitesoftware.com",
+    "phone": "432-567-8901",
+    "companyName": "Elite Software Solutions",
+    "userId": "4"
+  },
+  {
+    "id": "5",
+    "profileImage": "/assets/images/profile.webp",
+    "username": "admin_global05",
+    "firstName": "Frank",
+    "lastName": "Lewis",
+    "email": "frank.lewis@globaltech.com",
+    "phone": "321-123-4567",
+    "companyName": "Global Tech Innovations",
+    "userId": "5"
+  },
+  {
+    "id": "6",
+    "profileImage": "/assets/images/profile.webp",
+    "username": "admin_nextgen06",
+    "firstName": "Hugh",
+    "lastName": "Clark",
+    "email": "hugh.clark@nextgensolutions.com",
+    "phone": "123-456-7899",
+    "companyName": "NextGen Solutions",
+    "userId": "6"
+  },
+  {
+    "id": "7",
+    "profileImage": "/assets/images/profile.webp",
+    "username": "admin_innovators07",
+    "firstName": "Ivy",
+    "lastName": "Scott",
+    "email": "ivy.scott@techinnovators.com",
+    "phone": "567-890-4321",
+    "companyName": "Tech Innovators LLC",
+    "userId": "7"
+  },
+  {
+    "id": "8",
+    "profileImage": "/assets/images/profile.webp",
+    "username": "admin_digital08",
+    "firstName": "Karen",
+    "lastName": "Miller",
+    "email": "karen.miller@digitalsolutions.com",
+    "phone": "456-123-7890",
+    "companyName": "Digital Solutions Co.",
+    "userId": "8"
+  },
+  {
+    "id": "9",
+    "profileImage": "/assets/images/profile.webp",
+    "username": "admin_pioneer09",
+    "firstName": "Megan",
+    "lastName": "Lewis",
+    "email": "megan.lewis@pioneerinnovations.com",
+    "phone": "789-012-3456",
+    "companyName": "Pioneer Innovations",
+    "userId": "9"
+  },
+  {
+    "id": "10",
+    "profileImage": "/assets/images/profile.webp",
+    "username": "admin_visionary10",
+    "firstName": "Oscar",
+    "lastName": "Hunt",
+    "email": "oscar.hunt@visionaryenterprises.com",
+    "phone": "654-987-3210",
+    "companyName": "Visionary Enterprises",
+    "userId": "10"
+  }
+]

@@ -1,0 +1,461 @@
+[
+  {
+    "id": "1",
+    "onlineId": "ONL001",
+    "displayType": "LCDScreen",
+    "companyTitle": "Partner Display 1",
+    "size": "55'' 140(cm)",
+    "keywords": "",
+    "medias": [
+      {
+        "uid": "1",
+        "url": "/assets/images/profile.webp",
+        "name": "file",
+        "status": "done"
+      },
+      {
+        "uid": "2",
+        "url": "/assets/images/profile.webp",
+        "name": "file",
+        "status": "done"
+      },
+      {
+        "uid": "3",
+        "url": "/assets/images/profile.webp",
+        "name": "file",
+        "status": "done"
+      }
+    ],
+    "resolution": "HD",
+    "zipCode": "12345",
+    "city": "City A",
+    "street": "Street A",
+    "district": "District A",
+    "visibilityRate": 4,
+    "visitorCount": 3,
+    "priceCategory": 2,
+    "rate": 1,
+    "utilizationRate": 4,
+    "availableDays": [
+      "mon",
+      "tue",
+      "wed",
+      "thu",
+      "fri"
+    ],
+    "companyLogo": "/assets/images/profile.webp",
+    "isFavorite": true,
+    "creditsPerSlot": 150
+  },
+  {
+    "id": "2",
+    "onlineId": "ONL002",
+    "size": "55'' 140(cm)",
+    "medias": [
+      {
+        "uid": "1",
+        "url": "/assets/images/profile.webp",
+        "name": "file",
+        "status": "done"
+      },
+      {
+        "uid": "2",
+        "url": "/assets/images/profile.webp",
+        "name": "file",
+        "status": "done"
+      },
+      {
+        "uid": "3",
+        "url": "/assets/images/profile.webp",
+        "name": "file",
+        "status": "done"
+      }
+    ],
+    "displayType": "Tablet",
+    "companyTitle": "Partner Display 2",
+    "keywords": "",
+    "resolution": "FullHD",
+    "zipCode": "54321",
+    "city": "City B",
+    "street": "Street B",
+    "district": "District B",
+    "visibilityRate": 5,
+    "visitorCount": 2,
+    "priceCategory": 3,
+    "rate": 4,
+    "utilizationRate": 5,
+    "availableDays": [
+      "sat",
+      "sun"
+    ],
+    "companyLogo": "/assets/images/profile.webp",
+    "isFavorite": true,
+    "creditsPerSlot": 200
+  },
+  {
+    "id": "3",
+    "onlineId": "ONL003",
+    "size": "55'' 140(cm)",
+    "medias": [
+      {
+        "uid": "1",
+        "url": "/assets/images/profile.webp",
+        "name": "file",
+        "status": "done"
+      },
+      {
+        "uid": "2",
+        "url": "/assets/images/profile.webp",
+        "name": "file",
+        "status": "done"
+      },
+      {
+        "uid": "3",
+        "url": "/assets/images/profile.webp",
+        "name": "file",
+        "status": "done"
+      }
+    ],
+    "displayType": "LCDFloorstand",
+    "companyTitle": "Partner Display 3",
+    "keywords": "",
+    "resolution": "4KUHD",
+    "zipCode": "67890",
+    "city": "City C",
+    "street": "Street C",
+    "district": "District C",
+    "visibilityRate": 3,
+    "visitorCount": 4,
+    "priceCategory": 1,
+    "rate": 3,
+    "utilizationRate": 3,
+    "availableDays": [
+      "mon",
+      "fri"
+    ],
+    "companyLogo": "/assets/images/profile.webp",
+    "isFavorite": false,
+    "creditsPerSlot": 180
+  },
+  {
+    "id": "4",
+    "onlineId": "ONL004",
+    "size": "55'' 140(cm)",
+    "medias": [
+      {
+        "uid": "1",
+        "url": "/assets/images/profile.webp",
+        "name": "file",
+        "status": "done"
+      },
+      {
+        "uid": "2",
+        "url": "/assets/images/profile.webp",
+        "name": "file",
+        "status": "done"
+      },
+      {
+        "uid": "3",
+        "url": "/assets/images/profile.webp",
+        "name": "file",
+        "status": "done"
+      }
+    ],
+    "displayType": "LEDVideoWall",
+    "companyTitle": "Partner Display 4",
+    "keywords": "",
+    "resolution": "8KUHD",
+    "zipCode": "98765",
+    "city": "City D",
+    "street": "Street D",
+    "district": "District D",
+    "visibilityRate": 2,
+    "visitorCount": 1,
+    "priceCategory": 4,
+    "rate": 2,
+    "utilizationRate": 4,
+    "availableDays": [
+      "wed",
+      "thu"
+    ],
+    "companyLogo": "/assets/images/profile.webp",
+    "isFavorite": true,
+    "creditsPerSlot": 250
+  },
+  {
+    "id": "5",
+    "onlineId": "ONL005",
+    "size": "55'' 140(cm)",
+    "medias": [
+      {
+        "uid": "1",
+        "url": "/assets/images/profile.webp",
+        "name": "file",
+        "status": "done"
+      },
+      {
+        "uid": "2",
+        "url": "/assets/images/profile.webp",
+        "name": "file",
+        "status": "done"
+      },
+      {
+        "uid": "3",
+        "url": "/assets/images/profile.webp",
+        "name": "file",
+        "status": "done"
+      }
+    ],
+    "displayType": "Custom",
+    "companyTitle": "Partner Display 5",
+    "keywords": "",
+    "resolution": "1920x1080",
+    "zipCode": "45678",
+    "city": "City E",
+    "street": "Street E",
+    "district": "District E",
+    "visibilityRate": 4,
+    "visitorCount": 5,
+    "priceCategory": 5,
+    "rate": 5,
+    "utilizationRate": 2,
+    "availableDays": [
+      "mon",
+      "tue",
+      "sat"
+    ],
+    "companyLogo": "/assets/images/profile.webp",
+    "isFavorite": false,
+    "creditsPerSlot": 120
+  },
+  {
+    "id": "6",
+    "onlineId": "ONL006",
+    "size": "55'' 140(cm)",
+    "medias": [
+      {
+        "uid": "1",
+        "url": "/assets/images/profile.webp",
+        "name": "file",
+        "status": "done"
+      },
+      {
+        "uid": "2",
+        "url": "/assets/images/profile.webp",
+        "name": "file",
+        "status": "done"
+      },
+      {
+        "uid": "3",
+        "url": "/assets/images/profile.webp",
+        "name": "file",
+        "status": "done"
+      }
+    ],
+    "displayType": "Smartphone",
+    "companyTitle": "Partner Display 6",
+    "keywords": "",
+    "resolution": "HD",
+    "zipCode": "11223",
+    "city": "City F",
+    "street": "Street F",
+    "district": "District F",
+    "visibilityRate": 5,
+    "visitorCount": 3,
+    "priceCategory": 1,
+    "rate": 4,
+    "utilizationRate": 1,
+    "availableDays": [
+      "mon",
+      "tue",
+      "wed"
+    ],
+    "companyLogo": "/assets/images/profile.webp",
+    "isFavorite": false,
+    "creditsPerSlot": 300
+  },
+  {
+    "id": "7",
+    "onlineId": "ONL007",
+    "size": "55'' 140(cm)",
+    "medias": [
+      {
+        "uid": "1",
+        "url": "/assets/images/profile.webp",
+        "name": "file",
+        "status": "done"
+      },
+      {
+        "uid": "2",
+        "url": "/assets/images/profile.webp",
+        "name": "file",
+        "status": "done"
+      },
+      {
+        "uid": "3",
+        "url": "/assets/images/profile.webp",
+        "name": "file",
+        "status": "done"
+      }
+    ],
+    "displayType": "LCDVideoWall",
+    "companyTitle": "Partner Display 7",
+    "keywords": "",
+    "resolution": "4KUHD",
+    "zipCode": "33445",
+    "city": "City G",
+    "street": "Street G",
+    "district": "District G",
+    "visibilityRate": 2,
+    "visitorCount": 4,
+    "priceCategory": 2,
+    "rate": 3,
+    "utilizationRate": 5,
+    "availableDays": [
+      "thu",
+      "fri",
+      "sun"
+    ],
+    "companyLogo": "/assets/images/profile.webp",
+    "isFavorite": false,
+    "creditsPerSlot": 175
+  },
+  {
+    "id": "8",
+    "onlineId": "ONL008",
+    "size": "55'' 140(cm)",
+    "medias": [
+      {
+        "uid": "1",
+        "url": "/assets/images/profile.webp",
+        "name": "file",
+        "status": "done"
+      },
+      {
+        "uid": "2",
+        "url": "/assets/images/profile.webp",
+        "name": "file",
+        "status": "done"
+      },
+      {
+        "uid": "3",
+        "url": "/assets/images/profile.webp",
+        "name": "file",
+        "status": "done"
+      }
+    ],
+    "displayType": "LCDFloorstand",
+    "companyTitle": "Partner Display 8",
+    "keywords": "",
+    "resolution": "FullHD",
+    "zipCode": "99887",
+    "city": "City H",
+    "street": "Street H",
+    "district": "District H",
+    "visibilityRate": 3,
+    "visitorCount": 5,
+    "priceCategory": 4,
+    "rate": 2,
+    "utilizationRate": 3,
+    "availableDays": [
+      "mon",
+      "wed",
+      "sat"
+    ],
+    "companyLogo": "/assets/images/profile.webp",
+    "isFavorite": true,
+    "creditsPerSlot": 220
+  },
+  {
+    "id": "9",
+    "onlineId": "ONL009",
+    "size": "55'' 140(cm)",
+    "medias": [
+      {
+        "uid": "1",
+        "url": "/assets/images/profile.webp",
+        "name": "file",
+        "status": "done"
+      },
+      {
+        "uid": "2",
+        "url": "/assets/images/profile.webp",
+        "name": "file",
+        "status": "done"
+      },
+      {
+        "uid": "3",
+        "url": "/assets/images/profile.webp",
+        "name": "file",
+        "status": "done"
+      }
+    ],
+    "displayType": "LCDScreen",
+    "companyTitle": "Partner Display 9",
+    "keywords": "",
+    "resolution": "8KUHD",
+    "zipCode": "44556",
+    "city": "City I",
+    "street": "Street I",
+    "district": "District I",
+    "visibilityRate": 4,
+    "visitorCount": 2,
+    "priceCategory": 5,
+    "rate": 5,
+    "utilizationRate": 4,
+    "availableDays": [
+      "tue",
+      "thu",
+      "sun"
+    ],
+    "isFavorite": false,
+    "companyLogo": "/assets/images/profile.webp",
+    "creditsPerSlot": 160
+  },
+  {
+    "id": "10",
+    "onlineId": "ONL010",
+    "size": "55'' 140(cm)",
+    "medias": [
+      {
+        "uid": "1",
+        "url": "/assets/images/profile.webp",
+        "name": "file",
+        "status": "done"
+      },
+      {
+        "uid": "2",
+        "url": "/assets/images/profile.webp",
+        "name": "file",
+        "status": "done"
+      },
+      {
+        "uid": "3",
+        "url": "/assets/images/profile.webp",
+        "name": "file",
+        "status": "done"
+      }
+    ],
+    "displayType": "Tablet",
+    "companyTitle": "Partner Display 10",
+    "keywords": "",
+    "resolution": "HD",
+    "zipCode": "55667",
+    "city": "City J",
+    "street": "Street J",
+    "district": "District J",
+    "visibilityRate": 5,
+    "visitorCount": 3,
+    "priceCategory": 3,
+    "rate": 4,
+    "utilizationRate": 5,
+    "availableDays": [
+      "mon",
+      "fri",
+      "sat"
+    ],
+    "companyLogo": "/assets/images/profile.webp",
+    "isFavorite": true,
+    "creditsPerSlot": 280
+  }
+]

@@ -1,0 +1,52 @@
+[
+  {
+    "id": "user_001",
+    "addressData": {
+      "companyName": "Acme Logisticssdsd",
+      "companyFormId": "gmbh",
+      "street": "Hauptstraße",
+      "number": "42A",
+      "addressSupplement": "3rd Floor",
+      "zip": "10115",
+      "city": "Berlin",
+      "federalStateId": "BE",
+      "countryId": "EN",
+      "phone": "301234567",
+      "mobile": "1512345678",
+      "fax": "301234568",
+      "phoneDialingCodeId": "683b1d7a2e82f31453637444",
+      "mobileDialingCodeId": "683b1d7a2e82f31453637444",
+      "faxDialingCodeId": "683b1d7a2e82f31453637444",
+      "webUrl": "https://acme.example",
+      "email": "info@acme.example"
+    },
+    "legalPerson": {
+      "firstName": "Max",
+      "lastName": "Mustermann",
+      "position": "Managing Director",
+      "salutationId": "mr",
+      "titleId": null
+    },
+    "industryInformation": {
+      "industryName": "Agriculture",
+      "industryDescription": "mkissdhsd",
+      "industryId": "Agriculture",
+      "taxIdentificationNumber": "2352363",
+      "taxVatNumber": "ABA454841"
+    },
+    "paymentInformation": {
+      "billingIsDiffer": false,
+      "billingSalutationId": "MR",
+      "billingTitleId": "NONE",
+      "billingFirstName": "Milad",
+      "billingLastName": "Tavassoti",
+      "billingStreet": "Musterstraße",
+      "billingNumber": "12A",
+      "billingAddressSupplement": "Wohnung 4",
+      "billingZip": "10115",
+      "billingCity": "Berlin",
+      "billingFederalStateId": "BE",
+      "billingCountryId": "DE"
+    }
+  }
+]

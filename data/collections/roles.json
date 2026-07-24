@@ -1,0 +1,52 @@
+[
+  {
+    "id": "1",
+    "label": "Adminstartor",
+    "desc": "The administrator manages the entire KiData account."
+  },
+  {
+    "id": "2",
+    "label": "Content Manager",
+    "desc": "A Content Manager is responsible for the content."
+  },
+  {
+    "id": "3",
+    "label": "Spot Manager",
+    "desc": "An Spot Manager creates and manages advertisements."
+  },
+  {
+    "id": "4",
+    "label": "Asset Manager",
+    "desc": "An Asset Manager manages the files in the media pool."
+  },
+  {
+    "id": "5",
+    "label": "User Manager",
+    "desc": "A User Manager manages user accounts and their roles."
+  },
+  {
+    "id": "6",
+    "label": "KiData Manager",
+    "desc": "A KiData Manager mangers kidata accounts."
+  },
+  {
+    "id": "7",
+    "label": "Advetisement Manager",
+    "desc": "An advertisement manager manges ads."
+  },
+  {
+    "id": "8",
+    "label": "Partner Manager",
+    "desc": "A partner manager manages the partner of the company."
+  },
+  {
+    "id": "9",
+    "label": "Category Manager",
+    "desc": "A category Manager manages..."
+  },
+  {
+    "id": "10",
+    "label": "Scheduling Manager",
+    "desc": "An Scheduling manager manages ...."
+  }
+]

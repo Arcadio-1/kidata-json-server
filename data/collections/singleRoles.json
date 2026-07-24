@@ -1,0 +1,188 @@
+[
+  {
+    "id": "1",
+    "roles": [
+      {
+        "id": "8",
+        "label": "Partner Manager",
+        "desc": ""
+      },
+      {
+        "id": "3",
+        "label": "spot Manager",
+        "desc": ""
+      }
+    ],
+    "roleName": "hhhh",
+    "roleDesc": "hhhhhh",
+    "rolePermissions": [
+      "adSpot_assignCategories",
+      "adSpot_createCategories",
+      "adSpot_setToPrivate",
+      "adSpot_uploadFinishedSpots",
+      "adSpot_createInEditor",
+      "adSpot_editWithoutApproval",
+      "adSpot_saveDraft",
+      "adSpot_saveCommercial",
+      "adSpot_approveCommercial",
+      "adSpot_synchronizeCommercial",
+      "adSpot_archiveCommercial",
+      "adSpot_deleteCommercial",
+      "adSpot_blockUnblock",
+      "adSpot_swapCommercials"
+    ]
+  },
+  {
+    "id": "2",
+    "roles": [
+      {
+        "id": "1",
+        "label": "administrator",
+        "desc": ""
+      },
+      {
+        "id": "7",
+        "label": "Advertisement Manager",
+        "desc": ""
+      }
+    ],
+    "roleName": "TEST ROLE",
+    "roleDesc": "TEST ROLE",
+    "rolePermissions": [
+      "Advertisement",
+      "CREATE_AD",
+      "DELETE_AD",
+      "GET_AD",
+      "EDIT_AD_GENERAL_INFO",
+      "SET_AD_LOCK",
+      "SET_AD_ARCHIVE",
+      "SET_AD_COMMERCIAL",
+      "SWAP_AD",
+      "SET_AD_CONFIRMED_SYNC_COMMERCIAL",
+      "SET_AD_SYNC_COMMERCIAL",
+      "SAVE_AD_DRAFT",
+      "CONFIRM_AD",
+      "CONFIRM_AD_COMMERCIAL"
+    ]
+  },
+  {
+    "id": "3",
+    "roles": [
+      {
+        "id": "2",
+        "label": "Content Manager",
+        "desc": ""
+      },
+      {
+        "id": "1",
+        "label": "administrator",
+        "desc": ""
+      }
+    ],
+    "roleName": "sss",
+    "roleDesc": "ddd",
+    "rolePermissions": [
+      "CREATE_DISPLAY"
+    ]
+  },
+  {
+    "id": "4",
+    "roles": [
+      {
+        "id": "1",
+        "label": "administrator",
+        "desc": ""
+      },
+      {
+        "id": "5",
+        "label": "User Manager",
+        "desc": ""
+      }
+    ]
+  },
+  {
+    "id": "5",
+    "roles": [
+      {
+        "id": "3",
+        "label": "Spot Manager",
+        "desc": ""
+      },
+      {
+        "id": "1",
+        "label": "administrator",
+        "desc": ""
+      }
+    ]
+  },
+  {
+    "id": "6",
+    "roles": [],
+    "roleName": "TEST ROLE",
+    "roleDesc": "TEST ROLE",
+    "rolePermissions": [
+      "display",
+      "CREATE_DISPLAY",
+      "DUPLICATE_DISPLAY",
+      "DELETE_DISPLAY",
+      "SET_DISPLAY_LOCK",
+      "GET_PARTNER_DISPLAYS_INFO",
+      "GET_PARTNERS_DISPLAYS_INFO",
+      "SET_DISPLAY_ACCESS_CONTROLS",
+      "SET_DISPLAY_CATEGORY",
+      "SET_DISPLAY_SPECIFICATION",
+      "MANAGE_DISPLAY_CONTENT_FILTERS",
+      "EDIT_DISPLAY",
+      "SET_DISPLAY_GENERAL_INFO",
+      "SET_DISPLAY_AVAILABLE_TIMES",
+      "SET_DISPLAY_LOCATION_ADDRESS",
+      "SET_DISPLAY_VALUATION",
+      "SET_DISPLAY_PRICE_RATE",
+      "MANAGE_LOCATION_MEDIA",
+      "MANAGE_PLACEHOLDER_MEDIA",
+      "SET_DISPLAY_STATUS",
+      "SEND_DISPLAY_TOKEN",
+      "SET_PARTNER_FAVORITE_DISPLAY"
+    ]
+  },
+  {
+    "id": "7",
+    "roles": [
+      {
+        "id": "2",
+        "label": "Content Manager",
+        "desc": ""
+      }
+    ]
+  },
+  {
+    "id": "8",
+    "roles": [
+      {
+        "id": "3",
+        "label": "Spot Manager",
+        "desc": ""
+      }
+    ]
+  },
+  {
+    "id": "9",
+    "roles": [
+      {
+        "id": "5",
+        "label": "User Manager",
+        "desc": ""
+      }
+    ]
+  },
+  {
+    "id": "10",
+    "roles": [
+      {
+        "id": "6",
+        "label": "Kidata Manager",
+        "desc": ""
+      }
+    ]
+  }
+]

@@ -1,0 +1,66 @@
+[
+  {
+    "federalStateId": "BW-BW",
+    "label": "Baden-Württemberg"
+  },
+  {
+    "federalStateId": "BY-BY",
+    "label": "Bayern"
+  },
+  {
+    "federalStateId": "BE-BE",
+    "label": "Berlin"
+  },
+  {
+    "federalStateId": "BB-BB",
+    "label": "Brandenburg"
+  },
+  {
+    "federalStateId": "HB-HB",
+    "label": "Bremen"
+  },
+  {
+    "federalStateId": "HH-HH",
+    "label": "Hamburg"
+  },
+  {
+    "federalStateId": "HE-HE",
+    "label": "Hessen"
+  },
+  {
+    "federalStateId": "MV-MV",
+    "label": "Mecklenburg-Vorpommern"
+  },
+  {
+    "federalStateId": "NI-NI",
+    "label": "Niedersachsen"
+  },
+  {
+    "federalStateId": "NW-NW",
+    "label": "Nordrhein-Westfalen"
+  },
+  {
+    "federalStateId": "RP-RP",
+    "label": "Rheinland-Pfalz"
+  },
+  {
+    "federalStateId": "SL-SL",
+    "label": "Saarland"
+  },
+  {
+    "federalStateId": "SN-SN",
+    "label": "Sachsen"
+  },
+  {
+    "federalStateId": "ST-ST",
+    "label": "Sachsen-Anhalt"
+  },
+  {
+    "federalStateId": "SH-SH",
+    "label": "Schleswig-Holstein"
+  },
+  {
+    "federalStateId": "TH-TH",
+    "label": "Thüringen"
+  }
+]

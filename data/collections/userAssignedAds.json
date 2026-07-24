@@ -1,0 +1,37 @@
+[
+  {
+    "id": "1",
+    "userAssignedAds": [
+      {
+        "id": "ad1",
+        "title": "Big Summer Sale",
+        "description": "Promotional ad for summer sale",
+        "categoryLabel": "Retail",
+        "categoryColor": "#3377FF",
+        "uploadedBy": "user4",
+        "createDate": "2025-03-25T10:00:00Z",
+        "thumbnailUrl": "/assets/images/profile.webp"
+      },
+      {
+        "id": "ad2",
+        "title": "New Smartphone Launch",
+        "description": "Advertisement for the new smartphone",
+        "categoryLabel": "Technology",
+        "categoryColor": "#FF9933",
+        "uploadedBy": "user5",
+        "createDate": "2025-04-01T09:15:00Z",
+        "thumbnailUrl": "/assets/images/profile.webp"
+      },
+      {
+        "id": "ad3",
+        "title": "Weekend Flash Deal",
+        "description": "Limited time online flash deal",
+        "categoryLabel": "Deals",
+        "categoryColor": "#FF6600",
+        "uploadedBy": "user6",
+        "createDate": "2025-04-07T15:20:00Z",
+        "thumbnailUrl": "/assets/images/profile.webp"
+      }
+    ]
+  }
+]

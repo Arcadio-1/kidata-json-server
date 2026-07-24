@@ -60,7 +60,7 @@ module.exports = function registerUploadRoutes(server, router, upload) {
       userId, // temporary property for filtering
     };
 
-    // Ensure "uploads" array exists in db.json, then push the new upload metadata
+    // Ensure "uploads" array exists in the split database, then push the new upload metadata
     const db = router.db;
     if (!db.has("uploads").value()) {
       db.set("uploads", []).write();

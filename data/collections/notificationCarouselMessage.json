@@ -1,0 +1,52 @@
+[
+  {
+    "id": "a3f8d0a5-2b0a-4b3b-8d12-9b5fd8f2a7c1",
+    "date": "2025-07-15T08:30:00.000Z",
+    "title": "Welcome to our Summer Release ☀️"
+  },
+  {
+    "id": "6a2b0c9e-8d4a-4b1e-9f1a-5f0b1e3c7d92",
+    "date": "2025-08-01T10:00:00.000Z",
+    "title": "New Feature: Dark Mode"
+  },
+  {
+    "id": "c7f1a2d4-9b88-4e4e-a3b3-1b9f0a3d2c44",
+    "date": "2025-08-18T12:00:00.000Z",
+    "title": "Tip of the Week: Keyboard Shortcuts"
+  },
+  {
+    "id": "f21b0e77-3f9e-4693-9c2d-5b6a1a8d0b3e",
+    "date": "2025-09-01T07:00:00.000Z",
+    "title": "Back to Work Sale: Up to 30% Off"
+  },
+  {
+    "id": "0e9a1d44-2c3b-4b77-9a22-0b5e9a1f2c6d",
+    "date": "2025-09-10T16:30:00.000Z",
+    "title": "We Hit 10,000 Users — Thank You!"
+  },
+  {
+    "id": "b4a2c7d8-9e1f-4d2a-8a6e-3f2b1c7d9e00",
+    "date": "2025-09-22T09:15:00.000Z",
+    "title": "Scheduled Maintenance: Sept 25, 02:00–03:00 UTC"
+  },
+  {
+    "id": "e8d2b7c1-6a45-4a9c-b3e1-9f0c2d7a1b55",
+    "date": "2025-09-28T14:45:00.000Z",
+    "title": "New Blog: Performance Tuning Guide"
+  },
+  {
+    "id": "9f7a2c1e-3d44-49a0-8e2f-7c1b2a9d3f66",
+    "date": "2025-10-03T11:00:00.000Z",
+    "title": "Outage Resolved: Postmortem Inside"
+  },
+  {
+    "id": "2c4e7a9b-1d22-4a88-b0a1-3f6e9c0d7b11",
+    "date": "2025-10-08T18:20:00.000Z",
+    "title": "Refer a Friend, Get 20% Off"
+  },
+  {
+    "id": "7b1e9a2c-5d3f-4f80-9b77-0c2a1e5f9d33",
+    "date": "2025-10-11T09:00:00.000Z",
+    "title": "Support Hours Extended: 7 Days a Week"
+  }
+]

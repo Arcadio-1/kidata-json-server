@@ -1,0 +1,26 @@
+[
+  {
+    "month": "January",
+    "earnings": 10
+  },
+  {
+    "month": "February",
+    "earnings": 30
+  },
+  {
+    "month": "March",
+    "earnings": 50
+  },
+  {
+    "month": "April",
+    "earnings": 40
+  },
+  {
+    "month": "May",
+    "earnings": 60
+  },
+  {
+    "month": "June",
+    "earnings": 20
+  }
+]

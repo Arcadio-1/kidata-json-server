@@ -1,0 +1,246 @@
+{
+  "bundles": [
+    {
+      "id": "offer-bundle-1",
+      "badge": "Growth Bundle",
+      "discountPercent": 33,
+      "isFeatured": false,
+      "title": "Get started fast",
+      "description": "Everything you need to scale your digital signage operation quickly. Includes extra storage, team members, displays, and analytics to accelerate your growth from day one.",
+      "includedItems": [
+        {
+          "icon": "HardDrive",
+          "name": "Extra Storage +100 GB",
+          "standalonePrice": 8.9
+        },
+        {
+          "icon": "Users",
+          "name": "Extra Team Members +5",
+          "standalonePrice": 12.5
+        },
+        {
+          "icon": "Monitor",
+          "name": "Extra Displays +3",
+          "standalonePrice": 9.9
+        },
+        {
+          "icon": "BarChart3",
+          "name": "Advanced Analytics",
+          "standalonePrice": 14.9
+        }
+      ],
+      "originalPrice": 46.2,
+      "bundlePrice": 30.95,
+      "daysLeft": 14,
+      "validUntil": "2026-06-30"
+    },
+    {
+      "id": "offer-bundle-2",
+      "badge": "Pro Visibility Bundle",
+      "discountPercent": 27,
+      "isFeatured": true,
+      "title": "Maximize your reach",
+      "description": "Boost visibility and engagement with HD video ads, partner network access, and priority support. Perfect for businesses ready to expand their digital presence.",
+      "includedItems": [
+        {
+          "icon": "Video",
+          "name": "HD Video Ads",
+          "standalonePrice": 19.9
+        },
+        {
+          "icon": "Network",
+          "name": "Partner Network Plus",
+          "standalonePrice": 14.9
+        },
+        {
+          "icon": "Headphones",
+          "name": "Priority Support",
+          "standalonePrice": 9.9
+        },
+        {
+          "icon": "BarChart3",
+          "name": "Advanced Analytics",
+          "standalonePrice": 14.9
+        }
+      ],
+      "originalPrice": 59.6,
+      "bundlePrice": 43.5,
+      "daysLeft": 14,
+      "validUntil": "2026-06-30"
+    },
+    {
+      "id": "offer-bundle-3",
+      "badge": "Team Scale Bundle",
+      "discountPercent": 28,
+      "isFeatured": false,
+      "title": "Scale your team efficiently",
+      "description": "Add more team members, define advanced roles, and manage user assignments with ease. Built for growing organizations that need structured access control.",
+      "includedItems": [
+        {
+          "icon": "Users",
+          "name": "Extra Team Members +10",
+          "standalonePrice": 22.5
+        },
+        {
+          "icon": "Shield",
+          "name": "Advanced Roles",
+          "standalonePrice": 11.9
+        },
+        {
+          "icon": "UserCog",
+          "name": "User Assignment Pro",
+          "standalonePrice": 8.9
+        },
+        {
+          "icon": "Headphones",
+          "name": "Priority Support",
+          "standalonePrice": 9.9
+        }
+      ],
+      "originalPrice": 53.2,
+      "bundlePrice": 38.3,
+      "daysLeft": 10,
+      "validUntil": "2026-06-30"
+    },
+    {
+      "id": "offer-bundle-4",
+      "badge": "Content Creator Bundle",
+      "discountPercent": 31,
+      "isFeatured": false,
+      "title": "Create stunning content",
+      "description": "Unlock premium media tools, extra storage, and HD video capabilities. Ideal for content creators who need powerful media management and production tools.",
+      "includedItems": [
+        {
+          "icon": "HardDrive",
+          "name": "Extra Storage +250 GB",
+          "standalonePrice": 18.9
+        },
+        {
+          "icon": "Video",
+          "name": "HD Video Ads",
+          "standalonePrice": 19.9
+        },
+        {
+          "icon": "Image",
+          "name": "Media Pool Premium",
+          "standalonePrice": 12.9
+        },
+        {
+          "icon": "Palette",
+          "name": "Advanced Editor Tools",
+          "standalonePrice": 9.9
+        }
+      ],
+      "originalPrice": 61.6,
+      "bundlePrice": 42.5,
+      "daysLeft": 7,
+      "validUntil": "2026-06-30"
+    },
+    {
+      "id": "offer-bundle-5",
+      "badge": "Compliance & Privacy Bundle",
+      "discountPercent": 29,
+      "isFeatured": false,
+      "title": "Stay compliant with confidence",
+      "description": "Comprehensive security and compliance package with encryption, audit trails, and GDPR tools. Essential for businesses handling sensitive data and regulatory requirements.",
+      "includedItems": [
+        {
+          "icon": "Lock",
+          "name": "Data Encryption Plus",
+          "standalonePrice": 14.9
+        },
+        {
+          "icon": "FileCheck",
+          "name": "Audit Compliance",
+          "standalonePrice": 11.9
+        },
+        {
+          "icon": "ShieldCheck",
+          "name": "GDPR Toolkit",
+          "standalonePrice": 9.9
+        },
+        {
+          "icon": "Database",
+          "name": "Premium Backup",
+          "standalonePrice": 12.9
+        }
+      ],
+      "originalPrice": 49.6,
+      "bundlePrice": 35.2,
+      "daysLeft": 12,
+      "validUntil": "2026-06-30"
+    }
+  ],
+  "flashDeals": [
+    {
+      "id": "flash-1",
+      "icon": "BarChart3",
+      "iconColor": "text-blue-500",
+      "iconBg": "bg-blue-50",
+      "title": "Statistics & Analytics — First 3 Months Free",
+      "description": "Get full access to advanced analytics and reporting dashboards at no cost for your first 3 months.",
+      "daysLeft": 12,
+      "originalPrice": 14.9,
+      "dealPrice": 0,
+      "dealLabel": "Free",
+      "actionLabel": "Claim Free",
+      "actionVariant": "free"
+    },
+    {
+      "id": "flash-2",
+      "icon": "Headphones",
+      "iconColor": "text-purple-500",
+      "iconBg": "bg-purple-50",
+      "title": "Better Support — Priority Queue Access",
+      "description": "Jump to the front of the line with priority support. Faster response times and dedicated agents.",
+      "daysLeft": 7,
+      "originalPrice": 19.9,
+      "dealPrice": 14.95,
+      "dealLabel": "14,95 €/mo",
+      "actionLabel": "Claim",
+      "actionVariant": "claim"
+    },
+    {
+      "id": "flash-3",
+      "icon": "HardDrive",
+      "iconColor": "text-emerald-500",
+      "iconBg": "bg-emerald-50",
+      "title": "Extra Storage +250 GB — First Month Free",
+      "description": "Expand your storage instantly with 250 GB of additional cloud space, free for the first month.",
+      "daysLeft": 3,
+      "originalPrice": 18.9,
+      "dealPrice": 0,
+      "dealLabel": "Free",
+      "actionLabel": "Claim Free",
+      "actionVariant": "free"
+    },
+    {
+      "id": "flash-4",
+      "icon": "Users",
+      "iconColor": "text-amber-500",
+      "iconBg": "bg-amber-50",
+      "title": "Additional Partners +3 — Special Rate",
+      "description": "Add up to 3 more partners to your network at a discounted monthly rate. Limited availability.",
+      "daysLeft": 9,
+      "originalPrice": 12.9,
+      "dealPrice": 8.19,
+      "dealLabel": "8,19 €/mo",
+      "actionLabel": "Claim",
+      "actionVariant": "claim"
+    },
+    {
+      "id": "flash-5",
+      "icon": "Zap",
+      "iconColor": "text-rose-500",
+      "iconBg": "bg-rose-50",
+      "title": "Fast Commercial Sync — First 2 Months Free",
+      "description": "Instantly sync your commercial content across all displays with zero delay, free for 2 months.",
+      "daysLeft": 3,
+      "originalPrice": 11.9,
+      "dealPrice": 0,
+      "dealLabel": "Free",
+      "actionLabel": "Claim Free",
+      "actionVariant": "free"
+    }
+  ]
+}

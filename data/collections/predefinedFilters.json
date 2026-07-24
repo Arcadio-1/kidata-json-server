@@ -1,0 +1,32 @@
+[
+  {
+    "predefinedFilterid": 1,
+    "label": "Protection of minors",
+    "value": "ProtectionOfMinors"
+  },
+  {
+    "predefinedFilterid": 2,
+    "label": "Alcohol",
+    "value": "Alcohol"
+  },
+  {
+    "predefinedFilterid": 3,
+    "label": "Tobacco",
+    "value": "Tobacco"
+  },
+  {
+    "predefinedFilterid": 4,
+    "label": "Violence",
+    "value": "Violence"
+  },
+  {
+    "predefinedFilterid": 5,
+    "label": "Eroticism",
+    "value": "Eroticism"
+  },
+  {
+    "predefinedFilterid": 6,
+    "label": "Pharma",
+    "value": "Pharma"
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "id": "1",
+    "onlineId": "ADS-ON1624",
+    "title": "Lorem Ipsum",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "categoryLabel": "Closing and Fashion",
+    "fileFormat": "Video / MP4",
+    "resolution": "3840 x 2160 (4K UHD)",
+    "orientation": "Landscape",
+    "size": "1,3 MB",
+    "length": "00:25:30"
+  },
+  {
+    "id": "2",
+    "onlineId": "ADS-ON1625",
+    "title": "Dolor Sit Amet",
+    "description": "Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+    "categoryLabel": "Automotive",
+    "fileFormat": "Image / JPEG",
+    "resolution": "1920 x 1080 (Full HD)",
+    "orientation": "Landscape",
+    "size": "2,5 MB",
+    "length": "00:00:00"
+  },
+  {
+    "id": "3",
+    "onlineId": "ADS-ON1626",
+    "title": "Consectetur Adipiscing",
+    "description": "Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
+    "categoryLabel": "Electronics",
+    "fileFormat": "Video / MOV",
+    "resolution": "1280 x 720 (HD)",
+    "orientation": "Landscape",
+    "size": "800 KB",
+    "length": "00:05:00"
+  },
+  {
+    "id": "4",
+    "onlineId": "ADS-ON1627",
+    "title": "Sed Do Eiusmod",
+    "description": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "categoryLabel": "Travel",
+    "fileFormat": "Image / PNG",
+    "resolution": "1080 x 1920 (Vertical)",
+    "orientation": "Portrait",
+    "size": "3,2 MB",
+    "length": "00:00:00"
+  },
+  {
+    "id": "5",
+    "onlineId": "ADS-ON1628",
+    "title": "Tempor Incididunt",
+    "description": "Tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam.",
+    "categoryLabel": "Food & Beverage",
+    "fileFormat": "Video / AVI",
+    "resolution": "640 x 480 (SD)",
+    "orientation": "Landscape",
+    "size": "500 KB",
+    "length": "00:02:45"
+  }
+]

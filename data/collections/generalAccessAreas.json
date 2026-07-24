@@ -1,0 +1,12 @@
+[
+  {
+    "id": "1",
+    "generalAccessAreas": [
+      "GENERAL_AD",
+      "GENERAL_PLAYLIST",
+      "GENERAL_PRIVATE_PLAYLIST",
+      "GENERAL_SHORT_PLAYLIST",
+      "GENERAL_PRIVATE_SHORT_PLAYLIST"
+    ]
+  }
+]

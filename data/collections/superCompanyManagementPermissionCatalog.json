@@ -1,0 +1,53 @@
+[
+  {
+    "id": "displays",
+    "enLabel": "Displays",
+    "deLabel": "Displays",
+    "actions": [
+      {
+        "actionKey": "CREATE_DISPLAY",
+        "enLabel": "Create displays",
+        "deLabel": "Displays erstellen"
+      },
+      {
+        "actionKey": "SET_DISPLAY_STATUS",
+        "enLabel": "Change display status",
+        "deLabel": "Displaystatus ändern"
+      }
+    ]
+  },
+  {
+    "id": "mediaPool",
+    "enLabel": "Media pool",
+    "deLabel": "Medienpool",
+    "actions": [
+      {
+        "actionKey": "UPLOAD_MEDIAPOOL_MEDIA",
+        "enLabel": "Upload media",
+        "deLabel": "Medien hochladen"
+      },
+      {
+        "actionKey": "DELETE_MEDIAPOOL_MEDIA",
+        "enLabel": "Delete media",
+        "deLabel": "Medien löschen"
+      }
+    ]
+  },
+  {
+    "id": "userManagement",
+    "enLabel": "User management",
+    "deLabel": "Benutzerverwaltung",
+    "actions": [
+      {
+        "actionKey": "MANAGE_ROLE",
+        "enLabel": "Manage roles",
+        "deLabel": "Rollen verwalten"
+      },
+      {
+        "actionKey": "SET_USER_STATUS",
+        "enLabel": "Change user status",
+        "deLabel": "Benutzerstatus ändern"
+      }
+    ]
+  }
+]

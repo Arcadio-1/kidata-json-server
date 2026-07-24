@@ -1,0 +1,655 @@
+[
+  {
+    "header": {
+      "date": "2024-09-24T13:06:23.869Z",
+      "latestStep": 1,
+      "status": "draft",
+      "userId": "22222"
+    },
+    "id": 1,
+    "stepZero": {
+      "digitalSignageInformation": {
+        "description": "ggggggggggggggggg",
+        "keywords": "gggggggggggg",
+        "title": "ggggggggggggggg"
+      },
+      "displaySignageCategoryId": "66f07c70fdb0cc3a463b3b84",
+      "accessibilityInformation": {
+        "accessibility": "public",
+        "location": "external"
+      },
+      "sharingDisplay": {
+        "shareOptions": "notShare",
+        "invitingMessage": "",
+        "partnerList": []
+      },
+      "industryFilter": {
+        "industriesId": []
+      },
+      "predefinedFilters": {
+        "filtersId": []
+      }
+    }
+  },
+  {
+    "header": {
+      "date": "2024-09-24T13:29:36.782Z",
+      "latestStep": 0,
+      "status": "draft",
+      "userId": "66f0770bfdb0cc3a463b3ade"
+    },
+    "id": 2
+  },
+  {
+    "header": {
+      "date": "2024-09-27T14:43:00.929Z",
+      "latestStep": 3,
+      "status": "draft",
+      "userId": "22222"
+    },
+    "id": 3,
+    "stepZero": {
+      "digitalSignageInformation": {
+        "description": "wwwwwwwwwwwww",
+        "keywords": "jjjj",
+        "title": "qqq"
+      },
+      "displaySignageCategoryId": "66f07c70fdb0cc3a463b3b84",
+      "accessibilityInformation": {
+        "accessibility": "public",
+        "location": "internal"
+      },
+      "sharingDisplay": {
+        "shareOptions": "notShare",
+        "invitingMessage": "",
+        "partnerList": []
+      },
+      "industryFilter": {
+        "industriesId": []
+      },
+      "predefinedFilters": {
+        "filtersId": []
+      }
+    },
+    "stepOne": {
+      "displayTechnicalSpecifications": {
+        "displayBrandId": "66e183e7f6972617511c434b",
+        "displayModel": "tttttttttttt",
+        "displaySerialNumber": "hhhhhhhhhhhhhhh",
+        "displaySound": "on"
+      },
+      "displayOperatingSystem": "googleAndroid",
+      "displayAlignment": "horizontal",
+      "displaySizeTypeA": 10,
+      "displayType": "tablet",
+      "displayResolutionTypeB": "low"
+    },
+    "common": {
+      "displayTime": {
+        "50": 0,
+        "51": 0,
+        "52": 0,
+        "53": 0,
+        "54": 0,
+        "55": 0,
+        "56": 0,
+        "57": 0,
+        "58": 0,
+        "59": 0,
+        "60": 0,
+        "61": 0,
+        "62": 0,
+        "63": 0,
+        "64": 0,
+        "65": 0,
+        "66": 0,
+        "67": 0,
+        "68": 0,
+        "74": 0,
+        "75": 0,
+        "76": 0,
+        "77": 0,
+        "78": 0,
+        "79": 0,
+        "80": 0,
+        "81": 0,
+        "82": 0,
+        "83": 0,
+        "84": 0,
+        "85": 0,
+        "86": 0,
+        "87": 0,
+        "88": 0,
+        "89": 0,
+        "90": 0,
+        "91": 0,
+        "92": 0,
+        "98": 0,
+        "99": 0,
+        "100": 0,
+        "101": 0,
+        "102": 0,
+        "103": 0,
+        "104": 0,
+        "105": 0,
+        "106": 0,
+        "107": 0,
+        "108": 0,
+        "109": 0,
+        "110": 0,
+        "111": 0,
+        "112": 0,
+        "113": 0,
+        "114": 0,
+        "115": 0,
+        "116": 0
+      }
+    },
+    "stepTwo": {
+      "location": {
+        "placment": "ggggggggg",
+        "description": "dddddddddd"
+      },
+      "mediasOfADisplay": [
+        {
+          "uid": "1",
+          "url": "/assets/images/profile.webp",
+          "name": "file",
+          "status": "done"
+        },
+        {
+          "uid": "2",
+          "url": "/assets/images/profile.webp",
+          "name": "file",
+          "status": "done"
+        },
+        {
+          "uid": "3",
+          "url": "/assets/images/profile.webp",
+          "name": "file",
+          "status": "done"
+        },
+        {
+          "uid": "4",
+          "url": "/assets/images/profile.webp",
+          "name": "file",
+          "status": "done"
+        }
+      ],
+      "onMapLocation": {
+        "lng": 8.257847769425478,
+        "lat": 50.08448280674365
+      },
+      "position": {
+        "addressSupplement": "eeeeeeeeeeeeeeee",
+        "city": "hhhhhhhhhhhhhhhhh",
+        "countryId": "66e183e7f6972617511c4280",
+        "federalStateId": "66e183e7f6972617511c46aa",
+        "number": "wwwwwwwwwwwwwww",
+        "street": "eeeeee",
+        "zip": "f"
+      }
+    }
+  },
+  {
+    "header": {
+      "date": "2024-09-28T22:07:25.781Z",
+      "latestStep": 4,
+      "status": "draft",
+      "userId": "22222"
+    },
+    "id": 4,
+    "stepZero": {
+      "digitalSignageInformation": {
+        "description": "rrrrrrrrrrrrrrr",
+        "keywords": "rrrrrrrrr",
+        "title": "rrrrrr"
+      },
+      "displaySignageCategoryId": "66cf314349bb2a481864cb72",
+      "accessibilityInformation": {
+        "accessibility": "public",
+        "location": "internal"
+      },
+      "sharingDisplay": {
+        "shareOptions": "notShare",
+        "invitingMessage": "",
+        "partnerList": []
+      },
+      "industryFilter": {
+        "industriesId": []
+      },
+      "predefinedFilters": {
+        "filtersId": []
+      }
+    },
+    "stepOne": {
+      "displayTechnicalSpecifications": {
+        "displayBrandId": "66e183e7f6972617511c4347",
+        "displayModel": "hh",
+        "displaySerialNumber": "hhhhhhhhhhhhhhh",
+        "displaySound": "on"
+      },
+      "displayOperatingSystem": "microsoftWindows",
+      "displayAlignment": "horizontal",
+      "displaySizeTypeA": 55,
+      "displayType": "LCDScreen",
+      "displayResolutionTypeA": "FullHD"
+    },
+    "common": {
+      "displayTime": {
+        "1": 2,
+        "2": 2,
+        "3": 2,
+        "4": 2,
+        "5": 3,
+        "6": 3,
+        "7": 3,
+        "8": 3,
+        "9": 3,
+        "10": 3,
+        "11": 3,
+        "12": 2,
+        "13": 2,
+        "14": 2,
+        "15": 4,
+        "16": 4,
+        "17": 4,
+        "18": 4,
+        "19": 4,
+        "20": 2,
+        "21": 2,
+        "22": 2,
+        "23": 2,
+        "24": 2,
+        "25": 2,
+        "26": 2,
+        "27": 2,
+        "28": 2,
+        "29": 3,
+        "30": 3,
+        "31": 3,
+        "32": 3,
+        "33": 3,
+        "34": 3,
+        "35": 3,
+        "36": 2,
+        "37": 2,
+        "38": 2,
+        "39": 4,
+        "40": 4,
+        "41": 4,
+        "42": 4,
+        "43": 4,
+        "44": 2,
+        "45": 2,
+        "46": 2,
+        "47": 2,
+        "48": 2,
+        "51": 1,
+        "52": 1,
+        "53": 3,
+        "54": 3,
+        "55": 3,
+        "56": 3,
+        "57": 3,
+        "58": 3,
+        "59": 3,
+        "60": 2,
+        "61": 2,
+        "62": 2,
+        "63": 4,
+        "64": 4,
+        "65": 4,
+        "66": 4,
+        "67": 4,
+        "68": 1,
+        "69": 2,
+        "75": 1,
+        "76": 1,
+        "77": 3,
+        "78": 3,
+        "79": 3,
+        "80": 3,
+        "81": 3,
+        "82": 3,
+        "83": 3,
+        "84": 2,
+        "85": 2,
+        "86": 2,
+        "87": 4,
+        "88": 4,
+        "89": 4,
+        "90": 4,
+        "91": 4,
+        "92": 1,
+        "93": 2,
+        "99": 1,
+        "100": 1,
+        "101": 3,
+        "102": 3,
+        "103": 3,
+        "104": 3,
+        "105": 3,
+        "106": 3,
+        "107": 3,
+        "108": 2,
+        "109": 2,
+        "110": 2,
+        "111": 4,
+        "112": 4,
+        "113": 4,
+        "114": 4,
+        "115": 4,
+        "116": 1,
+        "117": 2,
+        "123": 1,
+        "124": 1,
+        "125": 3,
+        "126": 3,
+        "127": 3,
+        "128": 3,
+        "129": 3,
+        "130": 3,
+        "131": 3,
+        "132": 2,
+        "133": 2,
+        "134": 2,
+        "135": 4,
+        "136": 4,
+        "137": 4,
+        "138": 4,
+        "139": 4,
+        "140": 1,
+        "141": 2
+      }
+    },
+    "stepTwo": {
+      "location": {
+        "placment": "sssssss",
+        "description": "gggggggggg"
+      },
+      "mediasOfADisplay": [
+        {
+          "uid": "1",
+          "url": "/assets/images/profile.webp",
+          "name": "file",
+          "status": "done"
+        },
+        {
+          "uid": "2",
+          "url": "/assets/images/profile.webp",
+          "name": "file",
+          "status": "done"
+        },
+        {
+          "uid": "3",
+          "url": "/assets/images/profile.webp",
+          "name": "file",
+          "status": "done"
+        },
+        {
+          "uid": "4",
+          "url": "/assets/images/profile.webp",
+          "name": "file",
+          "status": "done"
+        }
+      ],
+      "onMapLocation": {
+        "lng": 8.689927206250628,
+        "lat": 50.11626574747508
+      },
+      "position": {
+        "addressSupplement": "fffffffffffff",
+        "city": "wwwwwwwwwwwwwww",
+        "countryId": "66e183e7f6972617511c4280",
+        "federalStateId": "66e183e7f6972617511c46aa",
+        "number": "ggg4",
+        "street": "ggggggggggggggggg",
+        "zip": "gggggggggggg"
+      }
+    },
+    "stepThree": {
+      "priceCredits": 3,
+      "visibilityRate": 3,
+      "visitorCount": 4
+    }
+  },
+  {
+    "header": {
+      "date": "2024-09-29T08:41:31.143Z",
+      "latestStep": 5,
+      "status": "draft",
+      "userId": "22222"
+    },
+    "id": 5,
+    "stepZero": {
+      "digitalSignageInformation": {
+        "description": "gggggggggg",
+        "keywords": "ggggggggggg",
+        "title": "gggggggg"
+      },
+      "displaySignageCategoryId": "66cf506749bb2a481864cc3d",
+      "accessibilityInformation": {
+        "accessibility": "public",
+        "location": "external"
+      },
+      "sharingDisplay": {
+        "shareOptions": "restricted",
+        "invitingMessage": "",
+        "partnerList": []
+      },
+      "industryFilter": {
+        "industriesId": [
+          "66bcd418448ffa01893ffd9a"
+        ]
+      },
+      "predefinedFilters": {
+        "filtersId": []
+      }
+    },
+    "stepOne": {
+      "displayTechnicalSpecifications": {
+        "displayBrandId": "66e183e7f6972617511c4347",
+        "displayModel": "sssssssssss",
+        "displaySerialNumber": "ttttttttttttt",
+        "displaySound": "on"
+      },
+      "displayOperatingSystem": "microsoftWindows",
+      "displayAlignment": "horizontal",
+      "displaySizeTypeA": 55,
+      "displayType": "LCDScreen",
+      "displayResolutionTypeA": "FullHD"
+    },
+    "common": {
+      "displayTime": {
+        "40": 4,
+        "65": 4,
+        "90": 4
+      }
+    },
+    "stepTwo": {
+      "location": {
+        "placment": "ddddddddddddd",
+        "description": "vvvvvvvvvvvvvv"
+      },
+      "mediasOfADisplay": [
+        {
+          "uid": "1",
+          "url": "/assets/images/profile.webp",
+          "name": "file",
+          "status": "done"
+        },
+        {
+          "uid": "2",
+          "url": "/assets/images/profile.webp",
+          "name": "file",
+          "status": "done"
+        },
+        {
+          "uid": "3",
+          "url": "/assets/images/profile.webp",
+          "name": "file",
+          "status": "done"
+        },
+        {
+          "uid": "4",
+          "url": "/assets/images/profile.webp",
+          "name": "file",
+          "status": "done"
+        }
+      ],
+      "onMapLocation": {
+        "lng": 8.247893282070546,
+        "lat": 50.08017950507347
+      },
+      "position": {
+        "addressSupplement": "ggggggggg",
+        "city": "ggggggg",
+        "countryId": "66e183e7f6972617511c4280",
+        "federalStateId": "66e183e7f6972617511c46a7",
+        "number": "g",
+        "street": "ggggggggg",
+        "zip": "gggggg"
+      }
+    },
+    "stepThree": {
+      "priceCredits": 3,
+      "visibilityRate": 3,
+      "visitorCount": 2
+    },
+    "stepFour": {
+      "email": "skndri-hosyn@outlook.com",
+      "isActive": true,
+      "placeholderMedias": [
+        {
+          "uid": "1",
+          "url": "/assets/images/profile.webp",
+          "name": "file",
+          "status": "done"
+        },
+        {
+          "uid": "2",
+          "url": "/assets/images/profile.webp",
+          "name": "file",
+          "status": "done"
+        },
+        {
+          "uid": "3",
+          "url": "/assets/images/profile.webp",
+          "name": "file",
+          "status": "done"
+        },
+        {
+          "uid": "4",
+          "url": "/assets/images/profile.webp",
+          "name": "file",
+          "status": "done"
+        }
+      ]
+    }
+  },
+  {
+    "header": {
+      "date": "2024-09-29T08:41:45.009Z",
+      "latestStep": 0,
+      "status": "draft",
+      "userId": "66cb4df7c65d2b9592c2adb3"
+    },
+    "id": 6
+  },
+  {
+    "header": {
+      "date": "2024-09-29T08:41:55.099Z",
+      "latestStep": 0,
+      "status": "draft",
+      "userId": "66cb4df7c65d2b9592c2adb3"
+    },
+    "id": 7
+  },
+  {
+    "header": {
+      "date": "2024-10-01T11:10:37.417Z",
+      "latestStep": 1,
+      "status": "draft",
+      "userId": "22222"
+    },
+    "id": 8,
+    "stepZero": {
+      "digitalSignageInformation": {
+        "description": "eeee",
+        "keywords": "eeee",
+        "title": "e"
+      },
+      "displaySignageCategoryId": "66cf314349bb2a481864cb72",
+      "accessibilityInformation": {
+        "accessibility": "public",
+        "location": "internal"
+      },
+      "sharingDisplay": {
+        "shareOptions": "notShare",
+        "invitingMessage": "",
+        "partnerList": []
+      },
+      "industryFilter": {
+        "industriesId": []
+      },
+      "predefinedFilters": {
+        "filtersId": []
+      }
+    }
+  },
+  {
+    "header": {
+      "date": "2024-10-03T01:30:18.696Z",
+      "latestStep": 0,
+      "status": "draft",
+      "userId": "66cb4df7c65d2b9592c2adb3"
+    },
+    "id": 9
+  },
+  {
+    "header": {
+      "date": "2024-10-03T12:26:14.101Z",
+      "latestStep": 0,
+      "status": "draft",
+      "userId": "66cb4df7c65d2b9592c2adb3"
+    },
+    "id": 10
+  },
+  {
+    "header": {
+      "date": "2024-10-07T17:46:37.383Z",
+      "latestStep": 0,
+      "status": "pending",
+      "userId": "66cb4df7c65d2b9592c2adb3"
+    },
+    "id": 11
+  },
+  {
+    "header": {
+      "date": "2024-10-07T18:13:25.514Z",
+      "latestStep": 0,
+      "status": "pending",
+      "userId": "66cb4df7c65d2b9592c2adb3"
+    },
+    "id": 12
+  },
+  {
+    "header": {
+      "date": "2024-10-07T18:14:42.215Z",
+      "latestStep": 0,
+      "status": "pending",
+      "userId": "66cb4df7c65d2b9592c2adb3"
+    },
+    "id": 13
+  },
+  {
+    "header": {
+      "date": "2024-10-13T23:52:43.794Z",
+      "latestStep": 0,
+      "status": "pending",
+      "userId": "66cb4df7c65d2b9592c2adb3"
+    },
+    "id": 14
+  }
+]

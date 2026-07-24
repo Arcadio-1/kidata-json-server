@@ -1,0 +1,275 @@
+[
+  {
+    "id": "cmp-001",
+    "companyId": "C-1001",
+    "companyName": "Acme Retail Group",
+    "ownerName": "Alice Johnson",
+    "ownerEmail": "alice.johnson@acmeretail.com",
+    "country": "Germany",
+    "created": "2025-04-01T09:32:00.000Z",
+    "updated": "2025-04-03T15:10:00.000Z",
+    "status": "PENDING",
+    "isSeen": false,
+    "registration": {
+      "id": "reg-1001",
+      "header": {
+        "userId": "user-1001",
+        "latestStep": 4,
+        "date": "2025-04-01T09:32:00.000Z",
+        "isBasicComplete": true,
+        "fullRegistrationStatus": "pending"
+      },
+      "stepZero": {
+        "addressData": {
+          "companyName": "Acme Retail Group",
+          "companyFormId": "gmbh",
+          "street": "Alexanderplatz",
+          "number": "1",
+          "addressSupplement": "3rd Floor",
+          "zip": "10178",
+          "city": "Berlin",
+          "federalStateId": "BE",
+          "countryId": "DE",
+          "phone": "301234567",
+          "mobile": "1712345678",
+          "fax": "",
+          "phoneDialingCodeId": "+49",
+          "mobileDialingCodeId": "+49",
+          "faxDialingCodeId": null,
+          "webUrl": "https://www.acmeretail.com",
+          "email": "info@acmeretail.com"
+        },
+        "legalPerson": {
+          "salutationId": "mr",
+          "titleId": null,
+          "firstName": "Alice",
+          "lastName": "Johnson",
+          "position": "CEO"
+        }
+      },
+      "stepOne": {
+        "administrator": {
+          "isTakenOver": true,
+          "salutationId": "mr",
+          "titleId": null,
+          "firstName": "Alice",
+          "lastName": "Johnson",
+          "position": "Admin",
+          "mobile": "1712345678",
+          "mobileDialingCodeId": "+49",
+          "phoneDialingCodeId": "+49",
+          "phone": "301234567",
+          "email": "alice.johnson@acmeretail.com",
+          "username": "alice.johnson"
+        }
+      },
+      "stepTwo": {
+        "businessModel": {
+          "businessModelId": "retail-chain"
+        }
+      },
+      "stepThree": {
+        "billingAddress": {
+          "isDiffer": false,
+          "salutationId": "mr",
+          "titleId": null,
+          "firstName": "Alice",
+          "lastName": "Johnson",
+          "street": "Alexanderplatz",
+          "number": "1",
+          "addressSupplement": "3rd Floor",
+          "zip": "10178",
+          "city": "Berlin",
+          "federalStateId": "BE",
+          "countryId": "DE"
+        },
+        "paymentInformation": {
+          "paymentMethodId": "sepa",
+          "accountOwner": "Acme Retail Group GmbH",
+          "IBAN": "DE89370400440532013000",
+          "BIC": "COBADEFFXXX"
+        },
+        "receiveEmail": true
+      },
+      "stepFour": {
+        "industry": {
+          "name": "Retail",
+          "description": "Consumer electronics and home appliances",
+          "id": "retail"
+        },
+        "tax": {
+          "identificationNumber": "DE123456789",
+          "vatNumber": "DE123456789"
+        }
+      }
+    },
+    "medias": {
+      "businessLicense": [
+        {
+          "id": "file-lic-001",
+          "url": "https://example.com/docs/acme-business-license.pdf",
+          "name": "acme-business-license.pdf"
+        }
+      ],
+      "idCard": [
+        {
+          "id": "file-id-001",
+          "url": "https://example.com/docs/alice-id-front.jpg",
+          "name": "alice-id-front.jpg"
+        }
+      ],
+      "logo": [
+        {
+          "id": "file-logo-001",
+          "url": "https://example.com/media/acme-logo.png",
+          "name": "acme-logo.png"
+        }
+      ]
+    },
+    "actions": [
+      {
+        "id": "act-001-1",
+        "appliedById": "admin-01",
+        "appliedByName": "Super Admin",
+        "date": "2025-04-02T10:15:00.000Z",
+        "status": "ON_CORRECTION",
+        "message": "Please upload your business license document."
+      }
+    ]
+  },
+  {
+    "id": "cmp-002",
+    "companyId": "C-1002",
+    "companyName": "Bright Media Studio",
+    "ownerName": "Bob Martin",
+    "ownerEmail": "bob.martin@brightmedia.io",
+    "country": "Netherlands",
+    "created": "2025-03-22T12:00:00.000Z",
+    "updated": "2025-03-25T08:45:00.000Z",
+    "status": "APPROVED",
+    "isSeen": true,
+    "website": "https://brightmedia.io",
+    "phone": "+31 20 5551234",
+    "city": "Amsterdam",
+    "address": "Keizersgracht 100, 1015 CV Amsterdam, Netherlands",
+    "description": "Creative agency producing digital campaigns and OOH assets.",
+    "extraFields": {
+      "industry": "Marketing & Advertising",
+      "vatNumber": "NL987654321B01",
+      "notes": "High volume advertiser"
+    },
+    "actions": [
+      {
+        "id": "act-002-1",
+        "appliedById": "admin-01",
+        "appliedByName": "Super Admin",
+        "date": "2025-03-23T10:15:00.000Z",
+        "status": "ON_CORRECTION",
+        "message": "Add company address to the profile."
+      },
+      {
+        "id": "act-002-2",
+        "appliedById": "admin-02",
+        "appliedByName": "Review Admin",
+        "date": "2025-03-25T08:45:00.000Z",
+        "status": "APPROVED",
+        "message": "All documents verified. Company approved."
+      }
+    ]
+  },
+  {
+    "id": "cmp-003",
+    "companyId": "C-1003",
+    "companyName": "Urban Eats Delivery",
+    "ownerName": "Carla Gomez",
+    "ownerEmail": "carla.gomez@urbaneats.app",
+    "country": "Spain",
+    "created": "2025-04-05T14:20:00.000Z",
+    "updated": "2025-04-06T09:00:00.000Z",
+    "status": "ON_CORRECTION",
+    "isSeen": true,
+    "website": "https://urbaneats.app",
+    "phone": "+34 91 123 4567",
+    "city": "Madrid",
+    "address": "Gran Vía 18, 28013 Madrid, Spain",
+    "description": "Food delivery marketplace with local restaurant partners.",
+    "extraFields": {
+      "industry": "Food Delivery",
+      "foundedYear": "2021",
+      "hasNDA": "yes"
+    },
+    "actions": [
+      {
+        "id": "act-003-1",
+        "appliedById": "admin-03",
+        "appliedByName": "Compliance Admin",
+        "date": "2025-04-06T09:00:00.000Z",
+        "status": "ON_CORRECTION",
+        "message": "Upload proof of address and update company legal name."
+      }
+    ]
+  },
+  {
+    "id": "cmp-004",
+    "companyId": "C-1004",
+    "companyName": "ZenFit Wellness GmbH",
+    "ownerName": "Daniel Schmidt",
+    "ownerEmail": "daniel.schmidt@zenfit.de",
+    "country": "Germany",
+    "created": "2025-02-10T10:00:00.000Z",
+    "updated": "2025-02-15T16:30:00.000Z",
+    "status": "REJECTED",
+    "isSeen": true,
+    "website": "https://zenfit.de",
+    "phone": "+49 89 987654",
+    "city": "Munich",
+    "address": "Leopoldstrasse 50, 80802 München, Germany",
+    "description": "Boutique fitness and wellness centers across Bavaria.",
+    "extraFields": {
+      "industry": "Fitness",
+      "reasonForRejection": "Documents did not match the legal entity.",
+      "reapplyAfter": "2025-06-01"
+    },
+    "actions": [
+      {
+        "id": "act-004-1",
+        "appliedById": "admin-01",
+        "appliedByName": "Super Admin",
+        "date": "2025-02-12T11:45:00.000Z",
+        "status": "ON_CORRECTION",
+        "message": "Company name in documents differs from registration form."
+      },
+      {
+        "id": "act-004-2",
+        "appliedById": "admin-01",
+        "appliedByName": "Super Admin",
+        "date": "2025-02-15T16:30:00.000Z",
+        "status": "REJECTED",
+        "message": "Requested corrections were not provided in time."
+      }
+    ]
+  },
+  {
+    "id": "cmp-005",
+    "companyId": "C-1005",
+    "companyName": "Skyline Digital OOH",
+    "ownerName": "Elena Rossi",
+    "ownerEmail": "elena.rossi@skylinedigital.com",
+    "country": "Italy",
+    "created": "2025-04-07T08:00:00.000Z",
+    "updated": "2025-04-07T08:00:00.000Z",
+    "status": "PENDING",
+    "isSeen": false,
+    "website": "https://skylinedigital.com",
+    "phone": "+39 02 7654321",
+    "city": "Milan",
+    "address": "Via Torino 25, 20123 Milano MI, Italy",
+    "description": "Programmatic digital out-of-home network across major cities.",
+    "extraFields": {
+      "industry": "Digital OOH",
+      "screensCount": "120",
+      "notes": null
+    },
+    "actions": []
+  }
+]

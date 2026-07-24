@@ -1,0 +1,14 @@
+[
+  {
+    "companyFormLabel": "Sole Proprietorship",
+    "companyFormId": "cf-123"
+  },
+  {
+    "companyFormLabel": "Limited Liability Company (LLC)",
+    "companyFormId": "LLC-001"
+  },
+  {
+    "companyFormLabel": "Corporation",
+    "companyFormId": "CORP-001"
+  }
+]

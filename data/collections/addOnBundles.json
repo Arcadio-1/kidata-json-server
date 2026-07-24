@@ -1,0 +1,56 @@
+[
+  {
+    "id": "bundle-1",
+    "badge": "Growth Bundle",
+    "title": "Get started fast",
+    "description": "Everything you need to scale your digital signage operation quickly.",
+    "includedAddOns": [
+      "Extra Cloud Storage",
+      "Extra Team Members",
+      "Extra Displays",
+      "Advanced Analytics"
+    ],
+    "savingsAmount": 12,
+    "savingsPercent": 25,
+    "bundlePrice": 35.97,
+    "originalPrice": 47.96,
+    "isFeatured": false
+  },
+  {
+    "id": "bundle-2",
+    "badge": "Professional Bundle",
+    "title": "For growing teams",
+    "description": "Advanced tools for professional teams managing multiple locations.",
+    "includedAddOns": [
+      "Extra Cloud Storage",
+      "Advanced Roles",
+      "Partner Network Plus",
+      "HD Video Ads",
+      "Priority Support"
+    ],
+    "savingsAmount": 20,
+    "savingsPercent": 30,
+    "bundlePrice": 49.97,
+    "originalPrice": 69.95,
+    "isFeatured": true
+  },
+  {
+    "id": "bundle-3",
+    "badge": "Enterprise Bundle",
+    "title": "Full power unlocked",
+    "description": "Complete enterprise solution with security, compliance, and premium support.",
+    "includedAddOns": [
+      "Premium Backup",
+      "Advanced Roles",
+      "Advanced Analytics",
+      "Priority Support",
+      "Data Encryption Plus",
+      "Audit Compliance"
+    ],
+    "savingsAmount": 30,
+    "savingsPercent": 28,
+    "bundlePrice": 74.94,
+    "originalPrice": 104.94,
+    "isFeatured": false
+  }
+]

@@ -1,0 +1,65 @@
+{
+  "items": [
+    {
+      "id": "cart-item-1719000000001-sub01",
+      "type": "subscription",
+      "addedAt": "2026-06-24T08:00:00.000Z",
+      "planId": "plan-business-pro",
+      "planName": "Business Pro",
+      "planLevel": 3,
+      "priceEur": 49.99,
+      "billingPeriod": "monthly",
+      "validity": {
+        "isValid": true
+      }
+    },
+    {
+      "id": "cart-item-1719000000002-addon01",
+      "type": "addOn",
+      "addedAt": "2026-06-24T08:05:00.000Z",
+      "addOnId": "addon-1",
+      "addOnName": "Extra Cloud Storage",
+      "priceEur": 9.99,
+      "category": "storage",
+      "quantity": 1,
+      "validity": {
+        "isValid": true
+      }
+    },
+    {
+      "id": "cart-item-1719000000003-addon02",
+      "type": "addOn",
+      "addedAt": "2026-06-24T08:06:00.000Z",
+      "addOnId": "addon-4",
+      "addOnName": "Extra Team Members",
+      "priceEur": 5.99,
+      "category": "usersAndAccess",
+      "quantity": 3,
+      "discount": {
+        "offerId": "bundle-team",
+        "offerName": "Team Starter Bundle",
+        "discountType": "percentage",
+        "discountValue": 10,
+        "originalPrice": 17.97,
+        "finalPrice": 16.17
+      },
+      "validity": {
+        "isValid": true
+      }
+    },
+    {
+      "id": "cart-item-1719000000004-cred01",
+      "type": "credit",
+      "addedAt": "2026-06-24T08:10:00.000Z",
+      "packageId": "credits-5000",
+      "packageName": "5 000 Credit Pack",
+      "credits": 5000,
+      "bonusCredits": 500,
+      "priceEur": 50,
+      "pricePerCredit": 0.01,
+      "validity": {
+        "isValid": true
+      }
+    }
+  ]
+}

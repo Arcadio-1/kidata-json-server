@@ -1,0 +1,338 @@
+[
+  {
+    "id": "bk_101",
+    "partnerInfo": {
+      "companyName": "Florian Schafft GmbH",
+      "companyId": "comp_001",
+      "contactPerson": "Florian Schafft",
+      "email": "florian@schafft.de",
+      "phone": "+49 170 1234567",
+      "partnerSince": "2024-03-15"
+    },
+    "lastBooking": {
+      "bookingId": "BK-2025-0421",
+      "displayName": "Display Munich Central #12",
+      "displayId": "dsp_012",
+      "duration": "7 days",
+      "startDate": "2025-04-14",
+      "endDate": "2025-04-21",
+      "creditsEarned": 3000,
+      "status": "completed"
+    },
+    "bookingOverview": [
+      {
+        "date": "2025-04-14",
+        "event": "Booking confirmed",
+        "status": "completed"
+      },
+      {
+        "date": "2025-04-15",
+        "event": "Ad content uploaded",
+        "status": "completed"
+      },
+      {
+        "date": "2025-04-16",
+        "event": "Display activated",
+        "status": "completed"
+      },
+      {
+        "date": "2025-04-21",
+        "event": "Booking period ended",
+        "status": "completed"
+      },
+      {
+        "date": "2025-04-21",
+        "event": "Credits transferred",
+        "status": "completed"
+      }
+    ]
+  },
+  {
+    "id": "bk_102",
+    "partnerInfo": {
+      "companyName": "Partner GmbH",
+      "companyId": "comp_002",
+      "contactPerson": "Anna Mueller",
+      "email": "anna@partner.de",
+      "phone": "+49 171 9876543",
+      "partnerSince": "2024-01-10"
+    },
+    "lastBooking": {
+      "bookingId": "BK-2025-0420",
+      "displayName": "Display Berlin Alexanderplatz #05",
+      "displayId": "dsp_005",
+      "duration": "14 days",
+      "startDate": "2025-04-06",
+      "endDate": "2025-04-20",
+      "creditsEarned": 5000,
+      "status": "completed"
+    },
+    "bookingOverview": [
+      {
+        "date": "2025-04-06",
+        "event": "Booking confirmed",
+        "status": "completed"
+      },
+      {
+        "date": "2025-04-07",
+        "event": "Ad content uploaded",
+        "status": "completed"
+      },
+      {
+        "date": "2025-04-08",
+        "event": "Display activated",
+        "status": "completed"
+      },
+      {
+        "date": "2025-04-20",
+        "event": "Booking period ended",
+        "status": "completed"
+      },
+      {
+        "date": "2025-04-20",
+        "event": "Credits transferred",
+        "status": "completed"
+      }
+    ]
+  },
+  {
+    "id": "bk_103",
+    "partnerInfo": {
+      "companyName": "Client GmbH",
+      "companyId": "comp_003",
+      "contactPerson": "Max Weber",
+      "email": "max@client.de",
+      "phone": "+49 172 5551234",
+      "partnerSince": "2024-07-22"
+    },
+    "lastBooking": {
+      "bookingId": "BK-2025-0419",
+      "displayName": "Display Hamburg Jungfernstieg #08",
+      "displayId": "dsp_008",
+      "duration": "3 days",
+      "startDate": "2025-04-16",
+      "endDate": "2025-04-19",
+      "creditsEarned": 1500,
+      "status": "completed"
+    },
+    "bookingOverview": [
+      {
+        "date": "2025-04-16",
+        "event": "Booking confirmed",
+        "status": "completed"
+      },
+      {
+        "date": "2025-04-17",
+        "event": "Ad content uploaded",
+        "status": "completed"
+      },
+      {
+        "date": "2025-04-17",
+        "event": "Display activated",
+        "status": "completed"
+      },
+      {
+        "date": "2025-04-19",
+        "event": "Booking period ended",
+        "status": "completed"
+      },
+      {
+        "date": "2025-04-19",
+        "event": "Credits transferred",
+        "status": "completed"
+      }
+    ]
+  },
+  {
+    "id": "bk_104",
+    "partnerInfo": {
+      "companyName": "Rent Payment GmbH",
+      "companyId": "comp_004",
+      "contactPerson": "Julia Fischer",
+      "email": "julia@rentpayment.de",
+      "phone": "+49 173 6667890",
+      "partnerSince": "2023-11-05"
+    },
+    "lastBooking": {
+      "bookingId": "BK-2025-0418",
+      "displayName": "Display Frankfurt Zeil #03",
+      "displayId": "dsp_003",
+      "duration": "10 days",
+      "startDate": "2025-04-08",
+      "endDate": "2025-04-18",
+      "creditsEarned": 2500,
+      "status": "completed"
+    },
+    "bookingOverview": [
+      {
+        "date": "2025-04-08",
+        "event": "Booking confirmed",
+        "status": "completed"
+      },
+      {
+        "date": "2025-04-09",
+        "event": "Ad content uploaded",
+        "status": "completed"
+      },
+      {
+        "date": "2025-04-10",
+        "event": "Display activated",
+        "status": "completed"
+      },
+      {
+        "date": "2025-04-18",
+        "event": "Booking period ended",
+        "status": "completed"
+      },
+      {
+        "date": "2025-04-18",
+        "event": "Credits transferred",
+        "status": "completed"
+      }
+    ]
+  },
+  {
+    "id": "bk_105",
+    "partnerInfo": {
+      "companyName": "Alina Peters GmbH",
+      "companyId": "comp_005",
+      "contactPerson": "Alina Peters",
+      "email": "alina@peters.de",
+      "phone": "+49 174 7778901",
+      "partnerSince": "2024-05-18"
+    },
+    "lastBooking": {
+      "bookingId": "BK-2025-0416",
+      "displayName": "Display Stuttgart Koenigstr #11",
+      "displayId": "dsp_011",
+      "duration": "5 days",
+      "startDate": "2025-04-11",
+      "endDate": "2025-04-16",
+      "creditsEarned": 1500,
+      "status": "completed"
+    },
+    "bookingOverview": [
+      {
+        "date": "2025-04-11",
+        "event": "Booking confirmed",
+        "status": "completed"
+      },
+      {
+        "date": "2025-04-12",
+        "event": "Ad content uploaded",
+        "status": "completed"
+      },
+      {
+        "date": "2025-04-13",
+        "event": "Display activated",
+        "status": "completed"
+      },
+      {
+        "date": "2025-04-16",
+        "event": "Booking period ended",
+        "status": "completed"
+      },
+      {
+        "date": "2025-04-16",
+        "event": "Credits transferred",
+        "status": "completed"
+      }
+    ]
+  },
+  {
+    "id": "bk_106",
+    "partnerInfo": {
+      "companyName": "Digital GmbH",
+      "companyId": "comp_006",
+      "contactPerson": "Thomas Braun",
+      "email": "thomas@digital.de",
+      "phone": "+49 175 8889012",
+      "partnerSince": "2024-02-28"
+    },
+    "lastBooking": {
+      "bookingId": "BK-2025-0415",
+      "displayName": "Display Cologne Schildergasse #07",
+      "displayId": "dsp_007",
+      "duration": "7 days",
+      "startDate": "2025-04-08",
+      "endDate": "2025-04-15",
+      "creditsEarned": 2500,
+      "status": "completed"
+    },
+    "bookingOverview": [
+      {
+        "date": "2025-04-08",
+        "event": "Booking confirmed",
+        "status": "completed"
+      },
+      {
+        "date": "2025-04-09",
+        "event": "Ad content uploaded",
+        "status": "completed"
+      },
+      {
+        "date": "2025-04-10",
+        "event": "Display activated",
+        "status": "completed"
+      },
+      {
+        "date": "2025-04-15",
+        "event": "Booking period ended",
+        "status": "completed"
+      },
+      {
+        "date": "2025-04-15",
+        "event": "Credits transferred",
+        "status": "completed"
+      }
+    ]
+  },
+  {
+    "id": "bk_107",
+    "partnerInfo": {
+      "companyName": "Rent Subscription",
+      "companyId": "comp_007",
+      "contactPerson": "Laura Schmidt",
+      "email": "laura@rentsub.de",
+      "phone": "+49 176 9990123",
+      "partnerSince": "2024-08-12"
+    },
+    "lastBooking": {
+      "bookingId": "BK-2025-0414",
+      "displayName": "Display Dusseldorf Altstadt #02",
+      "displayId": "dsp_002",
+      "duration": "4 days",
+      "startDate": "2025-04-10",
+      "endDate": "2025-04-14",
+      "creditsEarned": 800,
+      "status": "completed"
+    },
+    "bookingOverview": [
+      {
+        "date": "2025-04-10",
+        "event": "Booking confirmed",
+        "status": "completed"
+      },
+      {
+        "date": "2025-04-11",
+        "event": "Ad content uploaded",
+        "status": "completed"
+      },
+      {
+        "date": "2025-04-12",
+        "event": "Display activated",
+        "status": "completed"
+      },
+      {
+        "date": "2025-04-14",
+        "event": "Booking period ended",
+        "status": "completed"
+      },
+      {
+        "date": "2025-04-14",
+        "event": "Credits transferred",
+        "status": "completed"
+      }
+    ]
+  }
+]

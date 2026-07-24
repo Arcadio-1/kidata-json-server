@@ -1,0 +1,412 @@
+{
+  "summary": {
+    "activeCount": 3,
+    "monthlyTotal": 45.97,
+    "billedWithPlan": "Business Pro",
+    "vatRate": 19
+  },
+  "addOns": [
+    {
+      "id": "addon-1",
+      "name": "Extra Cloud Storage",
+      "description": "Add 100 GB of cloud storage to your account for media files and backups.",
+      "category": "storage",
+      "price": 9.99,
+      "icon": "HardDrive",
+      "benefits": [
+        "100 GB additional storage",
+        "Automatic backups",
+        "Fast CDN delivery",
+        "File versioning"
+      ],
+      "isActive": true,
+      "tags": [
+        "active",
+        "popular"
+      ],
+      "hasQuantity": false,
+      "quantityLabel": null,
+      "currentQuantity": 1,
+      "minQuantity": 1,
+      "maxQuantity": 1
+    },
+    {
+      "id": "addon-2",
+      "name": "Premium Backup",
+      "description": "Daily automated backups with 30-day retention and one-click restore.",
+      "category": "storage",
+      "price": 14.99,
+      "icon": "DatabaseBackup",
+      "benefits": [
+        "Daily automated backups",
+        "30-day retention",
+        "One-click restore",
+        "Encrypted storage"
+      ],
+      "isActive": false,
+      "tags": [
+        "new"
+      ],
+      "hasQuantity": false,
+      "quantityLabel": null,
+      "currentQuantity": 1,
+      "minQuantity": 1,
+      "maxQuantity": 1
+    },
+    {
+      "id": "addon-3",
+      "name": "Archive Storage",
+      "description": "Long-term archival storage for compliance and record keeping.",
+      "category": "storage",
+      "price": 4.99,
+      "icon": "Archive",
+      "benefits": [
+        "500 GB archive space",
+        "Compliance ready",
+        "Encrypted at rest",
+        "Yearly export"
+      ],
+      "isActive": false,
+      "tags": [],
+      "hasQuantity": false,
+      "quantityLabel": null,
+      "currentQuantity": 1,
+      "minQuantity": 1,
+      "maxQuantity": 1
+    },
+    {
+      "id": "addon-4",
+      "name": "Extra Team Members",
+      "description": "Add additional team member seats to your account.",
+      "category": "usersAndAccess",
+      "price": 5.99,
+      "icon": "Users",
+      "benefits": [
+        "Per-seat pricing",
+        "Role-based access",
+        "Activity tracking",
+        "SSO compatible"
+      ],
+      "isActive": true,
+      "tags": [
+        "active",
+        "popular"
+      ],
+      "hasQuantity": true,
+      "quantityLabel": "seats",
+      "currentQuantity": 3,
+      "minQuantity": 1,
+      "maxQuantity": 50
+    },
+    {
+      "id": "addon-5",
+      "name": "Advanced Roles",
+      "description": "Create custom roles with granular permission controls.",
+      "category": "usersAndAccess",
+      "price": 7.99,
+      "icon": "ShieldCheck",
+      "benefits": [
+        "Custom role builder",
+        "Granular permissions",
+        "Department scoping",
+        "Audit trail"
+      ],
+      "isActive": false,
+      "tags": [],
+      "hasQuantity": false,
+      "quantityLabel": null,
+      "currentQuantity": 1,
+      "minQuantity": 1,
+      "maxQuantity": 1
+    },
+    {
+      "id": "addon-6",
+      "name": "Extra Displays",
+      "description": "Add more display slots to manage additional screens.",
+      "category": "displaysAndSharing",
+      "price": 12.99,
+      "icon": "Monitor",
+      "benefits": [
+        "Per-display pricing",
+        "Remote management",
+        "Scheduling support",
+        "Health monitoring"
+      ],
+      "isActive": true,
+      "tags": [
+        "active"
+      ],
+      "hasQuantity": true,
+      "quantityLabel": "displays",
+      "currentQuantity": 2,
+      "minQuantity": 1,
+      "maxQuantity": 100
+    },
+    {
+      "id": "addon-7",
+      "name": "Partner Network Plus",
+      "description": "Unlock advanced partner network sharing and collaboration features.",
+      "category": "displaysAndSharing",
+      "price": 19.99,
+      "icon": "Network",
+      "benefits": [
+        "Unlimited partner sharing",
+        "Revenue splitting",
+        "Cross-network booking",
+        "Priority listing"
+      ],
+      "isActive": false,
+      "tags": [
+        "popular"
+      ],
+      "hasQuantity": false,
+      "quantityLabel": null,
+      "currentQuantity": 1,
+      "minQuantity": 1,
+      "maxQuantity": 1
+    },
+    {
+      "id": "addon-8",
+      "name": "Display Kiosk Mode",
+      "description": "Lock displays into kiosk mode for public-facing deployments.",
+      "category": "displaysAndSharing",
+      "price": 3.99,
+      "icon": "LockKeyhole",
+      "benefits": [
+        "Kiosk lockdown",
+        "Auto-restart",
+        "Remote unlock",
+        "Tamper detection"
+      ],
+      "isActive": false,
+      "tags": [
+        "new"
+      ],
+      "hasQuantity": false,
+      "quantityLabel": null,
+      "currentQuantity": 1,
+      "minQuantity": 1,
+      "maxQuantity": 1
+    },
+    {
+      "id": "addon-9",
+      "name": "HD Video Ads",
+      "description": "Upload and schedule HD video advertisements up to 4K resolution.",
+      "category": "adsAndMedia",
+      "price": 11.99,
+      "icon": "Film",
+      "benefits": [
+        "4K video support",
+        "60fps playback",
+        "Auto-transcoding",
+        "Scheduled rotation"
+      ],
+      "isActive": false,
+      "tags": [
+        "popular"
+      ],
+      "hasQuantity": false,
+      "quantityLabel": null,
+      "currentQuantity": 1,
+      "minQuantity": 1,
+      "maxQuantity": 1
+    },
+    {
+      "id": "addon-10",
+      "name": "Extra Ad Categories",
+      "description": "Add more advertising categories to organize and target your content.",
+      "category": "adsAndMedia",
+      "price": 3.99,
+      "icon": "LayoutGrid",
+      "benefits": [
+        "Custom categories",
+        "Category-based scheduling",
+        "Targeted delivery",
+        "Category analytics"
+      ],
+      "isActive": false,
+      "tags": [],
+      "hasQuantity": true,
+      "quantityLabel": "categories",
+      "currentQuantity": 5,
+      "minQuantity": 1,
+      "maxQuantity": 30
+    },
+    {
+      "id": "addon-11",
+      "name": "Interactive Media",
+      "description": "Enable touch and QR code interactive content on your displays.",
+      "category": "adsAndMedia",
+      "price": 15.99,
+      "icon": "Touchpad",
+      "benefits": [
+        "Touch interactivity",
+        "QR code overlays",
+        "Lead capture",
+        "Engagement tracking"
+      ],
+      "isActive": false,
+      "tags": [
+        "new"
+      ],
+      "hasQuantity": false,
+      "quantityLabel": null,
+      "currentQuantity": 1,
+      "minQuantity": 1,
+      "maxQuantity": 1
+    },
+    {
+      "id": "addon-12",
+      "name": "Advanced Analytics",
+      "description": "Unlock detailed analytics dashboards with audience insights.",
+      "category": "analyticsAndReporting",
+      "price": 16.99,
+      "icon": "BarChart3",
+      "benefits": [
+        "Audience demographics",
+        "Heatmap analysis",
+        "Conversion tracking",
+        "Custom date ranges"
+      ],
+      "isActive": false,
+      "tags": [
+        "popular"
+      ],
+      "hasQuantity": false,
+      "quantityLabel": null,
+      "currentQuantity": 1,
+      "minQuantity": 1,
+      "maxQuantity": 1
+    },
+    {
+      "id": "addon-13",
+      "name": "Custom Reports",
+      "description": "Generate and schedule custom PDF and CSV reports.",
+      "category": "analyticsAndReporting",
+      "price": 8.99,
+      "icon": "FileSpreadsheet",
+      "benefits": [
+        "Scheduled reports",
+        "PDF & CSV export",
+        "White-label branding",
+        "Email delivery"
+      ],
+      "isActive": false,
+      "tags": [],
+      "hasQuantity": false,
+      "quantityLabel": null,
+      "currentQuantity": 1,
+      "minQuantity": 1,
+      "maxQuantity": 1
+    },
+    {
+      "id": "addon-14",
+      "name": "Priority Support",
+      "description": "Get priority response times and a dedicated support agent.",
+      "category": "supportAndServices",
+      "price": 24.99,
+      "icon": "Headset",
+      "benefits": [
+        "1-hour response time",
+        "Dedicated agent",
+        "Phone support",
+        "Screen sharing"
+      ],
+      "isActive": false,
+      "tags": [
+        "popular"
+      ],
+      "hasQuantity": false,
+      "quantityLabel": null,
+      "currentQuantity": 1,
+      "minQuantity": 1,
+      "maxQuantity": 1
+    },
+    {
+      "id": "addon-15",
+      "name": "Onboarding Package",
+      "description": "Professional onboarding session with setup assistance.",
+      "category": "supportAndServices",
+      "price": 49.99,
+      "icon": "GraduationCap",
+      "benefits": [
+        "1-on-1 session",
+        "Custom setup",
+        "Training materials",
+        "30-day follow-up"
+      ],
+      "isActive": false,
+      "tags": [],
+      "hasQuantity": false,
+      "quantityLabel": null,
+      "currentQuantity": 1,
+      "minQuantity": 1,
+      "maxQuantity": 1
+    },
+    {
+      "id": "addon-16",
+      "name": "Two-Factor Auth",
+      "description": "Enable mandatory two-factor authentication for all team members.",
+      "category": "securityAndCompliance",
+      "price": 2.99,
+      "icon": "KeyRound",
+      "benefits": [
+        "TOTP & SMS",
+        "Mandatory enforcement",
+        "Recovery codes",
+        "Login audit log"
+      ],
+      "isActive": false,
+      "tags": [],
+      "hasQuantity": false,
+      "quantityLabel": null,
+      "currentQuantity": 1,
+      "minQuantity": 1,
+      "maxQuantity": 1
+    },
+    {
+      "id": "addon-17",
+      "name": "Data Encryption Plus",
+      "description": "End-to-end encryption for all stored data and file transfers.",
+      "category": "securityAndCompliance",
+      "price": 9.99,
+      "icon": "Lock",
+      "benefits": [
+        "AES-256 encryption",
+        "Encrypted transfers",
+        "Key management",
+        "Compliance reports"
+      ],
+      "isActive": false,
+      "tags": [
+        "new"
+      ],
+      "hasQuantity": false,
+      "quantityLabel": null,
+      "currentQuantity": 1,
+      "minQuantity": 1,
+      "maxQuantity": 1
+    },
+    {
+      "id": "addon-18",
+      "name": "Audit Compliance",
+      "description": "Full audit trail and compliance reporting for regulated industries.",
+      "category": "securityAndCompliance",
+      "price": 19.99,
+      "icon": "ClipboardCheck",
+      "benefits": [
+        "Full audit trail",
+        "GDPR compliance tools",
+        "Data retention policies",
+        "Export for auditors"
+      ],
+      "isActive": false,
+      "tags": [],
+      "hasQuantity": false,
+      "quantityLabel": null,
+      "currentQuantity": 1,
+      "minQuantity": 1,
+      "maxQuantity": 1
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+[
+  {
+    "salutationId": "MR",
+    "label": "Mr."
+  },
+  {
+    "salutationId": "MRS",
+    "label": "Mrs."
+  },
+  {
+    "salutationId": "MS",
+    "label": "Ms."
+  },
+  {
+    "salutationId": "DR",
+    "label": "Dr."
+  }
+]

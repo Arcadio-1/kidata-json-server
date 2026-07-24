@@ -1,0 +1,53 @@
+[
+  {
+    "id": "NTF-1001",
+    "title": "Scheduled Maintenance",
+    "date": "2025-09-20T01:00:00.000Z",
+    "type": "SYSTEM",
+    "category": "SYSTEM",
+    "isSeen": true,
+    "description": "<p>We will perform maintenance from 01:00–03:00 CET. Some services may be intermittently unavailable.</p>",
+    "actionUrl": "https://status.example.com/maintenance/1001",
+    "updatedAt": "2025-09-05T02:05:59.282Z"
+  },
+  {
+    "id": "NTF-1002",
+    "title": "Password Expiring Soon",
+    "date": "2025-09-10T08:00:00.000Z",
+    "type": "COMPANY",
+    "category": "ALERT",
+    "isSeen": true,
+    "description": "<p>Your password will expire in 5 days. Please update it to avoid interruptions.</p>",
+    "updatedAt": "2025-09-05T01:49:43.841Z"
+  },
+  {
+    "id": "NTF-1003",
+    "title": "Welcome to the new dashboard",
+    "date": "2025-09-05T07:30:00.000Z",
+    "type": "SYSTEM",
+    "category": "INFO",
+    "isSeen": true,
+    "description": "<p>We rolled out UI improvements and performance enhancements. Let us know your feedback!</p>"
+  },
+  {
+    "id": "NTF-1004",
+    "title": "Team All-Hands Tomorrow",
+    "date": "2025-09-06T09:00:00.000Z",
+    "type": "COMPANY",
+    "category": "SOCIAL",
+    "isSeen": true,
+    "description": "<p>Don't forget the all-hands meeting tomorrow at 9:00 CET in the main hall.</p>",
+    "updatedAt": "2025-09-05T02:09:05.985Z"
+  },
+  {
+    "id": "NTF-1005",
+    "title": "Limited-time Offer",
+    "date": "2025-09-12T12:00:00.000Z",
+    "type": "PERSONAL",
+    "category": "SOCIAL",
+    "isSeen": true,
+    "description": "<p>Get 20% off your next purchase with code <strong>HELLO20</strong>.</p>",
+    "actionUrl": "https://example.com/offers/hello20",
+    "updatedAt": "2025-09-05T01:49:15.943Z"
+  }
+]

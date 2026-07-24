@@ -1,0 +1,203 @@
+[
+  {
+    "companyId": "company-acme",
+    "version": 8,
+    "tariff": {
+      "tariffId": "plus",
+      "status": "active",
+      "effectiveAt": "2026-01-01T00:00:00.000Z",
+      "renewsAt": "2027-01-01T00:00:00.000Z"
+    },
+    "addOns": [
+      {
+        "addOnId": "addon-4",
+        "status": "active",
+        "quantity": 3,
+        "unitPrice": 5.99,
+        "effectiveAt": "2026-03-01T00:00:00.000Z",
+        "endsAt": null,
+        "source": "seed",
+        "offerId": null
+      }
+    ],
+    "appliedPromotions": [],
+    "pricing": {
+      "currency": "EUR",
+      "tariffMonthly": 0,
+      "addOnsMonthly": 0,
+      "discountMonthly": 0,
+      "totalMonthly": 0,
+      "vatRate": 19,
+      "billedWithPlan": "KiData Plus"
+    },
+    "externalSync": {
+      "billing": "notRequired",
+      "lastAttemptAt": null,
+      "message": null
+    },
+    "entitlements": {},
+    "addOnEntitlements": {
+      "teamSize": 18
+    },
+    "allowedActions": [],
+    "resourceUsage": {
+      "displays": 7,
+      "users": 3,
+      "storageUsedGb": 18
+    },
+    "downgradeChecks": [
+      {
+        "targetTariffId": "free",
+        "eligible": false,
+        "violations": [
+          {
+            "code": "DISPLAY_LIMIT_EXCEEDED",
+            "message": "Company has 7 displays; target allows 1",
+            "entityType": "company",
+            "entityId": "company-acme"
+          },
+          {
+            "code": "USER_LIMIT_EXCEEDED",
+            "message": "Company has 3 users; target allows 1",
+            "entityType": "company",
+            "entityId": "company-acme"
+          },
+          {
+            "code": "STORAGE_LIMIT_EXCEEDED",
+            "message": "Company uses 18 GB; target allows 1 GB",
+            "entityType": "company",
+            "entityId": "company-acme"
+          }
+        ]
+      }
+    ],
+    "offers": [
+      {
+        "id": "offer-acme-growth",
+        "label": "Growth Support Offer",
+        "eligible": true,
+        "status": "active",
+        "includedAddOnIds": [
+          "addon-1",
+          "addon-4"
+        ],
+        "discountType": "percentage",
+        "discountValue": 15,
+        "validFrom": "2026-07-01T00:00:00.000Z",
+        "validUntil": "2026-12-31T23:59:59.000Z"
+      },
+      {
+        "id": "offer-acme-expired",
+        "label": "Expired Spring Offer",
+        "eligible": false,
+        "status": "expired",
+        "includedAddOnIds": [
+          "addon-1"
+        ],
+        "discountType": "fixed",
+        "discountValue": 5,
+        "validFrom": "2025-03-01T00:00:00.000Z",
+        "validUntil": "2025-03-31T23:59:59.000Z"
+      }
+    ]
+  },
+  {
+    "companyId": "company-bluewave",
+    "version": 5,
+    "tariff": {
+      "tariffId": "basic",
+      "status": "active",
+      "effectiveAt": "2026-02-01T00:00:00.000Z",
+      "renewsAt": "2027-02-01T00:00:00.000Z"
+    },
+    "addOns": [
+      {
+        "addOnId": "addon-1",
+        "status": "active",
+        "quantity": 1,
+        "unitPrice": 9.99,
+        "effectiveAt": "2026-02-01T00:00:00.000Z",
+        "endsAt": null,
+        "source": "seed",
+        "offerId": null
+      }
+    ],
+    "appliedPromotions": [],
+    "pricing": {
+      "currency": "EUR",
+      "tariffMonthly": 0,
+      "addOnsMonthly": 0,
+      "discountMonthly": 0,
+      "totalMonthly": 0,
+      "vatRate": 19,
+      "billedWithPlan": "KiData Basic"
+    },
+    "externalSync": {
+      "billing": "failed",
+      "lastAttemptAt": "2026-07-17T08:20:00.000Z",
+      "message": "Mock billing provider synchronization failed; contact support before retrying."
+    },
+    "entitlements": {},
+    "addOnEntitlements": {
+      "cloudStorageIncluded": "105 GB"
+    },
+    "allowedActions": [],
+    "resourceUsage": {
+      "displays": 2,
+      "users": 2,
+      "storageUsedGb": 4
+    },
+    "downgradeChecks": [],
+    "offers": [
+      {
+        "id": "offer-bluewave-expired",
+        "label": "Expired Recovery Offer",
+        "eligible": false,
+        "status": "expired",
+        "includedAddOnIds": [
+          "addon-1"
+        ],
+        "discountType": "fixed",
+        "discountValue": 3,
+        "validFrom": "2025-01-01T00:00:00.000Z",
+        "validUntil": "2025-01-31T23:59:59.000Z"
+      }
+    ]
+  },
+  {
+    "companyId": "company-greenleaf",
+    "version": 1,
+    "tariff": {
+      "tariffId": "free",
+      "status": "active",
+      "effectiveAt": "2026-07-15T07:00:00.000Z",
+      "renewsAt": null
+    },
+    "addOns": [],
+    "appliedPromotions": [],
+    "pricing": {
+      "currency": "EUR",
+      "tariffMonthly": 0,
+      "addOnsMonthly": 0,
+      "discountMonthly": 0,
+      "totalMonthly": 0,
+      "vatRate": 19,
+      "billedWithPlan": "KiData Free"
+    },
+    "externalSync": {
+      "billing": "notRequired",
+      "lastAttemptAt": null,
+      "message": null
+    },
+    "entitlements": {},
+    "addOnEntitlements": {},
+    "allowedActions": [],
+    "resourceUsage": {
+      "displays": 0,
+      "users": 1,
+      "storageUsedGb": 0
+    },
+    "downgradeChecks": [],
+    "offers": []
+  }
+]

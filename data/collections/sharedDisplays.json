@@ -1,0 +1,717 @@
+{
+  "1": [
+    {
+      "id": "display01",
+      "onlineId": "partner01_display01",
+      "displayType": "LCDScreen",
+      "title": "Main Lobby Display",
+      "description": "A high-definition display in the main lobby.",
+      "categoryTitle": "Corporate Displays",
+      "categoryColor": "rgba(174, 31, 158, 1)",
+      "resolution": "HD",
+      "size": 42,
+      "createDate": "2024-01-15T10:00:00Z",
+      "zipCode": "90001",
+      "city": "Los Angeles",
+      "street": "123 Tech Lane",
+      "displayMedias": [
+        {
+          "uid": "media01",
+          "url": "/assets/images/profile.webp",
+          "name": "Lobby Display Image",
+          "status": "done",
+          "type": "image/jpeg",
+          "thumbUrl": "/assets/images/profile.webp"
+        },
+        {
+          "uid": "media01",
+          "url": "/assets/images/profile.webp",
+          "name": "Lobby Display Image",
+          "status": "done",
+          "type": "image/jpeg",
+          "thumbUrl": "/assets/images/profile.webp"
+        }
+      ],
+      "displayPlaceMedias": [
+        {
+          "uid": "media01",
+          "url": "/assets/images/profile.webp",
+          "name": "Lobby Display Image",
+          "status": "done",
+          "type": "image/jpeg",
+          "thumbUrl": "/assets/images/profile.webp"
+        },
+        {
+          "uid": "media01",
+          "url": "/assets/images/profile.webp",
+          "name": "Lobby Display Image",
+          "status": "done",
+          "type": "image/jpeg",
+          "thumbUrl": "/assets/images/profile.webp"
+        }
+      ],
+      "district": "Central"
+    },
+    {
+      "id": "display07",
+      "onlineId": "partner01_display01",
+      "displayType": "LCDScreen",
+      "title": "Main Lobby Display",
+      "description": "A high-definition display in the main lobby.",
+      "categoryTitle": "Corporate Displays",
+      "categoryColor": "rgba(174, 31, 158, 1)",
+      "resolution": "HD",
+      "size": 42,
+      "createDate": "2024-01-15T10:00:00Z",
+      "zipCode": "90001",
+      "city": "Los Angeles",
+      "street": "123 Tech Lane",
+      "displayMedias": [
+        {
+          "uid": "media01",
+          "url": "/assets/images/profile.webp",
+          "name": "Lobby Display Image",
+          "status": "done",
+          "type": "image/jpeg",
+          "thumbUrl": "/assets/images/profile.webp"
+        },
+        {
+          "uid": "media01",
+          "url": "/assets/images/profile.webp",
+          "name": "Lobby Display Image",
+          "status": "done",
+          "type": "image/jpeg",
+          "thumbUrl": "/assets/images/profile.webp"
+        }
+      ],
+      "displayPlaceMedias": [
+        {
+          "uid": "media01",
+          "url": "/assets/images/profile.webp",
+          "name": "Lobby Display Image",
+          "status": "done",
+          "type": "image/jpeg",
+          "thumbUrl": "/assets/images/profile.webp"
+        },
+        {
+          "uid": "media01",
+          "url": "/assets/images/profile.webp",
+          "name": "Lobby Display Image",
+          "status": "done",
+          "type": "image/jpeg",
+          "thumbUrl": "/assets/images/profile.webp"
+        }
+      ],
+      "district": "Central"
+    },
+    {
+      "id": "display08",
+      "onlineId": "partner01_display01",
+      "displayType": "LCDScreen",
+      "title": "Main Lobby Display",
+      "description": "A high-definition display in the main lobby.",
+      "categoryTitle": "Corporate Displays",
+      "categoryColor": "rgba(174, 31, 158, 1)",
+      "resolution": "HD",
+      "size": 42,
+      "createDate": "2024-01-15T10:00:00Z",
+      "zipCode": "90001",
+      "city": "Los Angeles",
+      "street": "123 Tech Lane",
+      "displayMedias": [
+        {
+          "uid": "media01",
+          "url": "/assets/images/profile.webp",
+          "name": "Lobby Display Image",
+          "status": "done",
+          "type": "image/jpeg",
+          "thumbUrl": "/assets/images/profile.webp"
+        },
+        {
+          "uid": "media01",
+          "url": "/assets/images/profile.webp",
+          "name": "Lobby Display Image",
+          "status": "done",
+          "type": "image/jpeg",
+          "thumbUrl": "/assets/images/profile.webp"
+        }
+      ],
+      "displayPlaceMedias": [
+        {
+          "uid": "media01",
+          "url": "/assets/images/profile.webp",
+          "name": "Lobby Display Image",
+          "status": "done",
+          "type": "image/jpeg",
+          "thumbUrl": "/assets/images/profile.webp"
+        },
+        {
+          "uid": "media01",
+          "url": "/assets/images/profile.webp",
+          "name": "Lobby Display Image",
+          "status": "done",
+          "type": "image/jpeg",
+          "thumbUrl": "/assets/images/profile.webp"
+        }
+      ],
+      "district": "Central"
+    },
+    {
+      "id": "display09",
+      "onlineId": "partner01_display01",
+      "displayType": "LCDScreen",
+      "title": "Main Lobby Display",
+      "description": "A high-definition display in the main lobby.",
+      "categoryTitle": "Corporate Displays",
+      "categoryColor": "rgba(174, 31, 158, 1)",
+      "resolution": "HD",
+      "size": 42,
+      "createDate": "2024-01-15T10:00:00Z",
+      "zipCode": "90001",
+      "city": "Los Angeles",
+      "street": "123 Tech Lane",
+      "displayMedias": [
+        {
+          "uid": "media01",
+          "url": "/assets/images/profile.webp",
+          "name": "Lobby Display Image",
+          "status": "done",
+          "type": "image/jpeg",
+          "thumbUrl": "/assets/images/profile.webp"
+        },
+        {
+          "uid": "media01",
+          "url": "/assets/images/profile.webp",
+          "name": "Lobby Display Image",
+          "status": "done",
+          "type": "image/jpeg",
+          "thumbUrl": "/assets/images/profile.webp"
+        }
+      ],
+      "displayPlaceMedias": [
+        {
+          "uid": "media01",
+          "url": "/assets/images/profile.webp",
+          "name": "Lobby Display Image",
+          "status": "done",
+          "type": "image/jpeg",
+          "thumbUrl": "/assets/images/profile.webp"
+        },
+        {
+          "uid": "media01",
+          "url": "/assets/images/profile.webp",
+          "name": "Lobby Display Image",
+          "status": "done",
+          "type": "image/jpeg",
+          "thumbUrl": "/assets/images/profile.webp"
+        }
+      ],
+      "district": "Central"
+    },
+    {
+      "id": "display10",
+      "onlineId": "partner01_display01",
+      "displayType": "LCDScreen",
+      "title": "Main Lobby Display",
+      "description": "A high-definition display in the main lobby.",
+      "categoryTitle": "Corporate Displays",
+      "categoryColor": "rgba(174, 31, 158, 1)",
+      "resolution": "HD",
+      "size": 42,
+      "createDate": "2024-01-15T10:00:00Z",
+      "zipCode": "90001",
+      "city": "Los Angeles",
+      "street": "123 Tech Lane",
+      "displayMedias": [
+        {
+          "uid": "media01",
+          "url": "/assets/images/profile.webp",
+          "name": "Lobby Display Image",
+          "status": "done",
+          "type": "image/jpeg",
+          "thumbUrl": "/assets/images/profile.webp"
+        },
+        {
+          "uid": "media01",
+          "url": "/assets/images/profile.webp",
+          "name": "Lobby Display Image",
+          "status": "done",
+          "type": "image/jpeg",
+          "thumbUrl": "/assets/images/profile.webp"
+        }
+      ],
+      "displayPlaceMedias": [
+        {
+          "uid": "media01",
+          "url": "/assets/images/profile.webp",
+          "name": "Lobby Display Image",
+          "status": "done",
+          "type": "image/jpeg",
+          "thumbUrl": "/assets/images/profile.webp"
+        },
+        {
+          "uid": "media01",
+          "url": "/assets/images/profile.webp",
+          "name": "Lobby Display Image",
+          "status": "done",
+          "type": "image/jpeg",
+          "thumbUrl": "/assets/images/profile.webp"
+        }
+      ],
+      "district": "Central"
+    },
+    {
+      "id": "display11",
+      "onlineId": "partner01_display01",
+      "displayType": "LCDScreen",
+      "title": "Main Lobby Display",
+      "description": "A high-definition display in the main lobby.",
+      "categoryTitle": "Corporate Displays",
+      "categoryColor": "rgba(174, 31, 158, 1)",
+      "resolution": "HD",
+      "size": 42,
+      "createDate": "2024-01-15T10:00:00Z",
+      "zipCode": "90001",
+      "city": "Los Angeles",
+      "street": "123 Tech Lane",
+      "displayMedias": [
+        {
+          "uid": "media01",
+          "url": "/assets/images/profile.webp",
+          "name": "Lobby Display Image",
+          "status": "done",
+          "type": "image/jpeg",
+          "thumbUrl": "/assets/images/profile.webp"
+        },
+        {
+          "uid": "media01",
+          "url": "/assets/images/profile.webp",
+          "name": "Lobby Display Image",
+          "status": "done",
+          "type": "image/jpeg",
+          "thumbUrl": "/assets/images/profile.webp"
+        }
+      ],
+      "displayPlaceMedias": [
+        {
+          "uid": "media01",
+          "url": "/assets/images/profile.webp",
+          "name": "Lobby Display Image",
+          "status": "done",
+          "type": "image/jpeg",
+          "thumbUrl": "/assets/images/profile.webp"
+        },
+        {
+          "uid": "media01",
+          "url": "/assets/images/profile.webp",
+          "name": "Lobby Display Image",
+          "status": "done",
+          "type": "image/jpeg",
+          "thumbUrl": "/assets/images/profile.webp"
+        }
+      ],
+      "district": "Central"
+    },
+    {
+      "id": "display12",
+      "onlineId": "partner01_display01",
+      "displayType": "LCDScreen",
+      "title": "Main Lobby Display",
+      "description": "A high-definition display in the main lobby.",
+      "categoryTitle": "Corporate Displays",
+      "categoryColor": "rgba(174, 31, 158, 1)",
+      "resolution": "HD",
+      "size": 42,
+      "createDate": "2024-01-15T10:00:00Z",
+      "zipCode": "90001",
+      "city": "Los Angeles",
+      "street": "123 Tech Lane",
+      "displayMedias": [
+        {
+          "uid": "media01",
+          "url": "/assets/images/profile.webp",
+          "name": "Lobby Display Image",
+          "status": "done",
+          "type": "image/jpeg",
+          "thumbUrl": "/assets/images/profile.webp"
+        },
+        {
+          "uid": "media01",
+          "url": "/assets/images/profile.webp",
+          "name": "Lobby Display Image",
+          "status": "done",
+          "type": "image/jpeg",
+          "thumbUrl": "/assets/images/profile.webp"
+        }
+      ],
+      "displayPlaceMedias": [
+        {
+          "uid": "media01",
+          "url": "/assets/images/profile.webp",
+          "name": "Lobby Display Image",
+          "status": "done",
+          "type": "image/jpeg",
+          "thumbUrl": "/assets/images/profile.webp"
+        },
+        {
+          "uid": "media01",
+          "url": "/assets/images/profile.webp",
+          "name": "Lobby Display Image",
+          "status": "done",
+          "type": "image/jpeg",
+          "thumbUrl": "/assets/images/profile.webp"
+        }
+      ],
+      "district": "Central"
+    },
+    {
+      "id": "display13",
+      "onlineId": "partner01_display01",
+      "displayType": "LCDScreen",
+      "title": "Main Lobby Display",
+      "description": "A high-definition display in the main lobby.",
+      "categoryTitle": "Corporate Displays",
+      "categoryColor": "rgba(174, 31, 158, 1)",
+      "resolution": "HD",
+      "size": 42,
+      "createDate": "2024-01-15T10:00:00Z",
+      "zipCode": "90001",
+      "city": "Los Angeles",
+      "street": "123 Tech Lane",
+      "displayMedias": [
+        {
+          "uid": "media01",
+          "url": "/assets/images/profile.webp",
+          "name": "Lobby Display Image",
+          "status": "done",
+          "type": "image/jpeg",
+          "thumbUrl": "/assets/images/profile.webp"
+        },
+        {
+          "uid": "media01",
+          "url": "/assets/images/profile.webp",
+          "name": "Lobby Display Image",
+          "status": "done",
+          "type": "image/jpeg",
+          "thumbUrl": "/assets/images/profile.webp"
+        }
+      ],
+      "displayPlaceMedias": [
+        {
+          "uid": "media01",
+          "url": "/assets/images/profile.webp",
+          "name": "Lobby Display Image",
+          "status": "done",
+          "type": "image/jpeg",
+          "thumbUrl": "/assets/images/profile.webp"
+        },
+        {
+          "uid": "media01",
+          "url": "/assets/images/profile.webp",
+          "name": "Lobby Display Image",
+          "status": "done",
+          "type": "image/jpeg",
+          "thumbUrl": "/assets/images/profile.webp"
+        }
+      ],
+      "district": "Central"
+    },
+    {
+      "id": "display14",
+      "onlineId": "partner01_display01",
+      "displayType": "LCDScreen",
+      "title": "Main Lobby Display",
+      "description": "A high-definition display in the main lobby.",
+      "categoryTitle": "Corporate Displays",
+      "categoryColor": "rgba(174, 31, 158, 1)",
+      "resolution": "HD",
+      "size": 42,
+      "createDate": "2024-01-15T10:00:00Z",
+      "zipCode": "90001",
+      "city": "Los Angeles",
+      "street": "123 Tech Lane",
+      "displayMedias": [
+        {
+          "uid": "media01",
+          "url": "/assets/images/profile.webp",
+          "name": "Lobby Display Image",
+          "status": "done",
+          "type": "image/jpeg",
+          "thumbUrl": "/assets/images/profile.webp"
+        },
+        {
+          "uid": "media01",
+          "url": "/assets/images/profile.webp",
+          "name": "Lobby Display Image",
+          "status": "done",
+          "type": "image/jpeg",
+          "thumbUrl": "/assets/images/profile.webp"
+        }
+      ],
+      "displayPlaceMedias": [
+        {
+          "uid": "media01",
+          "url": "/assets/images/profile.webp",
+          "name": "Lobby Display Image",
+          "status": "done",
+          "type": "image/jpeg",
+          "thumbUrl": "/assets/images/profile.webp"
+        },
+        {
+          "uid": "media01",
+          "url": "/assets/images/profile.webp",
+          "name": "Lobby Display Image",
+          "status": "done",
+          "type": "image/jpeg",
+          "thumbUrl": "/assets/images/profile.webp"
+        }
+      ],
+      "district": "Central"
+    },
+    {
+      "id": "display15",
+      "onlineId": "partner01_display01",
+      "displayType": "LCDScreen",
+      "title": "Main Lobby Display",
+      "description": "A high-definition display in the main lobby.",
+      "categoryTitle": "Corporate Displays",
+      "categoryColor": "rgba(174, 31, 158, 1)",
+      "resolution": "HD",
+      "size": 42,
+      "createDate": "2024-01-15T10:00:00Z",
+      "zipCode": "90001",
+      "city": "Los Angeles",
+      "street": "123 Tech Lane",
+      "displayMedias": [
+        {
+          "uid": "media01",
+          "url": "/assets/images/profile.webp",
+          "name": "Lobby Display Image",
+          "status": "done",
+          "type": "image/jpeg",
+          "thumbUrl": "/assets/images/profile.webp"
+        },
+        {
+          "uid": "media01",
+          "url": "/assets/images/profile.webp",
+          "name": "Lobby Display Image",
+          "status": "done",
+          "type": "image/jpeg",
+          "thumbUrl": "/assets/images/profile.webp"
+        }
+      ],
+      "displayPlaceMedias": [
+        {
+          "uid": "media01",
+          "url": "/assets/images/profile.webp",
+          "name": "Lobby Display Image",
+          "status": "done",
+          "type": "image/jpeg",
+          "thumbUrl": "/assets/images/profile.webp"
+        },
+        {
+          "uid": "media01",
+          "url": "/assets/images/profile.webp",
+          "name": "Lobby Display Image",
+          "status": "done",
+          "type": "image/jpeg",
+          "thumbUrl": "/assets/images/profile.webp"
+        }
+      ],
+      "district": "Central"
+    },
+    {
+      "id": "display16",
+      "onlineId": "partner01_display01",
+      "displayType": "LCDScreen",
+      "title": "Main Lobby Display",
+      "description": "A high-definition display in the main lobby.",
+      "categoryTitle": "Corporate Displays",
+      "categoryColor": "rgba(174, 31, 158, 1)",
+      "resolution": "HD",
+      "size": 42,
+      "createDate": "2024-01-15T10:00:00Z",
+      "zipCode": "90001",
+      "city": "Los Angeles",
+      "street": "123 Tech Lane",
+      "displayMedias": [
+        {
+          "uid": "media01",
+          "url": "/assets/images/profile.webp",
+          "name": "Lobby Display Image",
+          "status": "done",
+          "type": "image/jpeg",
+          "thumbUrl": "/assets/images/profile.webp"
+        },
+        {
+          "uid": "media01",
+          "url": "/assets/images/profile.webp",
+          "name": "Lobby Display Image",
+          "status": "done",
+          "type": "image/jpeg",
+          "thumbUrl": "/assets/images/profile.webp"
+        }
+      ],
+      "displayPlaceMedias": [
+        {
+          "uid": "media01",
+          "url": "/assets/images/profile.webp",
+          "name": "Lobby Display Image",
+          "status": "done",
+          "type": "image/jpeg",
+          "thumbUrl": "/assets/images/profile.webp"
+        },
+        {
+          "uid": "media01",
+          "url": "/assets/images/profile.webp",
+          "name": "Lobby Display Image",
+          "status": "done",
+          "type": "image/jpeg",
+          "thumbUrl": "/assets/images/profile.webp"
+        }
+      ],
+      "district": "Central"
+    },
+    {
+      "id": "display02",
+      "onlineId": "partner01_display02",
+      "displayType": "LCDFloorstand",
+      "title": "Entrance Display",
+      "description": "A floor-standing display at the entrance.",
+      "categoryTitle": "Promotional Displays",
+      "categoryColor": "rgba(255, 99, 132, 1)",
+      "resolution": "FullHD",
+      "size": 55,
+      "createDate": "2024-02-01T14:30:00Z",
+      "zipCode": "90001",
+      "city": "Los Angeles",
+      "street": "123 Tech Lane",
+      "displayMedias": [
+        {
+          "uid": "media02",
+          "url": "/assets/images/profile.webp",
+          "name": "Entrance Promo Video",
+          "status": "done",
+          "type": "video/mp4",
+          "thumbUrl": "/assets/images/profile.webp"
+        }
+      ],
+      "displayPlaceMedias": [
+        {
+          "uid": "media03",
+          "url": "/assets/images/profile.webp",
+          "name": "Entrance Display Location",
+          "status": "done",
+          "type": "image/jpeg",
+          "thumbUrl": "/assets/images/profile.webp"
+        }
+      ],
+      "district": "North"
+    }
+  ],
+  "2": [
+    {
+      "id": "display03",
+      "onlineId": "partner02_display01",
+      "displayType": "Tablet",
+      "title": "Meeting Room Tablet",
+      "description": "A tablet display in the meeting room.",
+      "categoryTitle": "Interactive Displays",
+      "categoryColor": "rgba(54, 162, 235, 1)",
+      "resolution": "HD",
+      "size": 10,
+      "createDate": "2024-03-10T12:00:00Z",
+      "zipCode": "10001",
+      "city": "New York",
+      "street": "456 Creative Blvd",
+      "displayMedias": [
+        {
+          "uid": "media04",
+          "url": "/assets/images/profile.webp",
+          "name": "Meeting Room Tablet Image",
+          "status": "done",
+          "type": "image/jpeg",
+          "thumbUrl": "/assets/images/profile.webp"
+        }
+      ],
+      "displayPlaceMedias": [],
+      "district": "East"
+    }
+  ],
+  "3": [
+    {
+      "id": "display04",
+      "onlineId": "partner03_display01",
+      "displayType": "LEDVideoWall",
+      "title": "Conference Video Wall",
+      "description": "A large video wall for conferences.",
+      "categoryTitle": "Event Displays",
+      "categoryColor": "rgba(255, 206, 86, 1)",
+      "resolution": "4KUHD",
+      "size": 120,
+      "createDate": "2024-04-05T08:45:00Z",
+      "zipCode": "60601",
+      "city": "Chicago",
+      "street": "789 Innovation Way",
+      "displayMedias": [
+        {
+          "uid": "media05",
+          "url": "/assets/images/profile.webp",
+          "name": "Conference Video",
+          "status": "done",
+          "type": "video/mp4",
+          "thumbUrl": "/assets/images/profile.webp"
+        }
+      ],
+      "displayPlaceMedias": [
+        {
+          "uid": "media06",
+          "url": "/assets/images/profile.webp",
+          "name": "Conference Room Image",
+          "status": "done",
+          "type": "image/jpeg",
+          "thumbUrl": "/assets/images/profile.webp"
+        }
+      ],
+      "district": "West"
+    }
+  ],
+  "4": [
+    {
+      "id": "display05",
+      "onlineId": "partner04_display01",
+      "displayType": "LCDVideoWall",
+      "title": "Reception Video Wall",
+      "description": "A video wall in the reception area.",
+      "categoryTitle": "Corporate Displays",
+      "categoryColor": "rgba(153, 102, 255, 1)",
+      "resolution": "FullHD",
+      "size": 90,
+      "createDate": "2024-05-20T11:30:00Z",
+      "zipCode": "94101",
+      "city": "San Francisco",
+      "street": "101 Elite Avenue",
+      "displayMedias": [
+        {
+          "uid": "media07",
+          "url": "/assets/images/profile.webp",
+          "name": "Reception Video",
+          "status": "done",
+          "type": "video/mp4",
+          "thumbUrl": "/assets/images/profile.webp"
+        }
+      ],
+      "displayPlaceMedias": [
+        {
+          "uid": "media08",
+          "url": "/assets/images/profile.webp",
+          "name": "Reception Area Image",
+          "status": "done",
+          "type": "image/jpeg",
+          "thumbUrl": "/assets/images/profile.webp"
+        }
+      ],
+      "district": "Central"
+    }
+  ]
+}

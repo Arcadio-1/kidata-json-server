@@ -1,0 +1,819 @@
+[
+  {
+    "title": "Title",
+    "description": "Description",
+    "keywords": "Keywords",
+    "categoryId": "ssss",
+    "infoAccess": "public",
+    "alignment": "vertical",
+    "resolution": "FullHD",
+    "playlist": [
+      {
+        "mediaId": "8-abc",
+        "duration": 23,
+        "mediaType": "general"
+      },
+      {
+        "mediaId": "8-abc",
+        "duration": 23,
+        "mediaType": "general"
+      },
+      {
+        "mediaId": "1-abc",
+        "duration": 20,
+        "mediaType": "general"
+      },
+      {
+        "mediaId": "6-abc",
+        "duration": 42,
+        "mediaType": "general"
+      }
+    ],
+    "playlistType": "short",
+    "thumbUrl": "/assets/images/placeholder/1.jpg",
+    "onlineId": "10",
+    "fileSize": 20,
+    "duration": 280,
+    "url": "/assets/videos/placeholder/2.mp4",
+    "uploadedBy": "Rkdo",
+    "uploadedOn": "2025-04-16T16:52:43.000Z",
+    "firstUse": "2025-05-16T16:52:43.000Z",
+    "lastChange": "2025-06-16T16:52:43.000Z",
+    "categoryColor": "#FF5733",
+    "categoryTitle": "Hospitality",
+    "isArchived": false,
+    "status": "notUsed",
+    "id": 1
+  },
+  {
+    "title": "Title",
+    "description": "Description",
+    "keywords": "Keywords",
+    "categoryId": "ssss",
+    "infoAccess": "public",
+    "alignment": "vertical",
+    "resolution": "FullHD",
+    "playlist": [
+      {
+        "mediaId": "2-abc",
+        "duration": 10,
+        "mediaType": "background"
+      },
+      {
+        "mediaId": "1-abc",
+        "duration": 32,
+        "mediaType": "general"
+      },
+      {
+        "mediaId": "3-abc",
+        "duration": 63,
+        "mediaType": "general"
+      },
+      {
+        "mediaId": "10-abc",
+        "duration": 10,
+        "mediaType": "background"
+      },
+      {
+        "mediaId": "10-abc",
+        "duration": 10,
+        "mediaType": "background"
+      },
+      {
+        "mediaId": "10-abc",
+        "duration": 10,
+        "mediaType": "background"
+      },
+      {
+        "mediaId": "10-abc",
+        "duration": 10,
+        "mediaType": "background"
+      },
+      {
+        "mediaId": "10-abc",
+        "duration": 10,
+        "mediaType": "background"
+      },
+      {
+        "mediaId": "10-abc",
+        "duration": 10,
+        "mediaType": "background"
+      },
+      {
+        "mediaId": "10-abc",
+        "duration": 10,
+        "mediaType": "background"
+      },
+      {
+        "mediaId": "10-abc",
+        "duration": 10,
+        "mediaType": "background"
+      },
+      {
+        "mediaId": "10-abc",
+        "duration": 10,
+        "mediaType": "background"
+      },
+      {
+        "mediaId": "10-abc",
+        "duration": 10,
+        "mediaType": "background"
+      },
+      {
+        "mediaId": "10-abc",
+        "duration": 10,
+        "mediaType": "background"
+      }
+    ],
+    "playlistType": "long",
+    "thumbUrl": "/assets/images/placeholder/2.jpg",
+    "onlineId": "9",
+    "fileSize": 20,
+    "duration": 280,
+    "url": "/assets/videos/placeholder/2.mp4",
+    "uploadedBy": "Rkdo",
+    "uploadedOn": "2025-04-16T16:52:43.000Z",
+    "firstUse": "2025-05-16T16:52:43.000Z",
+    "lastChange": "2025-06-16T16:52:43.000Z",
+    "categoryColor": "#FF5733",
+    "categoryTitle": "Hospitality",
+    "isArchived": false,
+    "status": "notUsed",
+    "id": 2
+  },
+  {
+    "title": "Title",
+    "description": "Description",
+    "keywords": "Keywords",
+    "categoryId": "ssss",
+    "infoAccess": "public",
+    "alignment": "vertical",
+    "resolution": "FullHD",
+    "playlist": [
+      {
+        "mediaId": "8-abc",
+        "duration": 23,
+        "mediaType": "general"
+      },
+      {
+        "mediaId": "8-abc",
+        "duration": 23,
+        "mediaType": "general"
+      },
+      {
+        "mediaId": "1-abc",
+        "duration": 20,
+        "mediaType": "general"
+      },
+      {
+        "mediaId": "6-abc",
+        "duration": 42,
+        "mediaType": "general"
+      }
+    ],
+    "playlistType": "short",
+    "thumbUrl": "/assets/images/placeholder/3.jpg",
+    "onlineId": "8",
+    "fileSize": 20,
+    "duration": 280,
+    "url": "/assets/videos/placeholder/2.mp4",
+    "uploadedBy": "Rkdo",
+    "uploadedOn": "2025-04-16T16:52:43.000Z",
+    "firstUse": "2025-05-16T16:52:43.000Z",
+    "lastChange": "2025-06-16T16:52:43.000Z",
+    "categoryColor": "#FF5733",
+    "categoryTitle": "Hospitality",
+    "isArchived": false,
+    "status": "notUsed",
+    "id": 3
+  },
+  {
+    "title": "Title",
+    "description": "Description",
+    "keywords": "Keywords",
+    "categoryId": "ssss",
+    "infoAccess": "public",
+    "alignment": "vertical",
+    "resolution": "FullHD",
+    "playlist": [
+      {
+        "mediaId": "2-abc",
+        "duration": 10,
+        "mediaType": "background"
+      },
+      {
+        "mediaId": "1-abc",
+        "duration": 32,
+        "mediaType": "general"
+      },
+      {
+        "mediaId": "3-abc",
+        "duration": 63,
+        "mediaType": "general"
+      },
+      {
+        "mediaId": "10-abc",
+        "duration": 10,
+        "mediaType": "background"
+      },
+      {
+        "mediaId": "10-abc",
+        "duration": 10,
+        "mediaType": "background"
+      },
+      {
+        "mediaId": "10-abc",
+        "duration": 10,
+        "mediaType": "background"
+      },
+      {
+        "mediaId": "10-abc",
+        "duration": 10,
+        "mediaType": "background"
+      },
+      {
+        "mediaId": "10-abc",
+        "duration": 10,
+        "mediaType": "background"
+      },
+      {
+        "mediaId": "10-abc",
+        "duration": 10,
+        "mediaType": "background"
+      },
+      {
+        "mediaId": "10-abc",
+        "duration": 10,
+        "mediaType": "background"
+      },
+      {
+        "mediaId": "10-abc",
+        "duration": 10,
+        "mediaType": "background"
+      },
+      {
+        "mediaId": "10-abc",
+        "duration": 10,
+        "mediaType": "background"
+      },
+      {
+        "mediaId": "10-abc",
+        "duration": 10,
+        "mediaType": "background"
+      },
+      {
+        "mediaId": "10-abc",
+        "duration": 10,
+        "mediaType": "background"
+      }
+    ],
+    "playlistType": "long",
+    "thumbUrl": "/assets/images/placeholder/4.jpg",
+    "onlineId": "7",
+    "fileSize": 20,
+    "duration": 280,
+    "url": "/assets/videos/placeholder/2.mp4",
+    "uploadedBy": "Rkdo",
+    "uploadedOn": "2025-04-16T16:52:43.000Z",
+    "firstUse": "2025-05-16T16:52:43.000Z",
+    "lastChange": "2025-06-16T16:52:43.000Z",
+    "categoryColor": "#FF5733",
+    "categoryTitle": "Hospitality",
+    "isArchived": false,
+    "status": "notUsed",
+    "id": 4
+  },
+  {
+    "title": "Title",
+    "description": "Description",
+    "keywords": "Keywords",
+    "categoryId": "ssss",
+    "infoAccess": "public",
+    "alignment": "vertical",
+    "resolution": "FullHD",
+    "playlist": [
+      {
+        "mediaId": "8-abc",
+        "duration": 23,
+        "mediaType": "general"
+      },
+      {
+        "mediaId": "8-abc",
+        "duration": 23,
+        "mediaType": "general"
+      },
+      {
+        "mediaId": "1-abc",
+        "duration": 20,
+        "mediaType": "general"
+      },
+      {
+        "mediaId": "6-abc",
+        "duration": 42,
+        "mediaType": "general"
+      }
+    ],
+    "playlistType": "short",
+    "thumbUrl": "/assets/images/placeholder/5.jpg",
+    "onlineId": "6",
+    "fileSize": 20,
+    "duration": 280,
+    "url": "/assets/videos/placeholder/2.mp4",
+    "uploadedBy": "Rkdo",
+    "uploadedOn": "2025-04-16T16:52:43.000Z",
+    "firstUse": "2025-05-16T16:52:43.000Z",
+    "lastChange": "2025-06-16T16:52:43.000Z",
+    "categoryColor": "#FF5733",
+    "categoryTitle": "Hospitality",
+    "isArchived": false,
+    "status": "notUsed",
+    "id": 5
+  },
+  {
+    "title": "Title",
+    "description": "Description",
+    "keywords": "Keywords",
+    "categoryId": "ssss",
+    "infoAccess": "public",
+    "alignment": "vertical",
+    "resolution": "FullHD",
+    "playlist": [
+      {
+        "mediaId": "2-abc",
+        "duration": 10,
+        "mediaType": "background"
+      },
+      {
+        "mediaId": "1-abc",
+        "duration": 32,
+        "mediaType": "general"
+      },
+      {
+        "mediaId": "3-abc",
+        "duration": 63,
+        "mediaType": "general"
+      },
+      {
+        "mediaId": "10-abc",
+        "duration": 10,
+        "mediaType": "background"
+      },
+      {
+        "mediaId": "10-abc",
+        "duration": 10,
+        "mediaType": "background"
+      },
+      {
+        "mediaId": "10-abc",
+        "duration": 10,
+        "mediaType": "background"
+      },
+      {
+        "mediaId": "10-abc",
+        "duration": 10,
+        "mediaType": "background"
+      },
+      {
+        "mediaId": "10-abc",
+        "duration": 10,
+        "mediaType": "background"
+      },
+      {
+        "mediaId": "10-abc",
+        "duration": 10,
+        "mediaType": "background"
+      },
+      {
+        "mediaId": "10-abc",
+        "duration": 10,
+        "mediaType": "background"
+      },
+      {
+        "mediaId": "10-abc",
+        "duration": 10,
+        "mediaType": "background"
+      },
+      {
+        "mediaId": "10-abc",
+        "duration": 10,
+        "mediaType": "background"
+      },
+      {
+        "mediaId": "10-abc",
+        "duration": 10,
+        "mediaType": "background"
+      },
+      {
+        "mediaId": "10-abc",
+        "duration": 10,
+        "mediaType": "background"
+      }
+    ],
+    "playlistType": "long",
+    "thumbUrl": "/assets/images/placeholder/6.jpg",
+    "onlineId": "5",
+    "fileSize": 20,
+    "duration": 280,
+    "url": "/assets/videos/placeholder/2.mp4",
+    "uploadedBy": "Rkdo",
+    "uploadedOn": "2025-04-16T16:52:43.000Z",
+    "firstUse": "2025-05-16T16:52:43.000Z",
+    "lastChange": "2025-06-16T16:52:43.000Z",
+    "categoryColor": "#FF5733",
+    "categoryTitle": "Hospitality",
+    "isArchived": false,
+    "status": "notUsed",
+    "id": 6
+  },
+  {
+    "title": "Title",
+    "description": "Description",
+    "keywords": "Keywords",
+    "categoryId": "ssss",
+    "infoAccess": "public",
+    "alignment": "vertical",
+    "resolution": "FullHD",
+    "playlist": [
+      {
+        "mediaId": "8-abc",
+        "duration": 23,
+        "mediaType": "general"
+      },
+      {
+        "mediaId": "8-abc",
+        "duration": 23,
+        "mediaType": "general"
+      },
+      {
+        "mediaId": "1-abc",
+        "duration": 20,
+        "mediaType": "general"
+      },
+      {
+        "mediaId": "6-abc",
+        "duration": 42,
+        "mediaType": "general"
+      }
+    ],
+    "playlistType": "short",
+    "thumbUrl": "/assets/images/placeholder/7.jpg",
+    "onlineId": "4",
+    "fileSize": 20,
+    "duration": 280,
+    "url": "/assets/videos/placeholder/2.mp4",
+    "uploadedBy": "Rkdo",
+    "uploadedOn": "2025-04-16T16:52:43.000Z",
+    "firstUse": "2025-05-16T16:52:43.000Z",
+    "lastChange": "2025-06-16T16:52:43.000Z",
+    "categoryColor": "#FF5733",
+    "categoryTitle": "Hospitality",
+    "isArchived": false,
+    "status": "notUsed",
+    "id": 7
+  },
+  {
+    "title": "Title",
+    "description": "Description",
+    "keywords": "Keywords",
+    "categoryId": "ssss",
+    "infoAccess": "public",
+    "alignment": "vertical",
+    "resolution": "FullHD",
+    "playlist": [
+      {
+        "mediaId": "2-abc",
+        "duration": 10,
+        "mediaType": "background"
+      },
+      {
+        "mediaId": "1-abc",
+        "duration": 32,
+        "mediaType": "general"
+      },
+      {
+        "mediaId": "3-abc",
+        "duration": 63,
+        "mediaType": "general"
+      },
+      {
+        "mediaId": "10-abc",
+        "duration": 10,
+        "mediaType": "background"
+      },
+      {
+        "mediaId": "10-abc",
+        "duration": 10,
+        "mediaType": "background"
+      },
+      {
+        "mediaId": "10-abc",
+        "duration": 10,
+        "mediaType": "background"
+      },
+      {
+        "mediaId": "10-abc",
+        "duration": 10,
+        "mediaType": "background"
+      },
+      {
+        "mediaId": "10-abc",
+        "duration": 10,
+        "mediaType": "background"
+      },
+      {
+        "mediaId": "10-abc",
+        "duration": 10,
+        "mediaType": "background"
+      },
+      {
+        "mediaId": "10-abc",
+        "duration": 10,
+        "mediaType": "background"
+      },
+      {
+        "mediaId": "10-abc",
+        "duration": 10,
+        "mediaType": "background"
+      },
+      {
+        "mediaId": "10-abc",
+        "duration": 10,
+        "mediaType": "background"
+      },
+      {
+        "mediaId": "10-abc",
+        "duration": 10,
+        "mediaType": "background"
+      },
+      {
+        "mediaId": "10-abc",
+        "duration": 10,
+        "mediaType": "background"
+      }
+    ],
+    "playlistType": "long",
+    "thumbUrl": "/assets/images/placeholder/8.jpg",
+    "onlineId": "3",
+    "fileSize": 20,
+    "duration": 280,
+    "url": "/assets/videos/placeholder/2.mp4",
+    "uploadedBy": "Rkdo",
+    "uploadedOn": "2025-04-16T16:52:43.000Z",
+    "firstUse": "2025-05-16T16:52:43.000Z",
+    "lastChange": "2025-06-16T16:52:43.000Z",
+    "categoryColor": "#FF5733",
+    "categoryTitle": "Hospitality",
+    "isArchived": false,
+    "status": "notUsed",
+    "id": 8
+  },
+  {
+    "title": "Title",
+    "description": "Description",
+    "keywords": "Keywords",
+    "categoryId": "ssss",
+    "infoAccess": "public",
+    "alignment": "vertical",
+    "resolution": "FullHD",
+    "playlist": [
+      {
+        "mediaId": "8-abc",
+        "duration": 23,
+        "mediaType": "general"
+      },
+      {
+        "mediaId": "8-abc",
+        "duration": 23,
+        "mediaType": "general"
+      },
+      {
+        "mediaId": "1-abc",
+        "duration": 20,
+        "mediaType": "general"
+      },
+      {
+        "mediaId": "6-abc",
+        "duration": 42,
+        "mediaType": "general"
+      }
+    ],
+    "playlistType": "short",
+    "thumbUrl": "/assets/images/placeholder/9.jpg",
+    "onlineId": "2",
+    "fileSize": 20,
+    "duration": 280,
+    "url": "/assets/videos/placeholder/2.mp4",
+    "uploadedBy": "Rkdo",
+    "uploadedOn": "2025-04-16T16:52:43.000Z",
+    "firstUse": "2025-05-16T16:52:43.000Z",
+    "lastChange": "2025-06-16T16:52:43.000Z",
+    "categoryColor": "#FF5733",
+    "categoryTitle": "Hospitality",
+    "isArchived": false,
+    "status": "notUsed",
+    "id": 9
+  },
+  {
+    "title": "Title",
+    "description": "Description",
+    "keywords": "Keywords",
+    "categoryId": "ssss",
+    "infoAccess": "public",
+    "alignment": "vertical",
+    "resolution": "FullHD",
+    "playlist": [
+      {
+        "mediaId": "2-abc",
+        "duration": 10,
+        "mediaType": "background"
+      },
+      {
+        "mediaId": "1-abc",
+        "duration": 32,
+        "mediaType": "general"
+      },
+      {
+        "mediaId": "3-abc",
+        "duration": 63,
+        "mediaType": "general"
+      },
+      {
+        "mediaId": "10-abc",
+        "duration": 10,
+        "mediaType": "background"
+      },
+      {
+        "mediaId": "10-abc",
+        "duration": 10,
+        "mediaType": "background"
+      },
+      {
+        "mediaId": "10-abc",
+        "duration": 10,
+        "mediaType": "background"
+      },
+      {
+        "mediaId": "10-abc",
+        "duration": 10,
+        "mediaType": "background"
+      },
+      {
+        "mediaId": "10-abc",
+        "duration": 10,
+        "mediaType": "background"
+      },
+      {
+        "mediaId": "10-abc",
+        "duration": 10,
+        "mediaType": "background"
+      },
+      {
+        "mediaId": "10-abc",
+        "duration": 10,
+        "mediaType": "background"
+      },
+      {
+        "mediaId": "10-abc",
+        "duration": 10,
+        "mediaType": "background"
+      },
+      {
+        "mediaId": "10-abc",
+        "duration": 10,
+        "mediaType": "background"
+      },
+      {
+        "mediaId": "10-abc",
+        "duration": 10,
+        "mediaType": "background"
+      },
+      {
+        "mediaId": "10-abc",
+        "duration": 10,
+        "mediaType": "background"
+      }
+    ],
+    "playlistType": "long",
+    "thumbUrl": "/assets/images/placeholder/10.jpg",
+    "onlineId": "1",
+    "fileSize": 20,
+    "duration": 280,
+    "url": "/assets/videos/placeholder/2.mp4",
+    "uploadedBy": "Rkdo",
+    "uploadedOn": "2025-04-16T16:52:43.000Z",
+    "firstUse": "2025-05-16T16:52:43.000Z",
+    "lastChange": "2025-06-16T16:52:43.000Z",
+    "categoryColor": "#FF5733",
+    "categoryTitle": "Hospitality",
+    "isArchived": false,
+    "status": "notUsed",
+    "id": 10
+  },
+  {
+    "title": "Title",
+    "description": "Description",
+    "keywords": "Keywords",
+    "categoryId": "68d1da679543c42f756b7ae0",
+    "infoAccess": "public",
+    "alignment": "horizontal",
+    "resolution": "FullHD",
+    "playlist": [
+      {
+        "mediaId": "7-abc",
+        "duration": 10,
+        "mediaType": "general"
+      },
+      {
+        "mediaId": "8-abc",
+        "duration": 23,
+        "mediaType": "general"
+      },
+      {
+        "mediaId": "8-abc",
+        "duration": 23,
+        "mediaType": "general"
+      },
+      {
+        "mediaId": "1-abc",
+        "duration": 56,
+        "mediaType": "general"
+      },
+      {
+        "mediaId": "4-abc",
+        "duration": 10,
+        "mediaType": "commercial"
+      },
+      {
+        "mediaId": "3-abc",
+        "duration": 10,
+        "mediaType": "general"
+      }
+    ],
+    "playlistType": "long",
+    "thumbUrl": "/assets/images/placeholder/1.jpg",
+    "onlineId": "0.2290121040694505",
+    "fileSize": 20,
+    "duration": 280,
+    "url": "/assets/videos/placeholder/2.mp4",
+    "uploadedBy": "Rkdo",
+    "uploadedOn": "2025-04-16T16:52:43.000Z",
+    "firstUse": "2025-05-16T16:52:43.000Z",
+    "lastChange": "2025-06-16T16:52:43.000Z",
+    "categoryColor": "#FF5733",
+    "categoryTitle": "Hospitality",
+    "isArchived": false,
+    "status": "notUsed",
+    "id": 11
+  },
+  {
+    "title": "Title",
+    "description": "Description",
+    "keywords": "Keywords",
+    "categoryId": "68d6eb1a9614ce3a39e4a67e",
+    "infoAccess": "public",
+    "alignment": "vertical",
+    "resolution": "FullHD",
+    "playlist": [
+      {
+        "mediaId": "1-abc",
+        "duration": 67,
+        "mediaType": "general"
+      },
+      {
+        "mediaId": "8-abc",
+        "duration": 23,
+        "mediaType": "general"
+      },
+      {
+        "mediaId": "8-abc",
+        "duration": 23,
+        "mediaType": "general"
+      },
+      {
+        "mediaId": "8-abc",
+        "duration": 23,
+        "mediaType": "general"
+      },
+      {
+        "mediaId": "8-abc",
+        "duration": 23,
+        "mediaType": "general"
+      }
+    ],
+    "playlistType": "long",
+    "thumbUrl": "/assets/images/placeholder/1.jpg",
+    "onlineId": "0.8452523961727127",
+    "fileSize": 20,
+    "duration": 280,
+    "url": "/assets/videos/placeholder/2.mp4",
+    "uploadedBy": "Rkdo",
+    "uploadedOn": "2025-04-16T16:52:43.000Z",
+    "firstUse": "2025-05-16T16:52:43.000Z",
+    "lastChange": "2025-06-16T16:52:43.000Z",
+    "categoryColor": "#FF5733",
+    "categoryTitle": "Hospitality",
+    "isArchived": false,
+    "status": "notUsed",
+    "id": 12
+  }
+]

@@ -1,0 +1,654 @@
+[
+  {
+    "id": "0b9d5d2e-6f9a-4f2a-9f5a-1fa95b9d1a10",
+    "companyId": "comp-acme",
+    "companyName": "Acme Corp",
+    "title": "API outage: intermittent 500 errors",
+    "description": "Multiple endpoints returning 500 since early morning; impact on order processing.",
+    "category": "TECHNICAL",
+    "priority": "HIGH",
+    "status": "OPEN",
+    "isSeen": false,
+    "createdBy": "user:jane.doe@acme.com",
+    "assignedAgentId": "agent_001",
+    "assignedAgentName": "Lea Schneider",
+    "createdAt": "2025-10-28T09:12:00.000Z",
+    "updatedAt": "2025-11-05T16:40:00.000Z",
+    "messages": [
+      {
+        "id": "7c7b9e4a-1d9b-4f0f-8a11-5b8c7a0a1f01",
+        "ticketId": "0b9d5d2e-6f9a-4f2a-9f5a-1fa95b9d1a10",
+        "sender": "jane.doe@acme.com",
+        "message": "<p>We are seeing intermittent 500 errors on /orders and /payments. Began around 07:45 UTC. Please advise.</p>",
+        "timestamp": "2025-10-28T09:12:00.000Z",
+        "side": "user"
+      },
+      {
+        "id": "b0c1b2a3-4d5e-46f7-98a1-234567890001",
+        "ticketId": "0b9d5d2e-6f9a-4f2a-9f5a-1fa95b9d1a10",
+        "sender": "Lea Schneider",
+        "message": "<p>Triage in progress. Initial logs suggest elevated error rates from the database connection pool.</p>",
+        "timestamp": "2025-10-28T09:25:00.000Z",
+        "isInternal": true,
+        "side": "super"
+      },
+      {
+        "id": "0f2a3b4c-5d6e-47f8-9012-abcdefabcdef",
+        "ticketId": "0b9d5d2e-6f9a-4f2a-9f5a-1fa95b9d1a10",
+        "sender": "Lea Schneider",
+        "message": "<p>Hi Jane, we are investigating an upstream DB saturation issue. We will update here as we mitigate.</p>",
+        "timestamp": "2025-10-28T09:40:00.000Z",
+        "side": "super"
+      },
+      {
+        "id": "9aa0b1c2-d3e4-45f6-8a90-111213141516",
+        "ticketId": "0b9d5d2e-6f9a-4f2a-9f5a-1fa95b9d1a10",
+        "sender": "Lea Schneider",
+        "message": "<p>Update: mitigation deployed to increase pool size and add circuit breakers. Monitoring impact.</p>",
+        "timestamp": "2025-11-05T16:40:00.000Z",
+        "side": "super"
+      }
+    ]
+  },
+  {
+    "id": "1b3e9f46-2aa6-4d6a-9a27-1f1c2b3d4e5f",
+    "companyId": "comp-globex",
+    "companyName": "Globex Corporation",
+    "title": "Invoice discrepancy for October",
+    "description": "Charged for 120 seats but only 100 active users. Please review and credit.",
+    "category": "BILLING",
+    "priority": "MEDIUM",
+    "status": "IN_PROCESS",
+    "isSeen": true,
+    "createdBy": "user:ap@globex.com",
+    "assignedAgentId": "agent_002",
+    "assignedAgentName": "Tomás Álvarez",
+    "createdAt": "2025-11-01T10:05:00.000Z",
+    "updatedAt": "2025-11-04T14:20:00.000Z",
+    "messages": [
+      {
+        "id": "2a3b4c5d-6e7f-4890-a1b2-c3d4e5f6a701",
+        "ticketId": "1b3e9f46-2aa6-4d6a-9a27-1f1c2b3d4e5f",
+        "sender": "ap@globex.com",
+        "message": "<p>Our October invoice shows 120 seats. We only have 100 active users.</p>",
+        "timestamp": "2025-11-01T10:05:00.000Z",
+        "AttachmentsFilesUrl": [
+          "https://files.example.com/globex/invoice-2025-10.pdf",
+          "https://files.example.com/globex/user-count-2025-10.csv"
+        ],
+        "side": "user"
+      },
+      {
+        "id": "3b4c5d6e-7f80-491a-b2c3-d4e5f6a7b802",
+        "ticketId": "1b3e9f46-2aa6-4d6a-9a27-1f1c2b3d4e5f",
+        "sender": "Tomás Álvarez",
+        "message": "<p>Thanks for the details. We will reconcile license usage vs. billing and report back.</p>",
+        "timestamp": "2025-11-01T11:00:00.000Z",
+        "side": "super"
+      },
+      {
+        "id": "4c5d6e7f-8091-4a2b-c3d4-e5f6a7b8c903",
+        "ticketId": "1b3e9f46-2aa6-4d6a-9a27-1f1c2b3d4e5f",
+        "sender": "Tomás Álvarez",
+        "message": "<p>Reconciliation started; variance likely due to suspended users not reflected in billing snapshot.</p>",
+        "timestamp": "2025-11-02T09:00:00.000Z",
+        "isInternal": true,
+        "side": "super"
+      },
+      {
+        "id": "5d6e7f80-091a-4b2c-d3e4-f5a6b7c8d004",
+        "ticketId": "1b3e9f46-2aa6-4d6a-9a27-1f1c2b3d4e5f",
+        "sender": "Tomás Álvarez",
+        "message": "<p>Update: preliminary review indicates 20 suspended users billed in error. Credit request submitted to finance.</p>",
+        "timestamp": "2025-11-04T14:20:00.000Z",
+        "side": "super"
+      }
+    ]
+  },
+  {
+    "id": "22c0f5a8-7a4e-4a2d-b8c5-8897c9e1f2a3",
+    "companyId": "comp-initech",
+    "companyName": "Initech",
+    "title": "Cannot reset password with SSO",
+    "description": "Users federated via Azure AD receive an error during password reset flow.",
+    "category": "ACCOUNT",
+    "priority": "HIGH",
+    "status": "ON_HOLD",
+    "isSeen": true,
+    "createdBy": "user:peter.gibbons@initech.com",
+    "assignedAgentId": "agent_003",
+    "assignedAgentName": "Priya Kapoor",
+    "createdAt": "2025-10-30T08:45:00.000Z",
+    "updatedAt": "2025-11-02T09:10:00.000Z",
+    "messages": [
+      {
+        "id": "6e7f8091-0a2b-4c3d-d4e5-f6a7b8c9d105",
+        "ticketId": "22c0f5a8-7a4e-4a2d-b8c5-8897c9e1f2a3",
+        "sender": "peter.gibbons@initech.com",
+        "message": "<p>Federated users get an error when attempting password reset. SSO via Azure AD.</p>",
+        "timestamp": "2025-10-30T08:45:00.000Z",
+        "side": "user"
+      },
+      {
+        "id": "7f80910a-2b3c-4d5e-e6f7-a8b9c0d1e206",
+        "ticketId": "22c0f5a8-7a4e-4a2d-b8c5-8897c9e1f2a3",
+        "sender": "Priya Kapoor",
+        "message": "<p>For federated users, password reset is managed by your IdP. Please have an Azure AD admin reset credentials or disable SSPR override.</p>",
+        "timestamp": "2025-10-30T09:10:00.000Z",
+        "side": "super"
+      },
+      {
+        "id": "80910a2b-3c4d-5e6f-f7a8-b9c0d1e2f307",
+        "ticketId": "22c0f5a8-7a4e-4a2d-b8c5-8897c9e1f2a3",
+        "sender": "Priya Kapoor",
+        "message": "<p>Escalating to Azure support to confirm expected behavior with our app registration.</p>",
+        "timestamp": "2025-11-01T10:00:00.000Z",
+        "isInternal": true,
+        "side": "super"
+      },
+      {
+        "id": "910a2b3c-4d5e-6f70-a8b9-c0d1e2f3a408",
+        "ticketId": "22c0f5a8-7a4e-4a2d-b8c5-8897c9e1f2a3",
+        "sender": "Priya Kapoor",
+        "message": "<p>Holding pending vendor confirmation. We will update once we hear back.</p>",
+        "timestamp": "2025-11-02T09:10:00.000Z",
+        "side": "super"
+      }
+    ]
+  },
+  {
+    "id": "3393c9b0-0c7d-4a1b-8f2d-55a4b6c7d8e9",
+    "companyId": "comp-umbrella",
+    "companyName": "Umbrella GmbH",
+    "title": "Webhook retries failing",
+    "description": "Retries stop after second attempt; delivery status stuck in \"pending\".",
+    "category": "TECHNICAL",
+    "priority": "MEDIUM",
+    "status": "RESOLVED",
+    "isSeen": true,
+    "createdBy": "user:support@umbrella.de",
+    "assignedAgentId": "agent_001",
+    "assignedAgentName": "Lea Schneider",
+    "createdAt": "2025-09-18T12:00:00.000Z",
+    "updatedAt": "2025-09-19T16:30:00.000Z",
+    "closedAt": "2025-09-19T16:30:00.000Z",
+    "messages": [
+      {
+        "id": "a1b2c3d4-e5f6-47a8-9012-34567890ab09",
+        "ticketId": "3393c9b0-0c7d-4a1b-8f2d-55a4b6c7d8e9",
+        "sender": "support@umbrella.de",
+        "message": "<p>Webhook retries never exceed 2 attempts. Status remains pending for hours.</p>",
+        "timestamp": "2025-09-18T12:00:00.000Z",
+        "side": "user"
+      },
+      {
+        "id": "b2c3d4e5-f6a7-48b9-0123-4567890abc10",
+        "ticketId": "3393c9b0-0c7d-4a1b-8f2d-55a4b6c7d8e9",
+        "sender": "Lea Schneider",
+        "message": "<p>Issue reproduced. Likely regression in retry backoff scheduler.</p>",
+        "timestamp": "2025-09-18T13:05:00.000Z",
+        "isInternal": true,
+        "side": "super"
+      },
+      {
+        "id": "c3d4e5f6-a7b8-49c0-1234-567890abcd11",
+        "ticketId": "3393c9b0-0c7d-4a1b-8f2d-55a4b6c7d8e9",
+        "sender": "Lea Schneider",
+        "message": "<p>Fix deployed to retry scheduler. Your deliveries should now progress. Please confirm.</p>",
+        "timestamp": "2025-09-19T16:30:00.000Z",
+        "AttachmentsFilesUrl": [
+          "https://status.example.com/incidents/2025-09-19-postmortem.pdf"
+        ],
+        "side": "super"
+      }
+    ]
+  },
+  {
+    "id": "48a1b2c3-d4e5-46f7-8901-23456789abcd",
+    "companyId": "comp-stark",
+    "companyName": "Stark Industries",
+    "title": "Change company name on contract",
+    "description": "Legal entity updated; need the subscription contract to reflect new name.",
+    "category": "OTHER",
+    "priority": "LOW",
+    "status": "CLOSED",
+    "isSeen": true,
+    "createdBy": "user:pepper.potts@stark.com",
+    "assignedAgentId": "agent_002",
+    "assignedAgentName": "Tomás Álvarez",
+    "createdAt": "2025-05-10T09:00:00.000Z",
+    "updatedAt": "2025-05-12T13:00:00.000Z",
+    "closedAt": "2025-05-12T13:00:00.000Z",
+    "messages": [
+      {
+        "id": "d4e5f6a7-b8c9-40d1-2345-67890abcde12",
+        "ticketId": "48a1b2c3-d4e5-46f7-8901-23456789abcd",
+        "sender": "pepper.potts@stark.com",
+        "message": "<p>Please update the contract to our new legal name.</p>",
+        "timestamp": "2025-05-10T09:00:00.000Z",
+        "AttachmentsFilesUrl": [
+          "https://files.example.com/stark/registry-change.pdf"
+        ],
+        "side": "user"
+      },
+      {
+        "id": "e5f6a7b8-c9d0-41e2-3456-7890abcdef13",
+        "ticketId": "48a1b2c3-d4e5-46f7-8901-23456789abcd",
+        "sender": "Tomás Álvarez",
+        "message": "<p>Received. We'll prepare an amendment and route for e-signature.</p>",
+        "timestamp": "2025-05-11T10:20:00.000Z",
+        "side": "super"
+      },
+      {
+        "id": "f6a7b8c9-d0e1-42f3-4567-890abcdef014",
+        "ticketId": "48a1b2c3-d4e5-46f7-8901-23456789abcd",
+        "sender": "Tomás Álvarez",
+        "message": "<p>Contract updated and fully executed. Closing the ticket.</p>",
+        "timestamp": "2025-05-12T13:00:00.000Z",
+        "side": "super"
+      }
+    ]
+  },
+  {
+    "id": "5f6e7d8c-9b0a-4c3d-8e7f-6a5b4c3d2e1f",
+    "companyId": "comp-wayne",
+    "companyName": "Wayne Enterprises",
+    "title": "Card charged twice",
+    "description": "Duplicate charge observed for invoice #INV-2025-1105.",
+    "category": "BILLING",
+    "priority": "CRITICAL",
+    "status": "OPEN",
+    "isSeen": false,
+    "createdBy": "user:lucius.fox@wayne.com",
+    "createdAt": "2025-11-05T07:55:00.000Z",
+    "updatedAt": "2025-11-06T08:10:00.000Z",
+    "messages": [
+      {
+        "id": "0a1b2c3d-4e5f-4601-9a2b-3c4d5e6f7a15",
+        "ticketId": "5f6e7d8c-9b0a-4c3d-8e7f-6a5b4c3d2e1f",
+        "sender": "lucius.fox@wayne.com",
+        "message": "<p>We were charged twice for invoice INV-2025-1105. Please reverse the duplicate.</p>",
+        "timestamp": "2025-11-05T07:55:00.000Z",
+        "side": "user"
+      },
+      {
+        "id": "1b2c3d4e-5f60-4712-a3b4-c5d6e7f8a916",
+        "ticketId": "5f6e7d8c-9b0a-4c3d-8e7f-6a5b4c3d2e1f",
+        "sender": "Billing Queue",
+        "message": "<p>Detected duplicate Stripe charge for the same invoice key. Investigating reconciliation job.</p>",
+        "timestamp": "2025-11-05T08:30:00.000Z",
+        "isInternal": true,
+        "side": "super"
+      },
+      {
+        "id": "2c3d4e5f-6071-4823-b4c5-d6e7f8a9b017",
+        "ticketId": "5f6e7d8c-9b0a-4c3d-8e7f-6a5b4c3d2e1f",
+        "sender": "billing@support.example",
+        "message": "<p>We have identified a duplicate payment. Refund is being prepared; we will notify once processed.</p>",
+        "timestamp": "2025-11-06T08:10:00.000Z",
+        "side": "super"
+      }
+    ]
+  },
+  {
+    "id": "6a7b8c9d-0e1f-4a2b-9c8d-7e6f5a4b3c2d",
+    "companyId": "comp-soylent",
+    "companyName": "Soylent AG",
+    "title": "Severe latency in EU-West",
+    "description": "p95 latency > 3s for read operations from EU-West region.",
+    "category": "TECHNICAL",
+    "priority": "CRITICAL",
+    "status": "IN_PROCESS",
+    "isSeen": true,
+    "createdBy": "system:monitoring",
+    "assignedAgentId": "agent_001",
+    "assignedAgentName": "Lea Schneider",
+    "createdAt": "2025-11-03T06:20:00.000Z",
+    "updatedAt": "2025-11-06T07:45:00.000Z",
+    "messages": [
+      {
+        "id": "3d4e5f60-7182-4934-c5d6-e7f8a9b0c118",
+        "ticketId": "6a7b8c9d-0e1f-4a2b-9c8d-7e6f5a4b3c2d",
+        "sender": "system:monitoring",
+        "message": "<p>Alert opened: EU-West read latency above threshold for 10 minutes.</p>",
+        "timestamp": "2025-11-03T06:20:00.000Z",
+        "side": "super"
+      },
+      {
+        "id": "4e5f6071-8293-4a45-d6e7-f8a9b0c1d219",
+        "ticketId": "6a7b8c9d-0e1f-4a2b-9c8d-7e6f5a4b3c2d",
+        "sender": "Lea Schneider",
+        "message": "<p>Root cause likely noisy neighbor on DB read replicas; rebalancing traffic.</p>",
+        "timestamp": "2025-11-03T06:25:00.000Z",
+        "isInternal": true,
+        "side": "super"
+      },
+      {
+        "id": "5f607182-9394-4b56-e7f8-a9b0c1d2e31a",
+        "ticketId": "6a7b8c9d-0e1f-4a2b-9c8d-7e6f5a4b3c2d",
+        "sender": "Lea Schneider",
+        "message": "<p>We have shifted read traffic and increased replica capacity. Monitoring latency graphs.</p>",
+        "timestamp": "2025-11-03T06:40:00.000Z",
+        "side": "super"
+      },
+      {
+        "id": "60718293-9495-4c67-f8a9-b0c1d2e3f41b",
+        "ticketId": "6a7b8c9d-0e1f-4a2b-9c8d-7e6f5a4b3c2d",
+        "sender": "Lea Schneider",
+        "message": "<p>Further tuning underway; planning read-replica replacement during low-traffic window.</p>",
+        "timestamp": "2025-11-06T07:45:00.000Z",
+        "side": "super"
+      }
+    ]
+  },
+  {
+    "id": "7c8d9e0f-1a2b-4c3d-9e8f-0a1b2c3d4e5f",
+    "companyId": "comp-tyrell",
+    "companyName": "Tyrell Corp",
+    "title": "Locked out after 2FA device lost",
+    "description": "Primary admin lost security key; need emergency recovery.",
+    "category": "ACCOUNT",
+    "priority": "HIGH",
+    "status": "RESOLVED",
+    "isSeen": true,
+    "createdBy": "user:rachel@tyrell.com",
+    "assignedAgentId": "agent_003",
+    "assignedAgentName": "Priya Kapoor",
+    "createdAt": "2025-08-22T11:10:00.000Z",
+    "updatedAt": "2025-08-22T15:25:00.000Z",
+    "closedAt": "2025-08-22T15:25:00.000Z",
+    "messages": [
+      {
+        "id": "71829394-9596-4d78-0a1b-2c3d4e5f062c",
+        "ticketId": "7c8d9e0f-1a2b-4c3d-9e8f-0a1b2c3d4e5f",
+        "sender": "rachel@tyrell.com",
+        "message": "<p>Admin lost their security key. We need recovery ASAP.</p>",
+        "timestamp": "2025-08-22T11:10:00.000Z",
+        "side": "user"
+      },
+      {
+        "id": "82939495-9697-4e89-1b2c-3d4e5f60723d",
+        "ticketId": "7c8d9e0f-1a2b-4c3d-9e8f-0a1b2c3d4e5f",
+        "sender": "Priya Kapoor",
+        "message": "<p>We have verified ownership. Temporary codes issued; please rotate keys after login.</p>",
+        "timestamp": "2025-08-22T11:20:00.000Z",
+        "side": "super"
+      },
+      {
+        "id": "93949596-9798-4f9a-2c3d-4e5f6071824e",
+        "ticketId": "7c8d9e0f-1a2b-4c3d-9e8f-0a1b2c3d4e5f",
+        "sender": "Priya Kapoor",
+        "message": "<p>Recovery complete and security keys re-enrolled. Resolving.</p>",
+        "timestamp": "2025-08-22T15:25:00.000Z",
+        "side": "super"
+      }
+    ]
+  },
+  {
+    "id": "8d9e0f1a-2b3c-4d5e-8f9a-1b2c3d4e5f60",
+    "companyId": "comp-hooli",
+    "companyName": "Hooli",
+    "title": "Feature request: CSV export delimiter",
+    "description": "Allow selecting semicolon as delimiter for EU locales.",
+    "category": "OTHER",
+    "priority": "MEDIUM",
+    "status": "ON_HOLD",
+    "isSeen": false,
+    "createdBy": "user:ops@hooli.com",
+    "assignedAgentId": "agent_002",
+    "assignedAgentName": "Tomás Álvarez",
+    "createdAt": "2025-07-01T09:30:00.000Z",
+    "updatedAt": "2025-07-05T10:00:00.000Z",
+    "messages": [
+      {
+        "id": "aabbccdd-eeff-4001-8002-000000000001",
+        "ticketId": "8d9e0f1a-2b3c-4d5e-8f9a-1b2c3d4e5f60",
+        "sender": "ops@hooli.com",
+        "message": "<p>Please add an option to export CSV with semicolon delimiter for EU.</p>",
+        "timestamp": "2025-07-01T09:30:00.000Z",
+        "side": "user"
+      },
+      {
+        "id": "aabbccdd-eeff-4002-8003-000000000002",
+        "ticketId": "8d9e0f1a-2b3c-4d5e-8f9a-1b2c3d4e5f60",
+        "sender": "Tomás Álvarez",
+        "message": "<p>Good suggestion. Logged with product team for prioritization.</p>",
+        "timestamp": "2025-07-02T08:10:00.000Z",
+        "side": "super"
+      },
+      {
+        "id": "aabbccdd-eeff-4003-8004-000000000003",
+        "ticketId": "8d9e0f1a-2b3c-4d5e-8f9a-1b2c3d4e5f60",
+        "sender": "Product Board",
+        "message": "<p>Feature accepted. Tentatively targeting Q4; awaiting capacity.</p>",
+        "timestamp": "2025-07-05T10:00:00.000Z",
+        "side": "super"
+      }
+    ]
+  },
+  {
+    "id": "9e0f1a2b-3c4d-5e6f-9a8b-2c3d4e5f6071",
+    "companyId": "comp-vandelay",
+    "companyName": "Vandelay Industries",
+    "title": "Incorrect DE tax rate applied",
+    "description": "VAT calculated at 16% instead of 19% on invoice #2025-0314.",
+    "category": "BILLING",
+    "priority": "HIGH",
+    "status": "CLOSED",
+    "isSeen": true,
+    "createdBy": "user:accounting@vandelay.de",
+    "assignedAgentId": "agent_002",
+    "assignedAgentName": "Tomás Álvarez",
+    "createdAt": "2025-03-14T13:15:00.000Z",
+    "updatedAt": "2025-03-15T09:05:00.000Z",
+    "closedAt": "2025-03-15T09:05:00.000Z",
+    "messages": [
+      {
+        "id": "bbccdde0-ff01-4104-8005-000000000004",
+        "ticketId": "9e0f1a2b-3c4d-5e6f-9a8b-2c3d4e5f6071",
+        "sender": "accounting@vandelay.de",
+        "message": "<p>Invoice shows 16% VAT; correct rate is 19%.</p>",
+        "timestamp": "2025-03-14T13:15:00.000Z",
+        "side": "user"
+      },
+      {
+        "id": "bbccdde0-ff01-4105-8006-000000000005",
+        "ticketId": "9e0f1a2b-3c4d-5e6f-9a8b-2c3d4e5f6071",
+        "sender": "Tomás Álvarez",
+        "message": "<p>Confirmed misconfiguration for Germany tax region. Preparing credit note.</p>",
+        "timestamp": "2025-03-14T16:00:00.000Z",
+        "isInternal": true,
+        "side": "super"
+      },
+      {
+        "id": "bbccdde0-ff01-4106-8007-000000000006",
+        "ticketId": "9e0f1a2b-3c4d-5e6f-9a8b-2c3d4e5f6071",
+        "sender": "Tomás Álvarez",
+        "message": "<p>Credit memo issued and invoice corrected to 19% VAT. Closing the ticket.</p>",
+        "timestamp": "2025-03-15T09:05:00.000Z",
+        "AttachmentsFilesUrl": [
+          "https://files.example.com/vandelay/credit-memo-2025-0314.pdf"
+        ],
+        "side": "super"
+      }
+    ]
+  },
+  {
+    "id": "a0b1c2d3-e4f5-46a7-89b0-1c2d3e4f5a6b",
+    "companyId": "comp-cyberdyne",
+    "companyName": "Cyberdyne Systems",
+    "title": "Create additional admin role",
+    "description": "Need to delegate billing-only admin to finance team.",
+    "category": "ACCOUNT",
+    "priority": "LOW",
+    "status": "OPEN",
+    "isSeen": true,
+    "createdBy": "user:sarah.connor@cyberdyne.com",
+    "createdAt": "2025-10-01T08:00:00.000Z",
+    "updatedAt": "2025-10-02T08:20:00.000Z",
+    "messages": [
+      {
+        "id": "ccddeeff-0011-4207-8008-000000000007",
+        "ticketId": "a0b1c2d3-e4f5-46a7-89b0-1c2d3e4f5a6b",
+        "sender": "sarah.connor@cyberdyne.com",
+        "message": "<p>Requesting a role that can manage billing only, without access to user data.</p>",
+        "timestamp": "2025-10-01T08:00:00.000Z",
+        "side": "user"
+      },
+      {
+        "id": "ccddeeff-0011-4208-8009-000000000008",
+        "ticketId": "a0b1c2d3-e4f5-46a7-89b0-1c2d3e4f5a6b",
+        "sender": "Support",
+        "message": "<p>Thanks, this aligns with our upcoming role templates. We'll share an ETA soon.</p>",
+        "timestamp": "2025-10-01T12:00:00.000Z",
+        "side": "super"
+      },
+      {
+        "id": "ccddeeff-0011-4209-8010-000000000009",
+        "ticketId": "a0b1c2d3-e4f5-46a7-89b0-1c2d3e4f5a6b",
+        "sender": "Product Team",
+        "message": "<p>Spec drafted for Billing Admin role. Needs security review.</p>",
+        "timestamp": "2025-10-02T08:20:00.000Z",
+        "isInternal": true,
+        "side": "super"
+      }
+    ]
+  },
+  {
+    "id": "b1c2d3e4-f5a6-47b8-90c1-2d3e4f5a6b7c",
+    "companyId": "comp-bluesun",
+    "companyName": "Blue Sun",
+    "title": "Data import job stuck",
+    "description": "Nightly import from S3 not progressing beyond 12%.",
+    "category": "TECHNICAL",
+    "priority": "CRITICAL",
+    "status": "RESOLVED",
+    "isSeen": true,
+    "createdBy": "system:ingestion",
+    "assignedAgentId": "agent_001",
+    "assignedAgentName": "Lea Schneider",
+    "createdAt": "2025-09-30T05:40:00.000Z",
+    "updatedAt": "2025-10-01T06:15:00.000Z",
+    "closedAt": "2025-10-01T06:15:00.000Z",
+    "messages": [
+      {
+        "id": "ddeeff00-1122-4210-8011-000000000010",
+        "ticketId": "b1c2d3e4-f5a6-47b8-90c1-2d3e4f5a6b7c",
+        "sender": "system:ingestion",
+        "message": "<p>Import job stalled at 12% for 20 minutes.</p>",
+        "timestamp": "2025-09-30T05:40:00.000Z",
+        "side": "super"
+      },
+      {
+        "id": "ddeeff00-1122-4211-8012-000000000011",
+        "ticketId": "b1c2d3e4-f5a6-47b8-90c1-2d3e4f5a6b7c",
+        "sender": "Lea Schneider",
+        "message": "<p>Issue traced to a corrupted parquet batch. Re-running from checkpoint.</p>",
+        "timestamp": "2025-09-30T06:05:00.000Z",
+        "side": "super"
+      },
+      {
+        "id": "ddeeff00-1122-4212-8013-000000000012",
+        "ticketId": "b1c2d3e4-f5a6-47b8-90c1-2d3e4f5a6b7c",
+        "sender": "Lea Schneider",
+        "message": "<p>Job completed successfully. Backfill executed for affected window.</p>",
+        "timestamp": "2025-10-01T06:15:00.000Z",
+        "AttachmentsFilesUrl": [
+          "https://files.example.com/bluesun/ingestion-report-2025-10-01.csv"
+        ],
+        "side": "super"
+      }
+    ]
+  },
+  {
+    "id": "c2d3e4f5-a6b7-48c9-01d2-3e4f5a6b7c8d",
+    "companyId": "comp-wonka",
+    "companyName": "Wonka Industries",
+    "title": "Clarification on seat-based pricing",
+    "description": "Need breakdown of costs for seasonal seat increases.",
+    "category": "OTHER",
+    "priority": "LOW",
+    "status": "IN_PROCESS",
+    "isSeen": true,
+    "createdBy": "user:finance@wonka.co",
+    "assignedAgentId": "agent_003",
+    "assignedAgentName": "Priya Kapoor",
+    "createdAt": "2025-11-04T10:25:00.000Z",
+    "updatedAt": "2025-11-05T11:00:00.000Z",
+    "messages": [
+      {
+        "id": "eeff0011-2233-4313-8014-000000000013",
+        "ticketId": "c2d3e4f5-a6b7-48c9-01d2-3e4f5a6b7c8d",
+        "sender": "finance@wonka.co",
+        "message": "<p>Can you provide pricing details when we temporarily add seats during peak season?</p>",
+        "timestamp": "2025-11-04T10:25:00.000Z",
+        "side": "user"
+      },
+      {
+        "id": "eeff0011-2233-4314-8015-000000000014",
+        "ticketId": "c2d3e4f5-a6b7-48c9-01d2-3e4f5a6b7c8d",
+        "sender": "Priya Kapoor",
+        "message": "<p>We will share a tiered breakdown including proration and volume discounts.</p>",
+        "timestamp": "2025-11-04T11:00:00.000Z",
+        "side": "super"
+      },
+      {
+        "id": "eeff0011-2233-4315-8016-000000000015",
+        "ticketId": "c2d3e4f5-a6b7-48c9-01d2-3e4f5a6b7c8d",
+        "sender": "Priya Kapoor",
+        "message": "<p>Attached is the draft pricing model for review.</p>",
+        "timestamp": "2025-11-05T11:00:00.000Z",
+        "AttachmentsFilesUrl": [
+          "https://files.example.com/wonka/seasonal-seat-pricing.xlsx"
+        ],
+        "side": "super"
+      }
+    ]
+  },
+  {
+    "id": "d3e4f5a6-b7c8-49da-12e3-4f5a6b7c8d9e",
+    "companyId": "comp-gringotts",
+    "companyName": "Gringotts Bank",
+    "title": "Bank transfer missing",
+    "description": "Wire transfer sent on 2025-06-11 not reflected in account.",
+    "category": "BILLING",
+    "priority": "MEDIUM",
+    "status": "CLOSED",
+    "isSeen": true,
+    "createdBy": "user:treasury@gringotts.bank",
+    "assignedAgentId": "agent_002",
+    "assignedAgentName": "Tomás Álvarez",
+    "createdAt": "2025-06-12T14:00:00.000Z",
+    "updatedAt": "2025-06-14T10:10:00.000Z",
+    "closedAt": "2025-06-14T10:10:00.000Z",
+    "messages": [
+      {
+        "id": "ff001122-3344-4416-8017-000000000016",
+        "ticketId": "d3e4f5a6-b7c8-49da-12e3-4f5a6b7c8d9e",
+        "sender": "treasury@gringotts.bank",
+        "message": "<p>We sent a wire on 2025-06-11. Funds not showing in our account.</p>",
+        "timestamp": "2025-06-12T14:00:00.000Z",
+        "AttachmentsFilesUrl": [
+          "https://files.example.com/gringotts/wire-proof-2025-06-11.pdf"
+        ],
+        "side": "user"
+      },
+      {
+        "id": "ff001122-3344-4417-8018-000000000017",
+        "ticketId": "d3e4f5a6-b7c8-49da-12e3-4f5a6b7c8d9e",
+        "sender": "Tomás Álvarez",
+        "message": "<p>We have contacted our payment processor to trace the transfer.</p>",
+        "timestamp": "2025-06-13T09:30:00.000Z",
+        "side": "super"
+      },
+      {
+        "id": "ff001122-3344-4418-8019-000000000018",
+        "ticketId": "d3e4f5a6-b7c8-49da-12e3-4f5a6b7c8d9e",
+        "sender": "Tomás Álvarez",
+        "message": "<p>Funds located and applied to your account. Closing the ticket.</p>",
+        "timestamp": "2025-06-14T10:10:00.000Z",
+        "side": "super"
+      }
+    ]
+  }
+]

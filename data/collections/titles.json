@@ -1,0 +1,18 @@
+[
+  {
+    "titleId": "CEO",
+    "label": "Chief Executive Officer"
+  },
+  {
+    "titleId": "CTO",
+    "label": "Chief Technology Officer"
+  },
+  {
+    "titleId": "CFO",
+    "label": "Chief Financial Officer"
+  },
+  {
+    "titleId": "CMO",
+    "label": "Chief Marketing Officer"
+  }
+]

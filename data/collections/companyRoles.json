@@ -1,0 +1,26 @@
+{
+  "1": [
+    {
+      "id": "1",
+      "label": "admin"
+    },
+    {
+      "id": "2",
+      "label": "content manager"
+    },
+    {
+      "id": "3",
+      "label": "user manager"
+    }
+  ],
+  "2": [
+    {
+      "id": "2",
+      "label": "content manager"
+    },
+    {
+      "id": "3",
+      "label": "user manager"
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+[
+  {
+    "id": "sub_kidata_pro",
+    "name": "KiData Pro",
+    "type": "plan",
+    "status": "active",
+    "description": "Full marketplace access, analytics, priority support",
+    "priceEur": 29,
+    "billingPeriod": "monthly",
+    "nextBillingDate": "2025-05-28",
+    "paymentMethod": "Visa •••• 4242",
+    "netAmount": 24.37,
+    "vatAmount": 4.63,
+    "activeSince": "2024-06-01",
+    "features": [
+      {
+        "name": "Unlimited display listings",
+        "included": true
+      },
+      {
+        "name": "Advanced analytics dashboard",
+        "included": true
+      },
+      {
+        "name": "Priority email support",
+        "included": true
+      },
+      {
+        "name": "Custom branding",
+        "included": true
+      },
+      {
+        "name": "API access",
+        "included": false
+      }
+    ],
+    "invoiceHistory": [
+      {
+        "id": "inv_001",
+        "invoiceNumber": "INV-0003-05-24-3",
+        "date": "2025-04-28",
+        "amount": 29,
+        "status": "paid"
+      },
+      {
+        "id": "inv_003",
+        "invoiceNumber": "INV-0003-05-24-2",
+        "date": "2025-03-28",
+        "amount": 29,
+        "status": "paid"
+      },
+      {
+        "id": "inv_005",
+        "invoiceNumber": "INV-0003-05-24-1",
+        "date": "2025-02-28",
+        "amount": 29,
+        "status": "paid"
+      }
+    ]
+  },
+  {
+    "id": "sub_extra_storage",
+    "name": "Extra Storage",
+    "type": "addon",
+    "status": "active",
+    "description": "+100 GB cloud storage for your marketplace assets",
+    "priceEur": 9,
+    "billingPeriod": "monthly",
+    "nextBillingDate": "2025-05-28",
+    "paymentMethod": "Visa •••• 4242",
+    "netAmount": 7.56,
+    "vatAmount": 1.44,
+    "activeSince": "2024-09-15",
+    "features": [
+      {
+        "name": "100 GB additional storage",
+        "included": true
+      },
+      {
+        "name": "Automatic backup",
+        "included": true
+      },
+      {
+        "name": "File versioning",
+        "included": true
+      }
+    ],
+    "invoiceHistory": [
+      {
+        "id": "inv_002",
+        "invoiceNumber": "INV-0003-05-24-3",
+        "date": "2025-04-28",
+        "amount": 9,
+        "status": "paid"
+      },
+      {
+        "id": "inv_004",
+        "invoiceNumber": "INV-0003-05-24-2",
+        "date": "2025-03-28",
+        "amount": 9,
+        "status": "paid"
+      },
+      {
+        "id": "inv_006",
+        "invoiceNumber": "INV-0003-05-24-1",
+        "date": "2025-02-28",
+        "amount": 9,
+        "status": "paid"
+      }
+    ]
+  }
+]

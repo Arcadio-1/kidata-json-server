@@ -1,0 +1,51 @@
+[
+  {
+    "id": "Category1",
+    "title": "Electronic Devices",
+    "description": "This category includes all electronic devices such as laptops, smartphones, and tablets.",
+    "color": "rgba(0, 255, 127, 1)",
+    "keywords": "electronics,laptops,smartphones,tablets"
+  },
+  {
+    "id": "Category2",
+    "title": "Home Appliance",
+    "description": "This category includes appliances used in the home, such as refrigerators, washing machines, and ovens.",
+    "color": "rgba(255, 215, 0, 1)",
+    "keywords": "electronics,laptops,smartphones,tablets"
+  },
+  {
+    "id": "Category3",
+    "title": "Clothing",
+    "description": "This category includes all types of clothing for men, women, and children.",
+    "color": "rgba(167, 4, 4, 1)",
+    "keywords": "electronics,laptops,smartphones,tablets"
+  },
+  {
+    "title": "tttttttttttt",
+    "description": "tttttttttt",
+    "color": "rgba(170, 175, 4, 1)",
+    "keywords": "tttttttttttttt",
+    "id": "WUWirvx"
+  },
+  {
+    "title": "hhhhhhh",
+    "description": "hhhhhhhhh",
+    "color": "rgba(31, 179, 158, 1)",
+    "keywords": "hhhhhhhh",
+    "id": "j3uKcez"
+  },
+  {
+    "title": "title",
+    "description": "Description",
+    "color": "rgba(0, 0, 128, 1)",
+    "keywords": "Keywords",
+    "id": "6PNxneb"
+  },
+  {
+    "title": "QQQQQQQQQQQQQ",
+    "description": "WWWWWWWWWWWWW",
+    "color": "rgba(0, 0, 128, 1)",
+    "keywords": "AAAAAAAAAAAAA",
+    "id": "qPxCU7f"
+  }
+]

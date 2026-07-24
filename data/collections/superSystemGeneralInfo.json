@@ -1,0 +1,14 @@
+{
+  "customers": "20",
+  "packages": "26",
+  "profiles": "19",
+  "reseller": "34",
+  "statistics": "119",
+  "techData": "XYZ.3.45",
+  "traffic": "2.3 GB",
+  "users": {
+    "roles": "12",
+    "users": "142"
+  },
+  "version": "beta"
+}

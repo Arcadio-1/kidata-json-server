@@ -1,0 +1,90 @@
+[
+  {
+    "id": "MSG-1",
+    "ticketId": "TCK-101",
+    "sender": "user_123",
+    "side": "user",
+    "message": "I reset my password but still can’t log in.",
+    "timestamp": "2025-04-16T16:55:00.000Z"
+  },
+  {
+    "id": "MSG-2",
+    "ticketId": "TCK-101",
+    "sender": "agent_45",
+    "side": "super",
+    "message": "Thanks—do you see an error message?",
+    "timestamp": "2025-04-16T17:05:00.000Z"
+  },
+  {
+    "id": "MSG-3",
+    "ticketId": "TCK-101",
+    "sender": "user_123",
+    "side": "user",
+    "message": "Yes, it says ‘Invalid credentials’.",
+    "timestamp": "2025-04-16T17:08:30.000Z"
+  },
+  {
+    "id": "MSG-4",
+    "ticketId": "TCK-102",
+    "sender": "user_987",
+    "side": "user",
+    "message": "Invoice shows $200 but billing shows $180.",
+    "timestamp": "2025-04-17T09:25:00.000Z"
+  },
+  {
+    "id": "MSG-5",
+    "ticketId": "TCK-102",
+    "sender": "agent_12",
+    "side": "super",
+    "message": "We’re checking with finance.",
+    "timestamp": "2025-04-17T09:40:00.000Z"
+  },
+  {
+    "id": "MSG-6",
+    "ticketId": "TCK-103",
+    "sender": "user_555",
+    "side": "user",
+    "message": "App closes immediately after I tap the icon.",
+    "timestamp": "2025-04-14T08:41:30.000Z"
+  },
+  {
+    "id": "MSG-7",
+    "ticketId": "TCK-103",
+    "sender": "agent_32",
+    "side": "super",
+    "message": "Which OS version are you using?",
+    "timestamp": "2025-04-14T08:42:30.000Z"
+  },
+  {
+    "id": "MSG-8",
+    "ticketId": "TCK-106",
+    "sender": "user_654",
+    "side": "user",
+    "message": "Requested password reset twice, no email received.",
+    "timestamp": "2025-04-10T09:30:00.000Z"
+  },
+  {
+    "id": "MSG-9",
+    "ticketId": "TCK-106",
+    "sender": "agent_22",
+    "side": "super",
+    "message": "Check your spam folder please.",
+    "timestamp": "2025-04-10T09:45:00.000Z"
+  },
+  {
+    "id": "MSG-10",
+    "ticketId": "TCK-110",
+    "sender": "user_963",
+    "side": "user",
+    "message": "My card was charged twice for one order.",
+    "timestamp": "2025-04-05T13:30:00.000Z"
+  },
+  {
+    "id": "MSG-11",
+    "ticketId": "TCK-110",
+    "sender": "agent_99",
+    "side": "super",
+    "message": "We’ve refunded the duplicate charge.",
+    "timestamp": "2025-04-05T13:50:00.000Z"
+  }
+]

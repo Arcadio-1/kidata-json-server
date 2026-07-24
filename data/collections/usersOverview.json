@@ -1,0 +1,257 @@
+[
+  {
+    "id": "1",
+    "companyId": "1",
+    "onlineId": "5415",
+    "userName": "admin_tech01",
+    "userImage": "/assets/images/profile.webp",
+    "firstName": "Jane",
+    "lastName": "Smith",
+    "email": "janesmith@gmail.com",
+    "phone": "321-654-0987",
+    "position": "System Administrator",
+    "companyName": "Tech Solutions Inc.",
+    "department": "Management/Executive",
+    "roles": [
+      {
+        "label": "Partner Manager",
+        "id": "8"
+      },
+      {
+        "label": "spot Manager",
+        "id": "3"
+      }
+    ],
+    "categoryColor": "#3498db",
+    "categoryTitle": "Administration Team",
+    "affiliation": "external",
+    "status": "paused"
+  },
+  {
+    "id": "2",
+    "companyId": "2",
+    "onlineId": "8541",
+    "userName": "admin_creative02",
+    "userImage": "/assets/images/profile.webp",
+    "firstName": "Bob",
+    "lastName": "Green",
+    "email": "bobgreen@gmail.com",
+    "phone": "654-321-7890",
+    "position": "Creative Director",
+    "companyName": "Creative Media Group",
+    "department": "Assistance&Secretariat",
+    "roles": [
+      {
+        "label": "administrator",
+        "id": "1"
+      },
+      {
+        "label": "Advertisement Manager",
+        "id": "7"
+      }
+    ],
+    "categoryColor": "#2ecc71",
+    "categoryTitle": "Creative Team",
+    "affiliation": "internal",
+    "status": "active"
+  },
+  {
+    "id": "3",
+    "companyId": "3",
+    "onlineId": "97984",
+    "userName": "admin_innovative03",
+    "userImage": "/assets/images/profile.webp",
+    "firstName": "Daniel",
+    "lastName": "Kim",
+    "email": "danielkim@gmail.com",
+    "phone": "567-890-1234",
+    "position": "CTO",
+    "companyName": "Innovative Tech Solutions",
+    "department": "Human Resource(HR)",
+    "roles": [
+      {
+        "label": "Content Manager",
+        "id": "2"
+      },
+      {
+        "label": "administrator",
+        "id": "1"
+      }
+    ],
+    "categoryColor": "#e74c3c",
+    "categoryTitle": "Leadership Team",
+    "affiliation": "external",
+    "status": "active"
+  },
+  {
+    "id": "4",
+    "companyId": "4",
+    "onlineId": "97841",
+    "userName": "admin_elite04",
+    "userImage": "/assets/images/profile.webp",
+    "firstName": "Emma",
+    "lastName": "White",
+    "email": "emmawhite@gmail.com",
+    "phone": "432-567-8901",
+    "position": "Software Architect",
+    "companyName": "Elite Software Solutions",
+    "department": "Finance&Controlling",
+    "roles": [
+      {
+        "label": "administrator",
+        "id": "1"
+      },
+      {
+        "label": "User Manager",
+        "id": "5"
+      }
+    ],
+    "categoryColor": "#9b59b6",
+    "categoryTitle": "Engineering Team",
+    "affiliation": "internal",
+    "status": "paused"
+  },
+  {
+    "id": "5",
+    "companyId": "5",
+    "onlineId": "45871",
+    "userName": "admin_global05",
+    "userImage": "/assets/images/profile.webp",
+    "firstName": "Frank",
+    "lastName": "Lewis",
+    "email": "frank.lewis@gmail.com",
+    "phone": "321-123-4567",
+    "position": "Network Administrator",
+    "companyName": "Global Tech Innovations",
+    "department": "Sales & Business Development",
+    "roles": [
+      {
+        "label": "Spot Manager",
+        "id": "3"
+      },
+      {
+        "label": "administrator",
+        "id": "1"
+      }
+    ],
+    "categoryColor": "#f39c12",
+    "categoryTitle": "IT Team",
+    "affiliation": "external",
+    "status": "active"
+  },
+  {
+    "id": "6",
+    "companyId": "6",
+    "onlineId": "129785",
+    "userName": "admin_nextgen06",
+    "userImage": "/assets/images/profile.webp",
+    "firstName": "Hugh",
+    "lastName": "Clark",
+    "email": "hughclark@gmail.com",
+    "phone": "123-456-7899",
+    "position": "DevOps Engineer",
+    "companyName": "NextGen Solutions",
+    "department": "Marketing & PR",
+    "roles": [],
+    "categoryColor": "#1abc9c",
+    "categoryTitle": "Operations Team",
+    "affiliation": "external",
+    "status": "paused"
+  },
+  {
+    "id": "7",
+    "companyId": "7",
+    "onlineId": "547698",
+    "userName": "admin_innovators07",
+    "userImage": "/assets/images/profile.webp",
+    "firstName": "Ivy",
+    "lastName": "Scott",
+    "email": "ivyscott@gmail.com",
+    "phone": "567-890-4321",
+    "position": "Security Specialist",
+    "companyName": "Tech Innovators LLC",
+    "department": "Customer Service / Support",
+    "roles": [
+      {
+        "label": "Content Manager",
+        "id": "2"
+      }
+    ],
+    "categoryColor": "#34495e",
+    "categoryTitle": "Security Team",
+    "affiliation": "internal",
+    "status": "active"
+  },
+  {
+    "id": "8",
+    "companyId": "8",
+    "onlineId": "32574",
+    "userName": "admin_digital08",
+    "userImage": "/assets/images/profile.webp",
+    "firstName": "Karen",
+    "lastName": "Miller",
+    "email": "karenmiller@solutions.com",
+    "phone": "456-123-7890",
+    "position": "Database Administrator",
+    "companyName": "Digital Solutions Co.",
+    "department": "IT & Developement",
+    "roles": [
+      {
+        "label": "Spot Manager",
+        "id": "3"
+      }
+    ],
+    "categoryColor": "#7f8c8d",
+    "categoryTitle": "Data Team",
+    "affiliation": "internal",
+    "status": "active"
+  },
+  {
+    "id": "9",
+    "companyId": "9",
+    "onlineId": "46987",
+    "userName": "admin_pioneer09",
+    "userImage": "/assets/images/profile.webp",
+    "firstName": "Megan",
+    "lastName": "Lewis",
+    "email": "megan@lewis.com",
+    "phone": "789-012-3456",
+    "position": "Cloud Architect",
+    "companyName": "Pioneer Innovations",
+    "department": "Procurement & Logistics",
+    "roles": [
+      {
+        "label": "User Manager",
+        "id": "5"
+      }
+    ],
+    "categoryColor": "#e67e22",
+    "categoryTitle": "Cloud Team",
+    "affiliation": "internal",
+    "status": "paused"
+  },
+  {
+    "id": "10",
+    "companyId": "10",
+    "onlineId": "23574",
+    "userName": "admin_visionary10",
+    "userImage": "/assets/images/profile.webp",
+    "firstName": "Oscar",
+    "lastName": "Hunt",
+    "email": "oscar@.hunt.com",
+    "phone": "654-987-3210",
+    "position": "CIO",
+    "companyName": "Visionary Enterprises",
+    "department": "Facility Management",
+    "roles": [
+      {
+        "label": "Kidata Manager",
+        "id": "6"
+      }
+    ],
+    "categoryColor": "#2c3e50",
+    "categoryTitle": "Leadership Team",
+    "affiliation": "external",
+    "status": "active"
+  }
+]

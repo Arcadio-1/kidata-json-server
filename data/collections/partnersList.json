@@ -1,0 +1,162 @@
+[
+  {
+    "id": "1",
+    "onlineId": "partner01",
+    "companyName": "Tech Solutions Inc.",
+    "companyLogo": "/assets/images/profile.webp",
+    "email": "contact@techsolutions.com",
+    "phone": "123-456-7890",
+    "responsiblePerson": "John Doe",
+    "adminName": "Jane Smith",
+    "displaysOnlineId": [
+      "partner01",
+      "partner02",
+      "partner02"
+    ],
+    "bookingUpdate": "2024-12-23T10:00:00Z",
+    "status": "notBlocked"
+  },
+  {
+    "id": "2",
+    "onlineId": "partner02",
+    "companyName": "Creative Media Group",
+    "companyLogo": "/assets/images/profile.webp",
+    "email": "support@creativemedia.com",
+    "phone": "987-654-3210",
+    "responsiblePerson": "Alice Brown",
+    "adminName": "Bob Green",
+    "displaysOnlineId": [
+      "partner01",
+      "partner03"
+    ],
+    "bookingUpdate": "2024-12-22T09:00:00Z",
+    "status": "blocked"
+  },
+  {
+    "id": "3",
+    "onlineId": "partner03",
+    "companyName": "Innovative Tech Solutions",
+    "companyLogo": "/assets/images/profile.webp",
+    "email": "contact@innovativetech.com",
+    "phone": "555-123-4567",
+    "responsiblePerson": "Chris Lee",
+    "adminName": "Daniel Kim",
+    "displaysOnlineId": [
+      "partner02",
+      "partner04"
+    ],
+    "bookingUpdate": "2024-12-21T08:30:00Z",
+    "status": "notBlocked"
+  },
+  {
+    "id": "4",
+    "onlineId": "partner04",
+    "companyName": "Elite Software Solutions",
+    "companyLogo": "/assets/images/profile.webp",
+    "email": "info@elitesoftware.com",
+    "phone": "666-888-9999",
+    "responsiblePerson": "David Wong",
+    "adminName": "Emma White",
+    "displaysOnlineId": [
+      "partner03",
+      "partner05"
+    ],
+    "bookingUpdate": "2024-12-20T07:45:00Z",
+    "status": "blocked"
+  },
+  {
+    "id": "5",
+    "onlineId": "partner05",
+    "companyName": "Global Tech Innovations",
+    "companyLogo": "/assets/images/profile.webp",
+    "email": "contact@globaltech.com",
+    "phone": "444-333-2222",
+    "responsiblePerson": "Eve Harris",
+    "adminName": "Frank Lewis",
+    "displaysOnlineId": [
+      "partner04",
+      "partner06"
+    ],
+    "bookingUpdate": "2024-12-19T06:15:00Z",
+    "status": "notBlocked"
+  },
+  {
+    "id": "6",
+    "onlineId": "partner06",
+    "companyName": "NextGen Solutions",
+    "companyLogo": "/assets/images/profile.webp",
+    "email": "info@nextgensolutions.com",
+    "phone": "111-222-3333",
+    "responsiblePerson": "Gina Taylor",
+    "adminName": "Hugh Clark",
+    "displaysOnlineId": [
+      "partner05",
+      "partner07"
+    ],
+    "bookingUpdate": "2024-12-18T05:00:00Z",
+    "status": "blocked"
+  },
+  {
+    "id": "7",
+    "onlineId": "partner07",
+    "companyName": "Tech Innovators LLC",
+    "companyLogo": "/assets/images/profile.webp",
+    "email": "contact@techinnovators.com",
+    "phone": "777-888-9999",
+    "responsiblePerson": "Harry Patel",
+    "adminName": "Ivy Scott",
+    "displaysOnlineId": [
+      "partner06",
+      "partner08"
+    ],
+    "bookingUpdate": "2024-12-17T04:30:00Z",
+    "status": "notBlocked"
+  },
+  {
+    "id": "8",
+    "onlineId": "partner08",
+    "companyName": "Digital Solutions Co.",
+    "companyLogo": "/assets/images/profile.webp",
+    "email": "info@digitalsolutions.com",
+    "phone": "888-999-0000",
+    "responsiblePerson": "Jack Ford",
+    "adminName": "Karen Miller",
+    "displaysOnlineId": [
+      "partner07",
+      "partner09"
+    ],
+    "bookingUpdate": "2024-12-16T03:00:00Z",
+    "status": "blocked"
+  },
+  {
+    "id": "9",
+    "onlineId": "partner09",
+    "companyName": "Pioneer Innovations",
+    "companyLogo": "/assets/images/profile.webp",
+    "email": "contact@pioneerinnovations.com",
+    "phone": "333-444-5555",
+    "responsiblePerson": "Liam Davis",
+    "adminName": "Megan Lewis",
+    "displaysOnlineId": [
+      "partner08",
+      "partner10"
+    ],
+    "bookingUpdate": "2024-12-15T02:30:00Z",
+    "status": "notBlocked"
+  },
+  {
+    "id": "10",
+    "onlineId": "partner10",
+    "companyName": "Visionary Enterprises",
+    "companyLogo": "/assets/images/profile.webp",
+    "email": "support@visionaryenterprises.com",
+    "phone": "222-333-4444",
+    "responsiblePerson": "Nina Ford",
+    "adminName": "Oscar Hunt",
+    "displaysOnlineId": [
+      "partner09"
+    ],
+    "bookingUpdate": "2024-12-14T01:00:00Z",
+    "status": "blocked"
+  }
+]

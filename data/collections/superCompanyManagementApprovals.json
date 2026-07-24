@@ -1,0 +1,121 @@
+[
+  {
+    "id": "approval-registration-greenleaf",
+    "companyId": "company-greenleaf",
+    "companyName": "GreenLeaf Markets SRL",
+    "companyOnlineId": "CMP-1003",
+    "type": "REGISTRATION",
+    "status": "PENDING",
+    "isSeen": false,
+    "requester": {
+      "id": "user-greenleaf-owner",
+      "name": "Maria Rossi",
+      "email": "maria.rossi@greenleaf.example"
+    },
+    "submittedAt": "2026-07-15T07:00:00.000Z",
+    "updatedAt": "2026-07-18T09:00:00.000Z",
+    "shortSummary": "Initial company registration",
+    "registrationSnapshot": {
+      "profile": {
+        "companyName": "GreenLeaf Markets SRL",
+        "countryId": "it"
+      },
+      "medias": {
+        "businessLicense": [],
+        "idCard": [],
+        "logo": []
+      }
+    },
+    "medias": {
+      "businessLicense": [],
+      "idCard": [],
+      "logo": []
+    },
+    "history": [],
+    "version": 1,
+    "allowedActions": []
+  },
+  {
+    "id": "approval-profile-acme",
+    "companyId": "company-acme",
+    "companyName": "Acme Retail GmbH",
+    "companyOnlineId": "CMP-1001",
+    "type": "PROFILE_EDIT",
+    "status": "PENDING",
+    "isSeen": true,
+    "requester": {
+      "id": "user-acme-owner",
+      "name": "Anna Schmidt",
+      "email": "anna.schmidt@acme-retail.example"
+    },
+    "submittedAt": "2026-07-16T08:00:00.000Z",
+    "updatedAt": "2026-07-18T08:00:00.000Z",
+    "shortSummary": "Company web URL and phone change",
+    "currentInfo": {
+      "addressData": {
+        "webUrl": "https://acme-retail.example",
+        "phone": "301234500"
+      }
+    },
+    "requestedInfo": {
+      "addressData": {
+        "webUrl": "https://new.acme-retail.example",
+        "phone": "301234555"
+      }
+    },
+    "medias": {
+      "businessLicense": [],
+      "idCard": [],
+      "logo": []
+    },
+    "history": [],
+    "version": 6,
+    "allowedActions": []
+  },
+  {
+    "id": "approval-profile-bluewave-final",
+    "companyId": "company-bluewave",
+    "companyName": "Bluewave Retail AG",
+    "companyOnlineId": "CMP-1002",
+    "type": "PROFILE_EDIT",
+    "status": "APPROVED",
+    "isSeen": true,
+    "requester": {
+      "id": "user-bluewave-owner",
+      "name": "Lukas Meier",
+      "email": "lukas.meier@bluewave.example"
+    },
+    "submittedAt": "2026-06-01T08:00:00.000Z",
+    "updatedAt": "2026-06-02T08:00:00.000Z",
+    "shortSummary": "Finalized billing-address update",
+    "currentInfo": {
+      "billingAddress": {
+        "city": "Vienna"
+      }
+    },
+    "requestedInfo": {
+      "billingAddress": {
+        "city": "Vienna"
+      }
+    },
+    "medias": {
+      "businessLicense": [],
+      "idCard": [],
+      "logo": []
+    },
+    "history": [
+      {
+        "id": "approval-action-bluewave",
+        "actor": {
+          "id": "admin-001",
+          "name": "Mock Super Admin"
+        },
+        "timestamp": "2026-06-02T08:00:00.000Z",
+        "status": "APPROVED",
+        "message": null
+      }
+    ],
+    "version": 2,
+    "allowedActions": []
+  }
+]

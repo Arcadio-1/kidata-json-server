@@ -1,0 +1,68 @@
+[
+  {
+    "id": "CM-2001",
+    "messageId": "MSG-ROOT-1001",
+    "sender": "john.doe@example.com",
+    "message": "Hey team, I'm seeing intermittent login errors this morning.",
+    "timestamp": "2025-08-19T09:20:00.000Z",
+    "AttachmentsFilesUrl": [
+      "/src/assets/images/logos/alpha_kidata_logo.png"
+    ]
+  },
+  {
+    "id": "CM-2002",
+    "messageId": "MSG-ROOT-1001",
+    "sender": "support.agent@example.com",
+    "message": "Thanks John — do you get a specific error code?",
+    "timestamp": "2025-08-20T09:45:00.000Z"
+  },
+  {
+    "id": "CM-2003",
+    "messageId": "MSG-ROOT-1001",
+    "sender": "john.doe@example.com",
+    "message": "It says <em>Invalid credentials</em>, but the password is correct.",
+    "timestamp": "2025-08-20T10:10:00.000Z"
+  },
+  {
+    "id": "CM-2101",
+    "messageId": "MSG-ROOT-1002",
+    "sender": "ops.manager@example.com",
+    "message": "Please update the onboarding checklist for Q3.",
+    "timestamp": "2025-08-01T08:05:00.000Z"
+  },
+  {
+    "id": "CM-2102",
+    "messageId": "MSG-ROOT-1002",
+    "sender": "me",
+    "message": "Acknowledged. Will share a draft by EOD.",
+    "timestamp": "2025-08-01T08:30:00.000Z"
+  },
+  {
+    "id": "CM-2201",
+    "messageId": "MSG-ROOT-1003",
+    "sender": "system@kidata.io",
+    "message": "⚠️ Service maintenance scheduled for 02:00 UTC.",
+    "timestamp": "2025-08-18T12:30:00.000Z"
+  },
+  {
+    "id": "CM-2301",
+    "messageId": "MSG-ROOT-1004",
+    "sender": "jane.smith@example.com",
+    "message": "Vacation request for next week.",
+    "timestamp": "2025-08-20T14:50:00.000Z"
+  },
+  {
+    "id": "CM-2302",
+    "messageId": "MSG-ROOT-1004",
+    "sender": "hr@example.com",
+    "message": "Approved. Enjoy!",
+    "timestamp": "2025-08-20T15:00:00.000Z"
+  },
+  {
+    "id": "CM-2401",
+    "messageId": "MSG-ROOT-1005",
+    "sender": "support.agent@example.com",
+    "message": "FYI: Office Wi-Fi updates this Friday.",
+    "timestamp": "2025-08-25T09:05:00.000Z"
+  }
+]

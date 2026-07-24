@@ -1,0 +1,12 @@
+[
+  {
+    "countryCallingCodesId": "49",
+    "icon": "images/countryCallingCodeFlag/de_icon.webp",
+    "label": "+49"
+  },
+  {
+    "countryCallingCodesId": "44",
+    "icon": "images/countryCallingCodeFlag/en_icon.webp",
+    "label": "+44"
+  }
+]

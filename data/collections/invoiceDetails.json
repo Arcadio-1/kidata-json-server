@@ -1,0 +1,122 @@
+[
+  {
+    "id": "inv_001",
+    "invoiceNumber": "INV-0003-05-24-3",
+    "invoiceDate": "2025-04-28",
+    "billingPeriod": "Apr 2025",
+    "status": "paid",
+    "paymentMethod": "Visa •••• 4242",
+    "subscriptionId": "sub_kidata_pro",
+    "subscriptionName": "KiData Pro",
+    "lineItems": [
+      {
+        "description": "KiData Pro - Monthly Plan",
+        "quantity": 1,
+        "unitPrice": 24.37,
+        "total": 24.37
+      }
+    ],
+    "vatAmount": 4.63,
+    "totalAmount": 29
+  },
+  {
+    "id": "inv_002",
+    "invoiceNumber": "INV-0003-05-24-3",
+    "invoiceDate": "2025-04-28",
+    "billingPeriod": "Apr 2025",
+    "status": "paid",
+    "paymentMethod": "Visa •••• 4242",
+    "subscriptionId": "sub_extra_storage",
+    "subscriptionName": "Extra Storage",
+    "lineItems": [
+      {
+        "description": "Extra Storage - 100 GB Add-on",
+        "quantity": 1,
+        "unitPrice": 7.56,
+        "total": 7.56
+      }
+    ],
+    "vatAmount": 1.44,
+    "totalAmount": 9
+  },
+  {
+    "id": "inv_003",
+    "invoiceNumber": "INV-0003-05-24-2",
+    "invoiceDate": "2025-03-28",
+    "billingPeriod": "Mar 2025",
+    "status": "paid",
+    "paymentMethod": "Visa •••• 4242",
+    "subscriptionId": "sub_kidata_pro",
+    "subscriptionName": "KiData Pro",
+    "lineItems": [
+      {
+        "description": "KiData Pro - Monthly Plan",
+        "quantity": 1,
+        "unitPrice": 24.37,
+        "total": 24.37
+      }
+    ],
+    "vatAmount": 4.63,
+    "totalAmount": 29
+  },
+  {
+    "id": "inv_004",
+    "invoiceNumber": "INV-0003-05-24-2",
+    "invoiceDate": "2025-03-28",
+    "billingPeriod": "Mar 2025",
+    "status": "paid",
+    "paymentMethod": "Visa •••• 4242",
+    "subscriptionId": "sub_extra_storage",
+    "subscriptionName": "Extra Storage",
+    "lineItems": [
+      {
+        "description": "Extra Storage - 100 GB Add-on",
+        "quantity": 1,
+        "unitPrice": 7.56,
+        "total": 7.56
+      }
+    ],
+    "vatAmount": 1.44,
+    "totalAmount": 9
+  },
+  {
+    "id": "inv_005",
+    "invoiceNumber": "INV-0003-05-24-1",
+    "invoiceDate": "2025-02-28",
+    "billingPeriod": "Feb 2025",
+    "status": "paid",
+    "paymentMethod": "Visa •••• 4242",
+    "subscriptionId": "sub_kidata_pro",
+    "subscriptionName": "KiData Pro",
+    "lineItems": [
+      {
+        "description": "KiData Pro - Monthly Plan",
+        "quantity": 1,
+        "unitPrice": 24.37,
+        "total": 24.37
+      }
+    ],
+    "vatAmount": 4.63,
+    "totalAmount": 29
+  },
+  {
+    "id": "inv_006",
+    "invoiceNumber": "INV-0003-05-24-1",
+    "invoiceDate": "2025-02-28",
+    "billingPeriod": "Feb 2025",
+    "status": "paid",
+    "paymentMethod": "Visa •••• 4242",
+    "subscriptionId": "sub_extra_storage",
+    "subscriptionName": "Extra Storage",
+    "lineItems": [
+      {
+        "description": "Extra Storage - 100 GB Add-on",
+        "quantity": 1,
+        "unitPrice": 7.56,
+        "total": 7.56
+      }
+    ],
+    "vatAmount": 1.44,
+    "totalAmount": 9
+  }
+]

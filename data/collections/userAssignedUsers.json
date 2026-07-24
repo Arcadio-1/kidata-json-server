@@ -1,0 +1,65 @@
+[
+  {
+    "id": "1",
+    "userAssignedUsers": [
+      {
+        "id": "user1",
+        "username": "alice",
+        "profileImageUrl": "/assets/images/profile.webp",
+        "firstName": "Alice",
+        "lastName": "Wonderland",
+        "departmentLabel": "IT",
+        "categoryLabel": "Administrator",
+        "categoryColor": "#000000",
+        "roles": [
+          {
+            "label": "Admin",
+            "id": "role1"
+          },
+          {
+            "label": "Editor",
+            "id": "role2"
+          }
+        ],
+        "invitedBy": "admin",
+        "invitedDate": "2025-03-01T07:30:00Z"
+      },
+      {
+        "id": "user2",
+        "username": "bob",
+        "profileImageUrl": "/assets/images/profile.webp",
+        "firstName": "Bob",
+        "lastName": "Builder",
+        "departmentLabel": "Marketing",
+        "categoryLabel": "User",
+        "categoryColor": "#FF00FF",
+        "roles": [
+          {
+            "label": "Viewer",
+            "id": "role3"
+          }
+        ],
+        "invitedBy": "alice",
+        "invitedDate": "2025-04-05T10:30:00Z"
+      },
+      {
+        "id": "user3",
+        "username": "charlie",
+        "profileImageUrl": "/assets/images/profile.webp",
+        "firstName": "Charlie",
+        "lastName": "Chaplin",
+        "departmentLabel": "Sales",
+        "categoryLabel": "Editor",
+        "categoryColor": "#00CC66",
+        "roles": [
+          {
+            "label": "Editor",
+            "id": "role2"
+          }
+        ],
+        "invitedBy": "alice",
+        "invitedDate": "2025-04-03T11:45:00Z"
+      }
+    ]
+  }
+]

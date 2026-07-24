@@ -1,0 +1,506 @@
+[
+  {
+    "id": "1",
+    "userAssignedDisplays": [
+      {
+        "id": "display1",
+        "displayType": "screen",
+        "title": "Main Lobby Display",
+        "description": "Display for the main lobby area",
+        "categoryLabel": "Hospitality",
+        "categoryColor": "#FF5733",
+        "street": "Main Street",
+        "number": "100",
+        "AddressSupplement": "Suite 5",
+        "Zip": "12345",
+        "City": "Metropolis",
+        "mediasOfADisplay": [
+          {
+            "uid": "media1",
+            "url": "/assets/images/profile.webp",
+            "name": "Lobby Image",
+            "status": "done",
+            "type": "image/jpeg",
+            "thumbUrl": "/assets/images/profile.webp"
+          },
+          {
+            "uid": "media2",
+            "url": "/assets/images/profile.webp",
+            "name": "Lobby Video",
+            "status": "uploading",
+            "type": "video/mp4",
+            "thumbUrl": "/assets/images/profile.webp"
+          }
+        ]
+      },
+      {
+        "id": "display2",
+        "displayType": "kiosk",
+        "title": "Event Kiosk Display",
+        "description": "Interactive kiosk at the event center",
+        "categoryLabel": "Events",
+        "categoryColor": "#00AABB",
+        "street": "Event Boulevard",
+        "number": "250",
+        "AddressSupplement": "Near the park",
+        "Zip": "54321",
+        "City": "Centerville",
+        "mediasOfADisplay": [
+          {
+            "uid": "media3",
+            "url": "/assets/images/profile.webp",
+            "name": "Kiosk Photo",
+            "status": "done",
+            "type": "image/jpeg",
+            "thumbUrl": "/assets/images/profile.webp"
+          },
+          {
+            "uid": "media4",
+            "url": "/assets/images/profile.webp",
+            "name": "Kiosk Demo",
+            "status": "error",
+            "type": "video/mp4",
+            "thumbUrl": "/assets/images/profile.webp"
+          }
+        ]
+      },
+      {
+        "id": "display3",
+        "displayType": "billboard",
+        "title": "Outdoor Billboard",
+        "description": "Billboard for advertising events",
+        "categoryLabel": "Advertising",
+        "categoryColor": "#00FF00",
+        "street": "Highway Road",
+        "number": "50",
+        "AddressSupplement": "Next to the mall",
+        "Zip": "67890",
+        "City": "Uptown",
+        "mediasOfADisplay": [
+          {
+            "uid": "media5",
+            "url": "/assets/images/profile.webp",
+            "name": "Billboard Ad",
+            "status": "done",
+            "type": "image/jpeg",
+            "thumbUrl": "/assets/images/profile.webp"
+          }
+        ]
+      },
+      {
+        "id": "display4",
+        "displayType": "billboard",
+        "title": "Outdoor Billboard",
+        "description": "Billboard for advertising events",
+        "categoryLabel": "Advertising",
+        "categoryColor": "#00FF00",
+        "street": "Highway Road",
+        "number": "50",
+        "AddressSupplement": "Next to the mall",
+        "Zip": "67890",
+        "City": "Uptown",
+        "mediasOfADisplay": [
+          {
+            "uid": "media5",
+            "url": "/assets/images/profile.webp",
+            "name": "Billboard Ad",
+            "status": "done",
+            "type": "image/jpeg",
+            "thumbUrl": "/assets/images/profile.webp"
+          }
+        ]
+      },
+      {
+        "id": "display5",
+        "displayType": "billboard",
+        "title": "Outdoor Billboard",
+        "description": "Billboard for advertising events",
+        "categoryLabel": "Advertising",
+        "categoryColor": "#00FF00",
+        "street": "Highway Road",
+        "number": "50",
+        "AddressSupplement": "Next to the mall",
+        "Zip": "67890",
+        "City": "Uptown",
+        "mediasOfADisplay": [
+          {
+            "uid": "media5",
+            "url": "/assets/images/profile.webp",
+            "name": "Billboard Ad",
+            "status": "done",
+            "type": "image/jpeg",
+            "thumbUrl": "/assets/images/profile.webp"
+          }
+        ]
+      },
+      {
+        "id": "display6",
+        "displayType": "billboard",
+        "title": "Outdoor Billboard",
+        "description": "Billboard for advertising events",
+        "categoryLabel": "Advertising",
+        "categoryColor": "#00FF00",
+        "street": "Highway Road",
+        "number": "50",
+        "AddressSupplement": "Next to the mall",
+        "Zip": "67890",
+        "City": "Uptown",
+        "mediasOfADisplay": [
+          {
+            "uid": "media5",
+            "url": "/assets/images/profile.webp",
+            "name": "Billboard Ad",
+            "status": "done",
+            "type": "image/jpeg",
+            "thumbUrl": "/assets/images/profile.webp"
+          }
+        ]
+      },
+      {
+        "id": "display7",
+        "displayType": "billboard",
+        "title": "Outdoor Billboard",
+        "description": "Billboard for advertising events",
+        "categoryLabel": "Advertising",
+        "categoryColor": "#00FF00",
+        "street": "Highway Road",
+        "number": "50",
+        "AddressSupplement": "Next to the mall",
+        "Zip": "67890",
+        "City": "Uptown",
+        "mediasOfADisplay": [
+          {
+            "uid": "media5",
+            "url": "/assets/images/profile.webp",
+            "name": "Billboard Ad",
+            "status": "done",
+            "type": "image/jpeg",
+            "thumbUrl": "/assets/images/profile.webp"
+          }
+        ]
+      },
+      {
+        "id": "display8",
+        "displayType": "billboard",
+        "title": "Outdoor Billboard",
+        "description": "Billboard for advertising events",
+        "categoryLabel": "Advertising",
+        "categoryColor": "#00FF00",
+        "street": "Highway Road",
+        "number": "50",
+        "AddressSupplement": "Next to the mall",
+        "Zip": "67890",
+        "City": "Uptown",
+        "mediasOfADisplay": [
+          {
+            "uid": "media5",
+            "url": "/assets/images/profile.webp",
+            "name": "Billboard Ad",
+            "status": "done",
+            "type": "image/jpeg",
+            "thumbUrl": "/assets/images/profile.webp"
+          }
+        ]
+      },
+      {
+        "id": "display9",
+        "displayType": "billboard",
+        "title": "Outdoor Billboard",
+        "description": "Billboard for advertising events",
+        "categoryLabel": "Advertising",
+        "categoryColor": "#00FF00",
+        "street": "Highway Road",
+        "number": "50",
+        "AddressSupplement": "Next to the mall",
+        "Zip": "67890",
+        "City": "Uptown",
+        "mediasOfADisplay": [
+          {
+            "uid": "media5",
+            "url": "/assets/images/profile.webp",
+            "name": "Billboard Ad",
+            "status": "done",
+            "type": "image/jpeg",
+            "thumbUrl": "/assets/images/profile.webp"
+          }
+        ]
+      },
+      {
+        "id": "display10",
+        "displayType": "billboard",
+        "title": "Outdoor Billboard",
+        "description": "Billboard for advertising events",
+        "categoryLabel": "Advertising",
+        "categoryColor": "#00FF00",
+        "street": "Highway Road",
+        "number": "50",
+        "AddressSupplement": "Next to the mall",
+        "Zip": "67890",
+        "City": "Uptown",
+        "mediasOfADisplay": [
+          {
+            "uid": "media5",
+            "url": "/assets/images/profile.webp",
+            "name": "Billboard Ad",
+            "status": "done",
+            "type": "image/jpeg",
+            "thumbUrl": "/assets/images/profile.webp"
+          }
+        ]
+      },
+      {
+        "id": "display11",
+        "displayType": "billboard",
+        "title": "Outdoor Billboard",
+        "description": "Billboard for advertising events",
+        "categoryLabel": "Advertising",
+        "categoryColor": "#00FF00",
+        "street": "Highway Road",
+        "number": "50",
+        "AddressSupplement": "Next to the mall",
+        "Zip": "67890",
+        "City": "Uptown",
+        "mediasOfADisplay": [
+          {
+            "uid": "media5",
+            "url": "/assets/images/profile.webp",
+            "name": "Billboard Ad",
+            "status": "done",
+            "type": "image/jpeg",
+            "thumbUrl": "/assets/images/profile.webp"
+          }
+        ]
+      },
+      {
+        "id": "display12",
+        "displayType": "billboard",
+        "title": "Outdoor Billboard",
+        "description": "Billboard for advertising events",
+        "categoryLabel": "Advertising",
+        "categoryColor": "#00FF00",
+        "street": "Highway Road",
+        "number": "50",
+        "AddressSupplement": "Next to the mall",
+        "Zip": "67890",
+        "City": "Uptown",
+        "mediasOfADisplay": [
+          {
+            "uid": "media5",
+            "url": "/assets/images/profile.webp",
+            "name": "Billboard Ad",
+            "status": "done",
+            "type": "image/jpeg",
+            "thumbUrl": "/assets/images/profile.webp"
+          }
+        ]
+      },
+      {
+        "id": "display13",
+        "displayType": "billboard",
+        "title": "Outdoor Billboard",
+        "description": "Billboard for advertising events",
+        "categoryLabel": "Advertising",
+        "categoryColor": "#00FF00",
+        "street": "Highway Road",
+        "number": "50",
+        "AddressSupplement": "Next to the mall",
+        "Zip": "67890",
+        "City": "Uptown",
+        "mediasOfADisplay": [
+          {
+            "uid": "media5",
+            "url": "/assets/images/profile.webp",
+            "name": "Billboard Ad",
+            "status": "done",
+            "type": "image/jpeg",
+            "thumbUrl": "/assets/images/profile.webp"
+          }
+        ]
+      },
+      {
+        "id": "display14",
+        "displayType": "billboard",
+        "title": "Outdoor Billboard",
+        "description": "Billboard for advertising events",
+        "categoryLabel": "Advertising",
+        "categoryColor": "#00FF00",
+        "street": "Highway Road",
+        "number": "50",
+        "AddressSupplement": "Next to the mall",
+        "Zip": "67890",
+        "City": "Uptown",
+        "mediasOfADisplay": [
+          {
+            "uid": "media5",
+            "url": "/assets/images/profile.webp",
+            "name": "Billboard Ad",
+            "status": "done",
+            "type": "image/jpeg",
+            "thumbUrl": "/assets/images/profile.webp"
+          }
+        ]
+      },
+      {
+        "id": "display15",
+        "displayType": "billboard",
+        "title": "Outdoor Billboard",
+        "description": "Billboard for advertising events",
+        "categoryLabel": "Advertising",
+        "categoryColor": "#00FF00",
+        "street": "Highway Road",
+        "number": "50",
+        "AddressSupplement": "Next to the mall",
+        "Zip": "67890",
+        "City": "Uptown",
+        "mediasOfADisplay": [
+          {
+            "uid": "media5",
+            "url": "/assets/images/profile.webp",
+            "name": "Billboard Ad",
+            "status": "done",
+            "type": "image/jpeg",
+            "thumbUrl": "/assets/images/profile.webp"
+          }
+        ]
+      },
+      {
+        "id": "display16",
+        "displayType": "billboard",
+        "title": "Outdoor Billboard",
+        "description": "Billboard for advertising events",
+        "categoryLabel": "Advertising",
+        "categoryColor": "#00FF00",
+        "street": "Highway Road",
+        "number": "50",
+        "AddressSupplement": "Next to the mall",
+        "Zip": "67890",
+        "City": "Uptown",
+        "mediasOfADisplay": [
+          {
+            "uid": "media5",
+            "url": "/assets/images/profile.webp",
+            "name": "Billboard Ad",
+            "status": "done",
+            "type": "image/jpeg",
+            "thumbUrl": "/assets/images/profile.webp"
+          }
+        ]
+      },
+      {
+        "id": "display17",
+        "displayType": "billboard",
+        "title": "Outdoor Billboard",
+        "description": "Billboard for advertising events",
+        "categoryLabel": "Advertising",
+        "categoryColor": "#00FF00",
+        "street": "Highway Road",
+        "number": "50",
+        "AddressSupplement": "Next to the mall",
+        "Zip": "67890",
+        "City": "Uptown",
+        "mediasOfADisplay": [
+          {
+            "uid": "media5",
+            "url": "/assets/images/profile.webp",
+            "name": "Billboard Ad",
+            "status": "done",
+            "type": "image/jpeg",
+            "thumbUrl": "/assets/images/profile.webp"
+          }
+        ]
+      },
+      {
+        "id": "display18",
+        "displayType": "billboard",
+        "title": "Outdoor Billboard",
+        "description": "Billboard for advertising events",
+        "categoryLabel": "Advertising",
+        "categoryColor": "#00FF00",
+        "street": "Highway Road",
+        "number": "50",
+        "AddressSupplement": "Next to the mall",
+        "Zip": "67890",
+        "City": "Uptown",
+        "mediasOfADisplay": [
+          {
+            "uid": "media5",
+            "url": "/assets/images/profile.webp",
+            "name": "Billboard Ad",
+            "status": "done",
+            "type": "image/jpeg",
+            "thumbUrl": "/assets/images/profile.webp"
+          }
+        ]
+      },
+      {
+        "id": "display19",
+        "displayType": "billboard",
+        "title": "Outdoor Billboard",
+        "description": "Billboard for advertising events",
+        "categoryLabel": "Advertising",
+        "categoryColor": "#00FF00",
+        "street": "Highway Road",
+        "number": "50",
+        "AddressSupplement": "Next to the mall",
+        "Zip": "67890",
+        "City": "Uptown",
+        "mediasOfADisplay": [
+          {
+            "uid": "media5",
+            "url": "/assets/images/profile.webp",
+            "name": "Billboard Ad",
+            "status": "done",
+            "type": "image/jpeg",
+            "thumbUrl": "/assets/images/profile.webp"
+          }
+        ]
+      },
+      {
+        "id": "display20",
+        "displayType": "billboard",
+        "title": "Outdoor Billboard",
+        "description": "Billboard for advertising events",
+        "categoryLabel": "Advertising",
+        "categoryColor": "#00FF00",
+        "street": "Highway Road",
+        "number": "50",
+        "AddressSupplement": "Next to the mall",
+        "Zip": "67890",
+        "City": "Uptown",
+        "mediasOfADisplay": [
+          {
+            "uid": "media5",
+            "url": "/assets/images/profile.webp",
+            "name": "Billboard Ad",
+            "status": "done",
+            "type": "image/jpeg",
+            "thumbUrl": "/assets/images/profile.webp"
+          }
+        ]
+      },
+      {
+        "id": "display21",
+        "displayType": "billboard",
+        "title": "Outdoor Billboard",
+        "description": "Billboard for advertising events",
+        "categoryLabel": "Advertising",
+        "categoryColor": "#00FF00",
+        "street": "Highway Road",
+        "number": "50",
+        "AddressSupplement": "Next to the mall",
+        "Zip": "67890",
+        "City": "Uptown",
+        "mediasOfADisplay": [
+          {
+            "uid": "media5",
+            "url": "/assets/images/profile.webp",
+            "name": "Billboard Ad",
+            "status": "done",
+            "type": "image/jpeg",
+            "thumbUrl": "/assets/images/profile.webp"
+          }
+        ]
+      }
+    ]
+  }
+]

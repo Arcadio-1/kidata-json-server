@@ -1,0 +1,272 @@
+[
+  {
+    "id": "user-acme-owner",
+    "companyId": "company-acme",
+    "onlineId": "USR-1001",
+    "username": "anna.schmidt",
+    "profileImageUrl": "",
+    "profileImageThumbUrl": "",
+    "firstName": "Anna",
+    "lastName": "Schmidt",
+    "phone": "301234500",
+    "email": "anna.schmidt@acme-retail.example",
+    "position": "Managing Director",
+    "departmentId": "management",
+    "departmentTitle": "Management",
+    "roleId": "role-acme-admin",
+    "role": {
+      "id": "role-acme-admin",
+      "enName": "Administrator",
+      "deName": "Administrator"
+    },
+    "categoryId": "management",
+    "categoryTitle": "Management",
+    "categoryColor": "#3366CC",
+    "userType": "companyOwner",
+    "employmentType": "internal",
+    "status": "active",
+    "isSystemInactive": false,
+    "entryDate": "2025-01-10T09:30:00.000Z",
+    "lastActivity": "2026-07-18T09:50:00.000Z",
+    "twoFactor": {
+      "enabled": true,
+      "lastResetAt": null
+    },
+    "assignedResourceCounts": {
+      "displays": 7,
+      "media": 24
+    },
+    "version": 4,
+    "updatedAt": "2026-07-18T09:50:00.000Z",
+    "allowedActions": [
+      "VIEW_COMPANY_USERS",
+      "EDIT_COMPANY_USER",
+      "ASSIGN_COMPANY_USER_ROLE",
+      "SET_COMPANY_USER_STATUS",
+      "RESET_COMPANY_USER_TWO_FACTOR"
+    ]
+  },
+  {
+    "id": "user-acme-alex",
+    "companyId": "company-acme",
+    "onlineId": "USR-1002",
+    "username": "alex.morgan.acme",
+    "profileImageUrl": "",
+    "profileImageThumbUrl": "",
+    "firstName": "Alex",
+    "lastName": "Morgan",
+    "phone": "301234501",
+    "email": "alex.morgan@acme-retail.example",
+    "position": "Content Manager",
+    "departmentId": "content",
+    "departmentTitle": "Content",
+    "roleId": "role-acme-content",
+    "role": {
+      "id": "role-acme-content",
+      "enName": "Content Manager",
+      "deName": "Content-Manager"
+    },
+    "categoryId": "content",
+    "categoryTitle": "Content",
+    "categoryColor": "#22AA88",
+    "userType": "companyUser",
+    "employmentType": "internal",
+    "status": "active",
+    "isSystemInactive": false,
+    "entryDate": "2025-03-01T08:00:00.000Z",
+    "lastActivity": "2026-07-18T08:10:00.000Z",
+    "twoFactor": {
+      "enabled": false,
+      "lastResetAt": null
+    },
+    "assignedResourceCounts": {
+      "displays": 2,
+      "media": 10
+    },
+    "version": 2,
+    "updatedAt": "2026-07-18T08:10:00.000Z",
+    "allowedActions": [
+      "VIEW_COMPANY_USERS",
+      "EDIT_COMPANY_USER",
+      "ASSIGN_COMPANY_USER_ROLE",
+      "SET_COMPANY_USER_STATUS",
+      "RESET_COMPANY_USER_TWO_FACTOR"
+    ]
+  },
+  {
+    "id": "user-acme-sam",
+    "companyId": "company-acme",
+    "onlineId": "USR-1003",
+    "username": "sam.taylor.acme",
+    "profileImageUrl": "",
+    "profileImageThumbUrl": "",
+    "firstName": "Sam",
+    "lastName": "Taylor",
+    "phone": "301234502",
+    "email": "sam.taylor@acme-retail.example",
+    "position": "Campaign Specialist",
+    "departmentId": "marketing",
+    "departmentTitle": "Marketing",
+    "roleId": "role-acme-campaign",
+    "role": {
+      "id": "role-acme-campaign",
+      "enName": "Campaign Manager",
+      "deName": "Kampagnenmanager"
+    },
+    "categoryId": "marketing",
+    "categoryTitle": "Marketing",
+    "categoryColor": "#AA66CC",
+    "userType": "companyUser",
+    "employmentType": "internal",
+    "status": "active",
+    "isSystemInactive": false,
+    "entryDate": "2025-04-01T08:00:00.000Z",
+    "lastActivity": "2026-07-17T15:00:00.000Z",
+    "twoFactor": {
+      "enabled": true,
+      "lastResetAt": null
+    },
+    "assignedResourceCounts": {
+      "displays": 1,
+      "media": 4
+    },
+    "version": 9,
+    "updatedAt": "2026-07-17T15:00:00.000Z",
+    "allowedActions": [
+      "VIEW_COMPANY_USERS",
+      "EDIT_COMPANY_USER",
+      "ASSIGN_COMPANY_USER_ROLE",
+      "SET_COMPANY_USER_STATUS",
+      "RESET_COMPANY_USER_TWO_FACTOR"
+    ]
+  },
+  {
+    "id": "user-bluewave-alex",
+    "companyId": "company-bluewave",
+    "onlineId": "USR-2001",
+    "username": "alex.morgan.bluewave",
+    "profileImageUrl": "",
+    "profileImageThumbUrl": "",
+    "firstName": "Alex",
+    "lastName": "Morgan",
+    "phone": "15550101",
+    "email": "alex.morgan@bluewave.example",
+    "position": "Content Manager",
+    "departmentId": "content",
+    "departmentTitle": "Content",
+    "roleId": "role-bluewave-content",
+    "role": {
+      "id": "role-bluewave-content",
+      "enName": "Content Manager",
+      "deName": "Content-Manager"
+    },
+    "categoryId": "content",
+    "categoryTitle": "Content",
+    "categoryColor": "#22AA88",
+    "userType": "companyUser",
+    "employmentType": "external",
+    "status": "paused",
+    "isSystemInactive": true,
+    "entryDate": "2025-05-01T08:00:00.000Z",
+    "lastActivity": "2026-06-30T12:00:00.000Z",
+    "twoFactor": {
+      "enabled": true,
+      "lastResetAt": "2026-01-10T10:00:00.000Z"
+    },
+    "assignedResourceCounts": {
+      "displays": 1,
+      "media": 2
+    },
+    "version": 5,
+    "updatedAt": "2026-06-30T12:00:00.000Z",
+    "allowedActions": [
+      "VIEW_COMPANY_USERS"
+    ]
+  },
+  {
+    "id": "user-bluewave-owner",
+    "companyId": "company-bluewave",
+    "onlineId": "USR-2002",
+    "username": "lukas.meier",
+    "profileImageUrl": "",
+    "profileImageThumbUrl": "",
+    "firstName": "Lukas",
+    "lastName": "Meier",
+    "phone": "15550100",
+    "email": "lukas.meier@bluewave.example",
+    "position": "Director",
+    "departmentId": "management",
+    "departmentTitle": "Management",
+    "roleId": "role-bluewave-admin",
+    "role": {
+      "id": "role-bluewave-admin",
+      "enName": "Administrator",
+      "deName": "Administrator"
+    },
+    "categoryId": "management",
+    "categoryTitle": "Management",
+    "categoryColor": "#3366CC",
+    "userType": "companyOwner",
+    "employmentType": "internal",
+    "status": "active",
+    "isSystemInactive": false,
+    "entryDate": "2025-02-02T11:15:00.000Z",
+    "lastActivity": "2026-07-01T12:00:00.000Z",
+    "twoFactor": {
+      "enabled": true,
+      "lastResetAt": null
+    },
+    "assignedResourceCounts": {
+      "displays": 2,
+      "media": 5
+    },
+    "version": 3,
+    "updatedAt": "2026-07-01T12:00:00.000Z",
+    "allowedActions": [
+      "VIEW_COMPANY_USERS"
+    ]
+  },
+  {
+    "id": "user-greenleaf-owner",
+    "companyId": "company-greenleaf",
+    "onlineId": "USR-3001",
+    "username": "maria.rossi",
+    "profileImageUrl": "",
+    "profileImageThumbUrl": "",
+    "firstName": "Maria",
+    "lastName": "Rossi",
+    "phone": "025550100",
+    "email": "maria.rossi@greenleaf.example",
+    "position": "Owner",
+    "departmentId": "management",
+    "departmentTitle": "Management",
+    "roleId": "role-greenleaf-admin",
+    "role": {
+      "id": "role-greenleaf-admin",
+      "enName": "Administrator",
+      "deName": "Administrator"
+    },
+    "categoryId": "management",
+    "categoryTitle": "Management",
+    "categoryColor": "#3366CC",
+    "userType": "companyOwner",
+    "employmentType": "internal",
+    "status": "pending",
+    "isSystemInactive": false,
+    "entryDate": "2026-07-15T07:00:00.000Z",
+    "lastActivity": "2026-07-18T09:00:00.000Z",
+    "twoFactor": {
+      "enabled": false,
+      "lastResetAt": null
+    },
+    "assignedResourceCounts": {
+      "displays": 0,
+      "media": 0
+    },
+    "version": 1,
+    "updatedAt": "2026-07-18T09:00:00.000Z",
+    "allowedActions": [
+      "VIEW_COMPANY_USERS"
+    ]
+  }
+]

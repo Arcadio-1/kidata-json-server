@@ -1,0 +1,132 @@
+[
+  {
+    "id": "role-acme-admin",
+    "companyId": "company-acme",
+    "key": "ADMINISTRATOR",
+    "enName": "Administrator",
+    "deName": "Administrator",
+    "enDescription": "System administrator role",
+    "deDescription": "Systemadministratorrolle",
+    "isSystem": true,
+    "isCustom": false,
+    "isMutable": false,
+    "isAssignable": true,
+    "assignedUserCount": 1,
+    "actionKeys": [
+      "CREATE_DISPLAY",
+      "UPLOAD_MEDIAPOOL_MEDIA",
+      "MANAGE_ROLE"
+    ],
+    "version": 4,
+    "createdAt": "2025-01-10T09:30:00.000Z",
+    "updatedAt": "2026-06-01T10:00:00.000Z",
+    "allowedActions": []
+  },
+  {
+    "id": "role-acme-content",
+    "companyId": "company-acme",
+    "key": "CONTENT_MANAGER",
+    "enName": "Content Manager",
+    "deName": "Content-Manager",
+    "enDescription": "System content role",
+    "deDescription": "Systemrolle für Inhalte",
+    "isSystem": true,
+    "isCustom": false,
+    "isMutable": false,
+    "isAssignable": true,
+    "assignedUserCount": 1,
+    "actionKeys": [
+      "UPLOAD_MEDIAPOOL_MEDIA"
+    ],
+    "version": 2,
+    "createdAt": "2025-01-10T09:30:00.000Z",
+    "updatedAt": "2026-01-01T10:00:00.000Z",
+    "allowedActions": []
+  },
+  {
+    "id": "role-acme-campaign",
+    "companyId": "company-acme",
+    "key": "CUSTOM_CAMPAIGN_MANAGER",
+    "enName": "Campaign Manager",
+    "deName": "Kampagnenmanager",
+    "enDescription": "Custom campaign operations",
+    "deDescription": "Benutzerdefinierte Kampagnenverwaltung",
+    "isSystem": false,
+    "isCustom": true,
+    "isMutable": true,
+    "isAssignable": true,
+    "assignedUserCount": 1,
+    "actionKeys": [
+      "CREATE_DISPLAY",
+      "UPLOAD_MEDIAPOOL_MEDIA"
+    ],
+    "version": 9,
+    "createdAt": "2025-04-01T08:00:00.000Z",
+    "updatedAt": "2026-07-17T15:00:00.000Z",
+    "allowedActions": []
+  },
+  {
+    "id": "role-bluewave-admin",
+    "companyId": "company-bluewave",
+    "key": "ADMINISTRATOR",
+    "enName": "Administrator",
+    "deName": "Administrator",
+    "enDescription": "System administrator role",
+    "deDescription": "Systemadministratorrolle",
+    "isSystem": true,
+    "isCustom": false,
+    "isMutable": false,
+    "isAssignable": true,
+    "assignedUserCount": 1,
+    "actionKeys": [
+      "CREATE_DISPLAY",
+      "MANAGE_ROLE"
+    ],
+    "version": 3,
+    "createdAt": "2025-02-02T11:15:00.000Z",
+    "updatedAt": "2026-01-01T10:00:00.000Z",
+    "allowedActions": []
+  },
+  {
+    "id": "role-bluewave-content",
+    "companyId": "company-bluewave",
+    "key": "CUSTOM_CONTENT_MANAGER",
+    "enName": "Content Manager",
+    "deName": "Content-Manager",
+    "enDescription": "Custom content role",
+    "deDescription": "Benutzerdefinierte Inhaltsrolle",
+    "isSystem": false,
+    "isCustom": true,
+    "isMutable": true,
+    "isAssignable": true,
+    "assignedUserCount": 1,
+    "actionKeys": [
+      "UPLOAD_MEDIAPOOL_MEDIA"
+    ],
+    "version": 5,
+    "createdAt": "2025-05-01T08:00:00.000Z",
+    "updatedAt": "2026-06-30T12:00:00.000Z",
+    "allowedActions": []
+  },
+  {
+    "id": "role-greenleaf-admin",
+    "companyId": "company-greenleaf",
+    "key": "ADMINISTRATOR",
+    "enName": "Administrator",
+    "deName": "Administrator",
+    "enDescription": "System administrator role",
+    "deDescription": "Systemadministratorrolle",
+    "isSystem": true,
+    "isCustom": false,
+    "isMutable": false,
+    "isAssignable": true,
+    "assignedUserCount": 1,
+    "actionKeys": [
+      "CREATE_DISPLAY"
+    ],
+    "version": 1,
+    "createdAt": "2026-07-15T07:00:00.000Z",
+    "updatedAt": "2026-07-15T07:00:00.000Z",
+    "allowedActions": []
+  }
+]

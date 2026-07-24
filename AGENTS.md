@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-This repository contains a Node.js/Express mock API server for a digital signage management platform. It uses json-server as a file-based JSON database (`db.json`) with custom Express routes layered on top for complex query logic such as pagination, filtering, and nested data.
+This repository contains a Node.js/Express mock API server for a digital signage management platform. It uses json-server with a split file-based JSON database in `data/` and custom Express routes layered on top for complex query logic such as pagination, filtering, and nested data.
 
 ## Commands
 
@@ -22,7 +22,7 @@ This repository contains a Node.js/Express mock API server for a digital signage
    - `src/routes/tickets.js`: support tickets with pagination, filtering, and messaging.
    - `src/routes/messages.js`: internal messages with comments, archiving, and deletion.
    - `src/routes/notifications.js`: notifications with filtering and seen-state updates.
-5. The json-server router mounted last at `/` for automatic CRUD operations on all `db.json` collections.
+5. The json-server router mounted last at `/` for automatic CRUD operations on all split database collections.
 
 Each route module exports a `register(server, router)` function that binds handlers to the json-server app instance.
 
@@ -33,12 +33,12 @@ Each route module exports a `register(server, router)` function that binds handl
 
 ## Data Persistence
 
-Custom routes read and write `db.json` through `router.db` (lowdb). Call `.write()` whenever a mutation must be persisted.
+Custom routes read and write the split database through `router.db` (lowdb). Call `.write()` whenever a mutation must be persisted.
 
 ## Key Files
 
 - `server.js`: application entry point and middleware/route wiring.
-- `db.json`: primary JSON database with more than 100 collections.
+- `data/`: primary split JSON database with more than 100 collections.
 - `uploads/`: uploaded files and generated thumbnails.
 - `src/`: modular middleware, routes, and utilities.
 
@@ -49,4 +49,4 @@ Custom routes read and write `db.json` through `router.db` (lowdb). Call `.write
 - Let json-server generate standard REST endpoints for database collections unless custom behavior is required.
 - Custom endpoints use `page` and `pageSize` query parameters for pagination.
 - Some routes intentionally use inline `express.json()` middleware, including ticket-message creation and notification seen-state updates. Do not replace it with app-level body parsing without verifying all upload routes and request flows.
-- Keep changes focused and avoid modifying `db.json` or files in `uploads/` unless the task specifically requires data changes.
+- Keep changes focused and avoid modifying files in `data/` or `uploads/` unless the task specifically requires data changes.

@@ -1,0 +1,311 @@
+[
+  {
+    "id": "eca-001",
+    "companyId": "cmp-001",
+    "companyName": "Acme Media GmbH",
+    "requestedByName": "Anna Schmidt",
+    "requestedByEmail": "anna.schmidt@acme-media.de",
+    "country": "Germany",
+    "category": "GENERAL_DATA",
+    "created": "2025-02-01T09:00:00.000Z",
+    "updated": "2025-02-01T09:05:00.000Z",
+    "status": "PENDING",
+    "isSeen": false,
+    "currentInfo": {
+      "addressData": {
+        "companyName": "Acme Media GmbH",
+        "companyFormId": null,
+        "street": "Hauptstrasse",
+        "number": "12",
+        "addressSupplement": "",
+        "zip": "10115",
+        "city": "Berlin",
+        "federalStateId": null,
+        "countryId": "de",
+        "phone": "",
+        "mobile": "",
+        "fax": "",
+        "phoneDialingCodeId": null,
+        "mobileDialingCodeId": null,
+        "faxDialingCodeId": null,
+        "webUrl": "",
+        "email": "info@acme-media.de"
+      },
+      "industry": {
+        "name": "Media & Advertising",
+        "description": "",
+        "id": "ind-media"
+      },
+      "receiveEmail": true
+    },
+    "requestedInfo": {
+      "addressData": {
+        "companyName": "Acme Media GmbH",
+        "companyFormId": null,
+        "street": "Alexanderplatz",
+        "number": "5A",
+        "addressSupplement": "",
+        "zip": "10178",
+        "city": "Berlin",
+        "federalStateId": null,
+        "countryId": "de",
+        "phone": "",
+        "mobile": "",
+        "fax": "",
+        "phoneDialingCodeId": null,
+        "mobileDialingCodeId": null,
+        "faxDialingCodeId": null,
+        "webUrl": "",
+        "email": "contact@acme-media.de"
+      },
+      "industry": {
+        "name": "Digital Media",
+        "description": "",
+        "id": "ind-digital-media"
+      },
+      "receiveEmail": true
+    },
+    "medias": {
+      "businessLicense": [],
+      "idCard": [],
+      "logo": []
+    },
+    "actions": []
+  },
+  {
+    "id": "eca-002",
+    "companyId": "cmp-002",
+    "companyName": "Bluewave Retail AG",
+    "requestedByName": "Lukas Meier",
+    "requestedByEmail": "lukas.meier@bluewave-retail.at",
+    "country": "Austria",
+    "category": "PAYMENT_AND_BILLING",
+    "created": "2025-02-02T10:15:00.000Z",
+    "updated": "2025-02-02T10:20:00.000Z",
+    "status": "ON_CORRECTION",
+    "isSeen": true,
+    "currentInfo": {
+      "addressData": {
+        "companyName": "Bluewave Retail AG",
+        "companyFormId": null,
+        "street": "Mariahilfer Strasse",
+        "number": "22",
+        "addressSupplement": "",
+        "zip": "1070",
+        "city": "Wien",
+        "federalStateId": null,
+        "countryId": "at",
+        "phone": "",
+        "mobile": "",
+        "fax": "",
+        "phoneDialingCodeId": null,
+        "mobileDialingCodeId": null,
+        "faxDialingCodeId": null,
+        "webUrl": "",
+        "email": "office@bluewave-retail.at"
+      },
+      "paymentInformation": {
+        "paymentMethodId": "credit-card",
+        "accountOwner": "Bluewave Retail AG",
+        "IBAN": "AT611904300234573201",
+        "BIC": "HYPEAT22"
+      },
+      "receiveEmail": true
+    },
+    "requestedInfo": {
+      "addressData": {
+        "companyName": "Bluewave Retail AG",
+        "companyFormId": null,
+        "street": "Neubaugasse",
+        "number": "5",
+        "addressSupplement": "",
+        "zip": "1070",
+        "city": "Wien",
+        "federalStateId": null,
+        "countryId": "at",
+        "phone": "",
+        "mobile": "",
+        "fax": "",
+        "phoneDialingCodeId": null,
+        "mobileDialingCodeId": null,
+        "faxDialingCodeId": null,
+        "webUrl": "",
+        "email": "billing@bluewave-retail.at"
+      },
+      "paymentInformation": {
+        "paymentMethodId": "sepa",
+        "accountOwner": "Bluewave Retail AG",
+        "IBAN": "AT121904300234573201",
+        "BIC": "SPADATW1"
+      },
+      "receiveEmail": false
+    },
+    "medias": {
+      "businessLicense": [],
+      "idCard": [],
+      "logo": []
+    },
+    "actions": [
+      {
+        "id": "act-002-1",
+        "appliedById": "super-001",
+        "appliedByName": "Super Admin One",
+        "date": "2025-02-02T10:30:00.000Z",
+        "status": "ON_CORRECTION",
+        "message": "Please confirm the new IBAN belongs to the company."
+      }
+    ]
+  },
+  {
+    "id": "eca-003",
+    "companyId": "cmp-003",
+    "companyName": "Sunrise Fitness Studios",
+    "requestedByName": "Maria Rossi",
+    "requestedByEmail": "m.rossi@sunrise-fitness.it",
+    "country": "Italy",
+    "category": "BUSINESS_AND_TAX",
+    "created": "2025-02-03T08:30:00.000Z",
+    "updated": "2025-02-03T09:00:00.000Z",
+    "status": "APPROVED",
+    "isSeen": true,
+    "currentInfo": {
+      "addressData": {
+        "companyName": "Sunrise Fitness Studios",
+        "companyFormId": null,
+        "street": "Via Roma",
+        "number": "10",
+        "addressSupplement": "",
+        "zip": "00100",
+        "city": "Roma",
+        "federalStateId": null,
+        "countryId": "it",
+        "phone": "",
+        "mobile": "",
+        "fax": "",
+        "phoneDialingCodeId": null,
+        "mobileDialingCodeId": null,
+        "faxDialingCodeId": null,
+        "webUrl": "",
+        "email": "info@sunrise-fitness.it"
+      },
+      "tax": {
+        "identificationNumber": "IT12345678901",
+        "vatNumber": "IT99999999999"
+      },
+      "receiveEmail": true
+    },
+    "requestedInfo": {
+      "addressData": {
+        "companyName": "Sunrise Fitness Studios",
+        "companyFormId": null,
+        "street": "Via Milano",
+        "number": "25",
+        "addressSupplement": "",
+        "zip": "20100",
+        "city": "Milano",
+        "federalStateId": null,
+        "countryId": "it",
+        "phone": "",
+        "mobile": "",
+        "fax": "",
+        "phoneDialingCodeId": null,
+        "mobileDialingCodeId": null,
+        "faxDialingCodeId": null,
+        "webUrl": "",
+        "email": "milano@sunrise-fitness.it"
+      },
+      "tax": {
+        "identificationNumber": "IT12345678901",
+        "vatNumber": "IT11111111111"
+      },
+      "receiveEmail": true
+    },
+    "medias": {
+      "businessLicense": [],
+      "idCard": [],
+      "logo": []
+    },
+    "actions": [
+      {
+        "id": "act-003-1",
+        "appliedById": "super-002",
+        "appliedByName": "Super Admin Two",
+        "date": "2025-02-03T08:45:00.000Z",
+        "status": "APPROVED",
+        "message": "Tax data checked and approved."
+      }
+    ]
+  },
+  {
+    "id": "eca-004",
+    "companyId": "cmp-004",
+    "companyName": "Global Food Services Ltd.",
+    "requestedByName": "John Miller",
+    "requestedByEmail": "john.miller@globalfood.co.uk",
+    "country": "United Kingdom",
+    "category": "OTHER",
+    "created": "2025-02-04T11:45:00.000Z",
+    "updated": "2025-02-04T12:10:00.000Z",
+    "status": "REJECTED",
+    "isSeen": true,
+    "currentInfo": {
+      "addressData": {
+        "companyName": "Global Food Services Ltd.",
+        "companyFormId": null,
+        "street": "Baker Street",
+        "number": "221B",
+        "addressSupplement": "",
+        "zip": "NW1 6XE",
+        "city": "London",
+        "federalStateId": null,
+        "countryId": "gb",
+        "phone": "",
+        "mobile": "",
+        "fax": "",
+        "phoneDialingCodeId": null,
+        "mobileDialingCodeId": null,
+        "faxDialingCodeId": null,
+        "webUrl": "",
+        "email": "info@globalfood.co.uk"
+      },
+      "receiveEmail": true
+    },
+    "requestedInfo": {
+      "addressData": {
+        "companyName": "Global Food Services Ltd.",
+        "companyFormId": null,
+        "street": "Unknown Street",
+        "number": "0",
+        "addressSupplement": "",
+        "zip": "00000",
+        "city": "Nowhere",
+        "federalStateId": null,
+        "countryId": "gb",
+        "phone": "",
+        "mobile": "",
+        "fax": "",
+        "phoneDialingCodeId": null,
+        "mobileDialingCodeId": null,
+        "faxDialingCodeId": null,
+        "webUrl": "",
+        "email": "wrong@globalfood.co.uk"
+      },
+      "receiveEmail": false
+    },
+    "medias": {
+      "businessLicense": [],
+      "idCard": [],
+      "logo": []
+    },
+    "actions": [
+      {
+        "id": "act-004-1",
+        "appliedById": "super-001",
+        "appliedByName": "Super Admin One",
+        "date": "2025-02-04T12:05:00.000Z",
+        "status": "REJECTED",
+        "message": "Provided data is not valid. Please correct and resubmit."
+      }
+    ]
+  }
+]

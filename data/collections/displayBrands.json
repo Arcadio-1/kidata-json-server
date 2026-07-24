@@ -1,0 +1,67 @@
+[
+  {
+    "displayBrandId": "1",
+    "label": "Samsung",
+    "value": "samsung"
+  },
+  {
+    "displayBrandId": "2",
+    "label": "LG",
+    "value": "lg"
+  },
+  {
+    "displayBrandId": "3",
+    "label": "Sony",
+    "value": "sony"
+  },
+  {
+    "displayBrandId": "4",
+    "label": "TCL",
+    "value": "tcl"
+  },
+  {
+    "displayBrandId": "5",
+    "label": "Hisense",
+    "value": "hisense"
+  },
+  {
+    "displayBrandId": "6",
+    "label": "Philips",
+    "value": "philips"
+  },
+  {
+    "displayBrandId": "7",
+    "label": "Acer",
+    "value": "acer"
+  },
+  {
+    "displayBrandId": "8",
+    "label": "Asus",
+    "value": "asus"
+  },
+  {
+    "displayBrandId": "9",
+    "label": "MSI",
+    "value": "msi"
+  },
+  {
+    "displayBrandId": "10",
+    "label": "ViewSonic",
+    "value": "viewsonic"
+  },
+  {
+    "displayBrandId": "11",
+    "label": "BenQ",
+    "value": "benq"
+  },
+  {
+    "displayBrandId": "12",
+    "label": "AOC",
+    "value": "aoc"
+  },
+  {
+    "displayBrandId": "13",
+    "label": "Sceptre",
+    "value": "sceptre"
+  }
+]

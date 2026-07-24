@@ -1,0 +1,16 @@
+[
+  {
+    "id": "package-history-acme-addon",
+    "companyId": "company-acme",
+    "timestamp": "2026-03-01T00:00:00.000Z",
+    "type": "ADD_ON_ASSIGNED",
+    "before": null,
+    "after": {
+      "addOnId": "addon-4",
+      "quantity": 3
+    },
+    "reason": "Sales-assisted team expansion",
+    "salesReference": "SALE-ACME-2026-03",
+    "auditEventId": "audit-acme-addon"
+  }
+]

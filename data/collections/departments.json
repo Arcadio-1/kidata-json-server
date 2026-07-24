@@ -1,0 +1,62 @@
+[
+  {
+    "id": "1",
+    "name": "Management / Executive"
+  },
+  {
+    "id": "2",
+    "name": "Assistance & Secretariat"
+  },
+  {
+    "id": "3",
+    "name": "Human Resources (HR)"
+  },
+  {
+    "id": "4",
+    "name": "Finance & Controlling"
+  },
+  {
+    "id": "5",
+    "name": "Sales & Business Development"
+  },
+  {
+    "id": "6",
+    "name": "Marketing & PR"
+  },
+  {
+    "id": "7",
+    "name": "Customer Service / Support"
+  },
+  {
+    "id": "8",
+    "name": "IT & Development"
+  },
+  {
+    "id": "9",
+    "name": "Procurement & Logistics"
+  },
+  {
+    "id": "10",
+    "name": "Production & Engineering"
+  },
+  {
+    "id": "11",
+    "name": "Research & Development (R&D)"
+  },
+  {
+    "id": "12",
+    "name": "Quality Management"
+  },
+  {
+    "id": "13",
+    "name": "Legal & Compliance"
+  },
+  {
+    "id": "14",
+    "name": "Facility Management"
+  },
+  {
+    "id": "15",
+    "name": "Other"
+  }
+]

@@ -1,0 +1,67 @@
+[
+  {
+    "id": "1",
+    "label": "displays",
+    "permission": [
+      "GENERAL_DISPLAY"
+    ]
+  },
+  {
+    "id": "2",
+    "label": "mediaPool",
+    "permission": [
+      "GENERAL_MEDIAPOOL"
+    ]
+  },
+  {
+    "id": "3",
+    "label": "Private Media Pool",
+    "permission": [
+      "GENERAL_PRIVATE_MEDIAPOOL"
+    ]
+  },
+  {
+    "id": "4",
+    "label": "Advertisements",
+    "permission": [
+      "GENERAL_AD"
+    ]
+  },
+  {
+    "id": "5",
+    "label": "Playlist",
+    "permission": [
+      "GENERAL_PLAYLIST"
+    ]
+  },
+  {
+    "id": "6",
+    "label": "Private Playlist",
+    "permission": [
+      "GENERAL_PRIVATE_PLAYLIST"
+    ]
+  },
+  {
+    "id": "7",
+    "label": "Short Playlist",
+    "permission": [
+      "GENERAL_SHORT_PLAYLIST"
+    ]
+  },
+  {
+    "id": "8",
+    "label": "Private Short Playlist",
+    "permission": [
+      "GENERAL_DISPLAY",
+      "GENERAL_MEDIAPOOL",
+      "GENERAL_PRIVATE_MEDIAPOOL"
+    ]
+  },
+  {
+    "id": "9",
+    "label": "User Managemet",
+    "permission": [
+      "GENERAL_USER_MANAGEMENT"
+    ]
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "id": "1",
+    "userAssignedShortPlayLists": [
+      {
+        "id": "shortplaylist1",
+        "title": "Quick Tips",
+        "description": "Short playlist of quick tips",
+        "categoryLabel": "Education",
+        "categoryColor": "#FF33A1",
+        "uploadedBy": "user7",
+        "createDate": "2025-02-15T09:45:00Z",
+        "thumbnailUrl": "/assets/images/profile.webp"
+      },
+      {
+        "id": "shortplaylist2",
+        "title": "Daily Motivation",
+        "description": "Inspirational quotes and messages",
+        "categoryLabel": "Motivation",
+        "categoryColor": "#CCFF00",
+        "uploadedBy": "user8",
+        "createDate": "2025-03-10T07:30:00Z",
+        "thumbnailUrl": "/assets/images/profile.webp"
+      }
+    ]
+  }
+]
