@@ -218,6 +218,33 @@ const tariffBody = (overrides = {}) => ({
   ...overrides,
 });
 
+const addOnCatalog = () => [
+  { id: "addon-1", name: "Storage", price: "10", hasQuantity: false, minQuantity: 1, maxQuantity: 1 },
+  { id: "addon-2", name: "Backup", price: "7", hasQuantity: false, minQuantity: 1, maxQuantity: 1 },
+  { id: "addon-3", name: "Archive", price: "4", hasQuantity: false, minQuantity: 1, maxQuantity: 1 },
+  { id: "addon-4", name: "Seats", price: "4", hasQuantity: true, minQuantity: 1, maxQuantity: 3 },
+  { id: "addon-5", name: "Roles", price: "3", hasQuantity: false, minQuantity: 1, maxQuantity: 1 },
+];
+
+const addOnBody = (overrides = {}) => ({
+  addOnId: "addon-1",
+  quantity: 1,
+  effectiveAt: "2026-08-01T00:00:00.000Z",
+  reason: "Contracted add-on change",
+  salesReference: "SALE-200",
+  version: 5,
+  idempotencyKey: "add-on-request-1",
+  ...overrides,
+});
+
+const offerBody = (overrides = {}) => ({
+  reason: "Approved promotional offer",
+  salesReference: "SALE-300",
+  version: 5,
+  idempotencyKey: "offer-request-1",
+  ...overrides,
+});
+
 test("company detail returns only the state-valid action and server-authored impact", async () => {
   await withServer(createState(createCompany()), async ({ baseUrl }) => {
     const active = await requestJson(
@@ -699,4 +726,215 @@ test("identical tariff retries replay once and fingerprint conflicts do not writ
       assert.equal(state.superCompanyManagementAuditEvents.length, 1);
     },
   );
+});
+
+test("add-on assignment recalculates the package and preserves the global catalog", async () => {
+  const initialState = createState(createCompany());
+  initialState.addOns.addOns = addOnCatalog();
+  const catalogBefore = clone(initialState.addOns);
+
+  await withServer(initialState, async ({ baseUrl, router }) => {
+    const result = await requestJson(
+      baseUrl,
+      "/super/company-management/companies/company-test/add-ons",
+      { method: "POST", body: JSON.stringify(addOnBody()) },
+    );
+    const state = router.db.getState();
+    const subscription = result.body.data.subscription;
+
+    assert.equal(result.status, 200);
+    assert.equal(subscription.addOns[0].addOnId, "addon-1");
+    assert.equal(subscription.pricing.addOnsMonthly, 10);
+    assert.equal(subscription.pricing.totalMonthly, 15);
+    assert.equal(subscription.entitlements.cloudStorageIncluded, "105 GB");
+    assert.equal(state.superCompanyManagementPackages[0].version, 6);
+    assert.equal(state.superCompanyManagementPackageHistory.length, 1);
+    assert.equal(state.superCompanyManagementAuditEvents.length, 1);
+    assert.deepEqual(state.addOns, catalogBefore);
+  });
+});
+
+test("add-on quantity changes enforce non-quantity and bounded-quantity rules", async () => {
+  const initialState = createState(createCompany());
+  initialState.addOns.addOns = addOnCatalog();
+  initialState.superCompanyManagementPackages[0].addOns = [
+    { addOnId: "addon-1", status: "active", quantity: 1, unitPrice: 10, effectiveAt: "2026-01-01T00:00:00.000Z", endsAt: null, source: "superAdmin", offerId: null },
+    { addOnId: "addon-4", status: "active", quantity: 1, unitPrice: 4, effectiveAt: "2026-01-01T00:00:00.000Z", endsAt: null, source: "superAdmin", offerId: null },
+  ];
+
+  await withServer(initialState, async ({ baseUrl, router }) => {
+    const nonQuantity = await requestJson(
+      baseUrl,
+      "/super/company-management/companies/company-test/add-ons/addon-1",
+      { method: "PATCH", body: JSON.stringify(addOnBody({ quantity: 2 })) },
+    );
+    const changed = await requestJson(
+      baseUrl,
+      "/super/company-management/companies/company-test/add-ons/addon-4",
+      { method: "PATCH", body: JSON.stringify(addOnBody({ addOnId: "addon-4", quantity: 2, idempotencyKey: "seat-change-1" })) },
+    );
+    const outOfRange = await requestJson(
+      baseUrl,
+      "/super/company-management/companies/company-test/add-ons/addon-4",
+      { method: "PATCH", body: JSON.stringify(addOnBody({ addOnId: "addon-4", quantity: 4, idempotencyKey: "seat-change-2" })) },
+    );
+    const state = router.db.getState();
+
+    assert.equal(nonQuantity.status, 400);
+    assert.equal(changed.status, 200);
+    assert.equal(changed.body.data.subscription.addOns.find((item) => item.addOnId === "addon-4").quantity, 2);
+    assert.equal(outOfRange.status, 400);
+    assert.equal(state.superCompanyManagementPackages[0].version, 6);
+    assert.equal(state.superCompanyManagementPackageHistory.length, 1);
+    assert.equal(state.superCompanyManagementAuditEvents.length, 1);
+  });
+});
+
+test("unsafe add-on removal returns structured violations without writes", async () => {
+  const initialState = createState(createCompany());
+  initialState.addOns.addOns = addOnCatalog();
+  initialState.superCompanyManagementPackages[0].addOns = [
+    { addOnId: "addon-1", status: "active", quantity: 1, unitPrice: 10, effectiveAt: "2026-01-01T00:00:00.000Z", endsAt: null, source: "superAdmin", offerId: null },
+    { addOnId: "addon-2", status: "active", quantity: 1, unitPrice: 7, effectiveAt: "2026-01-01T00:00:00.000Z", endsAt: null, source: "superAdmin", offerId: null },
+  ];
+  const expectedState = clone(initialState);
+
+  await withServer(initialState, async ({ baseUrl, router }) => {
+    const result = await requestJson(
+      baseUrl,
+      "/super/company-management/companies/company-test/add-ons/addon-1",
+      {
+        method: "DELETE",
+        body: JSON.stringify({
+          reason: "Remove unused add-on",
+          version: 5,
+          idempotencyKey: "remove-1",
+        }),
+      },
+    );
+
+    assert.equal(result.status, 422);
+    assert.equal(result.body.code, "ADD_ON_REMOVAL_UNSAFE");
+    assert.equal(result.body.violations[0].code, "ADD_ON_DEPENDENCY_IN_USE");
+    assert.deepEqual(router.db.getState(), expectedState);
+  });
+});
+
+test("duplicate add-on capabilities are rejected without writes", async () => {
+  const initialState = createState(createCompany());
+  initialState.addOns.addOns = addOnCatalog();
+  initialState.superCompanyManagementPackages[0].addOns = [
+    { addOnId: "addon-1", status: "active", quantity: 1, unitPrice: 10, effectiveAt: "2026-01-01T00:00:00.000Z", endsAt: null, source: "superAdmin", offerId: null },
+  ];
+  const expectedState = clone(initialState);
+
+  await withServer(initialState, async ({ baseUrl, router }) => {
+    const result = await requestJson(
+      baseUrl,
+      "/super/company-management/companies/company-test/add-ons",
+      { method: "POST", body: JSON.stringify(addOnBody({ addOnId: "addon-3" })) },
+    );
+
+    assert.equal(result.status, 422);
+    assert.equal(result.body.violations[0].code, "DUPLICATE_ADD_ON_CAPABILITY");
+    assert.deepEqual(router.db.getState(), expectedState);
+  });
+});
+
+test("eligible offers apply atomically while expired and incompatible offers do not write", async () => {
+  const initialState = createState(createCompany());
+  initialState.addOns.addOns = addOnCatalog();
+  initialState.superCompanyManagementPackages[0].offers = [
+    { id: "offer-storage", label: "Storage incentive", status: "active", eligible: true, validFrom: "2025-01-01T00:00:00.000Z", validUntil: "2099-01-01T00:00:00.000Z", includedAddOnIds: ["addon-1"], discountType: "fixed", discountValue: 2 },
+    { id: "offer-expired", label: "Expired", status: "active", eligible: true, validFrom: "2025-01-01T00:00:00.000Z", validUntil: "2025-02-01T00:00:00.000Z", includedAddOnIds: ["addon-1"], discountType: "fixed", discountValue: 2 },
+    { id: "offer-incompatible", label: "Roles", status: "active", eligible: true, validFrom: "2025-01-01T00:00:00.000Z", validUntil: "2099-01-01T00:00:00.000Z", includedAddOnIds: ["addon-5"], discountType: "fixed", discountValue: 0 },
+  ];
+
+  await withServer(initialState, async ({ baseUrl, router }) => {
+    const availableOffers = await requestJson(
+      baseUrl,
+      "/super/company-management/companies/company-test/offers",
+    );
+    const applied = await requestJson(
+      baseUrl,
+      "/super/company-management/companies/company-test/offers/offer-storage/apply",
+      { method: "POST", body: JSON.stringify(offerBody()) },
+    );
+    const stateAfterApply = clone(router.db.getState());
+    const expired = await requestJson(
+      baseUrl,
+      "/super/company-management/companies/company-test/offers/offer-expired/apply",
+      { method: "POST", body: JSON.stringify(offerBody({ version: 6, idempotencyKey: "expired-offer-1" })) },
+    );
+    const incompatible = await requestJson(
+      baseUrl,
+      "/super/company-management/companies/company-test/offers/offer-incompatible/apply",
+      { method: "POST", body: JSON.stringify(offerBody({ version: 6, idempotencyKey: "incompatible-offer-1" })) },
+    );
+
+    assert.equal(availableOffers.status, 200);
+    assert.equal(availableOffers.body.find((offer) => offer.id === "offer-storage").eligible, true);
+    assert.equal(availableOffers.body.find((offer) => offer.id === "offer-expired").eligible, false);
+    assert.equal(availableOffers.body.find((offer) => offer.id === "offer-incompatible").eligible, false);
+    assert.equal(applied.status, 200);
+    assert.equal(applied.body.data.subscription.appliedPromotions[0].offerId, "offer-storage");
+    assert.equal(applied.body.data.subscription.pricing.totalMonthly, 13);
+    assert.equal(router.db.getState().superCompanyManagementPackageHistory.length, 1);
+    assert.equal(router.db.getState().superCompanyManagementAuditEvents.length, 1);
+    assert.equal(expired.status, 422);
+    assert.equal(expired.body.code, "OFFER_NOT_ELIGIBLE");
+    assert.equal(incompatible.status, 422);
+    assert.equal(incompatible.body.code, "OFFER_NOT_COMPATIBLE");
+    assert.deepEqual(router.db.getState(), stateAfterApply);
+  });
+});
+
+test("add-on mutations replay once, reject fingerprint conflicts, and stay company-scoped", async () => {
+  const initialState = createState(createCompany());
+  initialState.addOns.addOns = addOnCatalog();
+  const otherCompany = createCompany({ id: "company-other", onlineId: "CMP-OTHER" });
+  initialState.superCompanyManagementCompanies.push(otherCompany);
+  initialState.superCompanyManagementPackages.push({ ...clone(initialState.superCompanyManagementPackages[0]), companyId: otherCompany.id });
+
+  await withServer(initialState, async ({ baseUrl, router }) => {
+    const originalWrite = router.db.write.bind(router.db);
+    let writeCount = 0;
+    router.db.write = () => { writeCount += 1; return originalWrite(); };
+    const request = { method: "POST", body: JSON.stringify(addOnBody()) };
+    const first = await requestJson(baseUrl, "/super/company-management/companies/company-test/add-ons", request);
+    const replay = await requestJson(baseUrl, "/super/company-management/companies/company-test/add-ons", request);
+    const conflict = await requestJson(baseUrl, "/super/company-management/companies/company-test/add-ons", { method: "POST", body: JSON.stringify(addOnBody({ reason: "Different reason" })) });
+    const other = router.db.getState().superCompanyManagementPackages.find((item) => item.companyId === otherCompany.id);
+
+    assert.equal(first.status, 200);
+    assert.equal(replay.status, 200);
+    assert.deepEqual(replay.body, first.body);
+    assert.equal(conflict.status, 409);
+    assert.equal(conflict.body.code, "IDEMPOTENCY_CONFLICT");
+    assert.equal(writeCount, 1);
+    assert.equal(other.version, 5);
+    assert.deepEqual(other.addOns, []);
+  });
+});
+
+test("add-on actions are independently authorized and persistence failures are atomic", async () => {
+  const restrictedState = createState(createCompany({ permissionProfile: "restricted" }));
+  restrictedState.addOns.addOns = addOnCatalog();
+  await withServer(restrictedState, async ({ baseUrl, router }) => {
+    const before = clone(router.db.getState());
+    const result = await requestJson(baseUrl, "/super/company-management/companies/company-test/add-ons", { method: "POST", body: JSON.stringify(addOnBody()) });
+    assert.equal(result.status, 403);
+    assert.deepEqual(router.db.getState(), before);
+  });
+
+  const failingState = createState(createCompany());
+  failingState.addOns.addOns = addOnCatalog();
+  await withServer(failingState, async ({ baseUrl, router }) => {
+    const before = clone(router.db.getState());
+    router.db.write = () => { throw new Error("write failure"); };
+    const result = await requestJson(baseUrl, "/super/company-management/companies/company-test/add-ons", { method: "POST", body: JSON.stringify(addOnBody()) });
+    assert.equal(result.status, 500);
+    assert.equal(result.body.code, "PACKAGE_UPDATE_FAILED");
+    assert.deepEqual(router.db.getState(), before);
+  });
 });

@@ -541,7 +541,7 @@ const calculatePackageProjection = (db, packageRecord, companyActions) => {
   );
   output.entitlements = {
     ...(tariff?.details || {}),
-    ...(output.addOnEntitlements || {}),
+    ...getPackageAddOnEntitlements(tariff, output.addOns),
   };
   output.allowedActions = companyActions.filter((action) =>
     [
@@ -614,6 +614,184 @@ const getTariffLimitViolations = (packageRecord, targetTariff, companyId) => {
     ];
   });
 };
+
+const ADD_ON_RULES = Object.freeze({
+  "addon-1": { capability: "STORAGE_100_GB", storageGb: 100 },
+  "addon-2": { capability: "PREMIUM_BACKUP", requiresAddOnIds: ["addon-1"] },
+  "addon-3": { capability: "STORAGE_100_GB", storageGb: 500 },
+  "addon-4": { capability: "TEAM_SEAT", teamSeats: true },
+  "addon-5": {
+    capability: "ADVANCED_ROLES",
+    requiredEntitlements: { extendedUserRoles: true },
+  },
+  "addon-6": { capability: "DISPLAY_SLOT", displaySlots: true },
+  "addon-10": { capability: "AD_CATEGORY", categorySlots: true },
+});
+
+const getAddOnRule = (addOnId) =>
+  ADD_ON_RULES[addOnId] || { capability: `ADD_ON:${addOnId}` };
+
+const getPackageAddOnEntitlements = (tariff, addOns) => {
+  const entitlements = {};
+  const numericBase = (key) => parseMockLimit(tariff?.details?.[key]) || 0;
+  for (const assignment of addOns.filter((item) => item.status === "active")) {
+    const rule = getAddOnRule(assignment.addOnId);
+    if (rule.teamSeats) {
+      entitlements.teamSize =
+        numericBase("teamSize") +
+        (entitlements.teamSize || 0) +
+        assignment.quantity;
+    }
+    if (rule.displaySlots) {
+      const limit = tariff?.details?.activeDisplays;
+      entitlements.activeDisplays =
+        parseMockLimit(limit) === null
+          ? limit
+          : numericBase("activeDisplays") +
+            (entitlements.activeDisplays || 0) +
+            assignment.quantity;
+    }
+    if (rule.storageGb) {
+      entitlements.cloudStorageIncluded = `${
+        numericBase("cloudStorageIncluded") +
+        (parseMockLimit(entitlements.cloudStorageIncluded) || 0) +
+        rule.storageGb * assignment.quantity
+      } GB`;
+    }
+    if (rule.categorySlots) {
+      entitlements.configurableCategories =
+        numericBase("configurableCategories") +
+        (entitlements.configurableCategories || 0) +
+        assignment.quantity;
+    }
+  }
+  return entitlements;
+};
+
+const getAddOnViolations = (tariff, assignments, catalog, candidate) => {
+  const rule = getAddOnRule(candidate.addOnId);
+  const entitlements = {
+    ...(tariff?.details || {}),
+    ...getPackageAddOnEntitlements(tariff, assignments),
+  };
+  const violations = [];
+  if (
+    assignments.some(
+      (item) =>
+        item.status === "active" &&
+        item.addOnId !== candidate.addOnId &&
+        getAddOnRule(item.addOnId).capability === rule.capability
+    )
+  ) {
+    violations.push({
+      code: "DUPLICATE_ADD_ON_CAPABILITY",
+      message: "The add-on capability is already assigned",
+      entityType: "addOn",
+      entityId: candidate.addOnId,
+    });
+  }
+  for (const [key, value] of Object.entries(rule.requiredEntitlements || {})) {
+    if (entitlements[key] !== value) {
+      violations.push({
+        code: "ADD_ON_INCOMPATIBLE",
+        message: `The add-on requires entitlement ${key}`,
+        entityType: "addOn",
+        entityId: candidate.addOnId,
+      });
+    }
+  }
+  for (const requiredId of rule.requiresAddOnIds || []) {
+    if (!assignments.some((item) => item.addOnId === requiredId && item.status === "active")) {
+      violations.push({
+        code: "ADD_ON_DEPENDENCY_MISSING",
+        message: `The add-on requires ${requiredId}`,
+        entityType: "addOn",
+        entityId: candidate.addOnId,
+      });
+    }
+  }
+  if (!catalog.some((item) => item.id === candidate.addOnId)) {
+    violations.push({
+      code: "UNKNOWN_ADD_ON",
+      message: "The requested add-on is not available",
+      entityType: "addOn",
+      entityId: candidate.addOnId,
+    });
+  }
+  return violations;
+};
+
+const getRemovalViolations = (assignments, addOnId) =>
+  assignments
+    .filter((item) => item.status === "active" && item.addOnId !== addOnId)
+    .flatMap((item) =>
+      (getAddOnRule(item.addOnId).requiresAddOnIds || []).includes(addOnId)
+        ? [{
+            code: "ADD_ON_DEPENDENCY_IN_USE",
+            message: `${item.addOnId} depends on this add-on`,
+            entityType: "addOn",
+            entityId: item.addOnId,
+          }]
+        : []
+    );
+
+const getOfferCompatibilityViolations = (tariff, packageRecord, catalog, offer) => {
+  if (!Array.isArray(offer.includedAddOnIds)) {
+    return [{
+      code: "OFFER_INCLUDED_IDS_INVALID",
+      message: "Offer included add-on IDs are invalid",
+      entityType: "offer",
+      entityId: offer.id,
+    }];
+  }
+  const violations = [];
+  const additions = [];
+  for (const addOnId of offer.includedAddOnIds) {
+    const catalogItem = catalog.find((item) => item.id === addOnId);
+    if (!catalogItem) {
+      violations.push({
+        code: "OFFER_INCLUDED_ID_UNKNOWN",
+        message: `Offer includes unknown add-on ${addOnId}`,
+        entityType: "offer",
+        entityId: offer.id,
+      });
+      continue;
+    }
+    if (
+      packageRecord.addOns.some(
+        (item) => item.addOnId === addOnId && item.status === "active"
+      ) || additions.some((item) => item.addOnId === addOnId)
+    ) {
+      violations.push({
+        code: "DUPLICATE_ADD_ON_CAPABILITY",
+        message: `Offer duplicates add-on ${addOnId}`,
+        entityType: "addOn",
+        entityId: addOnId,
+      });
+      continue;
+    }
+    violations.push(
+      ...getAddOnViolations(
+        tariff,
+        [...packageRecord.addOns, ...additions],
+        catalog,
+        { addOnId }
+      )
+    );
+    additions.push({ addOnId, status: "active" });
+  }
+  return violations;
+};
+
+const isOfferCurrentlyEligible = (offer, packageRecord, tariff, catalog) =>
+  Boolean(
+    offer.eligible &&
+      offer.status === "active" &&
+      new Date(offer.validFrom) <= new Date() &&
+      new Date(offer.validUntil) >= new Date() &&
+      !packageRecord.appliedPromotions.some((item) => item.offerId === offer.id) &&
+      getOfferCompatibilityViolations(tariff, packageRecord, catalog, offer).length === 0
+  );
 
 module.exports = function registerCompanyManagementRoutes(server, router) {
   server.use(ROOT, express.json());
@@ -1257,7 +1435,19 @@ module.exports = function registerCompanyManagementRoutes(server, router) {
       .get("superCompanyManagementPackages")
       .find({ companyId: company.id })
       .value();
-    res.json(clone(packageRecord?.offers || []));
+    const tariff = getTariffs(router.db).find(
+      (item) => item.id === packageRecord?.tariff.tariffId
+    );
+    const catalog = getAddOns(router.db);
+    res.json(
+      clone(packageRecord?.offers || []).map((offer) => ({
+        ...offer,
+        eligible:
+          packageRecord && tariff
+            ? isOfferCurrentlyEligible(offer, packageRecord, tariff, catalog)
+            : false,
+      }))
+    );
   });
 
   server.get(`${ROOT}/companies/:companyId/subscription`, (req, res) => {
@@ -1571,6 +1761,192 @@ module.exports = function registerCompanyManagementRoutes(server, router) {
     }
 
     return res.json(response);
+  });
+
+  const commitPackageMutation = ({
+    req,
+    res,
+    company,
+    packageRecord,
+    nextPackage,
+    operation,
+    payload,
+    idempotencyKey,
+    historyType,
+    entityType,
+    entityId,
+    reason,
+    salesReference,
+  }) => {
+    const fingerprint = createPayloadFingerprint(payload);
+    const existing = (router.db.get("superCompanyManagementIdempotency").value() || []).find(
+      (record) => record.key === idempotencyKey
+    );
+    if (existing) {
+      if (existing.operation === operation && existing.companyId === company.id && existing.payloadFingerprint === fingerprint) {
+        return res.json(clone(existing.response));
+      }
+      return sendError(res, 409, "IDEMPOTENCY_CONFLICT", "This idempotency key was already used with a different request");
+    }
+    if (payload.version !== packageRecord.version) {
+      return sendError(res, 409, "VERSION_CONFLICT", "The company subscription changed after it was loaded", { currentVersion: packageRecord.version });
+    }
+    const timestamp = new Date().toISOString();
+    const suffix = randomUUID();
+    const correlationId = `cm-package-${suffix}`;
+    const tariff = getTariffs(router.db).find((item) => item.id === nextPackage.tariff.tariffId);
+    nextPackage.version = packageRecord.version + 1;
+    nextPackage.addOnEntitlements = getPackageAddOnEntitlements(tariff, nextPackage.addOns);
+    const auditEvent = {
+      id: `audit-${suffix}`, timestamp,
+      actor: { id: String(req.get("x-mock-super-admin-id") || "super-admin-local"), name: String(req.get("x-mock-super-admin-name") || "Local Super Admin") },
+      companyId: company.id, actionType: operation, entityType, entityId,
+      before: redactAuditValue(packageRecord), after: redactAuditValue(nextPackage),
+      reason, result: "success", correlationId,
+    };
+    const historyEvent = {
+      id: `package-history-${suffix}`, companyId: company.id, timestamp,
+      type: historyType, before: redactAuditValue(packageRecord.addOns),
+      after: redactAuditValue(nextPackage.addOns), reason,
+      salesReference: salesReference || null, auditEventId: auditEvent.id,
+    };
+    const projected = calculatePackageProjection(router.db, nextPackage, getCompanyActions(company));
+    projected.history = [...(router.db.get("superCompanyManagementPackageHistory").value() || []).filter((item) => item.companyId === company.id), historyEvent];
+    const response = { message: "Company package updated in local demo data", data: { subscription: projected }, auditEvent, mockOnly: true, warnings: [{ code: "MOCK_ONLY_CHANGE", message: "Only canonical Company Management package, history, audit, and idempotency data were changed" }], correlationId };
+    const previousState = router.db.getState();
+    const nextState = clone(previousState);
+    const index = nextState.superCompanyManagementPackages.findIndex((item) => item.companyId === company.id);
+    nextState.superCompanyManagementPackages[index] = nextPackage;
+    nextState.superCompanyManagementPackageHistory.push(historyEvent);
+    nextState.superCompanyManagementAuditEvents.push(auditEvent);
+    nextState.superCompanyManagementIdempotency.push({ id: `idempotency-${suffix}`, key: idempotencyKey, operation, companyId: company.id, payloadFingerprint: fingerprint, completedAt: timestamp, response });
+    try { router.db.setState(nextState).write(); } catch {
+      router.db.setState(previousState);
+      return sendError(res, 500, "PACKAGE_UPDATE_FAILED", "The company package could not be updated", { correlationId });
+    }
+    return res.json(response);
+  };
+
+  const respondToPackageReplay = (res, company, operation, idempotencyKey, payload) => {
+    const existing = (router.db.get("superCompanyManagementIdempotency").value() || []).find(
+      (record) => record.key === idempotencyKey
+    );
+    if (!existing) return false;
+    if (
+      existing.operation === operation &&
+      existing.companyId === company.id &&
+      existing.payloadFingerprint === createPayloadFingerprint(payload)
+    ) {
+      res.json(clone(existing.response));
+      return true;
+    }
+    sendError(res, 409, "IDEMPOTENCY_CONFLICT", "This idempotency key was already used with a different request");
+    return true;
+  };
+
+  const getMutablePackage = (req, res, action) => {
+    const company = requireCompany(router.db, res, req.params.companyId);
+    if (!company) return null;
+    if (!getCompanyActions(company).includes(action)) {
+      sendError(res, 403, "ACTION_NOT_ALLOWED", "The mock operator cannot change this company package");
+      return null;
+    }
+    const packageRecord = router.db.get("superCompanyManagementPackages").find({ companyId: company.id }).value();
+    if (!packageRecord) { sendError(res, 404, "SUBSCRIPTION_NOT_FOUND", "Company subscription not found"); return null; }
+    return { company, packageRecord };
+  };
+
+  const getPackageBody = (body, requireEffectiveAt = true, allowedFields = []) => {
+    const value = isPlainObject(body) ? body : {};
+    const reason = typeof value.reason === "string" ? value.reason.trim() : "";
+    const salesReference = typeof value.salesReference === "string" ? value.salesReference.trim() : "";
+    const idempotencyKey = typeof value.idempotencyKey === "string" ? value.idempotencyKey.trim() : "";
+    const effectiveAt = typeof value.effectiveAt === "string" ? value.effectiveAt.trim() : "";
+    const fieldErrors = {};
+    for (const field of Object.keys(value)) {
+      if (!allowedFields.includes(field)) {
+        fieldErrors[field] = ["Unsupported field"];
+      }
+    }
+    if (!reason) fieldErrors.reason = ["Reason is required"];
+    if (reason.length > 1000) fieldErrors.reason = ["Reason must be 1000 characters or fewer"];
+    if (value.salesReference !== undefined && typeof value.salesReference !== "string") fieldErrors.salesReference = ["Sales reference must be a string"];
+    if (salesReference.length > 1000) fieldErrors.salesReference = ["Sales reference must be 1000 characters or fewer"];
+    if (!Number.isInteger(value.version) || value.version < 0) fieldErrors.version = ["Expected a non-negative integer"];
+    if (!idempotencyKey) fieldErrors.idempotencyKey = ["Idempotency key is required"];
+    if (requireEffectiveAt && (!effectiveAt || Number.isNaN(Date.parse(effectiveAt)))) fieldErrors.effectiveAt = ["Effective date must be an ISO-8601 date"];
+    return { value, reason, salesReference, idempotencyKey, effectiveAt, fieldErrors };
+  };
+
+  server.post(`${ROOT}/companies/:companyId/add-ons`, (req, res) => {
+    const context = getMutablePackage(req, res, ACTIONS.ASSIGN_COMPANY_ADD_ON); if (!context) return;
+    const parsed = getPackageBody(req.body, true, ["addOnId", "quantity", "effectiveAt", "reason", "salesReference", "version", "idempotencyKey"]); const addOnId = typeof parsed.value.addOnId === "string" ? parsed.value.addOnId.trim() : "";
+    const catalog = getAddOns(router.db); const catalogItem = catalog.find((item) => item.id === addOnId);
+    const quantity = parsed.value.quantity;
+    if (!catalogItem) parsed.fieldErrors.addOnId = ["Unknown add-on"];
+    if (!Number.isInteger(quantity) || !catalogItem || quantity < catalogItem.minQuantity || quantity > catalogItem.maxQuantity || (!catalogItem.hasQuantity && quantity !== 1)) parsed.fieldErrors.quantity = ["Quantity is outside the permitted range"];
+    if (Object.keys(parsed.fieldErrors).length) return sendError(res, 400, "VALIDATION_ERROR", "The add-on assignment is invalid", { fieldErrors: parsed.fieldErrors });
+    const payload = { addOnId, quantity, effectiveAt: parsed.effectiveAt, reason: parsed.reason, salesReference: parsed.salesReference || undefined, version: parsed.value.version };
+    if (respondToPackageReplay(res, context.company, "subscription.addOn.assigned", parsed.idempotencyKey, payload)) return;
+    if (context.packageRecord.addOns.some((item) => item.addOnId === addOnId && item.status === "active")) return sendError(res, 409, "DUPLICATE_ADD_ON", "The add-on is already assigned");
+    const tariff = getTariffs(router.db).find((item) => item.id === context.packageRecord.tariff.tariffId);
+    const violations = getAddOnViolations(tariff, context.packageRecord.addOns, catalog, { addOnId });
+    if (violations.length) return sendError(res, 422, "ADD_ON_NOT_COMPATIBLE", "The add-on cannot be assigned", { violations });
+    const nextPackage = clone(context.packageRecord); nextPackage.addOns.push({ addOnId, status: "active", quantity, unitPrice: Number(catalogItem.price), effectiveAt: new Date(parsed.effectiveAt).toISOString(), endsAt: null, source: "superAdmin", offerId: null });
+    return commitPackageMutation({ req, res, ...context, nextPackage, operation: "subscription.addOn.assigned", payload, idempotencyKey: parsed.idempotencyKey, historyType: "ADD_ON_ASSIGNED", entityType: "companyAddOn", entityId: addOnId, reason: parsed.reason, salesReference: parsed.salesReference });
+  });
+
+  server.patch(`${ROOT}/companies/:companyId/add-ons/:addOnId`, (req, res) => {
+    const context = getMutablePackage(req, res, ACTIONS.CHANGE_COMPANY_ADD_ON_QUANTITY); if (!context) return;
+    const parsed = getPackageBody(req.body, true, ["addOnId", "quantity", "effectiveAt", "reason", "salesReference", "version", "idempotencyKey"]); const addOnId = req.params.addOnId;
+    const assignment = context.packageRecord.addOns.find((item) => item.addOnId === addOnId && item.status === "active"); const catalogItem = getAddOns(router.db).find((item) => item.id === addOnId);
+    if (parsed.value.addOnId !== addOnId) parsed.fieldErrors.addOnId = ["Add-on ID must match the route"];
+    if (!assignment || !catalogItem) return sendError(res, 404, "COMPANY_ADD_ON_NOT_FOUND", "Company add-on not found");
+    if (!catalogItem.hasQuantity) parsed.fieldErrors.quantity = ["This add-on does not support quantity changes"];
+    if (!Number.isInteger(parsed.value.quantity) || parsed.value.quantity < catalogItem.minQuantity || parsed.value.quantity > catalogItem.maxQuantity) parsed.fieldErrors.quantity = ["Quantity is outside the permitted range"];
+    if (Object.keys(parsed.fieldErrors).length) return sendError(res, 400, "VALIDATION_ERROR", "The add-on change is invalid", { fieldErrors: parsed.fieldErrors });
+    const payload = { addOnId, quantity: parsed.value.quantity, effectiveAt: parsed.effectiveAt, reason: parsed.reason, salesReference: parsed.salesReference || undefined, version: parsed.value.version };
+    if (respondToPackageReplay(res, context.company, "subscription.addOn.quantityChanged", parsed.idempotencyKey, payload)) return;
+    const nextPackage = clone(context.packageRecord); const next = nextPackage.addOns.find((item) => item.addOnId === addOnId && item.status === "active"); next.quantity = parsed.value.quantity; next.effectiveAt = new Date(parsed.effectiveAt).toISOString();
+    return commitPackageMutation({ req, res, ...context, nextPackage, operation: "subscription.addOn.quantityChanged", payload, idempotencyKey: parsed.idempotencyKey, historyType: "ADD_ON_QUANTITY_CHANGED", entityType: "companyAddOn", entityId: addOnId, reason: parsed.reason, salesReference: parsed.salesReference });
+  });
+
+  server.delete(`${ROOT}/companies/:companyId/add-ons/:addOnId`, (req, res) => {
+    const context = getMutablePackage(req, res, ACTIONS.REMOVE_COMPANY_ADD_ON); if (!context) return;
+    const parsed = getPackageBody(req.body, false, ["reason", "version", "idempotencyKey"]); const addOnId = req.params.addOnId;
+    if (Object.keys(parsed.fieldErrors).length) return sendError(res, 400, "VALIDATION_ERROR", "The add-on removal is invalid", { fieldErrors: parsed.fieldErrors });
+    const payload = { addOnId, reason: parsed.reason, version: parsed.value.version };
+    if (respondToPackageReplay(res, context.company, "subscription.addOn.removed", parsed.idempotencyKey, payload)) return;
+    const assignment = context.packageRecord.addOns.find((item) => item.addOnId === addOnId && item.status === "active");
+    if (!assignment) return sendError(res, 404, "COMPANY_ADD_ON_NOT_FOUND", "Company add-on not found");
+    const violations = getRemovalViolations(context.packageRecord.addOns, addOnId);
+    if (assignment.source === "offer") violations.push({ code: "OFFER_MANAGED_ADD_ON", message: "This add-on is managed by an applied offer", entityType: "addOn", entityId: addOnId });
+    if (violations.length) return sendError(res, 422, "ADD_ON_REMOVAL_UNSAFE", "The add-on cannot be removed", { violations });
+    const nextPackage = clone(context.packageRecord); nextPackage.addOns = nextPackage.addOns.filter((item) => item.addOnId !== addOnId || item.status !== "active");
+    return commitPackageMutation({ req, res, ...context, nextPackage, operation: "subscription.addOn.removed", payload, idempotencyKey: parsed.idempotencyKey, historyType: "ADD_ON_REMOVED", entityType: "companyAddOn", entityId: addOnId, reason: parsed.reason, salesReference: "" });
+  });
+
+  server.post(`${ROOT}/companies/:companyId/offers/:offerId/apply`, (req, res) => {
+    const context = getMutablePackage(req, res, ACTIONS.APPLY_COMPANY_OFFER); if (!context) return;
+    const parsed = getPackageBody(req.body, false, ["reason", "salesReference", "version", "idempotencyKey"]); const offerId = req.params.offerId;
+    const offer = (context.packageRecord.offers || []).find((item) => item.id === offerId);
+    if (!offer) return sendError(res, 404, "OFFER_NOT_FOUND", "Company offer not found");
+    if (Object.keys(parsed.fieldErrors).length) return sendError(res, 400, "VALIDATION_ERROR", "The offer application is invalid", { fieldErrors: parsed.fieldErrors });
+    const payload = { offerId, reason: parsed.reason, salesReference: parsed.salesReference || undefined, version: parsed.value.version };
+    if (respondToPackageReplay(res, context.company, "subscription.offer.applied", parsed.idempotencyKey, payload)) return;
+    if (context.packageRecord.appliedPromotions.some((item) => item.offerId === offerId)) return sendError(res, 409, "OFFER_ALREADY_APPLIED", "The offer is already applied");
+    if (!offer.eligible || offer.status !== "active" || new Date(offer.validUntil) < new Date() || new Date(offer.validFrom) > new Date()) return sendError(res, 422, "OFFER_NOT_ELIGIBLE", "The offer is not eligible", { violations: [{ code: "OFFER_NOT_ELIGIBLE", message: "The offer is expired or not eligible", entityType: "offer", entityId: offerId }] });
+    const catalog = getAddOns(router.db); const tariff = getTariffs(router.db).find((item) => item.id === context.packageRecord.tariff.tariffId);
+    const violations = getOfferCompatibilityViolations(tariff, context.packageRecord, catalog, offer);
+    if (violations.length) return sendError(res, 422, "OFFER_NOT_COMPATIBLE", "The offer cannot be applied", { violations });
+    const additions = offer.includedAddOnIds.map((addOnId) => {
+      const catalogItem = catalog.find((item) => item.id === addOnId);
+      return { addOnId, status: "active", quantity: catalogItem.hasQuantity ? catalogItem.minQuantity : 1, unitPrice: Number(catalogItem.price), effectiveAt: new Date().toISOString(), endsAt: null, source: "offer", offerId };
+    });
+    const nextPackage = clone(context.packageRecord); nextPackage.addOns.push(...additions); nextPackage.appliedPromotions.push({ offerId, label: offer.label, discountType: offer.discountType, discountValue: offer.discountValue, validFrom: offer.validFrom, validUntil: offer.validUntil, status: "active" });
+    const baseTotal = Number(nextPackage.pricing.tariffMonthly || 0) + nextPackage.addOns.reduce((sum, item) => sum + item.unitPrice * item.quantity, 0);
+    nextPackage.pricing.discountMonthly = Number((offer.discountType === "percentage" ? baseTotal * offer.discountValue / 100 : offer.discountType === "fixed" ? offer.discountValue : 0).toFixed(2));
+    return commitPackageMutation({ req, res, ...context, nextPackage, operation: "subscription.offer.applied", payload, idempotencyKey: parsed.idempotencyKey, historyType: "OFFER_APPLIED", entityType: "companyPromotion", entityId: offerId, reason: parsed.reason, salesReference: parsed.salesReference });
   });
 
   const approvalListHandler = (companyScoped) => (req, res) => {

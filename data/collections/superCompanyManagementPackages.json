@@ -87,6 +87,19 @@
         "validUntil": "2026-12-31T23:59:59.000Z"
       },
       {
+        "id": "offer-acme-storage",
+        "label": "Storage Support Offer",
+        "eligible": true,
+        "status": "active",
+        "includedAddOnIds": [
+          "addon-1"
+        ],
+        "discountType": "fixed",
+        "discountValue": 5,
+        "validFrom": "2026-07-01T00:00:00.000Z",
+        "validUntil": "2026-12-31T23:59:59.000Z"
+      },
+      {
         "id": "offer-acme-expired",
         "label": "Expired Spring Offer",
         "eligible": false,
