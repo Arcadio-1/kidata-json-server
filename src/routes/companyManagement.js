@@ -1,3 +1,4 @@
+const { createHash, randomUUID } = require("node:crypto");
 const express = require("express");
 const { redactAuditValue } = require("../utils/companyManagementAudit");
 
@@ -202,6 +203,111 @@ const getCompanyActions = (company) => {
     return true;
   });
 };
+
+const getCompanyStatusImpact = (company, allowedActions) => {
+  const canSuspend = allowedActions.includes(ACTIONS.SUSPEND_COMPANY);
+  const canReactivate = allowedActions.includes(ACTIONS.REACTIVATE_COMPANY);
+  if (!canSuspend && !canReactivate) return null;
+
+  const targetStatus = canSuspend ? "suspended" : "active";
+  const isSuspension = targetStatus === "suspended";
+  return {
+    targetStatus,
+    mockOnly: true,
+    summary: isSuspension
+      ? "This local demo changes only the company operational status to suspended and records the update in Company Management audit history."
+      : "This local demo changes only the company operational status to active and records the update in Company Management audit history.",
+    effects: [
+      {
+        code: "OPERATIONAL_STATUS",
+        label: "Operational status",
+        affected: true,
+        description: `Changes from ${company.operationalStatus} to ${targetStatus}.`,
+      },
+      {
+        code: "COMPANY_UPDATED_AT",
+        label: "Company last-updated timestamp",
+        affected: true,
+        description: "The company updatedAt timestamp changes.",
+      },
+      {
+        code: "COMPANY_VERSION",
+        label: "Company version",
+        affected: true,
+        description: "The company version increments once.",
+      },
+      {
+        code: "AUDIT_HISTORY",
+        label: "Audit history",
+        affected: true,
+        description: "Exactly one redacted Company Management audit event is added.",
+      },
+      {
+        code: "REGISTRATION_STATUS",
+        label: "Registration status",
+        affected: false,
+        description: isSuspension
+          ? "Registration status is unchanged."
+          : "Registration is not approved by reactivation.",
+      },
+      {
+        code: "COMPANY_USERS",
+        label: "Company users",
+        affected: false,
+        description: isSuspension
+          ? "Users and user statuses are unchanged."
+          : "Users are not reactivated and user statuses are unchanged.",
+      },
+      {
+        code: "ROLES_PERMISSIONS",
+        label: "Roles and permissions",
+        affected: false,
+        description: "Roles and permissions are unchanged.",
+      },
+      {
+        code: "PACKAGES_BILLING",
+        label: "Packages and billing",
+        affected: false,
+        description:
+          "Tariffs, add-ons, offers, pricing, billing, and package state are unchanged.",
+      },
+      {
+        code: "APPROVALS",
+        label: "Approvals",
+        affected: false,
+        description: "Approval records are unchanged.",
+      },
+      {
+        code: "AUTHENTICATION_SESSIONS",
+        label: "Authentication and sessions",
+        affected: false,
+        description:
+          "Authentication, sign-in, and sessions are not modeled by this JSON Server.",
+      },
+      {
+        code: "NOTIFICATIONS",
+        label: "Notifications",
+        affected: false,
+        description: "No notifications are sent by this JSON Server.",
+      },
+    ],
+  };
+};
+
+const sortObjectKeys = (value) => {
+  if (Array.isArray(value)) return value.map(sortObjectKeys);
+  if (!isPlainObject(value)) return value;
+  return Object.fromEntries(
+    Object.keys(value)
+      .sort()
+      .map((key) => [key, sortObjectKeys(value[key])])
+  );
+};
+
+const createPayloadFingerprint = (payload) =>
+  createHash("sha256")
+    .update(JSON.stringify(sortObjectKeys(payload)))
+    .digest("hex");
 
 const requireViewAction = (company, action, res) => {
   if (getCompanyActions(company).includes(action)) return true;
@@ -557,7 +663,190 @@ module.exports = function registerCompanyManagementRoutes(server, router) {
     res.json({
       allowedActions,
       data: maskCompany(company, allowedActions),
+      statusImpact: getCompanyStatusImpact(company, allowedActions),
     });
+  });
+
+  server.patch(`${ROOT}/companies/:companyId/status`, (req, res) => {
+    const company = requireCompany(router.db, res, req.params.companyId);
+    if (!company) return;
+
+    const body = isPlainObject(req.body) ? req.body : {};
+    const fieldErrors = {};
+    if (!["active", "suspended"].includes(body.targetStatus)) {
+      fieldErrors.targetStatus = ["Expected active or suspended"];
+    }
+    if (!Number.isInteger(body.version) || body.version < 0) {
+      fieldErrors.version = ["Expected a non-negative integer"];
+    }
+    const reason = typeof body.reason === "string" ? body.reason.trim() : "";
+    if (!reason) {
+      fieldErrors.reason = ["Reason is required"];
+    } else if (reason.length > 1000) {
+      fieldErrors.reason = ["Reason must be 1000 characters or fewer"];
+    }
+    const idempotencyKey =
+      typeof body.idempotencyKey === "string"
+        ? body.idempotencyKey.trim()
+        : "";
+    if (!idempotencyKey) {
+      fieldErrors.idempotencyKey = ["Idempotency key is required"];
+    }
+    if (Object.keys(fieldErrors).length > 0) {
+      return sendError(
+        res,
+        400,
+        "VALIDATION_ERROR",
+        "The company status update is invalid",
+        { fieldErrors }
+      );
+    }
+
+    const normalizedPayload = {
+      companyId: company.id,
+      targetStatus: body.targetStatus,
+      version: body.version,
+      reason,
+    };
+    const payloadFingerprint = createPayloadFingerprint(normalizedPayload);
+    const idempotencyRecords =
+      router.db.get("superCompanyManagementIdempotency").value() || [];
+    const completedRequest = idempotencyRecords.find(
+      (record) => record.key === idempotencyKey
+    );
+    if (completedRequest) {
+      if (completedRequest.payloadFingerprint !== payloadFingerprint) {
+        return sendError(
+          res,
+          409,
+          "IDEMPOTENCY_CONFLICT",
+          "This idempotency key was already used with a different request"
+        );
+      }
+      return res.json(clone(completedRequest.response));
+    }
+
+    const allowedActions = getCompanyActions(company);
+    const requiredAction =
+      company.operationalStatus === "active"
+        ? ACTIONS.SUSPEND_COMPANY
+        : ACTIONS.REACTIVATE_COMPANY;
+    if (!allowedActions.includes(requiredAction)) {
+      return sendError(
+        res,
+        403,
+        "ACTION_NOT_ALLOWED",
+        "The mock operator cannot change this company status"
+      );
+    }
+
+    const expectedTargetStatus =
+      company.operationalStatus === "active" ? "suspended" : "active";
+    if (body.targetStatus !== expectedTargetStatus) {
+      return sendError(
+        res,
+        409,
+        "INVALID_STATUS_TRANSITION",
+        "The requested company status transition is not available"
+      );
+    }
+    if (body.version !== company.version) {
+      return sendError(
+        res,
+        409,
+        "VERSION_CONFLICT",
+        "The company changed after it was loaded",
+        { currentVersion: company.version }
+      );
+    }
+
+    const statusImpact = getCompanyStatusImpact(company, allowedActions);
+    const timestamp = new Date().toISOString();
+    const suffix = randomUUID();
+    const correlationId = `cm-status-${suffix}`;
+    const nextCompany = {
+      ...clone(company),
+      operationalStatus: body.targetStatus,
+      updatedAt: timestamp,
+      version: company.version + 1,
+    };
+    const auditEvent = {
+      id: `audit-${suffix}`,
+      timestamp,
+      actor: {
+        id: String(req.get("x-mock-super-admin-id") || "super-admin-local"),
+        name: String(req.get("x-mock-super-admin-name") || "Local Super Admin"),
+      },
+      companyId: company.id,
+      actionType:
+        body.targetStatus === "suspended"
+          ? "company.status.suspended"
+          : "company.status.reactivated",
+      entityType: "company",
+      entityId: company.id,
+      before: redactAuditValue({
+        operationalStatus: company.operationalStatus,
+      }),
+      after: redactAuditValue({
+        operationalStatus: nextCompany.operationalStatus,
+      }),
+      reason,
+      result: "success",
+      correlationId,
+    };
+    const nextAllowedActions = getCompanyActions(nextCompany);
+    const response = {
+      message:
+        body.targetStatus === "suspended"
+          ? "Company suspended in local demo data"
+          : "Company reactivated in local demo data",
+      data: {
+        company: maskCompany(nextCompany, nextAllowedActions),
+        statusImpact,
+      },
+      auditEvent,
+      mockOnly: true,
+      warnings: [
+        {
+          code: "MOCK_ONLY_CHANGE",
+          message:
+            "Only the canonical Company Management company status and audit data were changed",
+        },
+      ],
+      correlationId,
+    };
+    const idempotencyRecord = {
+      id: `idempotency-${suffix}`,
+      key: idempotencyKey,
+      operation: "company.status.update",
+      companyId: company.id,
+      payloadFingerprint,
+      completedAt: timestamp,
+      response,
+    };
+
+    const previousState = router.db.getState();
+    const nextState = clone(previousState);
+    const companyIndex = nextState.superCompanyManagementCompanies.findIndex(
+      (item) => item.id === company.id
+    );
+    nextState.superCompanyManagementCompanies[companyIndex] = nextCompany;
+    nextState.superCompanyManagementAuditEvents.push(auditEvent);
+    nextState.superCompanyManagementIdempotency.push(idempotencyRecord);
+    try {
+      router.db.setState(nextState).write();
+    } catch {
+      router.db.setState(previousState);
+      return sendError(
+        res,
+        500,
+        "COMPANY_STATUS_UPDATE_FAILED",
+        "The company status could not be updated",
+        { correlationId }
+      );
+    }
+
+    return res.json(response);
   });
 
   server.patch(
