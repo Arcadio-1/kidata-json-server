@@ -90,8 +90,32 @@ const createState = (company) => ({
     {
       companyId: company.id,
       version: 5,
-      tariff: { tariffId: "basic", status: "active" },
+      tariff: {
+        tariffId: "basic",
+        status: "active",
+        effectiveAt: "2026-01-01T00:00:00.000Z",
+        renewsAt: null,
+      },
       addOns: [],
+      appliedPromotions: [],
+      pricing: {
+        currency: "EUR",
+        tariffMonthly: 5,
+        addOnsMonthly: 0,
+        discountMonthly: 0,
+        totalMonthly: 5,
+        vatRate: 19,
+        billedWithPlan: "Basic",
+      },
+      externalSync: {
+        billing: "notRequired",
+        lastAttemptAt: null,
+        message: null,
+      },
+      addOnEntitlements: {},
+      resourceUsage: { displays: 1, users: 1, storageUsedGb: 1 },
+      downgradeChecks: [],
+      offers: [],
     },
   ],
   superCompanyManagementApprovals: [
@@ -106,7 +130,40 @@ const createState = (company) => ({
   superCompanyManagementIdempotency: [],
   superCompanyManagementPermissionCatalog: [],
   superCompanyManagementPackageHistory: [],
-  tariff: { tariffsList: [] },
+  tariff: {
+    tariffsList: [
+      {
+        id: "free",
+        name: "Free",
+        price: "0",
+        details: {
+          activeDisplays: "1",
+          teamSize: "1",
+          cloudStorageIncluded: "1 GB",
+        },
+      },
+      {
+        id: "basic",
+        name: "Basic",
+        price: "5",
+        details: {
+          activeDisplays: "5",
+          teamSize: "5",
+          cloudStorageIncluded: "5 GB",
+        },
+      },
+      {
+        id: "plus",
+        name: "Plus",
+        price: "20",
+        details: {
+          activeDisplays: "any number",
+          teamSize: "20",
+          cloudStorageIncluded: "100 GB",
+        },
+      },
+    ],
+  },
   addOns: { addOns: [] },
   addOnBundles: [],
 });
@@ -148,6 +205,16 @@ const statusBody = (overrides = {}) => ({
   version: 3,
   reason: "Support review",
   idempotencyKey: "status-request-1",
+  ...overrides,
+});
+
+const tariffBody = (overrides = {}) => ({
+  targetTariffId: "plus",
+  effectiveAt: "2026-08-01T00:00:00.000Z",
+  reason: "Contracted plan adjustment",
+  salesReference: "SALE-100",
+  version: 5,
+  idempotencyKey: "tariff-request-1",
   ...overrides,
 });
 
@@ -450,4 +517,186 @@ test("a persistence failure restores the complete in-memory state", async () => 
       router.db.write = write;
     }
   });
+});
+
+test("tariff upgrades atomically recalculate totals and create one history and audit event", async () => {
+  const initialState = createState(createCompany());
+  const catalogsBefore = clone({
+    tariff: initialState.tariff,
+    addOns: initialState.addOns,
+    addOnBundles: initialState.addOnBundles,
+  });
+  const companyBefore = clone(initialState.superCompanyManagementCompanies[0]);
+
+  await withServer(initialState, async ({ baseUrl, router }) => {
+    const result = await requestJson(
+      baseUrl,
+      "/super/company-management/companies/company-test/subscription",
+      { method: "PATCH", body: JSON.stringify(tariffBody()) },
+    );
+    const state = router.db.getState();
+    const subscription = state.superCompanyManagementPackages[0];
+
+    assert.equal(result.status, 200);
+    assert.equal(result.body.mockOnly, true);
+    assert.equal(subscription.tariff.tariffId, "plus");
+    assert.equal(subscription.version, 6);
+    assert.equal(result.body.data.subscription.pricing.tariffMonthly, 20);
+    assert.equal(result.body.data.subscription.pricing.totalMonthly, 20);
+    assert.equal(state.superCompanyManagementPackageHistory.length, 1);
+    assert.equal(
+      state.superCompanyManagementPackageHistory[0].type,
+      "TARIFF_CHANGED",
+    );
+    assert.equal(state.superCompanyManagementAuditEvents.length, 1);
+    assert.equal(
+      state.superCompanyManagementAuditEvents[0].entityType,
+      "subscription",
+    );
+    assert.equal(state.superCompanyManagementIdempotency.length, 1);
+    assert.deepEqual(state.superCompanyManagementCompanies[0], companyBefore);
+    assert.deepEqual(
+      {
+        tariff: state.tariff,
+        addOns: state.addOns,
+        addOnBundles: state.addOnBundles,
+      },
+      catalogsBefore,
+    );
+  });
+});
+
+test("a server-valid tariff downgrade is permitted", async () => {
+  await withServer(
+    createState(createCompany()),
+    async ({ baseUrl, router }) => {
+      const result = await requestJson(
+        baseUrl,
+        "/super/company-management/companies/company-test/subscription",
+        {
+          method: "PATCH",
+          body: JSON.stringify(
+            tariffBody({
+              targetTariffId: "free",
+              idempotencyKey: "downgrade-1",
+            }),
+          ),
+        },
+      );
+
+      assert.equal(result.status, 200);
+      assert.equal(
+        router.db.getState().superCompanyManagementPackages[0].tariff.tariffId,
+        "free",
+      );
+    },
+  );
+});
+
+test("an unsafe tariff downgrade returns structured violations without partial state", async () => {
+  const initialState = createState(createCompany());
+  initialState.superCompanyManagementPackages[0].resourceUsage.displays = 2;
+
+  await withServer(initialState, async ({ baseUrl, router }) => {
+    const before = clone(router.db.getState());
+    const result = await requestJson(
+      baseUrl,
+      "/super/company-management/companies/company-test/subscription",
+      {
+        method: "PATCH",
+        body: JSON.stringify(
+          tariffBody({
+            targetTariffId: "free",
+            idempotencyKey: "downgrade-unsafe-1",
+          }),
+        ),
+      },
+    );
+
+    assert.equal(result.status, 422);
+    assert.equal(result.body.code, "TARIFF_LIMIT_VIOLATION");
+    assert.equal(result.body.violations[0].code, "DISPLAY_LIMIT_EXCEEDED");
+    assert.deepEqual(router.db.getState(), before);
+  });
+});
+
+test("tariff changes reject stale versions and unauthorized operators without writes", async () => {
+  await withServer(
+    createState(createCompany()),
+    async ({ baseUrl, router }) => {
+      const before = clone(router.db.getState());
+      const result = await requestJson(
+        baseUrl,
+        "/super/company-management/companies/company-test/subscription",
+        {
+          method: "PATCH",
+          body: JSON.stringify(
+            tariffBody({ version: 4, idempotencyKey: "stale-1" }),
+          ),
+        },
+      );
+      assert.equal(result.status, 409);
+      assert.equal(result.body.code, "VERSION_CONFLICT");
+      assert.deepEqual(router.db.getState(), before);
+    },
+  );
+
+  await withServer(
+    createState(createCompany({ permissionProfile: "restricted" })),
+    async ({ baseUrl, router }) => {
+      const before = clone(router.db.getState());
+      const result = await requestJson(
+        baseUrl,
+        "/super/company-management/companies/company-test/subscription",
+        { method: "PATCH", body: JSON.stringify(tariffBody()) },
+      );
+      assert.equal(result.status, 403);
+      assert.equal(result.body.code, "ACTION_NOT_ALLOWED");
+      assert.deepEqual(router.db.getState(), before);
+    },
+  );
+});
+
+test("identical tariff retries replay once and fingerprint conflicts do not write", async () => {
+  await withServer(
+    createState(createCompany()),
+    async ({ baseUrl, router }) => {
+      const originalWrite = router.db.write.bind(router.db);
+      let writeCount = 0;
+      router.db.write = () => {
+        writeCount += 1;
+        return originalWrite();
+      };
+      const request = { method: "PATCH", body: JSON.stringify(tariffBody()) };
+      const first = await requestJson(
+        baseUrl,
+        "/super/company-management/companies/company-test/subscription",
+        request,
+      );
+      const replay = await requestJson(
+        baseUrl,
+        "/super/company-management/companies/company-test/subscription",
+        request,
+      );
+      const conflict = await requestJson(
+        baseUrl,
+        "/super/company-management/companies/company-test/subscription",
+        {
+          method: "PATCH",
+          body: JSON.stringify(tariffBody({ reason: "Different reason" })),
+        },
+      );
+      const state = router.db.getState();
+
+      assert.equal(first.status, 200);
+      assert.equal(replay.status, 200);
+      assert.deepEqual(replay.body, first.body);
+      assert.equal(conflict.status, 409);
+      assert.equal(conflict.body.code, "IDEMPOTENCY_CONFLICT");
+      assert.equal(writeCount, 1);
+      assert.equal(state.superCompanyManagementPackages[0].version, 6);
+      assert.equal(state.superCompanyManagementPackageHistory.length, 1);
+      assert.equal(state.superCompanyManagementAuditEvents.length, 1);
+    },
+  );
 });

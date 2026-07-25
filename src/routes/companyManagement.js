@@ -558,6 +558,63 @@ const calculatePackageProjection = (db, packageRecord, companyActions) => {
   return output;
 };
 
+const getProjectedEntitlements = (tariff, packageRecord) => ({
+  ...(tariff?.details || {}),
+  ...(packageRecord.addOnEntitlements || {}),
+});
+
+const parseMockLimit = (value) => {
+  if (typeof value === "number" && Number.isFinite(value)) return value;
+  if (typeof value !== "string") return null;
+  const normalized = value.trim().toLowerCase();
+  if (normalized.includes("unlimited") || normalized.includes("any number")) {
+    return null;
+  }
+  const match = normalized.match(/\d+(?:\.\d+)?/);
+  return match ? Number(match[0]) : null;
+};
+
+const getTariffLimitViolations = (packageRecord, targetTariff, companyId) => {
+  const targetEntitlements = getProjectedEntitlements(
+    targetTariff,
+    packageRecord,
+  );
+  const checks = [
+    {
+      entitlement: "activeDisplays",
+      usage: "displays",
+      label: "displays",
+      code: "DISPLAY_LIMIT_EXCEEDED",
+    },
+    {
+      entitlement: "teamSize",
+      usage: "users",
+      label: "users",
+      code: "USER_LIMIT_EXCEEDED",
+    },
+    {
+      entitlement: "cloudStorageIncluded",
+      usage: "storageUsedGb",
+      label: "GB storage",
+      code: "STORAGE_LIMIT_EXCEEDED",
+    },
+  ];
+
+  return checks.flatMap(({ entitlement, usage, label, code }) => {
+    const limit = parseMockLimit(targetEntitlements[entitlement]);
+    const currentUsage = Number(packageRecord.resourceUsage?.[usage] || 0);
+    if (limit === null || currentUsage <= limit) return [];
+    return [
+      {
+        code,
+        message: `Company has ${currentUsage} ${label}; target allows ${limit}`,
+        entityType: "company",
+        entityId: companyId,
+      },
+    ];
+  });
+};
+
 module.exports = function registerCompanyManagementRoutes(server, router) {
   server.use(ROOT, express.json());
 
@@ -1232,6 +1289,288 @@ module.exports = function registerCompanyManagementRoutes(server, router) {
       router.db.get("superCompanyManagementPackageHistory").value() || []
     ).filter((entry) => entry.companyId === company.id);
     res.json(output);
+  });
+
+  server.patch(`${ROOT}/companies/:companyId/subscription`, (req, res) => {
+    const company = requireCompany(router.db, res, req.params.companyId);
+    if (!company) return;
+    if (!getCompanyActions(company).includes(ACTIONS.CHANGE_COMPANY_TARIFF)) {
+      return sendError(
+        res,
+        403,
+        "ACTION_NOT_ALLOWED",
+        "The mock operator cannot change this company tariff",
+      );
+    }
+
+    const body = isPlainObject(req.body) ? req.body : {};
+    const allowedFields = [
+      "targetTariffId",
+      "effectiveAt",
+      "reason",
+      "salesReference",
+      "version",
+      "idempotencyKey",
+    ];
+    const unknownFields = Object.keys(body).filter(
+      (field) => !allowedFields.includes(field),
+    );
+    const fieldErrors = {};
+    if (unknownFields.length > 0) {
+      for (const field of unknownFields) {
+        fieldErrors[field] = ["Unsupported field"];
+      }
+    }
+    const targetTariffId =
+      typeof body.targetTariffId === "string" ? body.targetTariffId.trim() : "";
+    const effectiveAt =
+      typeof body.effectiveAt === "string" ? body.effectiveAt.trim() : "";
+    const reason = typeof body.reason === "string" ? body.reason.trim() : "";
+    const salesReference =
+      typeof body.salesReference === "string" ? body.salesReference.trim() : "";
+    const idempotencyKey =
+      typeof body.idempotencyKey === "string" ? body.idempotencyKey.trim() : "";
+    if (!targetTariffId)
+      fieldErrors.targetTariffId = ["Target tariff is required"];
+    if (!effectiveAt || Number.isNaN(Date.parse(effectiveAt))) {
+      fieldErrors.effectiveAt = ["Effective date must be an ISO-8601 date"];
+    }
+    if (!reason) fieldErrors.reason = ["Reason is required"];
+    if (reason.length > 1000) {
+      fieldErrors.reason = ["Reason must be 1000 characters or fewer"];
+    }
+    if (salesReference.length > 1000) {
+      fieldErrors.salesReference = [
+        "Sales reference must be 1000 characters or fewer",
+      ];
+    }
+    if (!Number.isInteger(body.version) || body.version < 0) {
+      fieldErrors.version = ["Expected a non-negative integer"];
+    }
+    if (!idempotencyKey)
+      fieldErrors.idempotencyKey = ["Idempotency key is required"];
+    if (Object.keys(fieldErrors).length > 0) {
+      return sendError(
+        res,
+        400,
+        "VALIDATION_ERROR",
+        "The tariff change is invalid",
+        { fieldErrors },
+      );
+    }
+
+    const packageRecord = router.db
+      .get("superCompanyManagementPackages")
+      .find({ companyId: company.id })
+      .value();
+    if (!packageRecord) {
+      return sendError(
+        res,
+        404,
+        "SUBSCRIPTION_NOT_FOUND",
+        "Company subscription not found",
+      );
+    }
+
+    const payload = {
+      targetTariffId,
+      effectiveAt,
+      reason,
+      ...(salesReference ? { salesReference } : {}),
+      version: body.version,
+    };
+    const payloadFingerprint = createPayloadFingerprint(payload);
+    const idempotencyRecords =
+      router.db.get("superCompanyManagementIdempotency").value() || [];
+    const completedRequest = idempotencyRecords.find(
+      (record) => record.key === idempotencyKey,
+    );
+    if (completedRequest) {
+      if (
+        completedRequest.operation === "company.tariff.change" &&
+        completedRequest.companyId === company.id &&
+        completedRequest.payloadFingerprint === payloadFingerprint
+      ) {
+        return res.json(clone(completedRequest.response));
+      }
+      return sendError(
+        res,
+        409,
+        "IDEMPOTENCY_CONFLICT",
+        "This idempotency key was already used with a different request",
+      );
+    }
+
+    if (body.version !== packageRecord.version) {
+      return sendError(
+        res,
+        409,
+        "VERSION_CONFLICT",
+        "The company subscription changed after it was loaded",
+        { currentVersion: packageRecord.version },
+      );
+    }
+
+    const targetTariff = getTariffs(router.db).find(
+      (tariff) => tariff.id === targetTariffId,
+    );
+    if (!targetTariff) {
+      return sendError(
+        res,
+        422,
+        "UNKNOWN_TARIFF",
+        "The requested tariff is not available",
+        {
+          violations: [
+            {
+              code: "UNKNOWN_TARIFF",
+              message: "The requested tariff is not available",
+              entityType: "tariff",
+              entityId: targetTariffId,
+            },
+          ],
+        },
+      );
+    }
+    if (targetTariff.id === packageRecord.tariff.tariffId) {
+      return sendError(
+        res,
+        409,
+        "INVALID_TARIFF_TRANSITION",
+        "The target tariff is already assigned",
+      );
+    }
+
+    const violations = getTariffLimitViolations(
+      packageRecord,
+      targetTariff,
+      company.id,
+    );
+    if (violations.length > 0) {
+      return sendError(
+        res,
+        422,
+        "TARIFF_LIMIT_VIOLATION",
+        "The target tariff cannot support current resource usage",
+        { violations },
+      );
+    }
+
+    const timestamp = new Date().toISOString();
+    const suffix = `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
+    const correlationId = `cm-tariff-${suffix}`;
+    const nextPackage = {
+      ...clone(packageRecord),
+      version: packageRecord.version + 1,
+      tariff: {
+        ...clone(packageRecord.tariff),
+        tariffId: targetTariff.id,
+        effectiveAt: new Date(effectiveAt).toISOString(),
+      },
+      pricing: {
+        ...clone(packageRecord.pricing),
+        tariffMonthly: Number(targetTariff.price),
+        billedWithPlan: targetTariff.name,
+      },
+    };
+    const auditEvent = {
+      id: `audit-${suffix}`,
+      timestamp,
+      actor: {
+        id: String(req.get("x-mock-super-admin-id") || "super-admin-local"),
+        name: String(req.get("x-mock-super-admin-name") || "Local Super Admin"),
+      },
+      companyId: company.id,
+      actionType: "subscription.tariff.changed",
+      entityType: "subscription",
+      entityId: company.id,
+      before: redactAuditValue({
+        tariff: packageRecord.tariff,
+        pricing: packageRecord.pricing,
+        entitlements: getProjectedEntitlements(
+          getTariffs(router.db).find(
+            (tariff) => tariff.id === packageRecord.tariff.tariffId,
+          ),
+          packageRecord,
+        ),
+      }),
+      after: redactAuditValue({
+        tariff: nextPackage.tariff,
+        pricing: nextPackage.pricing,
+        entitlements: getProjectedEntitlements(targetTariff, nextPackage),
+      }),
+      reason,
+      result: "success",
+      correlationId,
+    };
+    const historyEvent = {
+      id: `package-history-${suffix}`,
+      companyId: company.id,
+      timestamp,
+      type: "TARIFF_CHANGED",
+      before: redactAuditValue({ tariffId: packageRecord.tariff.tariffId }),
+      after: redactAuditValue({ tariffId: targetTariff.id, effectiveAt }),
+      reason,
+      salesReference: salesReference || null,
+      auditEventId: auditEvent.id,
+    };
+    const nextState = clone(router.db.getState());
+    const packageIndex = nextState.superCompanyManagementPackages.findIndex(
+      (item) => item.companyId === company.id,
+    );
+    nextState.superCompanyManagementPackages[packageIndex] = nextPackage;
+    nextState.superCompanyManagementPackageHistory.push(historyEvent);
+    nextState.superCompanyManagementAuditEvents.push(auditEvent);
+    const projectedSubscription = calculatePackageProjection(
+      router.db,
+      nextPackage,
+      getCompanyActions(company),
+    );
+    projectedSubscription.history = [
+      ...(
+        router.db.get("superCompanyManagementPackageHistory").value() || []
+      ).filter((entry) => entry.companyId === company.id),
+      historyEvent,
+    ];
+    const response = {
+      message: "Company tariff changed in local demo data",
+      data: { subscription: projectedSubscription },
+      auditEvent,
+      mockOnly: true,
+      warnings: [
+        {
+          code: "MOCK_ONLY_CHANGE",
+          message:
+            "Only canonical Company Management package, history, audit, and idempotency data were changed",
+        },
+      ],
+      correlationId,
+    };
+    nextState.superCompanyManagementIdempotency.push({
+      id: `idempotency-${suffix}`,
+      key: idempotencyKey,
+      operation: "company.tariff.change",
+      companyId: company.id,
+      payloadFingerprint,
+      completedAt: timestamp,
+      response,
+    });
+
+    const previousState = router.db.getState();
+    try {
+      router.db.setState(nextState).write();
+    } catch {
+      router.db.setState(previousState);
+      return sendError(
+        res,
+        500,
+        "TARIFF_CHANGE_FAILED",
+        "The company tariff could not be changed",
+        { correlationId },
+      );
+    }
+
+    return res.json(response);
   });
 
   const approvalListHandler = (companyScoped) => (req, res) => {
