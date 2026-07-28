@@ -320,7 +320,7 @@ const requireViewAction = (company, action, res) => {
   return false;
 };
 
-const getRoleActions = (company, role) => {
+const getRoleActions = (company, role, assignedUserCount = role.assignedUserCount) => {
   const companyActions = getCompanyActions(company);
   const actions = [];
   if (companyActions.includes(ACTIONS.VIEW_COMPANY_ROLES)) {
@@ -340,7 +340,8 @@ const getRoleActions = (company, role) => {
   }
   if (
     role.isCustom &&
-    role.assignedUserCount === 0 &&
+    role.isMutable &&
+    assignedUserCount === 0 &&
     companyActions.includes(ACTIONS.DELETE_COMPANY_ROLE)
   ) {
     actions.push(ACTIONS.DELETE_COMPANY_ROLE);
@@ -427,6 +428,44 @@ const maskCompany = (company, allowedActions) => {
     output.medias.businessLicense = [];
     output.medias.idCard = [];
   }
+  return output;
+};
+
+const projectApprovalDocumentMetadata = (documents) =>
+  Array.isArray(documents)
+    ? documents.map((document) => ({
+        uid: String(document.uid || document.id || document.name || "document"),
+        name: String(document.name || "Unnamed document"),
+        type: String(document.type || "application/octet-stream"),
+        status: String(document.status || "unknown"),
+      }))
+    : [];
+
+const projectApprovalDocuments = (medias) => ({
+  businessLicense: projectApprovalDocumentMetadata(medias?.businessLicense),
+  idCard: projectApprovalDocumentMetadata(medias?.idCard),
+  logo: projectApprovalDocumentMetadata(medias?.logo),
+});
+
+const projectApproval = (company, approval) => {
+  const output = clone(approval);
+  if (output.registrationSnapshot) {
+    output.registrationSnapshot = {
+      ...output.registrationSnapshot,
+      profile: redactAuditValue(output.registrationSnapshot.profile || {}),
+      medias: projectApprovalDocuments(output.registrationSnapshot.medias),
+    };
+  }
+  if (output.currentInfo) {
+    output.currentInfo = redactAuditValue(output.currentInfo);
+  }
+  if (output.requestedInfo) {
+    output.requestedInfo = redactAuditValue(output.requestedInfo);
+  }
+  if (output.medias) {
+    output.medias = projectApprovalDocuments(output.medias);
+  }
+  output.allowedActions = getApprovalActions(company, approval);
   return output;
 };
 
@@ -1377,22 +1416,527 @@ module.exports = function registerCompanyManagementRoutes(server, router) {
     });
   });
 
+  const getMutableUser = (req, res, action) => {
+    const company = requireCompany(router.db, res, req.params.companyId);
+    if (!company) return null;
+    const user = router.db
+      .get("superCompanyManagementUsers")
+      .find({ id: req.params.userId, companyId: company.id })
+      .value();
+    if (!user) {
+      sendError(res, 404, "COMPANY_USER_NOT_FOUND", "Company user not found");
+      return null;
+    }
+    if (
+      !getCompanyActions(company).includes(action) ||
+      !(user.allowedActions || []).includes(action)
+    ) {
+      sendError(res, 403, "ACTION_NOT_ALLOWED", "The mock operator cannot change this company user");
+      return null;
+    }
+    return { company, user };
+  };
+
+  const parseUserMutationBody = (body, allowedFields, requiresReason) => {
+    const value = isPlainObject(body) ? body : {};
+    const fieldErrors = {};
+    for (const field of Object.keys(value)) {
+      if (!allowedFields.includes(field)) fieldErrors[field] = ["Unsupported field"];
+    }
+    const reason = typeof value.reason === "string" ? value.reason.trim() : "";
+    const idempotencyKey = typeof value.idempotencyKey === "string" ? value.idempotencyKey.trim() : "";
+    if (!Number.isInteger(value.version) || value.version < 0) {
+      fieldErrors.version = ["Expected a non-negative integer"];
+    }
+    if (requiresReason && !reason) fieldErrors.reason = ["Reason is required"];
+    if (reason.length > 1000) fieldErrors.reason = ["Reason must be 1000 characters or fewer"];
+    if (requiresReason && !idempotencyKey) {
+      fieldErrors.idempotencyKey = ["Idempotency key is required"];
+    }
+    return { value, reason, idempotencyKey, fieldErrors };
+  };
+
+  const getRoleAssignmentViolations = (db, company, role) => {
+    const violations = [];
+    if (role.companyId !== company.id) {
+      violations.push({ code: "ROLE_OUT_OF_SCOPE", message: "The role does not belong to this company", entityType: "companyRole", entityId: role.id });
+    }
+    if (!role.isAssignable) {
+      violations.push({ code: "ROLE_NOT_ASSIGNABLE", message: "The role is not assignable", entityType: "companyRole", entityId: role.id });
+    }
+    const packageRecord = db.get("superCompanyManagementPackages").find({ companyId: company.id }).value();
+    const tariff = packageRecord && getTariffs(db).find((item) => item.id === packageRecord.tariff.tariffId);
+    const entitlements = packageRecord ? getProjectedEntitlements(tariff, packageRecord) : {};
+    if (role.actionKeys.includes("MANAGE_ROLE") && entitlements.extendedUserRoles !== true) {
+      violations.push({ code: "ROLE_ENTITLEMENT_REQUIRED", message: "The current package does not permit this role", entityType: "companyRole", entityId: role.id });
+    }
+    return violations;
+  };
+
+  const commitUserMutation = ({
+    res,
+    company,
+    user,
+    nextUser,
+    nextRoles,
+    operation,
+    payload,
+    idempotencyKey,
+    reason,
+    actionType,
+    before,
+    after,
+    impact,
+  }) => {
+    const fingerprint = idempotencyKey ? createPayloadFingerprint(payload) : null;
+    if (idempotencyKey) {
+      const existing = (router.db.get("superCompanyManagementIdempotency").value() || []).find((record) => record.key === idempotencyKey);
+      if (existing) {
+        if (existing.operation === operation && existing.companyId === company.id && existing.payloadFingerprint === fingerprint) {
+          return res.json(clone(existing.response));
+        }
+        return sendError(res, 409, "IDEMPOTENCY_CONFLICT", "This idempotency key was already used with a different request");
+      }
+    }
+    if (payload.version !== user.version) {
+      return sendError(res, 409, "VERSION_CONFLICT", "The company user changed after it was loaded", { currentVersion: user.version });
+    }
+    const timestamp = new Date().toISOString();
+    const suffix = randomUUID();
+    const correlationId = `cm-user-${suffix}`;
+    const auditEvent = {
+      id: `audit-${suffix}`,
+      timestamp,
+      actor: { id: reqActorId(res.req), name: reqActorName(res.req) },
+      companyId: company.id,
+      actionType,
+      entityType: "companyUser",
+      entityId: user.id,
+      before: redactAuditValue(before),
+      after: redactAuditValue(after),
+      reason: reason || null,
+      result: "success",
+      correlationId,
+    };
+    const response = {
+      message: "Company user updated in local demo data",
+      data: { user: clone(nextUser), impact: impact || null },
+      auditEvent,
+      mockOnly: true,
+      warnings: [{ code: "MOCK_ONLY_CHANGE", message: "Only canonical Company Management user, role counts, audit, and idempotency data were changed" }],
+      correlationId,
+    };
+    const previousState = router.db.getState();
+    const nextState = clone(previousState);
+    const userIndex = nextState.superCompanyManagementUsers.findIndex((item) => item.id === user.id && item.companyId === company.id);
+    nextState.superCompanyManagementUsers[userIndex] = nextUser;
+    if (nextRoles) nextState.superCompanyManagementRoles = nextRoles;
+    const companyIndex = nextState.superCompanyManagementCompanies.findIndex((item) => item.id === company.id);
+    const activeUserCount = nextState.superCompanyManagementUsers.filter((item) => item.companyId === company.id && item.status === "active").length;
+    nextState.superCompanyManagementCompanies[companyIndex].summary.activeUserCount = activeUserCount;
+    nextState.superCompanyManagementCompanies[companyIndex].summary.generatedAt = timestamp;
+    nextState.superCompanyManagementAuditEvents.push(auditEvent);
+    if (idempotencyKey) {
+      nextState.superCompanyManagementIdempotency.push({ id: `idempotency-${suffix}`, key: idempotencyKey, operation, companyId: company.id, payloadFingerprint: fingerprint, completedAt: timestamp, response });
+    }
+    try {
+      router.db.setState(nextState).write();
+    } catch {
+      router.db.setState(previousState);
+      return sendError(res, 500, "COMPANY_USER_UPDATE_FAILED", "The company user could not be updated", { correlationId });
+    }
+    return res.json(response);
+  };
+
+  const reqActorId = (req) => String(req.get("x-mock-super-admin-id") || "mock-super-admin");
+  const reqActorName = (req) => String(req.get("x-mock-super-admin-name") || "Mock Super Admin");
+
+  server.patch(`${ROOT}/companies/:companyId/users/:userId`, (req, res) => {
+    const body = isPlainObject(req.body) ? req.body : {};
+    const changes = isPlainObject(body.changes) ? body.changes : null;
+    const hasRoleChange = Boolean(changes && Object.prototype.hasOwnProperty.call(changes, "roleId"));
+    const action = hasRoleChange ? ACTIONS.ASSIGN_COMPANY_USER_ROLE : ACTIONS.EDIT_COMPANY_USER;
+    const context = getMutableUser(req, res, action);
+    if (!context) return;
+    const parsed = parseUserMutationBody(body, hasRoleChange ? ["changes", "version", "reason", "idempotencyKey"] : ["changes", "version", "reason"], hasRoleChange);
+    if (!changes) parsed.fieldErrors.changes = ["Provide editable user changes"];
+    const editable = ["departmentId", "departmentTitle", "categoryId", "categoryTitle", "categoryColor", "roleId"];
+    if (changes) {
+      for (const field of Object.keys(changes)) {
+        if (!editable.includes(field)) parsed.fieldErrors[`changes.${field}`] = ["Field is not writable"];
+        if (field !== "roleId" && typeof changes[field] !== "string") parsed.fieldErrors[`changes.${field}`] = ["Expected a string"];
+      }
+      if (!hasRoleChange && Object.keys(changes).length === 0) parsed.fieldErrors.changes = ["Provide editable user changes"];
+    }
+    let assignedRole = null;
+    if (hasRoleChange) {
+      if (Object.keys(changes).length !== 1 || typeof changes.roleId !== "string" || !changes.roleId.trim()) {
+        parsed.fieldErrors["changes.roleId"] = ["Provide exactly one role ID for role assignment"];
+      } else {
+        assignedRole = router.db.get("superCompanyManagementRoles").find({ id: changes.roleId.trim() }).value();
+        if (!assignedRole) parsed.fieldErrors["changes.roleId"] = ["Unknown role"];
+        else if (assignedRole.id === context.user.roleId) parsed.fieldErrors["changes.roleId"] = ["Select a different role"];
+        else {
+          const violations = getRoleAssignmentViolations(router.db, context.company, assignedRole);
+          if (violations.length) return sendError(res, 422, "ROLE_ASSIGNMENT_NOT_ALLOWED", "The role cannot be assigned", { violations });
+        }
+      }
+    }
+    if (Object.keys(parsed.fieldErrors).length) return sendError(res, 400, "VALIDATION_ERROR", "The user update is invalid", { fieldErrors: parsed.fieldErrors });
+    const timestamp = new Date().toISOString();
+    const nextUser = { ...clone(context.user), ...changes, updatedAt: timestamp, version: context.user.version + 1 };
+    let nextRoles = null;
+    if (assignedRole) {
+      nextUser.role = { id: assignedRole.id, enName: assignedRole.enName, deName: assignedRole.deName };
+      nextRoles = clone(router.db.get("superCompanyManagementRoles").value() || []).map((role) => {
+        if (role.id === context.user.roleId) return { ...role, assignedUserCount: Math.max(0, role.assignedUserCount - 1) };
+        if (role.id === assignedRole.id) return { ...role, assignedUserCount: role.assignedUserCount + 1 };
+        return role;
+      });
+    }
+    return commitUserMutation({ res, ...context, nextUser, nextRoles, operation: hasRoleChange ? "company.user.role.assigned" : "company.user.edited", payload: { changes, version: parsed.value.version, reason: parsed.reason || undefined }, idempotencyKey: parsed.idempotencyKey || null, reason: parsed.reason, actionType: hasRoleChange ? "company.user.role.assigned" : "company.user.edited", before: hasRoleChange ? { roleId: context.user.roleId } : Object.fromEntries(Object.keys(changes).map((key) => [key, context.user[key]])), after: hasRoleChange ? { roleId: nextUser.roleId } : changes });
+  });
+
+  server.patch(`${ROOT}/companies/:companyId/users/:userId/status`, (req, res) => {
+    const context = getMutableUser(req, res, ACTIONS.SET_COMPANY_USER_STATUS);
+    if (!context) return;
+    const parsed = parseUserMutationBody(req.body, ["targetStatus", "version", "reason", "idempotencyKey"], true);
+    const targetStatus = typeof parsed.value.targetStatus === "string" ? parsed.value.targetStatus : "";
+    if (!["active", "paused"].includes(targetStatus)) parsed.fieldErrors.targetStatus = ["Expected active or paused"];
+    if (targetStatus === context.user.status) return sendError(res, 409, "INVALID_STATUS_TRANSITION", "The user is already in this status");
+    if (!(context.user.status === "active" && targetStatus === "paused") && !(context.user.status === "paused" && targetStatus === "active")) return sendError(res, 409, "INVALID_STATUS_TRANSITION", "Unsupported user status transition");
+    if (Object.keys(parsed.fieldErrors).length) return sendError(res, 400, "VALIDATION_ERROR", "The user status update is invalid", { fieldErrors: parsed.fieldErrors });
+    const nextUser = { ...clone(context.user), status: targetStatus, isSystemInactive: targetStatus === "paused", updatedAt: new Date().toISOString(), version: context.user.version + 1 };
+    return commitUserMutation({ res, ...context, nextUser, nextRoles: null, operation: "company.user.status.updated", payload: { targetStatus, version: parsed.value.version, reason: parsed.reason }, idempotencyKey: parsed.idempotencyKey, reason: parsed.reason, actionType: "company.user.status.updated", before: { status: context.user.status, isSystemInactive: context.user.isSystemInactive }, after: { status: nextUser.status, isSystemInactive: nextUser.isSystemInactive } });
+  });
+
+  server.post(`${ROOT}/companies/:companyId/users/:userId/2fa-reset`, (req, res) => {
+    const context = getMutableUser(req, res, ACTIONS.RESET_COMPANY_USER_TWO_FACTOR);
+    if (!context) return;
+    const parsed = parseUserMutationBody(req.body, ["version", "reason", "idempotencyKey"], true);
+    if (Object.keys(parsed.fieldErrors).length) return sendError(res, 400, "VALIDATION_ERROR", "The two-factor reset is invalid", { fieldErrors: parsed.fieldErrors });
+    const timestamp = new Date().toISOString();
+    const nextUser = { ...clone(context.user), twoFactor: { enabled: false, lastResetAt: timestamp }, updatedAt: timestamp, version: context.user.version + 1 };
+    const impact = { mockOnly: true, summary: "This local demo disables only the stored two-factor flag and records the reset time. Authentication, sessions, recovery data, and notifications are not modeled.", effects: [{ code: "TWO_FACTOR_STATE", affected: true, description: "Two-factor authentication is marked disabled." }, { code: "AUTHENTICATION_SESSIONS", affected: false, description: "Authentication and sessions are not modeled." }, { code: "NOTIFICATIONS", affected: false, description: "No notification is sent." }] };
+    return commitUserMutation({ res, ...context, nextUser, nextRoles: null, operation: "company.user.twoFactor.reset", payload: { version: parsed.value.version, reason: parsed.reason }, idempotencyKey: parsed.idempotencyKey, reason: parsed.reason, actionType: "company.user.twoFactor.reset", before: { twoFactor: context.user.twoFactor }, after: { twoFactor: nextUser.twoFactor }, impact });
+  });
+
+  const getRoleAssignedUserCount = (state, companyId, roleId) =>
+    (state.superCompanyManagementUsers || []).filter(
+      (user) => user.companyId === companyId && user.roleId === roleId
+    ).length;
+
+  const projectRole = (state, company, role) => {
+    const assignedUserCount = getRoleAssignedUserCount(
+      state,
+      company.id,
+      role.id
+    );
+    return {
+      ...clone(role),
+      assignedUserCount,
+      allowedActions: getRoleActions(company, role, assignedUserCount),
+    };
+  };
+
+  const getMutableRole = (req, res, action) => {
+    const company = requireCompany(router.db, res, req.params.companyId);
+    if (!company) return null;
+    if (!getCompanyActions(company).includes(action)) {
+      sendError(res, 403, "ACTION_NOT_ALLOWED", "The mock operator cannot change this company role");
+      return null;
+    }
+    const role = router.db
+      .get("superCompanyManagementRoles")
+      .find({ id: req.params.roleId, companyId: company.id })
+      .value();
+    if (!role) {
+      sendError(res, 404, "COMPANY_ROLE_NOT_FOUND", "Company role not found");
+      return null;
+    }
+    return { company, role };
+  };
+
+  const parseRoleMutationBody = (body, allowedFields, requiresReason) => {
+    const value = isPlainObject(body) ? body : {};
+    const fieldErrors = {};
+    for (const field of Object.keys(value)) {
+      if (!allowedFields.includes(field)) fieldErrors[field] = ["Unsupported field"];
+    }
+    const reason = typeof value.reason === "string" ? value.reason.trim() : "";
+    const idempotencyKey = typeof value.idempotencyKey === "string" ? value.idempotencyKey.trim() : "";
+    if (!Number.isInteger(value.version) || value.version < 0) {
+      fieldErrors.version = ["Expected a non-negative integer"];
+    }
+    if (requiresReason && !reason) fieldErrors.reason = ["Reason is required"];
+    if (reason.length > 1000) fieldErrors.reason = ["Reason must be 1000 characters or fewer"];
+    if (!idempotencyKey) fieldErrors.idempotencyKey = ["Idempotency key is required"];
+    return { value, reason, idempotencyKey, fieldErrors };
+  };
+
+  const respondRoleReplay = (res, company, operation, idempotencyKey, payload) => {
+    const existing = (router.db.get("superCompanyManagementIdempotency").value() || []).find(
+      (record) => record.key === idempotencyKey
+    );
+    if (!existing) return false;
+    if (
+      existing.operation === operation &&
+      existing.companyId === company.id &&
+      existing.payloadFingerprint === createPayloadFingerprint(payload)
+    ) {
+      res.json(clone(existing.response));
+      return true;
+    }
+    sendError(res, 409, "IDEMPOTENCY_CONFLICT", "This idempotency key was already used with a different request");
+    return true;
+  };
+
+  const parseRoleMetadata = (changes, fieldErrors) => {
+    const allowedFields = ["enName", "deName", "enDescription", "deDescription"];
+    if (!isPlainObject(changes)) {
+      fieldErrors.changes = ["Provide role metadata"];
+      return null;
+    }
+    for (const field of Object.keys(changes)) {
+      if (!allowedFields.includes(field)) fieldErrors[`changes.${field}`] = ["Field is not writable"];
+    }
+    const metadata = {};
+    for (const field of allowedFields) {
+      if (typeof changes[field] !== "string") {
+        fieldErrors[`changes.${field}`] = ["Expected a string"];
+      } else {
+        metadata[field] = changes[field].trim();
+      }
+    }
+    if (!metadata.enName) fieldErrors["changes.enName"] = ["English name is required"];
+    if (!metadata.deName) fieldErrors["changes.deName"] = ["German name is required"];
+    return metadata;
+  };
+
+  const getRolePermissionEntitlementViolations = (db, company, actionKeys) => {
+    const packageRecord = db
+      .get("superCompanyManagementPackages")
+      .find({ companyId: company.id })
+      .value();
+    const tariff = packageRecord && getTariffs(db).find((item) => item.id === packageRecord.tariff.tariffId);
+    const entitlements = packageRecord ? getProjectedEntitlements(tariff, packageRecord) : {};
+    if (actionKeys.includes("MANAGE_ROLE") && entitlements.extendedUserRoles !== true) {
+      return [{ code: "ROLE_ENTITLEMENT_REQUIRED", message: "The current package does not permit this role permission", entityType: "companyRole" }];
+    }
+    return [];
+  };
+
+  const commitRoleMutation = ({
+    req,
+    res,
+    company,
+    expectedVersion,
+    nextRoles,
+    nextUsers,
+    operation,
+    payload,
+    idempotencyKey,
+    reason,
+    actionType,
+    entityId,
+    before,
+    after,
+    deletedRoleId,
+  }) => {
+    const fingerprint = createPayloadFingerprint(payload);
+    const existing = (router.db.get("superCompanyManagementIdempotency").value() || []).find((record) => record.key === idempotencyKey);
+    if (existing) {
+      if (existing.operation === operation && existing.companyId === company.id && existing.payloadFingerprint === fingerprint) {
+        return res.json(clone(existing.response));
+      }
+      return sendError(res, 409, "IDEMPOTENCY_CONFLICT", "This idempotency key was already used with a different request");
+    }
+    if (payload.version !== expectedVersion) {
+      return sendError(res, 409, "VERSION_CONFLICT", "The company role changed after it was loaded", { currentVersion: expectedVersion });
+    }
+    const timestamp = new Date().toISOString();
+    const suffix = randomUUID();
+    const correlationId = `cm-role-${suffix}`;
+    const auditEvent = {
+      id: `audit-${suffix}`,
+      timestamp,
+      actor: { id: reqActorId(req), name: reqActorName(req) },
+      companyId: company.id,
+      actionType,
+      entityType: "companyRole",
+      entityId,
+      before: redactAuditValue(before),
+      after: redactAuditValue(after),
+      reason: reason || null,
+      result: "success",
+      correlationId,
+    };
+    const previousState = router.db.getState();
+    const nextState = clone(previousState);
+    nextState.superCompanyManagementRoles = nextRoles;
+    if (nextUsers) nextState.superCompanyManagementUsers = nextUsers;
+    const companyIndex = nextState.superCompanyManagementCompanies.findIndex((item) => item.id === company.id);
+    const companyRoles = nextState.superCompanyManagementRoles.filter((role) => role.companyId === company.id);
+    nextState.superCompanyManagementCompanies[companyIndex] = {
+      ...nextState.superCompanyManagementCompanies[companyIndex],
+      version: company.version + 1,
+      summary: {
+        ...nextState.superCompanyManagementCompanies[companyIndex].summary,
+        generatedAt: timestamp,
+        roleCount: companyRoles.length,
+        customRoleCount: companyRoles.filter((role) => role.isCustom).length,
+      },
+    };
+    const responseRole = deletedRoleId
+      ? undefined
+      : nextState.superCompanyManagementRoles.find((role) => role.id === entityId && role.companyId === company.id);
+    const response = {
+      message: "Company role updated in local demo data",
+      data: deletedRoleId
+        ? { deletedRoleId }
+        : { role: projectRole(nextState, company, responseRole) },
+      auditEvent,
+      mockOnly: true,
+      warnings: [{ code: "MOCK_ONLY_CHANGE", message: "Only canonical Company Management role, user projection, audit, and idempotency data were changed" }],
+      correlationId,
+    };
+    nextState.superCompanyManagementAuditEvents.push(auditEvent);
+    nextState.superCompanyManagementIdempotency.push({ id: `idempotency-${suffix}`, key: idempotencyKey, operation, companyId: company.id, payloadFingerprint: fingerprint, completedAt: timestamp, response });
+    try {
+      router.db.setState(nextState).write();
+    } catch {
+      router.db.setState(previousState);
+      return sendError(res, 500, "COMPANY_ROLE_UPDATE_FAILED", "The company role could not be updated", { correlationId });
+    }
+    return res.json(response);
+  };
+
+  server.post(`${ROOT}/companies/:companyId/roles`, (req, res) => {
+    const company = requireCompany(router.db, res, req.params.companyId);
+    if (!company) return;
+    if (!getCompanyActions(company).includes(ACTIONS.CREATE_COMPANY_ROLE)) {
+      return sendError(res, 403, "ACTION_NOT_ALLOWED", "The mock operator cannot create this company role");
+    }
+    const parsed = parseRoleMutationBody(req.body, ["changes", "version", "reason", "idempotencyKey"], false);
+    const metadata = parseRoleMetadata(parsed.value.changes, parsed.fieldErrors);
+    if (Object.keys(parsed.fieldErrors).length) return sendError(res, 400, "VALIDATION_ERROR", "The role creation is invalid", { fieldErrors: parsed.fieldErrors });
+    const timestamp = new Date().toISOString();
+    const id = `role-${randomUUID()}`;
+    const nextRole = { id, companyId: company.id, key: `custom-${id}`, ...metadata, isSystem: false, isCustom: true, isMutable: true, isAssignable: true, assignedUserCount: 0, actionKeys: [], version: 1, createdAt: timestamp, updatedAt: timestamp };
+    const nextRoles = [...clone(router.db.get("superCompanyManagementRoles").value() || []), nextRole];
+    return commitRoleMutation({ req, res, company, expectedVersion: company.version, nextRoles, nextUsers: null, operation: "company.role.created", payload: { changes: metadata, version: parsed.value.version, reason: parsed.reason || undefined }, idempotencyKey: parsed.idempotencyKey, reason: parsed.reason, actionType: "company.role.created", entityId: id, before: null, after: metadata });
+  });
+
+  server.post(`${ROOT}/companies/:companyId/roles/:roleId/duplicate`, (req, res) => {
+    const context = getMutableRole(req, res, ACTIONS.DUPLICATE_COMPANY_ROLE);
+    if (!context) return;
+    const parsed = parseRoleMutationBody(req.body, ["changes", "version", "reason", "idempotencyKey"], false);
+    const metadata = parseRoleMetadata(parsed.value.changes, parsed.fieldErrors);
+    const violations = getRolePermissionEntitlementViolations(router.db, context.company, context.role.actionKeys || []);
+    if (violations.length) return sendError(res, 422, "ROLE_ENTITLEMENT_REQUIRED", "The role cannot be duplicated", { violations });
+    if (Object.keys(parsed.fieldErrors).length) return sendError(res, 400, "VALIDATION_ERROR", "The role duplication is invalid", { fieldErrors: parsed.fieldErrors });
+    const timestamp = new Date().toISOString();
+    const id = `role-${randomUUID()}`;
+    const nextRole = { id, companyId: context.company.id, key: `custom-${id}`, ...metadata, isSystem: false, isCustom: true, isMutable: true, isAssignable: true, assignedUserCount: 0, actionKeys: clone(context.role.actionKeys || []), version: 1, createdAt: timestamp, updatedAt: timestamp };
+    const nextRoles = [...clone(router.db.get("superCompanyManagementRoles").value() || []), nextRole];
+    return commitRoleMutation({ req, res, company: context.company, expectedVersion: context.role.version, nextRoles, nextUsers: null, operation: "company.role.duplicated", payload: { roleId: context.role.id, changes: metadata, version: parsed.value.version, reason: parsed.reason || undefined }, idempotencyKey: parsed.idempotencyKey, reason: parsed.reason, actionType: "company.role.duplicated", entityId: id, before: { roleId: context.role.id }, after: { roleId: id, actionKeys: nextRole.actionKeys } });
+  });
+
+  server.patch(`${ROOT}/companies/:companyId/roles/:roleId`, (req, res) => {
+    const context = getMutableRole(req, res, ACTIONS.EDIT_COMPANY_ROLE);
+    if (!context) return;
+    if (context.role.isSystem || !context.role.isMutable) return sendError(res, 409, "ROLE_IMMUTABLE", "This company role cannot be edited");
+    const parsed = parseRoleMutationBody(req.body, ["changes", "version", "reason", "idempotencyKey"], false);
+    const metadata = parseRoleMetadata(parsed.value.changes, parsed.fieldErrors);
+    if (Object.keys(parsed.fieldErrors).length) return sendError(res, 400, "VALIDATION_ERROR", "The role update is invalid", { fieldErrors: parsed.fieldErrors });
+    const timestamp = new Date().toISOString();
+    const nextRole = { ...clone(context.role), ...metadata, updatedAt: timestamp, version: context.role.version + 1 };
+    const nextRoles = clone(router.db.get("superCompanyManagementRoles").value() || []).map((role) => role.id === context.role.id && role.companyId === context.company.id ? nextRole : role);
+    const nextUsers = clone(router.db.get("superCompanyManagementUsers").value() || []).map((user) => user.companyId === context.company.id && user.roleId === context.role.id ? { ...user, role: { id: nextRole.id, enName: nextRole.enName, deName: nextRole.deName } } : user);
+    return commitRoleMutation({ req, res, company: context.company, expectedVersion: context.role.version, nextRoles, nextUsers, operation: "company.role.edited", payload: { changes: metadata, version: parsed.value.version, reason: parsed.reason || undefined }, idempotencyKey: parsed.idempotencyKey, reason: parsed.reason, actionType: "company.role.edited", entityId: context.role.id, before: { enName: context.role.enName, deName: context.role.deName, enDescription: context.role.enDescription, deDescription: context.role.deDescription }, after: metadata });
+  });
+
+  server.patch(`${ROOT}/companies/:companyId/roles/:roleId/permissions`, (req, res) => {
+    const context = getMutableRole(req, res, ACTIONS.SET_COMPANY_ROLE_PERMISSIONS);
+    if (!context) return;
+    if (context.role.isSystem || !context.role.isMutable) return sendError(res, 409, "ROLE_IMMUTABLE", "This company role permissions cannot be edited");
+    const parsed = parseRoleMutationBody(req.body, ["actions", "version", "reason", "idempotencyKey"], true);
+    const catalogKeys = new Set((router.db.get("superCompanyManagementPermissionCatalog").value() || []).flatMap((group) => (group.actions || []).map((action) => action.actionKey)));
+    if (!Array.isArray(parsed.value.actions)) parsed.fieldErrors.actions = ["Expected permission actions"];
+    const seen = new Set();
+    const actionKeys = [];
+    if (Array.isArray(parsed.value.actions)) {
+      parsed.value.actions.forEach((entry, index) => {
+        if (!isPlainObject(entry) || Object.keys(entry).some((field) => !["actionKey", "access"].includes(field))) {
+          parsed.fieldErrors[`actions.${index}`] = ["Invalid permission action"];
+          return;
+        }
+        if (typeof entry.actionKey !== "string" || !catalogKeys.has(entry.actionKey)) {
+          parsed.fieldErrors[`actions.${index}.actionKey`] = ["Unknown permission key"];
+          return;
+        }
+        if (typeof entry.access !== "boolean") {
+          parsed.fieldErrors[`actions.${index}.access`] = ["Expected a boolean"];
+          return;
+        }
+        if (seen.has(entry.actionKey)) {
+          parsed.fieldErrors[`actions.${index}.actionKey`] = ["Duplicate permission key"];
+          return;
+        }
+        seen.add(entry.actionKey);
+        if (entry.access) actionKeys.push(entry.actionKey);
+      });
+    }
+    const violations = getRolePermissionEntitlementViolations(router.db, context.company, actionKeys);
+    if (violations.length) return sendError(res, 422, "ROLE_ENTITLEMENT_REQUIRED", "The role permissions are not permitted", { violations });
+    if (Object.keys(parsed.fieldErrors).length) return sendError(res, 400, "VALIDATION_ERROR", "The role permissions are invalid", { fieldErrors: parsed.fieldErrors });
+    const timestamp = new Date().toISOString();
+    const nextRole = { ...clone(context.role), actionKeys, updatedAt: timestamp, version: context.role.version + 1 };
+    const nextRoles = clone(router.db.get("superCompanyManagementRoles").value() || []).map((role) => role.id === context.role.id && role.companyId === context.company.id ? nextRole : role);
+    return commitRoleMutation({ req, res, company: context.company, expectedVersion: context.role.version, nextRoles, nextUsers: null, operation: "company.role.permissions.replaced", payload: { actions: parsed.value.actions, version: parsed.value.version, reason: parsed.reason }, idempotencyKey: parsed.idempotencyKey, reason: parsed.reason, actionType: "company.role.permissions.replaced", entityId: context.role.id, before: { actionKeys: context.role.actionKeys }, after: { actionKeys } });
+  });
+
+  server.delete(`${ROOT}/companies/:companyId/roles/:roleId`, (req, res) => {
+    const company = requireCompany(router.db, res, req.params.companyId);
+    if (!company) return;
+    if (!getCompanyActions(company).includes(ACTIONS.DELETE_COMPANY_ROLE)) {
+      return sendError(res, 403, "ACTION_NOT_ALLOWED", "The mock operator cannot delete this company role");
+    }
+    const parsed = parseRoleMutationBody(req.body, ["reason", "version", "idempotencyKey"], true);
+    if (Object.keys(parsed.fieldErrors).length) return sendError(res, 400, "VALIDATION_ERROR", "The role deletion is invalid", { fieldErrors: parsed.fieldErrors });
+    const payload = { version: parsed.value.version, reason: parsed.reason };
+    if (respondRoleReplay(res, company, "company.role.deleted", parsed.idempotencyKey, payload)) return;
+    const role = router.db
+      .get("superCompanyManagementRoles")
+      .find({ id: req.params.roleId, companyId: company.id })
+      .value();
+    if (!role) return sendError(res, 404, "COMPANY_ROLE_NOT_FOUND", "Company role not found");
+    if (role.isSystem || !role.isCustom || !role.isMutable) return sendError(res, 409, "ROLE_NOT_DELETABLE", "This company role cannot be deleted");
+    const affectedUsers = (router.db.get("superCompanyManagementUsers").value() || []).filter((user) => user.companyId === company.id && user.roleId === role.id).map((user) => user.id);
+    if (affectedUsers.length) return sendError(res, 422, "ROLE_ASSIGNED_USERS", "Reassign affected users before deleting this role", { affectedUserCount: affectedUsers.length, affectedUserIds: affectedUsers });
+    const nextRoles = clone(router.db.get("superCompanyManagementRoles").value() || []).filter((item) => !(item.id === role.id && item.companyId === company.id));
+    return commitRoleMutation({ req, res, company, expectedVersion: role.version, nextRoles, nextUsers: null, operation: "company.role.deleted", payload, idempotencyKey: parsed.idempotencyKey, reason: parsed.reason, actionType: "company.role.deleted", entityId: role.id, before: { id: role.id, actionKeys: role.actionKeys }, after: null, deletedRoleId: role.id });
+  });
+
   server.get(`${ROOT}/companies/:companyId/roles`, (req, res) => {
     const company = requireCompany(router.db, res, req.params.companyId);
     if (
       !company ||
-      !requireViewAction(company, ACTIONS.VIEW_COMPANY_ROLES, res)
+      !getCompanyActions(company).some((action) =>
+        [ACTIONS.VIEW_COMPANY_ROLES, ACTIONS.ASSIGN_COMPANY_USER_ROLE].includes(
+          action
+        )
+      )
     ) {
+      if (company) {
+        sendError(res, 403, "ACTION_NOT_ALLOWED", "The mock operator cannot view company roles");
+      }
       return;
     }
-    const roles = (
-      router.db.get("superCompanyManagementRoles").value() || []
-    )
+    const state = router.db.getState();
+    const roles = (state.superCompanyManagementRoles || [])
       .filter((role) => role.companyId === company.id)
-      .map((role) => ({
-        ...clone(role),
-        allowedActions: getRoleActions(company, role),
-      }));
+      .map((role) => projectRole(state, company, role));
     res.json(roles);
   });
 
@@ -1416,10 +1960,10 @@ module.exports = function registerCompanyManagementRoutes(server, router) {
         "Company role not found"
       );
     }
-    const allowedActions = getRoleActions(company, role);
+    const projectedRole = projectRole(router.db.getState(), company, role);
     res.json({
-      allowedActions,
-      data: { ...clone(role), allowedActions },
+      allowedActions: projectedRole.allowedActions,
+      data: projectedRole,
     });
   });
 
@@ -2033,12 +2577,9 @@ module.exports = function registerCompanyManagementRoutes(server, router) {
     }
     items = items.map((item) => {
       const itemCompany = getCompany(router.db, item.companyId);
-      return {
-        ...item,
-        allowedActions: itemCompany
-          ? getApprovalActions(itemCompany, item)
-          : [],
-      };
+      return itemCompany
+        ? projectApproval(itemCompany, item)
+        : { ...clone(item), allowedActions: [] };
     });
     items = items.map(
       ({
@@ -2086,11 +2627,240 @@ module.exports = function registerCompanyManagementRoutes(server, router) {
           "Approval not found"
         );
       }
-      const allowedActions = getApprovalActions(company, approval);
+      const projectedApproval = projectApproval(company, approval);
       res.json({
-        allowedActions,
-        data: { ...clone(approval), allowedActions },
+        allowedActions: projectedApproval.allowedActions,
+        data: projectedApproval,
       });
+    }
+  );
+
+  const parseApprovalDecisionBody = (body) => {
+    const value = isPlainObject(body) ? body : {};
+    const fieldErrors = {};
+    const allowedFields = ["status", "message", "version", "idempotencyKey"];
+    for (const field of Object.keys(value)) {
+      if (!allowedFields.includes(field)) {
+        fieldErrors[field] = ["Unsupported field"];
+      }
+    }
+    const status = value.status;
+    const message = typeof value.message === "string" ? value.message.trim() : "";
+    const idempotencyKey =
+      typeof value.idempotencyKey === "string" ? value.idempotencyKey.trim() : "";
+    if (!["APPROVED", "ON_CORRECTION", "REJECTED"].includes(status)) {
+      fieldErrors.status = ["Expected APPROVED, ON_CORRECTION, or REJECTED"];
+    }
+    if (!Number.isInteger(value.version) || value.version < 0) {
+      fieldErrors.version = ["Expected a non-negative integer"];
+    }
+    if ((status === "ON_CORRECTION" || status === "REJECTED") && !message) {
+      fieldErrors.message = ["A message is required for this decision"];
+    }
+    if (message.length > 1000) {
+      fieldErrors.message = ["Message must be 1000 characters or fewer"];
+    }
+    if (!idempotencyKey) {
+      fieldErrors.idempotencyKey = ["Idempotency key is required"];
+    }
+    return { value, status, message, idempotencyKey, fieldErrors };
+  };
+
+  server.patch(
+    `${ROOT}/companies/:companyId/approvals/:approvalId/decision`,
+    (req, res) => {
+      const company = requireCompany(router.db, res, req.params.companyId);
+      if (!company) return;
+      const approval = router.db
+        .get("superCompanyManagementApprovals")
+        .find({ id: req.params.approvalId, companyId: company.id })
+        .value();
+      if (!approval) {
+        return sendError(
+          res,
+          404,
+          "APPROVAL_NOT_FOUND",
+          "Approval not found"
+        );
+      }
+      if (!getCompanyActions(company).includes(ACTIONS.DECIDE_COMPANY_APPROVAL)) {
+        return sendError(
+          res,
+          403,
+          "ACTION_NOT_ALLOWED",
+          "The mock operator cannot decide this approval"
+        );
+      }
+      const parsed = parseApprovalDecisionBody(req.body);
+      if (Object.keys(parsed.fieldErrors).length > 0) {
+        return sendError(
+          res,
+          400,
+          "VALIDATION_ERROR",
+          "The approval decision is invalid",
+          { fieldErrors: parsed.fieldErrors }
+        );
+      }
+      const payload = {
+        status: parsed.status,
+        message: parsed.message || undefined,
+        version: parsed.value.version,
+      };
+      const fingerprint = createPayloadFingerprint(payload);
+      const existing = (
+        router.db.get("superCompanyManagementIdempotency").value() || []
+      ).find((record) => record.key === parsed.idempotencyKey);
+      if (existing) {
+        if (
+          existing.operation === "company.approval.decided" &&
+          existing.companyId === company.id &&
+          existing.payloadFingerprint === fingerprint
+        ) {
+          return res.json(clone(existing.response));
+        }
+        return sendError(
+          res,
+          409,
+          "IDEMPOTENCY_CONFLICT",
+          "This idempotency key was already used with a different request"
+        );
+      }
+      if (!["PENDING", "ON_CORRECTION"].includes(approval.status)) {
+        return sendError(
+          res,
+          409,
+          "INVALID_STATUS_TRANSITION",
+          "This approval is already final"
+        );
+      }
+      if (parsed.value.version !== approval.version) {
+        return sendError(
+          res,
+          409,
+          "VERSION_CONFLICT",
+          "The approval changed after it was loaded",
+          { currentVersion: approval.version }
+        );
+      }
+
+      const timestamp = new Date().toISOString();
+      const suffix = randomUUID();
+      const correlationId = `cm-approval-${suffix}`;
+      const actor = { id: reqActorId(req), name: reqActorName(req) };
+      const nextApproval = {
+        ...clone(approval),
+        status: parsed.status,
+        updatedAt: timestamp,
+        version: approval.version + 1,
+        history: [
+          ...(approval.history || []),
+          {
+            id: `approval-history-${suffix}`,
+            status: parsed.status,
+            message: parsed.message || null,
+            actor,
+            timestamp,
+          },
+        ],
+      };
+      const acceptedProfileChanges =
+        parsed.status !== "APPROVED"
+          ? null
+          : approval.type === "REGISTRATION"
+            ? approval.registrationSnapshot?.profile || {}
+            : approval.requestedInfo || {};
+      const nextCompany = {
+        ...clone(company),
+        ...(parsed.status === "APPROVED" && approval.type === "REGISTRATION"
+          ? { registrationStatus: "approved" }
+          : {}),
+        profile:
+          parsed.status === "APPROVED"
+            ? mergeProfileChanges(company.profile, acceptedProfileChanges)
+            : clone(company.profile),
+        updatedAt: timestamp,
+        version: company.version + 1,
+      };
+      const auditEvent = {
+        id: `audit-${suffix}`,
+        timestamp,
+        actor,
+        companyId: company.id,
+        actionType: `company.approval.${parsed.status.toLowerCase()}`,
+        entityType: "approval",
+        entityId: approval.id,
+        before: redactAuditValue({ status: approval.status }),
+        after: redactAuditValue({
+          status: nextApproval.status,
+          acceptedProfileChanges,
+        }),
+        reason: parsed.message || null,
+        result: "success",
+        correlationId,
+      };
+      const previousState = router.db.getState();
+      const nextState = clone(previousState);
+      const approvalIndex = nextState.superCompanyManagementApprovals.findIndex(
+        (item) => item.id === approval.id && item.companyId === company.id
+      );
+      const companyIndex = nextState.superCompanyManagementCompanies.findIndex(
+        (item) => item.id === company.id
+      );
+      nextState.superCompanyManagementApprovals[approvalIndex] = nextApproval;
+      const pendingApprovalCount = nextState.superCompanyManagementApprovals.filter(
+        (item) =>
+          item.companyId === company.id &&
+          ["PENDING", "ON_CORRECTION"].includes(item.status)
+      ).length;
+      nextState.superCompanyManagementCompanies[companyIndex] = {
+        ...nextCompany,
+        summary: {
+          ...nextCompany.summary,
+          generatedAt: timestamp,
+          pendingApprovalCount,
+        },
+      };
+      const projectedApproval = projectApproval(
+        nextState.superCompanyManagementCompanies[companyIndex],
+        nextApproval
+      );
+      const response = {
+        message: "Approval decision recorded in local demo data",
+        data: { approval: projectedApproval },
+        auditEvent,
+        mockOnly: true,
+        warnings: [
+          {
+            code: "MOCK_ONLY_CHANGE",
+            message:
+              "Only canonical Company Management approval, company summary, audit, and idempotency data were changed",
+          },
+        ],
+        correlationId,
+      };
+      nextState.superCompanyManagementAuditEvents.push(auditEvent);
+      nextState.superCompanyManagementIdempotency.push({
+        id: `idempotency-${suffix}`,
+        key: parsed.idempotencyKey,
+        operation: "company.approval.decided",
+        companyId: company.id,
+        payloadFingerprint: fingerprint,
+        completedAt: timestamp,
+        response,
+      });
+      try {
+        router.db.setState(nextState).write();
+      } catch {
+        router.db.setState(previousState);
+        return sendError(
+          res,
+          500,
+          "COMPANY_APPROVAL_DECISION_FAILED",
+          "The approval decision could not be recorded",
+          { correlationId }
+        );
+      }
+      return res.json(response);
     }
   );
 

@@ -49,14 +49,14 @@ const createCompany = (overrides = {}) => ({
     generatedAt: "2026-01-02T00:00:00.000Z",
     userCount: 1,
     activeUserCount: 1,
-    roleCount: 1,
-    customRoleCount: 0,
+    roleCount: 5,
+    customRoleCount: 4,
     displayCount: 1,
     mediaCount: 1,
     playlistCount: 1,
     scheduleCount: 1,
     partnerCount: 0,
-    pendingApprovalCount: 0,
+    pendingApprovalCount: 2,
     storageUsage: {
       images: 1,
       videos: 0,
@@ -74,16 +74,129 @@ const createState = (company) => ({
     {
       id: "user-test",
       companyId: company.id,
+      onlineId: "USR-TEST",
+      username: "test.user",
+      firstName: "Test",
+      lastName: "User",
+      email: "user@example.test",
+      departmentId: "support",
+      departmentTitle: "Support",
+      categoryId: "operations",
+      categoryTitle: "Operations",
+      categoryColor: "#2563eb",
+      roleId: "role-test",
+      role: { id: "role-test", enName: "Viewer", deName: "Betrachter" },
       status: "active",
+      isSystemInactive: false,
+      twoFactor: { enabled: true, lastResetAt: null },
+      updatedAt: "2026-01-02T00:00:00.000Z",
       version: 2,
+      allowedActions: [
+        "EDIT_COMPANY_USER",
+        "ASSIGN_COMPANY_USER_ROLE",
+        "SET_COMPANY_USER_STATUS",
+        "RESET_COMPANY_USER_TWO_FACTOR",
+      ],
     },
   ],
   superCompanyManagementRoles: [
     {
       id: "role-test",
       companyId: company.id,
+      key: "custom-viewer",
+      enName: "Viewer",
+      deName: "Betrachter",
+      enDescription: "Can view company media",
+      deDescription: "Kann Unternehmensmedien ansehen",
+      isSystem: false,
+      isCustom: true,
+      isMutable: true,
+      isAssignable: true,
+      assignedUserCount: 1,
       actionKeys: ["VIEW_MEDIA"],
       version: 4,
+    },
+    {
+      id: "role-next",
+      companyId: company.id,
+      key: "custom-editor",
+      enName: "Editor",
+      deName: "Redakteur",
+      enDescription: "Can edit content",
+      deDescription: "Kann Inhalte bearbeiten",
+      isSystem: false,
+      isCustom: true,
+      isMutable: true,
+      isAssignable: true,
+      assignedUserCount: 0,
+      actionKeys: ["VIEW_MEDIA"],
+      version: 1,
+    },
+    {
+      id: "role-locked",
+      companyId: company.id,
+      key: "custom-locked",
+      enName: "Locked",
+      deName: "Gesperrt",
+      enDescription: "Not assignable",
+      deDescription: "Nicht zuweisbar",
+      isSystem: false,
+      isCustom: true,
+      isMutable: true,
+      isAssignable: false,
+      assignedUserCount: 0,
+      actionKeys: ["VIEW_MEDIA"],
+      version: 1,
+    },
+    {
+      id: "role-entitled",
+      companyId: company.id,
+      key: "custom-manager",
+      enName: "Role manager",
+      deName: "Rollenverwaltung",
+      enDescription: "Requires extended roles",
+      deDescription: "Erfordert erweiterte Rollen",
+      isSystem: false,
+      isCustom: true,
+      isMutable: true,
+      isAssignable: true,
+      assignedUserCount: 0,
+      actionKeys: ["MANAGE_ROLE"],
+      version: 1,
+    },
+    {
+      id: "role-other-company",
+      companyId: "company-other",
+      key: "other-role",
+      enName: "Other company role",
+      deName: "Andere Unternehmensrolle",
+      enDescription: "Other company role",
+      deDescription: "Andere Unternehmensrolle",
+      isSystem: false,
+      isCustom: true,
+      isMutable: true,
+      isAssignable: true,
+      assignedUserCount: 0,
+      actionKeys: ["VIEW_MEDIA"],
+      version: 1,
+    },
+    {
+      id: "role-system",
+      companyId: company.id,
+      key: "system-owner",
+      enName: "Owner",
+      deName: "Eigentümer",
+      enDescription: "Built-in owner role",
+      deDescription: "Integrierte Eigentümerrolle",
+      isSystem: true,
+      isCustom: false,
+      isMutable: false,
+      isAssignable: true,
+      assignedUserCount: 0,
+      actionKeys: ["VIEW_MEDIA"],
+      version: 1,
+      createdAt: "2026-01-01T00:00:00.000Z",
+      updatedAt: "2026-01-01T00:00:00.000Z",
     },
   ],
   superCompanyManagementPackages: [
@@ -122,13 +235,111 @@ const createState = (company) => ({
     {
       id: "approval-test",
       companyId: company.id,
+      companyName: "Test Company GmbH",
+      companyOnlineId: company.onlineId,
+      type: "REGISTRATION",
       status: "PENDING",
+      isSeen: false,
+      requester: {
+        id: "requester-test",
+        name: "Test Requester",
+        email: "requester@example.test",
+      },
+      submittedAt: "2026-01-03T00:00:00.000Z",
+      updatedAt: "2026-01-03T00:00:00.000Z",
+      shortSummary: "New company registration",
+      registrationSnapshot: {
+        profile: {
+          addressData: { companyName: "Test Company GmbH", city: "Berlin" },
+          paymentInformation: { IBAN: "DE0000000000" },
+        },
+        medias: {
+          businessLicense: [
+            {
+              uid: "license-test",
+              name: "business-license.pdf",
+              type: "application/pdf",
+              status: "done",
+              url: "https://private.test/license.pdf",
+            },
+          ],
+          idCard: [],
+          logo: [],
+        },
+      },
+      history: [],
+      version: 1,
+    },
+    {
+      id: "approval-profile",
+      companyId: company.id,
+      companyName: "Test Company GmbH",
+      companyOnlineId: company.onlineId,
+      type: "PROFILE_EDIT",
+      status: "PENDING",
+      isSeen: false,
+      requester: {
+        id: "requester-test",
+        name: "Test Requester",
+        email: "requester@example.test",
+      },
+      submittedAt: "2026-01-04T00:00:00.000Z",
+      updatedAt: "2026-01-04T00:00:00.000Z",
+      shortSummary: "Company name correction",
+      currentInfo: { addressData: { companyName: "Test Company GmbH" } },
+      requestedInfo: { addressData: { companyName: "Test Company AG" } },
+      medias: {
+        businessLicense: [],
+        idCard: [],
+        logo: [],
+      },
+      history: [],
+      version: 2,
+    },
+    {
+      id: "approval-other-company",
+      companyId: "company-other",
+      companyName: "Other Company",
+      companyOnlineId: "CMP-OTHER",
+      type: "PROFILE_EDIT",
+      status: "PENDING",
+      isSeen: false,
+      requester: {
+        id: "requester-other",
+        name: "Other Requester",
+        email: "other@example.test",
+      },
+      submittedAt: "2026-01-05T00:00:00.000Z",
+      updatedAt: "2026-01-05T00:00:00.000Z",
+      shortSummary: "Other company request",
+      currentInfo: {},
+      requestedInfo: {},
+      medias: { businessLicense: [], idCard: [], logo: [] },
+      history: [],
       version: 1,
     },
   ],
   superCompanyManagementAuditEvents: [],
   superCompanyManagementIdempotency: [],
-  superCompanyManagementPermissionCatalog: [],
+  superCompanyManagementPermissionCatalog: [
+    {
+      id: "content",
+      enLabel: "Content",
+      deLabel: "Inhalte",
+      actions: [
+        {
+          actionKey: "VIEW_MEDIA",
+          enLabel: "View media",
+          deLabel: "Medien ansehen",
+        },
+        {
+          actionKey: "MANAGE_ROLE",
+          enLabel: "Manage roles",
+          deLabel: "Rollen verwalten",
+        },
+      ],
+    },
+  ],
   superCompanyManagementPackageHistory: [],
   tariff: {
     tariffsList: [
@@ -243,6 +454,429 @@ const offerBody = (overrides = {}) => ({
   version: 5,
   idempotencyKey: "offer-request-1",
   ...overrides,
+});
+
+const userEditBody = (overrides = {}) => ({
+  changes: { departmentId: "customer-success", departmentTitle: "Customer success" },
+  version: 2,
+  ...overrides,
+});
+
+const userRoleBody = (overrides = {}) => ({
+  changes: { roleId: "role-next" },
+  version: 2,
+  reason: "Align support responsibilities",
+  idempotencyKey: "user-role-request-1",
+  ...overrides,
+});
+
+const userStatusBody = (overrides = {}) => ({
+  targetStatus: "paused",
+  version: 2,
+  reason: "Temporary support pause",
+  idempotencyKey: "user-status-request-1",
+  ...overrides,
+});
+
+const userTwoFactorBody = (overrides = {}) => ({
+  version: 2,
+  reason: "Verified 2FA support request",
+  idempotencyKey: "user-2fa-request-1",
+  ...overrides,
+});
+
+const roleMetadata = (overrides = {}) => ({
+  enName: "Support editor",
+  deName: "Support-Redakteur",
+  enDescription: "Supports content operations",
+  deDescription: "Unterstützt Inhaltsvorgänge",
+  ...overrides,
+});
+
+const roleCreateBody = (overrides = {}) => ({
+  changes: roleMetadata(),
+  version: 3,
+  idempotencyKey: "role-create-1",
+  ...overrides,
+});
+
+const roleMutationBody = (overrides = {}) => ({
+  changes: roleMetadata(),
+  version: 1,
+  idempotencyKey: "role-update-1",
+  ...overrides,
+});
+
+const rolePermissionsBody = (overrides = {}) => ({
+  actions: [{ actionKey: "VIEW_MEDIA", access: true }],
+  reason: "Approved support capability update",
+  version: 1,
+  idempotencyKey: "role-permissions-1",
+  ...overrides,
+});
+
+const roleDeleteBody = (overrides = {}) => ({
+  reason: "Unused custom role cleanup",
+  version: 1,
+  idempotencyKey: "role-delete-1",
+  ...overrides,
+});
+
+const approvalDecisionBody = (overrides = {}) => ({
+  status: "APPROVED",
+  version: 1,
+  idempotencyKey: "approval-decision-1",
+  ...overrides,
+});
+
+test("company role creation, duplication, metadata, and permission replacement are idempotent atomic writes", async () => {
+  await withServer(createState(createCompany()), async ({ baseUrl, router }) => {
+    const originalWrite = router.db.write.bind(router.db);
+    let writeCount = 0;
+    router.db.write = () => {
+      writeCount += 1;
+      return originalWrite();
+    };
+    const createRequest = {
+      method: "POST",
+      body: JSON.stringify(roleCreateBody()),
+    };
+    const created = await requestJson(
+      baseUrl,
+      "/super/company-management/companies/company-test/roles",
+      createRequest
+    );
+    const replay = await requestJson(
+      baseUrl,
+      "/super/company-management/companies/company-test/roles",
+      createRequest
+    );
+    const conflict = await requestJson(
+      baseUrl,
+      "/super/company-management/companies/company-test/roles",
+      {
+        method: "POST",
+        body: JSON.stringify(
+          roleCreateBody({ changes: roleMetadata({ enName: "Different" }) })
+        ),
+      }
+    );
+    const createdRole = created.body.data.role;
+    const duplicated = await requestJson(
+      baseUrl,
+      "/super/company-management/companies/company-test/roles/role-system/duplicate",
+      {
+        method: "POST",
+        body: JSON.stringify(
+          roleMutationBody({
+            changes: roleMetadata({ enName: "Owner copy", deName: "Eigentümerkopie" }),
+            idempotencyKey: "role-duplicate-1",
+          })
+        ),
+      }
+    );
+    const edited = await requestJson(
+      baseUrl,
+      `/super/company-management/companies/company-test/roles/${createdRole.id}`,
+      {
+        method: "PATCH",
+        body: JSON.stringify(
+          roleMutationBody({
+            version: 1,
+            changes: roleMetadata({ enName: "Updated support editor" }),
+            idempotencyKey: "role-edit-1",
+          })
+        ),
+      }
+    );
+    const permissions = await requestJson(
+      baseUrl,
+      `/super/company-management/companies/company-test/roles/${createdRole.id}/permissions`,
+      {
+        method: "PATCH",
+        body: JSON.stringify(
+          rolePermissionsBody({ version: 2, idempotencyKey: "role-permissions-created-1" })
+        ),
+      }
+    );
+    const state = router.db.getState();
+
+    assert.equal(created.status, 200);
+    assert.equal(created.body.data.role.isCustom, true);
+    assert.equal(created.body.data.role.assignedUserCount, 0);
+    assert.equal(replay.status, 200);
+    assert.deepEqual(replay.body, created.body);
+    assert.equal(conflict.status, 409);
+    assert.equal(conflict.body.code, "IDEMPOTENCY_CONFLICT");
+    assert.equal(duplicated.status, 200);
+    assert.equal(duplicated.body.data.role.isSystem, false);
+    assert.equal(duplicated.body.data.role.actionKeys.includes("VIEW_MEDIA"), true);
+    assert.equal(edited.status, 200);
+    assert.equal(permissions.status, 200);
+    assert.deepEqual(permissions.body.data.role.actionKeys, ["VIEW_MEDIA"]);
+    assert.equal(state.superCompanyManagementAuditEvents.length, 4);
+    assert.equal(state.superCompanyManagementCompanies[0].summary.roleCount, 7);
+    assert.equal(state.superCompanyManagementCompanies[0].summary.customRoleCount, 6);
+    assert.equal(writeCount, 4);
+  });
+});
+
+test("company role mutations reject immutable, unknown, unentitled, assigned, and cross-company roles", async () => {
+  const initialState = createState(createCompany());
+  const otherCompany = createCompany({ id: "company-other", onlineId: "CMP-OTHER" });
+  initialState.superCompanyManagementCompanies.push(otherCompany);
+  initialState.superCompanyManagementPackages.push({
+    ...clone(initialState.superCompanyManagementPackages[0]),
+    companyId: otherCompany.id,
+  });
+  await withServer(initialState, async ({ baseUrl, router }) => {
+    const immutable = await requestJson(
+      baseUrl,
+      "/super/company-management/companies/company-test/roles/role-system",
+      { method: "PATCH", body: JSON.stringify(roleMutationBody()) }
+    );
+    const unknownPermission = await requestJson(
+      baseUrl,
+      "/super/company-management/companies/company-test/roles/role-next/permissions",
+      {
+        method: "PATCH",
+        body: JSON.stringify(
+          rolePermissionsBody({ actions: [{ actionKey: "SUPER_ADMIN_ONLY", access: true }] })
+        ),
+      }
+    );
+    const entitlement = await requestJson(
+      baseUrl,
+      "/super/company-management/companies/company-test/roles/role-next/permissions",
+      {
+        method: "PATCH",
+        body: JSON.stringify(
+          rolePermissionsBody({ actions: [{ actionKey: "MANAGE_ROLE", access: true }], idempotencyKey: "role-entitlement-1" })
+        ),
+      }
+    );
+    const assigned = await requestJson(
+      baseUrl,
+      "/super/company-management/companies/company-test/roles/role-test",
+      { method: "DELETE", body: JSON.stringify(roleDeleteBody({ version: 4 })) }
+    );
+    const crossCompany = await requestJson(
+      baseUrl,
+      "/super/company-management/companies/company-test/roles/role-other-company"
+    );
+    const state = router.db.getState();
+
+    assert.equal(immutable.status, 409);
+    assert.equal(immutable.body.code, "ROLE_IMMUTABLE");
+    assert.equal(unknownPermission.status, 400);
+    assert.equal(unknownPermission.body.code, "VALIDATION_ERROR");
+    assert.equal(entitlement.status, 422);
+    assert.equal(entitlement.body.code, "ROLE_ENTITLEMENT_REQUIRED");
+    assert.equal(assigned.status, 422);
+    assert.equal(assigned.body.code, "ROLE_ASSIGNED_USERS");
+    assert.equal(assigned.body.affectedUserCount, 1);
+    assert.deepEqual(assigned.body.affectedUserIds, ["user-test"]);
+    assert.equal(crossCompany.status, 404);
+    assert.equal(state.superCompanyManagementAuditEvents.length, 0);
+  });
+});
+
+test("company role counts are derived from scoped users and stale or failed writes persist nothing", async () => {
+  const initialState = createState(createCompany());
+  initialState.superCompanyManagementRoles.find((role) => role.id === "role-test").assignedUserCount = 99;
+  await withServer(initialState, async ({ baseUrl, router }) => {
+    const initialRoles = await requestJson(
+      baseUrl,
+      "/super/company-management/companies/company-test/roles"
+    );
+    const reassigned = await requestJson(
+      baseUrl,
+      "/super/company-management/companies/company-test/users/user-test",
+      { method: "PATCH", body: JSON.stringify(userRoleBody()) }
+    );
+    const updatedRoles = await requestJson(
+      baseUrl,
+      "/super/company-management/companies/company-test/roles"
+    );
+    const before = clone(router.db.getState());
+    const stale = await requestJson(
+      baseUrl,
+      "/super/company-management/companies/company-test/roles/role-next",
+      { method: "PATCH", body: JSON.stringify(roleMutationBody({ version: 0 })) }
+    );
+
+    assert.equal(initialRoles.status, 200);
+    assert.equal(initialRoles.body.find((role) => role.id === "role-test").assignedUserCount, 1);
+    assert.equal(reassigned.status, 200);
+    assert.equal(updatedRoles.body.find((role) => role.id === "role-test").assignedUserCount, 0);
+    assert.equal(updatedRoles.body.find((role) => role.id === "role-next").assignedUserCount, 1);
+    assert.equal(stale.status, 409);
+    assert.equal(stale.body.code, "VERSION_CONFLICT");
+    assert.deepEqual(router.db.getState(), before);
+
+    const write = router.db.write;
+    router.db.write = () => {
+      throw new Error("write failure");
+    };
+    try {
+      const failure = await requestJson(
+        baseUrl,
+        "/super/company-management/companies/company-test/roles/role-next",
+        { method: "PATCH", body: JSON.stringify(roleMutationBody({ version: 1 })) }
+      );
+      assert.equal(failure.status, 500);
+      assert.equal(failure.body.code, "COMPANY_ROLE_UPDATE_FAILED");
+      assert.deepEqual(router.db.getState(), before);
+    } finally {
+      router.db.write = write;
+    }
+  });
+});
+
+test("company user edits accept only allowlisted assignment metadata and create redacted audit", async () => {
+  await withServer(createState(createCompany()), async ({ baseUrl, router }) => {
+    const edit = await requestJson(
+      baseUrl,
+      "/super/company-management/companies/company-test/users/user-test",
+      { method: "PATCH", body: JSON.stringify(userEditBody()) }
+    );
+    const afterEdit = clone(router.db.getState());
+    const invalid = await requestJson(
+      baseUrl,
+      "/super/company-management/companies/company-test/users/user-test",
+      {
+        method: "PATCH",
+        body: JSON.stringify(
+          userEditBody({ version: 3, changes: { email: "outside-scope@example.test", actionKeys: ["MANAGE_ROLE"] } })
+        ),
+      }
+    );
+
+    assert.equal(edit.status, 200);
+    assert.equal(edit.body.mockOnly, true);
+    assert.equal(router.db.getState().superCompanyManagementUsers[0].departmentId, "customer-success");
+    assert.equal(router.db.getState().superCompanyManagementUsers[0].email, "user@example.test");
+    assert.equal(edit.body.auditEvent.actionType, "company.user.edited");
+    assert.deepEqual(edit.body.auditEvent.after, {
+      departmentId: "customer-success",
+      departmentTitle: "Customer success",
+    });
+    assert.equal(invalid.status, 400);
+    assert.equal(invalid.body.code, "VALIDATION_ERROR");
+    assert.deepEqual(router.db.getState(), afterEdit);
+  });
+});
+
+test("company user role assignment is scoped, assignable, entitled, and updates role counts atomically", async () => {
+  await withServer(createState(createCompany()), async ({ baseUrl, router }) => {
+    const assigned = await requestJson(
+      baseUrl,
+      "/super/company-management/companies/company-test/users/user-test",
+      { method: "PATCH", body: JSON.stringify(userRoleBody()) }
+    );
+    const state = router.db.getState();
+    const foreign = await requestJson(
+      baseUrl,
+      "/super/company-management/companies/company-test/users/user-test",
+      { method: "PATCH", body: JSON.stringify(userRoleBody({ version: 3, changes: { roleId: "role-other-company" }, idempotencyKey: "role-foreign" })) }
+    );
+    const locked = await requestJson(
+      baseUrl,
+      "/super/company-management/companies/company-test/users/user-test",
+      { method: "PATCH", body: JSON.stringify(userRoleBody({ version: 3, changes: { roleId: "role-locked" }, idempotencyKey: "role-locked" })) }
+    );
+    const entitlement = await requestJson(
+      baseUrl,
+      "/super/company-management/companies/company-test/users/user-test",
+      { method: "PATCH", body: JSON.stringify(userRoleBody({ version: 3, changes: { roleId: "role-entitled" }, idempotencyKey: "role-entitled" })) }
+    );
+
+    assert.equal(assigned.status, 200);
+    assert.equal(state.superCompanyManagementUsers[0].roleId, "role-next");
+    assert.equal(state.superCompanyManagementRoles.find((role) => role.id === "role-test").assignedUserCount, 0);
+    assert.equal(state.superCompanyManagementRoles.find((role) => role.id === "role-next").assignedUserCount, 1);
+    for (const result of [foreign, locked, entitlement]) {
+      assert.equal(result.status, 422);
+      assert.equal(result.body.code, "ROLE_ASSIGNMENT_NOT_ALLOWED");
+    }
+    assert.equal(state.superCompanyManagementUsers[0].roleId, "role-next");
+  });
+});
+
+test("company user status and mock 2FA actions enforce authorization, versions, idempotency, and exact effects", async () => {
+  await withServer(createState(createCompany()), async ({ baseUrl, router }) => {
+    const paused = await requestJson(
+      baseUrl,
+      "/super/company-management/companies/company-test/users/user-test/status",
+      { method: "PATCH", body: JSON.stringify(userStatusBody()) }
+    );
+    const activated = await requestJson(
+      baseUrl,
+      "/super/company-management/companies/company-test/users/user-test/status",
+      { method: "PATCH", body: JSON.stringify(userStatusBody({ targetStatus: "active", version: 3, idempotencyKey: "user-status-request-2" })) }
+    );
+    const stale = await requestJson(
+      baseUrl,
+      "/super/company-management/companies/company-test/users/user-test/status",
+      { method: "PATCH", body: JSON.stringify(userStatusBody({ version: 2, idempotencyKey: "user-status-stale" })) }
+    );
+    const resetRequest = {
+      method: "POST",
+      body: JSON.stringify(userTwoFactorBody({ version: 4 })),
+    };
+    const reset = await requestJson(baseUrl, "/super/company-management/companies/company-test/users/user-test/2fa-reset", resetRequest);
+    const replay = await requestJson(baseUrl, "/super/company-management/companies/company-test/users/user-test/2fa-reset", resetRequest);
+    const user = router.db.getState().superCompanyManagementUsers[0];
+
+    assert.equal(paused.status, 200);
+    assert.equal(paused.body.data.user.status, "paused");
+    assert.equal(paused.body.data.user.isSystemInactive, true);
+    assert.equal(activated.status, 200);
+    assert.equal(activated.body.data.user.status, "active");
+    assert.equal(stale.status, 409);
+    assert.equal(stale.body.code, "VERSION_CONFLICT");
+    assert.equal(reset.status, 200);
+    assert.deepEqual(replay.body, reset.body);
+    assert.equal(user.twoFactor.enabled, false);
+    assert.equal(typeof user.twoFactor.lastResetAt, "string");
+    assert.equal(user.version, 5);
+    assert.equal(reset.body.data.impact.mockOnly, true);
+    assert.equal(JSON.stringify(reset.body.data.impact).includes("recovery"), true);
+    assert.equal(JSON.stringify(reset.body.data.impact).includes("token"), false);
+  });
+
+  const unauthorizedState = createState(createCompany());
+  unauthorizedState.superCompanyManagementUsers[0].allowedActions = ["EDIT_COMPANY_USER"];
+  await withServer(unauthorizedState, async ({ baseUrl }) => {
+    const result = await requestJson(
+      baseUrl,
+      "/super/company-management/companies/company-test/users/user-test/status",
+      { method: "PATCH", body: JSON.stringify(userStatusBody()) }
+    );
+    assert.equal(result.status, 403);
+  });
+});
+
+test("company user mutation persistence failure restores all state", async () => {
+  await withServer(createState(createCompany()), async ({ baseUrl, router }) => {
+    const before = clone(router.db.getState());
+    const write = router.db.write;
+    router.db.write = () => {
+      throw new Error("write failure");
+    };
+    try {
+      const result = await requestJson(
+        baseUrl,
+        "/super/company-management/companies/company-test/users/user-test",
+        { method: "PATCH", body: JSON.stringify(userRoleBody()) }
+      );
+      assert.equal(result.status, 500);
+      assert.equal(result.body.code, "COMPANY_USER_UPDATE_FAILED");
+      assert.deepEqual(router.db.getState(), before);
+    } finally {
+      router.db.write = write;
+    }
+  });
 });
 
 test("company detail returns only the state-valid action and server-authored impact", async () => {
@@ -935,6 +1569,257 @@ test("add-on actions are independently authorized and persistence failures are a
     const result = await requestJson(baseUrl, "/super/company-management/companies/company-test/add-ons", { method: "POST", body: JSON.stringify(addOnBody()) });
     assert.equal(result.status, 500);
     assert.equal(result.body.code, "PACKAGE_UPDATE_FAILED");
+    assert.deepEqual(router.db.getState(), before);
+  });
+});
+
+test("company approvals expose both safe detail types and apply only accepted canonical changes", async () => {
+  const company = createCompany({ registrationStatus: "pending" });
+  await withServer(createState(company), async ({ baseUrl, router }) => {
+    const registrationDetail = await requestJson(
+      baseUrl,
+      "/super/company-management/companies/company-test/approvals/approval-test",
+    );
+    const profileDetail = await requestJson(
+      baseUrl,
+      "/super/company-management/companies/company-test/approvals/approval-profile",
+    );
+
+    assert.equal(registrationDetail.status, 200);
+    assert.equal(registrationDetail.body.data.type, "REGISTRATION");
+    assert.equal(
+      registrationDetail.body.data.registrationSnapshot.profile.paymentInformation,
+      "[REDACTED]",
+    );
+    assert.deepEqual(
+      registrationDetail.body.data.registrationSnapshot.medias.businessLicense[0],
+      {
+        uid: "license-test",
+        name: "business-license.pdf",
+        type: "application/pdf",
+        status: "done",
+      },
+    );
+    assert.equal(
+      registrationDetail.body.data.registrationSnapshot.medias.businessLicense[0].url,
+      undefined,
+    );
+    assert.equal(profileDetail.status, 200);
+    assert.equal(profileDetail.body.data.type, "PROFILE_EDIT");
+    assert.equal(
+      profileDetail.body.data.requestedInfo.addressData.companyName,
+      "Test Company AG",
+    );
+
+    const approveRegistration = await requestJson(
+      baseUrl,
+      "/super/company-management/companies/company-test/approvals/approval-test/decision",
+      {
+        method: "PATCH",
+        body: JSON.stringify(approvalDecisionBody()),
+      },
+    );
+    const approveProfileEdit = await requestJson(
+      baseUrl,
+      "/super/company-management/companies/company-test/approvals/approval-profile/decision",
+      {
+        method: "PATCH",
+        body: JSON.stringify(
+          approvalDecisionBody({
+            version: 2,
+            idempotencyKey: "approval-profile-approve-1",
+          }),
+        ),
+      },
+    );
+    const state = router.db.getState();
+    const nextCompany = state.superCompanyManagementCompanies[0];
+    const registration = state.superCompanyManagementApprovals.find(
+      (item) => item.id === "approval-test",
+    );
+    const profileEdit = state.superCompanyManagementApprovals.find(
+      (item) => item.id === "approval-profile",
+    );
+
+    assert.equal(approveRegistration.status, 200);
+    assert.equal(approveRegistration.body.mockOnly, true);
+    assert.equal(approveRegistration.body.data.approval.status, "APPROVED");
+    assert.equal(approveProfileEdit.status, 200);
+    assert.equal(nextCompany.registrationStatus, "approved");
+    assert.equal(nextCompany.profile.addressData.city, "Berlin");
+    assert.equal(nextCompany.profile.addressData.companyName, "Test Company AG");
+    assert.equal(nextCompany.profile.legalPerson.firstName, "Test");
+    assert.equal(nextCompany.summary.pendingApprovalCount, 0);
+    assert.equal(registration.history.length, 1);
+    assert.equal(profileEdit.history.length, 1);
+    assert.equal(state.superCompanyManagementAuditEvents.length, 2);
+    assert.equal(state.superCompanyManagementIdempotency.length, 2);
+  });
+});
+
+test("company approval decisions enforce transitions, messages, scope, authorization, and idempotency", async () => {
+  await withServer(createState(createCompany()), async ({ baseUrl, router }) => {
+    const before = clone(router.db.getState());
+    const missingCorrectionMessage = await requestJson(
+      baseUrl,
+      "/super/company-management/companies/company-test/approvals/approval-test/decision",
+      {
+        method: "PATCH",
+        body: JSON.stringify(
+          approvalDecisionBody({
+            status: "ON_CORRECTION",
+            idempotencyKey: "approval-correction-missing-message",
+          }),
+        ),
+      },
+    );
+    const missingRejectionMessage = await requestJson(
+      baseUrl,
+      "/super/company-management/companies/company-test/approvals/approval-test/decision",
+      {
+        method: "PATCH",
+        body: JSON.stringify(
+          approvalDecisionBody({
+            status: "REJECTED",
+            idempotencyKey: "approval-rejection-missing-message",
+          }),
+        ),
+      },
+    );
+    assert.equal(missingCorrectionMessage.status, 400);
+    assert.equal(missingCorrectionMessage.body.fieldErrors.message[0], "A message is required for this decision");
+    assert.equal(missingRejectionMessage.status, 400);
+    assert.deepEqual(router.db.getState(), before);
+
+    const originalWrite = router.db.write.bind(router.db);
+    let writeCount = 0;
+    router.db.write = () => {
+      writeCount += 1;
+      return originalWrite();
+    };
+    const correctionRequest = {
+      method: "PATCH",
+      body: JSON.stringify(
+        approvalDecisionBody({
+          status: "ON_CORRECTION",
+          message: "Please correct the submitted address.",
+          idempotencyKey: "approval-correction-1",
+        }),
+      ),
+    };
+    const correction = await requestJson(
+      baseUrl,
+      "/super/company-management/companies/company-test/approvals/approval-test/decision",
+      correctionRequest,
+    );
+    const replay = await requestJson(
+      baseUrl,
+      "/super/company-management/companies/company-test/approvals/approval-test/decision",
+      correctionRequest,
+    );
+    const mismatch = await requestJson(
+      baseUrl,
+      "/super/company-management/companies/company-test/approvals/approval-test/decision",
+      {
+        method: "PATCH",
+        body: JSON.stringify(
+          approvalDecisionBody({
+            status: "ON_CORRECTION",
+            message: "Different message",
+            idempotencyKey: "approval-correction-1",
+          }),
+        ),
+      },
+    );
+    const approveFromCorrection = await requestJson(
+      baseUrl,
+      "/super/company-management/companies/company-test/approvals/approval-test/decision",
+      {
+        method: "PATCH",
+        body: JSON.stringify(
+          approvalDecisionBody({
+            version: 2,
+            idempotencyKey: "approval-approve-after-correction-1",
+          }),
+        ),
+      },
+    );
+    const finalRetry = await requestJson(
+      baseUrl,
+      "/super/company-management/companies/company-test/approvals/approval-test/decision",
+      {
+        method: "PATCH",
+        body: JSON.stringify(
+          approvalDecisionBody({
+            version: 3,
+            idempotencyKey: "approval-final-retry-1",
+          }),
+        ),
+      },
+    );
+    const stale = await requestJson(
+      baseUrl,
+      "/super/company-management/companies/company-test/approvals/approval-profile/decision",
+      {
+        method: "PATCH",
+        body: JSON.stringify(
+          approvalDecisionBody({ version: 99, idempotencyKey: "approval-stale-1" }),
+        ),
+      },
+    );
+    const crossCompany = await requestJson(
+      baseUrl,
+      "/super/company-management/companies/company-test/approvals/approval-other-company/decision",
+      { method: "PATCH", body: JSON.stringify(approvalDecisionBody({ idempotencyKey: "approval-cross-company-1" })) },
+    );
+
+    assert.equal(correction.status, 200);
+    assert.equal(correction.body.data.approval.status, "ON_CORRECTION");
+    assert.equal(replay.status, 200);
+    assert.deepEqual(replay.body, correction.body);
+    assert.equal(mismatch.status, 409);
+    assert.equal(mismatch.body.code, "IDEMPOTENCY_CONFLICT");
+    assert.equal(approveFromCorrection.status, 200);
+    assert.equal(finalRetry.status, 409);
+    assert.equal(finalRetry.body.code, "INVALID_STATUS_TRANSITION");
+    assert.equal(stale.status, 409);
+    assert.equal(stale.body.code, "VERSION_CONFLICT");
+    assert.equal(crossCompany.status, 404);
+    assert.equal(writeCount, 2);
+    assert.equal(router.db.getState().superCompanyManagementAuditEvents.length, 2);
+    assert.equal(router.db.getState().superCompanyManagementApprovals.find((item) => item.id === "approval-test").history.length, 2);
+  });
+
+  await withServer(
+    createState(createCompany({ permissionProfile: "restricted" })),
+    async ({ baseUrl, router }) => {
+      const before = clone(router.db.getState());
+      const unauthorized = await requestJson(
+        baseUrl,
+        "/super/company-management/companies/company-test/approvals/approval-test/decision",
+        { method: "PATCH", body: JSON.stringify(approvalDecisionBody()) },
+      );
+      assert.equal(unauthorized.status, 403);
+      assert.equal(unauthorized.body.code, "ACTION_NOT_ALLOWED");
+      assert.deepEqual(router.db.getState(), before);
+    },
+  );
+});
+
+test("company approval decision persistence failures leave approval, company, history, audit, and idempotency unchanged", async () => {
+  await withServer(createState(createCompany()), async ({ baseUrl, router }) => {
+    const before = clone(router.db.getState());
+    router.db.write = () => {
+      throw new Error("write failure");
+    };
+    const result = await requestJson(
+      baseUrl,
+      "/super/company-management/companies/company-test/approvals/approval-test/decision",
+      { method: "PATCH", body: JSON.stringify(approvalDecisionBody()) },
+    );
+
+    assert.equal(result.status, 500);
+    assert.equal(result.body.code, "COMPANY_APPROVAL_DECISION_FAILED");
     assert.deepEqual(router.db.getState(), before);
   });
 });
