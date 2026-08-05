@@ -32,3 +32,45 @@ test("redacts sensitive Company Management audit values recursively", () => {
     ],
   });
 });
+
+test("redacts the complete payment, identity, token, password, secret, and 2FA key vocabulary", () => {
+  const redacted = redactAuditValue({
+    IBAN: "DE02120300000000202051",
+    BIC: "BYLADEM1001",
+    accountOwner: "Example GmbH",
+    paymentInformation: { method: "sepa" },
+    passwordHash: "hash",
+    apiSecret: "secret",
+    refreshToken: "token",
+    identityDocument: { contents: "document" },
+    idCard: { url: "private" },
+    twoFactor: { enabled: true },
+    twoFactorSeed: "seed",
+    recoveryData: ["code"],
+    credentialBundle: { value: "credential" },
+    safe: {
+      companyName: "Example GmbH",
+      reason: "Verified support request",
+    },
+  });
+
+  assert.deepEqual(redacted, {
+    IBAN: "[REDACTED]",
+    BIC: "[REDACTED]",
+    accountOwner: "[REDACTED]",
+    paymentInformation: "[REDACTED]",
+    passwordHash: "[REDACTED]",
+    apiSecret: "[REDACTED]",
+    refreshToken: "[REDACTED]",
+    identityDocument: "[REDACTED]",
+    idCard: "[REDACTED]",
+    twoFactor: "[REDACTED]",
+    twoFactorSeed: "[REDACTED]",
+    recoveryData: "[REDACTED]",
+    credentialBundle: "[REDACTED]",
+    safe: {
+      companyName: "Example GmbH",
+      reason: "Verified support request",
+    },
+  });
+});

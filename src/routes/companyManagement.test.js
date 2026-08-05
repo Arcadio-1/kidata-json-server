@@ -529,6 +529,480 @@ const approvalDecisionBody = (overrides = {}) => ({
   ...overrides,
 });
 
+test("TESTS/WIRE directory normalizes envelopes, filters, deterministic sorting, and invalid values", async () => {
+  const companyA = createCompany({
+    id: "company-a",
+    onlineId: "CMP-A",
+    updatedAt: "2026-02-01T00:00:00.000Z",
+  });
+  const companyB = createCompany({
+    id: "company-b",
+    onlineId: "CMP-B",
+    operationalStatus: "suspended",
+    registrationStatus: "pending",
+    updatedAt: "2026-02-01T00:00:00.000Z",
+  });
+  companyA.profile.addressData.companyName = "Shared Company Alpha";
+  companyA.profile.addressData.countryId = "de";
+  companyA.profile.addressData.countryLabel = "Germany";
+  companyB.profile.addressData.companyName = "Shared Company Beta";
+  companyB.profile.addressData.countryId = "at";
+  companyB.profile.addressData.countryLabel = "Austria";
+  companyB.summary.pendingApprovalCount = 0;
+  const state = createState(companyA);
+  state.superCompanyManagementCompanies.push(companyB);
+
+  await withServer(state, async ({ baseUrl }) => {
+    const firstPage = await requestJson(
+      baseUrl,
+      "/super/company-management/companies?sortBy=updatedAt&sortOrder=desc&page=1&pageSize=1",
+    );
+    const beyondEnd = await requestJson(
+      baseUrl,
+      "/super/company-management/companies?page=3&pageSize=1",
+    );
+    const filtered = await requestJson(
+      baseUrl,
+      "/super/company-management/companies?keyword=beta&operationalStatus=suspended&registrationStatus=pending&countryId=at&pendingAction=false",
+    );
+    const unknown = await requestJson(
+      baseUrl,
+      "/super/company-management/companies?companyName=ignored",
+    );
+    const invalidSort = await requestJson(
+      baseUrl,
+      "/super/company-management/companies?sortBy=permissionProfile",
+    );
+    const invalidFilter = await requestJson(
+      baseUrl,
+      "/super/company-management/companies?operationalStatus=deleted",
+    );
+
+    assert.equal(firstPage.status, 200);
+    assert.deepEqual(Object.keys(firstPage.body).sort(), [
+      "items",
+      "page",
+      "pageSize",
+      "totalCount",
+      "totalPages",
+    ]);
+    assert.deepEqual(firstPage.body.items.map((item) => item.id), ["company-a"]);
+    assert.equal(firstPage.body.totalCount, 2);
+    assert.equal(firstPage.body.totalPages, 2);
+    assert.deepEqual(beyondEnd.body, {
+      items: [],
+      totalCount: 2,
+      page: 3,
+      pageSize: 1,
+      totalPages: 2,
+    });
+    assert.deepEqual(filtered.body.items.map((item) => item.id), ["company-b"]);
+    assert.equal(unknown.status, 400);
+    assert.equal(unknown.body.code, "UNKNOWN_QUERY_PARAMETER");
+    assert.deepEqual(unknown.body.fieldErrors, {
+      companyName: ["Unsupported query parameter"],
+    });
+    assert.equal(invalidSort.status, 400);
+    assert.equal(invalidSort.body.code, "INVALID_SORT_FIELD");
+    assert.equal(invalidFilter.status, 400);
+    assert.equal(invalidFilter.body.code, "INVALID_FILTER_VALUE");
+  });
+});
+
+test("TESTS/CORE canonical company scope isolates overlapping users, roles, approvals, and audit records", async () => {
+  const company = createCompany();
+  const otherCompany = createCompany({
+    id: "company-other",
+    onlineId: "CMP-OTHER",
+  });
+  const state = createState(company);
+  state.superCompanyManagementCompanies.push(otherCompany);
+  state.superCompanyManagementUsers.push({
+    ...clone(state.superCompanyManagementUsers[0]),
+    id: "user-other",
+    companyId: otherCompany.id,
+    onlineId: "USR-OTHER",
+    email: "user.other@example.test",
+  });
+  state.superCompanyManagementAuditEvents.push(
+    {
+      id: "audit-company-test",
+      timestamp: "2026-01-05T00:00:00.000Z",
+      actor: { id: "admin-a", name: "Admin A" },
+      companyId: company.id,
+      actionType: "company.profile.updated",
+      entityType: "company",
+      entityId: company.id,
+      before: null,
+      after: { companyName: "Test Company GmbH" },
+      reason: null,
+      result: "success",
+      correlationId: null,
+    },
+    {
+      id: "audit-company-other",
+      timestamp: "2026-01-05T00:00:00.000Z",
+      actor: { id: "admin-a", name: "Admin A" },
+      companyId: otherCompany.id,
+      actionType: "company.profile.updated",
+      entityType: "company",
+      entityId: otherCompany.id,
+      before: null,
+      after: { companyName: "Other Company" },
+      reason: null,
+      result: "success",
+      correlationId: null,
+    },
+  );
+
+  await withServer(state, async ({ baseUrl }) => {
+    const users = await requestJson(
+      baseUrl,
+      "/super/company-management/companies/company-test/users?keyword=Test%20User",
+    );
+    const foreignUser = await requestJson(
+      baseUrl,
+      "/super/company-management/companies/company-test/users/user-other",
+    );
+    const roles = await requestJson(
+      baseUrl,
+      "/super/company-management/companies/company-test/roles",
+    );
+    const foreignRole = await requestJson(
+      baseUrl,
+      "/super/company-management/companies/company-test/roles/role-other-company",
+    );
+    const approvals = await requestJson(
+      baseUrl,
+      "/super/company-management/companies/company-test/approvals",
+    );
+    const foreignApproval = await requestJson(
+      baseUrl,
+      "/super/company-management/companies/company-test/approvals/approval-other-company",
+    );
+    const audit = await requestJson(
+      baseUrl,
+      "/super/company-management/companies/company-test/audit-events?entityType=company&sortBy=timestamp&sortOrder=desc",
+    );
+
+    assert.deepEqual(users.body.items.map((item) => item.id), ["user-test"]);
+    assert.equal(users.body.items[0].companyId, "company-test");
+    assert.equal(foreignUser.status, 404);
+    assert.equal(foreignUser.body.code, "COMPANY_USER_NOT_FOUND");
+    assert.equal(roles.body.every((item) => item.companyId === "company-test"), true);
+    assert.equal(foreignRole.status, 404);
+    assert.equal(approvals.body.items.every((item) => item.companyId === "company-test"), true);
+    assert.equal(foreignApproval.status, 404);
+    assert.deepEqual(audit.body.items.map((item) => item.id), ["audit-company-test"]);
+  });
+});
+
+test("TESTS/WIRE catalogs are adapted read-only data and remain separate from company assignments and cart", async () => {
+  const state = createState(createCompany());
+  state.tariff.tariffsList[1].alternativeId = "legacy-basic";
+  state.addOns.addOns = [
+    {
+      id: "addon-catalog",
+      name: "Catalog storage",
+      price: "9.50",
+      isActive: true,
+      currentQuantity: 99,
+      tags: ["active", "popular"],
+    },
+  ];
+  state.addOnBundles = [{ id: "bundle-catalog", title: "Catalog bundle" }];
+  state.cart = [{ id: "cart-item", companyId: "company-test", quantity: 4 }];
+  const catalogsBefore = clone({
+    tariff: state.tariff,
+    addOns: state.addOns,
+    addOnBundles: state.addOnBundles,
+    cart: state.cart,
+  });
+
+  await withServer(state, async ({ baseUrl, router }) => {
+    const tariffs = await requestJson(baseUrl, "/super/company-management/tariffs");
+    const addOns = await requestJson(baseUrl, "/super/company-management/add-ons");
+    const bundles = await requestJson(baseUrl, "/super/company-management/bundles");
+    const permissions = await requestJson(
+      baseUrl,
+      "/super/company-management/permission-catalog",
+    );
+
+    assert.equal(typeof tariffs.body.find((item) => item.id === "basic").price, "number");
+    assert.equal(tariffs.body.find((item) => item.id === "basic").alternativeId, undefined);
+    assert.equal(addOns.body[0].isActive, undefined);
+    assert.equal(addOns.body[0].currentQuantity, undefined);
+    assert.deepEqual(addOns.body[0].tags, ["popular"]);
+    assert.deepEqual(bundles.body, [{ id: "bundle-catalog", title: "Catalog bundle" }]);
+    assert.deepEqual(permissions.body, state.superCompanyManagementPermissionCatalog);
+    assert.deepEqual(
+      {
+        tariff: router.db.getState().tariff,
+        addOns: router.db.getState().addOns,
+        addOnBundles: router.db.getState().addOnBundles,
+        cart: router.db.getState().cart,
+      },
+      catalogsBefore,
+    );
+  });
+});
+
+test("TESTS/APPROVALS queue ordering and workflow seen state remain independent from notification inbox state", async () => {
+  const state = createState(createCompany());
+  state.superCompanyManagementApprovals.push({
+    ...clone(state.superCompanyManagementApprovals[0]),
+    id: "approval-final-oldest",
+    status: "APPROVED",
+    submittedAt: "2026-01-01T00:00:00.000Z",
+    updatedAt: "2026-01-01T00:00:00.000Z",
+  });
+  state.superNotifications = [
+    {
+      id: "notification-approval-test",
+      isSeen: false,
+      resourceType: "COMPANY_REGISTRATION_APPROVAL",
+      companyId: "company-test",
+      approvalId: "approval-test",
+    },
+  ];
+
+  await withServer(state, async ({ baseUrl, router }) => {
+    const queue = await requestJson(
+      baseUrl,
+      "/super/company-management/approvals?pageSize=10",
+    );
+    const unseen = await requestJson(
+      baseUrl,
+      "/super/company-management/approvals?isSeen=false&type=REGISTRATION",
+    );
+    const notificationsBefore = clone(router.db.getState().superNotifications);
+    const decision = await requestJson(
+      baseUrl,
+      "/super/company-management/companies/company-test/approvals/approval-test/decision",
+      { method: "PATCH", body: JSON.stringify(approvalDecisionBody()) },
+    );
+    const nextState = router.db.getState();
+    const decidedApproval = nextState.superCompanyManagementApprovals.find(
+      (item) => item.id === "approval-test",
+    );
+
+    assert.deepEqual(queue.body.items.slice(0, 3).map((item) => item.id), [
+      "approval-test",
+      "approval-profile",
+      "approval-other-company",
+    ]);
+    assert.equal(queue.body.items.at(-1).id, "approval-final-oldest");
+    assert.equal(unseen.body.items.every((item) => item.type === "REGISTRATION" && item.isSeen === false), true);
+    assert.equal(decision.status, 200);
+    assert.equal(decidedApproval.status, "APPROVED");
+    assert.equal(decidedApproval.isSeen, false);
+    assert.deepEqual(nextState.superNotifications, notificationsBefore);
+    assert.equal(nextState.superCompanyManagementAuditEvents.length, 1);
+    assert.equal(nextState.superCompanyManagementIdempotency.length, 1);
+  });
+});
+
+test("TESTS/APPROVALS workflow seen changes only the scoped approval", async () => {
+  const state = createState(createCompany());
+  state.superNotifications = [{ id: "notification-approval", isSeen: false }];
+  await withServer(state, async ({ baseUrl, router }) => {
+    const approval = state.superCompanyManagementApprovals.find((item) => item.id === "approval-test");
+    const version = approval.version;
+    const notificationsBefore = clone(state.superNotifications);
+    const result = await requestJson(
+      baseUrl,
+      "/super/company-management/companies/company-test/approvals/approval-test/seen",
+      { method: "PATCH", body: JSON.stringify({ isSeen: true, version }) },
+    );
+
+    assert.equal(result.status, 200);
+    assert.equal(result.body.data.isSeen, true);
+    const nextState = router.db.getState();
+    assert.equal(nextState.superCompanyManagementApprovals.find((item) => item.id === "approval-test").version, version + 1);
+    assert.deepEqual(nextState.superNotifications, notificationsBefore);
+    assert.equal(nextState.superCompanyManagementAuditEvents.length, 0);
+  });
+});
+
+test("TESTS/CORE idempotency keys cannot cross privileged operations and success uses one atomic envelope", async () => {
+  const state = createState(createCompany());
+  state.addOns.addOns = addOnCatalog();
+
+  await withServer(state, async ({ baseUrl, router }) => {
+    const originalWrite = router.db.write.bind(router.db);
+    let writeCount = 0;
+    router.db.write = () => {
+      writeCount += 1;
+      return originalWrite();
+    };
+    const status = await requestJson(
+      baseUrl,
+      "/super/company-management/companies/company-test/status",
+      {
+        method: "PATCH",
+        body: JSON.stringify(statusBody({ idempotencyKey: "shared-operation-key" })),
+      },
+    );
+    const stateAfterStatus = clone(router.db.getState());
+    const crossOperation = await requestJson(
+      baseUrl,
+      "/super/company-management/companies/company-test/add-ons",
+      {
+        method: "POST",
+        body: JSON.stringify(addOnBody({ idempotencyKey: "shared-operation-key" })),
+      },
+    );
+
+    assert.equal(status.status, 200);
+    assert.deepEqual(Object.keys(status.body).sort(), [
+      "auditEvent",
+      "correlationId",
+      "data",
+      "message",
+      "mockOnly",
+      "warnings",
+    ]);
+    assert.equal(status.body.mockOnly, true);
+    assert.equal(status.body.auditEvent.companyId, "company-test");
+    assert.equal(crossOperation.status, 409);
+    assert.equal(crossOperation.body.code, "IDEMPOTENCY_CONFLICT");
+    assert.equal(writeCount, 1);
+    assert.deepEqual(router.db.getState(), stateAfterStatus);
+    assert.equal(router.db.getState().superCompanyManagementAuditEvents.length, 1);
+  });
+});
+
+test("TESTS/COMPANY profile updates enforce allowlists, versioning, one write, and redacted audit data", async () => {
+  const state = createState(createCompany());
+
+  await withServer(state, async ({ baseUrl, router }) => {
+    const originalWrite = router.db.write.bind(router.db);
+    let writeCount = 0;
+    router.db.write = () => {
+      writeCount += 1;
+      return originalWrite();
+    };
+    const result = await requestJson(
+      baseUrl,
+      "/super/company-management/companies/company-test/profile/billingPayment",
+      {
+        method: "PATCH",
+        body: JSON.stringify({
+          changes: {
+            paymentInformation: {
+              accountOwner: "Test Company AG",
+              IBAN: "DE9876543210",
+              BIC: "UPDATEDBIC",
+            },
+          },
+          version: 3,
+          reason: "Verified billing account change",
+        }),
+      },
+    );
+    const nextState = router.db.getState();
+    const nextCompany = nextState.superCompanyManagementCompanies[0];
+    const audit = nextState.superCompanyManagementAuditEvents[0];
+
+    assert.equal(result.status, 200);
+    assert.equal(result.body.mockOnly, true);
+    assert.equal(writeCount, 1);
+    assert.equal(nextCompany.version, 4);
+    assert.equal(nextCompany.profile.addressData.companyName, "Test Company GmbH");
+    assert.deepEqual(nextCompany.profile.paymentInformation, {
+      accountOwner: "Test Company AG",
+      IBAN: "DE9876543210",
+      BIC: "UPDATEDBIC",
+    });
+    assert.equal(nextState.superCompanyManagementAuditEvents.length, 1);
+    assert.equal(audit.actionType, "company.profile.billingPayment.updated");
+    assert.equal(audit.companyId, "company-test");
+    assert.equal(audit.before.paymentInformation, "[REDACTED]");
+    assert.equal(audit.after.paymentInformation, "[REDACTED]");
+    assert.equal(audit.reason, "Verified billing account change");
+  });
+});
+
+test("TESTS/COMPANY invalid, stale, and unauthorized profile updates leave all records unchanged", async () => {
+  const cases = [
+    {
+      state: createState(createCompany()),
+      section: "general",
+      body: {
+        changes: { addressData: { inventedField: "not writable" } },
+        version: 3,
+      },
+      status: 400,
+      code: "VALIDATION_ERROR",
+    },
+    {
+      state: createState(createCompany()),
+      section: "general",
+      body: {
+        changes: { addressData: { companyName: "Stale Company" } },
+        version: 2,
+      },
+      status: 409,
+      code: "VERSION_CONFLICT",
+    },
+    {
+      state: createState(createCompany({ permissionProfile: "restricted" })),
+      section: "general",
+      body: {
+        changes: { addressData: { companyName: "Forbidden Company" } },
+        version: 3,
+      },
+      status: 403,
+      code: "ACTION_NOT_ALLOWED",
+    },
+  ];
+
+  for (const profileCase of cases) {
+    await withServer(profileCase.state, async ({ baseUrl, router }) => {
+      const before = clone(router.db.getState());
+      const result = await requestJson(
+        baseUrl,
+        `/super/company-management/companies/company-test/profile/${profileCase.section}`,
+        { method: "PATCH", body: JSON.stringify(profileCase.body) },
+      );
+
+      assert.equal(result.status, profileCase.status);
+      assert.equal(result.body.code, profileCase.code);
+      assert.deepEqual(router.db.getState(), before);
+    });
+  }
+});
+
+test("TESTS/COMPANY profile persistence failure restores company and audit state", async () => {
+  await withServer(createState(createCompany()), async ({ baseUrl, router }) => {
+    const before = clone(router.db.getState());
+    const write = router.db.write;
+    router.db.write = () => {
+      throw new Error("write failure");
+    };
+    try {
+      const result = await requestJson(
+        baseUrl,
+        "/super/company-management/companies/company-test/profile/general",
+        {
+          method: "PATCH",
+          body: JSON.stringify({
+            changes: { addressData: { companyName: "Test Company AG" } },
+            version: 3,
+          }),
+        },
+      );
+
+      assert.equal(result.status, 500);
+      assert.equal(result.body.code, "COMPANY_PROFILE_UPDATE_FAILED");
+      assert.equal(typeof result.body.correlationId, "string");
+      assert.deepEqual(router.db.getState(), before);
+    } finally {
+      router.db.write = write;
+    }
+  });
+});
+
 test("company role creation, duplication, metadata, and permission replacement are idempotent atomic writes", async () => {
   await withServer(createState(createCompany()), async ({ baseUrl, router }) => {
     const originalWrite = router.db.write.bind(router.db);
@@ -1252,6 +1726,30 @@ test("a server-valid tariff downgrade is permitted", async () => {
       );
     },
   );
+});
+
+test("an unlimited tariff dimension accepts usage above finite display limits", async () => {
+  const initialState = createState(createCompany());
+  initialState.superCompanyManagementPackages[0].resourceUsage.displays = 10_000;
+
+  await withServer(initialState, async ({ baseUrl, router }) => {
+    const result = await requestJson(
+      baseUrl,
+      "/super/company-management/companies/company-test/subscription",
+      {
+        method: "PATCH",
+        body: JSON.stringify(
+          tariffBody({ idempotencyKey: "unlimited-display-limit-1" }),
+        ),
+      },
+    );
+
+    assert.equal(result.status, 200);
+    assert.equal(
+      router.db.getState().superCompanyManagementPackages[0].tariff.tariffId,
+      "plus",
+    );
+  });
 });
 
 test("an unsafe tariff downgrade returns structured violations without partial state", async () => {

@@ -1236,16 +1236,28 @@ module.exports = function registerCompanyManagementRoutes(server, router) {
         correlationId,
       };
 
-      router.db
-        .get("superCompanyManagementCompanies")
-        .find({ id: company.id })
-        .assign(nextCompany)
-        .value();
-      router.db
-        .get("superCompanyManagementAuditEvents")
-        .push(auditEvent)
-        .value();
-      router.db.write();
+      const previousState = clone(router.db.getState());
+      try {
+        router.db
+          .get("superCompanyManagementCompanies")
+          .find({ id: company.id })
+          .assign(nextCompany)
+          .value();
+        router.db
+          .get("superCompanyManagementAuditEvents")
+          .push(auditEvent)
+          .value();
+        router.db.write();
+      } catch {
+        router.db.setState(previousState);
+        return sendError(
+          res,
+          500,
+          "COMPANY_PROFILE_UPDATE_FAILED",
+          "The company profile section could not be updated",
+          { correlationId }
+        );
+      }
 
       const allowedActions = getCompanyActions(nextCompany);
       return res.json({
@@ -2632,6 +2644,50 @@ module.exports = function registerCompanyManagementRoutes(server, router) {
         allowedActions: projectedApproval.allowedActions,
         data: projectedApproval,
       });
+    }
+  );
+
+  server.patch(
+    `${ROOT}/companies/:companyId/approvals/:approvalId/seen`,
+    (req, res) => {
+      const company = requireCompany(router.db, res, req.params.companyId);
+      if (
+        !company ||
+        !requireViewAction(company, ACTIONS.VIEW_COMPANY_APPROVALS, res)
+      ) {
+        return;
+      }
+      const approval = router.db
+        .get("superCompanyManagementApprovals")
+        .find({ id: req.params.approvalId, companyId: company.id })
+        .value();
+      if (!approval) {
+        return sendError(res, 404, "APPROVAL_NOT_FOUND", "Approval not found");
+      }
+      const body = isPlainObject(req.body) ? req.body : {};
+      if (
+        typeof body.isSeen !== "boolean" ||
+        !Number.isInteger(body.version) ||
+        body.version < 0
+      ) {
+        return sendError(res, 400, "VALIDATION_ERROR", "The workflow state update is invalid");
+      }
+      if (body.version !== approval.version) {
+        return sendError(res, 409, "VERSION_CONFLICT", "The approval changed after it was loaded", { currentVersion: approval.version });
+      }
+      if (approval.isSeen === body.isSeen) {
+        return res.json({ message: "Approval workflow state is unchanged", data: projectApproval(company, approval), mockOnly: true });
+      }
+      const previousState = clone(router.db.getState());
+      const nextApproval = { ...clone(approval), isSeen: body.isSeen, updatedAt: new Date().toISOString(), version: approval.version + 1 };
+      try {
+        router.db.get("superCompanyManagementApprovals").find({ id: approval.id, companyId: company.id }).assign(nextApproval).value();
+        router.db.write();
+      } catch {
+        router.db.setState(previousState);
+        return sendError(res, 500, "APPROVAL_WORKFLOW_UPDATE_FAILED", "The approval workflow state could not be updated");
+      }
+      return res.json({ message: "Approval workflow state updated in local demo data", data: projectApproval(company, nextApproval), mockOnly: true });
     }
   );
 
