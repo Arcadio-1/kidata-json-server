@@ -2321,3 +2321,89 @@ test("company approval decision persistence failures leave approval, company, hi
     assert.deepEqual(router.db.getState(), before);
   });
 });
+
+test("demo platform users are filtered, paginated, and do not expose company-scoped actions", async () => {
+  const company = createCompany();
+  const otherCompany = createCompany({
+    id: "company-other",
+    onlineId: "CMP-OTHER",
+    profile: {
+      ...company.profile,
+      addressData: {
+        ...company.profile.addressData,
+        companyName: "Other Company GmbH",
+      },
+    },
+  });
+  const state = createState(company);
+  state.superCompanyManagementCompanies.push(otherCompany);
+  state.superCompanyManagementUsers[0] = {
+    ...state.superCompanyManagementUsers[0],
+    firstName: "Alex",
+    entryDate: "2026-01-10T00:00:00.000Z",
+    lastActivity: "2026-02-10T00:00:00.000Z",
+    userType: "companyUser",
+    employmentType: "internal",
+  };
+  state.superCompanyManagementUsers.push({
+    ...state.superCompanyManagementUsers[0],
+    id: "user-other",
+    companyId: otherCompany.id,
+    email: "alex.other@example.test",
+    firstName: "Alex",
+    lastName: "Other",
+    onlineId: "USR-OTHER",
+    status: "paused",
+    employmentType: "external",
+    entryDate: "2026-03-10T00:00:00.000Z",
+    lastActivity: "2026-03-11T00:00:00.000Z",
+  });
+
+  await withServer(state, async ({ baseUrl }) => {
+    const filtered = await requestJson(
+      baseUrl,
+      "/super/company-management/demo/platform-users?keyword=alex&email=user%40example.test&companyId=company-test&status=active&userType=companyUser&employmentType=internal&departmentId=support&categoryId=operations&roleId=role-test&entryFrom=2026-01-01&entryTo=2026-01-31&lastActivityFrom=2026-02-01&lastActivityTo=2026-02-28&sortBy=email&sortOrder=asc&page=1&pageSize=10",
+    );
+    const unfiltered = await requestJson(
+      baseUrl,
+      "/super/company-management/demo/platform-users",
+    );
+    const paginated = await requestJson(
+      baseUrl,
+      "/super/company-management/demo/platform-users?sortBy=onlineId&sortOrder=asc&page=2&pageSize=1",
+    );
+    const invalid = await requestJson(
+      baseUrl,
+      "/super/company-management/demo/platform-users?status=deleted",
+    );
+    const unknown = await requestJson(
+      baseUrl,
+      "/super/company-management/demo/platform-users?unsupported=true",
+    );
+    const invalidSort = await requestJson(
+      baseUrl,
+      "/super/company-management/demo/platform-users?sortBy=role",
+    );
+
+    assert.equal(filtered.status, 200);
+    assert.deepEqual(filtered.body.items.map((item) => item.id), ["user-test"]);
+    assert.equal(filtered.body.items[0].company.name, "Test Company GmbH");
+    assert.equal("allowedActions" in filtered.body.items[0], false);
+    assert.equal(filtered.body.totalCount, 1);
+    assert.equal(unfiltered.body.totalCount, 2);
+    assert.deepEqual(
+      new Set(unfiltered.body.items.map((item) => item.companyId)),
+      new Set(["company-test", "company-other"]),
+    );
+    assert.equal(paginated.body.totalCount, 2);
+    assert.equal(paginated.body.page, 2);
+    assert.equal(paginated.body.pageSize, 1);
+    assert.deepEqual(paginated.body.items.map((item) => item.id), ["user-test"]);
+    assert.equal(invalid.status, 400);
+    assert.equal(invalid.body.code, "INVALID_FILTER_VALUE");
+    assert.equal(unknown.status, 400);
+    assert.equal(unknown.body.code, "UNKNOWN_QUERY_PARAMETER");
+    assert.equal(invalidSort.status, 400);
+    assert.equal(invalidSort.body.code, "INVALID_SORT_FIELD");
+  });
+});

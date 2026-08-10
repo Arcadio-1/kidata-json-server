@@ -1297,6 +1297,146 @@ module.exports = function registerCompanyManagementRoutes(server, router) {
     res.json(clone(router.db.get("addOnBundles").value() || []));
   });
 
+  server.get(`${ROOT}/demo/platform-users`, (req, res) => {
+    const allowed = [
+      "keyword",
+      "email",
+      "companyId",
+      "status",
+      "userType",
+      "employmentType",
+      "departmentId",
+      "categoryId",
+      "roleId",
+      "entryFrom",
+      "entryTo",
+      "lastActivityFrom",
+      "lastActivityTo",
+      "page",
+      "pageSize",
+      "sortBy",
+      "sortOrder",
+    ];
+    const sortable = [
+      "onlineId",
+      "firstName",
+      "lastName",
+      "email",
+      "companyName",
+      "status",
+      "entryDate",
+      "lastActivity",
+      "updatedAt",
+    ];
+    if (!validateQuery(req, res, allowed, sortable)) return;
+    if (
+      !validateEnumQuery(req, res, "status", [
+        "active",
+        "paused",
+        "notActive",
+        "pending",
+      ]) ||
+      !validateEnumQuery(req, res, "userType", ["companyOwner", "companyUser"]) ||
+      !validateEnumQuery(req, res, "employmentType", ["internal", "external"])
+    ) {
+      return;
+    }
+
+    const companiesById = new Map(
+      (router.db.get("superCompanyManagementCompanies").value() || []).map(
+        (company) => [company.id, company]
+      )
+    );
+    let items = (router.db.get("superCompanyManagementUsers").value() || [])
+      .map((user) => {
+        const company = companiesById.get(user.companyId);
+        if (!company) return null;
+
+        const { allowedActions, ...platformUser } = clone(user);
+        return {
+          ...platformUser,
+          company: {
+            id: company.id,
+            onlineId: company.onlineId,
+            name: company.profile?.addressData?.companyName || company.id,
+          },
+          companyName: company.profile?.addressData?.companyName || company.id,
+        };
+      })
+      .filter(Boolean);
+    const keyword = String(req.query.keyword || "").trim().toLowerCase();
+    if (keyword) {
+      items = items.filter((item) =>
+        [
+          item.firstName,
+          item.lastName,
+          item.email,
+          item.username,
+          item.onlineId,
+          item.companyName,
+          item.company.onlineId,
+        ]
+          .join(" ")
+          .toLowerCase()
+          .includes(keyword)
+      );
+    }
+    if (req.query.email) {
+      const email = String(req.query.email).trim().toLowerCase();
+      items = items.filter((item) => item.email.toLowerCase().includes(email));
+    }
+    if (req.query.companyId) {
+      items = items.filter((item) => item.companyId === req.query.companyId);
+    }
+    for (const key of [
+      "status",
+      "userType",
+      "employmentType",
+      "departmentId",
+      "categoryId",
+      "roleId",
+    ]) {
+      if (req.query[key]) {
+        items = items.filter((item) => item[key] === req.query[key]);
+      }
+    }
+    if (req.query.entryFrom) {
+      items = items.filter(
+        (item) => item.entryDate && item.entryDate >= req.query.entryFrom
+      );
+    }
+    if (req.query.entryTo) {
+      items = items.filter(
+        (item) => item.entryDate && item.entryDate <= req.query.entryTo
+      );
+    }
+    if (req.query.lastActivityFrom) {
+      items = items.filter(
+        (item) =>
+          item.lastActivity && item.lastActivity >= req.query.lastActivityFrom
+      );
+    }
+    if (req.query.lastActivityTo) {
+      items = items.filter(
+        (item) =>
+          item.lastActivity && item.lastActivity <= req.query.lastActivityTo
+      );
+    }
+
+    const page = paginate(
+      stableSort(
+        items,
+        req.query.sortBy || "lastActivity",
+        req.query.sortOrder || "desc"
+      ),
+      req.query
+    );
+    res.json({
+      ...page,
+      items: page.items.map(({ companyName, ...item }) => item),
+    });
+  });
+
   server.get(`${ROOT}/companies/:companyId/users`, (req, res) => {
     const allowed = [
       "keyword",
