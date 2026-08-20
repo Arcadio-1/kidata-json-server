@@ -1,1 +1,36 @@
-[{"id":"fin-audit-001","companyId":"cmp-fin-001","entityType":"adjustment","entityId":"fin-adj-001","action":"APPLY_FINANCIAL_ADJUSTMENT","actor":"mock-super-admin","reason":"Demo goodwill credit","occurredAt":"2026-08-19T09:15:00.000Z","outcome":"success","before":{"totalCredits":1525},"after":{"totalCredits":1550}},{"id":"fin-audit-002","companyId":"cmp-fin-003","entityType":"adjustment","entityId":"fin-adj-002","action":"REJECT_FINANCIAL_ADJUSTMENT","actor":"mock-super-admin","reason":"Rejected demonstration request","occurredAt":"2026-08-14T08:05:00.000Z","outcome":"rejected","before":{"totalCredits":1050},"after":{"totalCredits":1050}}]
+[
+  {
+    "id": "fin-audit-001",
+    "companyId": "cmp-fin-001",
+    "entityType": "adjustment",
+    "entityId": "fin-adj-001",
+    "action": "APPLY_FINANCIAL_ADJUSTMENT",
+    "actor": "mock-super-admin",
+    "reason": "Demo goodwill credit",
+    "occurredAt": "2026-08-19T09:15:00.000Z",
+    "outcome": "success",
+    "before": {
+      "totalCredits": 1525
+    },
+    "after": {
+      "totalCredits": 1550
+    }
+  },
+  {
+    "id": "fin-audit-002",
+    "companyId": "cmp-fin-003",
+    "entityType": "adjustment",
+    "entityId": "fin-adj-002",
+    "action": "REJECT_FINANCIAL_ADJUSTMENT",
+    "actor": "mock-super-admin",
+    "reason": "Rejected demonstration request",
+    "occurredAt": "2026-08-14T08:05:00.000Z",
+    "outcome": "rejected",
+    "before": {
+      "totalCredits": 1050
+    },
+    "after": {
+      "totalCredits": 1050
+    }
+  }
+]

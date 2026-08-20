@@ -3,7 +3,7 @@
   "layoutLg": [
     {
       "i": "greeting",
-      "x": 4,
+      "x": 0,
       "y": 0,
       "w": 6,
       "h": 3,
@@ -11,8 +11,8 @@
     },
     {
       "i": "notification",
-      "x": 4,
-      "y": 3,
+      "x": 6,
+      "y": 0,
       "w": 6,
       "h": 3,
       "visible": true
@@ -20,7 +20,7 @@
     {
       "i": "main",
       "x": 0,
-      "y": 0,
+      "y": 3,
       "w": 4,
       "h": 6,
       "visible": true
@@ -28,7 +28,7 @@
     {
       "i": "storage",
       "x": 4,
-      "y": 6,
+      "y": 3,
       "w": 8,
       "h": 6,
       "visible": true
@@ -36,7 +36,7 @@
     {
       "i": "earning",
       "x": 0,
-      "y": 12,
+      "y": 9,
       "w": 12,
       "h": 8,
       "visible": true
@@ -44,7 +44,7 @@
     {
       "i": "bills",
       "x": 0,
-      "y": 20,
+      "y": 17,
       "w": 6,
       "h": 4,
       "visible": true
@@ -52,7 +52,7 @@
     {
       "i": "partner",
       "x": 6,
-      "y": 20,
+      "y": 17,
       "w": 6,
       "h": 4,
       "visible": true
@@ -60,7 +60,7 @@
     {
       "i": "offers",
       "x": 0,
-      "y": 24,
+      "y": 21,
       "w": 12,
       "h": 6,
       "visible": true
@@ -68,7 +68,7 @@
     {
       "i": "guides",
       "x": 0,
-      "y": 30,
+      "y": 27,
       "w": 12,
       "h": 6,
       "visible": true

@@ -16,6 +16,7 @@ const registerScheduleBookingRoutes = require("./src/routes/scheduleBookings");
 const registerCompanyApprovalRoutes = require("./src/routes/companyApprovals");
 const registerCompanyManagementRoutes = require("./src/routes/companyManagement");
 const registerFinancialManagementRoutes = require("./src/routes/financialManagement");
+const registerTariffManagementRoutes = require("./src/routes/tariffManagement");
 const SplitFileAdapter = require("./src/db/SplitFileAdapter");
 
 const server = jsonServer.create();
@@ -44,6 +45,7 @@ registerScheduleBookingRoutes(server, router);
 registerCompanyApprovalRoutes(server, router);
 registerCompanyManagementRoutes(server, router);
 registerFinancialManagementRoutes(server, router);
+registerTariffManagementRoutes(server, router);
 
 // Use JSON Server's auto-generated endpoints from the split database
 server.use(router);

@@ -1,1 +1,54 @@
-[{"id":"fin-tx-001","companyId":"cmp-fin-001","type":"credit_purchase","status":"posted","amountCredits":1200,"amountEur":12,"currency":"EUR","balanceAfterCredits":1200,"occurredAt":"2026-08-01T10:00:00.000Z","source":"stripeCheckout","paymentId":"fin-pay-001"},{"id":"fin-tx-002","companyId":"cmp-fin-001","type":"booking_charge","status":"posted","amountCredits":-230,"amountEur":null,"currency":"EUR","balanceAfterCredits":970,"occurredAt":"2026-08-10T12:00:00.000Z","source":"bookingCheckout","bookingId":"fin-book-001"},{"id":"fin-tx-003","companyId":"cmp-fin-003","type":"booking_income","status":"posted","amountCredits":875,"amountEur":null,"currency":"EUR","balanceAfterCredits":1050,"occurredAt":"2026-08-12T16:30:00.000Z","source":"bookingCheckout","bookingId":"fin-book-001"},{"id":"fin-tx-004","companyId":"cmp-fin-002","type":"credit_purchase","status":"failed","amountCredits":500,"amountEur":5,"currency":"EUR","balanceAfterCredits":400,"occurredAt":"2026-08-18T11:00:00.000Z","source":"stripeCheckout","paymentId":"fin-pay-002"}]
+[
+  {
+    "id": "fin-tx-001",
+    "companyId": "cmp-fin-001",
+    "type": "credit_purchase",
+    "status": "posted",
+    "amountCredits": 1200,
+    "amountEur": 12,
+    "currency": "EUR",
+    "balanceAfterCredits": 1200,
+    "occurredAt": "2026-08-01T10:00:00.000Z",
+    "source": "stripeCheckout",
+    "paymentId": "fin-pay-001"
+  },
+  {
+    "id": "fin-tx-002",
+    "companyId": "cmp-fin-001",
+    "type": "booking_charge",
+    "status": "posted",
+    "amountCredits": -230,
+    "amountEur": null,
+    "currency": "EUR",
+    "balanceAfterCredits": 970,
+    "occurredAt": "2026-08-10T12:00:00.000Z",
+    "source": "bookingCheckout",
+    "bookingId": "fin-book-001"
+  },
+  {
+    "id": "fin-tx-003",
+    "companyId": "cmp-fin-003",
+    "type": "booking_income",
+    "status": "posted",
+    "amountCredits": 875,
+    "amountEur": null,
+    "currency": "EUR",
+    "balanceAfterCredits": 1050,
+    "occurredAt": "2026-08-12T16:30:00.000Z",
+    "source": "bookingCheckout",
+    "bookingId": "fin-book-001"
+  },
+  {
+    "id": "fin-tx-004",
+    "companyId": "cmp-fin-002",
+    "type": "credit_purchase",
+    "status": "failed",
+    "amountCredits": 500,
+    "amountEur": 5,
+    "currency": "EUR",
+    "balanceAfterCredits": 400,
+    "occurredAt": "2026-08-18T11:00:00.000Z",
+    "source": "stripeCheckout",
+    "paymentId": "fin-pay-002"
+  }
+]
